@@ -11,6 +11,6 @@ var annotated_dup =
       [ "IWindow", "classZEN_1_1IWindow.html", null ],
       [ "IRenderer", "classZEN_1_1IRenderer.html", null ],
       [ "EngineInfo", "classZEN_1_1EngineInfo.html", null ],
-      [ "GlfwWindow", "classZEN_1_1GlfwWindow.html", null ]
+      [ "Window", "classZEN_1_1Window.html", "classZEN_1_1Window" ]
     ] ]
 ];

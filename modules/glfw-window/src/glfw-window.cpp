@@ -28,3 +28,11 @@ void ZEN::Window::close() noexcept {
 ZEN::Window::~Window() {
     glfwTerminate();
 }
+
+void ZEN::Window::handleInputs() {
+    glfwPollEvents();
+}
+
+void ZEN::Window::handleBuffer() {
+    glfwSwapBuffers(glfwWindow);
+}

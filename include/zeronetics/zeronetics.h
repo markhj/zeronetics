@@ -14,3 +14,6 @@
 #include "core/typedefs.h"
 #include "core/engine-info.h"
 #include "core/settings.h"
+
+// Game
+#include "game/game.h"

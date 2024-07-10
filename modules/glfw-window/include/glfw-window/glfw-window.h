@@ -13,6 +13,16 @@ namespace ZEN {
 
         void close() noexcept override;
 
+        /**
+         * Process user inputs.
+         */
+        void handleInputs() override;
+
+        /**
+         * Swap buffers.
+         */
+        void handleBuffer() override;
+
 
     };
 }

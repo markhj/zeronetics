@@ -6,6 +6,7 @@ set(CMAKE_CXX_STANDARD 20)
 # Directories
 set(ZEN_ROOT_DIR ${CMAKE_CURRENT_SOURCE_DIR})
 set(ZEN_MODULES_DIR ${CMAKE_CURRENT_SOURCE_DIR}/modules)
+set(ZEN_VENDOR_DIR ${CMAKE_CURRENT_SOURCE_DIR}/vendor)
 
 if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE "Debug" CACHE STRING "Choose the type of build (Debug or Release)" FORCE)
@@ -23,6 +24,9 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/build/${BUILD_TYP
 file(MAKE_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/build/docs)
 
 include_directories(include)
+
+# Build vendor projects
+add_subdirectory(vendor/glfw)
 
 # Modules
 include(cmake/modules.cmake)

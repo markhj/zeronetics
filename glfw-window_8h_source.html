@@ -96,17 +96,26 @@ $(document).ready(function(){initNavTree('glfw-window_8h_source.html',''); initR
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        ~<a class="code" href="classZEN_1_1Window.html">Window</a>();</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <span class="keywordtype">void</span> generate(<span class="keyword">const</span> <a class="code" href="structZEN_1_1Settings.html">Settings</a> &amp;settings) noexcept(<span class="keyword">false</span>) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classZEN_1_1Window.html#a56421da6cc3290b940c3200b7a4f0a6f">generate</a>(<span class="keyword">const</span> <a class="code" href="structZEN_1_1Settings.html">Settings</a> &amp;settings) noexcept(<span class="keyword">false</span>) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="keywordtype">void</span> regenerate(<span class="keyword">const</span> <a class="code" href="structZEN_1_1Settings.html">Settings</a> &amp;settings) noexcept(<span class="keyword">false</span>) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classZEN_1_1Window.html#aeea1798c76919c2560775df3e4cd3093">regenerate</a>(<span class="keyword">const</span> <a class="code" href="structZEN_1_1Settings.html">Settings</a> &amp;settings) noexcept(<span class="keyword">false</span>) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keywordtype">void</span> close() noexcept <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classZEN_1_1Window.html#a64cec0e02957378822f9e7ae0b9ee51d">close</a>() noexcept <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    };</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classZEN_1_1Window.html#a6cc55ce77162a4b14859fc95593107cd">handleInputs</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classZEN_1_1Window.html#ab524ce373bdaa172859cb99e1cd207c9">handleBuffer</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    };</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
 <div class="ttc" id="aclassZEN_1_1IWindow_html"><div class="ttname"><a href="classZEN_1_1IWindow.html">ZEN::IWindow</a></div><div class="ttdef"><b>Definition:</b> contracts.h:6</div></div>
 <div class="ttc" id="aclassZEN_1_1Window_html"><div class="ttname"><a href="classZEN_1_1Window.html">ZEN::Window</a></div><div class="ttdef"><b>Definition:</b> glfw-window.h:6</div></div>
+<div class="ttc" id="aclassZEN_1_1Window_html_a56421da6cc3290b940c3200b7a4f0a6f"><div class="ttname"><a href="classZEN_1_1Window.html#a56421da6cc3290b940c3200b7a4f0a6f">ZEN::Window::generate</a></div><div class="ttdeci">void generate(const Settings &amp;settings) noexcept(false) override</div><div class="ttdef"><b>Definition:</b> glfw-window.cpp:8</div></div>
+<div class="ttc" id="aclassZEN_1_1Window_html_a64cec0e02957378822f9e7ae0b9ee51d"><div class="ttname"><a href="classZEN_1_1Window.html#a64cec0e02957378822f9e7ae0b9ee51d">ZEN::Window::close</a></div><div class="ttdeci">void close() noexcept override</div><div class="ttdef"><b>Definition:</b> glfw-window.cpp:24</div></div>
+<div class="ttc" id="aclassZEN_1_1Window_html_a6cc55ce77162a4b14859fc95593107cd"><div class="ttname"><a href="classZEN_1_1Window.html#a6cc55ce77162a4b14859fc95593107cd">ZEN::Window::handleInputs</a></div><div class="ttdeci">void handleInputs() override</div><div class="ttdef"><b>Definition:</b> glfw-window.cpp:32</div></div>
+<div class="ttc" id="aclassZEN_1_1Window_html_ab524ce373bdaa172859cb99e1cd207c9"><div class="ttname"><a href="classZEN_1_1Window.html#ab524ce373bdaa172859cb99e1cd207c9">ZEN::Window::handleBuffer</a></div><div class="ttdeci">void handleBuffer() override</div><div class="ttdef"><b>Definition:</b> glfw-window.cpp:36</div></div>
+<div class="ttc" id="aclassZEN_1_1Window_html_aeea1798c76919c2560775df3e4cd3093"><div class="ttname"><a href="classZEN_1_1Window.html#aeea1798c76919c2560775df3e4cd3093">ZEN::Window::regenerate</a></div><div class="ttdeci">void regenerate(const Settings &amp;settings) noexcept(false) override</div><div class="ttdef"><b>Definition:</b> glfw-window.cpp:20</div></div>
 <div class="ttc" id="astructZEN_1_1Settings_html"><div class="ttname"><a href="structZEN_1_1Settings.html">ZEN::Settings</a></div><div class="ttdef"><b>Definition:</b> settings.h:16</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

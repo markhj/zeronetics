@@ -98,16 +98,172 @@ Inheritance diagram for ZEN::IWindow:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:acfd336d6e779919ae66728b26a2995f2"><td class="memItemLeft" align="right" valign="top"><a id="acfd336d6e779919ae66728b26a2995f2"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>generate</b> (const <a class="el" href="structZEN_1_1Settings.html">Settings</a> &amp;settings) noexcept(false)=0</td></tr>
+<tr class="memitem:acfd336d6e779919ae66728b26a2995f2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1IWindow.html#acfd336d6e779919ae66728b26a2995f2">generate</a> (const <a class="el" href="structZEN_1_1Settings.html">Settings</a> &amp;settings) noexcept(false)=0</td></tr>
 <tr class="separator:acfd336d6e779919ae66728b26a2995f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3a8a1b75f2a6a588720a8c62b80886e"><td class="memItemLeft" align="right" valign="top"><a id="af3a8a1b75f2a6a588720a8c62b80886e"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>regenerate</b> (const <a class="el" href="structZEN_1_1Settings.html">Settings</a> &amp;settings) noexcept(false)=0</td></tr>
+<tr class="memitem:af3a8a1b75f2a6a588720a8c62b80886e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1IWindow.html#af3a8a1b75f2a6a588720a8c62b80886e">regenerate</a> (const <a class="el" href="structZEN_1_1Settings.html">Settings</a> &amp;settings) noexcept(false)=0</td></tr>
 <tr class="separator:af3a8a1b75f2a6a588720a8c62b80886e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac20b4467e8d3fee02198065c8507d004"><td class="memItemLeft" align="right" valign="top"><a id="ac20b4467e8d3fee02198065c8507d004"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>close</b> () noexcept=0</td></tr>
+<tr class="memitem:ac20b4467e8d3fee02198065c8507d004"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1IWindow.html#ac20b4467e8d3fee02198065c8507d004">close</a> () noexcept=0</td></tr>
 <tr class="separator:ac20b4467e8d3fee02198065c8507d004"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a527811644cc0b04c5f8d661d013fc45b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1IWindow.html#a527811644cc0b04c5f8d661d013fc45b">handleInputs</a> ()=0</td></tr>
+<tr class="separator:a527811644cc0b04c5f8d661d013fc45b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a567b2bae12bca462be7fbe744ee8be7e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1IWindow.html#a567b2bae12bca462be7fbe744ee8be7e">handleBuffer</a> ()=0</td></tr>
+<tr class="separator:a567b2bae12bca462be7fbe744ee8be7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac20b4467e8d3fee02198065c8507d004"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac20b4467e8d3fee02198065c8507d004">&#9670;&nbsp;</a></span>close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ZEN::IWindow::close </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Request the window to close. </p>
+
+<p>Implemented in <a class="el" href="classZEN_1_1Window.html#a64cec0e02957378822f9e7ae0b9ee51d">ZEN::Window</a>.</p>
+
+</div>
+</div>
+<a id="acfd336d6e779919ae66728b26a2995f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfd336d6e779919ae66728b26a2995f2">&#9670;&nbsp;</a></span>generate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ZEN::IWindow::generate </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structZEN_1_1Settings.html">Settings</a> &amp;&#160;</td>
+          <td class="paramname"><em>settings</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Handle the initial generation of the window.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">settings</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="classZEN_1_1Window.html#a56421da6cc3290b940c3200b7a4f0a6f">ZEN::Window</a>.</p>
+
+</div>
+</div>
+<a id="a567b2bae12bca462be7fbe744ee8be7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a567b2bae12bca462be7fbe744ee8be7e">&#9670;&nbsp;</a></span>handleBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ZEN::IWindow::handleBuffer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Swap buffers. </p>
+
+<p>Implemented in <a class="el" href="classZEN_1_1Window.html#ab524ce373bdaa172859cb99e1cd207c9">ZEN::Window</a>.</p>
+
+</div>
+</div>
+<a id="a527811644cc0b04c5f8d661d013fc45b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a527811644cc0b04c5f8d661d013fc45b">&#9670;&nbsp;</a></span>handleInputs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ZEN::IWindow::handleInputs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Process user inputs. </p>
+
+<p>Implemented in <a class="el" href="classZEN_1_1Window.html#a6cc55ce77162a4b14859fc95593107cd">ZEN::Window</a>.</p>
+
+</div>
+</div>
+<a id="af3a8a1b75f2a6a588720a8c62b80886e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3a8a1b75f2a6a588720a8c62b80886e">&#9670;&nbsp;</a></span>regenerate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ZEN::IWindow::regenerate </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structZEN_1_1Settings.html">Settings</a> &amp;&#160;</td>
+          <td class="paramname"><em>settings</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Handle a re-generation of the window, when video settings have changed.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">settings</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="classZEN_1_1Window.html#aeea1798c76919c2560775df3e4cd3093">ZEN::Window</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/zeronetics/contracts/<a class="el" href="contracts_8h_source.html">contracts.h</a></li>
 </ul>

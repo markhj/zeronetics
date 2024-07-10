@@ -13,6 +13,7 @@ var annotated_dup =
       [ "EngineInfo", "classZEN_1_1EngineInfo.html", null ],
       [ "ScreenResolution", "structZEN_1_1ScreenResolution.html", "structZEN_1_1ScreenResolution" ],
       [ "Settings", "structZEN_1_1Settings.html", "structZEN_1_1Settings" ],
+      [ "Game", "classZEN_1_1Game.html", "classZEN_1_1Game" ],
       [ "Window", "classZEN_1_1Window.html", "classZEN_1_1Window" ]
     ] ]
 ];

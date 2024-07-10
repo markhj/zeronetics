@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['screenresolution_19',['ScreenResolution',['../structZEN_1_1ScreenResolution.html',1,'ZEN']]],
-  ['settings_20',['Settings',['../structZEN_1_1Settings.html',1,'ZEN']]]
+  ['irenderer_24',['IRenderer',['../classZEN_1_1IRenderer.html',1,'ZEN']]],
+  ['iwindow_25',['IWindow',['../classZEN_1_1IWindow.html',1,'ZEN']]]
 ];

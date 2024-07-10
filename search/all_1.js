@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['engineinfo_1',['EngineInfo',['../classENGINE__NAMESPACE_1_1EngineInfo.html',1,'ENGINE_NAMESPACE']]]
+  ['create_20a_20game_1',['Create a game',['../setting-up-a-game.html',1,'getting-started']]],
+  ['creating_20new_20modules_2',['Creating new modules',['../create-modules.html',1,'dev']]]
 ];

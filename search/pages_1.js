@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['welcome_20to_20zeronetics_20game_20engine_21_11',['Welcome to Zeronetics Game Engine!',['../index.html',1,'']]]
+  ['create_20a_20game_19',['Create a game',['../setting-up-a-game.html',1,'getting-started']]],
+  ['creating_20new_20modules_20',['Creating new modules',['../create-modules.html',1,'dev']]]
 ];

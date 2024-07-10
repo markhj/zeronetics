@@ -3,6 +3,10 @@
 #include "zeronetics/contracts/contracts.h"
 
 namespace ZEN {
-    class GlfwWindow : public IWindow {
+    class Window : public IWindow {
+    public:
+        void generate();
+
+
     };
 }

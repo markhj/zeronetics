@@ -54,12 +54,19 @@ Normally, the subdirectory would just be ``zeronetics``.
 ### Integrate in build process
 
 To make the module part of the build process, you must add the module name
-(``awesome``) to the list ``ZNE_MODULES`` found in ``cmake/modules-inc.cmake``.
+(``awesome``) to the list ``ZEN_MODULES`` found in ``cmake/modules-inc.cmake``.
 
 ````cmake
-set(ZNE_MODULES
+set(ZEN_MODULES
     # Other modules already registered
     awesome)
+````
+
+If your library depend on vendor (third-party) libraries, you must also
+define those. For example:
+
+````cmake
+set(LIBS_awesome glfw3)
 ````
 
 When you refresh your CMake configuration, the _Awesome_ module is now

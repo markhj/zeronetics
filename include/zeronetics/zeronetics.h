@@ -13,3 +13,4 @@
 #include "core/macros.h"
 #include "core/typedefs.h"
 #include "core/engine-info.h"
+#include "core/settings.h"

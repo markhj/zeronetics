@@ -5,14 +5,26 @@
 
 GLFWwindow *glfwWindow;
 
-void ZEN::Window::generate() {
+void ZEN::Window::generate(const ZEN::Settings &settings) noexcept(false) {
     if (!glfwInit()) {
         throw std::runtime_error("Failed to initialize GLFW.");
     }
 
-    glfwWindow = glfwCreateWindow(1024,
-                                  768,
+    glfwWindow = glfwCreateWindow(settings.screenResolution.w,
+                                  settings.screenResolution.h,
                                   "Game",
                                   nullptr,
                                   nullptr);
+}
+
+void ZEN::Window::regenerate(const ZEN::Settings &settings) noexcept(false) {
+
+}
+
+void ZEN::Window::close() noexcept {
+    glfwDestroyWindow(glfwWindow);
+}
+
+ZEN::Window::~Window() {
+    glfwTerminate();
 }

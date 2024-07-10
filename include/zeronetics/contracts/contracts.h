@@ -2,7 +2,7 @@
 
 #include "zeronetics/core/macros.h"
 
-namespace ENGINE_NAMESPACE {
+namespace ZEN {
     class IWindow {
 
     };

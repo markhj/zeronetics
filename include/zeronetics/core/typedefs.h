@@ -1,6 +1,6 @@
 #pragma once
 
-namespace ENGINE_NAMESPACE {
+namespace ZEN {
     /**
      * Game world floating-point type
      *

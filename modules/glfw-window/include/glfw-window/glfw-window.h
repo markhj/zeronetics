@@ -2,7 +2,7 @@
 
 #include "zeronetics/contracts/contracts.h"
 
-namespace ENGINE_NAMESPACE {
+namespace ZEN {
     class GlfwWindow : public IWindow {
     };
 }

@@ -4,7 +4,7 @@
 
 #include "macros.h"
 
-namespace ENGINE_NAMESPACE {
+namespace ZEN {
     class EngineInfo {
     public:
         static std::string getVersion();

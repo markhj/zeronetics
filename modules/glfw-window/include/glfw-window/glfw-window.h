@@ -7,21 +7,35 @@ namespace ZEN {
     public:
         ~Window();
 
+        /**
+         * Generate the GLFW window with the supplied settings.
+         *
+         * @param settings
+         */
         void generate(const Settings &settings) noexcept(false) override;
 
+        /**
+         * Re-generate the window (typically, when video settings
+         * have changed).
+         *
+         * @param settings
+         */
         void regenerate(const Settings &settings) noexcept(false) override;
 
+        /**
+         * Close GLFW window.
+         */
         void close() noexcept override;
 
         /**
          * Process user inputs.
          */
-        void handleInputs() override;
+        inline void handleInputs() override;
 
         /**
          * Swap buffers.
          */
-        void handleBuffer() override;
+        inline void handleBuffer() override;
 
 
     };

@@ -28,12 +28,12 @@ namespace ZEN {
         /**
          * Process user inputs.
          */
-        virtual void handleInputs() = 0;
+        virtual inline void handleInputs() = 0;
 
         /**
          * Swap buffers.
          */
-        virtual void handleBuffer() = 0;
+        virtual inline void handleBuffer() = 0;
 
     };
 

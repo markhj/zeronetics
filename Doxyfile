@@ -7,7 +7,9 @@ HTML_EXTRA_STYLESHEET  = vendor/doxygen-awesome-css/doxygen-awesome.css \
                         vendor/doxygen-awesome-css/doxygen-awesome-sidebar-only.css
 HTML_COLORSTYLE        = LIGHT
 
-INPUT                  = include docs modules
+INPUT                  = docs/getting-started \
+                            docs/modules \
+                            include docs modules \
 
 USE_MDFILE_AS_MAINPAGE = docs/index.md
 

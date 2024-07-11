@@ -14,7 +14,6 @@
 // Fundamentals
 #include "core/controls.h"
 #include "core/engine-info.h"
-#include "core/macros.h"
 #include "core/settings.h"
 #include "core/typedefs.h"
 #include "core/version.h"

@@ -95,16 +95,84 @@ $(document).ready(function(){initNavTree('structZEN_1_1KeyMap.html',''); initRes
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:af188525c34a478ed55667792689c61df"><td class="memItemLeft" align="right" valign="top"><a id="af188525c34a478ed55667792689c61df"></a>
-static std::optional&lt; Key &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>toKey</b> (int key)</td></tr>
+<tr class="memitem:af188525c34a478ed55667792689c61df"><td class="memItemLeft" align="right" valign="top">static std::optional&lt; Key &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structZEN_1_1KeyMap.html#af188525c34a478ed55667792689c61df">toKey</a> (int key)</td></tr>
 <tr class="separator:af188525c34a478ed55667792689c61df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac9f5826ae2b544bff3125af4482392d7"><td class="memItemLeft" align="right" valign="top"><a id="ac9f5826ae2b544bff3125af4482392d7"></a>
-static std::optional&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>toInt</b> (const Key &amp;key)</td></tr>
+<tr class="memitem:ac9f5826ae2b544bff3125af4482392d7"><td class="memItemLeft" align="right" valign="top">static std::optional&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structZEN_1_1KeyMap.html#ac9f5826ae2b544bff3125af4482392d7">toInt</a> (const Key &amp;key)</td></tr>
 <tr class="separator:ac9f5826ae2b544bff3125af4482392d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Struct that helps retrieving keys based on integer values. </p>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac9f5826ae2b544bff3125af4482392d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9f5826ae2b544bff3125af4482392d7">&#9670;&nbsp;</a></span>toInt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::optional&lt;int&gt; ZEN::KeyMap::toInt </td>
+          <td>(</td>
+          <td class="paramtype">const Key &amp;&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Convert a ZEN::Key to its corresponding ASCII value.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="af188525c34a478ed55667792689c61df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af188525c34a478ed55667792689c61df">&#9670;&nbsp;</a></span>toKey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::optional&lt;Key&gt; ZEN::KeyMap::toKey </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Convert an ASCII value to a ZEN::Key.</p>
+<p>If the value isn't mapped to a key, <code>std::nullopt</code> will be returned.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
 <li>include/zeronetics/core/<a class="el" href="controls_8h_source.html">controls.h</a></li>
 </ul>
 </div><!-- contents -->

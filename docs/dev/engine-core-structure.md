@@ -28,8 +28,9 @@ ZEN::Version class. They have no dependencies on other parts of the engine.
 ## Contracts
 
 Interfaces in the ``contracts`` directory are allowed to have dependencies
-from ``core``. But they cannot be dependent on other contracts, or any
-complex structures.
+from ``core`` and other contracts.
+
+Example: The ZEN::IWindow contract can depend on ZEN::IInputManager.
 
 > Contracts must only have pure virtual functions. For abstract classes,
 > see the next chapter.

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "zeronetics/contracts/contracts.h"
+#include "zeronetics/contracts/window.h"
 #include <memory>
 
 namespace ZEN {

@@ -120,7 +120,7 @@ namespace ZEN {
      * For instance, if "A" has just been pressed, or
      * if "ESC" has just been released.
      */
-    struct KeyEvent {
+    struct KeyStateEvent {
         KeyState keyState;
         Key key;
     };

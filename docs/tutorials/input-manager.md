@@ -29,7 +29,7 @@ The basic implementation would be:
 ````cpp
 class MyInputManager : public ZEN::BaseInputManager {
 public:
-    void onKeyStateChanged(const ZEN::KeyEvent &keyEvent) override {
+    void onKeyStateChanged(const ZEN::KeyStateEvent &keyEvent) override {
         // ...
     }
 
@@ -38,12 +38,12 @@ public:
 
 However, at this point the method does nothing. It's empty.
 
-You can explore ZEN::KeyEvent for learn about all the options,
+You can explore ZEN::KeyStateEvent for learn about all the options,
 but in the following example, we'll do "something" when the _A_-key
 has just been pressed. Let's zoom in on the ``onKeyStateChanged`` method:
 
 ````cpp
-void onKeyStateChanged(const ZEN::KeyEvent &keyEvent) override {
+void onKeyStateChanged(const ZEN::KeyStateEvent &keyEvent) override {
     if (keyEvent.key == ZEN::Key::A && keyEvent.keyState == ZEN::KeyState::JustPressed) {
         std::cout << "A was just pressed!" << std::endl;
     }

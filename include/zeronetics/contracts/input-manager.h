@@ -18,6 +18,6 @@ namespace ZEN {
          *
          * @param keyEvent Informs the key state, the pressed key, etc.
          */
-        virtual void onKeyStateChanged(const KeyEvent &keyEvent) = 0;
+        virtual void onKeyStateChanged(const KeyStateEvent &keyEvent) = 0;
     };
 }

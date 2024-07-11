@@ -14,6 +14,6 @@ namespace ZEN {
          *
          * @param keyEvent
          */
-        void onKeyStateChanged(const KeyEvent &keyEvent) override {}
+        void onKeyStateChanged(const KeyStateEvent &keyEvent) override {}
     };
 }

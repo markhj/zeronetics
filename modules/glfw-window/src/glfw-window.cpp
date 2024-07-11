@@ -10,13 +10,13 @@ GLFWwindow *glfwWindow;
 
 std::shared_ptr<ZEN::IInputManager> s_inputManager;
 
-std::optional<ZEN::KeyEvent> createKeyEvent(int key, int action) {
+std::optional<ZEN::KeyStateEvent> createKeyEvent(int key, int action) {
     std::optional<ZEN::Key> inputKey = ZEN::KeyMap::toKey(key);
     if (!inputKey.has_value()) {
         return std::nullopt;
     }
 
-    return ZEN::KeyEvent{
+    return ZEN::KeyStateEvent{
             .keyState = action == 1 ? ZEN::KeyState::JustPressed : ZEN::KeyState::JustReleased,
             .key = inputKey.value(),
     };
@@ -27,7 +27,7 @@ void keyboardCallback(GLFWwindow *window, int key, int scancode, int action, int
         return;
     }
 
-    std::optional<ZEN::KeyEvent> keyEvent = createKeyEvent(key, action);
+    std::optional<ZEN::KeyStateEvent> keyEvent = createKeyEvent(key, action);
     if (keyEvent.has_value()) {
         s_inputManager->onKeyStateChanged(keyEvent.value());
     }

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['list_20of_20modules_90',['List of modules',['../list-of-modules.html',1,'modules']]]
+  ['input_20manager_102',['Input Manager',['../input-manager.html',1,'tutorials']]],
+  ['install_20and_20build_20engine_103',['Install and build engine',['../install-engine.html',1,'getting-started']]]
 ];

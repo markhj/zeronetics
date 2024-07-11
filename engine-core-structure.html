@@ -96,7 +96,7 @@ $(document).ready(function(){initNavTree('engine-core-structure.html',''); initR
 <li>Modules</li>
 </ul>
 <p>Let's review them one by one.</p>
-<h2><a class="anchor" id="autotoc_md15"></a>
+<h2><a class="anchor" id="autotoc_md18"></a>
 Core</h2>
 <p>Declarations of:</p>
 <ul>
@@ -109,18 +109,18 @@ Core</h2>
 </li>
 </ul>
 <p>Examples include <code>gw_float</code> typedef, the <a class="el" href="structZEN_1_1Settings.html">ZEN::Settings</a> struct and <a class="el" href="structZEN_1_1Version.html">ZEN::Version</a> class. They have no dependencies on other parts of the engine.</p>
-<h2><a class="anchor" id="autotoc_md16"></a>
+<h2><a class="anchor" id="autotoc_md19"></a>
 Contracts</h2>
 <p>Interfaces in the <code>contracts</code> directory are allowed to have dependencies from <code>core</code> and other contracts.</p>
 <p>Example: The <a class="el" href="classZEN_1_1IWindow.html">ZEN::IWindow</a> contract can depend on <a class="el" href="classZEN_1_1IInputManager.html">ZEN::IInputManager</a>.</p>
 <blockquote class="doxtable">
 <p>Contracts must only have pure virtual functions. For abstract classes, see the next chapter. </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md17"></a>
+<h2><a class="anchor" id="autotoc_md20"></a>
 Other</h2>
 <p>Abstract classes and implementations of basic game engine logic exist in this layer. They can depend on <code>contracts</code>, <code>core</code> and other files residing in the same directory. They are not allowed to depend on files from other directories.</p>
 <p>In other words, a class in <code>controls</code> can depend on files from <code>core</code>, <code>contracts</code> and other files within <code>controls</code>. But it <em>cannot</em> depend on files from <code>game</code>, for example.</p>
-<h2><a class="anchor" id="autotoc_md18"></a>
+<h2><a class="anchor" id="autotoc_md21"></a>
 Modules</h2>
 <p>Modules can extend and depend on any class or struct in the main engine. They are under no circumstances allowed to have dependencies in other modules, and must be treated in total isolation from them, making no assumptions about their existence or function. </p>
 </div></div><!-- contents -->

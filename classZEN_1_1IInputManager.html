@@ -102,6 +102,8 @@ Inheritance diagram for ZEN::IInputManager:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab85f2241824542fa39a6d913213485b2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1IInputManager.html#ab85f2241824542fa39a6d913213485b2">onKeyStateChanged</a> (const <a class="el" href="structZEN_1_1KeyStateEvent.html">KeyStateEvent</a> &amp;keyEvent)=0</td></tr>
 <tr class="separator:ab85f2241824542fa39a6d913213485b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a413dce472d921819d7f6e2ffbe5634e8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1IInputManager.html#a413dce472d921819d7f6e2ffbe5634e8">onMouseMoved</a> (const <a class="el" href="structZEN_1_1MouseMovedEvent.html">MouseMovedEvent</a> &amp;mouseMovedEvent)=0</td></tr>
+<tr class="separator:a413dce472d921819d7f6e2ffbe5634e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Interface for an object which can be connected to a window in order to handle various user inputs such as key presses and mouse movement. </p>
@@ -133,6 +135,39 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">keyEvent</td><td>Informs the key state, the pressed key, etc. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a413dce472d921819d7f6e2ffbe5634e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a413dce472d921819d7f6e2ffbe5634e8">&#9670;&nbsp;</a></span>onMouseMoved()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ZEN::IInputManager::onMouseMoved </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structZEN_1_1MouseMovedEvent.html">MouseMovedEvent</a> &amp;&#160;</td>
+          <td class="paramname"><em>mouseMovedEvent</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Handle for when the mouse cursor has been moved.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mouseMovedEvent</td><td></td></tr>
   </table>
   </dd>
 </dl>

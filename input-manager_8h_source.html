@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Zeronetics Game Engine: ZEN::KeyEvent Struct Reference</title>
+<title>Zeronetics Game Engine: include/zeronetics/contracts/input-manager.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -64,7 +64,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('structZEN_1_1KeyEvent.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('input-manager_8h_source.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -83,37 +83,32 @@ $(document).ready(function(){initNavTree('structZEN_1_1KeyEvent.html',''); initR
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="structZEN_1_1KeyEvent-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">ZEN::KeyEvent Struct Reference</div>  </div>
+<div class="title">input-manager.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p><code>#include &lt;<a class="el" href="controls_8h_source.html">controls.h</a>&gt;</code></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:ab00d1d09c9f5c9a742aa3a1de1df0741"><td class="memItemLeft" align="right" valign="top"><a id="ab00d1d09c9f5c9a742aa3a1de1df0741"></a>
-KeyState&#160;</td><td class="memItemRight" valign="bottom"><b>keyState</b></td></tr>
-<tr class="separator:ab00d1d09c9f5c9a742aa3a1de1df0741"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad18626161c4d7da95b1b4ac03d520f18"><td class="memItemLeft" align="right" valign="top"><a id="ad18626161c4d7da95b1b4ac03d520f18"></a>
-Key&#160;</td><td class="memItemRight" valign="bottom"><b>key</b></td></tr>
-<tr class="separator:ad18626161c4d7da95b1b4ac03d520f18"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>When the state of a key has changed.</p>
-<p>For instance, if "A" has just been pressed, or if "ESC" has just been released. </p>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
-<li>include/zeronetics/core/<a class="el" href="controls_8h_source.html">controls.h</a></li>
-</ul>
-</div><!-- contents -->
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;zeronetics/core/controls.h&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;zeronetics/core/settings.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span>ZEN {</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classZEN_1_1IInputManager.html">   14</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classZEN_1_1IInputManager.html">IInputManager</a> {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classZEN_1_1IInputManager.html#a3a8e0c50e8577d7a0054da8c5e9394de">   21</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classZEN_1_1IInputManager.html#a3a8e0c50e8577d7a0054da8c5e9394de">onKeyStateChanged</a>(<span class="keyword">const</span> <a class="code" href="structZEN_1_1KeyEvent.html">KeyEvent</a> &amp;keyEvent) = 0;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    };</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
+<div class="ttc" id="aclassZEN_1_1IInputManager_html"><div class="ttname"><a href="classZEN_1_1IInputManager.html">ZEN::IInputManager</a></div><div class="ttdef"><b>Definition:</b> input-manager.h:14</div></div>
+<div class="ttc" id="aclassZEN_1_1IInputManager_html_a3a8e0c50e8577d7a0054da8c5e9394de"><div class="ttname"><a href="classZEN_1_1IInputManager.html#a3a8e0c50e8577d7a0054da8c5e9394de">ZEN::IInputManager::onKeyStateChanged</a></div><div class="ttdeci">virtual void onKeyStateChanged(const KeyEvent &amp;keyEvent)=0</div></div>
+<div class="ttc" id="astructZEN_1_1KeyEvent_html"><div class="ttname"><a href="structZEN_1_1KeyEvent.html">ZEN::KeyEvent</a></div><div class="ttdef"><b>Definition:</b> controls.h:123</div></div>
+</div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>ZEN</b></li><li class="navelem"><a class="el" href="structZEN_1_1KeyEvent.html">KeyEvent</a></li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_f283085726848aba3f0d9a820aa50f08.html">zeronetics</a></li><li class="navelem"><a class="el" href="dir_70d20d1e30665ed534212c28589615af.html">contracts</a></li><li class="navelem"><b>input-manager.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>

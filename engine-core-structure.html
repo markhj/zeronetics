@@ -111,7 +111,8 @@ Core</h2>
 <p>Examples include <code>gw_float</code> typedef, the <a class="el" href="structZEN_1_1Settings.html">ZEN::Settings</a> struct and <a class="el" href="structZEN_1_1Version.html">ZEN::Version</a> class. They have no dependencies on other parts of the engine.</p>
 <h2><a class="anchor" id="autotoc_md16"></a>
 Contracts</h2>
-<p>Interfaces in the <code>contracts</code> directory are allowed to have dependencies from <code>core</code>. But they cannot be dependent on other contracts, or any complex structures.</p>
+<p>Interfaces in the <code>contracts</code> directory are allowed to have dependencies from <code>core</code> and other contracts.</p>
+<p>Example: The <a class="el" href="classZEN_1_1IWindow.html">ZEN::IWindow</a> contract can depend on <a class="el" href="classZEN_1_1IInputManager.html">ZEN::IInputManager</a>.</p>
 <blockquote class="doxtable">
 <p>Contracts must only have pure virtual functions. For abstract classes, see the next chapter. </p>
 </blockquote>

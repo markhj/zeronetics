@@ -62,11 +62,16 @@ set(ZEN_MODULES
     awesome)
 ````
 
-If your library depend on vendor (third-party) libraries, you must also
-define those. For example:
+If your library depends on vendor (third-party) libraries, you must also
+define those.
+
+You specify them in a list in CMake, named ``LIBS_<NAME>``, where ``<NAME>``
+is your library written in uppercase, and with hyphens replaced with underscores.
+
+Example:
 
 ````cmake
-set(LIBS_awesome glfw3)
+set(LIBS_AWESOME glfw3)
 ````
 
 When you refresh your CMake configuration, the _Awesome_ module is now

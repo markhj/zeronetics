@@ -43,7 +43,9 @@ foreach (ZEN_MODULE ${ZEN_MODULES})
 
     # Iterate through specific vendor/third-party dependencies
     # that are requested by each module
-    foreach (LIB ${LIBS_${ZEN_MODULE}})
+    string(TOUPPER "${ZEN_MODULE}" ZEN_MODULE_UC)
+    string(REPLACE "-" "_" ZEN_MODULE_DEPENDENCIES "${ZEN_MODULE_UC}")
+    foreach (LIB ${LIBS_${ZEN_MODULE_DEPENDENCIES}})
         target_link_libraries(${ZEN_MODULE} INTERFACE
                 $<$<CONFIG:Debug>:${ZEN_LIB_ROOT}/build/debug/lib/lib${LIB}.a>
                 $<$<CONFIG:Release>:${ZEN_LIB_ROOT}/build/release/lib/lib${LIB}.a>

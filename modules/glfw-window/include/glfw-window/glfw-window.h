@@ -3,6 +3,9 @@
 #include "zeronetics/contracts/contracts.h"
 
 namespace ZEN {
+    /**
+     * Implementation of the ZEN::IWindow with GLFW.
+     */
     class Window : public IWindow {
     public:
         /**

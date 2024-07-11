@@ -29,7 +29,7 @@ void keyboardCallback(GLFWwindow *window, int key, int scancode, int action, int
 
     std::optional<ZEN::KeyEvent> keyEvent = createKeyEvent(key, action);
     if (keyEvent.has_value()) {
-        s_inputManager->keyPressed(keyEvent.value());
+        s_inputManager->onKeyStateChanged(keyEvent.value());
     }
 }
 

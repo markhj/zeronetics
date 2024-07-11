@@ -6,6 +6,11 @@
 #include <memory>
 
 namespace ZEN {
+    /**
+     * Interface for an object which can be connected to a window
+     * in order to handle various user inputs such as key presses
+     * and mouse movement.
+     */
     class IInputManager {
     public:
         /**
@@ -13,10 +18,14 @@ namespace ZEN {
          *
          * @param keyEvent Informs the key state, the pressed key, etc.
          */
-        virtual void keyPressed(const KeyEvent &keyEvent) = 0;
+        virtual void onKeyStateChanged(const KeyEvent &keyEvent) = 0;
 
     };
 
+    /**
+     * Contract for a window implementation which is used in various
+     * parts of the engine.
+     */
     class IWindow {
     public:
         /**
@@ -56,6 +65,9 @@ namespace ZEN {
 
     };
 
+    /**
+     * Contract for renderers.
+     */
     class IRenderer {
 
     };

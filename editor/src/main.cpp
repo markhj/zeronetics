@@ -3,5 +3,5 @@
 #include <zeronetics/zeronetics.h>
 
 int main() {
-    std::cout << "Zeronetics Editor " << ZEN::EngineInfo::getVersion() << std::endl;
+    std::cout << "Zeronetics Editor " << ZEN::EngineInfo::getVersion().toSemVer() << std::endl;
 }

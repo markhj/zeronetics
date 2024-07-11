@@ -1,11 +1,10 @@
-
 #include "zeronetics/core/controls.h"
-
 #include "glfw-window/glfw-window.h"
+
 #include <stdexcept>
+#include <optional>
 
 #include <GLFW/glfw3.h>
-#include <optional>
 
 GLFWwindow *glfwWindow;
 

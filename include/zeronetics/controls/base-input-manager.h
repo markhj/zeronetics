@@ -15,5 +15,12 @@ namespace ZEN {
          * @param keyEvent
          */
         void onKeyStateChanged(const KeyStateEvent &keyEvent) override {}
+
+        /**
+         * Handle for when the mouse cursor has moved.
+         *
+         * @param mouseMovedEvent
+         */
+        void onMouseMoved(const MouseMovedEvent &mouseMovedEvent) override {}
     };
 }

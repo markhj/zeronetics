@@ -1,5 +1,8 @@
 #pragma once
 
+#include "typedefs.h"
+#include <array>
+#include <cstdint>
 #include <optional>
 #include <unordered_map>
 
@@ -123,5 +126,33 @@ namespace ZEN {
     struct KeyStateEvent {
         KeyState keyState;
         Key key;
+    };
+
+    /**
+     * Mouse position
+     */
+    struct MousePosition {
+        /**
+         * X- and Y-axis of the cursor.
+         */
+        mouse_pos_axis x, y;
+    };
+
+    /**
+     * When the mouse has moved, the absolute position
+     * as well as relative position are reported.
+     * The relative position is the movement since
+     * last event reporting.
+     */
+    struct MouseMovedEvent {
+        /**
+         * Current position (within the window).
+         */
+        MousePosition position;
+
+        /**
+         * Change in position since last event reporting.
+         */
+        MousePosition relative;
     };
 }

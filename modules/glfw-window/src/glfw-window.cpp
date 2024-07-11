@@ -1,35 +1,66 @@
 #include "glfw-window/glfw-window.h"
 #include "zeronetics/core/controls.h"
 
-#include <stdexcept>
 #include <optional>
+#include <stdexcept>
 
 #include <GLFW/glfw3.h>
 
-GLFWwindow *glfwWindow;
+namespace {
+    GLFWwindow *glfwWindow;
 
-std::shared_ptr<ZEN::IInputManager> s_inputManager;
+    std::shared_ptr<ZEN::IInputManager> s_inputManager;
 
-std::optional<ZEN::KeyStateEvent> createKeyEvent(int key, int action) {
-    std::optional<ZEN::Key> inputKey = ZEN::KeyMap::toKey(key);
-    if (!inputKey.has_value()) {
-        return std::nullopt;
+    std::optional<ZEN::MousePosition> s_lastPosition;
+
+    std::optional<ZEN::KeyStateEvent> createKeyEvent(int key, int action) {
+        std::optional<ZEN::Key> inputKey = ZEN::KeyMap::toKey(key);
+        if (!inputKey.has_value()) {
+            return std::nullopt;
+        }
+
+        return ZEN::KeyStateEvent{
+                .keyState = action == 1 ? ZEN::KeyState::JustPressed : ZEN::KeyState::JustReleased,
+                .key = inputKey.value(),
+        };
     }
 
-    return ZEN::KeyStateEvent{
-            .keyState = action == 1 ? ZEN::KeyState::JustPressed : ZEN::KeyState::JustReleased,
-            .key = inputKey.value(),
-    };
-}
+    void keyboardCallback(GLFWwindow *window, int key, int scancode, int action, int mods) {
+        if (action > 1 || !s_inputManager) {
+            return;
+        }
 
-void keyboardCallback(GLFWwindow *window, int key, int scancode, int action, int mods) {
-    if (action > 1 || !s_inputManager) {
-        return;
+        std::optional<ZEN::KeyStateEvent> keyEvent = createKeyEvent(key, action);
+        if (keyEvent.has_value()) {
+            s_inputManager->onKeyStateChanged(keyEvent.value());
+        }
     }
 
-    std::optional<ZEN::KeyStateEvent> keyEvent = createKeyEvent(key, action);
-    if (keyEvent.has_value()) {
-        s_inputManager->onKeyStateChanged(keyEvent.value());
+    void mouseMoveCallback(GLFWwindow *window, double x, double y) {
+        if (!s_inputManager) {
+            return;
+        }
+
+        auto mx = static_cast<ZEN::mouse_pos_axis>(x);
+        auto my = static_cast<ZEN::mouse_pos_axis>(y);
+
+        // If the mouse position has not yet been recorded,
+        // we start by setting the current position in the s_lastPosition,
+        // and then abandon ship
+        if (!s_lastPosition.has_value()) {
+            s_lastPosition = {mx, my};
+            return;
+        }
+
+        ZEN::MousePosition lastPos = s_lastPosition.value();
+
+        s_inputManager->onMouseMoved({
+                {mx, my},
+                {static_cast<ZEN::mouse_pos_axis>(mx - lastPos.x),
+                 static_cast<ZEN::mouse_pos_axis>(my - lastPos.y)},
+        });
+
+        s_lastPosition = {mx, my};
     }
 }
 
@@ -45,6 +76,7 @@ void ZEN::Window::generate(const ZEN::Settings &settings) noexcept(false) {
                                   nullptr);
 
     glfwSetKeyCallback(glfwWindow, keyboardCallback);
+    glfwSetCursorPosCallback(glfwWindow, mouseMoveCallback);
 }
 
 void ZEN::Window::regenerate(const ZEN::Settings &settings) noexcept(false) {

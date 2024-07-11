@@ -3,5 +3,10 @@
 This page contains tutorials for specific areas of the engine.
 If you're just looking to get started, head over to @ref getting-started.
 
-🎮 @subpage input-manager  
-Learn how to handle inputs from keyboard and mouse.
+### 🎮 Controls
+
+@subpage input-manager  
+Learn how to handle user inputs from various hardware.
+
+@subpage mouse  
+Dive into handling mouse inputs from the player.

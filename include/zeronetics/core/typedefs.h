@@ -19,4 +19,15 @@ namespace ZEN {
      * delta time intervals.
      */
     typedef float dt_float;
+
+    /**
+     * Mouse position
+     *
+     * The data type mouse/cursor position is stored
+     * and reported with.
+     *
+     * Most of the time, this does not cause any issues,
+     * but should probably be set to match the window implementation.
+     */
+    typedef double mouse_pos_axis;
 }

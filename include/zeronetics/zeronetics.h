@@ -9,11 +9,14 @@
 
 #pragma once
 
-// Library core
+// Library core: Fundamentals
 #include "core/macros.h"
 #include "core/typedefs.h"
 #include "core/engine-info.h"
+
+// Library core: Higher level structures
 #include "core/settings.h"
+#include "core/controls.h"
 
 // Game
 #include "game/game.h"

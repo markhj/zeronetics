@@ -7,6 +7,7 @@ include(${ZEN_ROOT_DIR}/cmake/modules.cmake)
 
 set(CORE_SRC
         src/core/engine-info.cpp
+        src/core/controls.cpp
         src/core/game.cpp)
 
 add_library(zeronetics STATIC ${CORE_SRC})

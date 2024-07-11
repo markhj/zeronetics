@@ -1,8 +1,22 @@
 #pragma once
 
 #include "zeronetics/core/settings.h"
+#include "zeronetics/core/controls.h"
+
+#include <memory>
 
 namespace ZEN {
+    class IInputManager {
+    public:
+        /**
+         * Handle for when a key is pressed or released.
+         *
+         * @param keyEvent Informs the key state, the pressed key, etc.
+         */
+        virtual void keyPressed(const KeyEvent &keyEvent) = 0;
+
+    };
+
     class IWindow {
     public:
         /**
@@ -34,6 +48,11 @@ namespace ZEN {
          * Swap buffers.
          */
         virtual inline void handleBuffer() = 0;
+
+        /**
+         * Set (or replace) the Input Manager.
+         */
+        virtual void setInputManager(const std::shared_ptr<IInputManager> &inputManager) = 0;
 
     };
 

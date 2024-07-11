@@ -5,6 +5,16 @@
 namespace ZEN {
     class Window : public IWindow {
     public:
+        /**
+         * The title displayed in the window bar frame.
+         */
+        const char *windowTitle = "Zeronetics Game";
+
+        /**
+         * Destructor.
+         *
+         * Terminates GLFW.
+         */
         ~Window();
 
         /**
@@ -37,6 +47,12 @@ namespace ZEN {
          */
         inline void handleBuffer() override;
 
+        /**
+         * Set (or replace) the Input Manager.
+         *
+         * @param inputManager
+         */
+        void setInputManager(const std::shared_ptr<IInputManager> &inputManager) override;
 
     };
 }

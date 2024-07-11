@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['welcome_21_25',['Welcome!',['../index.html',1,'']]],
-  ['window_26',['Window',['../classZEN_1_1Window.html',1,'ZEN']]],
-  ['windowtitle_27',['windowTitle',['../classZEN_1_1Window.html#af1d158bd7f1fc66a9af1fb45495ff240',1,'ZEN::Window']]]
+  ['patch_27',['patch',['../structZEN_1_1Version.html#a04634c298ad640d6ec2561dfd57137fa',1,'ZEN::Version']]],
+  ['preview_28',['preview',['../structZEN_1_1Version.html#a4fc39feff9a5bb211e4e8b961a5f2a49',1,'ZEN::Version']]],
+  ['preview_29',['Preview',['../structZEN_1_1Version_1_1Preview.html',1,'ZEN::Version']]]
 ];

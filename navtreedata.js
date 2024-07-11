@@ -25,8 +25,8 @@
 var NAVTREE =
 [
   [ "Zeronetics Game Engine", "index.html", [
-    [ "Welcome!", "index.html", null ],
     [ "Getting started", "getting-started.html", "getting-started" ],
+    [ "Tutorials", "tutorials.html", "tutorials" ],
     [ "Modules", "modules.html", "modules" ],
     [ "Engine development", "dev.html", "dev" ],
     [ "Diving deeper", "diving-deeper.html", "diving-deeper" ],

@@ -88,11 +88,11 @@ $(document).ready(function(){initNavTree('setting-up-a-game.html',''); initResiz
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>This page assumes you've already <a class="el" href="install-engine.html">installed and built the engine</a>.</p>
-<h2><a class="anchor" id="autotoc_md6"></a>
+<h2><a class="anchor" id="autotoc_md7"></a>
 Environment variable</h2>
 <p>Step one is to make an environment variable visible to CMake. This differs depending on IDE or whether you're using command-line <code>cmake</code>.</p>
 <p>The variable must be named <code>ZERONETICS_DIR</code> and contain the path to where the engine is installed.</p>
-<h2><a class="anchor" id="autotoc_md7"></a>
+<h2><a class="anchor" id="autotoc_md8"></a>
 CMake list</h2>
 <p>In your game's <code>CMakeLists.txt</code> file, you add:</p>
 <div class="fragment"><div class="line">find_package(zeronetics REQUIRED)</div>
@@ -103,6 +103,35 @@ CMake list</h2>
 <blockquote class="doxtable">
 <p>Important: If you already have a <code>target_link_libraries</code>, you only need to append <code>zeronetics</code> and the modules there. Creating a second directive will cause problems. </p>
 </blockquote>
+<h2><a class="anchor" id="autotoc_md9"></a>
+Creating the window</h2>
+<p>Now, let's review how to get a window on the screen. This is done in a few steps:</p>
+<ul>
+<li>Create an instance of <a class="el" href="structZEN_1_1Settings.html">ZEN::Settings</a>, which contains information about screen resolution, and other things relevant to generating the window.</li>
+<li>Create an instance of <a class="el" href="classZEN_1_1Window.html">ZEN::Window</a>.</li>
+<li>Generate a window with the settings.</li>
+<li>Create a <a class="el" href="classZEN_1_1Game.html">ZEN::Game</a> instance, and run it.</li>
+</ul>
+<p>It would look something like this:</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;zeronetics/zeronetics.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;glfw-window/glfw-window.h&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main() {</div>
+<div class="line">    <a class="code" href="structZEN_1_1Settings.html">ZEN::Settings</a> settings;</div>
+<div class="line">    </div>
+<div class="line">    std::shared_ptr&lt;ZEN::Window&gt; window = std::make_shared&lt;ZEN::Window&gt;(<a class="code" href="classZEN_1_1Window.html">ZEN::Window</a>());</div>
+<div class="line">    window-&gt;windowTitle = <span class="stringliteral">&quot;My Game&quot;</span>;</div>
+<div class="line">    window-&gt;generate(settings);</div>
+<div class="line"> </div>
+<div class="line">    <a class="code" href="classZEN_1_1Game.html">ZEN::Game</a> game(window);</div>
+<div class="line">    game.run();</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="aclassZEN_1_1Game_html"><div class="ttname"><a href="classZEN_1_1Game.html">ZEN::Game</a></div><div class="ttdef"><b>Definition:</b> game.h:11</div></div>
+<div class="ttc" id="aclassZEN_1_1Window_html"><div class="ttname"><a href="classZEN_1_1Window.html">ZEN::Window</a></div><div class="ttdef"><b>Definition:</b> glfw-window.h:9</div></div>
+<div class="ttc" id="astructZEN_1_1Settings_html"><div class="ttname"><a href="structZEN_1_1Settings.html">ZEN::Settings</a></div><div class="ttdef"><b>Definition:</b> settings.h:24</div></div>
+</div><!-- fragment --><p>Now, this just opens a blank window. But that means we've started off correctly, and are ready to build an amazing game! </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

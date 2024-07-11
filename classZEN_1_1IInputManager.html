@@ -90,15 +90,24 @@ $(document).ready(function(){initNavTree('classZEN_1_1IInputManager.html',''); i
 <div class="title">ZEN::IInputManager Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="contracts_8h_source.html">contracts.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for ZEN::IInputManager:</div>
+<div class="dyncontent">
+<div class="center"><img src="classZEN_1_1IInputManager__inherit__graph.png" border="0" usemap="#aZEN_1_1IInputManager_inherit__map" alt="Inheritance graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a92fd6b4f14c3310304e5a9000cddac9a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1IInputManager.html#a92fd6b4f14c3310304e5a9000cddac9a">keyPressed</a> (const <a class="el" href="structZEN_1_1KeyEvent.html">KeyEvent</a> &amp;keyEvent)=0</td></tr>
-<tr class="separator:a92fd6b4f14c3310304e5a9000cddac9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a8e0c50e8577d7a0054da8c5e9394de"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1IInputManager.html#a3a8e0c50e8577d7a0054da8c5e9394de">onKeyStateChanged</a> (const <a class="el" href="structZEN_1_1KeyEvent.html">KeyEvent</a> &amp;keyEvent)=0</td></tr>
+<tr class="separator:a3a8e0c50e8577d7a0054da8c5e9394de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a92fd6b4f14c3310304e5a9000cddac9a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a92fd6b4f14c3310304e5a9000cddac9a">&#9670;&nbsp;</a></span>keyPressed()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Interface for an object which can be connected to a window in order to handle various user inputs such as key presses and mouse movement. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a3a8e0c50e8577d7a0054da8c5e9394de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a8e0c50e8577d7a0054da8c5e9394de">&#9670;&nbsp;</a></span>onKeyStateChanged()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -107,7 +116,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void ZEN::IInputManager::keyPressed </td>
+          <td class="memname">virtual void ZEN::IInputManager::onKeyStateChanged </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="structZEN_1_1KeyEvent.html">KeyEvent</a> &amp;&#160;</td>
           <td class="paramname"><em>keyEvent</em></td><td>)</td>

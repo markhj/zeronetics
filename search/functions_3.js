@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['keypressed_43',['keyPressed',['../classZEN_1_1IInputManager.html#a92fd6b4f14c3310304e5a9000cddac9a',1,'ZEN::IInputManager']]]
+  ['onkeystatechanged_62',['onKeyStateChanged',['../classZEN_1_1IInputManager.html#a3a8e0c50e8577d7a0054da8c5e9394de',1,'ZEN::IInputManager']]]
 ];

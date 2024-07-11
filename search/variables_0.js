@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['windowtitle_47',['windowTitle',['../classZEN_1_1Window.html#af1d158bd7f1fc66a9af1fb45495ff240',1,'ZEN::Window']]]
+  ['h_68',['h',['../structZEN_1_1ScreenResolution.html#a6cbae4c273486bcfe55da92798c48090',1,'ZEN::ScreenResolution']]]
 ];

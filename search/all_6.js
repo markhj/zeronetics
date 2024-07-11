@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['iinputmanager_12',['IInputManager',['../classZEN_1_1IInputManager.html',1,'ZEN']]],
-  ['install_20and_20build_20engine_13',['Install and build engine',['../install-engine.html',1,'getting-started']]],
-  ['irenderer_14',['IRenderer',['../classZEN_1_1IRenderer.html',1,'ZEN']]],
-  ['iwindow_15',['IWindow',['../classZEN_1_1IWindow.html',1,'ZEN']]]
+  ['h_12',['h',['../structZEN_1_1ScreenResolution.html#a6cbae4c273486bcfe55da92798c48090',1,'ZEN::ScreenResolution']]],
+  ['handlebuffer_13',['handleBuffer',['../classZEN_1_1IWindow.html#a567b2bae12bca462be7fbe744ee8be7e',1,'ZEN::IWindow::handleBuffer()'],['../classZEN_1_1Window.html#ab524ce373bdaa172859cb99e1cd207c9',1,'ZEN::Window::handleBuffer()']]],
+  ['handleinputs_14',['handleInputs',['../classZEN_1_1IWindow.html#a527811644cc0b04c5f8d661d013fc45b',1,'ZEN::IWindow::handleInputs()'],['../classZEN_1_1Window.html#a6cc55ce77162a4b14859fc95593107cd',1,'ZEN::Window::handleInputs()']]]
 ];

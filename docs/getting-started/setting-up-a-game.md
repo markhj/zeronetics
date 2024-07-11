@@ -34,3 +34,37 @@ They can be found here: @ref list-of-modules
 > Important: If you already have a ``target_link_libraries``, you
 > only need to append ``zeronetics`` and the modules there.
 > Creating a second directive will cause problems.
+
+## Creating the window
+
+Now, let's review how to get a window on the screen. This is done in a
+few steps:
+
+- Create an instance of ZEN::Settings, which contains information about
+  screen resolution, and other things relevant to generating the window.
+- Create an instance of ZEN::Window.
+- Generate a window with the settings.
+- Create a ZEN::Game instance, and run it.
+
+It would look something like this:
+
+````cpp
+#include <zeronetics/zeronetics.h>
+#include <glfw-window/glfw-window.h>
+
+int main() {
+    ZEN::Settings settings;
+    
+    std::shared_ptr<ZEN::Window> window = std::make_shared<ZEN::Window>(ZEN::Window());
+    window->windowTitle = "My Game";
+    window->generate(settings);
+
+    ZEN::Game game(window);
+    game.run();
+
+    return 0;
+}
+````
+
+Now, this just opens a blank window. But that means we've started off
+correctly, and are ready to build an amazing game!

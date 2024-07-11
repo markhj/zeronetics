@@ -8,6 +8,7 @@ HTML_EXTRA_STYLESHEET  = vendor/doxygen-awesome-css/doxygen-awesome.css \
 HTML_COLORSTYLE        = LIGHT
 
 INPUT                  = docs/getting-started \
+                            docs/tutorials \
                             docs/modules \
                             include docs modules \
 

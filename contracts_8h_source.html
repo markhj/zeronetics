@@ -90,33 +90,48 @@ $(document).ready(function(){initNavTree('contracts_8h_source.html',''); initRes
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;zeronetics/core/settings.h&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span>ZEN {</div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="classZEN_1_1IWindow.html">    6</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classZEN_1_1IWindow.html">IWindow</a> {</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classZEN_1_1IWindow.html#acfd336d6e779919ae66728b26a2995f2">   13</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classZEN_1_1IWindow.html#acfd336d6e779919ae66728b26a2995f2">generate</a>(<span class="keyword">const</span> <a class="code" href="structZEN_1_1Settings.html">Settings</a> &amp;settings) noexcept(<span class="keyword">false</span>) = 0;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classZEN_1_1IWindow.html#af3a8a1b75f2a6a588720a8c62b80886e">   21</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classZEN_1_1IWindow.html#af3a8a1b75f2a6a588720a8c62b80886e">regenerate</a>(<span class="keyword">const</span> <a class="code" href="structZEN_1_1Settings.html">Settings</a> &amp;settings) noexcept(<span class="keyword">false</span>) = 0;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classZEN_1_1IWindow.html#ac20b4467e8d3fee02198065c8507d004">   26</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classZEN_1_1IWindow.html#ac20b4467e8d3fee02198065c8507d004">close</a>() noexcept = 0;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classZEN_1_1IWindow.html#a527811644cc0b04c5f8d661d013fc45b">   31</a></span>&#160;        virtual inline <span class="keywordtype">void</span> <a class="code" href="classZEN_1_1IWindow.html#a527811644cc0b04c5f8d661d013fc45b">handleInputs</a>() = 0;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classZEN_1_1IWindow.html#a567b2bae12bca462be7fbe744ee8be7e">   36</a></span>&#160;        virtual inline <span class="keywordtype">void</span> <a class="code" href="classZEN_1_1IWindow.html#a567b2bae12bca462be7fbe744ee8be7e">handleBuffer</a>() = 0;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    };</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classZEN_1_1IRenderer.html">   40</a></span>&#160;    class <a class="code" href="classZEN_1_1IRenderer.html">IRenderer</a> {</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;zeronetics/core/controls.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span>ZEN {</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classZEN_1_1IInputManager.html">    9</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classZEN_1_1IInputManager.html">IInputManager</a> {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classZEN_1_1IInputManager.html#a92fd6b4f14c3310304e5a9000cddac9a">   16</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classZEN_1_1IInputManager.html#a92fd6b4f14c3310304e5a9000cddac9a">keyPressed</a>(<span class="keyword">const</span> <a class="code" href="structZEN_1_1KeyEvent.html">KeyEvent</a> &amp;keyEvent) = 0;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    };</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classZEN_1_1IWindow.html">   20</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classZEN_1_1IWindow.html">IWindow</a> {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classZEN_1_1IWindow.html#acfd336d6e779919ae66728b26a2995f2">   27</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classZEN_1_1IWindow.html#acfd336d6e779919ae66728b26a2995f2">generate</a>(<span class="keyword">const</span> <a class="code" href="structZEN_1_1Settings.html">Settings</a> &amp;settings) noexcept(<span class="keyword">false</span>) = 0;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classZEN_1_1IWindow.html#af3a8a1b75f2a6a588720a8c62b80886e">   35</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classZEN_1_1IWindow.html#af3a8a1b75f2a6a588720a8c62b80886e">regenerate</a>(<span class="keyword">const</span> <a class="code" href="structZEN_1_1Settings.html">Settings</a> &amp;settings) noexcept(<span class="keyword">false</span>) = 0;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classZEN_1_1IWindow.html#ac20b4467e8d3fee02198065c8507d004">   40</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classZEN_1_1IWindow.html#ac20b4467e8d3fee02198065c8507d004">close</a>() noexcept = 0;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    };</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
-<div class="ttc" id="aclassZEN_1_1IRenderer_html"><div class="ttname"><a href="classZEN_1_1IRenderer.html">ZEN::IRenderer</a></div><div class="ttdef"><b>Definition:</b> contracts.h:40</div></div>
-<div class="ttc" id="aclassZEN_1_1IWindow_html"><div class="ttname"><a href="classZEN_1_1IWindow.html">ZEN::IWindow</a></div><div class="ttdef"><b>Definition:</b> contracts.h:6</div></div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classZEN_1_1IWindow.html#a527811644cc0b04c5f8d661d013fc45b">   45</a></span>&#160;        virtual inline <span class="keywordtype">void</span> <a class="code" href="classZEN_1_1IWindow.html#a527811644cc0b04c5f8d661d013fc45b">handleInputs</a>() = 0;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classZEN_1_1IWindow.html#a567b2bae12bca462be7fbe744ee8be7e">   50</a></span>&#160;        virtual inline <span class="keywordtype">void</span> <a class="code" href="classZEN_1_1IWindow.html#a567b2bae12bca462be7fbe744ee8be7e">handleBuffer</a>() = 0;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classZEN_1_1IWindow.html#a2944bafe25694ec5fc62dd063227dc9f">   55</a></span>&#160;        virtual <span class="keywordtype">void</span> <a class="code" href="classZEN_1_1IWindow.html#a2944bafe25694ec5fc62dd063227dc9f">setInputManager</a>(const std::shared_ptr&lt;<a class="code" href="classZEN_1_1IInputManager.html">IInputManager</a>&gt; &amp;inputManager) = 0;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    };</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classZEN_1_1IRenderer.html">   59</a></span>&#160;    class <a class="code" href="classZEN_1_1IRenderer.html">IRenderer</a> {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    };</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+<div class="ttc" id="aclassZEN_1_1IInputManager_html"><div class="ttname"><a href="classZEN_1_1IInputManager.html">ZEN::IInputManager</a></div><div class="ttdef"><b>Definition:</b> contracts.h:9</div></div>
+<div class="ttc" id="aclassZEN_1_1IInputManager_html_a92fd6b4f14c3310304e5a9000cddac9a"><div class="ttname"><a href="classZEN_1_1IInputManager.html#a92fd6b4f14c3310304e5a9000cddac9a">ZEN::IInputManager::keyPressed</a></div><div class="ttdeci">virtual void keyPressed(const KeyEvent &amp;keyEvent)=0</div></div>
+<div class="ttc" id="aclassZEN_1_1IRenderer_html"><div class="ttname"><a href="classZEN_1_1IRenderer.html">ZEN::IRenderer</a></div><div class="ttdef"><b>Definition:</b> contracts.h:59</div></div>
+<div class="ttc" id="aclassZEN_1_1IWindow_html"><div class="ttname"><a href="classZEN_1_1IWindow.html">ZEN::IWindow</a></div><div class="ttdef"><b>Definition:</b> contracts.h:20</div></div>
+<div class="ttc" id="aclassZEN_1_1IWindow_html_a2944bafe25694ec5fc62dd063227dc9f"><div class="ttname"><a href="classZEN_1_1IWindow.html#a2944bafe25694ec5fc62dd063227dc9f">ZEN::IWindow::setInputManager</a></div><div class="ttdeci">virtual void setInputManager(const std::shared_ptr&lt; IInputManager &gt; &amp;inputManager)=0</div></div>
 <div class="ttc" id="aclassZEN_1_1IWindow_html_a527811644cc0b04c5f8d661d013fc45b"><div class="ttname"><a href="classZEN_1_1IWindow.html#a527811644cc0b04c5f8d661d013fc45b">ZEN::IWindow::handleInputs</a></div><div class="ttdeci">virtual void handleInputs()=0</div></div>
 <div class="ttc" id="aclassZEN_1_1IWindow_html_a567b2bae12bca462be7fbe744ee8be7e"><div class="ttname"><a href="classZEN_1_1IWindow.html#a567b2bae12bca462be7fbe744ee8be7e">ZEN::IWindow::handleBuffer</a></div><div class="ttdeci">virtual void handleBuffer()=0</div></div>
 <div class="ttc" id="aclassZEN_1_1IWindow_html_ac20b4467e8d3fee02198065c8507d004"><div class="ttname"><a href="classZEN_1_1IWindow.html#ac20b4467e8d3fee02198065c8507d004">ZEN::IWindow::close</a></div><div class="ttdeci">virtual void close() noexcept=0</div></div>
 <div class="ttc" id="aclassZEN_1_1IWindow_html_acfd336d6e779919ae66728b26a2995f2"><div class="ttname"><a href="classZEN_1_1IWindow.html#acfd336d6e779919ae66728b26a2995f2">ZEN::IWindow::generate</a></div><div class="ttdeci">virtual void generate(const Settings &amp;settings) noexcept(false)=0</div></div>
 <div class="ttc" id="aclassZEN_1_1IWindow_html_af3a8a1b75f2a6a588720a8c62b80886e"><div class="ttname"><a href="classZEN_1_1IWindow.html#af3a8a1b75f2a6a588720a8c62b80886e">ZEN::IWindow::regenerate</a></div><div class="ttdeci">virtual void regenerate(const Settings &amp;settings) noexcept(false)=0</div></div>
+<div class="ttc" id="astructZEN_1_1KeyEvent_html"><div class="ttname"><a href="structZEN_1_1KeyEvent.html">ZEN::KeyEvent</a></div><div class="ttdef"><b>Definition:</b> controls.h:27</div></div>
 <div class="ttc" id="astructZEN_1_1Settings_html"><div class="ttname"><a href="structZEN_1_1Settings.html">ZEN::Settings</a></div><div class="ttdef"><b>Definition:</b> settings.h:16</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

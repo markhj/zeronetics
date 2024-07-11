@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['modules_16',['Modules',['../modules.html',1,'']]]
+  ['list_20of_20modules_19',['List of modules',['../list-of-modules.html',1,'modules']]]
 ];

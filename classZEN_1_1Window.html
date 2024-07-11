@@ -85,6 +85,7 @@ $(document).ready(function(){initNavTree('classZEN_1_1Window.html',''); initResi
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="classZEN_1_1Window-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ZEN::Window Class Reference</div>  </div>
@@ -103,6 +104,8 @@ Collaboration diagram for ZEN::Window:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a919e5efd6e8a7544b9e8ad36769f6a35"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1Window.html#a919e5efd6e8a7544b9e8ad36769f6a35">~Window</a> ()</td></tr>
+<tr class="separator:a919e5efd6e8a7544b9e8ad36769f6a35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56421da6cc3290b940c3200b7a4f0a6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1Window.html#a56421da6cc3290b940c3200b7a4f0a6f">generate</a> (const <a class="el" href="structZEN_1_1Settings.html">Settings</a> &amp;settings) noexcept(false) override</td></tr>
 <tr class="separator:a56421da6cc3290b940c3200b7a4f0a6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeea1798c76919c2560775df3e4cd3093"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1Window.html#aeea1798c76919c2560775df3e4cd3093">regenerate</a> (const <a class="el" href="structZEN_1_1Settings.html">Settings</a> &amp;settings) noexcept(false) override</td></tr>
@@ -113,7 +116,34 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6cc55ce77162a4b14859fc95593107cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab524ce373bdaa172859cb99e1cd207c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1Window.html#ab524ce373bdaa172859cb99e1cd207c9">handleBuffer</a> () override</td></tr>
 <tr class="separator:ab524ce373bdaa172859cb99e1cd207c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38ebf8096b598b8ab3df8260ce742838"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1Window.html#a38ebf8096b598b8ab3df8260ce742838">setInputManager</a> (const std::shared_ptr&lt; <a class="el" href="classZEN_1_1IInputManager.html">IInputManager</a> &gt; &amp;inputManager) override</td></tr>
+<tr class="separator:a38ebf8096b598b8ab3df8260ce742838"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:af1d158bd7f1fc66a9af1fb45495ff240"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1Window.html#af1d158bd7f1fc66a9af1fb45495ff240">windowTitle</a> = &quot;Zeronetics <a class="el" href="classZEN_1_1Game.html">Game</a>&quot;</td></tr>
+<tr class="separator:af1d158bd7f1fc66a9af1fb45495ff240"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a919e5efd6e8a7544b9e8ad36769f6a35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a919e5efd6e8a7544b9e8ad36769f6a35">&#9670;&nbsp;</a></span>~Window()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ZEN::Window::~Window </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Destructor.</p>
+<p>Terminates GLFW. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a64cec0e02957378822f9e7ae0b9ee51d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a64cec0e02957378822f9e7ae0b9ee51d">&#9670;&nbsp;</a></span>close()</h2>
@@ -266,6 +296,57 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p>Implements <a class="el" href="classZEN_1_1IWindow.html#af3a8a1b75f2a6a588720a8c62b80886e">ZEN::IWindow</a>.</p>
+
+</div>
+</div>
+<a id="a38ebf8096b598b8ab3df8260ce742838"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38ebf8096b598b8ab3df8260ce742838">&#9670;&nbsp;</a></span>setInputManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ZEN::Window::setInputManager </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classZEN_1_1IInputManager.html">IInputManager</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>inputManager</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set (or replace) the Input Manager.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inputManager</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classZEN_1_1IWindow.html#a2944bafe25694ec5fc62dd063227dc9f">ZEN::IWindow</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="af1d158bd7f1fc66a9af1fb45495ff240"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1d158bd7f1fc66a9af1fb45495ff240">&#9670;&nbsp;</a></span>windowTitle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* ZEN::Window::windowTitle = &quot;Zeronetics <a class="el" href="classZEN_1_1Game.html">Game</a>&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The title displayed in the window bar frame. </p>
 
 </div>
 </div>

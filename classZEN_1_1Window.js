@@ -5,5 +5,7 @@ var classZEN_1_1Window =
     [ "generate", "classZEN_1_1Window.html#a56421da6cc3290b940c3200b7a4f0a6f", null ],
     [ "handleBuffer", "classZEN_1_1Window.html#ab524ce373bdaa172859cb99e1cd207c9", null ],
     [ "handleInputs", "classZEN_1_1Window.html#a6cc55ce77162a4b14859fc95593107cd", null ],
-    [ "regenerate", "classZEN_1_1Window.html#aeea1798c76919c2560775df3e4cd3093", null ]
+    [ "regenerate", "classZEN_1_1Window.html#aeea1798c76919c2560775df3e4cd3093", null ],
+    [ "setInputManager", "classZEN_1_1Window.html#a38ebf8096b598b8ab3df8260ce742838", null ],
+    [ "windowTitle", "classZEN_1_1Window.html#af1d158bd7f1fc66a9af1fb45495ff240", null ]
 ];

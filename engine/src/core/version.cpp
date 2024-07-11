@@ -1,4 +1,4 @@
-#include "zeronetics/core/basic.h"
+#include "zeronetics/core/version.h"
 #include <format>
 
 std::string ZEN::Version::toSemVer() {

@@ -2,7 +2,7 @@
 
 #include <string>
 
-#include "zeronetics/core/basic.h"
+#include "zeronetics/core/version.h"
 
 namespace ZEN {
     /**

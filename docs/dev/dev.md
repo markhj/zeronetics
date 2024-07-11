@@ -6,3 +6,5 @@ or working on forks of it.
 @ref arch
 
 @subpage create-modules
+
+@subpage engine-core-structure

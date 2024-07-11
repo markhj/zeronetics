@@ -1,7 +1,7 @@
 #pragma once
 
+#include "zeronetics/controls/controls.h"
 #include "zeronetics/core/settings.h"
-#include "zeronetics/core/controls.h"
 
 #include <memory>
 

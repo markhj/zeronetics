@@ -9,18 +9,19 @@
 
 #pragma once
 
-// Library core: Fundamentals
+// Fundamentals
+#include "core/engine-info.h"
 #include "core/macros.h"
 #include "core/typedefs.h"
-#include "core/basic.h"
-#include "core/engine-info.h"
+#include "core/version.h"
 
-// Library core: Higher level structures
-#include "core/settings.h"
-#include "core/controls.h"
+// Contracts
+#include "contracts/contracts.h"
 
-// Library core: Controls and user inputs
+// Controls and user inputs
 #include "controls/base-input-manager.h"
+#include "controls/controls.h"
 
 // Game
 #include "game/game.h"
+#include "zeronetics/core/settings.h"

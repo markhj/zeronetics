@@ -10,17 +10,21 @@ var annotated_dup =
         [ "Public headers", "create-modules.html#autotoc_md13", null ],
         [ "Integrate in build process", "create-modules.html#autotoc_md14", null ]
       ] ],
-      [ "💫 Overview", "arch.html#autotoc_md15", null ],
+      [ "Core", "engine-core-structure.html#autotoc_md15", null ],
+      [ "Contracts", "engine-core-structure.html#autotoc_md16", null ],
+      [ "Other", "engine-core-structure.html#autotoc_md17", null ],
+      [ "Modules", "engine-core-structure.html#autotoc_md18", null ],
+      [ "💫 Overview", "arch.html#autotoc_md19", null ],
       [ "IInputManager", "classZEN_1_1IInputManager.html", "classZEN_1_1IInputManager" ],
       [ "IWindow", "classZEN_1_1IWindow.html", "classZEN_1_1IWindow" ],
       [ "IRenderer", "classZEN_1_1IRenderer.html", null ],
       [ "BaseInputManager", "classZEN_1_1BaseInputManager.html", null ],
-      [ "Version", "structZEN_1_1Version.html", "structZEN_1_1Version" ],
       [ "KeyMap", "structZEN_1_1KeyMap.html", null ],
       [ "KeyEvent", "structZEN_1_1KeyEvent.html", "structZEN_1_1KeyEvent" ],
       [ "EngineInfo", "classZEN_1_1EngineInfo.html", null ],
       [ "ScreenResolution", "structZEN_1_1ScreenResolution.html", "structZEN_1_1ScreenResolution" ],
       [ "Settings", "structZEN_1_1Settings.html", "structZEN_1_1Settings" ],
+      [ "Version", "structZEN_1_1Version.html", "structZEN_1_1Version" ],
       [ "Game", "classZEN_1_1Game.html", "classZEN_1_1Game" ],
       [ "Window", "classZEN_1_1Window.html", "classZEN_1_1Window" ]
     ] ]

@@ -123,8 +123,10 @@ Integrate in build process</h3>
 <div class="fragment"><div class="line">set(ZEN_MODULES</div>
 <div class="line">    # Other modules already registered</div>
 <div class="line">    awesome)</div>
-</div><!-- fragment --><p>If your library depend on vendor (third-party) libraries, you must also define those. For example:</p>
-<div class="fragment"><div class="line">set(LIBS_awesome glfw3)</div>
+</div><!-- fragment --><p>If your library depends on vendor (third-party) libraries, you must also define those.</p>
+<p>You specify them in a list in CMake, named <code>LIBS_&lt;NAME&gt;</code>, where <code>&lt;NAME&gt;</code> is your library written in uppercase, and with hyphens replaced with underscores.</p>
+<p>Example:</p>
+<div class="fragment"><div class="line">set(LIBS_AWESOME glfw3)</div>
 </div><!-- fragment --><p>When you refresh your CMake configuration, the <em>Awesome</em> module is now part of the build process. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->

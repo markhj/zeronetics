@@ -20,7 +20,7 @@ var annotated_dup =
       [ "IWindow", "classZEN_1_1IWindow.html", "classZEN_1_1IWindow" ],
       [ "BaseInputManager", "classZEN_1_1BaseInputManager.html", null ],
       [ "KeyMap", "structZEN_1_1KeyMap.html", null ],
-      [ "KeyEvent", "structZEN_1_1KeyEvent.html", "structZEN_1_1KeyEvent" ],
+      [ "KeyStateEvent", "structZEN_1_1KeyStateEvent.html", "structZEN_1_1KeyStateEvent" ],
       [ "EngineInfo", "classZEN_1_1EngineInfo.html", null ],
       [ "ScreenResolution", "structZEN_1_1ScreenResolution.html", "structZEN_1_1ScreenResolution" ],
       [ "Settings", "structZEN_1_1Settings.html", "structZEN_1_1Settings" ],

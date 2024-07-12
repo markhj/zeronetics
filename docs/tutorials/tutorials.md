@@ -10,3 +10,8 @@ Learn how to handle user inputs from various hardware.
 
 @subpage mouse  
 Dive into handling mouse inputs from the player.
+
+### Misc.
+
+@subpage logging  
+Log useful information at different levels.

@@ -9,7 +9,13 @@ set(CORE_SRC
         src/core/version.cpp
         src/core/engine-info.cpp
         src/core/controls.cpp
+        src/render/render-manager.cpp
         src/logging/log.cpp
+
+        # Entities
+        src/entities/entity.cpp
+        src/entities/3d/camera-3d.cpp
+
         src/game/game.cpp)
 
 add_library(zeronetics STATIC ${CORE_SRC})

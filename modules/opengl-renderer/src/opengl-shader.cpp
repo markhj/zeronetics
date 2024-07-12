@@ -8,6 +8,12 @@
 namespace {
     GLuint s_programId;
 
+    void checkInitializationStatus() {
+        if (glad_glCreateShader == nullptr) {
+            ZEN_CRITICAL("You must initialize the renderer before compiling shaders");
+        }
+    }
+
     GLenum shaderStageToGL(ZEN::ShaderStage stage) {
         switch (stage) {
             case ZEN::ShaderStage::Vertex:
@@ -34,6 +40,8 @@ namespace {
 }
 
 void ZEN::Shader::compile() noexcept(false) {
+    checkInitializationStatus();
+
     for (const auto &source: sources) {
         GLenum stage = shaderStageToGL(source.first);
         GLuint shader = glCreateShader(stage);
@@ -53,6 +61,8 @@ void ZEN::Shader::compile() noexcept(false) {
 
         ZEN_INFO(std::format("Shader {}: Compiled {} with source: {}...", s_programId, stage, source.second.substr(0, 70)),
                  ZEN::LogCategory::ShaderCompilation);
+
+        glDeleteShader(shader);
     }
 
     glLinkProgram(s_programId);
@@ -72,7 +82,6 @@ void ZEN::Shader::setSource(ZEN::ShaderStage shaderStage, const std::string &sou
     sources[shaderStage] = source;
 }
 
-
 ZEN::Shader::~Shader() {
     glDeleteProgram(s_programId);
 }
@@ -82,6 +91,8 @@ void ZEN::Shader::use() noexcept {
 }
 
 void ZEN::Shader::create() noexcept(false) {
+    checkInitializationStatus();
+
     s_programId = glCreateProgram();
 
     ZEN_INFO(std::format("Shader program created with ID: {}", s_programId),

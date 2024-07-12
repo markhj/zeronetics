@@ -96,7 +96,7 @@ $(document).ready(function(){initNavTree('engine-core-structure.html',''); initR
 <li>Modules</li>
 </ul>
 <p>Let's review them one by one.</p>
-<h2><a class="anchor" id="autotoc_md22"></a>
+<h2><a class="anchor" id="autotoc_md30"></a>
 Core</h2>
 <p>Declarations of:</p>
 <ul>
@@ -104,25 +104,28 @@ Core</h2>
 <li>Macros</li>
 <li>Structs and classes which:<ul>
 <li>Have universal application and/or are general in nature</li>
-<li>Have no dependencies, aside from other structs defined in the same file</li>
+<li>Have no dependencies, aside from other definitions in the same file</li>
 </ul>
 </li>
 </ul>
 <p>Examples include <code>gw_float</code> typedef, the <a class="el" href="structZEN_1_1Settings.html">ZEN::Settings</a> struct and <a class="el" href="structZEN_1_1Version.html">ZEN::Version</a> class. They have no dependencies on other parts of the engine.</p>
-<h2><a class="anchor" id="autotoc_md23"></a>
+<p>The <code>core</code> is separated into fundamentals and second-level fundamentals. The first layer consists of primitive declarations such as <code>typedef</code>s and simple macro definitions (e.g. build information).</p>
+<p>The second-level fundamentals define structs, enums and classes at core-level.</p>
+<h2><a class="anchor" id="autotoc_md31"></a>
 Contracts</h2>
 <p>Interfaces in the <code>contracts</code> directory are allowed to have dependencies from <code>core</code> and other contracts.</p>
 <p>Example: The <a class="el" href="classZEN_1_1IWindow.html">ZEN::IWindow</a> contract can depend on <a class="el" href="classZEN_1_1IInputManager.html">ZEN::IInputManager</a>.</p>
 <blockquote class="doxtable">
 <p>Contracts must only have pure virtual functions. For abstract classes, see the next chapter. </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md24"></a>
-Other</h2>
+<h2><a class="anchor" id="autotoc_md32"></a>
+Implementations</h2>
 <p>Abstract classes and implementations of basic game engine logic exist in this layer. They can depend on <code>contracts</code>, <code>core</code> and other files residing in the same directory. They are not allowed to depend on files from other directories.</p>
 <p>In other words, a class in <code>controls</code> can depend on files from <code>core</code>, <code>contracts</code> and other files within <code>controls</code>. But it <em>cannot</em> depend on files from <code>game</code>, for example.</p>
-<h2><a class="anchor" id="autotoc_md25"></a>
+<h2><a class="anchor" id="autotoc_md33"></a>
 Modules</h2>
-<p>Modules can extend and depend on any class or struct in the main engine. They are under no circumstances allowed to have dependencies in other modules, and must be treated in total isolation from them, making no assumptions about their existence or function. </p>
+<p>Modules can extend and depend on any class or struct in the main engine.</p>
+<p>They are under no circumstances allowed to have dependencies in other modules, and must be treated in total isolation from them, making no assumptions about their existence or function. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

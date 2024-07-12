@@ -11,6 +11,7 @@ var hierarchy =
     ] ],
     [ "ZEN::KeyMap", "structZEN_1_1KeyMap.html", null ],
     [ "ZEN::KeyStateEvent", "structZEN_1_1KeyStateEvent.html", null ],
+    [ "ZEN::Log", "classZEN_1_1Log.html", null ],
     [ "ZEN::MouseMovedEvent", "structZEN_1_1MouseMovedEvent.html", null ],
     [ "ZEN::MousePosition", "structZEN_1_1MousePosition.html", null ],
     [ "ZEN::Version::Preview", "structZEN_1_1Version_1_1Preview.html", null ],

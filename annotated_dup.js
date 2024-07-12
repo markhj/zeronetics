@@ -4,25 +4,34 @@ var annotated_dup =
       [ "Environment variable", "setting-up-a-game.html#autotoc_md7", null ],
       [ "CMake list", "setting-up-a-game.html#autotoc_md8", null ],
       [ "Creating the window", "setting-up-a-game.html#autotoc_md9", null ],
-      [ "🎮 Controls", "tutorials.html#autotoc_md14", null ],
+      [ "🎮 Controls", "tutorials.html#autotoc_md18", null ],
+      [ "Misc.", "tutorials.html#autotoc_md19", null ],
       [ "Example", "input-manager.html#autotoc_md10", null ],
       [ "Connecting to window", "input-manager.html#autotoc_md11", null ],
-      [ "Prerequisites", "mouse.html#autotoc_md12", null ],
-      [ "Mouse movement", "mouse.html#autotoc_md13", null ],
-      [ "Core", "engine-core-structure.html#autotoc_md22", null ],
-      [ "Contracts", "engine-core-structure.html#autotoc_md23", null ],
-      [ "Other", "engine-core-structure.html#autotoc_md24", null ],
-      [ "Modules", "engine-core-structure.html#autotoc_md25", [
-        [ "CMake file", "create-modules.html#autotoc_md19", null ],
-        [ "Public headers", "create-modules.html#autotoc_md20", null ],
-        [ "Integrate in build process", "create-modules.html#autotoc_md21", null ]
+      [ "Prerequisites", "mouse.html#autotoc_md16", null ],
+      [ "Mouse movement", "mouse.html#autotoc_md17", null ],
+      [ "A simple message", "logging.html#autotoc_md12", [
+        [ "Example", "logging.html#autotoc_md13", null ]
       ] ],
-      [ "How to make callbacks \"a la Zeronetics\"", "callbacks.html#autotoc_md15", null ],
-      [ "Examination of choices", "callbacks.html#autotoc_md16", [
-        [ "Using <tt>std::optional</tt>", "callbacks.html#autotoc_md17", null ],
-        [ "Smart pointers", "callbacks.html#autotoc_md18", null ]
+      [ "Why macros?", "logging.html#autotoc_md14", null ],
+      [ "Note", "logging.html#autotoc_md15", null ],
+      [ "Core", "engine-core-structure.html#autotoc_md30", null ],
+      [ "Contracts", "engine-core-structure.html#autotoc_md31", null ],
+      [ "Implementations", "engine-core-structure.html#autotoc_md32", null ],
+      [ "Modules", "engine-core-structure.html#autotoc_md33", null ],
+      [ "Macros", "build-info.html#autotoc_md20", null ],
+      [ "Example", "build-info.html#autotoc_md21", null ],
+      [ "Note", "build-info.html#autotoc_md22", [
+        [ "CMake file", "create-modules.html#autotoc_md27", null ],
+        [ "Public headers", "create-modules.html#autotoc_md28", null ],
+        [ "Integrate in build process", "create-modules.html#autotoc_md29", null ]
       ] ],
-      [ "💫 Overview", "arch.html#autotoc_md26", null ],
+      [ "How to make callbacks \"a la Zeronetics\"", "callbacks.html#autotoc_md23", null ],
+      [ "Examination of choices", "callbacks.html#autotoc_md24", [
+        [ "Using <tt>std::optional</tt>", "callbacks.html#autotoc_md25", null ],
+        [ "Smart pointers", "callbacks.html#autotoc_md26", null ]
+      ] ],
+      [ "💫 Overview", "arch.html#autotoc_md34", null ],
       [ "IInputManager", "classZEN_1_1IInputManager.html", "classZEN_1_1IInputManager" ],
       [ "IRenderer", "classZEN_1_1IRenderer.html", null ],
       [ "IWindow", "classZEN_1_1IWindow.html", "classZEN_1_1IWindow" ],
@@ -36,6 +45,7 @@ var annotated_dup =
       [ "Settings", "structZEN_1_1Settings.html", "structZEN_1_1Settings" ],
       [ "Version", "structZEN_1_1Version.html", "structZEN_1_1Version" ],
       [ "Game", "classZEN_1_1Game.html", "classZEN_1_1Game" ],
+      [ "Log", "classZEN_1_1Log.html", null ],
       [ "Window", "classZEN_1_1Window.html", "classZEN_1_1Window" ]
     ] ]
 ];

@@ -23,3 +23,5 @@
 #else
 #define ZEN_INFO(message, category)
 #endif
+
+#define ZEN_CRITICAL(message) ZEN::Log::critical(message);

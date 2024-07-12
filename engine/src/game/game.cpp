@@ -6,8 +6,12 @@ ZEN::Game::Game(const std::shared_ptr<IWindow> &window,
 }
 
 void ZEN::Game::run() {
+    if (!m_renderer->isInitialized()) {
+        m_renderer->initialize();
+    }
+
     while (true) {
-        // Game loop logic will be added here
+        m_renderer->clear();
 
         m_renderer->render();
 

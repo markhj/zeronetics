@@ -23,6 +23,14 @@ can depend on any core level, but _not_ on advanced structures or modules.
 Whether, and how, items in the same layer can depend on each other is
 specified on a per-level basis.
 
+> **A note on the core levels**  
+> The core levels don't affect directory structure, all core units are
+> found in the ``core`` folder. But it's possible they will be split
+> up as the project grows. The separation into levels help with forming
+> the order to include the headers, for instance in ``zeronetics.h``
+> public header, and otherwise mostly serve as a way to backtrace
+> in case you run into circular dependencies.
+
 ## 🔨 Core: Fundamentals
 
 **Dependency from same layer**: Not allowed  

@@ -2,6 +2,17 @@
 
 namespace ZEN {
     /**
+     * Indicates if a key has just been pressed,
+     * or just been released.
+     *
+     * @note Key down is different mechanism.
+     */
+    enum class KeyState {
+        JustPressed,
+        JustReleased,
+    };
+
+    /**
      * List of supported keys (and their number)
      *
      * @important For developers: When more keys have been added to this enum,

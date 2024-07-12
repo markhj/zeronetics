@@ -1,7 +1,7 @@
 #pragma once
 
 #include "input-manager.h"
-#include "zeronetics/core/controls.h"
+#include "zeronetics/core/input.h"
 #include "zeronetics/core/settings.h"
 
 #include <functional>

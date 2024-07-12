@@ -17,8 +17,8 @@
 #include "core/typedefs.h"
 
 // Second-level fundamentals
-#include "core/controls.h"
 #include "core/engine-info.h"
+#include "core/input.h"
 #include "core/settings.h"
 #include "core/version.h"
 

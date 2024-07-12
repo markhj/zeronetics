@@ -1,4 +1,4 @@
-#include "zeronetics/core/controls.h"
+#include "zeronetics/core/input.h"
 
 std::unordered_map<int, ZEN::Key> ZEN::KeyMap::map = {
         {65, Key::A},

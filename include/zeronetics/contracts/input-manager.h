@@ -1,6 +1,6 @@
 #pragma once
 
-#include "zeronetics/core/input.h"
+#include "zeronetics/core/inputs.h"
 #include "zeronetics/core/settings.h"
 
 #include <memory>

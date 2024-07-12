@@ -11,25 +11,26 @@
 
 #pragma once
 
-// Fundamentals
+// Core: Fundamentals
 #include "core/build.h"
 #include "core/enums.h"
 #include "core/typedefs.h"
 
-// Second-level fundamentals
+// Core: 2nd Level
 #include "core/engine-info.h"
-#include "core/input.h"
+#include "core/inputs.h"
 #include "core/settings.h"
 #include "core/version.h"
+
+// Core: 3rd Level
+#include "core/tensors.h"
 
 // Contracts
 #include "contracts/input-manager.h"
 #include "contracts/renderer.h"
 #include "contracts/window.h"
 
-// Implementation-level
+// Adv. structures
 #include "controls/base-input-manager.h"
 #include "logging/logging.h"
-
-// Game
 #include "game/game.h"

@@ -1,5 +1,5 @@
 #include "glfw-window/glfw-window.h"
-#include "zeronetics/core/input.h"
+#include "zeronetics/core/inputs.h"
 
 #include <optional>
 #include <stdexcept>

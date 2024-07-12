@@ -15,3 +15,5 @@ set(CORE_SRC
 add_library(zeronetics STATIC ${CORE_SRC})
 
 target_link_libraries(zeronetics PRIVATE ${ZEN_MODULES})
+
+target_include_directories(zeronetics PUBLIC ${ZEN_VENDOR_DIR}/glm)

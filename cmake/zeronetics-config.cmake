@@ -12,7 +12,9 @@ install(
 # MAIN ENGINE CODE
 add_library(zeronetics STATIC IMPORTED)
 
-target_include_directories(zeronetics INTERFACE ${ZEN_LIB_ROOT}/include)
+target_include_directories(zeronetics INTERFACE
+        ${ZEN_LIB_ROOT}/include
+        ${ZEN_LIB_ROOT}/vendor/glm)
 
 set_target_properties(zeronetics PROPERTIES
         IMPORTED_LOCATION_DEBUG "${ZEN_LIB_ROOT}/build/debug/lib/libzeronetics.a"

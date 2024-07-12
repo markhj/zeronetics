@@ -27,6 +27,7 @@ include_directories(include)
 
 # Build vendor projects
 add_subdirectory(vendor/glfw)
+add_subdirectory(vendor/glm)
 
 # Engine
 add_subdirectory(engine)

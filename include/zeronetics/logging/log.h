@@ -12,6 +12,11 @@ namespace ZEN {
          * General information, not fit for other categories.
          */
         Info,
+
+        /**
+         * Rendering or renderer related information.
+         */
+        Rendering,
     };
 
     /**
@@ -28,6 +33,14 @@ namespace ZEN {
          * @param category
          */
         static void info(std::string_view message, LogCategory category);
+
+        /**
+         * Print warning-level information.
+         *
+         * @param message
+         * @param category
+         */
+        static void warn(std::string_view message, LogCategory category);
 
         /**
          * Handle a critical message.

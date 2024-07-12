@@ -7,3 +7,7 @@ void ZEN::Log::info(std::string_view message, ZEN::LogCategory category) {
 void ZEN::Log::critical(std::string_view message) {
     std::cerr << message << std::endl;
 }
+
+void ZEN::Log::warn(std::string_view message, ZEN::LogCategory category) {
+    std::cout << "WARNING: " << message << std::endl;
+}

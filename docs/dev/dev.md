@@ -7,6 +7,10 @@ or working on forks of it.
 
 @subpage engine-core-structure
 
+@subpage build-info
+
+@ref logging
+
 @subpage create-modules
 
 @subpage callbacks

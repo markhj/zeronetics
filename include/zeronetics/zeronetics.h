@@ -12,10 +12,13 @@
 #pragma once
 
 // Fundamentals
+#include "core/typedefs.h"
+#include "core/build.h"
+
+// Second-level fundamentals
 #include "core/controls.h"
 #include "core/engine-info.h"
 #include "core/settings.h"
-#include "core/typedefs.h"
 #include "core/version.h"
 
 // Contracts
@@ -23,8 +26,9 @@
 #include "contracts/renderer.h"
 #include "contracts/window.h"
 
-// Controls and user inputs
+// Implementation-level
 #include "controls/base-input-manager.h"
+#include "logging/logging.h"
 
 // Game
 #include "game/game.h"

@@ -82,4 +82,39 @@ namespace ZEN {
         Space = 32,
         Esc = 256,
     };
+
+    /**
+     * Shader stages.
+     */
+    enum ShaderStage {
+        /**
+         * Vertex shader.
+         */
+        Vertex,
+
+        /**
+         * Fragment or pixel shader.
+         */
+        Fragment,
+
+        /**
+         * Compute shader.
+         */
+        Compute,
+
+        /**
+         * Geometry shader
+         */
+        Geometry,
+
+        /**
+         * Tessellation evaluation shader
+         */
+        TessEvaluation,
+
+        /**
+         * Tessellation control shader
+         */
+        TessControl,
+    };
 }

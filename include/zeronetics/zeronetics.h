@@ -28,9 +28,10 @@
 // Contracts
 #include "contracts/input-manager.h"
 #include "contracts/renderer.h"
+#include "contracts/shader.h"
 #include "contracts/window.h"
 
 // Adv. structures
 #include "controls/base-input-manager.h"
-#include "logging/logging.h"
 #include "game/game.h"
+#include "logging/logging.h"

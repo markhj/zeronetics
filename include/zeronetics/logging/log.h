@@ -17,6 +17,9 @@ namespace ZEN {
          * Rendering or renderer related information.
          */
         Rendering,
+
+        ShaderCompilation,
+        ShaderUse,
     };
 
     /**

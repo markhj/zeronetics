@@ -8,7 +8,7 @@ namespace ZEN {
     public:
         virtual void initialize() = 0;
 
-        virtual bool isInitialized() const noexcept = 0;
+        [[nodiscard]] virtual bool isInitialized() const noexcept = 0;
 
         virtual void clear() noexcept = 0;
 

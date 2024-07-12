@@ -3,8 +3,12 @@ project(opengl-renderer)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_library(opengl-renderer STATIC src/opengl-renderer.cpp)
+include_directories(${ZEN_VENDOR_DIR}/glad/include)
 
-target_link_libraries(opengl-renderer PRIVATE zeronetics)
+add_library(opengl-renderer STATIC
+        src/opengl-renderer.cpp
+        ${ZEN_VENDOR_DIR}/glad/src/glad.c)
+
+target_link_libraries(opengl-renderer PRIVATE zeronetics glfw)
 
 target_include_directories(opengl-renderer PUBLIC include)

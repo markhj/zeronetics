@@ -5,6 +5,7 @@
 #include <stdexcept>
 
 #include <GLFW/glfw3.h>
+#include <iostream>
 
 namespace {
     GLFWwindow *glfwWindow;

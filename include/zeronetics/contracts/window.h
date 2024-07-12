@@ -55,5 +55,6 @@ namespace ZEN {
          * Set (or replace) the Input Manager.
          */
         virtual void setInputManager(const std::shared_ptr<IInputManager> &inputManager) = 0;
+
     };
 }

@@ -13,6 +13,8 @@ namespace {
 
     std::optional<ZEN::MousePosition> s_lastPosition;
 
+    std::optional<std::function<void()>> s_onCloseHandle;
+
     std::optional<ZEN::KeyStateEvent> createKeyEvent(int key, int action) {
         std::optional<ZEN::Key> inputKey = ZEN::KeyMap::toKey(key);
         if (!inputKey.has_value()) {
@@ -62,6 +64,12 @@ namespace {
 
         s_lastPosition = {mx, my};
     }
+
+    void closeWindowCallback(GLFWwindow *window) {
+        if (s_onCloseHandle.has_value()) {
+            s_onCloseHandle.value()();
+        }
+    }
 }
 
 void ZEN::Window::generate(const ZEN::Settings &settings) noexcept(false) {
@@ -77,6 +85,7 @@ void ZEN::Window::generate(const ZEN::Settings &settings) noexcept(false) {
 
     glfwSetKeyCallback(glfwWindow, keyboardCallback);
     glfwSetCursorPosCallback(glfwWindow, mouseMoveCallback);
+    glfwSetWindowCloseCallback(glfwWindow, closeWindowCallback);
 }
 
 void ZEN::Window::regenerate(const ZEN::Settings &settings) noexcept(false) {
@@ -100,4 +109,8 @@ void ZEN::Window::handleBuffer() {
 
 void ZEN::Window::setInputManager(const std::shared_ptr<IInputManager> &inputManager) {
     s_inputManager = inputManager;
+}
+
+void ZEN::Window::onClose(std::function<void()> handle) {
+    s_onCloseHandle = handle;
 }

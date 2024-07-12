@@ -4,6 +4,7 @@
 #include "zeronetics/core/controls.h"
 #include "zeronetics/core/settings.h"
 
+#include <functional>
 #include <memory>
 
 namespace ZEN {
@@ -34,6 +35,13 @@ namespace ZEN {
         virtual void close() noexcept = 0;
 
         /**
+         * Callback when the window is closed.
+         *
+         * @param handle
+         */
+        virtual void onClose(std::function<void()> handle) = 0;
+
+        /**
          * Process user inputs.
          */
         virtual inline void handleInputs() = 0;
@@ -47,6 +55,5 @@ namespace ZEN {
          * Set (or replace) the Input Manager.
          */
         virtual void setInputManager(const std::shared_ptr<IInputManager> &inputManager) = 0;
-
     };
 }

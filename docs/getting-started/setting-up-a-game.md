@@ -58,6 +58,9 @@ int main() {
     std::shared_ptr<ZEN::Window> window = std::make_shared<ZEN::Window>(ZEN::Window());
     window->windowTitle = "My Game";
     window->generate(settings);
+    window->onClose([]() {
+        std::exit(0);
+    });
 
     ZEN::Game game(window);
     game.run();

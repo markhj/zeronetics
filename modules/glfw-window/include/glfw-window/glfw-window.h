@@ -41,6 +41,13 @@ namespace ZEN {
         void close() noexcept override;
 
         /**
+         * Set the callback for when the window closes.
+         *
+         * @param handle
+         */
+        void onClose(std::function<void()> handle) override;
+
+        /**
          * Process user inputs.
          */
         inline void handleInputs() override;

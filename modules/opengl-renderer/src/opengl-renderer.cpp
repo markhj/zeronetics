@@ -1,4 +1,8 @@
 #include "opengl-renderer/opengl-renderer.hpp"
+#include "glm/ext/matrix_clip_space.hpp"
+#include "glm/ext/matrix_transform.hpp"
+#include "glm/gtc/type_ptr.hpp"
+#include "zeronetics/core/tensors.h"
 
 #include <glad/glad.h>
 // Keep space between glad and GLFW, otherwise clang-format
@@ -9,8 +13,37 @@
 #include <iostream>
 #include <stdexcept>
 
+float dt = 0.0;
+
 void ZEN::OpenGLRenderer::render() {
+    dt += 0.0005;
+
+    Vec3 position(sin(dt), 1.0, cos(dt));
+    Vec3 target(0.0);
+    Vec3 up(0.0, 1.0, 0.0);
+
+    auto view = glm::lookAt(position, target, up);
+    auto model = glm::mat4(1.0f);
+
+    float aspectRatio = 800.0f / 600.0f;
+    float fovY = glm::radians(45.0f);
+    float nearClip = 0.1f;
+    float farClip = 100.0f;
+    auto perspective = glm::perspective(fovY, aspectRatio, nearClip, farClip);
+
+    std::vector<GLfloat> data = { static_cast<float>(abs(sin(dt))) };
+    glBindBuffer(GL_ARRAY_BUFFER, 1);
+    glBufferSubData(GL_ARRAY_BUFFER,
+                    3 * sizeof(GLfloat),
+                    1 * sizeof(GLfloat),
+                    data.data());
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+
     glUseProgram(3);
+
+    glUniformMatrix4fv(glGetUniformLocation(3, "model"), 1, GL_FALSE, glm::value_ptr(model));
+    glUniformMatrix4fv(glGetUniformLocation(3, "view"), 1, GL_FALSE, glm::value_ptr(view));
+    glUniformMatrix4fv(glGetUniformLocation(3, "projection"), 1, GL_FALSE, glm::value_ptr(perspective));
 
     glBindVertexArray(1);
     glDrawArrays(GL_TRIANGLES, 0, 3);
@@ -32,12 +65,16 @@ void ZEN::OpenGLRenderer::initialize() {
     layout (location = 0) in vec3 aPos;
     layout (location = 1) in vec3 aColor;
 
+    uniform mat4 view;
+    uniform mat4 model;
+    uniform mat4 projection;
+
     out vec3 color;
 
     void main()
     {
         color = aColor;
-        gl_Position = vec4(aPos, 1.0);
+        gl_Position = projection * view * model * vec4(aPos, 1.0);
     }
 )";
 

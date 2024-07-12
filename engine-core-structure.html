@@ -109,6 +109,10 @@ Hierarchy</h2>
 </table>
 <p>Each level can depend on items from prior levels. Meaning, <code>contracts</code> can depend on any core level, but <em>not</em> on advanced structures or modules.</p>
 <p>Whether, and how, items in the same layer can depend on each other is specified on a per-level basis.</p>
+<blockquote class="doxtable">
+<p><b>A note on the core levels</b> <br  />
+ The core levels don't affect directory structure, all core units are found in the <code>core</code> folder. But it's possible they will be split up as the project grows. The separation into levels help with forming the order to include the headers, for instance in <code><a class="el" href="zeronetics_8h_source.html">zeronetics.h</a></code> public header, and otherwise mostly serve as a way to backtrace in case you run into circular dependencies. </p>
+</blockquote>
 <h2><a class="anchor" id="autotoc_md31"></a>
 🔨 Core: Fundamentals</h2>
 <p><b>Dependency from same layer</b>: Not allowed <br  />

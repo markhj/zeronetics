@@ -1,10 +1,9 @@
 #pragma once
 
-#include "glad/glad.h"
 #include <functional>
 #include <optional>
 
-namespace OpenGL {
+namespace ZEN {
     /**
      * Contract for OpenGL context binding.
      *

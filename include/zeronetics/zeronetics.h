@@ -30,6 +30,7 @@
 // Contracts
 #include "contracts/input-manager.h"
 #include "contracts/renderer.h"
+#include "contracts/shader.h"
 #include "contracts/window.h"
 
 // Traits

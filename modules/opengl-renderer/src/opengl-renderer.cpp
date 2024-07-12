@@ -15,6 +15,8 @@
 
 float dt = 0.0;
 
+ZEN::Shader openGlShader;
+
 void ZEN::OpenGLRenderer::render() {
     dt += 0.0005;
 
@@ -39,11 +41,11 @@ void ZEN::OpenGLRenderer::render() {
                     data.data());
     glBindBuffer(GL_ARRAY_BUFFER, 0);
 
-    glUseProgram(3);
+    openGlShader.use();
 
-    glUniformMatrix4fv(glGetUniformLocation(3, "model"), 1, GL_FALSE, glm::value_ptr(model));
-    glUniformMatrix4fv(glGetUniformLocation(3, "view"), 1, GL_FALSE, glm::value_ptr(view));
-    glUniformMatrix4fv(glGetUniformLocation(3, "projection"), 1, GL_FALSE, glm::value_ptr(perspective));
+    openGlShader.set("model", model);
+    openGlShader.set("view", view);
+    openGlShader.set("projection", perspective);
 
     glBindVertexArray(1);
     glDrawArrays(GL_TRIANGLES, 0, 3);
@@ -78,8 +80,7 @@ void ZEN::OpenGLRenderer::initialize() {
     }
 )";
 
-    // Fragment shader source code
-    const char* fragmentShaderSource = R"(
+    const char* fragmentShaderSource2 = R"(
     #version 330 core
     out vec4 FragColor;
     in vec3 color;
@@ -89,39 +90,10 @@ void ZEN::OpenGLRenderer::initialize() {
     }
 )";
 
-    // Compile and link the shader program
-    GLuint vertexShader = glCreateShader(GL_VERTEX_SHADER);
-    glShaderSource(vertexShader, 1, &vertexShaderSource, nullptr);
-    glCompileShader(vertexShader);
-
-    GLuint fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
-    glShaderSource(fragmentShader, 1, &fragmentShaderSource, nullptr);
-    glCompileShader(fragmentShader);
-
-    GLint success;
-    glGetShaderiv(fragmentShader, GL_COMPILE_STATUS, &success);
-    if (!success) {
-        GLchar infoLog[1024];
-        glGetShaderInfoLog(fragmentShader, 1024, nullptr, infoLog);
-        throw std::runtime_error(std::format("Shader compile/linking error: {}", infoLog));
-    }
-
-    GLuint shaderProgram = glCreateProgram();
-    std::cout << shaderProgram;
-    glAttachShader(shaderProgram, vertexShader);
-    glAttachShader(shaderProgram, fragmentShader);
-    glLinkProgram(shaderProgram);
-
-    GLint successX;
-    glGetProgramiv(1, GL_LINK_STATUS, &successX);
-    if (!successX) {
-        GLchar infoLog[1024];
-        glGetProgramInfoLog(1, 1024, nullptr, infoLog);
-        throw std::runtime_error(std::format("Shader compile/linking error: {}", infoLog));
-    }
-
-    glDeleteShader(vertexShader);
-    glDeleteShader(fragmentShader);
+    openGlShader.create();
+    openGlShader.setSource(ShaderStage::Vertex, vertexShaderSource);
+    openGlShader.setSource(ShaderStage::Fragment, fragmentShaderSource2);
+    openGlShader.compile();
 
     // Vertex data
     float vertices[] = {

@@ -88,4 +88,39 @@ namespace ZEN {
         Linux,
         Mac,
     };
+
+    /**
+     * Shader stages.
+     */
+    enum ShaderStage {
+        /**
+         * Vertex shader.
+         */
+        Vertex,
+
+        /**
+         * Fragment or pixel shader.
+         */
+        Fragment,
+
+        /**
+         * Compute shader.
+         */
+        Compute,
+
+        /**
+         * Geometry shader
+         */
+        Geometry,
+
+        /**
+         * Tessellation evaluation shader
+         */
+        TessEvaluation,
+
+        /**
+         * Tessellation control shader
+         */
+        TessControl,
+    };
 }

@@ -6,7 +6,8 @@ set(CMAKE_CXX_STANDARD 20)
 include_directories(${ZEN_VENDOR_DIR}/glad/include)
 
 set(OPENGL_RENDERER_UTILS
-        src/bindable.cpp)
+        src/bindable.cpp
+        src/opengl-shader.cpp)
 
 add_library(opengl-renderer STATIC
         src/opengl-renderer.cpp

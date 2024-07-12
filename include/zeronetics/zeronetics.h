@@ -12,8 +12,9 @@
 #pragma once
 
 // Fundamentals
-#include "core/typedefs.h"
 #include "core/build.h"
+#include "core/enums.h"
+#include "core/typedefs.h"
 
 // Second-level fundamentals
 #include "core/controls.h"

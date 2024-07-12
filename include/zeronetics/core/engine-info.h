@@ -8,8 +8,7 @@ namespace ZEN {
     /**
      * Retrieve information about the engine.
      */
-    class EngineInfo {
-    public:
+    struct EngineInfo {
         /**
          * Get current engine version.
          *

@@ -14,3 +14,7 @@ Modules exist in complete isolation from other modules, but can freely depend
 on anything contained in the core. This ensures modularity, making it easy
 to swap components. For instance, switching from OpenGL to Vulkan should be
 an easy "plug-and-play" from the game developer's perspective.
+
+## See also
+
+@ref engine-core-structure

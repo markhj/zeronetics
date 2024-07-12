@@ -1,51 +1,31 @@
 #include "opengl-renderer/opengl-renderer.hpp"
-#include "glm/ext/matrix_clip_space.hpp"
-#include "glm/ext/matrix_transform.hpp"
-#include "glm/gtc/type_ptr.hpp"
+
 #include "zeronetics/core/tensors.h"
+#include "zeronetics/logging/logging.h"
 
 #include <glad/glad.h>
 // Keep space between glad and GLFW, otherwise clang-format
 // will re-arrange their order, which causes inclusion conflicts.
 #include <GLFW/glfw3.h>
 
-#include <format>
-#include <iostream>
 #include <stdexcept>
 
-float dt = 0.0;
-
-ZEN::Shader openGlShader;
-
 void ZEN::OpenGLRenderer::render() {
-    dt += 0.0005;
+    if (!renderManager) {
+        ZEN_WARN("No render manager provided", ZEN::LogCategory::Rendering);
+    }
 
-    Vec3 position(sin(dt), 1.0, cos(dt));
-    Vec3 target(0.0);
-    Vec3 up(0.0, 1.0, 0.0);
+    auto targetShader = renderManager->shaders["MyShader"];
 
-    auto view = glm::lookAt(position, target, up);
-    auto model = glm::mat4(1.0f);
+    if (renderManager->camera3d) {
+        MVP mvp = renderManager->camera3d->getModelViewProjection();
 
-    float aspectRatio = 800.0f / 600.0f;
-    float fovY = glm::radians(45.0f);
-    float nearClip = 0.1f;
-    float farClip = 100.0f;
-    auto perspective = glm::perspective(fovY, aspectRatio, nearClip, farClip);
+        targetShader->set("model", mvp.model);
+        targetShader->set("view", mvp.view);
+        targetShader->set("projection", mvp.projection);
+    }
 
-    std::vector<GLfloat> data = { static_cast<float>(abs(sin(dt))) };
-    glBindBuffer(GL_ARRAY_BUFFER, 1);
-    glBufferSubData(GL_ARRAY_BUFFER,
-                    3 * sizeof(GLfloat),
-                    1 * sizeof(GLfloat),
-                    data.data());
-    glBindBuffer(GL_ARRAY_BUFFER, 0);
-
-    openGlShader.use();
-
-    openGlShader.set("model", model);
-    openGlShader.set("view", view);
-    openGlShader.set("projection", perspective);
+    targetShader->use();
 
     glBindVertexArray(1);
     glDrawArrays(GL_TRIANGLES, 0, 3);
@@ -53,54 +33,17 @@ void ZEN::OpenGLRenderer::render() {
 }
 
 void ZEN::OpenGLRenderer::initialize() {
-    // @todo: Temporarily allowed tight coupling between GLFW (window)
-    //      and this OpenGL renderer.
     if (!gladLoadGLLoader((GLADloadproc) glfwGetProcAddress)) {
         throw std::runtime_error("Failed to initialize GLAD.");
     }
 
     m_initialized = true;
 
-    // Vertex shader source code
-    const char* vertexShaderSource = R"(
-    #version 330 core
-    layout (location = 0) in vec3 aPos;
-    layout (location = 1) in vec3 aColor;
-
-    uniform mat4 view;
-    uniform mat4 model;
-    uniform mat4 projection;
-
-    out vec3 color;
-
-    void main()
-    {
-        color = aColor;
-        gl_Position = projection * view * model * vec4(aPos, 1.0);
-    }
-)";
-
-    const char* fragmentShaderSource2 = R"(
-    #version 330 core
-    out vec4 FragColor;
-    in vec3 color;
-    void main()
-    {
-        FragColor = vec4(color, 1.0);
-    }
-)";
-
-    openGlShader.create();
-    openGlShader.setSource(ShaderStage::Vertex, vertexShaderSource);
-    openGlShader.setSource(ShaderStage::Fragment, fragmentShaderSource2);
-    openGlShader.compile();
-
     // Vertex data
     float vertices[] = {
-            -0.5f, -0.5f, 0.0f,1.0, 0.0, 0.0,
+            -0.5f, -0.5f, 0.0f, 1.0, 0.0, 0.0,
             0.5f, -0.5f, 0.0f, 0.0, 1.0, 0.0,
-            0.0f, 0.5f, 0.0f, 0.0, 0.0, 1.0
-    };
+            0.0f, 0.5f, 0.0f, 0.0, 0.0, 1.0};
 
     // Create vertex buffer object (VBO) and vertex array object (VAO)
     GLuint VBO, VAO;

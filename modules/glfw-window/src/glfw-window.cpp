@@ -83,6 +83,8 @@ void ZEN::Window::generate(const ZEN::Settings &settings) noexcept(false) {
                                   nullptr,
                                   nullptr);
 
+    glfwMakeContextCurrent(glfwWindow);
+
     glfwSetKeyCallback(glfwWindow, keyboardCallback);
     glfwSetCursorPosCallback(glfwWindow, mouseMoveCallback);
     glfwSetWindowCloseCallback(glfwWindow, closeWindowCallback);

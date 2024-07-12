@@ -1,6 +1,7 @@
 #pragma once
 
 #include "zeronetics/contracts/window.h"
+#include "zeronetics/contracts/renderer.h"
 #include <memory>
 
 namespace ZEN {
@@ -15,7 +16,8 @@ namespace ZEN {
          *
          * @param window
          */
-        Game(const std::shared_ptr<IWindow> &window);
+        Game(const std::shared_ptr<IWindow> &window,
+             const std::shared_ptr<IRenderer> &renderer);
 
         /**
          * Run the game loop.
@@ -24,5 +26,8 @@ namespace ZEN {
 
     private:
         std::shared_ptr<IWindow> m_window;
+
+        std::shared_ptr<IRenderer> m_renderer;
+
     };
 };

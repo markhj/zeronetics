@@ -122,6 +122,9 @@ Creating the window</h2>
 <div class="line">    std::shared_ptr&lt;ZEN::Window&gt; window = std::make_shared&lt;ZEN::Window&gt;(<a class="code" href="classZEN_1_1Window.html">ZEN::Window</a>());</div>
 <div class="line">    window-&gt;windowTitle = <span class="stringliteral">&quot;My Game&quot;</span>;</div>
 <div class="line">    window-&gt;generate(settings);</div>
+<div class="line">    window-&gt;onClose([]() {</div>
+<div class="line">        std::exit(0);</div>
+<div class="line">    });</div>
 <div class="line"> </div>
 <div class="line">    <a class="code" href="classZEN_1_1Game.html">ZEN::Game</a> game(window);</div>
 <div class="line">    game.run();</div>

@@ -8,16 +8,21 @@ var annotated_dup =
       [ "Example", "input-manager.html#autotoc_md10", null ],
       [ "Connecting to window", "input-manager.html#autotoc_md11", null ],
       [ "Prerequisites", "mouse.html#autotoc_md12", null ],
-      [ "Mouse movement", "mouse.html#autotoc_md13", [
-        [ "CMake file", "create-modules.html#autotoc_md15", null ],
-        [ "Public headers", "create-modules.html#autotoc_md16", null ],
-        [ "Integrate in build process", "create-modules.html#autotoc_md17", null ]
+      [ "Mouse movement", "mouse.html#autotoc_md13", null ],
+      [ "Core", "engine-core-structure.html#autotoc_md22", null ],
+      [ "Contracts", "engine-core-structure.html#autotoc_md23", null ],
+      [ "Other", "engine-core-structure.html#autotoc_md24", null ],
+      [ "Modules", "engine-core-structure.html#autotoc_md25", [
+        [ "CMake file", "create-modules.html#autotoc_md19", null ],
+        [ "Public headers", "create-modules.html#autotoc_md20", null ],
+        [ "Integrate in build process", "create-modules.html#autotoc_md21", null ]
       ] ],
-      [ "Core", "engine-core-structure.html#autotoc_md18", null ],
-      [ "Contracts", "engine-core-structure.html#autotoc_md19", null ],
-      [ "Other", "engine-core-structure.html#autotoc_md20", null ],
-      [ "Modules", "engine-core-structure.html#autotoc_md21", null ],
-      [ "💫 Overview", "arch.html#autotoc_md22", null ],
+      [ "How to make callbacks \"a la Zeronetics\"", "callbacks.html#autotoc_md15", null ],
+      [ "Examination of choices", "callbacks.html#autotoc_md16", [
+        [ "Using <tt>std::optional</tt>", "callbacks.html#autotoc_md17", null ],
+        [ "Smart pointers", "callbacks.html#autotoc_md18", null ]
+      ] ],
+      [ "💫 Overview", "arch.html#autotoc_md26", null ],
       [ "IInputManager", "classZEN_1_1IInputManager.html", "classZEN_1_1IInputManager" ],
       [ "IRenderer", "classZEN_1_1IRenderer.html", null ],
       [ "IWindow", "classZEN_1_1IWindow.html", "classZEN_1_1IWindow" ],

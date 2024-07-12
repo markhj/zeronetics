@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['architecture_94',['Architecture',['../arch.html',1,'diving-deeper']]]
+  ['architecture_97',['Architecture',['../arch.html',1,'diving-deeper']]]
 ];

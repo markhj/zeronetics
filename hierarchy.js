@@ -1,6 +1,6 @@
 var hierarchy =
 [
-    [ "ZEN::EngineInfo", "classZEN_1_1EngineInfo.html", null ],
+    [ "ZEN::EngineInfo", "structZEN_1_1EngineInfo.html", null ],
     [ "ZEN::Game", "classZEN_1_1Game.html", null ],
     [ "ZEN::IInputManager", "classZEN_1_1IInputManager.html", [
       [ "ZEN::BaseInputManager", "classZEN_1_1BaseInputManager.html", null ]

@@ -88,44 +88,91 @@ $(document).ready(function(){initNavTree('engine-core-structure.html',''); initR
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>To prevent circular dependencies, we've designed a clear hierarchy of header inclusion and dependencies.</p>
-<p>The hierarchy consists of four layers:</p>
-<ul>
-<li>Core</li>
-<li>Contracts</li>
-<li>Implementations and abstract classes</li>
-<li>Modules</li>
-</ul>
-<p>Let's review them one by one.</p>
 <h2><a class="anchor" id="autotoc_md30"></a>
-Core</h2>
-<p>Declarations of:</p>
-<ul>
-<li>Typedefs</li>
-<li>Macros</li>
-<li>Structs and classes which:<ul>
-<li>Have universal application and/or are general in nature</li>
-<li>Have no dependencies, aside from other definitions in the same file</li>
-</ul>
-</li>
-</ul>
-<p>Examples include <code>gw_float</code> typedef, the <a class="el" href="structZEN_1_1Settings.html">ZEN::Settings</a> struct and <a class="el" href="structZEN_1_1Version.html">ZEN::Version</a> class. They have no dependencies on other parts of the engine.</p>
-<p>The <code>core</code> is separated into fundamentals and second-level fundamentals. The first layer consists of primitive declarations such as <code>typedef</code>s and simple macro definitions (e.g. build information).</p>
-<p>The second-level fundamentals define structs, enums and classes at core-level.</p>
+Hierarchy</h2>
+<p>The hierarchy consists of these layers, reading from top-to-bottom, where the top comprises the most basic and fundamental structures.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Level   </th><th class="markdownTableHeadNone">Description    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Core</b>: Fundamentals   </td><td class="markdownTableBodyNone">Typedefs, macros, enumerators    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Core</b>: 2<sup>nd</sup> Level   </td><td class="markdownTableBodyNone">Structs and classes with no dependencies outside own file    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Core</b>: 3<sup>rd</sup> Level   </td><td class="markdownTableBodyNone">Structs and classes (with dependencies <em>only</em> from <code>vendor</code>)    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Contracts   </td><td class="markdownTableBodyNone">Interfaces with <em>only</em> pure virtual functions    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Adv. structures   </td><td class="markdownTableBodyNone">Classes with more complexity, such as <a class="el" href="classZEN_1_1Game.html">ZEN::Game</a>, as well as abstract classes    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Modules   </td><td class="markdownTableBodyNone">Modules exist in isolation from each other, but can use the entire engine   </td></tr>
+</table>
+<p>Each level can depend on items from prior levels. Meaning, <code>contracts</code> can depend on any core level, but <em>not</em> on advanced structures or modules.</p>
+<p>Whether, and how, items in the same layer can depend on each other is specified on a per-level basis.</p>
 <h2><a class="anchor" id="autotoc_md31"></a>
-Contracts</h2>
-<p>Interfaces in the <code>contracts</code> directory are allowed to have dependencies from <code>core</code> and other contracts.</p>
-<p>Example: The <a class="el" href="classZEN_1_1IWindow.html">ZEN::IWindow</a> contract can depend on <a class="el" href="classZEN_1_1IInputManager.html">ZEN::IInputManager</a>.</p>
+🔨 Core: Fundamentals</h2>
+<p><b>Dependency from same layer</b>: Not allowed <br  />
+ <b>Location:</b> <code>include/zeronetics/core/</code></p>
+<p>The first layer consists of primitive declarations such as <code>typedef</code>s and macros (e.g. <a class="el" href="build-info.html">Build information</a>) that have no dependencies and exist in complete contextual isolation.</p>
+<p>Examples:</p>
 <blockquote class="doxtable">
-<p>Contracts must only have pure virtual functions. For abstract classes, see the next chapter. </p>
+<p>Example: <br  />
+ <code>gw_float</code> typedef <br  />
+ <code>ZEN::Key</code> enumerator <br  />
+ <a class="el" href="build-info.html">Build information</a>, because it has no dependencies <br  />
+ <a class="el" href="logging_8h_source.html">logging.h</a> macros are not allowed, because they depend on <a class="el" href="classZEN_1_1Log.html">ZEN::Log</a> </p>
 </blockquote>
 <h2><a class="anchor" id="autotoc_md32"></a>
-Implementations</h2>
-<p>Abstract classes and implementations of basic game engine logic exist in this layer. They can depend on <code>contracts</code>, <code>core</code> and other files residing in the same directory. They are not allowed to depend on files from other directories.</p>
-<p>In other words, a class in <code>controls</code> can depend on files from <code>core</code>, <code>contracts</code> and other files within <code>controls</code>. But it <em>cannot</em> depend on files from <code>game</code>, for example.</p>
+📚 Core: 2&lt;sup&gt;nd&lt;/sup&gt; level</h2>
+<p><b>Dependency from same layer</b>: Not allowed <br  />
+ <b>Location:</b> <code>include/zeronetics/core/</code></p>
+<p>Structs and classes which:</p>
+<ul>
+<li>Have universal application and/or are general in nature</li>
+<li>Have no dependencies, aside from other definitions in the <em>same file</em></li>
+</ul>
+<p>Struct and classes containing methods must provide an implementation. This is not to be treated as a layer with interfaces.</p>
+<blockquote class="doxtable">
+<p>Examples: <br  />
+ <a class="el" href="structZEN_1_1Settings.html">ZEN::Settings</a> <br  />
+ <a class="el" href="structZEN_1_1Version.html">ZEN::Version</a> </p>
+</blockquote>
 <h2><a class="anchor" id="autotoc_md33"></a>
-Modules</h2>
-<p>Modules can extend and depend on any class or struct in the main engine.</p>
-<p>They are under no circumstances allowed to have dependencies in other modules, and must be treated in total isolation from them, making no assumptions about their existence or function. </p>
+📥 Core: 3&lt;sup&gt;rd&lt;/sup&gt; level</h2>
+<p><b>Dependency from same layer</b>: Not allowed (only from <code>vendor</code>) <br  />
+ <b>Location:</b> <code>include/zeronetics/core/</code></p>
+<p>Similar to 2<sup>nd</sup> level, with the addition that these structs and classes can incorporate third-party libraries from <code>vendor</code>.</p>
+<p>Examples:</p>
+<ul>
+<li>Vectors and matrices (which depend on <code>glm</code>)</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md34"></a>
+📜 Contracts</h2>
+<p><b>Dependency from same layer</b>: Allowed, but exercise caution. <br  />
+ <b>Location:</b> <code>include/zeronetics/contracts/</code></p>
+<p>Interfaces in the <code>contracts</code> directory are allowed to have dependencies from <code>core</code> and other contracts.</p>
+<blockquote class="doxtable">
+<p>Example: The <a class="el" href="classZEN_1_1IWindow.html">ZEN::IWindow</a> contract can depend on <a class="el" href="classZEN_1_1IInputManager.html">ZEN::IInputManager</a>. </p>
+</blockquote>
+<p>Remember that: Contracts must only have pure virtual functions. For abstract classes, see the next chapter.</p>
+<h2><a class="anchor" id="autotoc_md35"></a>
+📱 Advanced structures</h2>
+<p><b>Dependency from same layer</b>: Allowed, but exercise caution. <br  />
+ <b>Location:</b> <code>include/zeronetics/</code></p>
+<p>Classes and structs with more complexity, such as <a class="el" href="classZEN_1_1Game.html">ZEN::Game</a>. These classes can have several dependencies, also from the same layer.</p>
+<p>Abstract classes also reside in this layer.</p>
+<blockquote class="doxtable">
+<p>Example: <br  />
+ <a class="el" href="classZEN_1_1Game.html">ZEN::Game</a> <br  />
+ <a class="el" href="logging_8h_source.html">logging.h</a> and <a class="el" href="classZEN_1_1Log.html">ZEN::Log</a> <br  />
+ Abstract class <a class="el" href="classZEN_1_1BaseInputManager.html">ZEN::BaseInputManager</a> which extends <a class="el" href="classZEN_1_1IInputManager.html">ZEN::IInputManager</a> </p>
+</blockquote>
+<h2><a class="anchor" id="autotoc_md36"></a>
+📦 Modules</h2>
+<p><b>Dependency from same layer</b>: Not allowed. <br  />
+ <b>Location:</b> <code>modules/</code></p>
+<p>Modules can extend and depend on anything from the main engine.</p>
+<p>They are under no circumstances allowed to have dependencies in other modules, and must be treated in total isolation from them, making no assumptions about their existence or functionality. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

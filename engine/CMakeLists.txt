@@ -6,17 +6,23 @@ set(CMAKE_CXX_STANDARD 20)
 include(${ZEN_ROOT_DIR}/cmake/modules.cmake)
 
 set(CORE_SRC
+        # Core: 2nd layer
         src/core/version.cpp
         src/core/engine-info.cpp
         src/core/controls.cpp
+
+        # Core: 3rd layer
+        src/core/vertices.cpp
+
+        # Adv. structures
         src/render/render-manager.cpp
         src/logging/log.cpp
+        src/game/game.cpp
 
         # Entities
         src/entities/entity.cpp
         src/entities/3d/camera-3d.cpp
-
-        src/game/game.cpp)
+        src/entities/3d/mesh-3d.cpp)
 
 add_library(zeronetics STATIC ${CORE_SRC})
 

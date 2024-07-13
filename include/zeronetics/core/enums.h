@@ -117,4 +117,22 @@ namespace ZEN {
          */
         TessControl,
     };
+
+    /**
+     * Type of vertex attributes
+     */
+    enum class VertexAttribute {
+        Position2D,
+        Position3D,
+
+        ColorRGB,
+        colorRGBA,
+
+        Normal3D,
+
+        Tangent3D,
+        BiTangent3D,
+
+        TextureUV,
+    };
 }

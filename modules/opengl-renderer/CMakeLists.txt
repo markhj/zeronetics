@@ -7,6 +7,9 @@ include_directories(${ZEN_VENDOR_DIR}/glad/include)
 
 set(OPENGL_RENDERER_UTILS
         src/bindable.cpp
+        src/objects/opengl-object.cpp
+        src/objects/vao.cpp
+        src/objects/vbo.cpp
         src/opengl-shader.cpp)
 
 add_library(opengl-renderer STATIC

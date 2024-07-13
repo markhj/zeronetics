@@ -1,7 +1,7 @@
 #pragma once
 
-#include <string>
 #include <iostream>
+#include <string>
 
 namespace ZEN {
     /**
@@ -16,6 +16,7 @@ namespace ZEN {
         /**
          * Rendering or renderer related information.
          */
+        RendererInit,
         Rendering,
 
         ShaderCompilation,

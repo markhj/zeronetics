@@ -30,4 +30,10 @@ namespace ZEN {
      * but should probably be set to match the window implementation.
      */
     typedef double mouse_pos_axis;
+
+    /**
+     * Data type used to map index and size
+     * of renderables allocated in the GPU.
+     */
+    typedef unsigned int gpu_alloc_int;
 }

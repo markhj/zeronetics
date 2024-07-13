@@ -27,7 +27,6 @@
 #include "core/attributes.h"
 #include "core/tensors.h"
 #include "core/vertices.h"
-#include "core/vertices.h"
 
 // Contracts
 #include "contracts/cameras.h"
@@ -36,6 +35,7 @@
 #include "contracts/renderable.h"
 #include "contracts/renderer.h"
 #include "contracts/shader.h"
+#include "contracts/transforms.h"
 #include "contracts/window.h"
 
 // Adv. structures

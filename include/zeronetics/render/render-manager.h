@@ -5,8 +5,11 @@
 #include <memory>
 
 namespace ZEN {
-    struct RenderManager : public IRenderManager {
+    struct RenderGroup3D : public IRenderGroup3D {
 
+    };
+
+    struct RenderManager : public IRenderManager {
 
     };
 }

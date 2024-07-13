@@ -12,6 +12,8 @@ namespace ZEN {
 
         [[nodiscard]] gl_uint getContextId() const override;
 
+        void setData(std::vector<gl_float> data);
+
     protected:
         [[nodiscard]] std::optional<gl_uint> getCurrentContextId() const override;
 

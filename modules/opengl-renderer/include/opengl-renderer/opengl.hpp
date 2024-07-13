@@ -14,6 +14,7 @@ namespace ZEN {
     using gl_uint = unsigned int;
     using gl_int = int;
     using gl_enum = int;
+    using gl_float = float;
 
     class OpenGLRenderer : public IRenderer {
     public:

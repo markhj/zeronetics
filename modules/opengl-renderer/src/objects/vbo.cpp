@@ -22,3 +22,9 @@ void ZEN::VBO::bindTo(ZEN::gl_uint context) {
 ZEN::gl_uint ZEN::VBO::getContextId() const {
     return id;
 }
+
+void ZEN::VBO::setData(std::vector<gl_float> data) {
+    with([&]() {
+        glBufferData(GL_ARRAY_BUFFER, data.size() * sizeof(GLfloat), data.data(), GL_STATIC_DRAW);
+    });
+}

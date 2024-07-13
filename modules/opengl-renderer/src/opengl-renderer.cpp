@@ -1,4 +1,7 @@
-#include "opengl-renderer/opengl-renderer.hpp"
+#include "opengl-renderer/opengl.hpp"
+
+#include "objects/vao.h"
+#include "objects/vbo.h"
 
 #include "zeronetics/core/tensors.h"
 #include "zeronetics/logging/logging.h"
@@ -9,6 +12,11 @@
 #include <GLFW/glfw3.h>
 
 #include <stdexcept>
+
+namespace {
+    ZEN::VAO vao;
+    std::shared_ptr<ZEN::VBO> vbo;
+}
 
 void ZEN::OpenGLRenderer::render() {
     if (!renderManager) {
@@ -27,9 +35,9 @@ void ZEN::OpenGLRenderer::render() {
 
     targetShader->use();
 
-    glBindVertexArray(1);
-    glDrawArrays(GL_TRIANGLES, 0, 3);
-    glBindVertexArray(0);
+    vao.with([&]() {
+        glDrawArrays(GL_TRIANGLES, 0, 3);
+    });
 }
 
 void ZEN::OpenGLRenderer::initialize() {
@@ -45,24 +53,15 @@ void ZEN::OpenGLRenderer::initialize() {
             0.5f, -0.5f, 0.0f, 0.0, 1.0, 0.0,
             0.0f, 0.5f, 0.0f, 0.0, 0.0, 1.0};
 
-    // Create vertex buffer object (VBO) and vertex array object (VAO)
-    GLuint VBO, VAO;
-    glGenBuffers(1, &VBO);
-    glGenVertexArrays(1, &VAO);
+    vbo = std::make_shared<VBO>(VBO());
+    vbo->initialize();
 
-    // Bind VAO first, then bind and set VBO, and then configure vertex attributes
-    glBindVertexArray(VAO);
+    vao.initialize();
+    vao.attachVBO(vbo, {VertexAttribute::Position3D, VertexAttribute::ColorRGB});
 
-    glBindBuffer(GL_ARRAY_BUFFER, VBO);
+    vbo->bind();
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
-
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void *) (0 * sizeof(GLfloat)));
-    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void *) (3 * sizeof(GLfloat)));
-    glEnableVertexAttribArray(0);
-    glEnableVertexAttribArray(1);
-
-    glBindBuffer(GL_ARRAY_BUFFER, 0);
-    glBindVertexArray(0);
+    vbo->unbind();
 }
 
 bool ZEN::OpenGLRenderer::isInitialized() const noexcept {

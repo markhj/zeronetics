@@ -18,6 +18,7 @@
 
 // Core: 2nd Level
 #include "core/engine-info.h"
+#include "core/gpu-alloc.h"
 #include "core/inputs.h"
 #include "core/io.h"
 #include "core/settings.h"
@@ -25,12 +26,16 @@
 #include "core/version.h"
 
 // Core: 3rd Level
+#include "core/attributes.h"
 #include "core/tensors.h"
+#include "core/vertices.h"
+#include "core/vertices.h"
 
 // Contracts
 #include "contracts/cameras.h"
 #include "contracts/input-manager.h"
 #include "contracts/render-manager.h"
+#include "contracts/renderable.h"
 #include "contracts/renderer.h"
 #include "contracts/shader.h"
 #include "contracts/window.h"
@@ -46,4 +51,5 @@
 
 // Entities
 #include "entities/3d/camera-3d.h"
+#include "entities/3d/mesh-3d.h"
 #include "entities/entity.h"

@@ -6,6 +6,11 @@
 #include "zeronetics/entities/entity.h"
 
 namespace ZEN {
+    /**
+     * Implementation of 3D camera.
+     *
+     * @ref camera-3d
+     */
     class Camera3D : public Entity3D,
                      public ICamera3D {
     public:

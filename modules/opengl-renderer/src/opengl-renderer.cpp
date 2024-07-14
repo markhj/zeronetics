@@ -132,7 +132,11 @@ void ZEN::OpenGL::Renderer::handleReallocations() {
             if (renderable3d.second->gpuAlloc.has_value()) {
                 continue;
             }
-            std::optional<ZEN::GPUAllocation> allocation = vbo->allocate(18);
+            std::vector<GLfloat> vertices;
+            for (const Vertex3D &v: renderable3d.second->getVertices()) {
+                appendFloatsFromVertex(vertices, v);
+            }
+            std::optional<ZEN::GPUAllocation> allocation = vbo->allocate(vertices.size());
             if (!allocation.has_value()) {
                 ZEN_INFO("Resize required", ZEN::LogCategory::RendererInternals);
                 vbo->resize(vbo->getCurrentSize() * 2);
@@ -141,10 +145,6 @@ void ZEN::OpenGL::Renderer::handleReallocations() {
                 return;
             }
             renderable3d.second->gpuAlloc = allocation;
-            std::vector<GLfloat> vertices;
-            for (const Vertex3D &v: renderable3d.second->getVertices()) {
-                appendFloatsFromVertex(vertices, v);
-            }
             vbo->updateData(renderable3d.second->gpuAlloc.value(), vertices);
             ZEN_INFO(std::format("Re-allocated: [Index: {}, Size: {}]", allocation->index, allocation->size),
                      ZEN::LogCategory::RendererInternals);

@@ -19,9 +19,10 @@
 // Core: 2nd Level
 #include "core/engine-info.h"
 #include "core/inputs.h"
-#include "core/settings.h"
-#include "core/version.h"
 #include "core/io.h"
+#include "core/settings.h"
+#include "core/sysinfo.hpp"
+#include "core/version.h"
 
 // Core: 3rd Level
 #include "core/tensors.h"

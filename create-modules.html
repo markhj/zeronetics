@@ -127,7 +127,13 @@ Integrate in build process</h3>
 <p>You specify them in a list in CMake, named <code>LIBS_&lt;NAME&gt;</code>, where <code>&lt;NAME&gt;</code> is your library written in uppercase, and with hyphens replaced with underscores.</p>
 <p>Example:</p>
 <div class="fragment"><div class="line">set(LIBS_AWESOME glfw3)</div>
-</div><!-- fragment --><p>When you refresh your CMake configuration, the <em>Awesome</em> module is now part of the build process. </p>
+</div><!-- fragment --><p>When you refresh your CMake configuration, the <em>Awesome</em> module is now part of the build process.</p>
+<h2><a class="anchor" id="autotoc_md30"></a>
+Namespace</h2>
+<p>For modules, the choice of namespace is relatively free choice.</p>
+<p>However, as long as a module has any dependencies from the main engine, it's recommended to nest the module within <code>ZEN</code> namespace. This is to make it clear that the module (probably) can't just be get unplugged from Zeronetics and applied in other projects.</p>
+<p>Larger modules, especially those with risk of name collisions, should be nested within their own namespace.</p>
+<p>Our OpenGL module, for example, resides in <code>ZEN::OpenGL</code>. This is to avoid collisions of common names such as <code>Shader</code> and <code>Renderer</code> which is likely to exist in other modules. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

@@ -41,9 +41,11 @@ namespace ZEN {
     class Shader : public IShader,
                    public StdBinding<gl_uint> {
     public:
-        void create() noexcept(false) override;
+        Shader();
 
         ~Shader();
+
+        void create() noexcept(false) override;
 
         void setSource(ShaderStage shaderStage,
                        const std::string &source) noexcept override;

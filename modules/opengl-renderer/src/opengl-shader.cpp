@@ -10,7 +10,7 @@ namespace {
 
     void checkInitializationStatus() {
         if (glad_glCreateShader == nullptr) {
-            ZEN_CRITICAL("You must initialize the renderer before compiling shaders");
+            ZEN_CRITICAL("You must initialize the OpenGL renderer before creating shaders.");
         }
     }
 
@@ -80,6 +80,10 @@ void ZEN::Shader::compile() noexcept(false) {
 
 void ZEN::Shader::setSource(ZEN::ShaderStage shaderStage, const std::string &source) noexcept {
     sources[shaderStage] = source;
+}
+
+ZEN::Shader::Shader() {
+    checkInitializationStatus();
 }
 
 ZEN::Shader::~Shader() {

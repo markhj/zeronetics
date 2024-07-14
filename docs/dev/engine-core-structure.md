@@ -70,8 +70,11 @@ This is not to be treated as a layer with interfaces.
 **Dependency from same layer**: Allowed, but exercise caution.  
 **Location:** ``include/zeronetics/core/``
 
-Similar to 2<sup>nd</sup> level, with the addition that these
-structs and classes can incorporate third-party libraries from ``vendor``.
+Similar to 2<sup>nd</sup> level, but with two additions:
+
+- Side-ways dependencies are allowed (i.e. a 3<sup>rd</sup> level core unit
+  can depend on another unit from 3<sup>rd</sup> layer).
+- Can depend on third-party libraries from ``vendor``.
 
 Examples:
 

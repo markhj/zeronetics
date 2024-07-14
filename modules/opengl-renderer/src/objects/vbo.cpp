@@ -25,14 +25,21 @@ ZEN::gl_uint ZEN::VBO::getContextId() const {
 
 void ZEN::VBO::setData(std::vector<gl_float> data) {
     with([&]() {
-        glBufferData(GL_ARRAY_BUFFER, currentSize * sizeof(GLfloat), data.data(), GL_STATIC_DRAW);
+        glBufferSubData(GL_ARRAY_BUFFER,
+                        0,
+                        data.size() * sizeof(GLfloat),
+                        data.data());
     });
 }
 
 void ZEN::VBO::resize(ZEN::gpu_alloc_int size) {
     auto oldSize = currentSize;
     with([&]() {
-        glBufferData(GL_ARRAY_BUFFER, currentSize * sizeof(GLfloat), {}, GL_STATIC_DRAW);
+        std::vector<float> n;
+        while (n.size() < size) {
+            n.emplace_back(0.0);
+        }
+        glBufferData(GL_ARRAY_BUFFER, size * sizeof(GLfloat), n.data(), GL_DYNAMIC_DRAW);
     });
     currentSize = size;
     currentAllocIndex = 0;
@@ -45,7 +52,7 @@ std::optional<ZEN::GPUAllocation> ZEN::VBO::allocate(ZEN::gpu_alloc_int size) {
     if (currentAllocIndex + size > currentSize) {
         return std::nullopt;
     }
-    GPUAllocation result {currentAllocIndex, size};
+    GPUAllocation result{currentAllocIndex, size};
     currentAllocIndex += size;
     return result;
 }

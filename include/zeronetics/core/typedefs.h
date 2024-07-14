@@ -1,5 +1,6 @@
 #pragma once
 
+#include <cstdint>
 namespace ZEN {
     /**
      * Game world floating-point type
@@ -30,4 +31,12 @@ namespace ZEN {
      * but should probably be set to match the window implementation.
      */
     typedef double mouse_pos_axis;
+
+    /**
+     * Unique ID
+     *
+     * An integer-based type which can hold sufficient numbers
+     * to attribute every object which requires a unique ID.
+     */
+    typedef uint32_t unique_id;
 }

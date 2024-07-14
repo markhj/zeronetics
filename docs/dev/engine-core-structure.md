@@ -14,6 +14,7 @@ the top comprises the most basic and fundamental structures.
 | **Core**: 2<sup>nd</sup> Level | Structs and classes with no dependencies outside own file                    |
 | **Core**: 3<sup>rd</sup> Level | Structs and classes (with dependencies _only_ from ``vendor``)               |
 | Contracts                      | Interfaces with _only_ pure virtual functions                                |
+| Traits                         | Supporting traits to implement re-usable functionality                       |
 | Adv. structures                | Classes with more complexity, such as ZEN::Game, as well as abstract classes |
 | Modules                        | Modules exist in isolation from each other, but can use the entire engine    |
 
@@ -92,6 +93,14 @@ from ``core`` and other contracts.
 
 Remember that: Contracts must only have pure virtual functions.
 For abstract classes, see the next chapter.
+
+## 💎 Traits
+
+**Dependency from same layer**: Not allowed.
+**Location:** ``include/traits/``
+
+Classes whose purpose is to support classes which inherits
+traits in implementing reusable functionality.
 
 ## 📱 Advanced structures
 

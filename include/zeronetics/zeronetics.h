@@ -30,7 +30,10 @@
 #include "contracts/renderer.h"
 #include "contracts/window.h"
 
+// Traits
+#include "traits/has-unique-id.h"
+
 // Adv. structures
 #include "controls/base-input-manager.h"
-#include "logging/logging.h"
 #include "game/game.h"
+#include "logging/logging.h"

@@ -27,3 +27,6 @@
 #define ZEN_LIB_ERROR(message) std::cerr << "Library error: " << message << std::endl;
 #define ZEN_WARN(message, category) ZEN::Log::warn(message, category)
 #define ZEN_CRITICAL(message) ZEN::Log::critical(message);
+
+#define ZEN_REPORT_START() ZEN::Log::startReporting();
+#define ZEN_REPORT(message) ZEN::Log::report(message);

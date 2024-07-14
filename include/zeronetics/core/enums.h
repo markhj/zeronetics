@@ -82,4 +82,10 @@ namespace ZEN {
         Space = 32,
         Esc = 256,
     };
+
+    enum class Platform {
+        Windows,
+        Linux,
+        Mac,
+    };
 }

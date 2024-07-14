@@ -11,7 +11,6 @@ INPUT                  = docs/getting-started \
                             docs/tutorials \
                             docs/manual \
                             docs/modules \
-                            docs/diving-deeper \
                             docs/engine-arch \
                             docs/dev \
                             include docs modules \

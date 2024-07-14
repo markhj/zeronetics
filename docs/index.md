@@ -7,7 +7,7 @@ If you're new, you probably want to head straight to the
 @ref getting-started section.
 
 If you have some experience with Zeronetics, and want to expand
-your horizon, you can explore @ref tutorials and @ref diving-deeper.
+your horizon, you can explore @ref tutorials and @ref manual.
 
 If you're here to learn how to work on the engine itself (or a fork
 of it), you'll find what you need under @ref arch and @ref dev.

@@ -1,0 +1,1 @@
+@page gw-float Game world floating-point type

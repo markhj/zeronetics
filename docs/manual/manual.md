@@ -1,5 +1,5 @@
 @page manual Manual
 
-@subpage game-class
-
-@subpage logging-index
+@subpage game-class  
+@subpage logging-index  
+@subpage geometry-math

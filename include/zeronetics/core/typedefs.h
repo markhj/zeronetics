@@ -10,6 +10,8 @@ namespace ZEN {
      *
      * In most cases ``float`` suffices, but large game-class worlds
      * may benefit from, or require, a floating-point type with higher precision.
+     *
+     * @ref gw-float
      */
     typedef float gw_float;
 
@@ -18,6 +20,8 @@ namespace ZEN {
      *
      * The floating-point type applied to measure
      * delta time intervals.
+     *
+     * @ref delta
      */
     typedef float dt_float;
 

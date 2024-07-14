@@ -1,3 +1,9 @@
+/**
+ * Tensors - Vectors and matrices
+ *
+ * @ref tensors
+ */
+
 #pragma once
 
 #include <glm/glm.hpp>

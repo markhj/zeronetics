@@ -13,17 +13,60 @@ std::map<ZEN::LogLevel, ZEN::LogBehavior> ZEN::Log::behaviors = {
 
 std::vector<ZEN::LogCategory> ZEN::Log::blacklistCategories = {};
 
+struct LogMessageCooldown {
+    std::string msg;
+    std::chrono::time_point<std::chrono::system_clock> created;
+    size_t count = 1;
+};
+
+std::vector<LogMessageCooldown> cooldown;
+
 void ZEN::Log::message(ZEN::LogLevel level,
                        ZEN::LogCategory category,
                        const std::string &msg) {
+    std::string output = msg;
+
+    // @todo: https://github.com/markhj/zeronetics/issues/7
+    //      Optimization of the code below
+    if (level != LogLevel::Info) {
+        auto now = std::chrono::system_clock::now();
+        for (auto iter = cooldown.begin(); iter != cooldown.end(); /* no increment here */) {
+            std::chrono::duration<double> elapsed = now - iter->created;
+            if (elapsed.count() > 5.0) {
+                iter = cooldown.erase(iter);
+            } else {
+                ++iter;
+            }
+        }
+
+        auto it = std::find_if(cooldown.begin(),
+                               cooldown.end(),
+                               [&](const auto &item) -> bool {
+                                   return item.msg == msg;
+                               });
+
+        if (it != cooldown.end()) {
+            std::chrono::duration<double> elapsed = now - it->created;
+            ++it->count;
+            if (elapsed.count() > 2.0) {
+                output += std::format(" [{}]", it->count);
+                it->created = now;
+            } else {
+                return;
+            }
+        } else {
+            cooldown.emplace_back(msg, now);
+        }
+    }
+
     switch (behaviors[level].takeAction) {
         case LogAction::Silent:
             break;
         case LogAction::Console:
-            std::cout << msg << std::endl;
+            std::cout << output << std::endl;
             break;
         case LogAction::ConsoleErr:
-            std::cerr << msg << std::endl;
+            std::cerr << output << std::endl;
             break;
         case LogAction::Exception:
             throw std::runtime_error(msg);

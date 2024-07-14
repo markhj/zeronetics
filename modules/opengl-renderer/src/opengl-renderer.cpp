@@ -170,9 +170,21 @@ void ZEN::OpenGL::Renderer::processRequest(ZEN::IRendererRequest *request) {
             }
             break;
         }
-        case RenderManagerRequest::Deallocate:
+        case RenderManagerRequest::Update: {
+            if (!request->renderable3d->gpuAlloc.has_value()) {
+                ZEN_WARN("Attempting to update renderable which isn't allocated.",
+                         LogCategory::Rendering);
+                return;
+            }
+            std::vector<GLfloat> vertices;
+            for (const Vertex3D &v: request->renderable3d->getVertices()) {
+                appendFloatsFromVertex(vertices, v);
+            }
+            vbo->updateData(request->renderable3d->gpuAlloc.value(), vertices);
             break;
-        case RenderManagerRequest::Update:
+        }
+        case RenderManagerRequest::Deallocate:
+            // @todo: Implement de-allocation requests to OpenGL renderer
             break;
     }
 }

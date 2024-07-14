@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('log-configuration.html',''); initResiz
 <li>Decide which categories you log to files</li>
 </ul>
 <p>Let's go!</p>
-<h2><a class="anchor" id="autotoc_md23"></a>
+<h2><a class="anchor" id="autotoc_md25"></a>
 🔇 Log level behavior</h2>
 <p>There are three primary log levels:</p>
 <ul>
@@ -110,11 +110,11 @@ $(document).ready(function(){initNavTree('log-configuration.html',''); initResiz
 </ul>
 <p>You can combine them how you see fit for your project and personal preferences.</p>
 <p>You can modify the behavior upon request, or at the beginning of your code.</p>
-<h3><a class="anchor" id="autotoc_md24"></a>
+<h3><a class="anchor" id="autotoc_md26"></a>
 Example</h3>
 <p>Changing the behavior of the critical level to just output an error in the console.</p>
 <div class="fragment"><div class="line">Log::behaviors[LogLevel::Critical].takeAction = LogAction::ConsoleErr;</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md25"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md27"></a>
 ✂️ Blacklisting categories</h2>
 <p>By default, all categories are submitted to the log file. But most would want to reduce that output.</p>
 <p>You do so, simply by adding from the <code>ZEN::LogCategory</code> enumerator, like this:</p>

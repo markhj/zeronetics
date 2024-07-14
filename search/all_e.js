@@ -1,16 +1,12 @@
 var searchData=
 [
-  ['screenresolution_103',['screenResolution',['../structZEN_1_1Settings.html#a3813b8b06b1d1c38f87e2418ab28c19e',1,'ZEN::Settings']]],
-  ['screenresolution_104',['ScreenResolution',['../structZEN_1_1ScreenResolution.html',1,'ZEN']]],
-  ['set_105',['set',['../classZEN_1_1OpenGL_1_1Shader.html#a039c241c305b02eec64887c7c5118500',1,'ZEN::OpenGL::Shader::set(const std::string &amp;location, ZEN::Vec3 value) noexcept'],['../classZEN_1_1OpenGL_1_1Shader.html#ab8dfa3f47655e2bce864e0eeff187eca',1,'ZEN::OpenGL::Shader::set(const std::string &amp;location, ZEN::Vec2 value) noexcept'],['../classZEN_1_1OpenGL_1_1Shader.html#ae2fba179cd00631e076a4ff74093343e',1,'ZEN::OpenGL::Shader::set(const std::string &amp;location, float value) noexcept'],['../classZEN_1_1OpenGL_1_1Shader.html#a03e3803e091af19cf22b49a6d361c910',1,'ZEN::OpenGL::Shader::set(const std::string &amp;location, int value) noexcept'],['../classZEN_1_1OpenGL_1_1Shader.html#a87505bbca1498027ac6796cf13649e33',1,'ZEN::OpenGL::Shader::set(const std::string &amp;location, bool value) noexcept'],['../classZEN_1_1IShader.html#aed73d1ef06a9aba9f65082fb4d4c3d37',1,'ZEN::IShader::set(const std::string &amp;location, ZEN::Mat4x4 value) noexcept=0'],['../classZEN_1_1IShader.html#a816e34d01108b878c931a1a1d956eaa1',1,'ZEN::IShader::set(const std::string &amp;location, ZEN::Vec4 value) noexcept=0'],['../classZEN_1_1IShader.html#a1ac6044ed4b6215a54fe5e77cf749b23',1,'ZEN::IShader::set(const std::string &amp;location, ZEN::Vec3 value) noexcept=0'],['../classZEN_1_1IShader.html#accbf8037388d3e8a65d4316697e653a1',1,'ZEN::IShader::set(const std::string &amp;location, ZEN::Vec2 value) noexcept=0'],['../classZEN_1_1IShader.html#af2ae74d32d856d9f62daf268ef62b750',1,'ZEN::IShader::set(const std::string &amp;location, float value) noexcept=0'],['../classZEN_1_1IShader.html#a579609389c4c4c64b5d0ec13d4a9b264',1,'ZEN::IShader::set(const std::string &amp;location, int value) noexcept=0'],['../classZEN_1_1IShader.html#a38e3068e893fe3dfbc1c8d02f611a46b',1,'ZEN::IShader::set(const std::string &amp;location, bool value) noexcept=0'],['../classZEN_1_1OpenGL_1_1Shader.html#a26328a2780a181d9b6c89a735a6b3c01',1,'ZEN::OpenGL::Shader::set(const std::string &amp;location, ZEN::Vec4 value) noexcept'],['../classZEN_1_1OpenGL_1_1Shader.html#a16dd02204f1b7a7f958ff8218b7b140a',1,'ZEN::OpenGL::Shader::set(const std::string &amp;location, ZEN::Mat4x4 value) noexcept override']]],
-  ['setinputmanager_106',['setInputManager',['../classZEN_1_1IWindow.html#a2944bafe25694ec5fc62dd063227dc9f',1,'ZEN::IWindow::setInputManager()'],['../classZEN_1_1Window.html#a38ebf8096b598b8ab3df8260ce742838',1,'ZEN::Window::setInputManager()']]],
-  ['setsource_107',['setSource',['../classZEN_1_1IShader.html#a387b70960044055bd1cf395c7fd54f95',1,'ZEN::IShader::setSource()'],['../classZEN_1_1OpenGL_1_1Shader.html#a0b7800d44365431025e04ba678787013',1,'ZEN::OpenGL::Shader::setSource()']]],
-  ['settings_108',['Settings',['../structZEN_1_1Settings.html',1,'ZEN']]],
-  ['shader_109',['Shader',['../classZEN_1_1OpenGL_1_1Shader.html',1,'ZEN::OpenGL']]],
-  ['shape3d_110',['Shape3D',['../classZEN_1_1Shape3D.html',1,'ZEN']]],
-  ['startreporting_111',['startReporting',['../classZEN_1_1Log.html#a2da9ea1a9f550106bb856074e37f437a',1,'ZEN::Log']]],
-  ['stdbinding_112',['StdBinding',['../classZEN_1_1OpenGL_1_1StdBinding.html',1,'ZEN::OpenGL']]],
-  ['stdbinding_3c_20gl_5fuint_20_3e_113',['StdBinding&lt; gl_uint &gt;',['../classZEN_1_1OpenGL_1_1StdBinding.html',1,'ZEN::OpenGL']]],
-  ['systeminfo_114',['SystemInfo',['../classZEN_1_1SystemInfo.html',1,'ZEN']]],
-  ['systeminfosheet_115',['SystemInfoSheet',['../structZEN_1_1SystemInfoSheet.html',1,'ZEN']]]
+  ['regenerate_97',['regenerate',['../classZEN_1_1IWindow.html#af3a8a1b75f2a6a588720a8c62b80886e',1,'ZEN::IWindow::regenerate()'],['../classZEN_1_1Window.html#aeea1798c76919c2560775df3e4cd3093',1,'ZEN::Window::regenerate()']]],
+  ['relative_98',['relative',['../structZEN_1_1MouseMovedEvent.html#a982941264a686cf8d633ad884ef7df48',1,'ZEN::MouseMovedEvent']]],
+  ['renderer_99',['Renderer',['../classZEN_1_1OpenGL_1_1Renderer.html',1,'ZEN::OpenGL']]],
+  ['rendererrequest_100',['RendererRequest',['../structZEN_1_1RendererRequest.html',1,'ZEN']]],
+  ['rendergroup3d_101',['RenderGroup3D',['../structZEN_1_1RenderGroup3D.html',1,'ZEN']]],
+  ['rendermanager_102',['RenderManager',['../structZEN_1_1RenderManager.html',1,'ZEN']]],
+  ['report_103',['report',['../classZEN_1_1Log.html#abe35945f4bb8b82c770375247de86270',1,'ZEN::Log']]],
+  ['resize_104',['resize',['../classZEN_1_1OpenGL_1_1VBO.html#abdc4fffca375fb5608f78b782e6e3c8c',1,'ZEN::OpenGL::VBO']]],
+  ['run_105',['run',['../classZEN_1_1Game.html#ac6bd7c888b88f9103ca87693a9118c57',1,'ZEN::Game']]]
 ];

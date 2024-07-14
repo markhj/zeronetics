@@ -101,21 +101,21 @@ $(document).ready(function(){initNavTree('game_8h_source.html',''); initResizabl
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
 <div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classZEN_1_1Game.html#ac6bd7c888b88f9103ca87693a9118c57">   25</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classZEN_1_1Game.html#ac6bd7c888b88f9103ca87693a9118c57">run</a>();</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classZEN_1_1Game.html#a741321bc5a5b262edb2f9a7e6f9fbb0f">   31</a></span>&#160;        [[nodiscard]] fps_int <a class="code" href="classZEN_1_1Game.html#a741321bc5a5b262edb2f9a7e6f9fbb0f">getFPS</a>() const noexcept;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classZEN_1_1Game.html#a3a4429d1317bf99ef32f44d72848e75b">   42</a></span>&#160;        [[nodiscard]] render_time_microsecs <a class="code" href="classZEN_1_1Game.html#a3a4429d1317bf99ef32f44d72848e75b">getRealRenderTime</a>() const noexcept;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    private:</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        std::shared_ptr&lt;<a class="code" href="classZEN_1_1IWindow.html">IWindow</a>&gt; m_window;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        std::shared_ptr&lt;<a class="code" href="classZEN_1_1IRenderer.html">IRenderer</a>&gt; m_renderer;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classZEN_1_1Game.html#a741321bc5a5b262edb2f9a7e6f9fbb0f">   34</a></span>&#160;        [[nodiscard]] fps_int <a class="code" href="classZEN_1_1Game.html#a741321bc5a5b262edb2f9a7e6f9fbb0f">getFPS</a>() const noexcept;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classZEN_1_1Game.html#a3a4429d1317bf99ef32f44d72848e75b">   47</a></span>&#160;        [[nodiscard]] render_time_microsecs <a class="code" href="classZEN_1_1Game.html#a3a4429d1317bf99ef32f44d72848e75b">getRealRenderTime</a>() const noexcept;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        render_time_microsecs managedRenderTime;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        render_time_microsecs realRenderTime;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    };</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;};</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    private:</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        std::shared_ptr&lt;<a class="code" href="classZEN_1_1IWindow.html">IWindow</a>&gt; m_window;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        std::shared_ptr&lt;<a class="code" href="classZEN_1_1IRenderer.html">IRenderer</a>&gt; m_renderer;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        render_time_microsecs managedRenderTime;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        render_time_microsecs realRenderTime;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    };</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;};</div>
 <div class="ttc" id="aclassZEN_1_1Game_html"><div class="ttname"><a href="classZEN_1_1Game.html">ZEN::Game</a></div><div class="ttdef"><b>Definition:</b> game.h:12</div></div>
 <div class="ttc" id="aclassZEN_1_1Game_html_a3a4429d1317bf99ef32f44d72848e75b"><div class="ttname"><a href="classZEN_1_1Game.html#a3a4429d1317bf99ef32f44d72848e75b">ZEN::Game::getRealRenderTime</a></div><div class="ttdeci">render_time_microsecs getRealRenderTime() const noexcept</div></div>
 <div class="ttc" id="aclassZEN_1_1Game_html_a741321bc5a5b262edb2f9a7e6f9fbb0f"><div class="ttname"><a href="classZEN_1_1Game.html#a741321bc5a5b262edb2f9a7e6f9fbb0f">ZEN::Game::getFPS</a></div><div class="ttdeci">fps_int getFPS() const noexcept</div></div>

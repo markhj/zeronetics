@@ -5,6 +5,6 @@
 namespace ZEN {
     class ITransforms3D {
     public:
-        Vec3 position = Vec3(1.0);
+        Vec3 position = Vec3(0.0);
     };
 }

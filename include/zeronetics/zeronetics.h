@@ -24,6 +24,7 @@
 #include "core/version.h"
 
 // Core: 3rd Level
+#include "core/aabb.h"
 #include "core/attributes.h"
 #include "core/shape.h"
 #include "core/tensors.h"

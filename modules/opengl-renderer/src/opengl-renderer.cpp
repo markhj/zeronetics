@@ -38,16 +38,33 @@ void ZEN::OpenGLRenderer::render() {
     //      allocation data are discovered
     int drawVertices = 0;
     std::vector<GLfloat> vertices;
+    std::vector<ColorRGB> defaultColors = {
+            {0.0, 0.2, 1.0},
+            {0.0, 1.0, 0.2},
+            {0.6, 0.2, 0.6},
+    };
+    int defaultColorPos = 0;
     for (const auto &group: renderManager->renderGroups3d) {
         for (const auto &renderable3d: group->renderables3d) {
             auto rVertices = renderable3d.second->getVertices();
+            // @todo: Use .insert instead of multiple push/emplace
             for (const Vertex3D &v: rVertices) {
                 vertices.emplace_back(v.position.x);
                 vertices.emplace_back(v.position.y);
                 vertices.emplace_back(v.position.z);
-                vertices.emplace_back(v.color->r);
-                vertices.emplace_back(v.color->g);
-                vertices.emplace_back(v.color->b);
+                if (v.color.has_value()) {
+                    vertices.emplace_back(v.color->r);
+                    vertices.emplace_back(v.color->g);
+                    vertices.emplace_back(v.color->b);
+                } else {
+                    ++defaultColorPos;
+                    if (defaultColorPos >= defaultColors.size()) {
+                        defaultColorPos = 0;
+                    }
+                    vertices.emplace_back(defaultColors[defaultColorPos].r);
+                    vertices.emplace_back(defaultColors[defaultColorPos].g);
+                    vertices.emplace_back(defaultColors[defaultColorPos].b);
+                }
                 ++drawVertices;
             }
         }

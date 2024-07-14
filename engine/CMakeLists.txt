@@ -12,6 +12,7 @@ set(CORE_SRC
         src/core/controls.cpp
 
         # Core: 3rd layer
+        src/core/aabb.cpp
         src/core/vertices.cpp
 
         # Adv. structures

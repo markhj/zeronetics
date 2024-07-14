@@ -29,7 +29,6 @@ var NAVTREE =
     [ "Tutorials", "tutorials.html", "tutorials" ],
     [ "Manual", "manual.html", "manual" ],
     [ "Modules", "modules.html", "modules" ],
-    [ "Diving deeper", "diving-deeper.html", "diving-deeper" ],
     [ "Engine architecture", "engine-arch.html", "engine-arch" ],
     [ "Engine development", "dev.html", "dev" ],
     [ "Classes", "annotated.html", [
@@ -48,7 +47,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"structZEN_1_1IRenderManager.html#a9c7bf5c92b66b63891333b3219c7ec56"
+"structZEN_1_1KeyMap.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

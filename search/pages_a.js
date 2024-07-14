@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tutorials_267',['Tutorials',['../tutorials.html',1,'']]]
+  ['why_20are_20log_20functions_20macros_3f_266',['Why are log functions macros?',['../log-why-macros.html',1,'engine-arch']]]
 ];

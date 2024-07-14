@@ -1,20 +1,22 @@
 var annotated_dup =
 [
     [ "ZEN", null, [
-      [ "Macros", "build-info.html#autotoc_md32", null ],
-      [ "Example", "build-info.html#autotoc_md33", null ],
-      [ "Note", "build-info.html#autotoc_md34", [
-        [ "CMake file", "create-modules.html#autotoc_md39", null ],
-        [ "Public headers", "create-modules.html#autotoc_md40", null ],
-        [ "Integrate in build process", "create-modules.html#autotoc_md41", null ]
+      [ "Macros", "build-info.html#autotoc_md31", null ],
+      [ "Example", "build-info.html#autotoc_md32", null ],
+      [ "Note", "build-info.html#autotoc_md33", [
+        [ "✏️ What is reporting?", "log-reporting.html#autotoc_md27", null ],
+        [ "📋 Usage", "log-reporting.html#autotoc_md28", null ],
+        [ "Library error", "log-engine-dev.html#autotoc_md26", null ],
+        [ "CMake file", "create-modules.html#autotoc_md38", null ],
+        [ "Public headers", "create-modules.html#autotoc_md39", null ],
+        [ "Integrate in build process", "create-modules.html#autotoc_md40", null ]
       ] ],
-      [ "Namespace", "create-modules.html#autotoc_md42", null ],
-      [ "How to make callbacks \"a la Zeronetics\"", "callbacks.html#autotoc_md35", null ],
-      [ "Examination of choices", "callbacks.html#autotoc_md36", [
-        [ "Using <tt>std::optional</tt>", "callbacks.html#autotoc_md37", null ],
-        [ "Smart pointers", "callbacks.html#autotoc_md38", null ]
+      [ "Namespace", "create-modules.html#autotoc_md41", null ],
+      [ "How to make callbacks \"a la Zeronetics\"", "callbacks.html#autotoc_md34", null ],
+      [ "Examination of choices", "callbacks.html#autotoc_md35", [
+        [ "Using <tt>std::optional</tt>", "callbacks.html#autotoc_md36", null ],
+        [ "Smart pointers", "callbacks.html#autotoc_md37", null ]
       ] ],
-      [ "Library error", "log-engine-dev.html#autotoc_md26", null ],
       [ "OpenGL", null, [
         [ "IBindable", "classZEN_1_1OpenGL_1_1IBindable.html", "classZEN_1_1OpenGL_1_1IBindable" ],
         [ "StdBinding", "classZEN_1_1OpenGL_1_1StdBinding.html", "classZEN_1_1OpenGL_1_1StdBinding" ],

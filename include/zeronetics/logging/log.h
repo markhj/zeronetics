@@ -66,6 +66,22 @@ namespace ZEN {
         static std::vector<LogCategory> blacklistCategories;
 
         /**
+         * The minimum interval between logging identical messages,
+         * and until it's possible again.
+         *
+         * This only concerns critical and warning level messages.
+         * Info level can be posted at any frequency.
+         */
+        static double messageCooldown;
+
+        /**
+         * The time between identical messages being posted, and until
+         * they will appear again, this time with a count of how many
+         * times the message attempted to appear in this interval.
+         */
+        static double messageCooldownInterval;
+
+        /**
          * General log message functionality.
          *
          * @param level
@@ -74,7 +90,7 @@ namespace ZEN {
          */
         static void message(LogLevel level,
                             LogCategory category,
-                            const std::string &message);
+                            std::string message);
 
         /**
          * Print a general info-level message

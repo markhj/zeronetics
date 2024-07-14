@@ -67,7 +67,7 @@ This is not to be treated as a layer with interfaces.
 
 ## 📥 Core: 3<sup>rd</sup> level
 
-**Dependency from same layer**: Not allowed (only from ``vendor``)  
+**Dependency from same layer**: Allowed, but exercise caution.  
 **Location:** ``include/zeronetics/core/``
 
 Similar to 2<sup>nd</sup> level, with the addition that these

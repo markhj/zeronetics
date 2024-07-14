@@ -69,6 +69,7 @@ void ZEN::OpenGLRenderer::render() {
             }
         }
     }
+
     vbo->setData(vertices);
 
     MVP mvp = renderManager->camera3d->getModelViewProjection();
@@ -95,7 +96,7 @@ void ZEN::OpenGLRenderer::initialize() {
 
     vbo = std::make_shared<VBO>(VBO());
     vbo->initialize();
-    vbo->resize(10);
+    vbo->resize(500);
     vbo->setData({});
 
     vao = std::make_shared<VAO>(VAO());

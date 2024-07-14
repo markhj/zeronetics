@@ -145,7 +145,11 @@ Hierarchy</h2>
 📥 Core: 3&lt;sup&gt;rd&lt;/sup&gt; level</h2>
 <p><b>Dependency from same layer</b>: Allowed, but exercise caution. <br  />
  <b>Location:</b> <code>include/zeronetics/core/</code></p>
-<p>Similar to 2<sup>nd</sup> level, with the addition that these structs and classes can incorporate third-party libraries from <code>vendor</code>.</p>
+<p>Similar to 2<sup>nd</sup> level, but with two additions:</p>
+<ul>
+<li>Side-ways dependencies are allowed (i.e. a 3<sup>rd</sup> level core unit can depend on another unit from 3<sup>rd</sup> layer).</li>
+<li>Can depend on third-party libraries from <code>vendor</code>.</li>
+</ul>
 <p>Examples:</p>
 <ul>
 <li>Vectors and matrices (which depend on <code>glm</code>)</li>

@@ -9,6 +9,7 @@ set(CORE_SRC
         src/core/version.cpp
         src/core/engine-info.cpp
         src/core/controls.cpp
+        src/core/io.cpp
         src/traits/has-unique-id.cpp
         src/logging/log.cpp
         src/game/game.cpp)

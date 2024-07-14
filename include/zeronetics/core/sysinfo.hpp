@@ -18,14 +18,14 @@ namespace ZEN {
 
     class SystemInfo {
     public:
-        SystemInfoSheet get();
+        static SystemInfoSheet get();
 
-        std::optional<Platform> getPlatform();
+        static std::optional<Platform> getPlatform();
 
-        std::optional<uint8_t> getBitness();
+        static std::optional<uint8_t> getBitness();
 
-        std::optional<uint8_t> getCPUCores();
+        static std::optional<uint8_t> getCPUCores();
 
-        std::optional<std::string> getPlatformAsString();
+        static std::optional<std::string> getPlatformAsString();
     };
 }

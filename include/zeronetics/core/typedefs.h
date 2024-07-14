@@ -39,4 +39,10 @@ namespace ZEN {
      * to attribute every object which requires a unique ID.
      */
     typedef uint32_t unique_id;
+
+    /**
+     * Data type used to map index and size
+     * of renderables allocated in the GPU.
+     */
+    typedef unsigned int gpu_alloc_int;
 }

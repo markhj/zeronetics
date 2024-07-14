@@ -88,4 +88,67 @@ namespace ZEN {
         Linux,
         Mac,
     };
+
+    /**
+     * Shader stages.
+     */
+    enum ShaderStage {
+        /**
+         * Vertex shader.
+         */
+        Vertex,
+
+        /**
+         * Fragment or pixel shader.
+         */
+        Fragment,
+
+        /**
+         * Compute shader.
+         */
+        Compute,
+
+        /**
+         * Geometry shader
+         */
+        Geometry,
+
+        /**
+         * Tessellation evaluation shader
+         */
+        TessEvaluation,
+
+        /**
+         * Tessellation control shader
+         */
+        TessControl,
+    };
+
+    /**
+     * Type of vertex attributes
+     */
+    enum class VertexAttribute {
+        Position2D,
+        Position3D,
+
+        ColorRGB,
+        colorRGBA,
+
+        Normal3D,
+
+        Tangent3D,
+        BiTangent3D,
+
+        TextureUV,
+    };
+
+    /**
+     * Types of requests a ZEN::IRenderManager can make
+     * to a ZEN::IRenderer.
+     */
+    enum class RenderManagerRequest {
+        Allocate,
+        Deallocate,
+        Update,
+    };
 }

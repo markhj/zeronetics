@@ -5,6 +5,7 @@
 #include <stdexcept>
 
 #include <GLFW/glfw3.h>
+#include <iostream>
 
 namespace {
     GLFWwindow *glfwWindow;
@@ -82,6 +83,8 @@ void ZEN::Window::generate(const ZEN::Settings &settings) noexcept(false) {
                                   windowTitle,
                                   nullptr,
                                   nullptr);
+
+    glfwMakeContextCurrent(glfwWindow);
 
     glfwSetKeyCallback(glfwWindow, keyboardCallback);
     glfwSetCursorPosCallback(glfwWindow, mouseMoveCallback);

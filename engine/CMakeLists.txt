@@ -14,6 +14,7 @@ set(CORE_SRC
         src/core/sysinfo.cpp
 
         # Core: 3rd layer
+        src/core/aabb.cpp
         src/core/vertices.cpp
 
         # Traits

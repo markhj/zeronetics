@@ -15,9 +15,9 @@ ZEN::Cube::Cube(gw_float width, gw_float height, gw_float depth) : m_width(width
 std::vector<ZEN::Vertex3D> ZEN::Cube::make() const noexcept {
     std::vector<Vertex3D> res;
 
-    res.push_back({.position = {0.0, 0.0, 0.0}, .color = ColorRGB{1.0, 0.0, 0.0}});
-    res.push_back({.position = {m_width, 0.0, 0.0}, .color = ColorRGB{0.0, 1.0, 0.0}});
-    res.push_back({.position = {0.0, m_height, 0.0}, .color = ColorRGB{1.0, 0.0, 1.0}});
+    res.push_back({.position = {0.0, 0.0, 0.0}});
+    res.push_back({.position = {m_width, 0.0, 0.0}});
+    res.push_back({.position = {0.0, m_height, 0.0}});
 
     return res;
 }

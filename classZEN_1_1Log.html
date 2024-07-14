@@ -96,13 +96,13 @@ $(document).ready(function(){initNavTree('classZEN_1_1Log.html',''); initResizab
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a3b225aeeabc9f30d0c25933a4922eca0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1Log.html#a3b225aeeabc9f30d0c25933a4922eca0">message</a> (LogLevel level, LogCategory category, const std::string &amp;message)</td></tr>
-<tr class="separator:a3b225aeeabc9f30d0c25933a4922eca0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af742c21efb209fd0b8eb80eec0559349"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1Log.html#af742c21efb209fd0b8eb80eec0559349">info</a> (const std::string &amp;<a class="el" href="classZEN_1_1Log.html#a3b225aeeabc9f30d0c25933a4922eca0">message</a>, LogCategory category)</td></tr>
+<tr class="memitem:a82aa485225c321d2bc7c3ab6ae864c8c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1Log.html#a82aa485225c321d2bc7c3ab6ae864c8c">message</a> (LogLevel level, LogCategory category, std::string message)</td></tr>
+<tr class="separator:a82aa485225c321d2bc7c3ab6ae864c8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af742c21efb209fd0b8eb80eec0559349"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1Log.html#af742c21efb209fd0b8eb80eec0559349">info</a> (const std::string &amp;<a class="el" href="classZEN_1_1Log.html#a82aa485225c321d2bc7c3ab6ae864c8c">message</a>, LogCategory category)</td></tr>
 <tr class="separator:af742c21efb209fd0b8eb80eec0559349"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a718cf7d1fa13ab3ee9943f08a66b64f7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1Log.html#a718cf7d1fa13ab3ee9943f08a66b64f7">warn</a> (const std::string &amp;<a class="el" href="classZEN_1_1Log.html#a3b225aeeabc9f30d0c25933a4922eca0">message</a>, LogCategory category)</td></tr>
+<tr class="memitem:a718cf7d1fa13ab3ee9943f08a66b64f7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1Log.html#a718cf7d1fa13ab3ee9943f08a66b64f7">warn</a> (const std::string &amp;<a class="el" href="classZEN_1_1Log.html#a82aa485225c321d2bc7c3ab6ae864c8c">message</a>, LogCategory category)</td></tr>
 <tr class="separator:a718cf7d1fa13ab3ee9943f08a66b64f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa550d58e15cd2d9894683f19c95ec8b8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1Log.html#aa550d58e15cd2d9894683f19c95ec8b8">critical</a> (const std::string &amp;<a class="el" href="classZEN_1_1Log.html#a3b225aeeabc9f30d0c25933a4922eca0">message</a>)</td></tr>
+<tr class="memitem:aa550d58e15cd2d9894683f19c95ec8b8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1Log.html#aa550d58e15cd2d9894683f19c95ec8b8">critical</a> (const std::string &amp;<a class="el" href="classZEN_1_1Log.html#a82aa485225c321d2bc7c3ab6ae864c8c">message</a>)</td></tr>
 <tr class="separator:aa550d58e15cd2d9894683f19c95ec8b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe35945f4bb8b82c770375247de86270"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1Log.html#abe35945f4bb8b82c770375247de86270">report</a> (const <a class="el" href="structZEN_1_1LogFileEntry.html">LogFileEntry</a> &amp;logFileEntry)</td></tr>
 <tr class="separator:abe35945f4bb8b82c770375247de86270"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -117,6 +117,10 @@ static std::map&lt; LogLevel, <a class="el" href="structZEN_1_1LogBehavior.html"
 <tr class="memitem:a8b16731d9cd3c5ec6efa8f6cb0bf249f"><td class="memItemLeft" align="right" valign="top"><a id="a8b16731d9cd3c5ec6efa8f6cb0bf249f"></a>
 static std::vector&lt; LogCategory &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>blacklistCategories</b></td></tr>
 <tr class="separator:a8b16731d9cd3c5ec6efa8f6cb0bf249f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95e3ab7a001ebf96333dc160d801e220"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1Log.html#a95e3ab7a001ebf96333dc160d801e220">messageCooldown</a></td></tr>
+<tr class="separator:a95e3ab7a001ebf96333dc160d801e220"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7a840abc0796acfe6e30b77c71407b1"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1Log.html#ad7a840abc0796acfe6e30b77c71407b1">messageCooldownInterval</a></td></tr>
+<tr class="separator:ad7a840abc0796acfe6e30b77c71407b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classZEN_1_1Log.html">Log</a></p>
@@ -200,8 +204,8 @@ static std::vector&lt; LogCategory &gt;&#160;</td><td class="memItemRight" valig
 
 </div>
 </div>
-<a id="a3b225aeeabc9f30d0c25933a4922eca0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3b225aeeabc9f30d0c25933a4922eca0">&#9670;&nbsp;</a></span>message()</h2>
+<a id="a82aa485225c321d2bc7c3ab6ae864c8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82aa485225c321d2bc7c3ab6ae864c8c">&#9670;&nbsp;</a></span>message()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -224,7 +228,7 @@ static std::vector&lt; LogCategory &gt;&#160;</td><td class="memItemRight" valig
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">std::string&#160;</td>
           <td class="paramname"><em>message</em>&#160;</td>
         </tr>
         <tr>
@@ -347,6 +351,54 @@ static std::vector&lt; LogCategory &gt;&#160;</td><td class="memItemRight" valig
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a95e3ab7a001ebf96333dc160d801e220"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95e3ab7a001ebf96333dc160d801e220">&#9670;&nbsp;</a></span>messageCooldown</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double ZEN::Log::messageCooldown</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The minimum interval between logging identical messages, and until it's possible again.</p>
+<p>This only concerns critical and warning level messages. Info level can be posted at any frequency. </p>
+
+</div>
+</div>
+<a id="ad7a840abc0796acfe6e30b77c71407b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7a840abc0796acfe6e30b77c71407b1">&#9670;&nbsp;</a></span>messageCooldownInterval</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double ZEN::Log::messageCooldownInterval</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The time between identical messages being posted, and until they will appear again, this time with a count of how many times the message attempted to appear in this interval. </p>
 
 </div>
 </div>

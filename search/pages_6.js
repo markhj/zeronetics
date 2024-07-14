@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['handling_20the_20mouse_242',['Handling the mouse',['../mouse.html',1,'tutorials']]]
+  ['handling_20the_20mouse_246',['Handling the mouse',['../mouse.html',1,'tutorials']]]
 ];

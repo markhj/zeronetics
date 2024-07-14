@@ -33,6 +33,10 @@ void ZEN::OpenGLRenderer::render() {
 
     handleAllocations();
 
+    while (!renderManager->requests.empty()) {
+        processRequest(renderManager->requests.begin()->get());
+        renderManager->requests.erase(renderManager->requests.begin());
+    }
 
     // @todo: Don't allocate on every frame -- Allocate when objects without
     //      allocation data are discovered
@@ -131,5 +135,17 @@ void ZEN::OpenGLRenderer::handleAllocations() {
             ZEN_INFO(std::format("ALLOC: [Index: {}, Size: {}]", allocation->index, allocation->size),
                      ZEN::LogCategory::RendererInternals);
         }
+    }
+}
+
+void ZEN::OpenGLRenderer::processRequest(ZEN::IRendererRequest *request) {
+    switch (request->request) {
+        case RenderManagerRequest::Allocate:
+            std::cout << "ALLOC";
+            break;
+        case RenderManagerRequest::Deallocate:
+            break;
+        case RenderManagerRequest::Update:
+            break;
     }
 }

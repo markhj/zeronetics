@@ -31,6 +31,8 @@ namespace ZEN {
 
         void handleAllocations();
 
+        inline void processRequest(IRendererRequest *request);
+
     };
 
     /**

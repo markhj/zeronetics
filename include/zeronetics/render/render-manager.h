@@ -5,6 +5,8 @@
 #include <memory>
 
 namespace ZEN {
+    struct RendererRequest : public IRendererRequest {};
+
     struct RenderGroup3D : public IRenderGroup3D {
 
     };

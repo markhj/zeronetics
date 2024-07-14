@@ -141,4 +141,14 @@ namespace ZEN {
 
         TextureUV,
     };
+
+    /**
+     * Types of requests a ZEN::IRenderManager can make
+     * to a ZEN::IRenderer.
+     */
+    enum class RenderManagerRequest {
+        Allocate,
+        Deallocate,
+        Update,
+    };
 }

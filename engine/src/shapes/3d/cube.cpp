@@ -12,12 +12,48 @@ ZEN::Cube::Cube(gw_float width, gw_float height, gw_float depth) : m_width(width
                                                                    m_depth(depth) {
 }
 
+inline void createFace(std::vector<ZEN::Vertex3D> &res,
+                       const ZEN::Vec3 &a,
+                       const ZEN::Vec3 &b,
+                       const ZEN::Vec3 &c,
+                       const ZEN::Vec3 &d) {
+    res.push_back({.position = a});
+    res.push_back({.position = b});
+    res.push_back({.position = c});
+    res.push_back({.position = d});
+    res.push_back({.position = c});
+    res.push_back({.position = b});
+}
+
 std::vector<ZEN::Vertex3D> ZEN::Cube::make() const noexcept {
     std::vector<Vertex3D> res;
 
-    res.push_back({.position = {0.0, 0.0, 0.0}});
-    res.push_back({.position = {m_width, 0.0, 0.0}});
-    res.push_back({.position = {0.0, m_height, 0.0}});
+    gw_float x = m_width / 2.0f,
+             y = m_height / 2.0f,
+             z = m_depth / 2.0f;
+
+    for (const gw_float i: {-1.0f, 1.0f}) {
+        // Front and back
+        createFace(res,
+                   {-x, -y, i * z},
+                   {x, -y, i * z},
+                   {-x, y, i * z},
+                   {x, y, i * z});
+
+        // Sides
+        createFace(res,
+                   {i * x, -y, -z},
+                   {i * x, y, -z},
+                   {i * x, -y, z},
+                   {i * x, y, z});
+
+        // Top and bottom
+        createFace(res,
+                   {-x, i * y, -z},
+                   {x, i * y, -z},
+                   {-x, i * y, z},
+                   {x, i * y, z});
+    }
 
     return res;
 }

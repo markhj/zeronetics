@@ -3,14 +3,25 @@
 #include <iostream>
 #include <map>
 #include <string>
+#include <vector>
 
 #include "zeronetics/core/io.h"
 
 namespace ZEN {
+    enum class LogLevel {
+        Info,
+        Warning,
+        Critical,
+    };
+
     /**
      * Log category
      */
     enum class LogCategory {
+        None,
+
+        Critical,
+
         /**
          * General information, not fit for other categories.
          */
@@ -32,6 +43,17 @@ namespace ZEN {
         std::map<std::string, std::string> records;
     };
 
+    enum class LogAction {
+        Silent,
+        Console,
+        ConsoleErr,
+        Exception,
+    };
+
+    struct LogBehavior {
+        LogAction takeAction = LogAction::Console;
+    };
+
     /**
      * Log
      *
@@ -39,6 +61,21 @@ namespace ZEN {
      */
     class Log {
     public:
+        static std::map<LogLevel, LogBehavior> behaviors;
+
+        static std::vector<LogCategory> blacklistCategories;
+
+        /**
+         * General log message functionality.
+         *
+         * @param level
+         * @param category
+         * @param message
+         */
+        static void message(LogLevel level,
+                            LogCategory category,
+                            const std::string &message);
+
         /**
          * Print a general info-level message
          *
@@ -83,6 +120,9 @@ namespace ZEN {
 
     private:
         static void logToFile(const LogFileEntry &logFileEntry);
+
+        static void logToFileIfCategory(LogCategory category,
+                                        const LogFileEntry &logFileEntry);
 
         static std::optional<File> logFile;
     };

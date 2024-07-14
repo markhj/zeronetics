@@ -1,25 +1,55 @@
 #include "zeronetics/logging/log.h"
 #include "zeronetics/core/sysinfo.hpp"
+#include <algorithm>
 #include <format>
 
 std::optional<ZEN::File> ZEN::Log::logFile;
 
-void ZEN::Log::info(const std::string &message, ZEN::LogCategory category) {
-    std::cout << "LOG: " << message << std::endl;
+std::map<ZEN::LogLevel, ZEN::LogBehavior> ZEN::Log::behaviors = {
+        {ZEN::LogLevel::Info, {ZEN::LogAction::Console}},
+        {ZEN::LogLevel::Warning, {ZEN::LogAction::ConsoleErr}},
+        {ZEN::LogLevel::Critical, {ZEN::LogAction::Exception}},
+};
+
+std::vector<ZEN::LogCategory> ZEN::Log::blacklistCategories = {};
+
+void ZEN::Log::message(ZEN::LogLevel level,
+                       ZEN::LogCategory category,
+                       const std::string &msg) {
+    switch (behaviors[level].takeAction) {
+        case LogAction::Silent:
+            break;
+        case LogAction::Console:
+            std::cout << msg << std::endl;
+            break;
+        case LogAction::ConsoleErr:
+            std::cerr << msg << std::endl;
+            break;
+        case LogAction::Exception:
+            throw std::runtime_error(msg);
+    }
 }
 
-void ZEN::Log::critical(const std::string &message) {
-    std::cerr << message << std::endl;
-    logToFile({
-            .message = message,
-    });
+void ZEN::Log::info(const std::string &msg, ZEN::LogCategory category) {
+    logToFileIfCategory(category, {
+                                          .message = msg,
+                                  });
+    message(LogLevel::Info, category, msg);
 }
 
-void ZEN::Log::warn(const std::string &message, ZEN::LogCategory category) {
-    std::cout << "WARNING: " << message << std::endl;
+void ZEN::Log::warn(const std::string &msg, ZEN::LogCategory category) {
+    logToFileIfCategory(category, {
+                                          .message = std::format("CRITICAL: {}", msg),
+                                  });
+    message(LogLevel::Warning, category, msg);
+}
+
+void ZEN::Log::critical(const std::string &msg) {
+    // @note: Critical level is always logged to file
     logToFile({
-            .message = message,
+            .message = std::format("WARNING: {}", msg),
     });
+    message(LogLevel::Critical, LogCategory::Critical, msg);
 }
 
 void ZEN::Log::report(const ZEN::LogFileEntry &logFileEntry) {
@@ -78,4 +108,17 @@ void ZEN::Log::startReporting() {
     }
 
     report({"System Information", records});
+}
+
+void ZEN::Log::logToFileIfCategory(ZEN::LogCategory category,
+                                   const ZEN::LogFileEntry &logFileEntry) {
+    auto it = std::find_if(blacklistCategories.begin(),
+                           blacklistCategories.end(),
+                           [&](const LogCategory &other) -> bool {
+                               return other == category;
+                           });
+
+    if (it == blacklistCategories.end()) {
+        logToFile(logFileEntry);
+    }
 }

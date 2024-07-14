@@ -47,8 +47,14 @@ namespace ZEN {
         [[nodiscard]] render_time_microsecs getRealRenderTime() const noexcept;
 
     private:
+        /**
+         * Window instance.
+         */
         std::shared_ptr<IWindow> m_window;
 
+        /**
+         * Renderer of choice.
+         */
         std::shared_ptr<IRenderer> m_renderer;
 
         /**

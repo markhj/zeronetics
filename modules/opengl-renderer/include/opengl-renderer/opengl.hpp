@@ -28,6 +28,9 @@ namespace ZEN {
 
     private:
         bool m_initialized = false;
+
+        void handleAllocations();
+
     };
 
     /**

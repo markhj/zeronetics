@@ -10,6 +10,6 @@ namespace ZEN {
     };
 
     struct RenderManager : public IRenderManager {
-
+        void resetAllocations() const noexcept override;
     };
 }

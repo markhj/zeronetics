@@ -19,6 +19,10 @@ set(CORE_SRC
         src/logging/log.cpp
         src/game/game.cpp
 
+        # Shapes
+        src/shapes/3d/shape-3d.cpp
+        src/shapes/3d/cube.cpp
+
         # Entities
         src/entities/entity.cpp
         src/entities/3d/camera-3d.cpp

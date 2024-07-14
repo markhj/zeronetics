@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['keymap_68',['KeyMap',['../structZEN_1_1KeyMap.html',1,'ZEN']]],
-  ['keystateevent_69',['KeyStateEvent',['../structZEN_1_1KeyStateEvent.html',1,'ZEN']]]
+  ['iinputmanager_68',['IInputManager',['../classZEN_1_1IInputManager.html',1,'ZEN']]],
+  ['irenderer_69',['IRenderer',['../classZEN_1_1IRenderer.html',1,'ZEN']]],
+  ['iwindow_70',['IWindow',['../classZEN_1_1IWindow.html',1,'ZEN']]]
 ];

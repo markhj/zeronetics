@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['h_16',['h',['../structZEN_1_1ScreenResolution.html#a6cbae4c273486bcfe55da92798c48090',1,'ZEN::ScreenResolution']]],
-  ['handlebuffer_17',['handleBuffer',['../classZEN_1_1IWindow.html#a567b2bae12bca462be7fbe744ee8be7e',1,'ZEN::IWindow::handleBuffer()'],['../classZEN_1_1Window.html#ab524ce373bdaa172859cb99e1cd207c9',1,'ZEN::Window::handleBuffer()']]],
-  ['handleinputs_18',['handleInputs',['../classZEN_1_1IWindow.html#a527811644cc0b04c5f8d661d013fc45b',1,'ZEN::IWindow::handleInputs()'],['../classZEN_1_1Window.html#a6cc55ce77162a4b14859fc95593107cd',1,'ZEN::Window::handleInputs()']]],
-  ['handling_20the_20mouse_19',['Handling the mouse',['../mouse.html',1,'tutorials']]],
-  ['hasuniqueid_20',['HasUniqueId',['../classZEN_1_1HasUniqueId.html',1,'ZEN']]]
+  ['game_12',['Game',['../classZEN_1_1Game.html#a21a48dbcb7e1f12f6b83890e49a1ccac',1,'ZEN::Game::Game()'],['../classZEN_1_1Game.html',1,'ZEN::Game']]],
+  ['generate_13',['generate',['../classZEN_1_1IWindow.html#acfd336d6e779919ae66728b26a2995f2',1,'ZEN::IWindow::generate()'],['../classZEN_1_1Window.html#a56421da6cc3290b940c3200b7a4f0a6f',1,'ZEN::Window::generate()']]],
+  ['getting_20started_14',['Getting started',['../getting-started.html',1,'']]],
+  ['getuniqueid_15',['getUniqueId',['../classZEN_1_1HasUniqueId.html#a2fc2014361822c13a261ad9a8876c36c',1,'ZEN::HasUniqueId']]],
+  ['getversion_16',['getVersion',['../structZEN_1_1EngineInfo.html#ab57513f50c918c8fd9f805922895bbc1',1,'ZEN::EngineInfo']]]
 ];

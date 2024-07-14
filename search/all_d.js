@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['regenerate_44',['regenerate',['../classZEN_1_1IWindow.html#af3a8a1b75f2a6a588720a8c62b80886e',1,'ZEN::IWindow::regenerate()'],['../classZEN_1_1Window.html#aeea1798c76919c2560775df3e4cd3093',1,'ZEN::Window::regenerate()']]],
-  ['relative_45',['relative',['../structZEN_1_1MouseMovedEvent.html#a982941264a686cf8d633ad884ef7df48',1,'ZEN::MouseMovedEvent']]],
-  ['run_46',['run',['../classZEN_1_1Game.html#ac6bd7c888b88f9103ca87693a9118c57',1,'ZEN::Game']]]
+  ['patch_41',['patch',['../structZEN_1_1Version.html#a04634c298ad640d6ec2561dfd57137fa',1,'ZEN::Version']]],
+  ['path_42',['Path',['../classZEN_1_1Path.html',1,'ZEN']]],
+  ['position_43',['position',['../structZEN_1_1MouseMovedEvent.html#af9f62450e1a2e8c370a9d5a0aefc3191',1,'ZEN::MouseMovedEvent']]],
+  ['preview_44',['preview',['../structZEN_1_1Version.html#a4fc39feff9a5bb211e4e8b961a5f2a49',1,'ZEN::Version']]],
+  ['preview_45',['Preview',['../structZEN_1_1Version_1_1Preview.html',1,'ZEN::Version']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['close_88',['close',['../classZEN_1_1IWindow.html#ac20b4467e8d3fee02198065c8507d004',1,'ZEN::IWindow::close()'],['../classZEN_1_1Window.html#a64cec0e02957378822f9e7ae0b9ee51d',1,'ZEN::Window::close()']]]
+  ['allocate_181',['allocate',['../classZEN_1_1OpenGL_1_1VBO.html#af9d5e863d3c5fe4091175cc99fcc0af3',1,'ZEN::OpenGL::VBO']]]
 ];

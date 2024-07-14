@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['screenresolution_113',['screenResolution',['../structZEN_1_1Settings.html#a3813b8b06b1d1c38f87e2418ab28c19e',1,'ZEN::Settings']]]
+  ['h_218',['h',['../structZEN_1_1ScreenResolution.html#a6cbae4c273486bcfe55da92798c48090',1,'ZEN::ScreenResolution']]]
 ];

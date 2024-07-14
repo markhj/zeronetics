@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['game_89',['Game',['../classZEN_1_1Game.html#a21a48dbcb7e1f12f6b83890e49a1ccac',1,'ZEN::Game']]],
-  ['generate_90',['generate',['../classZEN_1_1IWindow.html#acfd336d6e779919ae66728b26a2995f2',1,'ZEN::IWindow::generate()'],['../classZEN_1_1Window.html#a56421da6cc3290b940c3200b7a4f0a6f',1,'ZEN::Window::generate()']]],
-  ['getuniqueid_91',['getUniqueId',['../classZEN_1_1HasUniqueId.html#a2fc2014361822c13a261ad9a8876c36c',1,'ZEN::HasUniqueId']]],
-  ['getversion_92',['getVersion',['../structZEN_1_1EngineInfo.html#ab57513f50c918c8fd9f805922895bbc1',1,'ZEN::EngineInfo']]]
+  ['close_182',['close',['../classZEN_1_1IWindow.html#ac20b4467e8d3fee02198065c8507d004',1,'ZEN::IWindow::close()'],['../classZEN_1_1Window.html#a64cec0e02957378822f9e7ae0b9ee51d',1,'ZEN::Window::close()']]],
+  ['compile_183',['compile',['../classZEN_1_1IShader.html#a4b59f9e6638556f3e50b5512115e1054',1,'ZEN::IShader::compile()'],['../classZEN_1_1OpenGL_1_1Shader.html#a5947a0c4f92f2b3a9c23bfe53c8f9fb7',1,'ZEN::OpenGL::Shader::compile()']]],
+  ['create_184',['create',['../classZEN_1_1IShader.html#a29a9fae421786d1a65d4d2ae95fa96e7',1,'ZEN::IShader::create()'],['../classZEN_1_1OpenGL_1_1Shader.html#ae0f270ae9135bcd657bda5e91b2491d2',1,'ZEN::OpenGL::Shader::create()']]],
+  ['critical_185',['critical',['../classZEN_1_1Log.html#aa550d58e15cd2d9894683f19c95ec8b8',1,'ZEN::Log']]]
 ];

@@ -83,12 +83,43 @@ $(document).ready(function(){initNavTree('classZEN_1_1IRenderer.html',''); initR
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="classZEN_1_1IRenderer-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">ZEN::IRenderer Class Reference</div>  </div>
+<div class="title">ZEN::IRenderer Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="renderer_8h_source.html">renderer.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for ZEN::IRenderer:</div>
+<div class="dyncontent">
+<div class="center"><img src="classZEN_1_1IRenderer__inherit__graph.png" border="0" usemap="#aZEN_1_1IRenderer_inherit__map" alt="Inheritance graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a4cb5a24a6542d8e3c35b7545f6370815"><td class="memItemLeft" align="right" valign="top"><a id="a4cb5a24a6542d8e3c35b7545f6370815"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>initialize</b> ()=0</td></tr>
+<tr class="separator:a4cb5a24a6542d8e3c35b7545f6370815"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2bcdead8d3c2202def1b3215190b051"><td class="memItemLeft" align="right" valign="top"><a id="ac2bcdead8d3c2202def1b3215190b051"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>isInitialized</b> () const noexcept=0</td></tr>
+<tr class="separator:ac2bcdead8d3c2202def1b3215190b051"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bae965df1402e9e0a7957781159604b"><td class="memItemLeft" align="right" valign="top"><a id="a6bae965df1402e9e0a7957781159604b"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>clear</b> () noexcept=0</td></tr>
+<tr class="separator:a6bae965df1402e9e0a7957781159604b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd3e2c4d017da54153f30e31b09a3694"><td class="memItemLeft" align="right" valign="top"><a id="afd3e2c4d017da54153f30e31b09a3694"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>render</b> ()=0</td></tr>
+<tr class="separator:afd3e2c4d017da54153f30e31b09a3694"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a1aceeb795f52770f4a7d688af16b49cd"><td class="memItemLeft" align="right" valign="top"><a id="a1aceeb795f52770f4a7d688af16b49cd"></a>
+std::shared_ptr&lt; <a class="el" href="structZEN_1_1IRenderManager.html">IRenderManager</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>renderManager</b></td></tr>
+<tr class="separator:a1aceeb795f52770f4a7d688af16b49cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Renderer contract </p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>

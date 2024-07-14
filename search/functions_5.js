@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['regenerate_99',['regenerate',['../classZEN_1_1IWindow.html#af3a8a1b75f2a6a588720a8c62b80886e',1,'ZEN::IWindow::regenerate()'],['../classZEN_1_1Window.html#aeea1798c76919c2560775df3e4cd3093',1,'ZEN::Window::regenerate()']]],
-  ['run_100',['run',['../classZEN_1_1Game.html#ac6bd7c888b88f9103ca87693a9118c57',1,'ZEN::Game']]]
+  ['make_195',['make',['../classZEN_1_1IShape.html#a21d868feb2eabc68a587f7fb59d7f9fc',1,'ZEN::IShape::make()'],['../classZEN_1_1Cube.html#a55245ac8e39d86c8ba06f24067cd7da5',1,'ZEN::Cube::make()']]],
+  ['message_196',['message',['../classZEN_1_1Log.html#a3b225aeeabc9f30d0c25933a4922eca0',1,'ZEN::Log']]]
 ];

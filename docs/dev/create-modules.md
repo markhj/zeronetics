@@ -76,3 +76,19 @@ set(LIBS_AWESOME glfw3)
 
 When you refresh your CMake configuration, the _Awesome_ module is now
 part of the build process.
+
+## Namespace
+
+For modules, the choice of namespace is relatively free choice.
+
+However, as long as a module has any dependencies from the main engine,
+it's recommended to nest the module within ``ZEN`` namespace. This is
+to make it clear that the module (probably) can't just be get unplugged
+from Zeronetics and applied in other projects.
+
+Larger modules, especially those with risk of name collisions, should
+be nested within their own namespace.
+
+Our OpenGL module, for example, resides in ``ZEN::OpenGL``. This is
+to avoid collisions of common names such as ``Shader`` and ``Renderer``
+which is likely to exist in other modules.

@@ -10,6 +10,7 @@
 namespace ZEN {
     struct IRendererRequest {
         RenderManagerRequest request;
+        std::shared_ptr<IRenderable3D> renderable3d;
     };
 
     struct IRenderGroup3D {

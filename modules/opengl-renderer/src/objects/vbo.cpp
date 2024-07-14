@@ -32,6 +32,15 @@ void ZEN::VBO::setData(std::vector<gl_float> data) {
     });
 }
 
+void ZEN::VBO::updateData(const ZEN::GPUAllocation &allocation, const std::vector<gl_float> &data) {
+    with([&]() {
+        glBufferSubData(GL_ARRAY_BUFFER,
+                        allocation.index * sizeof(GLfloat),
+                        allocation.size * sizeof(GLfloat),
+                        data.data());
+    });
+}
+
 void ZEN::VBO::resize(ZEN::gpu_alloc_int size) {
     auto oldSize = currentSize;
     with([&]() {

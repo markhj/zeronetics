@@ -20,8 +20,9 @@ var annotated_dup =
       [ "📚 Core: 2<sup>nd</sup> level", "engine-core-structure.html#autotoc_md32", null ],
       [ "📥 Core: 3<sup>rd</sup> level", "engine-core-structure.html#autotoc_md33", null ],
       [ "📜 Contracts", "engine-core-structure.html#autotoc_md34", null ],
-      [ "📱 Advanced structures", "engine-core-structure.html#autotoc_md35", null ],
-      [ "📦 Modules", "engine-core-structure.html#autotoc_md36", null ],
+      [ "💎 Traits", "engine-core-structure.html#autotoc_md35", null ],
+      [ "📱 Advanced structures", "engine-core-structure.html#autotoc_md36", null ],
+      [ "📦 Modules", "engine-core-structure.html#autotoc_md37", null ],
       [ "Macros", "build-info.html#autotoc_md20", null ],
       [ "Example", "build-info.html#autotoc_md21", null ],
       [ "Note", "build-info.html#autotoc_md22", [
@@ -34,8 +35,8 @@ var annotated_dup =
         [ "Using <tt>std::optional</tt>", "callbacks.html#autotoc_md25", null ],
         [ "Smart pointers", "callbacks.html#autotoc_md26", null ]
       ] ],
-      [ "💫 Overview", "arch.html#autotoc_md37", null ],
-      [ "See also", "arch.html#autotoc_md38", null ],
+      [ "💫 Overview", "arch.html#autotoc_md38", null ],
+      [ "See also", "arch.html#autotoc_md39", null ],
       [ "IInputManager", "classZEN_1_1IInputManager.html", "classZEN_1_1IInputManager" ],
       [ "IRenderer", "classZEN_1_1IRenderer.html", null ],
       [ "IWindow", "classZEN_1_1IWindow.html", "classZEN_1_1IWindow" ],
@@ -50,6 +51,7 @@ var annotated_dup =
       [ "Version", "structZEN_1_1Version.html", "structZEN_1_1Version" ],
       [ "Game", "classZEN_1_1Game.html", "classZEN_1_1Game" ],
       [ "Log", "classZEN_1_1Log.html", null ],
+      [ "HasUniqueId", "classZEN_1_1HasUniqueId.html", "classZEN_1_1HasUniqueId" ],
       [ "Window", "classZEN_1_1Window.html", "classZEN_1_1Window" ]
     ] ]
 ];

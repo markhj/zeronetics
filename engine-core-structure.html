@@ -103,8 +103,10 @@ Hierarchy</h2>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">Contracts   </td><td class="markdownTableBodyNone">Interfaces with <em>only</em> pure virtual functions    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">Adv. structures   </td><td class="markdownTableBodyNone">Classes with more complexity, such as <a class="el" href="classZEN_1_1Game.html">ZEN::Game</a>, as well as abstract classes    </td></tr>
+<td class="markdownTableBodyNone">Traits   </td><td class="markdownTableBodyNone">Supporting traits to implement re-usable functionality    </td></tr>
 <tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Adv. structures   </td><td class="markdownTableBodyNone">Classes with more complexity, such as <a class="el" href="classZEN_1_1Game.html">ZEN::Game</a>, as well as abstract classes    </td></tr>
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Modules   </td><td class="markdownTableBodyNone">Modules exist in isolation from each other, but can use the entire engine   </td></tr>
 </table>
 <p>Each level can depend on items from prior levels. Meaning, <code>contracts</code> can depend on any core level, but <em>not</em> on advanced structures or modules.</p>
@@ -164,6 +166,10 @@ Hierarchy</h2>
 </blockquote>
 <p>Remember that: Contracts must only have pure virtual functions. For abstract classes, see the next chapter.</p>
 <h2><a class="anchor" id="autotoc_md35"></a>
+💎 Traits</h2>
+<p><b>Dependency from same layer</b>: Not allowed. <b>Location:</b> <code>include/traits/</code></p>
+<p>Classes whose purpose is to support classes which inherits traits in implementing reusable functionality.</p>
+<h2><a class="anchor" id="autotoc_md36"></a>
 📱 Advanced structures</h2>
 <p><b>Dependency from same layer</b>: Allowed, but exercise caution. <br  />
  <b>Location:</b> <code>include/zeronetics/</code></p>
@@ -175,7 +181,7 @@ Hierarchy</h2>
  <a class="el" href="logging_8h_source.html">logging.h</a> and <a class="el" href="classZEN_1_1Log.html">ZEN::Log</a> <br  />
  Abstract class <a class="el" href="classZEN_1_1BaseInputManager.html">ZEN::BaseInputManager</a> which extends <a class="el" href="classZEN_1_1IInputManager.html">ZEN::IInputManager</a> </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md36"></a>
+<h2><a class="anchor" id="autotoc_md37"></a>
 📦 Modules</h2>
 <p><b>Dependency from same layer</b>: Not allowed. <br  />
  <b>Location:</b> <code>modules/</code></p>

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['log_67',['Log',['../classZEN_1_1Log.html',1,'ZEN']]]
+  ['keymap_68',['KeyMap',['../structZEN_1_1KeyMap.html',1,'ZEN']]],
+  ['keystateevent_69',['KeyStateEvent',['../structZEN_1_1KeyStateEvent.html',1,'ZEN']]]
 ];

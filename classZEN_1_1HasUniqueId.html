@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Zeronetics Game Engine: include/zeronetics/core/typedefs.h Source File</title>
+<title>Zeronetics Game Engine: ZEN::HasUniqueId Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -64,7 +64,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('typedefs_8h_source.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('classZEN_1_1HasUniqueId.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -83,28 +83,61 @@ $(document).ready(function(){initNavTree('typedefs_8h_source.html',''); initResi
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="classZEN_1_1HasUniqueId-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">typedefs.h</div>  </div>
+<div class="title">ZEN::HasUniqueId Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;cstdint&gt;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">namespace </span>ZEN {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">typedef</span> <span class="keywordtype">float</span> gw_float;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">typedef</span> <span class="keywordtype">float</span> dt_float;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">typedef</span> <span class="keywordtype">double</span> mouse_pos_axis;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">typedef</span> uint32_t unique_id;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
-</div><!-- fragment --></div><!-- contents -->
+
+<p><code>#include &lt;<a class="el" href="has-unique-id_8h_source.html">has-unique-id.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a2fc2014361822c13a261ad9a8876c36c"><td class="memItemLeft" align="right" valign="top">unique_id&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1HasUniqueId.html#a2fc2014361822c13a261ad9a8876c36c">getUniqueId</a> () noexcept</td></tr>
+<tr class="separator:a2fc2014361822c13a261ad9a8876c36c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This trait manages generation and returning of unique IDs across objects and class types. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a2fc2014361822c13a261ad9a8876c36c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fc2014361822c13a261ad9a8876c36c">&#9670;&nbsp;</a></span>getUniqueId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unique_id ZEN::HasUniqueId::getUniqueId </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the object's unique ID.</p>
+<dl class="section note"><dt>Note</dt><dd>The ID isn't generated until requested. Meaning that if objects A and B are generated in that order, but B requests a unique ID before A, then B will have the lower ID.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>include/zeronetics/traits/<a class="el" href="has-unique-id_8h_source.html">has-unique-id.h</a></li>
+</ul>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_f283085726848aba3f0d9a820aa50f08.html">zeronetics</a></li><li class="navelem"><a class="el" href="dir_c9784c0c8f4979e8e969ec85f1883b35.html">core</a></li><li class="navelem"><b>typedefs.h</b></li>
+    <li class="navelem"><b>ZEN</b></li><li class="navelem"><a class="el" href="classZEN_1_1HasUniqueId.html">HasUniqueId</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>

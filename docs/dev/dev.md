@@ -15,8 +15,6 @@ or working on forks of it.
 
 ## Logging
 
-@ref logging
-
-@subpage log-engine-dev
+@ref log-engine-dev
 
 @ref log-why-macros

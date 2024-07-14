@@ -16,9 +16,12 @@ var hierarchy =
     [ "ZEN::Log", "classZEN_1_1Log.html", null ],
     [ "ZEN::MouseMovedEvent", "structZEN_1_1MouseMovedEvent.html", null ],
     [ "ZEN::MousePosition", "structZEN_1_1MousePosition.html", null ],
+    [ "ZEN::OS", "structZEN_1_1OS.html", null ],
     [ "ZEN::Path", "classZEN_1_1Path.html", null ],
     [ "ZEN::Version::Preview", "structZEN_1_1Version_1_1Preview.html", null ],
     [ "ZEN::ScreenResolution", "structZEN_1_1ScreenResolution.html", null ],
     [ "ZEN::Settings", "structZEN_1_1Settings.html", null ],
+    [ "ZEN::SystemInfo", "classZEN_1_1SystemInfo.html", null ],
+    [ "ZEN::SystemInfoSheet", "structZEN_1_1SystemInfoSheet.html", null ],
     [ "ZEN::Version", "structZEN_1_1Version.html", null ]
 ];

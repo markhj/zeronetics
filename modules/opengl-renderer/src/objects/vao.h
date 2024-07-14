@@ -8,8 +8,8 @@
 
 #include <vector>
 
-namespace ZEN {
-    class VAO : public OpenGL::Object {
+namespace ZEN::OpenGL {
+    class VAO : public Object {
     public:
         void initialize() noexcept(false);
 

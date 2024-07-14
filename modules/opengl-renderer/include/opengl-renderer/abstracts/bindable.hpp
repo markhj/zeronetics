@@ -3,7 +3,7 @@
 #include <functional>
 #include <optional>
 
-namespace ZEN {
+namespace ZEN::OpenGL {
     /**
      * Contract for OpenGL context binding.
      *

@@ -8,12 +8,12 @@
 
 #include "glad/glad.h"
 
-void ZEN::VAO::initialize() noexcept(false) {
+void ZEN::OpenGL::VAO::initialize() noexcept(false) {
     glGenVertexArrays(1, &id);
     ZEN_INFO(std::format("OpenGL: Created VAO: {}", id), ZEN::LogCategory::RendererInit);
 }
 
-void ZEN::VAO::attachVBO(const std::shared_ptr<VBO> &vbo,
+void ZEN::OpenGL::VAO::attachVBO(const std::shared_ptr<VBO> &vbo,
                          const std::vector<ZEN::VertexAttribute> &attributes) noexcept(false) {
     int vertexSize = 0;
     for (const auto &item: attributes) {
@@ -47,16 +47,16 @@ void ZEN::VAO::attachVBO(const std::shared_ptr<VBO> &vbo,
     });
 }
 
-std::optional<ZEN::gl_uint> ZEN::VAO::getCurrentContextId() const {
+std::optional<ZEN::OpenGL::gl_uint> ZEN::OpenGL::VAO::getCurrentContextId() const {
     gl_int currentVAO;
     glGetIntegerv(GL_VERTEX_ARRAY_BINDING, &currentVAO);
     return currentVAO;
 }
 
-void ZEN::VAO::bindTo(ZEN::gl_uint context) {
+void ZEN::OpenGL::VAO::bindTo(ZEN::OpenGL::gl_uint context) {
     glBindVertexArray(context);
 }
 
-ZEN::gl_uint ZEN::VAO::getContextId() const {
+ZEN::OpenGL::gl_uint ZEN::OpenGL::VAO::getContextId() const {
     return id;
 }

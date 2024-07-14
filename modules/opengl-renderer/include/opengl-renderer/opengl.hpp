@@ -10,13 +10,13 @@
 #include <string>
 #include <unordered_map>
 
-namespace ZEN {
+namespace ZEN::OpenGL {
     using gl_uint = unsigned int;
     using gl_int = int;
     using gl_enum = int;
     using gl_float = float;
 
-    class OpenGLRenderer : public IRenderer {
+    class Renderer : public IRenderer {
     public:
         void initialize() override;
 
@@ -119,17 +119,17 @@ namespace ZEN {
 }
 
 template<typename T>
-void ZEN::StdBinding<T>::unbind() {
+void ZEN::OpenGL::StdBinding<T>::unbind() {
     bindTo(0);
 }
 
 template<typename T>
-bool ZEN::StdBinding<T>::isBound() const noexcept {
+bool ZEN::OpenGL::StdBinding<T>::isBound() const noexcept {
     return getContextId() == getCurrentContextId();
 }
 
 template<typename T>
-void ZEN::StdBinding<T>::with(const std::function<void()> &function) {
+void ZEN::OpenGL::StdBinding<T>::with(const std::function<void()> &function) {
     std::optional<T> current = getCurrentContextId();
     bind();
     function();
@@ -141,6 +141,6 @@ void ZEN::StdBinding<T>::with(const std::function<void()> &function) {
 }
 
 template<typename T>
-void ZEN::StdBinding<T>::bind() {
+void ZEN::OpenGL::StdBinding<T>::bind() {
     bindTo(getContextId());
 }

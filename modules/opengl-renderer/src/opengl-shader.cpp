@@ -39,7 +39,7 @@ namespace {
     }
 }
 
-void ZEN::Shader::compile() noexcept(false) {
+void ZEN::OpenGL::Shader::compile() noexcept(false) {
     checkInitializationStatus();
 
     for (const auto &source: sources) {
@@ -78,23 +78,23 @@ void ZEN::Shader::compile() noexcept(false) {
     ZEN_INFO(std::format("Shader {} linked.", s_programId), ZEN::LogCategory::ShaderCompilation);
 }
 
-void ZEN::Shader::setSource(ZEN::ShaderStage shaderStage, const std::string &source) noexcept {
+void ZEN::OpenGL::Shader::setSource(ZEN::ShaderStage shaderStage, const std::string &source) noexcept {
     sources[shaderStage] = source;
 }
 
-ZEN::Shader::Shader() {
+ZEN::OpenGL::Shader::Shader() {
     checkInitializationStatus();
 }
 
-ZEN::Shader::~Shader() {
+ZEN::OpenGL::Shader::~Shader() {
     glDeleteProgram(s_programId);
 }
 
-void ZEN::Shader::use() noexcept {
+void ZEN::OpenGL::Shader::use() noexcept {
     glUseProgram(s_programId);
 }
 
-void ZEN::Shader::create() noexcept(false) {
+void ZEN::OpenGL::Shader::create() noexcept(false) {
     checkInitializationStatus();
 
     s_programId = glCreateProgram();
@@ -103,57 +103,57 @@ void ZEN::Shader::create() noexcept(false) {
              ZEN::LogCategory::ShaderCompilation);
 }
 
-void ZEN::Shader::bindTo(gl_uint context) {
+void ZEN::OpenGL::Shader::bindTo(gl_uint context) {
     glUseProgram(context);
 }
 
-ZEN::gl_uint ZEN::Shader::getContextId() const {
+ZEN::OpenGL::gl_uint ZEN::OpenGL::Shader::getContextId() const {
     return s_programId;
 }
 
-std::optional<ZEN::gl_uint> ZEN::Shader::getCurrentContextId() const {
+std::optional<ZEN::OpenGL::gl_uint> ZEN::OpenGL::Shader::getCurrentContextId() const {
     GLint currentProgram = 0;
     glGetIntegerv(GL_CURRENT_PROGRAM, &currentProgram);
     return currentProgram;
 }
 
-void ZEN::Shader::set(const std::string &location, bool value) noexcept {
+void ZEN::OpenGL::Shader::set(const std::string &location, bool value) noexcept {
     with([&]() {
         glUniform1i(getUniformLocation(location), value ? 1 : 0);
     });
 }
 
-void ZEN::Shader::set(const std::string &location, int value) noexcept {
+void ZEN::OpenGL::Shader::set(const std::string &location, int value) noexcept {
     with([&]() {
         glUniform1i(getUniformLocation(location), value);
     });
 }
 
-void ZEN::Shader::set(const std::string &location, float value) noexcept {
+void ZEN::OpenGL::Shader::set(const std::string &location, float value) noexcept {
     with([&]() {
         glUniform1f(getUniformLocation(location), value);
     });
 }
 
-void ZEN::Shader::set(const std::string &location, ZEN::Vec2 value) noexcept {
+void ZEN::OpenGL::Shader::set(const std::string &location, ZEN::Vec2 value) noexcept {
     with([&]() {
         glUniform2fv(getUniformLocation(location), 1, glm::value_ptr(value));
     });
 }
 
-void ZEN::Shader::set(const std::string &location, ZEN::Vec3 value) noexcept {
+void ZEN::OpenGL::Shader::set(const std::string &location, ZEN::Vec3 value) noexcept {
     with([&]() {
         glUniform3fv(getUniformLocation(location), 1, glm::value_ptr(value));
     });
 }
 
-void ZEN::Shader::set(const std::string &location, ZEN::Vec4 value) noexcept {
+void ZEN::OpenGL::Shader::set(const std::string &location, ZEN::Vec4 value) noexcept {
     with([&]() {
         glUniform4fv(getUniformLocation(location), 1, glm::value_ptr(value));
     });
 }
 
-void ZEN::Shader::set(const std::string &location, ZEN::Mat4x4 value) noexcept {
+void ZEN::OpenGL::Shader::set(const std::string &location, ZEN::Mat4x4 value) noexcept {
     with([&]() {
         glUniformMatrix4fv(getUniformLocation(location.c_str()),
                            1,

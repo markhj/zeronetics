@@ -16,8 +16,8 @@
 #include <stdexcept>
 
 namespace {
-    std::shared_ptr<ZEN::VAO> vao;
-    std::shared_ptr<ZEN::VBO> vbo;
+    std::shared_ptr<ZEN::OpenGL::VAO> vao;
+    std::shared_ptr<ZEN::OpenGL::VBO> vbo;
 
     int defaultColorPos = 0;
     std::vector<ZEN::ColorRGB> defaultColors = {
@@ -26,7 +26,7 @@ namespace {
             {0.6, 0.2, 0.6},
     };
 
-    inline void appendFloatsFromVertex(std::vector<ZEN::gl_float> &vertices, const ZEN::Vertex3D &v) {
+    inline void appendFloatsFromVertex(std::vector<ZEN::OpenGL::gl_float> &vertices, const ZEN::Vertex3D &v) {
         // @todo: Will be rewritten to be more flexible,
         //      when more vertex attributes are implemented
         vertices.emplace_back(v.position.x);
@@ -48,7 +48,7 @@ namespace {
     }
 }
 
-void ZEN::OpenGLRenderer::render() {
+void ZEN::OpenGL::Renderer::render() {
     if (!renderManager) {
         ZEN_WARN("No render manager provided", ZEN::LogCategory::Rendering);
         return;
@@ -89,7 +89,7 @@ void ZEN::OpenGLRenderer::render() {
     }
 }
 
-void ZEN::OpenGLRenderer::initialize() {
+void ZEN::OpenGL::Renderer::initialize() {
     if (!gladLoadGLLoader((GLADloadproc) glfwGetProcAddress)) {
         throw std::runtime_error("Failed to initialize GLAD.");
     }
@@ -106,16 +106,16 @@ void ZEN::OpenGLRenderer::initialize() {
     vao->attachVBO(vbo, {VertexAttribute::Position3D, VertexAttribute::ColorRGB});
 }
 
-bool ZEN::OpenGLRenderer::isInitialized() const noexcept {
+bool ZEN::OpenGL::Renderer::isInitialized() const noexcept {
     return m_initialized;
 }
 
-void ZEN::OpenGLRenderer::clear() noexcept {
+void ZEN::OpenGL::Renderer::clear() noexcept {
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 }
 
-void ZEN::OpenGLRenderer::handleReallocations() {
+void ZEN::OpenGL::Renderer::handleReallocations() {
     for (const auto &group: renderManager->renderGroups3d) {
         for (auto &renderable3d: group->renderables3d) {
             if (renderable3d.second->gpuAlloc.has_value()) {
@@ -141,7 +141,7 @@ void ZEN::OpenGLRenderer::handleReallocations() {
     }
 }
 
-void ZEN::OpenGLRenderer::processRequest(ZEN::IRendererRequest *request) {
+void ZEN::OpenGL::Renderer::processRequest(ZEN::IRendererRequest *request) {
     switch (request->request) {
         case RenderManagerRequest::Allocate: {
             std::vector<GLfloat> vertices;

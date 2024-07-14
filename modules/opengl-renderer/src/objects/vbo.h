@@ -3,7 +3,7 @@
 #include "opengl-object.h"
 #include "opengl-renderer/opengl.hpp"
 
-namespace ZEN {
+namespace ZEN::OpenGL {
     class VBO : public OpenGL::Object {
     public:
         void initialize() noexcept(false);

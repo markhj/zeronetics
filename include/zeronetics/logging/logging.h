@@ -10,6 +10,8 @@
  * they can be completely stripped from the distribution build.
  *
  * @ref logging
+ *
+ * @ref
  */
 
 #pragma once

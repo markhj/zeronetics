@@ -9,7 +9,11 @@ HTML_COLORSTYLE        = LIGHT
 
 INPUT                  = docs/getting-started \
                             docs/tutorials \
+                            docs/manual \
                             docs/modules \
+                            docs/diving-deeper \
+                            docs/engine-arch \
+                            docs/dev \
                             include docs modules \
 
 USE_MDFILE_AS_MAINPAGE = docs/index.md

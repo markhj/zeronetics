@@ -8,6 +8,11 @@
 #include "zeronetics/core/io.h"
 
 namespace ZEN {
+    /**
+     * Log level (severity)
+     *
+     * @ref log-configuration
+     */
     enum class LogLevel {
         Info,
         Warning,
@@ -16,6 +21,8 @@ namespace ZEN {
 
     /**
      * Log category
+     *
+     * @ref log-configuration
      */
     enum class LogCategory {
         None,
@@ -38,11 +45,22 @@ namespace ZEN {
         ShaderUse,
     };
 
+    /**
+     * The look of a log entry which is put into
+     * the active log file.
+     *
+     * @ref log-reporting
+     */
     struct LogFileEntry {
         std::string message;
         std::map<std::string, std::string> records;
     };
 
+    /**
+     * Action to be taken when a log level is invoked.
+     *
+     * @ref log-configuration
+     */
     enum class LogAction {
         Silent,
         Console,
@@ -50,6 +68,11 @@ namespace ZEN {
         Exception,
     };
 
+    /**
+     * Struct for decision-making on log level behavior
+     *
+     * @ref log-configuration
+     */
     struct LogBehavior {
         LogAction takeAction = LogAction::Console;
     };
@@ -61,8 +84,18 @@ namespace ZEN {
      */
     class Log {
     public:
+        /**
+         * Definitions of each log level's behavior
+         *
+         * @ref log-configuration
+         */
         static std::map<LogLevel, LogBehavior> behaviors;
 
+        /**
+         * Categories that should not be handled.
+         *
+         * @ref log-configuration
+         */
         static std::vector<LogCategory> blacklistCategories;
 
         /**
@@ -126,11 +159,15 @@ namespace ZEN {
          * what happened on another machine, such as a user's*
          *
          * *) Remember to acquire consent before collecting and sending log information.
+         *
+         * @ref log-reporting
          */
         static void report(const LogFileEntry &logFileEntry);
 
         /**
          * Initialize basic reporting
+         *
+         * @ref log-reporting
          */
         static void startReporting();
 

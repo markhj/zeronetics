@@ -9,8 +9,14 @@ or working on forks of it.
 
 @subpage build-info
 
-@ref logging
-
 @subpage create-modules
 
 @subpage callbacks
+
+## Logging
+
+@ref logging
+
+@subpage log-engine-dev
+
+@ref log-why-macros

@@ -27,9 +27,11 @@ var NAVTREE =
   [ "Zeronetics Game Engine", "index.html", [
     [ "Getting started", "getting-started.html", "getting-started" ],
     [ "Tutorials", "tutorials.html", "tutorials" ],
+    [ "Manual", "manual.html", "manual" ],
     [ "Modules", "modules.html", "modules" ],
-    [ "Engine development", "dev.html", "dev" ],
     [ "Diving deeper", "diving-deeper.html", "diving-deeper" ],
+    [ "Engine architecture", "engine-arch.html", "engine-arch" ],
+    [ "Engine development", "dev.html", "dev" ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
@@ -46,7 +48,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"structZEN_1_1MousePosition.html#a87455b077911dd64f22f426dffc4d21e"
+"structZEN_1_1IRenderManager.html#a9c7bf5c92b66b63891333b3219c7ec56"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

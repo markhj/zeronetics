@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['h_224',['h',['../structZEN_1_1ScreenResolution.html#a6cbae4c273486bcfe55da92798c48090',1,'ZEN::ScreenResolution']]]
+  ['gpualloc_233',['gpuAlloc',['../classZEN_1_1IRenderable.html#ae9170d41f8b46841f293cb6e83c42958',1,'ZEN::IRenderable']]]
 ];

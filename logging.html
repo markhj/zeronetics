@@ -87,24 +87,47 @@ $(document).ready(function(){initNavTree('logging.html',''); initResizable(); })
 <div class="title">Logging </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h2><a class="anchor" id="autotoc_md12"></a>
-A simple message</h2>
-<p>Make sure to include the <code><a class="el" href="logging_8h_source.html">logging.h</a></code> header, and then you're good to go.</p>
-<h3><a class="anchor" id="autotoc_md13"></a>
-Example</h3>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;zeronetics/logging/logging.h&gt;</span></div>
-<div class="line"> </div>
-<div class="line">ZEN_INFO(<span class="stringliteral">&quot;Hello, World!&quot;</span>, ZEN::LogCategory::Info);</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md14"></a>
-Why macros?</h2>
-<p>A good question, indeed!</p>
-<p>Logging is great. But logging is (usually) done with high frequency, and therefore plays a role in performance optimization.</p>
-<p>While we work on a game, we love logging. It's great. But when you build the code you want to ship, we want to get rid of most of these log points. Not all, but most.</p>
-<p>Macros make for an efficient way to achieve exactly this, as we can specify what the pre-processor outputs depending on the build type (see <a class="el" href="build-info.html">Build information</a>).</p>
-<p>When we're in debugging mode, we instruct the pre-processor to output the <a class="el" href="classZEN_1_1Log.html">ZEN::Log</a> functions. Otherwise, we output, well, nothing.</p>
-<h2><a class="anchor" id="autotoc_md15"></a>
-Note</h2>
-<p>It's possible to use the <a class="el" href="classZEN_1_1Log.html">ZEN::Log</a> functionality directly, and you're welcome to do so. But it's not the approach we recommend, and therefore not covered in any further detail in this documentation. </p>
+<div class="textblock"><p>On this page, we'll explore basic logging techniques.</p>
+<h2><a class="anchor" id="autotoc_md12"></a>
+👋 A simple message</h2>
+<p>The simplest type of logging is an info-level message. It looks like this:</p>
+<div class="fragment"><div class="line">ZEN_INFO(<span class="stringliteral">&quot;Hello, World!&quot;</span>, ZEN::LogCategory::Info);</div>
+</div><!-- fragment --><p>There are several categories available, which can be explored in the ZEN::LogCategory enumerator.</p>
+<h2><a class="anchor" id="autotoc_md13"></a>
+📢 Log levels</h2>
+<p>You can log at four different levels, each with <a class="el" href="log-configuration.html">different behaviors</a>.</p>
+<p>Below, we're examining the first three, but you should also have a look at <a class="el" href="log-reporting.html">the reporting level</a>.</p>
+<h3><a class="anchor" id="autotoc_md14"></a>
+ℹ️ Info</h3>
+<p>We already examined the info level, which can be helpful in debugging, especially things which aren't visible or easy to find. But they don't in and of themselves convey information, which is believed to be serious in nature.</p>
+<h3><a class="anchor" id="autotoc_md15"></a>
+⚠️ Warning</h3>
+<p>The <code>ZEN_WARN</code> macro is similar to <code>ZEN_INFO</code>, but contains information about implementation details which:</p>
+<ul>
+<li>Has low risk of crashing the application</li>
+<li>But may cause unintended behaviors</li>
+</ul>
+<p>An example would be a renderer which skips rendering a <a class="el" href="classZEN_1_1Mesh3D.html">ZEN::Mesh3D</a> because the mesh is missing some details. This won't crash the application, but it's good for the end-user to know, and can save the developer lots of time.</p>
+<p>Example:</p>
+<div class="fragment"><div class="line">ZEN_WARN(<span class="stringliteral">&quot;Missing shader material.&quot;</span>, ZEN::LogCategory::ShaderUse);</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md16"></a>
+⛔ Critical</h3>
+<p>The <code>ZEN_CRITICAL</code> level is for code which is certain to, or carry high risk of, crashing the application.</p>
+<p>Example:</p>
+<div class="fragment"><div class="line">ZEN_CRITICAL(<span class="stringliteral">&quot;Attempting to use a pointer which is not set.&quot;</span>);</div>
+</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd><code>ZEN_CRITICAL</code> does not require a category.</dd>
+<dd>
+Furthermore, critical levels are always logged to file.</dd></dl>
+<h2><a class="anchor" id="autotoc_md17"></a>
+Notes</h2>
+<p>It's possible to use the <a class="el" href="classZEN_1_1Log.html">ZEN::Log</a> functionality directly, and you're welcome to do so. But it's not the approach we recommend, and therefore not covered in any further detail in this documentation.</p>
+<p>When a message is sent to the console many times within a short timeframe, it will be silenced for a few seconds.</p>
+<h2><a class="anchor" id="autotoc_md18"></a>
+See also</h2>
+<p><a class="el" href="log-configuration.html">Configuring the log system</a></p>
+<p><a class="el" href="log-reporting.html">Log reports</a></p>
+<p><a class="el" href="log-engine-dev.html">Logging in engine development</a></p>
+<p><a class="el" href="log-why-macros.html">Why are log functions macros?</a> </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['clippingplane_221',['clippingPlane',['../classZEN_1_1Camera3D.html#ab6dd8427bb4bc8f2c914a7c0b2fa871b',1,'ZEN::Camera3D']]]
+  ['behaviors_229',['behaviors',['../classZEN_1_1Log.html#adb81df76548e8d2d007f52e56f84171d',1,'ZEN::Log']]],
+  ['blacklistcategories_230',['blacklistCategories',['../classZEN_1_1Log.html#a8b16731d9cd3c5ec6efa8f6cb0bf249f',1,'ZEN::Log']]]
 ];

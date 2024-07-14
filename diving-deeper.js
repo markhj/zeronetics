@@ -1,4 +1,4 @@
 var diving_deeper =
 [
-    [ "Architecture", "arch.html", null ]
+    [ "Log reports", "log-reporting.html", null ]
 ];

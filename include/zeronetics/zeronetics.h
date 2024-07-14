@@ -27,6 +27,7 @@
 
 // Core: 3rd Level
 #include "core/attributes.h"
+#include "core/shape.h"
 #include "core/tensors.h"
 #include "core/vertices.h"
 
@@ -37,6 +38,7 @@
 #include "contracts/renderable.h"
 #include "contracts/renderer.h"
 #include "contracts/shader.h"
+#include "contracts/shapes.h"
 #include "contracts/transforms.h"
 #include "contracts/window.h"
 
@@ -48,6 +50,9 @@
 #include "game/game.h"
 #include "logging/logging.h"
 #include "render/render-manager.h"
+
+// Shapes
+#include "shapes/3d/cube.h"
 
 // Entities
 #include "entities/3d/camera-3d.h"

@@ -18,6 +18,7 @@ namespace ZEN {
          */
         RendererInit,
         Rendering,
+        RendererInternals,
 
         ShaderCompilation,
         ShaderUse,

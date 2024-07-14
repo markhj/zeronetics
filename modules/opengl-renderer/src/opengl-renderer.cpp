@@ -12,6 +12,7 @@
 // will re-arrange their order, which causes inclusion conflicts.
 #include <GLFW/glfw3.h>
 
+#include <format>
 #include <stdexcept>
 
 namespace {
@@ -29,6 +30,9 @@ void ZEN::OpenGLRenderer::render() {
     }
 
     glEnable(GL_DEPTH_TEST);
+
+    handleAllocations();
+
 
     // @todo: Don't allocate on every frame -- Allocate when objects without
     //      allocation data are discovered
@@ -59,7 +63,6 @@ void ZEN::OpenGLRenderer::render() {
 
         group->shader->use();
 
-        // @todo: Iterate over every object and extract information about it's position
         vao->with([&]() {
             glDrawArrays(GL_TRIANGLES, 0, drawVertices);
         });
@@ -75,6 +78,7 @@ void ZEN::OpenGLRenderer::initialize() {
 
     vbo = std::make_shared<VBO>(VBO());
     vbo->initialize();
+    vbo->resize(10);
     vbo->setData({});
 
     vao = std::make_shared<VAO>(VAO());
@@ -89,4 +93,25 @@ bool ZEN::OpenGLRenderer::isInitialized() const noexcept {
 void ZEN::OpenGLRenderer::clear() noexcept {
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+}
+
+void ZEN::OpenGLRenderer::handleAllocations() {
+    for (const auto &group: renderManager->renderGroups3d) {
+        for (auto &renderable3d: group->renderables3d) {
+            if (renderable3d.second->gpuAlloc.has_value()) {
+                continue;
+            }
+            std::optional<ZEN::GPUAllocation> allocation = vbo->allocate(18);
+            if (!allocation.has_value()) {
+                ZEN_INFO("Resize required", ZEN::LogCategory::RendererInternals);
+                vbo->resize(vbo->getCurrentSize() * 2);
+                renderManager->resetAllocations();
+                handleAllocations();
+                return;
+            }
+            renderable3d.second->gpuAlloc = allocation;
+            ZEN_INFO(std::format("ALLOC: [Index: {}, Size: {}]", allocation->index, allocation->size),
+                     ZEN::LogCategory::RendererInternals);
+        }
+    }
 }

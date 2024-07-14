@@ -1,5 +1,7 @@
 var NAVTREEINDEX1 =
 {
+"structZEN_1_1MousePosition.html#a87455b077911dd64f22f426dffc4d21e":[5,0,0,50,1],
+"structZEN_1_1MousePosition.html#aee305fd0967cf64c67af8400f89253bd":[5,0,0,50,0],
 "structZEN_1_1OS.html":[5,0,0,57],
 "structZEN_1_1OS.html#aabf16c5da26d8fffe2f87ed4ed244a95":[5,0,0,57,0],
 "structZEN_1_1OS.html#adfc4ca65057b331a7fbc0920832f822d":[5,0,0,57,1],

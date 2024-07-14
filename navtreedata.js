@@ -46,7 +46,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"structZEN_1_1OS.html"
+"structZEN_1_1MousePosition.html#a87455b077911dd64f22f426dffc4d21e"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

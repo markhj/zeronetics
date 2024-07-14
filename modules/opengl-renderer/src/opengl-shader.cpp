@@ -6,8 +6,6 @@
 #include <iostream>
 
 namespace {
-    GLuint s_programId;
-
     void checkInitializationStatus() {
         if (glad_glCreateShader == nullptr) {
             ZEN_CRITICAL("You must initialize the OpenGL renderer before creating shaders.");
@@ -33,10 +31,6 @@ namespace {
                 return 0;
         }
     }
-
-    inline int getUniformLocation(const std::string &location) {
-        return glGetUniformLocation(s_programId, location.c_str());
-    }
 }
 
 void ZEN::OpenGL::Shader::compile() noexcept(false) {
@@ -57,25 +51,25 @@ void ZEN::OpenGL::Shader::compile() noexcept(false) {
             throw std::runtime_error(std::format("Shader compilation error: {}", infoLog));
         }
 
-        glAttachShader(s_programId, shader);
+        glAttachShader(m_programId, shader);
 
-        ZEN_INFO(std::format("Shader {}: Compiled {} with source: {}...", s_programId, stage, source.second.substr(0, 70)),
+        ZEN_INFO(std::format("Shader {}: Compiled {} with source: {}...", m_programId, stage, source.second.substr(0, 300)),
                  ZEN::LogCategory::ShaderCompilation);
 
         glDeleteShader(shader);
     }
 
-    glLinkProgram(s_programId);
+    glLinkProgram(m_programId);
 
     GLint linkSuccess;
-    glGetProgramiv(s_programId, GL_LINK_STATUS, &linkSuccess);
+    glGetProgramiv(m_programId, GL_LINK_STATUS, &linkSuccess);
     if (!linkSuccess) {
         GLchar infoLog[1024];
-        glGetProgramInfoLog(s_programId, 1024, nullptr, infoLog);
+        glGetProgramInfoLog(m_programId, 1024, nullptr, infoLog);
         throw std::runtime_error(std::format("Shader linking error: {}", infoLog));
     }
 
-    ZEN_INFO(std::format("Shader {} linked.", s_programId), ZEN::LogCategory::ShaderCompilation);
+    ZEN_INFO(std::format("Shader {} linked.", m_programId), ZEN::LogCategory::ShaderCompilation);
 }
 
 void ZEN::OpenGL::Shader::setSource(ZEN::ShaderStage shaderStage, const std::string &source) noexcept {
@@ -87,19 +81,19 @@ ZEN::OpenGL::Shader::Shader() {
 }
 
 ZEN::OpenGL::Shader::~Shader() {
-    glDeleteProgram(s_programId);
+    glDeleteProgram(m_programId);
 }
 
 void ZEN::OpenGL::Shader::use() noexcept {
-    glUseProgram(s_programId);
+    glUseProgram(m_programId);
 }
 
 void ZEN::OpenGL::Shader::create() noexcept(false) {
     checkInitializationStatus();
 
-    s_programId = glCreateProgram();
+    m_programId = glCreateProgram();
 
-    ZEN_INFO(std::format("Shader program created with ID: {}", s_programId),
+    ZEN_INFO(std::format("Shader program created with ID: {}", m_programId),
              ZEN::LogCategory::ShaderCompilation);
 }
 
@@ -108,7 +102,7 @@ void ZEN::OpenGL::Shader::bindTo(gl_uint context) {
 }
 
 ZEN::OpenGL::gl_uint ZEN::OpenGL::Shader::getContextId() const {
-    return s_programId;
+    return m_programId;
 }
 
 std::optional<ZEN::OpenGL::gl_uint> ZEN::OpenGL::Shader::getCurrentContextId() const {
@@ -119,43 +113,43 @@ std::optional<ZEN::OpenGL::gl_uint> ZEN::OpenGL::Shader::getCurrentContextId() c
 
 void ZEN::OpenGL::Shader::set(const std::string &location, bool value) noexcept {
     with([&]() {
-        glUniform1i(getUniformLocation(location), value ? 1 : 0);
+        glUniform1i(glGetUniformLocation(m_programId, location.c_str()), value ? 1 : 0);
     });
 }
 
 void ZEN::OpenGL::Shader::set(const std::string &location, int value) noexcept {
     with([&]() {
-        glUniform1i(getUniformLocation(location), value);
+        glUniform1i(glGetUniformLocation(m_programId, location.c_str()), value);
     });
 }
 
 void ZEN::OpenGL::Shader::set(const std::string &location, float value) noexcept {
     with([&]() {
-        glUniform1f(getUniformLocation(location), value);
+        glUniform1f(glGetUniformLocation(m_programId, location.c_str()), value);
     });
 }
 
 void ZEN::OpenGL::Shader::set(const std::string &location, ZEN::Vec2 value) noexcept {
     with([&]() {
-        glUniform2fv(getUniformLocation(location), 1, glm::value_ptr(value));
+        glUniform2fv(glGetUniformLocation(m_programId, location.c_str()), 1, glm::value_ptr(value));
     });
 }
 
 void ZEN::OpenGL::Shader::set(const std::string &location, ZEN::Vec3 value) noexcept {
     with([&]() {
-        glUniform3fv(getUniformLocation(location), 1, glm::value_ptr(value));
+        glUniform3fv(glGetUniformLocation(m_programId, location.c_str()), 1, glm::value_ptr(value));
     });
 }
 
 void ZEN::OpenGL::Shader::set(const std::string &location, ZEN::Vec4 value) noexcept {
     with([&]() {
-        glUniform4fv(getUniformLocation(location), 1, glm::value_ptr(value));
+        glUniform4fv(glGetUniformLocation(m_programId, location.c_str()), 1, glm::value_ptr(value));
     });
 }
 
 void ZEN::OpenGL::Shader::set(const std::string &location, ZEN::Mat4x4 value) noexcept {
     with([&]() {
-        glUniformMatrix4fv(getUniformLocation(location.c_str()),
+        glUniformMatrix4fv(glGetUniformLocation(m_programId, location.c_str()),
                            1,
                            GL_FALSE,
                            glm::value_ptr(value));

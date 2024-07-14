@@ -113,6 +113,8 @@ namespace ZEN::OpenGL {
 
     private:
         std::unordered_map<ShaderStage, std::string> sources;
+
+        gl_uint m_programId;
     };
 
 

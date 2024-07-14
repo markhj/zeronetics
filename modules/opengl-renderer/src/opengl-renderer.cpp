@@ -26,6 +26,10 @@ namespace {
             {0.6, 0.2, 0.6},
     };
 
+    // @todo: Will be removed, once the more flexible implementation of
+    //      VBO is added.
+    unsigned int assumedVertexSize = 6;
+
     inline void appendFloatsFromVertex(std::vector<ZEN::OpenGL::gl_float> &vertices, const ZEN::Vertex3D &v) {
         // @todo: Will be rewritten to be more flexible,
         //      when more vertex attributes are implemented
@@ -64,32 +68,39 @@ void ZEN::OpenGL::Renderer::render() {
         renderManager->requests.erase(renderManager->requests.begin());
     }
 
-    // Count vertices to be drawn
-    // @todo: Leverage this calculation to the group
-    size_t drawVertices = 0;
-    std::vector<GLfloat> vertices;
-    for (const auto &group: renderManager->renderGroups3d) {
-        for (const auto &renderable3d: group->renderables3d) {
-            drawVertices += renderable3d.second->getVertices().size();
-        }
-    }
-
     MVP mvp = renderManager->camera3d->getModelViewProjection();
 
     for (const auto &group: renderManager->renderGroups3d) {
+        if (!group->shader) {
+            ZEN_WARN("A render group is missing shader.", LogCategory::ShaderUse);
+            continue;
+        }
+
         group->shader->set("model", mvp.model);
         group->shader->set("view", mvp.view);
         group->shader->set("projection", mvp.projection);
 
         group->shader->use();
 
+        // @todo: https://github.com/markhj/zeronetics/issues/5
+        //      This part will eventually be optimized.
         vao->with([&]() {
-            glDrawArrays(GL_TRIANGLES, 0, drawVertices);
+            for (const auto &renderable: group->renderables3d) {
+                std::optional<GPUAllocation> alloc = renderable.second->gpuAlloc;
+                if (!alloc.has_value()) {
+                    continue;
+                }
+                gpu_alloc_int first = alloc->index / assumedVertexSize;
+                gpu_alloc_int count = alloc->size / assumedVertexSize;
+                glDrawArrays(GL_TRIANGLES, first, count);
+            }
         });
     }
 }
 
 void ZEN::OpenGL::Renderer::initialize() {
+    // @todo: https://github.com/markhj/zeronetics/issues/6
+    //      Fix this point of tight coupling to GLFW.
     if (!gladLoadGLLoader((GLADloadproc) glfwGetProcAddress)) {
         throw std::runtime_error("Failed to initialize GLAD.");
     }
@@ -98,7 +109,7 @@ void ZEN::OpenGL::Renderer::initialize() {
 
     vbo = std::make_shared<VBO>(VBO());
     vbo->initialize();
-    vbo->resize(20);
+    vbo->resize(1000);
     vbo->setData({});
 
     vao = std::make_shared<VAO>(VAO());

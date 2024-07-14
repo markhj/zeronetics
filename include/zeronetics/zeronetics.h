@@ -21,6 +21,7 @@
 #include "core/inputs.h"
 #include "core/settings.h"
 #include "core/version.h"
+#include "core/io.h"
 
 // Core: 3rd Level
 #include "core/tensors.h"

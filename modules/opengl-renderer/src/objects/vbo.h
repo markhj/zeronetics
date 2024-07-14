@@ -45,6 +45,9 @@ namespace ZEN {
 
         void setData(std::vector<gl_float> data);
 
+        void updateData(const GPUAllocation &allocation,
+                        const std::vector<gl_float> &data);
+
         [[nodiscard]] gpu_alloc_int getCurrentSize() const noexcept;
 
     protected:

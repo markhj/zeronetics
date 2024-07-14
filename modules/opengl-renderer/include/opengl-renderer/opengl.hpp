@@ -29,7 +29,7 @@ namespace ZEN {
     private:
         bool m_initialized = false;
 
-        void handleAllocations();
+        void handleReallocations();
 
         inline void processRequest(IRendererRequest *request);
 

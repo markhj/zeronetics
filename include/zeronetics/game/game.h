@@ -6,8 +6,8 @@
 
 namespace ZEN {
     /**
-     * The main game class which connects different components,
-     * such as window and renderer, and maintains the game loop.
+     * The main game-class class which connects different components,
+     * such as window and renderer, and maintains the game-class loop.
      */
     class Game {
     public:
@@ -20,12 +20,15 @@ namespace ZEN {
              const std::shared_ptr<IRenderer> &renderer);
 
         /**
-         * Run the game loop.
+         * Run the game-class loop.
          */
         void run();
 
         /**
          * Retrieve current FPS (frames per second).
+         *
+         * @ref fps
+         *
          * @return
          */
         [[nodiscard]] fps_int getFPS() const noexcept;
@@ -36,6 +39,8 @@ namespace ZEN {
          * for profiling, since the delta value (FPS) can be impacted
          * by an intentional mechanism to synchronise the frames per second with
          * the monitor's frame rate.
+         *
+         * @ref fps
          *
          * @return
          */

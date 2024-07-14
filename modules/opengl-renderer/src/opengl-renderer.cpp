@@ -18,6 +18,34 @@
 namespace {
     std::shared_ptr<ZEN::VAO> vao;
     std::shared_ptr<ZEN::VBO> vbo;
+
+    int defaultColorPos = 0;
+    std::vector<ZEN::ColorRGB> defaultColors = {
+            {0.0, 0.2, 1.0},
+            {1.0, 1.0, 1.0},
+            {0.6, 0.2, 0.6},
+    };
+
+    inline void appendFloatsFromVertex(std::vector<ZEN::gl_float> &vertices, const ZEN::Vertex3D &v) {
+        // @todo: Will be rewritten to be more flexible,
+        //      when more vertex attributes are implemented
+        vertices.emplace_back(v.position.x);
+        vertices.emplace_back(v.position.y);
+        vertices.emplace_back(v.position.z);
+        if (v.color.has_value()) {
+            vertices.emplace_back(v.color->r);
+            vertices.emplace_back(v.color->g);
+            vertices.emplace_back(v.color->b);
+        } else {
+            ++defaultColorPos;
+            if (defaultColorPos >= defaultColors.size()) {
+                defaultColorPos = 0;
+            }
+            vertices.emplace_back(defaultColors[defaultColorPos].r);
+            vertices.emplace_back(defaultColors[defaultColorPos].g);
+            vertices.emplace_back(defaultColors[defaultColorPos].b);
+        }
+    }
 }
 
 void ZEN::OpenGLRenderer::render() {
@@ -31,33 +59,20 @@ void ZEN::OpenGLRenderer::render() {
 
     glEnable(GL_DEPTH_TEST);
 
-//    handleAllocations();
-
     while (!renderManager->requests.empty()) {
         processRequest(renderManager->requests.begin()->get());
         renderManager->requests.erase(renderManager->requests.begin());
     }
 
-    // @todo: Don't allocate on every frame -- Allocate when objects without
-    //      allocation data are discovered
-    int drawVertices = 0;
+    // Count vertices to be drawn
+    // @todo: Leverage this calculation to the group
+    size_t drawVertices = 0;
     std::vector<GLfloat> vertices;
-    std::vector<ColorRGB> defaultColors = {
-            {0.0, 0.2, 1.0},
-            {0.0, 1.0, 0.2},
-            {0.6, 0.2, 0.6},
-    };
-    int defaultColorPos = 0;
     for (const auto &group: renderManager->renderGroups3d) {
         for (const auto &renderable3d: group->renderables3d) {
-            auto rVertices = renderable3d.second->getVertices();
-            for (const Vertex3D &v: rVertices) {
-                ++drawVertices;
-            }
+            drawVertices += renderable3d.second->getVertices().size();
         }
     }
-
-    vbo->setData(vertices);
 
     MVP mvp = renderManager->camera3d->getModelViewProjection();
 
@@ -98,31 +113,6 @@ bool ZEN::OpenGLRenderer::isInitialized() const noexcept {
 void ZEN::OpenGLRenderer::clear() noexcept {
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-}
-
-int defaultColorPos = 0;
-std::vector<ZEN::ColorRGB> defaultColors = {
-        {0.0, 0.2, 1.0},
-        {1.0, 1.0, 1.0},
-        {0.6, 0.2, 0.6},
-};
-inline void appendFloatsFromVertex(std::vector<ZEN::gl_float> &vertices, const ZEN::Vertex3D &v) {
-    vertices.emplace_back(v.position.x);
-    vertices.emplace_back(v.position.y);
-    vertices.emplace_back(v.position.z);
-    if (v.color.has_value()) {
-        vertices.emplace_back(v.color->r);
-        vertices.emplace_back(v.color->g);
-        vertices.emplace_back(v.color->b);
-    } else {
-        ++defaultColorPos;
-        if (defaultColorPos >= defaultColors.size()) {
-            defaultColorPos = 0;
-        }
-        vertices.emplace_back(defaultColors[defaultColorPos].r);
-        vertices.emplace_back(defaultColors[defaultColorPos].g);
-        vertices.emplace_back(defaultColors[defaultColorPos].b);
-    }
 }
 
 void ZEN::OpenGLRenderer::handleReallocations() {

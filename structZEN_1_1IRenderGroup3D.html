@@ -90,6 +90,8 @@ $(document).ready(function(){initNavTree('structZEN_1_1IRenderGroup3D.html','');
 <div class="title">ZEN::IRenderGroup3D Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="contracts_2render-manager_8h_source.html">render-manager.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ZEN::IRenderGroup3D:</div>
 <div class="dyncontent">
@@ -98,13 +100,45 @@ Inheritance diagram for ZEN::IRenderGroup3D:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:af8e255f798bbd701ff562e2de74b73d1"><td class="memItemLeft" align="right" valign="top"><a id="af8e255f798bbd701ff562e2de74b73d1"></a>
-std::shared_ptr&lt; <a class="el" href="classZEN_1_1IShader.html">IShader</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>shader</b></td></tr>
+<tr class="memitem:af8e255f798bbd701ff562e2de74b73d1"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classZEN_1_1IShader.html">IShader</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structZEN_1_1IRenderGroup3D.html#af8e255f798bbd701ff562e2de74b73d1">shader</a></td></tr>
 <tr class="separator:af8e255f798bbd701ff562e2de74b73d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2cb3bfa0119e036e444fdb3060f3ff79"><td class="memItemLeft" align="right" valign="top"><a id="a2cb3bfa0119e036e444fdb3060f3ff79"></a>
-std::unordered_map&lt; std::string, std::shared_ptr&lt; <a class="el" href="classZEN_1_1IRenderable3D.html">IRenderable3D</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>renderables3d</b></td></tr>
+<tr class="memitem:a2cb3bfa0119e036e444fdb3060f3ff79"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, std::shared_ptr&lt; <a class="el" href="classZEN_1_1IRenderable3D.html">IRenderable3D</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structZEN_1_1IRenderGroup3D.html#a2cb3bfa0119e036e444fdb3060f3ff79">renderables3d</a></td></tr>
 <tr class="separator:a2cb3bfa0119e036e444fdb3060f3ff79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Render group</p>
+<p><a class="el" href="render-groups.html">Render groups</a> </p>
+</div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="a2cb3bfa0119e036e444fdb3060f3ff79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cb3bfa0119e036e444fdb3060f3ff79">&#9670;&nbsp;</a></span>renderables3d</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_map&lt;std::string, std::shared_ptr&lt;<a class="el" href="classZEN_1_1IRenderable3D.html">IRenderable3D</a>&gt; &gt; ZEN::IRenderGroup3D::renderables3d</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Unordered list of renderables. </p>
+
+</div>
+</div>
+<a id="af8e255f798bbd701ff562e2de74b73d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8e255f798bbd701ff562e2de74b73d1">&#9670;&nbsp;</a></span>shader</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classZEN_1_1IShader.html">IShader</a>&gt; ZEN::IRenderGroup3D::shader</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Shader with which the renderables of the group must be rendered. </p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>include/zeronetics/contracts/<a class="el" href="contracts_2render-manager_8h_source.html">render-manager.h</a></li>
 </ul>

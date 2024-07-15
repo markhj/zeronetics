@@ -1,8 +1,8 @@
 var namespaceZEN =
 [
-    [ "Macros", "build-info.html#autotoc_md44", null ],
-    [ "Example", "build-info.html#autotoc_md45", null ],
-    [ "Note", "build-info.html#autotoc_md46", [
+    [ "Macros", "build-info.html#autotoc_md56", null ],
+    [ "Example", "build-info.html#autotoc_md57", null ],
+    [ "Note", "build-info.html#autotoc_md58", [
       [ "💻 FPS", "fps.html#autotoc_md29", null ],
       [ "⌛ Real render time", "fps.html#autotoc_md30", null ],
       [ "🔇 Log level behavior", "log-configuration.html#autotoc_md36", [
@@ -22,16 +22,26 @@ var namespaceZEN =
       [ "📐 Aspect ratio", "camera-3d.html#autotoc_md23", null ],
       [ "👀 Field of view", "camera-3d.html#autotoc_md24", null ],
       [ "✂️ Clipping plane", "camera-3d.html#autotoc_md25", null ],
-      [ "CMake file", "create-modules.html#autotoc_md51", null ],
-      [ "Public headers", "create-modules.html#autotoc_md52", null ],
-      [ "Integrate in build process", "create-modules.html#autotoc_md53", null ]
+      [ "🎨 What is a render manager?", "render-manager.html#autotoc_md44", null ],
+      [ "🎥 The \"scene\"", "render-manager.html#autotoc_md45", null ],
+      [ "🔠 What is a render group?", "render-groups.html#autotoc_md42", null ],
+      [ "🚧 Working with groups", "render-groups.html#autotoc_md43", null ],
+      [ "An example", "opengl-bindable.html#autotoc_md49", null ],
+      [ "Functions", "opengl-bindable.html#autotoc_md50", [
+        [ "Short-hand for binding", "opengl-bindable.html#autotoc_md51", null ],
+        [ "With", "opengl-bindable.html#autotoc_md52", null ]
+      ] ],
+      [ "CMake file", "create-modules.html#autotoc_md63", null ],
+      [ "Public headers", "create-modules.html#autotoc_md64", null ],
+      [ "Integrate in build process", "create-modules.html#autotoc_md65", null ]
     ] ],
-    [ "Namespace", "create-modules.html#autotoc_md54", null ],
-    [ "How to make callbacks \"a la Zeronetics\"", "callbacks.html#autotoc_md47", null ],
-    [ "Examination of choices", "callbacks.html#autotoc_md48", [
-      [ "Using <tt>std::optional</tt>", "callbacks.html#autotoc_md49", null ],
-      [ "Smart pointers", "callbacks.html#autotoc_md50", null ]
+    [ "Namespace", "create-modules.html#autotoc_md66", null ],
+    [ "How to make callbacks \"a la Zeronetics\"", "callbacks.html#autotoc_md59", null ],
+    [ "Examination of choices", "callbacks.html#autotoc_md60", [
+      [ "Using <tt>std::optional</tt>", "callbacks.html#autotoc_md61", null ],
+      [ "Smart pointers", "callbacks.html#autotoc_md62", null ]
     ] ],
+    [ "🔀 Management of allocation", "arch-render-manager.html#autotoc_md53", null ],
     [ "OpenGL", null, [
       [ "IBindable", "classZEN_1_1OpenGL_1_1IBindable.html", "classZEN_1_1OpenGL_1_1IBindable" ],
       [ "StdBinding", "classZEN_1_1OpenGL_1_1StdBinding.html", "classZEN_1_1OpenGL_1_1StdBinding" ],

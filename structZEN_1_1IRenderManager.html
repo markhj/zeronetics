@@ -101,26 +101,99 @@ Inheritance diagram for ZEN::IRenderManager:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad585ca557d1fc559f6d18dea0ea94b1f"><td class="memItemLeft" align="right" valign="top"><a id="ad585ca557d1fc559f6d18dea0ea94b1f"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>resetAllocations</b> () const noexcept=0</td></tr>
+<tr class="memitem:ad585ca557d1fc559f6d18dea0ea94b1f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structZEN_1_1IRenderManager.html#ad585ca557d1fc559f6d18dea0ea94b1f">resetAllocations</a> () const noexcept=0</td></tr>
 <tr class="separator:ad585ca557d1fc559f6d18dea0ea94b1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a9c7bf5c92b66b63891333b3219c7ec56"><td class="memItemLeft" align="right" valign="top"><a id="a9c7bf5c92b66b63891333b3219c7ec56"></a>
-std::shared_ptr&lt; <a class="el" href="classZEN_1_1ICamera3D.html">ICamera3D</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>camera3d</b></td></tr>
+<tr class="memitem:a9c7bf5c92b66b63891333b3219c7ec56"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classZEN_1_1ICamera3D.html">ICamera3D</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structZEN_1_1IRenderManager.html#a9c7bf5c92b66b63891333b3219c7ec56">camera3d</a></td></tr>
 <tr class="separator:a9c7bf5c92b66b63891333b3219c7ec56"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f96a548c5e8a1724f1568d725fa36c6"><td class="memItemLeft" align="right" valign="top"><a id="a7f96a548c5e8a1724f1568d725fa36c6"></a>
-std::vector&lt; std::shared_ptr&lt; <a class="el" href="structZEN_1_1IRenderGroup3D.html">IRenderGroup3D</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>renderGroups3d</b></td></tr>
+<tr class="memitem:a7f96a548c5e8a1724f1568d725fa36c6"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="structZEN_1_1IRenderGroup3D.html">IRenderGroup3D</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structZEN_1_1IRenderManager.html#a7f96a548c5e8a1724f1568d725fa36c6">renderGroups3d</a></td></tr>
 <tr class="separator:a7f96a548c5e8a1724f1568d725fa36c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aadbacbb19656db37e5310586b2b80d98"><td class="memItemLeft" align="right" valign="top"><a id="aadbacbb19656db37e5310586b2b80d98"></a>
-std::vector&lt; std::unique_ptr&lt; <a class="el" href="structZEN_1_1IRendererRequest.html">IRendererRequest</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>requests</b></td></tr>
+<tr class="memitem:aadbacbb19656db37e5310586b2b80d98"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::unique_ptr&lt; <a class="el" href="structZEN_1_1IRendererRequest.html">IRendererRequest</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structZEN_1_1IRenderManager.html#aadbacbb19656db37e5310586b2b80d98">requests</a></td></tr>
 <tr class="separator:aadbacbb19656db37e5310586b2b80d98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A Render Manager is a way for "something" and a renderer to communicate, without introducing coupling between that "something" and the renderer. The "something" is typically some sort of scene-related object, but it doesn't have to be.</p>
-<p>They have different authorities over the render manager, and can both update its data. For instance, a scene-like object can place requests, and the renderer can remove them, when they are processed. </p>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
+<p>They have different authorities over the render manager, and can both update its data. For instance, a scene-like object can place requests, and the renderer can remove them, when they are processed.</p>
+<p><a class="el" href="render-manager.html">Understanding render management</a> </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ad585ca557d1fc559f6d18dea0ea94b1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad585ca557d1fc559f6d18dea0ea94b1f">&#9670;&nbsp;</a></span>resetAllocations()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ZEN::IRenderManager::resetAllocations </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Reset the allocation details contained within all renderables in the manager. </p>
+
+<p>Implemented in <a class="el" href="structZEN_1_1RenderManager.html#acff3f1f7378063edd7d1f01da0d509ba">ZEN::RenderManager</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a9c7bf5c92b66b63891333b3219c7ec56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c7bf5c92b66b63891333b3219c7ec56">&#9670;&nbsp;</a></span>camera3d</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classZEN_1_1ICamera3D.html">ICamera3D</a>&gt; ZEN::IRenderManager::camera3d</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The primary camera. </p>
+
+</div>
+</div>
+<a id="a7f96a548c5e8a1724f1568d725fa36c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f96a548c5e8a1724f1568d725fa36c6">&#9670;&nbsp;</a></span>renderGroups3d</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::shared_ptr&lt;<a class="el" href="structZEN_1_1IRenderGroup3D.html">IRenderGroup3D</a>&gt; &gt; ZEN::IRenderManager::renderGroups3d</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>List of relevant groups.</p>
+<p><a class="el" href="render-groups.html">Render groups</a> </p>
+
+</div>
+</div>
+<a id="aadbacbb19656db37e5310586b2b80d98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadbacbb19656db37e5310586b2b80d98">&#9670;&nbsp;</a></span>requests</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::unique_ptr&lt;<a class="el" href="structZEN_1_1IRendererRequest.html">IRendererRequest</a>&gt; &gt; ZEN::IRenderManager::requests</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>List of requests. </p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
 <li>include/zeronetics/contracts/<a class="el" href="contracts_2render-manager_8h_source.html">render-manager.h</a></li>
 </ul>
 </div><!-- contents -->

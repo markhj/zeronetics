@@ -31,6 +31,7 @@ var NAVTREE =
     [ "Modules", "modules.html", "modules" ],
     [ "Engine architecture", "engine-arch.html", "engine-arch" ],
     [ "Engine development", "dev.html", "dev" ],
+    [ "Deprecated List", "deprecated.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -55,8 +56,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"annotated.html",
-"namespaceZEN.html#a0d7569c6075d08a03f47973dc968b9fc"
+"",
+"modules.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

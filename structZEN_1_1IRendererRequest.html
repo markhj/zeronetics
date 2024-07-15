@@ -90,6 +90,8 @@ $(document).ready(function(){initNavTree('structZEN_1_1IRendererRequest.html',''
 <div class="title">ZEN::IRendererRequest Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="contracts_2render-manager_8h_source.html">render-manager.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ZEN::IRendererRequest:</div>
 <div class="dyncontent">
@@ -98,13 +100,45 @@ Inheritance diagram for ZEN::IRendererRequest:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a3e67f664fb2a933ae5bf45436fe5918a"><td class="memItemLeft" align="right" valign="top"><a id="a3e67f664fb2a933ae5bf45436fe5918a"></a>
-<a class="el" href="namespaceZEN.html#a6b91990426cccd5daddb56813b87fba6">RenderManagerRequest</a>&#160;</td><td class="memItemRight" valign="bottom"><b>request</b></td></tr>
+<tr class="memitem:a3e67f664fb2a933ae5bf45436fe5918a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceZEN.html#a6b91990426cccd5daddb56813b87fba6">RenderManagerRequest</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structZEN_1_1IRendererRequest.html#a3e67f664fb2a933ae5bf45436fe5918a">request</a></td></tr>
 <tr class="separator:a3e67f664fb2a933ae5bf45436fe5918a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f7bb18e8a90185ea60092275387e432"><td class="memItemLeft" align="right" valign="top"><a id="a9f7bb18e8a90185ea60092275387e432"></a>
-std::shared_ptr&lt; <a class="el" href="classZEN_1_1IRenderable3D.html">IRenderable3D</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>renderable3d</b></td></tr>
+<tr class="memitem:a9f7bb18e8a90185ea60092275387e432"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classZEN_1_1IRenderable3D.html">IRenderable3D</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structZEN_1_1IRendererRequest.html#a9f7bb18e8a90185ea60092275387e432">renderable3d</a></td></tr>
 <tr class="separator:a9f7bb18e8a90185ea60092275387e432"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Contract for renderer request</p>
+<p><a class="el" href="render-manager.html">Understanding render management</a> </p>
+</div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="a9f7bb18e8a90185ea60092275387e432"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f7bb18e8a90185ea60092275387e432">&#9670;&nbsp;</a></span>renderable3d</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classZEN_1_1IRenderable3D.html">IRenderable3D</a>&gt; ZEN::IRendererRequest::renderable3d</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The target renderable. </p>
+
+</div>
+</div>
+<a id="a3e67f664fb2a933ae5bf45436fe5918a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e67f664fb2a933ae5bf45436fe5918a">&#9670;&nbsp;</a></span>request</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceZEN.html#a6b91990426cccd5daddb56813b87fba6">RenderManagerRequest</a> ZEN::IRendererRequest::request</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The type of request, e.g. allocation or de-allocation. </p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>include/zeronetics/contracts/<a class="el" href="contracts_2render-manager_8h_source.html">render-manager.h</a></li>
 </ul>

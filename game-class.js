@@ -1,8 +1,6 @@
 var game_class =
 [
-    [ "Game loop", "game-loop.html", null ],
-    [ "Delta time", "delta.html", null ],
-    [ "FPS (frames per second)", "fps.html", [
+    [ "Game loop", "game-loop.html", [
       [ "Environment variable", "setting-up-a-game.html#autotoc_md7", null ],
       [ "CMake list", "setting-up-a-game.html#autotoc_md8", null ],
       [ "Creating the window", "setting-up-a-game.html#autotoc_md9", null ],
@@ -20,8 +18,10 @@ var game_class =
       ] ],
       [ "Notes", "logging.html#autotoc_md17", null ],
       [ "See also", "logging.html#autotoc_md18", [
-        [ "💻 FPS", "fps.html#autotoc_md23", null ],
-        [ "⌛ Real render time", "fps.html#autotoc_md24", null ]
+        [ "🔁 How it works", "game-loop.html#autotoc_md31", null ],
+        [ "See also", "game-loop.html#autotoc_md32", null ]
       ] ]
-    ] ]
+    ] ],
+    [ "Delta time", "delta.html", null ],
+    [ "FPS (frames per second)", "fps.html", null ]
 ];

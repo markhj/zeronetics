@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['the_20game_20class_272',['The Game class',['../game-class.html',1,'manual']]],
-  ['tutorials_273',['Tutorials',['../tutorials.html',1,'']]]
+  ['manual_338',['Manual',['../manual.html',1,'']]],
+  ['modules_339',['Modules',['../modules.html',1,'']]]
 ];

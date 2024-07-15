@@ -95,19 +95,25 @@ $(document).ready(function(){initNavTree('vertices_8h_source.html',''); initResi
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;optional&gt;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span>ZEN {</div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="structZEN_1_1Vertex3D.html">   10</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structZEN_1_1Vertex3D.html">Vertex3D</a> {</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        Vec3 position;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        std::optional&lt;ColorRGB&gt; color;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    };</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classZEN_1_1VertexAttrSize.html">   15</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classZEN_1_1VertexAttrSize.html">VertexAttrSize</a> {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keyword">static</span> uint8_t getSize(VertexAttribute attr);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    };</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div>
-<div class="ttc" id="aclassZEN_1_1VertexAttrSize_html"><div class="ttname"><a href="classZEN_1_1VertexAttrSize.html">ZEN::VertexAttrSize</a></div><div class="ttdef"><b>Definition:</b> vertices.h:15</div></div>
-<div class="ttc" id="astructZEN_1_1Vertex3D_html"><div class="ttname"><a href="structZEN_1_1Vertex3D.html">ZEN::Vertex3D</a></div><div class="ttdef"><b>Definition:</b> vertices.h:10</div></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceZEN.html">ZEN</a> {</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="structZEN_1_1Vertex3D.html">   15</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structZEN_1_1Vertex3D.html">Vertex3D</a> {</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="structZEN_1_1Vertex3D.html#a5501e2cbbce4b957894a749d10715e9c">   19</a></span>&#160;        Vec3 <a class="code" href="structZEN_1_1Vertex3D.html#a5501e2cbbce4b957894a749d10715e9c">position</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="structZEN_1_1Vertex3D.html#aeeced967cb9977a159a0afbc087b445f">   24</a></span>&#160;        std::optional&lt;ColorRGB&gt; <a class="code" href="structZEN_1_1Vertex3D.html#aeeced967cb9977a159a0afbc087b445f">color</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    };</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classZEN_1_1VertexAttrSize.html">   32</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classZEN_1_1VertexAttrSize.html">VertexAttrSize</a> {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classZEN_1_1VertexAttrSize.html#a1d28c16160cf398689e65171ffc0bc00">   41</a></span>&#160;        <span class="keyword">static</span> uint8_t <a class="code" href="classZEN_1_1VertexAttrSize.html#a1d28c16160cf398689e65171ffc0bc00">getSize</a>(<a class="code" href="namespaceZEN.html#a3ff69a9dc86c8ce199f458ed659dbe95">VertexAttribute</a> attr);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    };</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+<div class="ttc" id="aclassZEN_1_1VertexAttrSize_html"><div class="ttname"><a href="classZEN_1_1VertexAttrSize.html">ZEN::VertexAttrSize</a></div><div class="ttdef"><b>Definition:</b> vertices.h:32</div></div>
+<div class="ttc" id="aclassZEN_1_1VertexAttrSize_html_a1d28c16160cf398689e65171ffc0bc00"><div class="ttname"><a href="classZEN_1_1VertexAttrSize.html#a1d28c16160cf398689e65171ffc0bc00">ZEN::VertexAttrSize::getSize</a></div><div class="ttdeci">static uint8_t getSize(VertexAttribute attr)</div></div>
+<div class="ttc" id="anamespaceZEN_html"><div class="ttname"><a href="namespaceZEN.html">ZEN</a></div><div class="ttdef"><b>Definition:</b> cameras.h:6</div></div>
+<div class="ttc" id="anamespaceZEN_html_a3ff69a9dc86c8ce199f458ed659dbe95"><div class="ttname"><a href="namespaceZEN.html#a3ff69a9dc86c8ce199f458ed659dbe95">ZEN::VertexAttribute</a></div><div class="ttdeci">VertexAttribute</div><div class="ttdef"><b>Definition:</b> enums.h:130</div></div>
+<div class="ttc" id="astructZEN_1_1Vertex3D_html"><div class="ttname"><a href="structZEN_1_1Vertex3D.html">ZEN::Vertex3D</a></div><div class="ttdef"><b>Definition:</b> vertices.h:15</div></div>
+<div class="ttc" id="astructZEN_1_1Vertex3D_html_a5501e2cbbce4b957894a749d10715e9c"><div class="ttname"><a href="structZEN_1_1Vertex3D.html#a5501e2cbbce4b957894a749d10715e9c">ZEN::Vertex3D::position</a></div><div class="ttdeci">Vec3 position</div><div class="ttdef"><b>Definition:</b> vertices.h:19</div></div>
+<div class="ttc" id="astructZEN_1_1Vertex3D_html_aeeced967cb9977a159a0afbc087b445f"><div class="ttname"><a href="structZEN_1_1Vertex3D.html#aeeced967cb9977a159a0afbc087b445f">ZEN::Vertex3D::color</a></div><div class="ttdeci">std::optional&lt; ColorRGB &gt; color</div><div class="ttdef"><b>Definition:</b> vertices.h:24</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

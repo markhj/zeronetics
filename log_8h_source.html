@@ -96,21 +96,21 @@ $(document).ready(function(){initNavTree('log_8h_source.html',''); initResizable
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;zeronetics/core/io.h&quot;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span>ZEN {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">enum class</span> LogLevel {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceZEN.html">ZEN</a> {</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="namespaceZEN.html#aa69bcfc31d926753fe3879eb54886386">   16</a></span>&#160;    <span class="keyword">enum class</span> <a class="code" href="namespaceZEN.html#aa69bcfc31d926753fe3879eb54886386">LogLevel</a> {</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        Info,</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        Warning,</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        Critical,</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    };</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">enum class</span> LogCategory {</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="namespaceZEN.html#a5ac493fe076dd216cf2f69f8b01f05ef">   27</a></span>&#160;    <span class="keyword">enum class</span> <a class="code" href="namespaceZEN.html#a5ac493fe076dd216cf2f69f8b01f05ef">LogCategory</a> {</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        None,</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        Critical,</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        Info,</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <a class="code" href="namespaceZEN.html#a5ac493fe076dd216cf2f69f8b01f05efa4059b0251f66a18cb56f544728796875">Info</a>,</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        RendererInit,</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="namespaceZEN.html#a5ac493fe076dd216cf2f69f8b01f05efacf48c3dcb3d12b3c90852b98a6a885f9">RendererInit</a>,</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        Rendering,</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        RendererInternals,</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
@@ -123,7 +123,7 @@ $(document).ready(function(){initNavTree('log_8h_source.html',''); initResizable
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        std::map&lt;std::string, std::string&gt; records;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    };</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keyword">enum class</span> LogAction {</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="namespaceZEN.html#a6ffef313adb6e833eed3b2dc6665636a">   64</a></span>&#160;    <span class="keyword">enum class</span> <a class="code" href="namespaceZEN.html#a6ffef313adb6e833eed3b2dc6665636a">LogAction</a> {</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        Silent,</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        Console,</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        ConsoleErr,</div>
@@ -131,7 +131,7 @@ $(document).ready(function(){initNavTree('log_8h_source.html',''); initResizable
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    };</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
 <div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="structZEN_1_1LogBehavior.html">   76</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structZEN_1_1LogBehavior.html">LogBehavior</a> {</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        LogAction takeAction = LogAction::Console;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <a class="code" href="namespaceZEN.html#a6ffef313adb6e833eed3b2dc6665636a">LogAction</a> takeAction = LogAction::Console;</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    };</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
 <div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="classZEN_1_1Log.html">   85</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classZEN_1_1Log.html">Log</a> {</div>
@@ -144,13 +144,13 @@ $(document).ready(function(){initNavTree('log_8h_source.html',''); initResizable
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
 <div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="classZEN_1_1Log.html#ad7a840abc0796acfe6e30b77c71407b1">  115</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">double</span> <a class="code" href="classZEN_1_1Log.html#ad7a840abc0796acfe6e30b77c71407b1">messageCooldownInterval</a>;</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
-<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="classZEN_1_1Log.html#a82aa485225c321d2bc7c3ab6ae864c8c">  124</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classZEN_1_1Log.html#a82aa485225c321d2bc7c3ab6ae864c8c">message</a>(LogLevel level,</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                            LogCategory category,</div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="classZEN_1_1Log.html#a82aa485225c321d2bc7c3ab6ae864c8c">  124</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classZEN_1_1Log.html#a82aa485225c321d2bc7c3ab6ae864c8c">message</a>(<a class="code" href="namespaceZEN.html#aa69bcfc31d926753fe3879eb54886386">LogLevel</a> level,</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                            <a class="code" href="namespaceZEN.html#a5ac493fe076dd216cf2f69f8b01f05ef">LogCategory</a> category,</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                            std::string <a class="code" href="classZEN_1_1Log.html#a82aa485225c321d2bc7c3ab6ae864c8c">message</a>);</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
-<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="classZEN_1_1Log.html#af742c21efb209fd0b8eb80eec0559349">  134</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classZEN_1_1Log.html#af742c21efb209fd0b8eb80eec0559349">info</a>(<span class="keyword">const</span> std::string &amp;<a class="code" href="classZEN_1_1Log.html#a82aa485225c321d2bc7c3ab6ae864c8c">message</a>, LogCategory category);</div>
+<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="classZEN_1_1Log.html#af742c21efb209fd0b8eb80eec0559349">  134</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classZEN_1_1Log.html#af742c21efb209fd0b8eb80eec0559349">info</a>(<span class="keyword">const</span> std::string &amp;<a class="code" href="classZEN_1_1Log.html#a82aa485225c321d2bc7c3ab6ae864c8c">message</a>, <a class="code" href="namespaceZEN.html#a5ac493fe076dd216cf2f69f8b01f05ef">LogCategory</a> category);</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
-<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="classZEN_1_1Log.html#a718cf7d1fa13ab3ee9943f08a66b64f7">  142</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classZEN_1_1Log.html#a718cf7d1fa13ab3ee9943f08a66b64f7">warn</a>(<span class="keyword">const</span> std::string &amp;<a class="code" href="classZEN_1_1Log.html#a82aa485225c321d2bc7c3ab6ae864c8c">message</a>, LogCategory category);</div>
+<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="classZEN_1_1Log.html#a718cf7d1fa13ab3ee9943f08a66b64f7">  142</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classZEN_1_1Log.html#a718cf7d1fa13ab3ee9943f08a66b64f7">warn</a>(<span class="keyword">const</span> std::string &amp;<a class="code" href="classZEN_1_1Log.html#a82aa485225c321d2bc7c3ab6ae864c8c">message</a>, <a class="code" href="namespaceZEN.html#a5ac493fe076dd216cf2f69f8b01f05ef">LogCategory</a> category);</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
 <div class="line"><a name="l00152"></a><span class="lineno"><a class="line" href="classZEN_1_1Log.html#aa550d58e15cd2d9894683f19c95ec8b8">  152</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classZEN_1_1Log.html#aa550d58e15cd2d9894683f19c95ec8b8">critical</a>(<span class="keyword">const</span> std::string &amp;<a class="code" href="classZEN_1_1Log.html#a82aa485225c321d2bc7c3ab6ae864c8c">message</a>);</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
@@ -161,7 +161,7 @@ $(document).ready(function(){initNavTree('log_8h_source.html',''); initResizable
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> logToFile(<span class="keyword">const</span> <a class="code" href="structZEN_1_1LogFileEntry.html">LogFileEntry</a> &amp;logFileEntry);</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160; </div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> logToFileIfCategory(LogCategory category,</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> logToFileIfCategory(<a class="code" href="namespaceZEN.html#a5ac493fe076dd216cf2f69f8b01f05ef">LogCategory</a> category,</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                                        <span class="keyword">const</span> <a class="code" href="structZEN_1_1LogFileEntry.html">LogFileEntry</a> &amp;logFileEntry);</div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <span class="keyword">static</span> std::optional&lt;File&gt; logFile;</div>
@@ -178,6 +178,12 @@ $(document).ready(function(){initNavTree('log_8h_source.html',''); initResizable
 <div class="ttc" id="aclassZEN_1_1Log_html_ad7a840abc0796acfe6e30b77c71407b1"><div class="ttname"><a href="classZEN_1_1Log.html#ad7a840abc0796acfe6e30b77c71407b1">ZEN::Log::messageCooldownInterval</a></div><div class="ttdeci">static double messageCooldownInterval</div><div class="ttdef"><b>Definition:</b> log.h:115</div></div>
 <div class="ttc" id="aclassZEN_1_1Log_html_adb81df76548e8d2d007f52e56f84171d"><div class="ttname"><a href="classZEN_1_1Log.html#adb81df76548e8d2d007f52e56f84171d">ZEN::Log::behaviors</a></div><div class="ttdeci">static std::map&lt; LogLevel, LogBehavior &gt; behaviors</div><div class="ttdef"><b>Definition:</b> log.h:92</div></div>
 <div class="ttc" id="aclassZEN_1_1Log_html_af742c21efb209fd0b8eb80eec0559349"><div class="ttname"><a href="classZEN_1_1Log.html#af742c21efb209fd0b8eb80eec0559349">ZEN::Log::info</a></div><div class="ttdeci">static void info(const std::string &amp;message, LogCategory category)</div></div>
+<div class="ttc" id="anamespaceZEN_html"><div class="ttname"><a href="namespaceZEN.html">ZEN</a></div><div class="ttdef"><b>Definition:</b> cameras.h:6</div></div>
+<div class="ttc" id="anamespaceZEN_html_a5ac493fe076dd216cf2f69f8b01f05ef"><div class="ttname"><a href="namespaceZEN.html#a5ac493fe076dd216cf2f69f8b01f05ef">ZEN::LogCategory</a></div><div class="ttdeci">LogCategory</div><div class="ttdef"><b>Definition:</b> log.h:27</div></div>
+<div class="ttc" id="anamespaceZEN_html_a5ac493fe076dd216cf2f69f8b01f05efa4059b0251f66a18cb56f544728796875"><div class="ttname"><a href="namespaceZEN.html#a5ac493fe076dd216cf2f69f8b01f05efa4059b0251f66a18cb56f544728796875">ZEN::LogCategory::Info</a></div><div class="ttdeci">@ Info</div></div>
+<div class="ttc" id="anamespaceZEN_html_a5ac493fe076dd216cf2f69f8b01f05efacf48c3dcb3d12b3c90852b98a6a885f9"><div class="ttname"><a href="namespaceZEN.html#a5ac493fe076dd216cf2f69f8b01f05efacf48c3dcb3d12b3c90852b98a6a885f9">ZEN::LogCategory::RendererInit</a></div><div class="ttdeci">@ RendererInit</div></div>
+<div class="ttc" id="anamespaceZEN_html_a6ffef313adb6e833eed3b2dc6665636a"><div class="ttname"><a href="namespaceZEN.html#a6ffef313adb6e833eed3b2dc6665636a">ZEN::LogAction</a></div><div class="ttdeci">LogAction</div><div class="ttdef"><b>Definition:</b> log.h:64</div></div>
+<div class="ttc" id="anamespaceZEN_html_aa69bcfc31d926753fe3879eb54886386"><div class="ttname"><a href="namespaceZEN.html#aa69bcfc31d926753fe3879eb54886386">ZEN::LogLevel</a></div><div class="ttdeci">LogLevel</div><div class="ttdef"><b>Definition:</b> log.h:16</div></div>
 <div class="ttc" id="astructZEN_1_1LogBehavior_html"><div class="ttname"><a href="structZEN_1_1LogBehavior.html">ZEN::LogBehavior</a></div><div class="ttdef"><b>Definition:</b> log.h:76</div></div>
 <div class="ttc" id="astructZEN_1_1LogFileEntry_html"><div class="ttname"><a href="structZEN_1_1LogFileEntry.html">ZEN::LogFileEntry</a></div><div class="ttdef"><b>Definition:</b> log.h:54</div></div>
 </div><!-- fragment --></div><!-- contents -->

@@ -31,6 +31,15 @@ var NAVTREE =
     [ "Modules", "modules.html", "modules" ],
     [ "Engine architecture", "engine-arch.html", "engine-arch" ],
     [ "Engine development", "dev.html", "dev" ],
+    [ "Namespaces", "namespaces.html", [
+      [ "Namespace List", "namespaces.html", "namespaces_dup" ],
+      [ "Namespace Members", "namespacemembers.html", [
+        [ "All", "namespacemembers.html", null ],
+        [ "Typedefs", "namespacemembers_type.html", null ],
+        [ "Enumerations", "namespacemembers_enum.html", null ],
+        [ "Enumerator", "namespacemembers_eval.html", null ]
+      ] ]
+    ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
@@ -47,7 +56,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"structZEN_1_1IRenderManager.html#a9c7bf5c92b66b63891333b3219c7ec56"
+"namespaceZEN.html#a0d7569c6075d08a03f47973dc968b9fc"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

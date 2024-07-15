@@ -91,6 +91,8 @@ $(document).ready(function(){initNavTree('classZEN_1_1ICamera3D.html',''); initR
 <div class="title">ZEN::ICamera3D Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="cameras_8h_source.html">cameras.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ZEN::ICamera3D:</div>
 <div class="dyncontent">
@@ -104,23 +106,84 @@ Collaboration diagram for ZEN::ICamera3D:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8142e328962447bfbe52390de0c5d759"><td class="memItemLeft" align="right" valign="top"><a id="a8142e328962447bfbe52390de0c5d759"></a>
-virtual <a class="el" href="structZEN_1_1MVP.html">MVP</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getModelViewProjection</b> () const noexcept=0</td></tr>
+<tr class="memitem:a8142e328962447bfbe52390de0c5d759"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structZEN_1_1MVP.html">MVP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1ICamera3D.html#a8142e328962447bfbe52390de0c5d759">getModelViewProjection</a> () const noexcept=0</td></tr>
 <tr class="separator:a8142e328962447bfbe52390de0c5d759"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a93b00ae16a80115922bb352849bfb912"><td class="memItemLeft" align="right" valign="top"><a id="a93b00ae16a80115922bb352849bfb912"></a>
-Vec3&#160;</td><td class="memItemRight" valign="bottom"><b>target</b> = Vec3(0.0)</td></tr>
+<tr class="memitem:a93b00ae16a80115922bb352849bfb912"><td class="memItemLeft" align="right" valign="top">Vec3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1ICamera3D.html#a93b00ae16a80115922bb352849bfb912">target</a> = Vec3(0.0)</td></tr>
 <tr class="separator:a93b00ae16a80115922bb352849bfb912"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1910db2e075042c786d15f3b1572250d"><td class="memItemLeft" align="right" valign="top"><a id="a1910db2e075042c786d15f3b1572250d"></a>
-Vec3&#160;</td><td class="memItemRight" valign="bottom"><b>up</b> = Vec3(0.0, 1.0, 0.0)</td></tr>
+<tr class="memitem:a1910db2e075042c786d15f3b1572250d"><td class="memItemLeft" align="right" valign="top">Vec3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1ICamera3D.html#a1910db2e075042c786d15f3b1572250d">up</a> = Vec3(0.0, 1.0, 0.0)</td></tr>
 <tr class="separator:a1910db2e075042c786d15f3b1572250d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_classZEN_1_1ITransforms3D"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classZEN_1_1ITransforms3D')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classZEN_1_1ITransforms3D.html">ZEN::ITransforms3D</a></td></tr>
 <tr class="memitem:a835ef543c53e9a5a2f7b53466eb11179 inherit pub_attribs_classZEN_1_1ITransforms3D"><td class="memItemLeft" align="right" valign="top"><a id="a835ef543c53e9a5a2f7b53466eb11179"></a>
 Vec3&#160;</td><td class="memItemRight" valign="bottom"><b>position</b> = Vec3(0.0)</td></tr>
 <tr class="separator:a835ef543c53e9a5a2f7b53466eb11179 inherit pub_attribs_classZEN_1_1ITransforms3D"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>3D camera contract</p>
+<p><a class="el" href="camera-3d.html">3D camera</a> </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8142e328962447bfbe52390de0c5d759"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8142e328962447bfbe52390de0c5d759">&#9670;&nbsp;</a></span>getModelViewProjection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structZEN_1_1MVP.html">MVP</a> ZEN::ICamera3D::getModelViewProjection </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Calculate the Model-View-Projection (<a class="el" href="structZEN_1_1MVP.html">MVP</a>) matrix.</p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p>Implemented in <a class="el" href="classZEN_1_1Camera3D.html#aa68a25b3906a276cdeeafc84c52e5bf6">ZEN::Camera3D</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a93b00ae16a80115922bb352849bfb912"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93b00ae16a80115922bb352849bfb912">&#9670;&nbsp;</a></span>target</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vec3 ZEN::ICamera3D::target = Vec3(0.0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Target (i.e. what the camera is looking at) </p>
+
+</div>
+</div>
+<a id="a1910db2e075042c786d15f3b1572250d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1910db2e075042c786d15f3b1572250d">&#9670;&nbsp;</a></span>up</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vec3 ZEN::ICamera3D::up = Vec3(0.0, 1.0, 0.0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Which direction is upward. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/zeronetics/contracts/<a class="el" href="cameras_8h_source.html">cameras.h</a></li>
 </ul>
@@ -129,7 +192,7 @@ Vec3&#160;</td><td class="memItemRight" valign="bottom"><b>position</b> = Vec3(0
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>ZEN</b></li><li class="navelem"><a class="el" href="classZEN_1_1ICamera3D.html">ICamera3D</a></li>
+    <li class="navelem"><a class="el" href="namespaceZEN.html">ZEN</a></li><li class="navelem"><a class="el" href="classZEN_1_1ICamera3D.html">ICamera3D</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>

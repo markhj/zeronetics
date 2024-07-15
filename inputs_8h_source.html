@@ -96,24 +96,24 @@ $(document).ready(function(){initNavTree('inputs_8h_source.html',''); initResiza
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;optional&gt;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span>ZEN {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceZEN.html">ZEN</a> {</div>
 <div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="structZEN_1_1KeyMap.html">   14</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structZEN_1_1KeyMap.html">KeyMap</a> {</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="structZEN_1_1KeyMap.html#af188525c34a478ed55667792689c61df">   25</a></span>&#160;        <span class="keyword">static</span> std::optional&lt;Key&gt; <a class="code" href="structZEN_1_1KeyMap.html#af188525c34a478ed55667792689c61df">toKey</a>(<span class="keywordtype">int</span> key);</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="structZEN_1_1KeyMap.html#ac9f5826ae2b544bff3125af4482392d7">   33</a></span>&#160;        <span class="keyword">static</span> std::optional&lt;int&gt; <a class="code" href="structZEN_1_1KeyMap.html#ac9f5826ae2b544bff3125af4482392d7">toInt</a>(<span class="keyword">const</span> Key &amp;key);</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="structZEN_1_1KeyMap.html#ac9f5826ae2b544bff3125af4482392d7">   33</a></span>&#160;        <span class="keyword">static</span> std::optional&lt;int&gt; <a class="code" href="structZEN_1_1KeyMap.html#ac9f5826ae2b544bff3125af4482392d7">toInt</a>(<span class="keyword">const</span> <a class="code" href="namespaceZEN.html#a68b344c77c113e5bffc15e7c46c125c5">Key</a> &amp;key);</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keyword">static</span> std::unordered_map&lt;int, Key&gt; map;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    };</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
 <div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="structZEN_1_1KeyStateEvent.html">   45</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structZEN_1_1KeyStateEvent.html">KeyStateEvent</a> {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        KeyState keyState;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        Key key;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="namespaceZEN.html#a6f413524c1a3cf3b76dce9a72a3e9be5">KeyState</a> keyState;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="namespaceZEN.html#a68b344c77c113e5bffc15e7c46c125c5">Key</a> key;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    };</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
 <div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="structZEN_1_1MousePosition.html">   53</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structZEN_1_1MousePosition.html">MousePosition</a> {</div>
-<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="structZEN_1_1MousePosition.html#aee305fd0967cf64c67af8400f89253bd">   57</a></span>&#160;        mouse_pos_axis <a class="code" href="structZEN_1_1MousePosition.html#aee305fd0967cf64c67af8400f89253bd">x</a>, y;</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="structZEN_1_1MousePosition.html#aee305fd0967cf64c67af8400f89253bd">   57</a></span>&#160;        <a class="code" href="namespaceZEN.html#a6ca0446a44cb9f650316f26a9cca2fe3">mouse_pos_axis</a> <a class="code" href="structZEN_1_1MousePosition.html#aee305fd0967cf64c67af8400f89253bd">x</a>, y;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    };</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
 <div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="structZEN_1_1MouseMovedEvent.html">   66</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structZEN_1_1MouseMovedEvent.html">MouseMovedEvent</a> {</div>
@@ -122,6 +122,10 @@ $(document).ready(function(){initNavTree('inputs_8h_source.html',''); initResiza
 <div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="structZEN_1_1MouseMovedEvent.html#a982941264a686cf8d633ad884ef7df48">   75</a></span>&#160;        <a class="code" href="structZEN_1_1MousePosition.html">MousePosition</a> <a class="code" href="structZEN_1_1MouseMovedEvent.html#a982941264a686cf8d633ad884ef7df48">relative</a>;</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    };</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
+<div class="ttc" id="anamespaceZEN_html"><div class="ttname"><a href="namespaceZEN.html">ZEN</a></div><div class="ttdef"><b>Definition:</b> cameras.h:6</div></div>
+<div class="ttc" id="anamespaceZEN_html_a68b344c77c113e5bffc15e7c46c125c5"><div class="ttname"><a href="namespaceZEN.html#a68b344c77c113e5bffc15e7c46c125c5">ZEN::Key</a></div><div class="ttdeci">Key</div><div class="ttdef"><b>Definition:</b> enums.h:21</div></div>
+<div class="ttc" id="anamespaceZEN_html_a6ca0446a44cb9f650316f26a9cca2fe3"><div class="ttname"><a href="namespaceZEN.html#a6ca0446a44cb9f650316f26a9cca2fe3">ZEN::mouse_pos_axis</a></div><div class="ttdeci">double mouse_pos_axis</div><div class="ttdef"><b>Definition:</b> typedefs.h:37</div></div>
+<div class="ttc" id="anamespaceZEN_html_a6f413524c1a3cf3b76dce9a72a3e9be5"><div class="ttname"><a href="namespaceZEN.html#a6f413524c1a3cf3b76dce9a72a3e9be5">ZEN::KeyState</a></div><div class="ttdeci">KeyState</div><div class="ttdef"><b>Definition:</b> enums.h:10</div></div>
 <div class="ttc" id="astructZEN_1_1KeyMap_html"><div class="ttname"><a href="structZEN_1_1KeyMap.html">ZEN::KeyMap</a></div><div class="ttdef"><b>Definition:</b> inputs.h:14</div></div>
 <div class="ttc" id="astructZEN_1_1KeyMap_html_ac9f5826ae2b544bff3125af4482392d7"><div class="ttname"><a href="structZEN_1_1KeyMap.html#ac9f5826ae2b544bff3125af4482392d7">ZEN::KeyMap::toInt</a></div><div class="ttdeci">static std::optional&lt; int &gt; toInt(const Key &amp;key)</div></div>
 <div class="ttc" id="astructZEN_1_1KeyMap_html_af188525c34a478ed55667792689c61df"><div class="ttname"><a href="structZEN_1_1KeyMap.html#af188525c34a478ed55667792689c61df">ZEN::KeyMap::toKey</a></div><div class="ttdeci">static std::optional&lt; Key &gt; toKey(int key)</div></div>

@@ -93,26 +93,28 @@ $(document).ready(function(){initNavTree('cube_8h_source.html',''); initResizabl
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;zeronetics/core/vertices.h&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;zeronetics/core/shape.h&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span>ZEN {</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceZEN.html">ZEN</a> {</div>
 <div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="classZEN_1_1Cube.html">    8</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classZEN_1_1Cube.html">Cube</a> : <span class="keyword">public</span> <a class="code" href="classZEN_1_1Shape3D.html">Shape3D</a> {</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <a class="code" href="classZEN_1_1Cube.html">Cube</a>();</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classZEN_1_1Cube.html">Cube</a>(gw_float scalar);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classZEN_1_1Cube.html">Cube</a>(<a class="code" href="namespaceZEN.html#a5089f560467278c4efaed05ce45f57a7">gw_float</a> scalar);</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <a class="code" href="classZEN_1_1Cube.html">Cube</a>(gw_float width, gw_float height, gw_float depth);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <a class="code" href="classZEN_1_1Cube.html">Cube</a>(<a class="code" href="namespaceZEN.html#a5089f560467278c4efaed05ce45f57a7">gw_float</a> width, <a class="code" href="namespaceZEN.html#a5089f560467278c4efaed05ce45f57a7">gw_float</a> height, <a class="code" href="namespaceZEN.html#a5089f560467278c4efaed05ce45f57a7">gw_float</a> depth);</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classZEN_1_1Cube.html#a55245ac8e39d86c8ba06f24067cd7da5">   17</a></span>&#160;        [[nodiscard]] std::vector&lt;Vertex3D&gt; <a class="code" href="classZEN_1_1Cube.html#a55245ac8e39d86c8ba06f24067cd7da5">make</a>() const noexcept override;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    private:</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        gw_float m_width, m_height, m_depth;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="namespaceZEN.html#a5089f560467278c4efaed05ce45f57a7">gw_float</a> m_width, m_height, m_depth;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    };</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
 <div class="ttc" id="aclassZEN_1_1Cube_html"><div class="ttname"><a href="classZEN_1_1Cube.html">ZEN::Cube</a></div><div class="ttdef"><b>Definition:</b> cube.h:8</div></div>
 <div class="ttc" id="aclassZEN_1_1Cube_html_a55245ac8e39d86c8ba06f24067cd7da5"><div class="ttname"><a href="classZEN_1_1Cube.html#a55245ac8e39d86c8ba06f24067cd7da5">ZEN::Cube::make</a></div><div class="ttdeci">std::vector&lt; Vertex3D &gt; make() const noexcept override</div></div>
 <div class="ttc" id="aclassZEN_1_1Shape3D_html"><div class="ttname"><a href="classZEN_1_1Shape3D.html">ZEN::Shape3D</a></div><div class="ttdef"><b>Definition:</b> shape.h:6</div></div>
+<div class="ttc" id="anamespaceZEN_html"><div class="ttname"><a href="namespaceZEN.html">ZEN</a></div><div class="ttdef"><b>Definition:</b> cameras.h:6</div></div>
+<div class="ttc" id="anamespaceZEN_html_a5089f560467278c4efaed05ce45f57a7"><div class="ttname"><a href="namespaceZEN.html#a5089f560467278c4efaed05ce45f57a7">ZEN::gw_float</a></div><div class="ttdeci">float gw_float</div><div class="ttdef"><b>Definition:</b> typedefs.h:16</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

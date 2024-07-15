@@ -101,16 +101,16 @@ $(document).ready(function(){initNavTree('vbo_8h_source.html',''); initResizable
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        [[nodiscard]] gl_uint getContextId() <span class="keyword">const override</span>;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classZEN_1_1OpenGL_1_1VBO.html#abdc4fffca375fb5608f78b782e6e3c8c">resize</a>(gpu_alloc_int size);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classZEN_1_1OpenGL_1_1VBO.html#abdc4fffca375fb5608f78b782e6e3c8c">resize</a>(<a class="code" href="namespaceZEN.html#add96e6cf45c9f06715b3fae49d078f35">gpu_alloc_int</a> size);</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        std::optional&lt;GPUAllocation&gt; <a class="code" href="classZEN_1_1OpenGL_1_1VBO.html#af9d5e863d3c5fe4091175cc99fcc0af3">allocate</a>(gpu_alloc_int size);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        std::optional&lt;GPUAllocation&gt; <a class="code" href="classZEN_1_1OpenGL_1_1VBO.html#af9d5e863d3c5fe4091175cc99fcc0af3">allocate</a>(<a class="code" href="namespaceZEN.html#add96e6cf45c9f06715b3fae49d078f35">gpu_alloc_int</a> size);</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordtype">void</span> setData(std::vector&lt;gl_float&gt; data);</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordtype">void</span> updateData(<span class="keyword">const</span> <a class="code" href="structZEN_1_1GPUAllocation.html">GPUAllocation</a> &amp;allocation,</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                        <span class="keyword">const</span> std::vector&lt;gl_float&gt; &amp;data);</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        [[nodiscard]] gpu_alloc_int getCurrentSize() <span class="keyword">const</span> noexcept;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        [[nodiscard]] <a class="code" href="namespaceZEN.html#add96e6cf45c9f06715b3fae49d078f35">gpu_alloc_int</a> getCurrentSize() <span class="keyword">const</span> noexcept;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        [[nodiscard]] std::optional&lt;gl_uint&gt; getCurrentContextId() <span class="keyword">const override</span>;</div>
@@ -118,7 +118,7 @@ $(document).ready(function(){initNavTree('vbo_8h_source.html',''); initResizable
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        gl_uint <span class="keywordtype">id</span> = 0;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        gpu_alloc_int currentAllocIndex = 0,</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <a class="code" href="namespaceZEN.html#add96e6cf45c9f06715b3fae49d078f35">gpu_alloc_int</a> currentAllocIndex = 0,</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                      currentSize = 0;</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    };</div>
@@ -127,6 +127,7 @@ $(document).ready(function(){initNavTree('vbo_8h_source.html',''); initResizable
 <div class="ttc" id="aclassZEN_1_1OpenGL_1_1VBO_html"><div class="ttname"><a href="classZEN_1_1OpenGL_1_1VBO.html">ZEN::OpenGL::VBO</a></div><div class="ttdef"><b>Definition:</b> vbo.h:7</div></div>
 <div class="ttc" id="aclassZEN_1_1OpenGL_1_1VBO_html_abdc4fffca375fb5608f78b782e6e3c8c"><div class="ttname"><a href="classZEN_1_1OpenGL_1_1VBO.html#abdc4fffca375fb5608f78b782e6e3c8c">ZEN::OpenGL::VBO::resize</a></div><div class="ttdeci">void resize(gpu_alloc_int size)</div><div class="ttdef"><b>Definition:</b> vbo.cpp:44</div></div>
 <div class="ttc" id="aclassZEN_1_1OpenGL_1_1VBO_html_af9d5e863d3c5fe4091175cc99fcc0af3"><div class="ttname"><a href="classZEN_1_1OpenGL_1_1VBO.html#af9d5e863d3c5fe4091175cc99fcc0af3">ZEN::OpenGL::VBO::allocate</a></div><div class="ttdeci">std::optional&lt; GPUAllocation &gt; allocate(gpu_alloc_int size)</div><div class="ttdef"><b>Definition:</b> vbo.cpp:60</div></div>
+<div class="ttc" id="anamespaceZEN_html_add96e6cf45c9f06715b3fae49d078f35"><div class="ttname"><a href="namespaceZEN.html#add96e6cf45c9f06715b3fae49d078f35">ZEN::gpu_alloc_int</a></div><div class="ttdeci">unsigned int gpu_alloc_int</div><div class="ttdef"><b>Definition:</b> typedefs.h:51</div></div>
 <div class="ttc" id="astructZEN_1_1GPUAllocation_html"><div class="ttname"><a href="structZEN_1_1GPUAllocation.html">ZEN::GPUAllocation</a></div><div class="ttdef"><b>Definition:</b> gpu-alloc.h:6</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

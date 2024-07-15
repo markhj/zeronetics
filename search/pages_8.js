@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['input_20manager_264',['Input Manager',['../input-manager.html',1,'tutorials']]],
-  ['install_20and_20build_20engine_265',['Install and build engine',['../install-engine.html',1,'getting-started']]]
+  ['handling_20the_20mouse_331',['Handling the mouse',['../mouse.html',1,'tutorials']]]
 ];

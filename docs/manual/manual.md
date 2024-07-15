@@ -4,3 +4,4 @@
 @subpage logging-index  
 @subpage geometry-math  
 @subpage entities
+@subpage rendering

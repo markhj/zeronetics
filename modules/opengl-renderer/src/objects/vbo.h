@@ -4,12 +4,30 @@
 #include "opengl-renderer/opengl.hpp"
 
 namespace ZEN::OpenGL {
+    /**
+     * Vertex Buffer Object
+     *
+     * @ref opengl-allocation
+     */
     class VBO : public OpenGL::Object {
     public:
+        /**
+         * Initialize the context
+         */
         void initialize() noexcept(false);
 
+        /**
+         * Make this VBO active.
+         *
+         * @param context
+         */
         void bindTo(gl_uint context) override;
 
+        /**
+         * Get this VBO's ID.
+         *
+         * @return
+         */
         [[nodiscard]] gl_uint getContextId() const override;
 
         /**
@@ -43,11 +61,28 @@ namespace ZEN::OpenGL {
          */
         std::optional<GPUAllocation> allocate(gpu_alloc_int size);
 
+        /**
+         * Set data.
+         *
+         * @deprecated
+         * @param data
+         */
         void setData(std::vector<gl_float> data);
 
+        /**
+         * Update data at the specified location (allocation).
+         *
+         * @param allocation
+         * @param data
+         */
         void updateData(const GPUAllocation &allocation,
                         const std::vector<gl_float> &data);
 
+        /**
+         * Get the size currently allocated for the VBO.
+         *
+         * @return
+         */
         [[nodiscard]] gpu_alloc_int getCurrentSize() const noexcept;
 
     protected:

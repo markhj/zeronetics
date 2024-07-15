@@ -1,5 +1,8 @@
 @page setting-up-a-game Create a game
 
+@warning The engine is still a few features short of being
+able to produce gameplay. Therefore, this article is incomplete.
+
 This page assumes you've already
 @ref install-engine "installed and built the engine".
 

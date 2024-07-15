@@ -49,7 +49,7 @@ Examples:
 > @ref build-info, because it has no dependencies  
 > logging.h macros are not allowed, because they depend on ZEN::Log 
 
-## 📚 Core: 2<sup>nd</sup> level
+## 📚 Core: 2nd level
 
 **Dependency from same layer**: Not allowed  
 **Location:** ``include/zeronetics/core/``
@@ -66,7 +66,7 @@ This is not to be treated as a layer with interfaces.
 > ZEN::Settings  
 > ZEN::Version
 
-## 📥 Core: 3<sup>rd</sup> level
+## 📥 Core: 3rd level
 
 **Dependency from same layer**: Allowed, but exercise caution.  
 **Location:** ``include/zeronetics/core/``
@@ -96,11 +96,11 @@ For abstract classes, see the next chapter.
 
 ## 💎 Traits
 
-**Dependency from same layer**: Not allowed.
+**Dependency from same layer**: Not allowed.  
 **Location:** ``include/traits/``
 
-Classes whose purpose is to support classes which inherits
-traits in implementing reusable functionality.
+Classes whose purpose is to support other classes with
+reusable functionality.
 
 ## 📱 Advanced structures
 
@@ -120,7 +120,7 @@ Abstract classes also reside in this layer.
 ## 📦 Modules
 
 **Dependency from same layer**: Not allowed.  
-**Location:** ``modules/``
+**Location:** ``modules/<module name>/``
 
 Modules can extend and depend on anything from the main
 engine.

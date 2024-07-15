@@ -32,7 +32,7 @@ To log something on-the-fly you use the ``ZEN_REPORT(entry)`` macro,
 where ``entry`` is an instance of ZEN::LogFileEntry.
 
 ````cpp
-ZEN_REPORT({"The player well off the edge."});
+ZEN_REPORT({"The player fell off the edge."});
 ````
 
 You can add more detailed information by filling out the full

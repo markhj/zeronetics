@@ -18,7 +18,22 @@ could replace the "out of the box"-OpenGL renderer with your own.
 
 ... That's about it for now 😐 This is, like, version ``0.1.x``.
 
+## 🪲 Requests and bugs
+
+**Feature requests**, as well as **bug reporting**, takes place on the
+[issues page on GitHub](https://github.com/markhj/zeronetics/issues).
+
 ## 📜 Documentation
 
-Documentation is available on
-[GitHub Pages](https://markhj.github.io/zeronetics/).
+Documentation is available on [GitHub Pages](https://markhj.github.io/zeronetics/).
+
+### Tools
+
+We're using [Whimsical](https://whimsical.com) to draw diagrams, and
+[Cloudinary](https://cloudinary.com) to host media files.
+
+### Local documentation
+
+You can generate the documentation locally using
+[Doxygen](https://www.doxygen.nl), and the command ``doxygen``
+from the project root.

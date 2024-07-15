@@ -31,6 +31,8 @@ namespace ZEN::OpenGL {
     /**
      * Abstract class which implements as much as possible of the
      * OpenGL::IBindable contract, by leaves context-specific implementation open.
+     *
+     * @ref opengl-bindable
      */
     template<typename T>
     class StdBinding : public IBindable<T> {

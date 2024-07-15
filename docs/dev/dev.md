@@ -13,6 +13,10 @@ or working on forks of it.
 
 @subpage callbacks
 
+## Rendering
+
+@subpage arch-render-manager
+
 ## Logging
 
 @ref log-engine-dev

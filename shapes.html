@@ -104,9 +104,9 @@ $(document).ready(function(){initNavTree('shapes.html',''); initResizable(); });
 </table>
 <h2><a class="anchor" id="autotoc_md42"></a>
 ⭕ Custom shapes</h2>
-<p>You can build your own shapes by extended <a class="el" href="classZEN_1_1Shape3D.html">ZEN::Shape3D</a>, and implementing the <a class="el" href="classZEN_1_1IShape.html#a21d868feb2eabc68a587f7fb59d7f9fc">ZEN::IShape::make</a> method.</p>
-<p>The normal process is defining a constructor which takes the properties you need. A sphere, for instance, needs a radius.</p>
-<dl class="section note"><dt>Note</dt><dd>Important: You must write your shape code such that the center of the object is at <code>(0, 0, 0)</code>, otherwise positioning will not work as expected.</dd></dl>
+<p>You can build your own shapes by extending <a class="el" href="classZEN_1_1Shape3D.html">ZEN::Shape3D</a>, and implementing the <a class="el" href="classZEN_1_1IShape.html#a21d868feb2eabc68a587f7fb59d7f9fc">ZEN::IShape::make</a> method.</p>
+<p>The normal process is defining a constructor which takes the properties you need. A sphere, for instance, needs a radius. But exactly <em>which</em> arguments you have to take depend on the shape you want to construct.</p>
+<dl class="section note"><dt>Note</dt><dd>Important: You must implement the <code>make</code> method such that the center of the shape is at <code>(0, 0, 0)</code>, otherwise positioning will not work as expected.</dd></dl>
 <h2><a class="anchor" id="autotoc_md43"></a>
 📜 See also</h2>
 <p><a class="el" href="geometry-relationships.html">Geometry relationships</a> </p>

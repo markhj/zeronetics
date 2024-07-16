@@ -1,6 +1,6 @@
 #include "glad/glad.h"
 #include "glm/gtc/type_ptr.hpp"
-#include "opengl-renderer/opengl.hpp"
+#include "opengl-renderer/opengl.h"
 #include "zeronetics/logging/logging.h"
 #include <format>
 #include <iostream>

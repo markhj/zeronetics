@@ -23,15 +23,6 @@ ZEN::OpenGL::gl_uint ZEN::OpenGL::VBO::getContextId() const {
     return id;
 }
 
-void ZEN::OpenGL::VBO::setData(std::vector<gl_float> data) {
-    with([&]() {
-        glBufferSubData(GL_ARRAY_BUFFER,
-                        0,
-                        data.size() * sizeof(GLfloat),
-                        data.data());
-    });
-}
-
 void ZEN::OpenGL::VBO::updateData(const ZEN::GPUAllocation &allocation, const std::vector<gl_float> &data) {
     with([&]() {
         glBufferSubData(GL_ARRAY_BUFFER,

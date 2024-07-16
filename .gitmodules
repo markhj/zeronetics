@@ -7,3 +7,6 @@
 [submodule "vendor/glm"]
 	path = vendor/glm
 	url = https://github.com/g-truc/glm
+[submodule "vendor/cpp-bbunit"]
+	path = vendor/cpp-bbunit
+	url = https://github.com/markhj/cpp-bbunit

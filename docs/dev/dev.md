@@ -22,3 +22,7 @@ or working on forks of it.
 @ref log-engine-dev
 
 @ref log-why-macros
+
+## Tests
+
+@ref tests

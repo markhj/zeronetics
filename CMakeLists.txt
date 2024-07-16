@@ -40,3 +40,8 @@ include(cmake/modules.cmake)
 foreach (ZEN_MODULE ${ZEN_MODULES})
     add_subdirectory(modules/${ZEN_MODULE})
 endforeach ()
+
+# Tests
+if ($ENV{ZEN_BUILD_TESTS})
+    add_subdirectory(tests)
+endif ()

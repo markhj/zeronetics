@@ -62,10 +62,10 @@ var namespaceZEN =
       [ "Object", "classZEN_1_1OpenGL_1_1Object.html", null ],
       [ "VAO", "classZEN_1_1OpenGL_1_1VAO.html", "classZEN_1_1OpenGL_1_1VAO" ],
       [ "VBO", "classZEN_1_1OpenGL_1_1VBO.html", "classZEN_1_1OpenGL_1_1VBO" ],
-      [ "gl_enum", "opengl_8hpp.html#ace108a125e713702a9dbaac25e05cce3", null ],
-      [ "gl_float", "opengl_8hpp.html#a3cf0cd9d8361f9a3e192fe9377abe102", null ],
-      [ "gl_int", "opengl_8hpp.html#aa1b2a8f39523be4c06690265b90199ef", null ],
-      [ "gl_uint", "opengl_8hpp.html#a32fc3170efffdd3e18329f464d582a0a", null ]
+      [ "gl_enum", "opengl_8h.html#ace108a125e713702a9dbaac25e05cce3", null ],
+      [ "gl_float", "opengl_8h.html#a3cf0cd9d8361f9a3e192fe9377abe102", null ],
+      [ "gl_int", "opengl_8h.html#aa1b2a8f39523be4c06690265b90199ef", null ],
+      [ "gl_uint", "opengl_8h.html#a32fc3170efffdd3e18329f464d582a0a", null ]
     ] ],
     [ "ICamera3D", "classZEN_1_1ICamera3D.html", "classZEN_1_1ICamera3D" ],
     [ "IInputManager", "classZEN_1_1IInputManager.html", "classZEN_1_1IInputManager" ],

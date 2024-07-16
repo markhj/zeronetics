@@ -7,6 +7,5 @@ var classZEN_1_1OpenGL_1_1VBO =
     [ "getCurrentSize", "classZEN_1_1OpenGL_1_1VBO.html#af7cd3d563d9c154c1db835294f9ebcf6", null ],
     [ "initialize", "classZEN_1_1OpenGL_1_1VBO.html#a537cdbbfe4e8e0bb098377a641d8d224", null ],
     [ "resize", "classZEN_1_1OpenGL_1_1VBO.html#abdc4fffca375fb5608f78b782e6e3c8c", null ],
-    [ "setData", "classZEN_1_1OpenGL_1_1VBO.html#a939e66cebc6925a8a634462bb3e9a2d1", null ],
     [ "updateData", "classZEN_1_1OpenGL_1_1VBO.html#aa86fe3d7782d4f47e1431245c03ad79a", null ]
 ];

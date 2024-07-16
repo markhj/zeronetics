@@ -56,8 +56,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"",
-"logging.html"
+"annotated.html",
+"log-why-macros.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

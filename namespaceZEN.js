@@ -1,29 +1,32 @@
 var namespaceZEN =
 [
-    [ "Macros", "build-info.html#autotoc_md66", null ],
-    [ "Example", "build-info.html#autotoc_md67", null ],
-    [ "Note", "build-info.html#autotoc_md68", [
-      [ "💻 FPS", "fps.html#autotoc_md34", null ],
-      [ "⌛ Real render time", "fps.html#autotoc_md35", null ],
-      [ "📺 Generating the window", "settings.html#autotoc_md38", null ],
-      [ "🔧 List of settings", "settings.html#autotoc_md39", null ],
-      [ "🔇 Log level behavior", "log-configuration.html#autotoc_md50", [
-        [ "Example", "log-configuration.html#autotoc_md51", null ]
+    [ "Macros", "build-info.html#autotoc_md69", null ],
+    [ "Example", "build-info.html#autotoc_md70", null ],
+    [ "Note", "build-info.html#autotoc_md71", [
+      [ "💀 The problem", "delta.html#autotoc_md34", null ],
+      [ "💡 The solution", "delta.html#autotoc_md35", null ],
+      [ "See also", "delta.html#autotoc_md36", null ],
+      [ "💻 FPS", "fps.html#autotoc_md37", null ],
+      [ "⌛ Real render time", "fps.html#autotoc_md38", null ],
+      [ "📺 Generating the window", "settings.html#autotoc_md41", null ],
+      [ "🔧 List of settings", "settings.html#autotoc_md42", null ],
+      [ "🔇 Log level behavior", "log-configuration.html#autotoc_md53", [
+        [ "Example", "log-configuration.html#autotoc_md54", null ]
       ] ],
-      [ "✂️ Blacklisting categories", "log-configuration.html#autotoc_md52", null ],
-      [ "✏️ What is reporting?", "log-reporting.html#autotoc_md54", null ],
-      [ "📋 Usage", "log-reporting.html#autotoc_md55", null ],
-      [ "Library error", "log-engine-dev.html#autotoc_md53", null ],
-      [ "↗️ Vectors", "tensors.html#autotoc_md46", null ],
-      [ "🔢 Matrices", "tensors.html#autotoc_md47", null ],
-      [ "🔧 Implementation", "tensors.html#autotoc_md48", null ],
-      [ "See also", "vertices.html#autotoc_md49", null ],
-      [ "🔷 Shapes", "shapes.html#autotoc_md42", null ],
-      [ "📃 List of shapes", "shapes.html#autotoc_md43", null ],
-      [ "⭕ Custom shapes", "shapes.html#autotoc_md44", null ],
-      [ "📜 See also", "shapes.html#autotoc_md45", null ],
-      [ "🔢 Meshes and vertices", "geometry-relationships.html#autotoc_md40", null ],
-      [ "🔷 Shapes", "geometry-relationships.html#autotoc_md41", null ],
+      [ "✂️ Blacklisting categories", "log-configuration.html#autotoc_md55", null ],
+      [ "✏️ What is reporting?", "log-reporting.html#autotoc_md57", null ],
+      [ "📋 Usage", "log-reporting.html#autotoc_md58", null ],
+      [ "Library error", "log-engine-dev.html#autotoc_md56", null ],
+      [ "↗️ Vectors", "tensors.html#autotoc_md49", null ],
+      [ "🔢 Matrices", "tensors.html#autotoc_md50", null ],
+      [ "🔧 Implementation", "tensors.html#autotoc_md51", null ],
+      [ "See also", "vertices.html#autotoc_md52", null ],
+      [ "🔷 Shapes", "shapes.html#autotoc_md45", null ],
+      [ "📃 List of shapes", "shapes.html#autotoc_md46", null ],
+      [ "⭕ Custom shapes", "shapes.html#autotoc_md47", null ],
+      [ "📜 See also", "shapes.html#autotoc_md48", null ],
+      [ "🔢 Meshes and vertices", "geometry-relationships.html#autotoc_md43", null ],
+      [ "🔷 Shapes", "geometry-relationships.html#autotoc_md44", null ],
       [ "⚡ What are entities?", "entity-system.html#autotoc_md31", null ],
       [ "🎁 How it works", "entity-system.html#autotoc_md32", [
         [ "Important entities", "entity-system.html#autotoc_md33", null ]
@@ -31,26 +34,26 @@ var namespaceZEN =
       [ "📐 Aspect ratio", "camera-3d.html#autotoc_md28", null ],
       [ "👀 Field of view", "camera-3d.html#autotoc_md29", null ],
       [ "✂️ Clipping plane", "camera-3d.html#autotoc_md30", null ],
-      [ "🎨 What is a render manager?", "render-manager.html#autotoc_md58", null ],
-      [ "🎥 The \"scene\"", "render-manager.html#autotoc_md59", null ],
-      [ "🔠 What is a render group?", "render-groups.html#autotoc_md56", null ],
-      [ "🚧 Working with groups", "render-groups.html#autotoc_md57", null ],
-      [ "An example", "opengl-bindable.html#autotoc_md87", null ],
-      [ "Functions", "opengl-bindable.html#autotoc_md88", [
-        [ "Short-hand for binding", "opengl-bindable.html#autotoc_md89", null ],
-        [ "With", "opengl-bindable.html#autotoc_md90", null ]
+      [ "🎨 What is a render manager?", "render-manager.html#autotoc_md61", null ],
+      [ "🎥 The \"scene\"", "render-manager.html#autotoc_md62", null ],
+      [ "🔠 What is a render group?", "render-groups.html#autotoc_md59", null ],
+      [ "🚧 Working with groups", "render-groups.html#autotoc_md60", null ],
+      [ "An example", "opengl-bindable.html#autotoc_md90", null ],
+      [ "Functions", "opengl-bindable.html#autotoc_md91", [
+        [ "Short-hand for binding", "opengl-bindable.html#autotoc_md92", null ],
+        [ "With", "opengl-bindable.html#autotoc_md93", null ]
       ] ],
-      [ "CMake file", "create-modules.html#autotoc_md73", null ],
-      [ "Public headers", "create-modules.html#autotoc_md74", null ],
-      [ "Integrate in build process", "create-modules.html#autotoc_md75", null ]
+      [ "CMake file", "create-modules.html#autotoc_md76", null ],
+      [ "Public headers", "create-modules.html#autotoc_md77", null ],
+      [ "Integrate in build process", "create-modules.html#autotoc_md78", null ]
     ] ],
-    [ "Namespace", "create-modules.html#autotoc_md76", null ],
-    [ "How to make callbacks \"a la Zeronetics\"", "callbacks.html#autotoc_md69", null ],
-    [ "Examination of choices", "callbacks.html#autotoc_md70", [
-      [ "Using <tt>std::optional</tt>", "callbacks.html#autotoc_md71", null ],
-      [ "Smart pointers", "callbacks.html#autotoc_md72", null ]
+    [ "Namespace", "create-modules.html#autotoc_md79", null ],
+    [ "How to make callbacks \"a la Zeronetics\"", "callbacks.html#autotoc_md72", null ],
+    [ "Examination of choices", "callbacks.html#autotoc_md73", [
+      [ "Using <tt>std::optional</tt>", "callbacks.html#autotoc_md74", null ],
+      [ "Smart pointers", "callbacks.html#autotoc_md75", null ]
     ] ],
-    [ "🔀 Management of allocation", "arch-render-manager.html#autotoc_md63", null ],
+    [ "🔀 Management of allocation", "arch-render-manager.html#autotoc_md66", null ],
     [ "OpenGL", null, [
       [ "IBindable", "classZEN_1_1OpenGL_1_1IBindable.html", "classZEN_1_1OpenGL_1_1IBindable" ],
       [ "StdBinding", "classZEN_1_1OpenGL_1_1StdBinding.html", "classZEN_1_1OpenGL_1_1StdBinding" ],

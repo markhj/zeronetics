@@ -38,10 +38,10 @@ var namespaceZEN =
       [ "🎥 The \"scene\"", "render-manager.html#autotoc_md62", null ],
       [ "🔠 What is a render group?", "render-groups.html#autotoc_md59", null ],
       [ "🚧 Working with groups", "render-groups.html#autotoc_md60", null ],
-      [ "An example", "opengl-bindable.html#autotoc_md90", null ],
-      [ "Functions", "opengl-bindable.html#autotoc_md91", [
-        [ "Short-hand for binding", "opengl-bindable.html#autotoc_md92", null ],
-        [ "With", "opengl-bindable.html#autotoc_md93", null ]
+      [ "An example", "opengl-bindable.html#autotoc_md93", null ],
+      [ "Functions", "opengl-bindable.html#autotoc_md94", [
+        [ "Short-hand for binding", "opengl-bindable.html#autotoc_md95", null ],
+        [ "With", "opengl-bindable.html#autotoc_md96", null ]
       ] ],
       [ "CMake file", "create-modules.html#autotoc_md76", null ],
       [ "Public headers", "create-modules.html#autotoc_md77", null ],

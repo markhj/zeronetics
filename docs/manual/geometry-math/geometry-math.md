@@ -2,5 +2,6 @@
 
 @subpage gw-float  
 @subpage tensors  
-@subpage vertices
-
+@subpage vertices  
+@subpage shapes  
+@subpage geometry-relationships

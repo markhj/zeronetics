@@ -17,3 +17,7 @@ A line consists of two. A triangle consists of three.
 
 In Zeronetics, you have ZEN::Vertex3D to build 3D shapes. The ``Vertex3D``
 struct is used to pass information about shapes to @ref ZEN::IRenderer "renderers".
+
+## See also
+
+@ref geometry-relationships

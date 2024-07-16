@@ -5,6 +5,14 @@
 #include <vector>
 
 namespace ZEN {
+    /**
+     * Shape contract
+     *
+     * @tparam T
+     *
+     * @ref shapes
+     * @ref geometry-relationships
+     */
     template<typename T>
     class IShape {
     public:
@@ -28,6 +36,12 @@ namespace ZEN {
 
     };
 
+    /**
+     * 3D shape contract
+     *
+     * @ref shapes
+     * @ref geometry-relationships
+     */
     class IShape3D : public IShape<Vertex3D> {
     public:
 

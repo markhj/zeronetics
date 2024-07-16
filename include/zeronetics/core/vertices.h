@@ -11,6 +11,7 @@ namespace ZEN {
      * 3D vertex
      *
      * @ref vertices
+     * @ref geometry-relationships
      */
     struct Vertex3D {
         /**

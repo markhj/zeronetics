@@ -1,47 +1,47 @@
 var namespaceZEN =
 [
-    [ "Macros", "build-info.html#autotoc_md52", null ],
-    [ "Example", "build-info.html#autotoc_md53", null ],
-    [ "Note", "build-info.html#autotoc_md54", [
-      [ "💻 FPS", "fps.html#autotoc_md29", null ],
-      [ "⌛ Real render time", "fps.html#autotoc_md30", null ],
-      [ "🔇 Log level behavior", "log-configuration.html#autotoc_md36", [
-        [ "Example", "log-configuration.html#autotoc_md37", null ]
+    [ "Macros", "build-info.html#autotoc_md57", null ],
+    [ "Example", "build-info.html#autotoc_md58", null ],
+    [ "Note", "build-info.html#autotoc_md59", [
+      [ "💻 FPS", "fps.html#autotoc_md34", null ],
+      [ "⌛ Real render time", "fps.html#autotoc_md35", null ],
+      [ "🔇 Log level behavior", "log-configuration.html#autotoc_md41", [
+        [ "Example", "log-configuration.html#autotoc_md42", null ]
       ] ],
-      [ "✂️ Blacklisting categories", "log-configuration.html#autotoc_md38", null ],
-      [ "✏️ What is reporting?", "log-reporting.html#autotoc_md40", null ],
-      [ "📋 Usage", "log-reporting.html#autotoc_md41", null ],
-      [ "Library error", "log-engine-dev.html#autotoc_md39", null ],
-      [ "↗️ Vectors", "tensors.html#autotoc_md33", null ],
-      [ "🔢 Matrices", "tensors.html#autotoc_md34", null ],
-      [ "🔧 Implementation", "tensors.html#autotoc_md35", null ],
-      [ "⚡ What are entities?", "entity-system.html#autotoc_md26", null ],
-      [ "🎁 How it works", "entity-system.html#autotoc_md27", [
-        [ "Important entities", "entity-system.html#autotoc_md28", null ]
+      [ "✂️ Blacklisting categories", "log-configuration.html#autotoc_md43", null ],
+      [ "✏️ What is reporting?", "log-reporting.html#autotoc_md45", null ],
+      [ "📋 Usage", "log-reporting.html#autotoc_md46", null ],
+      [ "Library error", "log-engine-dev.html#autotoc_md44", null ],
+      [ "↗️ Vectors", "tensors.html#autotoc_md38", null ],
+      [ "🔢 Matrices", "tensors.html#autotoc_md39", null ],
+      [ "🔧 Implementation", "tensors.html#autotoc_md40", null ],
+      [ "⚡ What are entities?", "entity-system.html#autotoc_md31", null ],
+      [ "🎁 How it works", "entity-system.html#autotoc_md32", [
+        [ "Important entities", "entity-system.html#autotoc_md33", null ]
       ] ],
-      [ "📐 Aspect ratio", "camera-3d.html#autotoc_md23", null ],
-      [ "👀 Field of view", "camera-3d.html#autotoc_md24", null ],
-      [ "✂️ Clipping plane", "camera-3d.html#autotoc_md25", null ],
-      [ "🎨 What is a render manager?", "render-manager.html#autotoc_md44", null ],
-      [ "🎥 The \"scene\"", "render-manager.html#autotoc_md45", null ],
-      [ "🔠 What is a render group?", "render-groups.html#autotoc_md42", null ],
-      [ "🚧 Working with groups", "render-groups.html#autotoc_md43", null ],
-      [ "An example", "opengl-bindable.html#autotoc_md73", null ],
-      [ "Functions", "opengl-bindable.html#autotoc_md74", [
-        [ "Short-hand for binding", "opengl-bindable.html#autotoc_md75", null ],
-        [ "With", "opengl-bindable.html#autotoc_md76", null ]
+      [ "📐 Aspect ratio", "camera-3d.html#autotoc_md28", null ],
+      [ "👀 Field of view", "camera-3d.html#autotoc_md29", null ],
+      [ "✂️ Clipping plane", "camera-3d.html#autotoc_md30", null ],
+      [ "🎨 What is a render manager?", "render-manager.html#autotoc_md49", null ],
+      [ "🎥 The \"scene\"", "render-manager.html#autotoc_md50", null ],
+      [ "🔠 What is a render group?", "render-groups.html#autotoc_md47", null ],
+      [ "🚧 Working with groups", "render-groups.html#autotoc_md48", null ],
+      [ "An example", "opengl-bindable.html#autotoc_md78", null ],
+      [ "Functions", "opengl-bindable.html#autotoc_md79", [
+        [ "Short-hand for binding", "opengl-bindable.html#autotoc_md80", null ],
+        [ "With", "opengl-bindable.html#autotoc_md81", null ]
       ] ],
-      [ "CMake file", "create-modules.html#autotoc_md59", null ],
-      [ "Public headers", "create-modules.html#autotoc_md60", null ],
-      [ "Integrate in build process", "create-modules.html#autotoc_md61", null ]
+      [ "CMake file", "create-modules.html#autotoc_md64", null ],
+      [ "Public headers", "create-modules.html#autotoc_md65", null ],
+      [ "Integrate in build process", "create-modules.html#autotoc_md66", null ]
     ] ],
-    [ "Namespace", "create-modules.html#autotoc_md62", null ],
-    [ "How to make callbacks \"a la Zeronetics\"", "callbacks.html#autotoc_md55", null ],
-    [ "Examination of choices", "callbacks.html#autotoc_md56", [
-      [ "Using <tt>std::optional</tt>", "callbacks.html#autotoc_md57", null ],
-      [ "Smart pointers", "callbacks.html#autotoc_md58", null ]
+    [ "Namespace", "create-modules.html#autotoc_md67", null ],
+    [ "How to make callbacks \"a la Zeronetics\"", "callbacks.html#autotoc_md60", null ],
+    [ "Examination of choices", "callbacks.html#autotoc_md61", [
+      [ "Using <tt>std::optional</tt>", "callbacks.html#autotoc_md62", null ],
+      [ "Smart pointers", "callbacks.html#autotoc_md63", null ]
     ] ],
-    [ "🔀 Management of allocation", "arch-render-manager.html#autotoc_md49", null ],
+    [ "🔀 Management of allocation", "arch-render-manager.html#autotoc_md54", null ],
     [ "OpenGL", null, [
       [ "IBindable", "classZEN_1_1OpenGL_1_1IBindable.html", "classZEN_1_1OpenGL_1_1IBindable" ],
       [ "StdBinding", "classZEN_1_1OpenGL_1_1StdBinding.html", "classZEN_1_1OpenGL_1_1StdBinding" ],
@@ -190,6 +190,7 @@ var namespaceZEN =
       [ "None", "namespaceZEN.html#a5ac493fe076dd216cf2f69f8b01f05efa6adf97f83acf6453d4a6a4b1070f3754", null ],
       [ "Critical", "namespaceZEN.html#a5ac493fe076dd216cf2f69f8b01f05efa278d01e5af56273bae1bb99a98b370cd", null ],
       [ "Info", "namespaceZEN.html#a5ac493fe076dd216cf2f69f8b01f05efa4059b0251f66a18cb56f544728796875", null ],
+      [ "FileSystem", "namespaceZEN.html#a5ac493fe076dd216cf2f69f8b01f05efae2d63d195b2bce9c8d5bf797a268bcec", null ],
       [ "RendererInit", "namespaceZEN.html#a5ac493fe076dd216cf2f69f8b01f05efacf48c3dcb3d12b3c90852b98a6a885f9", null ],
       [ "Rendering", "namespaceZEN.html#a5ac493fe076dd216cf2f69f8b01f05efaa6e8f9aed2ac6481dc25a18a33342d03", null ],
       [ "RendererInternals", "namespaceZEN.html#a5ac493fe076dd216cf2f69f8b01f05efa37e93c4876abdbf5d2143dd6310f1a14", null ],

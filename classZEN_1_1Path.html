@@ -90,25 +90,168 @@ $(document).ready(function(){initNavTree('classZEN_1_1Path.html',''); initResiza
 <div class="title">ZEN::Path Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="io_8h_source.html">io.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a60af66e19ee61f82a7536e852777b07d"><td class="memItemLeft" align="right" valign="top"><a id="a60af66e19ee61f82a7536e852777b07d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Path</b> (const std::string &amp;path)</td></tr>
+<tr class="memitem:a60af66e19ee61f82a7536e852777b07d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1Path.html#a60af66e19ee61f82a7536e852777b07d">Path</a> (const std::string &amp;path)</td></tr>
 <tr class="separator:a60af66e19ee61f82a7536e852777b07d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaffcda4785646f73a654c17e90edf680"><td class="memItemLeft" align="right" valign="top"><a id="aaffcda4785646f73a654c17e90edf680"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>exists</b> () const noexcept</td></tr>
+<tr class="memitem:aaffcda4785646f73a654c17e90edf680"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1Path.html#aaffcda4785646f73a654c17e90edf680">exists</a> () const noexcept</td></tr>
 <tr class="separator:aaffcda4785646f73a654c17e90edf680"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5451df9658c05386ef0b823a33d57a8"><td class="memItemLeft" align="right" valign="top"><a id="aa5451df9658c05386ef0b823a33d57a8"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isDirectory</b> () const noexcept</td></tr>
+<tr class="memitem:aa5451df9658c05386ef0b823a33d57a8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1Path.html#aa5451df9658c05386ef0b823a33d57a8">isDirectory</a> () const noexcept</td></tr>
 <tr class="separator:aa5451df9658c05386ef0b823a33d57a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a2fb09374802f253a94fbc90b0b3870"><td class="memItemLeft" align="right" valign="top"><a id="a7a2fb09374802f253a94fbc90b0b3870"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isFile</b> () const noexcept</td></tr>
+<tr class="memitem:a7a2fb09374802f253a94fbc90b0b3870"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1Path.html#a7a2fb09374802f253a94fbc90b0b3870">isFile</a> () const noexcept</td></tr>
 <tr class="separator:a7a2fb09374802f253a94fbc90b0b3870"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4bc6f7c006c8aa616a4bb6c53b34d273"><td class="memItemLeft" align="right" valign="top"><a id="a4bc6f7c006c8aa616a4bb6c53b34d273"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getAbsolute</b> () const noexcept</td></tr>
+<tr class="memitem:a4bc6f7c006c8aa616a4bb6c53b34d273"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1Path.html#a4bc6f7c006c8aa616a4bb6c53b34d273">getAbsolute</a> () const noexcept</td></tr>
 <tr class="separator:a4bc6f7c006c8aa616a4bb6c53b34d273"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="classZEN_1_1Path.html">Path</a> to a file or directory on the system.</p>
+<dl class="section note"><dt>Note</dt><dd>The file or path doesn't have to physically exist for the object to be created</dd></dl>
+<p><a class="el" href="file-system.html">File system</a> </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a60af66e19ee61f82a7536e852777b07d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60af66e19ee61f82a7536e852777b07d">&#9670;&nbsp;</a></span>Path()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ZEN::Path::Path </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Create object from a relative or absolute path.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aaffcda4785646f73a654c17e90edf680"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaffcda4785646f73a654c17e90edf680">&#9670;&nbsp;</a></span>exists()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ZEN::Path::exists </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true, if whatever the path points to, exists. </p><dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a4bc6f7c006c8aa616a4bb6c53b34d273"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bc6f7c006c8aa616a4bb6c53b34d273">&#9670;&nbsp;</a></span>getAbsolute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string ZEN::Path::getAbsolute </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the absolute path to the file, regardless of whether relative or absolute path was provided in the constructor.</p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="aa5451df9658c05386ef0b823a33d57a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5451df9658c05386ef0b823a33d57a8">&#9670;&nbsp;</a></span>isDirectory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ZEN::Path::isDirectory </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Return true, if the path points to a directory.</p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a7a2fb09374802f253a94fbc90b0b3870"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a2fb09374802f253a94fbc90b0b3870">&#9670;&nbsp;</a></span>isFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ZEN::Path::isFile </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true, if the path points to a file.</p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/zeronetics/core/<a class="el" href="io_8h_source.html">io.h</a></li>
 </ul>

@@ -91,28 +91,181 @@ $(document).ready(function(){initNavTree('classZEN_1_1File.html',''); initResiza
 <div class="title">ZEN::File Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="io_8h_source.html">io.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a07fffa14b08276e53d838f22ad019824"><td class="memItemLeft" align="right" valign="top"><a id="a07fffa14b08276e53d838f22ad019824"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>File</b> (<a class="el" href="classZEN_1_1Path.html">Path</a> path)</td></tr>
+<tr class="memitem:a07fffa14b08276e53d838f22ad019824"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1File.html#a07fffa14b08276e53d838f22ad019824">File</a> (<a class="el" href="classZEN_1_1Path.html">Path</a> path)</td></tr>
 <tr class="separator:a07fffa14b08276e53d838f22ad019824"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9cac695798f8c6aa300c9e0182fc681"><td class="memItemLeft" align="right" valign="top"><a id="aa9cac695798f8c6aa300c9e0182fc681"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>createIfNotExists</b> ()</td></tr>
+<tr class="memitem:aa9cac695798f8c6aa300c9e0182fc681"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1File.html#aa9cac695798f8c6aa300c9e0182fc681">createIfNotExists</a> ()</td></tr>
 <tr class="separator:aa9cac695798f8c6aa300c9e0182fc681"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a184a875338f6c6e7106dec3219012659"><td class="memItemLeft" align="right" valign="top"><a id="a184a875338f6c6e7106dec3219012659"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>append</b> (const std::string &amp;text)</td></tr>
+<tr class="memitem:a184a875338f6c6e7106dec3219012659"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1File.html#a184a875338f6c6e7106dec3219012659">append</a> (const std::string &amp;text)</td></tr>
 <tr class="separator:a184a875338f6c6e7106dec3219012659"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a0cc4142b931d800f7de9eb90ec168ff4"><td class="memItemLeft" align="right" valign="top"><a id="a0cc4142b931d800f7de9eb90ec168ff4"></a>
-static std::optional&lt; <a class="el" href="classZEN_1_1File.html">File</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>load</b> (const <a class="el" href="classZEN_1_1Path.html">Path</a> &amp;path)</td></tr>
+<tr class="memitem:a0cc4142b931d800f7de9eb90ec168ff4"><td class="memItemLeft" align="right" valign="top">static std::optional&lt; <a class="el" href="classZEN_1_1File.html">File</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1File.html#a0cc4142b931d800f7de9eb90ec168ff4">load</a> (const <a class="el" href="classZEN_1_1Path.html">Path</a> &amp;path)</td></tr>
 <tr class="separator:a0cc4142b931d800f7de9eb90ec168ff4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd8403f6fd4d0f0785af38423dcbfb08"><td class="memItemLeft" align="right" valign="top"><a id="abd8403f6fd4d0f0785af38423dcbfb08"></a>
-static <a class="el" href="classZEN_1_1File.html">File</a>&#160;</td><td class="memItemRight" valign="bottom"><b>loadOrCreate</b> (const <a class="el" href="classZEN_1_1Path.html">Path</a> &amp;path)</td></tr>
+<tr class="memitem:abd8403f6fd4d0f0785af38423dcbfb08"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classZEN_1_1File.html">File</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1File.html#abd8403f6fd4d0f0785af38423dcbfb08">loadOrCreate</a> (const <a class="el" href="classZEN_1_1Path.html">Path</a> &amp;path)</td></tr>
 <tr class="separator:abd8403f6fd4d0f0785af38423dcbfb08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A file on the system.</p>
+<dl class="section note"><dt>Note</dt><dd><a class="el" href="classZEN_1_1File.html">File</a> doesn't have to exist for the object to be created.</dd></dl>
+<p><a class="el" href="file-system.html">File system</a> </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a07fffa14b08276e53d838f22ad019824"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07fffa14b08276e53d838f22ad019824">&#9670;&nbsp;</a></span>File()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ZEN::File::File </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classZEN_1_1Path.html">Path</a>&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Create object from a <a class="el" href="classZEN_1_1Path.html">ZEN::Path</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a184a875338f6c6e7106dec3219012659"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a184a875338f6c6e7106dec3219012659">&#9670;&nbsp;</a></span>append()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ZEN::File::append </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>text</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Append to the end of the file.</p>
+<dl class="section note"><dt>Note</dt><dd>You will have to manage line-breaks on your own.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa9cac695798f8c6aa300c9e0182fc681"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9cac695798f8c6aa300c9e0182fc681">&#9670;&nbsp;</a></span>createIfNotExists()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ZEN::File::createIfNotExists </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Create the file if it doesn't exist.</p>
+<dl class="section note"><dt>Note</dt><dd>The file will be empty. </dd></dl>
+
+</div>
+</div>
+<a id="a0cc4142b931d800f7de9eb90ec168ff4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cc4142b931d800f7de9eb90ec168ff4">&#9670;&nbsp;</a></span>load()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::optional&lt;<a class="el" href="classZEN_1_1File.html">File</a>&gt; ZEN::File::load </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classZEN_1_1Path.html">Path</a> &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Attempt to load a file.</p>
+<dl class="section note"><dt>Note</dt><dd>Returns <code>std::nullopt</code> if the file doesn't exist.</dd>
+<dd>
+Returns <code>std::nullopt</code> if the path is a directory.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="abd8403f6fd4d0f0785af38423dcbfb08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd8403f6fd4d0f0785af38423dcbfb08">&#9670;&nbsp;</a></span>loadOrCreate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classZEN_1_1File.html">File</a> ZEN::File::loadOrCreate </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classZEN_1_1Path.html">Path</a> &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Load a file. If it doesn't exist, it will be created.</p>
+<dl class="section note"><dt>Note</dt><dd>Critical level message is raised, if the path is a directory.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/zeronetics/core/<a class="el" href="io_8h_source.html">io.h</a></li>
 </ul>

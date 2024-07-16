@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['regenerate_280',['regenerate',['../classZEN_1_1IWindow.html#af3a8a1b75f2a6a588720a8c62b80886e',1,'ZEN::IWindow::regenerate()'],['../classZEN_1_1Window.html#aeea1798c76919c2560775df3e4cd3093',1,'ZEN::Window::regenerate()']]],
-  ['report_281',['report',['../classZEN_1_1Log.html#abe35945f4bb8b82c770375247de86270',1,'ZEN::Log']]],
-  ['resetallocations_282',['resetAllocations',['../structZEN_1_1IRenderManager.html#ad585ca557d1fc559f6d18dea0ea94b1f',1,'ZEN::IRenderManager::resetAllocations()'],['../structZEN_1_1RenderManager.html#acff3f1f7378063edd7d1f01da0d509ba',1,'ZEN::RenderManager::resetAllocations()']]],
-  ['resize_283',['resize',['../classZEN_1_1OpenGL_1_1VBO.html#abdc4fffca375fb5608f78b782e6e3c8c',1,'ZEN::OpenGL::VBO']]],
-  ['run_284',['run',['../classZEN_1_1Game.html#ac6bd7c888b88f9103ca87693a9118c57',1,'ZEN::Game']]]
+  ['load_292',['load',['../classZEN_1_1File.html#a0cc4142b931d800f7de9eb90ec168ff4',1,'ZEN::File']]],
+  ['loadorcreate_293',['loadOrCreate',['../classZEN_1_1File.html#abd8403f6fd4d0f0785af38423dcbfb08',1,'ZEN::File']]]
 ];

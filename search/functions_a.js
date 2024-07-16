@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['toint_290',['toInt',['../structZEN_1_1KeyMap.html#ac9f5826ae2b544bff3125af4482392d7',1,'ZEN::KeyMap']]],
-  ['tokey_291',['toKey',['../structZEN_1_1KeyMap.html#af188525c34a478ed55667792689c61df',1,'ZEN::KeyMap']]],
-  ['tosemver_292',['toSemVer',['../structZEN_1_1Version.html#a1eda9ea788b65bd03aae57fe7cd58938',1,'ZEN::Version']]]
+  ['onclose_296',['onClose',['../classZEN_1_1IWindow.html#a066b8a8acc49c4b67ad6ce86775b1eed',1,'ZEN::IWindow::onClose()'],['../classZEN_1_1Window.html#a06380aa0c78a3a75770b9e2879e7d11e',1,'ZEN::Window::onClose()']]],
+  ['onkeystatechanged_297',['onKeyStateChanged',['../classZEN_1_1IInputManager.html#ab85f2241824542fa39a6d913213485b2',1,'ZEN::IInputManager']]],
+  ['onmousemoved_298',['onMouseMoved',['../classZEN_1_1IInputManager.html#a413dce472d921819d7f6e2ffbe5634e8',1,'ZEN::IInputManager']]]
 ];

@@ -3,3 +3,5 @@
 @subpage game-loop  
 @subpage delta  
 @subpage fps
+
+@subpage settings

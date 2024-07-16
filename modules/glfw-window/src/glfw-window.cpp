@@ -1,5 +1,6 @@
 #include "glfw-window/glfw-window.h"
 #include "zeronetics/core/inputs.h"
+#include "zeronetics/logging/logging.h"
 
 #include <optional>
 #include <stdexcept>
@@ -15,6 +16,22 @@ namespace {
     std::optional<ZEN::MousePosition> s_lastPosition;
 
     std::optional<std::function<void()>> s_onCloseHandle;
+
+    inline int getSamples(const ZEN::AntiAlias &antiAlias) {
+        switch (antiAlias) {
+            case ZEN::AntiAlias::None:
+                return 0;
+            case ZEN::AntiAlias::MSAA2X:
+                return 2;
+            case ZEN::AntiAlias::MSAA4X:
+                return 4;
+            case ZEN::AntiAlias::MSAA8X:
+                return 8;
+            default:
+                ZEN_LIB_ERROR("GLFW Window: Missing case in getSamples.");
+                return 0;
+        }
+    }
 
     std::optional<ZEN::KeyStateEvent> createKeyEvent(int key, int action) {
         std::optional<ZEN::Key> inputKey = ZEN::KeyMap::toKey(key);
@@ -77,6 +94,8 @@ void ZEN::Window::generate(const ZEN::Settings &settings) noexcept(false) {
     if (!glfwInit()) {
         throw std::runtime_error("Failed to initialize GLFW.");
     }
+
+    glfwWindowHint(GLFW_SAMPLES, getSamples(settings.antiAlias));
 
     glfwWindow = glfwCreateWindow(settings.screenResolution.w,
                                   settings.screenResolution.h,

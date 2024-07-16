@@ -6,9 +6,9 @@ namespace ZEN {
      * Game world floating-point type
      *
      * Should be used for any application of floating-point numbers
-     * in the game-class world, such as vector coordinates.
+     * in the game world, such as vector coordinates.
      *
-     * In most cases ``float`` suffices, but large game-class worlds
+     * In most cases ``float`` suffices, but large game worlds
      * may benefit from, or require, a floating-point type with higher precision.
      *
      * @ref gw-float
@@ -52,7 +52,7 @@ namespace ZEN {
 
     /**
      * The type for storing and reading elapsed time between
-     * frames in the game-class loop.
+     * frames in the game loop.
      *
      * @ref fps
      */

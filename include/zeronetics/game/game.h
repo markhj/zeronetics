@@ -6,8 +6,8 @@
 
 namespace ZEN {
     /**
-     * The main game-class class which connects different components,
-     * such as window and renderer, and maintains the game-class loop.
+     * The main game class which connects different components,
+     * such as window and renderer, and maintains the game loop.
      */
     class Game {
     public:
@@ -20,7 +20,7 @@ namespace ZEN {
              const std::shared_ptr<IRenderer> &renderer);
 
         /**
-         * Run the game-class loop.
+         * Run the game loop.
          */
         void run();
 

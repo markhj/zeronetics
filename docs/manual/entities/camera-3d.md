@@ -8,6 +8,8 @@ depict perspective.
 
 ## 📐 Aspect ratio
 
+@anchor a-camera-aspect-ratio
+
 The **aspect ratio** is the relationship between the window's width
 and height. You calculate it by diving the window width by the
 window height. You can get these values from ZEN::Settings.

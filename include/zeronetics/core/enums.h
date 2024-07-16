@@ -151,4 +151,31 @@ namespace ZEN {
         Deallocate,
         Update,
     };
+
+    /**
+     * List of Anti-Alias options
+     *
+     * @ref settings
+     */
+    enum class AntiAlias {
+        /**
+         * No anti-alias.
+         */
+        None,
+
+        /**
+         * 2X MSAA anti-alias.
+         */
+        MSAA2X,
+
+        /**
+         * 4X MSAA anti-alias.
+         */
+        MSAA4X,
+
+        /**
+         * 8X MSAA anti-alias.
+         */
+        MSAA8X,
+    };
 }

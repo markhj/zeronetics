@@ -24,6 +24,8 @@ namespace ZEN {
          * Generate the GLFW window with the supplied settings.
          *
          * @param settings
+         *
+         * @ref settings
          */
         void generate(const Settings &settings) noexcept(false) override;
 
@@ -32,6 +34,8 @@ namespace ZEN {
          * have changed).
          *
          * @param settings
+         *
+         * @ref settings
          */
         void regenerate(const Settings &settings) noexcept(false) override;
 

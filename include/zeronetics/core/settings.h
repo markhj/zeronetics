@@ -20,11 +20,18 @@ namespace ZEN {
 
     /**
      * Hardware settings, including graphics and audio.
+     *
+     * @ref settings
      */
     struct Settings {
         /**
          * Monitor/screen resolution.
          */
-        ScreenResolution screenResolution{1920, 1080};
+        ScreenResolution screenResolution{960, 540};
+
+        /**
+         * Anti-alias.
+         */
+        AntiAlias antiAlias = AntiAlias::MSAA4X;
     };
 }

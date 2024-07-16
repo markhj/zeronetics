@@ -339,6 +339,12 @@ Enumerations</h2></td></tr>
 , <b>Update</b>
  }</td></tr>
 <tr class="separator:a6b91990426cccd5daddb56813b87fba6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94472cd2dbf45750e85daff75fc8232d"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceZEN.html#a94472cd2dbf45750e85daff75fc8232d">AntiAlias</a> { <a class="el" href="namespaceZEN.html#a94472cd2dbf45750e85daff75fc8232da6adf97f83acf6453d4a6a4b1070f3754">None</a>
+, <a class="el" href="namespaceZEN.html#a94472cd2dbf45750e85daff75fc8232da8de30e6b7f9a6cabc95bd5fdc3c45cf8">MSAA2X</a>
+, <a class="el" href="namespaceZEN.html#a94472cd2dbf45750e85daff75fc8232daf7e4b021eaa6b2491718b9f7cc471d13">MSAA4X</a>
+, <a class="el" href="namespaceZEN.html#a94472cd2dbf45750e85daff75fc8232da508eb90ad8473b8f7a4ed052a12ed74e">MSAA8X</a>
+ }</td></tr>
+<tr class="separator:a94472cd2dbf45750e85daff75fc8232d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa69bcfc31d926753fe3879eb54886386"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceZEN.html#aa69bcfc31d926753fe3879eb54886386">LogLevel</a> { <b>Info</b>
 , <b>Warning</b>
 , <b>Critical</b>
@@ -430,8 +436,8 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p><a class="el" href="classZEN_1_1Game.html">Game</a> world floating-point type</p>
-<p>Should be used for any application of floating-point numbers in the game-class world, such as vector coordinates.</p>
-<p>In most cases <code>float</code> suffices, but large game-class worlds may benefit from, or require, a floating-point type with higher precision.</p>
+<p>Should be used for any application of floating-point numbers in the game world, such as vector coordinates.</p>
+<p>In most cases <code>float</code> suffices, but large game worlds may benefit from, or require, a floating-point type with higher precision.</p>
 <p><a class="el" href="gw-float.html">Game world floating-point type</a> </p>
 
 </div>
@@ -464,7 +470,7 @@ Enumerations</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>The type for storing and reading elapsed time between frames in the game-class loop.</p>
+<p>The type for storing and reading elapsed time between frames in the game loop.</p>
 <p><a class="el" href="fps.html">FPS (frames per second)</a> </p>
 
 </div>
@@ -486,6 +492,40 @@ Enumerations</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a94472cd2dbf45750e85daff75fc8232d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94472cd2dbf45750e85daff75fc8232d">&#9670;&nbsp;</a></span>AntiAlias</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="namespaceZEN.html#a94472cd2dbf45750e85daff75fc8232d">ZEN::AntiAlias</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>List of Anti-Alias options</p>
+<p><a class="el" href="settings.html">Settings</a> </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a94472cd2dbf45750e85daff75fc8232da6adf97f83acf6453d4a6a4b1070f3754"></a>None&#160;</td><td class="fielddoc"><p>No anti-alias. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a94472cd2dbf45750e85daff75fc8232da8de30e6b7f9a6cabc95bd5fdc3c45cf8"></a>MSAA2X&#160;</td><td class="fielddoc"><p>2X MSAA anti-alias. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a94472cd2dbf45750e85daff75fc8232daf7e4b021eaa6b2491718b9f7cc471d13"></a>MSAA4X&#160;</td><td class="fielddoc"><p>4X MSAA anti-alias. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a94472cd2dbf45750e85daff75fc8232da508eb90ad8473b8f7a4ed052a12ed74e"></a>MSAA8X&#160;</td><td class="fielddoc"><p>8X MSAA anti-alias. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a id="a68b344c77c113e5bffc15e7c46c125c5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a68b344c77c113e5bffc15e7c46c125c5">&#9670;&nbsp;</a></span>Key</h2>
 

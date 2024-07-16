@@ -30,5 +30,6 @@ var game_class =
       ] ]
     ] ],
     [ "Delta time", "delta.html", null ],
-    [ "FPS (frames per second)", "fps.html", null ]
+    [ "FPS (frames per second)", "fps.html", null ],
+    [ "Settings", "settings.html", null ]
 ];

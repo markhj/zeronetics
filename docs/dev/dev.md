@@ -25,4 +25,4 @@ or working on forks of it.
 
 ## Tests
 
-@ref tests
+@subpage tests

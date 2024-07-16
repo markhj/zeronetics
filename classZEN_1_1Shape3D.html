@@ -90,6 +90,8 @@ $(document).ready(function(){initNavTree('classZEN_1_1Shape3D.html',''); initRes
 <div class="title">ZEN::Shape3D Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="shape_8h_source.html">shape.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ZEN::Shape3D:</div>
 <div class="dyncontent">
@@ -112,7 +114,10 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a21d868feb2eabc68a587f7fb59d7f9fc inherit pro_methods_classZEN_1_1IShape"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; <a class="el" href="structZEN_1_1Vertex3D.html">Vertex3D</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1IShape.html#a21d868feb2eabc68a587f7fb59d7f9fc">make</a> () const noexcept=0</td></tr>
 <tr class="separator:a21d868feb2eabc68a587f7fb59d7f9fc inherit pro_methods_classZEN_1_1IShape"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>3D shape</p>
+<p><a class="el" href="shapes.html">Shapes</a> <a class="el" href="geometry-relationships.html">Geometry relationships</a> </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aadedfd4d1168261058e908ddc007efc1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aadedfd4d1168261058e908ddc007efc1">&#9670;&nbsp;</a></span>getVertices()</h2>
 
@@ -135,8 +140,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Return the vertices.</p>
-<p>A function typically implemented by a general Shape class, and not by each individual shape.</p>
+<p>Retrieve vertices that make up the shape.</p>
+<dl class="section note"><dt>Note</dt><dd>Once generated, the result will be stored in cache to make additional requests faster.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 <p>Implements <a class="el" href="classZEN_1_1IShape.html#a2edb580c0205a6a33449ef446aad4b2d">ZEN::IShape&lt; Vertex3D &gt;</a>.</p>

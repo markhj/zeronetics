@@ -56,8 +56,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"annotated.html",
-"logging.html#autotoc_md20"
+"",
+"logging.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

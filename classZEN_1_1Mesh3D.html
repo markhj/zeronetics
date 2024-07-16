@@ -90,6 +90,8 @@ $(document).ready(function(){initNavTree('classZEN_1_1Mesh3D.html',''); initResi
 <div class="title">ZEN::Mesh3D Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="mesh-3d_8h_source.html">mesh-3d.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ZEN::Mesh3D:</div>
 <div class="dyncontent">
@@ -103,14 +105,11 @@ Collaboration diagram for ZEN::Mesh3D:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a19f0f191204d8f65b6eb2b5bb85befda"><td class="memItemLeft" align="right" valign="top"><a id="a19f0f191204d8f65b6eb2b5bb85befda"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Mesh3D</b> (const std::vector&lt; <a class="el" href="structZEN_1_1Vertex3D.html">Vertex3D</a> &gt; &amp;vertices)</td></tr>
+<tr class="memitem:a19f0f191204d8f65b6eb2b5bb85befda"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1Mesh3D.html#a19f0f191204d8f65b6eb2b5bb85befda">Mesh3D</a> (const std::vector&lt; <a class="el" href="structZEN_1_1Vertex3D.html">Vertex3D</a> &gt; &amp;vertices)</td></tr>
 <tr class="separator:a19f0f191204d8f65b6eb2b5bb85befda"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace0b06b289e3369cce8ef0928ffcbfa3"><td class="memItemLeft" align="right" valign="top"><a id="ace0b06b289e3369cce8ef0928ffcbfa3"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Mesh3D</b> (const std::shared_ptr&lt; <a class="el" href="classZEN_1_1IShape3D.html">IShape3D</a> &gt; &amp;shape)</td></tr>
+<tr class="memitem:ace0b06b289e3369cce8ef0928ffcbfa3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1Mesh3D.html#ace0b06b289e3369cce8ef0928ffcbfa3">Mesh3D</a> (const std::shared_ptr&lt; <a class="el" href="classZEN_1_1IShape3D.html">IShape3D</a> &gt; &amp;shape)</td></tr>
 <tr class="separator:ace0b06b289e3369cce8ef0928ffcbfa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3b29f89290efe4ee0b02f2dfe4a211d"><td class="memItemLeft" align="right" valign="top"><a id="af3b29f89290efe4ee0b02f2dfe4a211d"></a>
-std::vector&lt; <a class="el" href="structZEN_1_1Vertex3D.html">Vertex3D</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getVertices</b> () const noexcept override</td></tr>
+<tr class="memitem:af3b29f89290efe4ee0b02f2dfe4a211d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structZEN_1_1Vertex3D.html">Vertex3D</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1Mesh3D.html#af3b29f89290efe4ee0b02f2dfe4a211d">getVertices</a> () const noexcept override</td></tr>
 <tr class="separator:af3b29f89290efe4ee0b02f2dfe4a211d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
@@ -123,6 +122,105 @@ Additional Inherited Members</h2></td></tr>
 Vec3&#160;</td><td class="memItemRight" valign="bottom"><b>position</b> = Vec3(0.0)</td></tr>
 <tr class="separator:a835ef543c53e9a5a2f7b53466eb11179 inherit pub_attribs_classZEN_1_1ITransforms3D"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>3D Mesh <a class="el" href="classZEN_1_1Entity.html">Entity</a></p>
+<p><a class="el" href="shapes.html">Shapes</a> <a class="el" href="geometry-relationships.html">Geometry relationships</a> </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a19f0f191204d8f65b6eb2b5bb85befda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19f0f191204d8f65b6eb2b5bb85befda">&#9670;&nbsp;</a></span>Mesh3D() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ZEN::Mesh3D::Mesh3D </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="structZEN_1_1Vertex3D.html">Vertex3D</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vertices</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Generate 3D mesh from list of vertices.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vertices</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ace0b06b289e3369cce8ef0928ffcbfa3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace0b06b289e3369cce8ef0928ffcbfa3">&#9670;&nbsp;</a></span>Mesh3D() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ZEN::Mesh3D::Mesh3D </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classZEN_1_1IShape3D.html">IShape3D</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>shape</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Generate 3D mesh from shape.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">shape</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="af3b29f89290efe4ee0b02f2dfe4a211d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3b29f89290efe4ee0b02f2dfe4a211d">&#9670;&nbsp;</a></span>getVertices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="structZEN_1_1Vertex3D.html">Vertex3D</a>&gt; ZEN::Mesh3D::getVertices </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Retrieve the vertices for the mesh. </p><dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p>Implements <a class="el" href="classZEN_1_1IRenderable3D.html">ZEN::IRenderable3D</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/zeronetics/entities/3d/<a class="el" href="mesh-3d_8h_source.html">mesh-3d.h</a></li>
 </ul>

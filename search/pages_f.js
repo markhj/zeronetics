@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['understanding_20render_20management_408',['Understanding render management',['../render-manager.html',1,'rendering']]]
+  ['tensors_410',['Tensors',['../tensors.html',1,'geometry-math']]],
+  ['the_20game_20class_411',['The Game class',['../game-class.html',1,'manual']]],
+  ['tutorials_412',['Tutorials',['../tutorials.html',1,'']]]
 ];

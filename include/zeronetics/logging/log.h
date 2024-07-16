@@ -35,6 +35,11 @@ namespace ZEN {
         Info,
 
         /**
+         * Errors related to the file system, such as loading files
+         */
+        FileSystem,
+
+        /**
          * Rendering or renderer related information.
          */
         RendererInit,

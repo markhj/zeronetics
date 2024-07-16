@@ -64,6 +64,8 @@ namespace ZEN {
          *
          * @note This duration may be "artificially" impacted by
          *      mechanisms aiming for the monitor's frame rate.
+         *
+         * @ref delta
          */
         render_time_microsecs managedRenderTime;
 

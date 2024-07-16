@@ -1,6 +1,6 @@
 #pragma once
 
-#include "opengl-renderer/opengl.hpp"
+#include "opengl-renderer/opengl.h"
 
 #include "opengl-object.h"
 #include "vbo.h"

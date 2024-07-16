@@ -5,7 +5,7 @@
 #include "zeronetics/core/enums.h"
 #include "zeronetics/core/tensors.h"
 
-#include "opengl-renderer/abstracts/bindable.hpp"
+#include "opengl-renderer/abstracts/bindable.h"
 
 #include <string>
 #include <unordered_map>

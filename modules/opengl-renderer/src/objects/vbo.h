@@ -1,7 +1,7 @@
 #pragma once
 
 #include "opengl-object.h"
-#include "opengl-renderer/opengl.hpp"
+#include "opengl-renderer/opengl.h"
 
 namespace ZEN::OpenGL {
     /**
@@ -60,14 +60,6 @@ namespace ZEN::OpenGL {
          * @return
          */
         std::optional<GPUAllocation> allocate(gpu_alloc_int size);
-
-        /**
-         * Set data.
-         *
-         * @deprecated
-         * @param data
-         */
-        void setData(std::vector<gl_float> data);
 
         /**
          * Update data at the specified location (allocation).

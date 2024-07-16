@@ -1,4 +1,4 @@
-#include "opengl-renderer/opengl.hpp"
+#include "opengl-renderer/opengl.h"
 
 #include "objects/vao.h"
 #include "objects/vbo.h"
@@ -110,7 +110,6 @@ void ZEN::OpenGL::Renderer::initialize() {
     vbo = std::make_shared<VBO>(VBO());
     vbo->initialize();
     vbo->resize(1000);
-    vbo->setData({});
 
     vao = std::make_shared<VAO>(VAO());
     vao->initialize();

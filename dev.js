@@ -19,5 +19,6 @@ var dev =
     [ "Build information", "build-info.html", null ],
     [ "Creating new modules", "create-modules.html", null ],
     [ "Callbacks", "callbacks.html", null ],
-    [ "Control flow of rendering", "arch-render-manager.html", null ]
+    [ "Control flow of rendering", "arch-render-manager.html", null ],
+    [ "Test organization", "tests.html", null ]
 ];

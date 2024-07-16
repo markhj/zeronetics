@@ -31,7 +31,6 @@ var NAVTREE =
     [ "Modules", "modules.html", "modules" ],
     [ "Engine architecture", "engine-arch.html", "engine-arch" ],
     [ "Engine development", "dev.html", "dev" ],
-    [ "Test organization", "tests.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [

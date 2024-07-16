@@ -54,6 +54,8 @@ var namespaceZEN =
       [ "Smart pointers", "callbacks.html#autotoc_md75", null ]
     ] ],
     [ "🔀 Management of allocation", "arch-render-manager.html#autotoc_md66", null ],
+    [ "📘 Primary testing suite", "tests.html#autotoc_md91", null ],
+    [ "📚 Organization", "tests.html#autotoc_md92", null ],
     [ "OpenGL", null, [
       [ "IBindable", "classZEN_1_1OpenGL_1_1IBindable.html", "classZEN_1_1OpenGL_1_1IBindable" ],
       [ "StdBinding", "classZEN_1_1OpenGL_1_1StdBinding.html", "classZEN_1_1OpenGL_1_1StdBinding" ],

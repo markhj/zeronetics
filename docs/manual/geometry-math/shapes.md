@@ -20,20 +20,21 @@ ZEN::Cube cube(1.0, 5.0, 2.5);  // Width, height, depth
 
 ## 📃 List of shapes
 
-| Class | Description     |
-| -- |-----------------|
+| Class     | Description     |
+|-----------|-----------------|
 | ZEN::Cube | Forms a 3D cube |
 
 ## ⭕ Custom shapes
 
-You can build your own shapes by extended ZEN::Shape3D, and implementing
+You can build your own shapes by extending ZEN::Shape3D, and implementing
 the ZEN::IShape::make method.
 
 The normal process is defining a constructor which takes the properties
-you need. A sphere, for instance, needs a radius.
+you need. A sphere, for instance, needs a radius. But exactly _which_
+arguments you have to take depend on the shape you want to construct.
 
-@note Important: You must write your shape code such that the center
-of the object is at ``(0, 0, 0)``, otherwise positioning will not
+@note Important: You must implement the ``make`` method such that the center
+of the shape is at ``(0, 0, 0)``, otherwise positioning will not
 work as expected.
 
 ## 📜 See also

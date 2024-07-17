@@ -102,6 +102,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa9cac695798f8c6aa300c9e0182fc681"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a184a875338f6c6e7106dec3219012659"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1File.html#a184a875338f6c6e7106dec3219012659">append</a> (const std::string &amp;text)</td></tr>
 <tr class="separator:a184a875338f6c6e7106dec3219012659"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e11dda1e6f4b922151817be0b5f3485"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classZEN_1_1Result.html">Result</a>&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1File.html#a2e11dda1e6f4b922151817be0b5f3485">getData</a> () const</td></tr>
+<tr class="separator:a2e11dda1e6f4b922151817be0b5f3485"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -191,6 +193,26 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Create the file if it doesn't exist.</p>
 <dl class="section note"><dt>Note</dt><dd>The file will be empty. </dd></dl>
+
+</div>
+</div>
+<a id="a2e11dda1e6f4b922151817be0b5f3485"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e11dda1e6f4b922151817be0b5f3485">&#9670;&nbsp;</a></span>getData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classZEN_1_1Result.html">Result</a>&lt;std::string&gt; ZEN::File::getData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the entire data from the file as a string.</p>
+<p>An <a class="el" href="structZEN_1_1ResultError.html">ZEN::ResultError</a> is returned for a number of reasons, but typically because the file doesn't exist.</p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>

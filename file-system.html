@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('file-system.html',''); initResizable()
 <p><a class="el" href="classZEN_1_1Path.html">ZEN::Path</a> is instantiated with a relative or absolute path that either does or doesn't exist. Both of these will work:</p>
 <div class="fragment"><div class="line"><a class="code" href="classZEN_1_1Path.html">ZEN::Path</a> file1(<span class="stringliteral">&quot;existing-file.txt&quot;</span>);</div>
 <div class="line"><a class="code" href="classZEN_1_1Path.html">ZEN::Path</a> file2(<span class="stringliteral">&quot;file-does-not-exist.txt&quot;</span>);</div>
-<div class="ttc" id="aclassZEN_1_1Path_html"><div class="ttname"><a href="classZEN_1_1Path.html">ZEN::Path</a></div><div class="ttdef"><b>Definition:</b> io.h:18</div></div>
+<div class="ttc" id="aclassZEN_1_1Path_html"><div class="ttname"><a href="classZEN_1_1Path.html">ZEN::Path</a></div><div class="ttdef"><b>Definition:</b> io.h:19</div></div>
 </div><!-- fragment --><p>But to check whether the path actually exists, you can use <a class="el" href="classZEN_1_1Path.html#aaffcda4785646f73a654c17e90edf680">ZEN::Path::exists</a>:</p>
 <div class="fragment"><div class="line"><span class="keywordflow">if</span> (file1.exists()) {</div>
 <div class="line">    <span class="comment">// ...</span></div>
@@ -112,7 +112,7 @@ Instantiating</h3>
 <p>There are several ways to instantiate a <a class="el" href="classZEN_1_1File.html">ZEN::File</a> object.</p>
 <p>You can create one directly from <a class="el" href="classZEN_1_1Path.html">ZEN::Path</a>:</p>
 <div class="fragment"><div class="line"><a class="code" href="classZEN_1_1File.html">ZEN::File</a> myFile(<a class="code" href="classZEN_1_1Path.html">ZEN::Path</a>(<span class="stringliteral">&quot;/path/to/file&quot;</span>));</div>
-<div class="ttc" id="aclassZEN_1_1File_html"><div class="ttname"><a href="classZEN_1_1File.html">ZEN::File</a></div><div class="ttdef"><b>Definition:</b> io.h:71</div></div>
+<div class="ttc" id="aclassZEN_1_1File_html"><div class="ttname"><a href="classZEN_1_1File.html">ZEN::File</a></div><div class="ttdef"><b>Definition:</b> io.h:72</div></div>
 </div><!-- fragment --><p>You can use the <a class="el" href="classZEN_1_1File.html#a0cc4142b931d800f7de9eb90ec168ff4">ZEN::File::load</a> method which either returns the created <code>File</code> object, or <code>std::nullopt</code> if:</p>
 <ul>
 <li>The path is a directory</li>
@@ -125,6 +125,17 @@ Instantiating</h3>
 <div class="ttc" id="aclassZEN_1_1File_html_abd8403f6fd4d0f0785af38423dcbfb08"><div class="ttname"><a href="classZEN_1_1File.html#abd8403f6fd4d0f0785af38423dcbfb08">ZEN::File::loadOrCreate</a></div><div class="ttdeci">static File loadOrCreate(const Path &amp;path)</div></div>
 </div><!-- fragment --><dl class="section warning"><dt>Warning</dt><dd>If <code>loadOrCreate</code> is applied to an existing directory, a critical-level message is raised.</dd></dl>
 <h3><a class="anchor" id="autotoc_md14"></a>
+Get file data</h3>
+<p>You can store all the contents of a file in a std::string using <a class="el" href="classZEN_1_1File.html#a2e11dda1e6f4b922151817be0b5f3485">ZEN::File::getData</a>.</p>
+<p>The methods return a <a class="el" href="classZEN_1_1Result.html">ZEN::Result</a> with a <code>std::string</code>.</p>
+<p>Example:</p>
+<div class="fragment"><div class="line">Result&lt;std::string&gt; data = myFile.getData();</div>
+<div class="line"><span class="keywordflow">if</span> (data.isError()) {</div>
+<div class="line">    <span class="comment">// Error handling</span></div>
+<div class="line">} <span class="keywordflow">else</span> {</div>
+<div class="line">    <span class="comment">// Do what needs to be done with the file contents</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md15"></a>
 Append to file</h3>
 <p>You can append data to a file using <a class="el" href="classZEN_1_1File.html#a184a875338f6c6e7106dec3219012659">ZEN::File::append</a>.</p>
 <div class="fragment"><div class="line"><a class="code" href="classZEN_1_1File.html">ZEN::File</a> myFile = <span class="comment">/* Create instance of File */</span>;</div>

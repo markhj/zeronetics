@@ -1,5 +1,6 @@
 #pragma once
 
+#include "result.h"
 #include <filesystem>
 #include <optional>
 #include <string>
@@ -114,6 +115,16 @@ namespace ZEN {
          * @param text
          */
         void append(const std::string &text);
+
+        /**
+         * Get the entire data from the file as a string.
+         *
+         * An ZEN::ResultError is returned for a number of reasons,
+         * but typically because the file doesn't exist.
+         *
+         * @return
+         */
+        [[nodiscard]] Result<std::string> getData() const;
 
     private:
         /**

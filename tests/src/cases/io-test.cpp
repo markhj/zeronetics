@@ -5,6 +5,7 @@
 void ZEN::Tests::FileSystemTest::test() {
     pathExists();
     directoryOrFolder();
+    getData();
 }
 
 void ZEN::Tests::FileSystemTest::pathExists() {
@@ -28,5 +29,17 @@ void ZEN::Tests::FileSystemTest::directoryOrFolder() {
 
         assertFalse(doesNotExist.isFile());
         assertFalse(doesNotExist.isDirectory());
+    });
+}
+
+void ZEN::Tests::FileSystemTest::getData() {
+    it("Loads a file with content.", [&]() {
+        assertEquals<std::string>("Line 1\nLine 2\nLine 3",
+                                  ZEN::File(ZEN::Path("payloads/io/existing-file.txt")).getData().result());
+    });
+
+    it("Attempts to load a file that doesn't exist.", [&]() {
+        auto res =  ZEN::File(ZEN::Path("non-existing-file.txt")).getData();
+        assertTrue(res.isError());
     });
 }

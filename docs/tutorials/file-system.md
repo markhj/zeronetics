@@ -59,6 +59,24 @@ ZEN::File myFile = ZEN::File::loadOrCreate("/path/to/file");
 @warning If ``loadOrCreate`` is applied to an existing directory,
 a critical-level message is raised.
 
+### Get file data
+
+You can store all the contents of a file in a std::string using
+ZEN::File::getData.
+
+The methods return a ZEN::Result with a ``std::string``.
+
+Example:
+
+````cpp
+Result<std::string> data = myFile.getData();
+if (data.isError()) {
+    // Error handling
+} else {
+    // Do what needs to be done with the file contents
+}
+````
+
 ### Append to file
 
 You can append data to a file using ZEN::File::append.

@@ -11,5 +11,7 @@ namespace ZEN::Tests {
         void pathExists();
 
         void directoryOrFolder();
+
+        void getData();
     };
 }

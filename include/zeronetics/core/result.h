@@ -1,7 +1,7 @@
 #pragma once
 
-#include "zeronetics/logging/logging.h"
 #include <variant>
+#include <optional>
 
 namespace ZEN {
     /**
@@ -63,17 +63,11 @@ namespace ZEN {
 
     template<typename T>
     ResultError Result<T>::error() {
-        if (!std::holds_alternative<ResultError>(*this)) {
-            ZEN_CRITICAL("Attempting to retrieve an error that holds a result. Remember to check using isError().");
-        }
         return std::get<ResultError>(*this);
     }
 
     template<typename T>
     T Result<T>::result() const {
-        if (!std::holds_alternative<T>(*this)) {
-            ZEN_CRITICAL("Attempting to retrieve a result that holds an error. Remember to check using isError().");
-        }
         return std::get<T>(*this);
     }
 

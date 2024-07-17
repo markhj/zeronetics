@@ -67,3 +67,28 @@ void ZEN::File::append(const std::string &text) {
     std::ofstream ofs(m_path.getAbsolute(), std::ios::app);
     ofs << text;
 }
+
+ZEN::Result<std::string> ZEN::File::getData() const {
+    if (!m_path.exists()) {
+        return ResultError{
+            .errorMessage = std::format("Cannot load data from non-existing file: {}",
+                                        m_path.getAbsolute()).c_str()
+        };
+    }
+
+    std::ifstream fileStream(m_path.getAbsolute());
+
+    if (!fileStream.is_open()) {
+        return ResultError{
+                .errorMessage = std::format("Could not open file: {}",
+                                            m_path.getAbsolute()).c_str()
+        };
+    }
+
+    std::stringstream buffer;
+    buffer << fileStream.rdbuf();
+
+    fileStream.close();
+
+    return buffer.str();
+}

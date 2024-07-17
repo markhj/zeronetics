@@ -142,7 +142,13 @@ Append to file</h3>
 <div class="line">        </div>
 <div class="line">myFile.<a class="code" href="classZEN_1_1File.html#a184a875338f6c6e7106dec3219012659">append</a>(<span class="stringliteral">&quot;Adding data to the file&quot;</span>);</div>
 <div class="ttc" id="aclassZEN_1_1File_html_a184a875338f6c6e7106dec3219012659"><div class="ttname"><a href="classZEN_1_1File.html#a184a875338f6c6e7106dec3219012659">ZEN::File::append</a></div><div class="ttdeci">void append(const std::string &amp;text)</div></div>
-</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>You need to manage line-breaks in the file on your own. <code>append</code> will not add any line-breaks on its own. </dd></dl>
+</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>You need to manage line-breaks in the file on your own. <code>append</code> will not add any line-breaks on its own.</dd></dl>
+<h3><a class="anchor" id="autotoc_md16"></a>
+Set file data</h3>
+<p>You can replace all existing data of a file using <a class="el" href="classZEN_1_1File.html#a65ae60986993e4065a97aee87a62a7ba">ZEN::File::setData</a>. This differs from <a class="el" href="classZEN_1_1File.html#a184a875338f6c6e7106dec3219012659">ZEN::File::append</a> which adds data at the end of existing.</p>
+<div class="fragment"><div class="line">myFile.<a class="code" href="classZEN_1_1File.html#a65ae60986993e4065a97aee87a62a7ba">setData</a>(<span class="stringliteral">&quot;New data&quot;</span>);</div>
+<div class="ttc" id="aclassZEN_1_1File_html_a65ae60986993e4065a97aee87a62a7ba"><div class="ttname"><a href="classZEN_1_1File.html#a65ae60986993e4065a97aee87a62a7ba">ZEN::File::setData</a></div><div class="ttdeci">void setData(const std::string &amp;data) const</div></div>
+</div><!-- fragment --><dl class="section warning"><dt>Warning</dt><dd>This entails that all existing data in a file is wiped. </dd></dl>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

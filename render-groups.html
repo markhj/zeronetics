@@ -87,14 +87,14 @@ $(document).ready(function(){initNavTree('render-groups.html',''); initResizable
 <div class="title">Render groups </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h2><a class="anchor" id="autotoc_md61"></a>
+<div class="textblock"><h2><a class="anchor" id="autotoc_md62"></a>
 🔠 What is a render group?</h2>
 <p>A <b>render group</b> is a collection of renderable objects and a shader. Render groups are mainly used in the <a class="el" href="render-manager.html">render manager</a> to structure the render flow.</p>
 <p>The idea is that objects which anyway need to use the same shader are grouped together, such that the shader only need to be activated <em>once</em>. If the renderables weren't organized in groups you'd end up activating the same shader ten times, if there were ten renderables.</p>
 <p><img src="https://res.cloudinary.com/drfztvfdh/image/upload/v1721036992/zeronetics/Render_groups_lqydnc.png" alt="" class="inline"/></p>
 <p>As you can see, if we rendered objects in the order they were provided, we'd have fragmented structure, where every shader would need to be activated several times.</p>
 <dl class="section note"><dt>Note</dt><dd>Render groups open up for more opportunities for performance optimization, in the future.</dd></dl>
-<h2><a class="anchor" id="autotoc_md62"></a>
+<h2><a class="anchor" id="autotoc_md63"></a>
 🚧 Working with groups</h2>
 <p>To create a render group, you instantiate a <a class="el" href="structZEN_1_1RenderGroup3D.html">ZEN::RenderGroup3D</a>, connect it with a shader and add renderables.</p>
 <p>Groups should be created as shared pointers to be usable with <a class="el" href="structZEN_1_1RenderManager.html">ZEN::RenderManager</a>.</p>

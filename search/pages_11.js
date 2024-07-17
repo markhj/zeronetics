@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['vertices_442',['Vertices',['../vertices.html',1,'geometry-math']]]
+  ['vertices_444',['Vertices',['../vertices.html',1,'geometry-math']]]
 ];

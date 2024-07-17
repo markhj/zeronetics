@@ -126,6 +126,11 @@ namespace ZEN {
          */
         [[nodiscard]] Result<std::string> getData() const;
 
+        /**
+         * Replace all the contents of the file with ``data``
+         */
+        void setData(const std::string &data) const;
+
     private:
         /**
          * Path instance.

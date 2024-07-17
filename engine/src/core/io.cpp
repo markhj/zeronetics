@@ -92,3 +92,18 @@ ZEN::Result<std::string> ZEN::File::getData() const {
 
     return buffer.str();
 }
+
+void ZEN::File::setData(const std::string &data) const {
+    if (!m_path.exists()) {
+        throw std::runtime_error("File does not exist.");
+    }
+
+    std::ofstream outFile(m_path.getAbsolute());
+
+    if (!outFile.is_open()) {
+        throw std::runtime_error("Could not open file " + m_path.getAbsolute());
+    }
+
+    outFile << data;
+    outFile.close();
+}

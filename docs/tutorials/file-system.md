@@ -89,3 +89,15 @@ myFile.append("Adding data to the file");
 
 @note You need to manage line-breaks in the file on your own.
 ``append`` will not add any line-breaks on its own.
+
+### Set file data
+
+You can replace all existing data of a file using ZEN::File::setData.
+This differs from ZEN::File::append which adds data at the end
+of existing.
+
+````cpp
+myFile.setData("New data");
+````
+
+@warning This entails that all existing data in a file is wiped.

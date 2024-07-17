@@ -6,6 +6,7 @@ void ZEN::Tests::FileSystemTest::test() {
     pathExists();
     directoryOrFolder();
     getData();
+    setData();
 }
 
 void ZEN::Tests::FileSystemTest::pathExists() {
@@ -39,7 +40,23 @@ void ZEN::Tests::FileSystemTest::getData() {
     });
 
     it("Attempts to load a file that doesn't exist.", [&]() {
-        auto res =  ZEN::File(ZEN::Path("non-existing-file.txt")).getData();
+        auto res = ZEN::File(ZEN::Path("non-existing-file.txt")).getData();
         assertTrue(res.isError());
+    });
+}
+
+void ZEN::Tests::FileSystemTest::setData() {
+    it("Replaces data in a file.", [&]() {
+        ZEN::File file(ZEN::Path("payloads/io/set-data.txt"));
+        file.setData("Hello");
+        assertEquals<std::string>("Hello", file.getData().result());
+        file.setData("World");
+        assertEquals<std::string>("World", file.getData().result());
+    });
+
+    it("Checks that it fails to write to a non-existing file.", [&]() {
+        assertException<std::exception>([&]() {
+            ZEN::File(ZEN::Path("io/non-existing-file.txt")).setData("Hello");
+        });
     });
 }

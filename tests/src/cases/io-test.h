@@ -13,5 +13,7 @@ namespace ZEN::Tests {
         void directoryOrFolder();
 
         void getData();
+
+        void setData();
     };
 }

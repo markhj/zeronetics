@@ -32,10 +32,16 @@ Result<CarKey> carKeys = getCarKeys(23);
 
 if (carKeys.isError()) {
     // Explain the driver that they are too young
+    // You can use carKeys.error() to extract the error.
 } else {
     // Get in and start the car
+    // You can use carKeys.result() to extract the result
 }
 ````
+
+@warning You must check whether the ``Result`` contains an error
+or not prior to calling ``error`` and ``result``, otherwise you 
+risk a critical-level error.
 
 You can interact with the error and result, using
 ZEN::Result::error and ZEN::Result::result.

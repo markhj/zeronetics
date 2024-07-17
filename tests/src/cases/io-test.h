@@ -9,5 +9,7 @@ namespace ZEN::Tests {
 
     private:
         void pathExists();
+
+        void directoryOrFolder();
     };
 }

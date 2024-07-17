@@ -94,7 +94,13 @@ $(document).ready(function(){initNavTree('tests.html',''); initResizable(); });
 <h2><a class="anchor" id="autotoc_md92"></a>
 📚 Organization</h2>
 <p>Test cases are located in <code>tests/src/cases/</code> directory, and consists of a header and source file pair.</p>
-<p>Tests from the main engine reside in the <code>ZEN::Tests</code> namespace. </p>
+<p>Tests from the main engine reside in the <code>ZEN::Tests</code> namespace.</p>
+<h2><a class="anchor" id="autotoc_md93"></a>
+📦 Payloads</h2>
+<p>The directory <code>tests/payloads</code> contains data files which can be read by the test cases. It is copied to the build directory when CMake refreshes.</p>
+<dl class="section note"><dt>Note</dt><dd>Copying the directory is necessary, because the built executable reads relative paths from its new home.</dd></dl>
+<p>A test case is allowed to manipulate content within its assigned payload directory.</p>
+<p>@important The directory is not rebuilt upon re-running C++ BBUnit. The directory is managed by CMake. If a test run manipulates contents during run-time, and the second run has certain expectations, you may see your test cases fail. Make sure to account for this. In most cases, it suffices to have files which are treated as static, and others as dynamic. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

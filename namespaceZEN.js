@@ -38,10 +38,10 @@ var namespaceZEN =
       [ "🎥 The \"scene\"", "render-manager.html#autotoc_md62", null ],
       [ "🔠 What is a render group?", "render-groups.html#autotoc_md59", null ],
       [ "🚧 Working with groups", "render-groups.html#autotoc_md60", null ],
-      [ "An example", "opengl-bindable.html#autotoc_md93", null ],
-      [ "Functions", "opengl-bindable.html#autotoc_md94", [
-        [ "Short-hand for binding", "opengl-bindable.html#autotoc_md95", null ],
-        [ "With", "opengl-bindable.html#autotoc_md96", null ]
+      [ "An example", "opengl-bindable.html#autotoc_md94", null ],
+      [ "Functions", "opengl-bindable.html#autotoc_md95", [
+        [ "Short-hand for binding", "opengl-bindable.html#autotoc_md96", null ],
+        [ "With", "opengl-bindable.html#autotoc_md97", null ]
       ] ],
       [ "CMake file", "create-modules.html#autotoc_md76", null ],
       [ "Public headers", "create-modules.html#autotoc_md77", null ],
@@ -56,6 +56,7 @@ var namespaceZEN =
     [ "🔀 Management of allocation", "arch-render-manager.html#autotoc_md66", null ],
     [ "📘 Primary testing suite", "tests.html#autotoc_md91", null ],
     [ "📚 Organization", "tests.html#autotoc_md92", null ],
+    [ "📦 Payloads", "tests.html#autotoc_md93", null ],
     [ "OpenGL", null, [
       [ "IBindable", "classZEN_1_1OpenGL_1_1IBindable.html", "classZEN_1_1OpenGL_1_1IBindable" ],
       [ "StdBinding", "classZEN_1_1OpenGL_1_1StdBinding.html", "classZEN_1_1OpenGL_1_1StdBinding" ],

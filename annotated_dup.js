@@ -35,6 +35,8 @@ var annotated_dup =
       [ "MouseMovedEvent", "structZEN_1_1MouseMovedEvent.html", "structZEN_1_1MouseMovedEvent" ],
       [ "Path", "classZEN_1_1Path.html", "classZEN_1_1Path" ],
       [ "File", "classZEN_1_1File.html", "classZEN_1_1File" ],
+      [ "ResultError", "structZEN_1_1ResultError.html", "structZEN_1_1ResultError" ],
+      [ "Result", "classZEN_1_1Result.html", "classZEN_1_1Result" ],
       [ "ScreenResolution", "structZEN_1_1ScreenResolution.html", "structZEN_1_1ScreenResolution" ],
       [ "Settings", "structZEN_1_1Settings.html", "structZEN_1_1Settings" ],
       [ "Shape3D", "classZEN_1_1Shape3D.html", "classZEN_1_1Shape3D" ],

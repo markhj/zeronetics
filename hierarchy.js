@@ -73,10 +73,14 @@ var hierarchy =
     [ "ZEN::OS", "structZEN_1_1OS.html", null ],
     [ "ZEN::Path", "classZEN_1_1Path.html", null ],
     [ "ZEN::Version::Preview", "structZEN_1_1Version_1_1Preview.html", null ],
+    [ "ZEN::ResultError", "structZEN_1_1ResultError.html", null ],
     [ "ZEN::ScreenResolution", "structZEN_1_1ScreenResolution.html", null ],
     [ "ZEN::Settings", "structZEN_1_1Settings.html", null ],
     [ "ZEN::SystemInfo", "classZEN_1_1SystemInfo.html", null ],
     [ "ZEN::SystemInfoSheet", "structZEN_1_1SystemInfoSheet.html", null ],
+    [ "std::variant", null, [
+      [ "ZEN::Result< T >", "classZEN_1_1Result.html", null ]
+    ] ],
     [ "Vec3", null, [
       [ "ZEN::ColorRGB", "classZEN_1_1ColorRGB.html", null ]
     ] ],

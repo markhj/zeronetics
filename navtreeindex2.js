@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"tensors.html#autotoc_md50":[13],
 "tensors.html#autotoc_md51":[14],
 "tests.html":[5,5],
 "tests.html#autotoc_md92":[7],
@@ -9,6 +10,5 @@ var NAVTREEINDEX2 =
 "tutorials.html#autotoc_md26":[3],
 "tutorials.html#autotoc_md27":[4],
 "vertices.html":[2,2,2],
-"vertices.html#autotoc_md52":[15],
-"":[6,0,0,10]
+"vertices.html#autotoc_md52":[15]
 };

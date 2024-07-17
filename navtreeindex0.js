@@ -1,5 +1,6 @@
 var NAVTREEINDEX0 =
 {
+"":[6,0,0,10],
 "annotated.html":[7,0],
 "arch-render-manager.html":[5,4],
 "arch-render-manager.html#autotoc_md67":[6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "log-configuration.html#autotoc_md54":[7,0],
 "log-configuration.html#autotoc_md55":[8],
 "log-engine-dev.html":[2,1,2],
-"log-engine-dev.html#autotoc_md56":[11],
-"log-reporting.html":[2,1,1]
+"log-engine-dev.html#autotoc_md56":[11]
 };

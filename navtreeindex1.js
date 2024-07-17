@@ -1,5 +1,6 @@
 var NAVTREEINDEX1 =
 {
+"log-reporting.html":[2,1,1],
 "log-reporting.html#autotoc_md57":[9],
 "log-reporting.html#autotoc_md58":[10],
 "log-why-macros.html":[2,1,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "structZEN_1_1Vertex3D.html#a5501e2cbbce4b957894a749d10715e9c":[7,0,0,36,1],
 "structZEN_1_1Vertex3D.html#aeeced967cb9977a159a0afbc087b445f":[7,0,0,36,0],
 "tensors.html":[2,2,1],
-"tensors.html#autotoc_md49":[12],
-"tensors.html#autotoc_md50":[13]
+"tensors.html#autotoc_md49":[12]
 };

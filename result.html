@@ -107,10 +107,13 @@ $(document).ready(function(){initNavTree('result.html',''); initResizable(); });
 <div class="line"> </div>
 <div class="line"><span class="keywordflow">if</span> (carKeys.isError()) {</div>
 <div class="line">    <span class="comment">// Explain the driver that they are too young</span></div>
+<div class="line">    <span class="comment">// You can use carKeys.error() to extract the error.</span></div>
 <div class="line">} <span class="keywordflow">else</span> {</div>
 <div class="line">    <span class="comment">// Get in and start the car</span></div>
+<div class="line">    <span class="comment">// You can use carKeys.result() to extract the result</span></div>
 <div class="line">}</div>
-</div><!-- fragment --><p>You can interact with the error and result, using <a class="el" href="classZEN_1_1Result.html#a13cb3332b5705cfc6964c675909dcec2">ZEN::Result::error</a> and <a class="el" href="classZEN_1_1Result.html#a9a15d5350d3887c0d378e81132115e21">ZEN::Result::result</a>. </p>
+</div><!-- fragment --><dl class="section warning"><dt>Warning</dt><dd>You must check whether the <code>Result</code> contains an error or not prior to calling <code>error</code> and <code>result</code>, otherwise you risk a critical-level error.</dd></dl>
+<p>You can interact with the error and result, using <a class="el" href="classZEN_1_1Result.html#a13cb3332b5705cfc6964c675909dcec2">ZEN::Result::error</a> and <a class="el" href="classZEN_1_1Result.html#a9a15d5350d3887c0d378e81132115e21">ZEN::Result::result</a>. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

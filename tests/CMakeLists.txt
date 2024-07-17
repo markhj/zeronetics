@@ -12,3 +12,6 @@ add_executable(tests
 target_link_libraries(tests PRIVATE zeronetics)
 
 target_include_directories(zeronetics PUBLIC ${ZEN_VENDOR_DIR}/cpp-bbunit/include)
+
+# Copy the payloads directory
+file(COPY payloads DESTINATION ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})

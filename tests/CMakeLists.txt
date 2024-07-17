@@ -7,7 +7,8 @@ add_executable(tests
         src/main.cpp
 
         # Cases
-        src/cases/io-test.cpp)
+        src/cases/io-test.cpp
+        src/cases/result-test.cpp)
 
 target_link_libraries(tests PRIVATE zeronetics)
 

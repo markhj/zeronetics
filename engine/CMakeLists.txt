@@ -12,6 +12,7 @@ set(CORE_SRC
         src/core/controls.cpp
         src/core/io.cpp
         src/core/sysinfo.cpp
+        src/core/result.cpp
 
         # Core: 3rd layer
         src/core/aabb.cpp

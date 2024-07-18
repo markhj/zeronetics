@@ -4,4 +4,3 @@
 @subpage delta  
 @subpage fps
 
-@subpage settings

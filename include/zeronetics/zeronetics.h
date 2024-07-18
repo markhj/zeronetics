@@ -32,6 +32,7 @@
 #include "core/shape.h"
 #include "core/tensors.h"
 #include "core/vertices.h"
+#include "core/timer.h"
 
 // Contracts
 #include "contracts/cameras.h"

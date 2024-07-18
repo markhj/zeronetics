@@ -6,5 +6,6 @@ var searchData=
   ['onmousemoved_143',['onMouseMoved',['../classZEN_1_1IInputManager.html#a413dce472d921819d7f6e2ffbe5634e8',1,'ZEN::IInputManager']]],
   ['opengl_144',['OpenGL',['../opengl.html',1,'modules']]],
   ['opengl_20context_145',['OpenGL context',['../opengl-bindable.html',1,'opengl']]],
-  ['os_146',['OS',['../structZEN_1_1OS.html',1,'ZEN']]]
+  ['orientation_20in_20the_203d_20space_146',['Orientation in the 3D space',['../orientation.html',1,'manual']]],
+  ['os_147',['OS',['../structZEN_1_1OS.html',1,'ZEN']]]
 ];

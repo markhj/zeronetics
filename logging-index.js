@@ -9,10 +9,10 @@ var logging_index =
         [ "See also", "delta.html#autotoc_md42", null ],
         [ "💻 FPS", "fps.html#autotoc_md43", null ],
         [ "⌛ Real render time", "fps.html#autotoc_md44", null ],
-        [ "🔇 Log level behavior", "log-configuration.html#autotoc_md57", [
-          [ "Example", "log-configuration.html#autotoc_md58", null ]
+        [ "🔇 Log level behavior", "log-configuration.html#autotoc_md58", [
+          [ "Example", "log-configuration.html#autotoc_md59", null ]
         ] ],
-        [ "✂️ Blacklisting categories", "log-configuration.html#autotoc_md59", null ]
+        [ "✂️ Blacklisting categories", "log-configuration.html#autotoc_md60", null ]
       ] ]
     ] ],
     [ "Log reports", "log-reporting.html", null ],

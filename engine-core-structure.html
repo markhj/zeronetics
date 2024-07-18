@@ -88,7 +88,7 @@ $(document).ready(function(){initNavTree('engine-core-structure.html',''); initR
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>To prevent circular dependencies, we've designed a clear hierarchy of header inclusion and dependencies.</p>
-<h2><a class="anchor" id="autotoc_md86"></a>
+<h2><a class="anchor" id="autotoc_md87"></a>
 Hierarchy</h2>
 <p>The hierarchy consists of these layers, reading from top-to-bottom, where the top comprises the most basic and fundamental structures.</p>
 <table class="markdownTable">
@@ -115,7 +115,7 @@ Hierarchy</h2>
 <p><b>A note on the core levels</b> <br  />
  The core levels don't affect directory structure, all core units are found in the <code>core</code> folder. But it's possible they will be split up as the project grows. The separation into levels help with forming the order to include the headers, for instance in <code><a class="el" href="zeronetics_8h_source.html">zeronetics.h</a></code> public header, and otherwise mostly serve as a way to backtrace in case you run into circular dependencies. </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md87"></a>
+<h2><a class="anchor" id="autotoc_md88"></a>
 🔨 Core: Fundamentals</h2>
 <p><b>Dependency from same layer</b>: Not allowed <br  />
  <b>Location:</b> <code>include/zeronetics/core/</code></p>
@@ -128,7 +128,7 @@ Hierarchy</h2>
  <a class="el" href="build-info.html">Build information</a>, because it has no dependencies <br  />
  <a class="el" href="logging_8h_source.html">logging.h</a> macros are not allowed, because they depend on <a class="el" href="classZEN_1_1Log.html">ZEN::Log</a> </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md88"></a>
+<h2><a class="anchor" id="autotoc_md89"></a>
 📚 Core: 2nd level</h2>
 <p><b>Dependency from same layer</b>: Not allowed <br  />
  <b>Location:</b> <code>include/zeronetics/core/</code></p>
@@ -143,7 +143,7 @@ Hierarchy</h2>
  <a class="el" href="structZEN_1_1Settings.html">ZEN::Settings</a> <br  />
  <a class="el" href="structZEN_1_1Version.html">ZEN::Version</a> </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md89"></a>
+<h2><a class="anchor" id="autotoc_md90"></a>
 📥 Core: 3rd level</h2>
 <p><b>Dependency from same layer</b>: Allowed, but exercise caution. <br  />
  <b>Location:</b> <code>include/zeronetics/core/</code></p>
@@ -156,7 +156,7 @@ Hierarchy</h2>
 <ul>
 <li>Vectors and matrices (which depend on <code>glm</code>)</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md90"></a>
+<h2><a class="anchor" id="autotoc_md91"></a>
 📜 Contracts</h2>
 <p><b>Dependency from same layer</b>: Allowed, but exercise caution. <br  />
  <b>Location:</b> <code>include/zeronetics/contracts/</code></p>
@@ -165,12 +165,12 @@ Hierarchy</h2>
 <p>Example: The <a class="el" href="classZEN_1_1IWindow.html">ZEN::IWindow</a> contract can depend on <a class="el" href="classZEN_1_1IInputManager.html">ZEN::IInputManager</a>. </p>
 </blockquote>
 <p>Remember that: Contracts must only have pure virtual functions. For abstract classes, see the next chapter.</p>
-<h2><a class="anchor" id="autotoc_md91"></a>
+<h2><a class="anchor" id="autotoc_md92"></a>
 💎 Traits</h2>
 <p><b>Dependency from same layer</b>: Not allowed. <br  />
  <b>Location:</b> <code>include/traits/</code></p>
 <p>Classes whose purpose is to support other classes with reusable functionality.</p>
-<h2><a class="anchor" id="autotoc_md92"></a>
+<h2><a class="anchor" id="autotoc_md93"></a>
 📱 Advanced structures</h2>
 <p><b>Dependency from same layer</b>: Allowed, but exercise caution. <br  />
  <b>Location:</b> <code>include/zeronetics/</code></p>
@@ -182,7 +182,7 @@ Hierarchy</h2>
  <a class="el" href="logging_8h_source.html">logging.h</a> and <a class="el" href="classZEN_1_1Log.html">ZEN::Log</a> <br  />
  Abstract class <a class="el" href="classZEN_1_1BaseInputManager.html">ZEN::BaseInputManager</a> which extends <a class="el" href="classZEN_1_1IInputManager.html">ZEN::IInputManager</a> </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md93"></a>
+<h2><a class="anchor" id="autotoc_md94"></a>
 📦 Modules</h2>
 <p><b>Dependency from same layer</b>: Not allowed. <br  />
  <b>Location:</b> <code>modules/&lt;module name&gt;/</code></p>

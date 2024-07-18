@@ -44,6 +44,8 @@ var annotated_dup =
       [ "SystemInfoSheet", "structZEN_1_1SystemInfoSheet.html", "structZEN_1_1SystemInfoSheet" ],
       [ "SystemInfo", "classZEN_1_1SystemInfo.html", null ],
       [ "MVP", "structZEN_1_1MVP.html", "structZEN_1_1MVP" ],
+      [ "TimeMeasurement", "structZEN_1_1TimeMeasurement.html", "structZEN_1_1TimeMeasurement" ],
+      [ "Timer", "classZEN_1_1Timer.html", "classZEN_1_1Timer" ],
       [ "Version", "structZEN_1_1Version.html", "structZEN_1_1Version" ],
       [ "Vertex3D", "structZEN_1_1Vertex3D.html", "structZEN_1_1Vertex3D" ],
       [ "VertexAttrSize", "classZEN_1_1VertexAttrSize.html", null ],

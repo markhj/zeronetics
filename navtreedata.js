@@ -56,8 +56,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "",
-"log-configuration.html#autotoc_md55",
-"structZEN_1_1Vertex3D.html"
+"install-engine.html#autotoc_md4",
+"structZEN_1_1Version.html#a1eda9ea788b65bd03aae57fe7cd58938"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

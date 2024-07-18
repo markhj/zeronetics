@@ -89,7 +89,7 @@ $(document).ready(function(){initNavTree('callbacks.html',''); initResizable(); 
 <div class="contents">
 <div class="textblock"><p>This page details how to design function signatures for, and store, callbacks.</p>
 <p>It furthermore discusses the decision to use <code>std::optional</code> over <code>std::shared_ptr</code>.</p>
-<h2><a class="anchor" id="autotoc_md75"></a>
+<h2><a class="anchor" id="autotoc_md76"></a>
 How to make callbacks "a la Zeronetics"</h2>
 <blockquote class="doxtable">
 <p>We start by emphasizing that you're not <em>required</em> to make callbacks in this fashion. If you have a good reason to choose another way, then that's fine. </p>
@@ -104,10 +104,10 @@ How to make callbacks "a la Zeronetics"</h2>
 <div class="fragment"><div class="line">myAwesomeClass.setMyCallback([]() {</div>
 <div class="line">    <span class="comment">// ...</span></div>
 <div class="line">});</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md76"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md77"></a>
 Examination of choices</h2>
 <p>Below, different ways to designing callbacks are examined.</p>
-<h3><a class="anchor" id="autotoc_md77"></a>
+<h3><a class="anchor" id="autotoc_md78"></a>
 Using &lt;tt&gt;std::optional&lt;/tt&gt;</h3>
 <p>Stored as:</p>
 <div class="fragment"><div class="line">std::optional&lt;std::function&lt;void()&gt;&gt; m_myCallback;</div>
@@ -125,7 +125,7 @@ Using &lt;tt&gt;std::optional&lt;/tt&gt;</h3>
 <div class="fragment"><div class="line">window-&gt;onClose([]() {</div>
 <div class="line">    std::exit(0);</div>
 <div class="line">});</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md78"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md79"></a>
 Smart pointers</h3>
 <p>Stored as:</p>
 <div class="fragment"><div class="line">std::shared_ptr&lt;std::function&lt;void()&gt;&gt; m_myCallback;</div>

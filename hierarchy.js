@@ -78,6 +78,8 @@ var hierarchy =
     [ "ZEN::Settings", "structZEN_1_1Settings.html", null ],
     [ "ZEN::SystemInfo", "classZEN_1_1SystemInfo.html", null ],
     [ "ZEN::SystemInfoSheet", "structZEN_1_1SystemInfoSheet.html", null ],
+    [ "ZEN::TimeMeasurement", "structZEN_1_1TimeMeasurement.html", null ],
+    [ "ZEN::Timer", "classZEN_1_1Timer.html", null ],
     [ "std::variant", null, [
       [ "ZEN::Result< T >", "classZEN_1_1Result.html", null ]
     ] ],

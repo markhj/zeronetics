@@ -15,5 +15,19 @@ namespace ZEN::Tests {
         void getData();
 
         void setData();
+
+        void append();
+
+        void load();
+
+        void loadOrCreate();
+
+        void createIfNotExists();
+
+        /**
+         * @note This test may cause unexpected errors when running
+         *      in coverage mode.
+         */
+        void deleteFile();
     };
 }

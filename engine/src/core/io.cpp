@@ -107,3 +107,16 @@ void ZEN::File::setData(const std::string &data) const {
     outFile << data;
     outFile.close();
 }
+
+void ZEN::File::deleteFile() {
+    if (!m_path.exists() || !m_path.isFile()) {
+        ZEN_WARN(std::format("Attempting to delete something that is not a file: {}", m_path.getAbsolute()),
+                 ZEN::LogCategory::FileSystem);
+        return;
+    }
+
+    auto status = std::remove(m_path.getAbsolute().c_str());
+    if (status != 0) {
+        ZEN_WARN(std::format("Failed to delete file: {}", m_path.getAbsolute()), ZEN::LogCategory::FileSystem);
+    }
+}

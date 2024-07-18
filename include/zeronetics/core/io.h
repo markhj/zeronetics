@@ -131,6 +131,11 @@ namespace ZEN {
          */
         void setData(const std::string &data) const;
 
+        /**
+         * Delete the file.
+         */
+        void deleteFile();
+
     private:
         /**
          * Path instance.

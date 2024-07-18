@@ -1,7 +1,8 @@
 #pragma once
 
-#include "zeronetics/contracts/window.h"
 #include "zeronetics/contracts/renderer.h"
+#include "zeronetics/contracts/window.h"
+#include "zeronetics/core/timer.h"
 #include <memory>
 
 namespace ZEN {
@@ -44,13 +45,18 @@ namespace ZEN {
          *
          * @return
          */
-        [[nodiscard]] render_time_microsecs getRealRenderTime() const noexcept;
+        [[nodiscard]] TimeMeasurement getRealRenderTime() const noexcept;
 
     private:
         /**
          * Window instance.
          */
         std::shared_ptr<IWindow> m_window;
+
+        /**
+         * Timer for measuring delta and rendering time
+         */
+        Timer m_timer;
 
         /**
          * Renderer of choice.
@@ -67,7 +73,7 @@ namespace ZEN {
          *
          * @ref delta
          */
-        render_time_microsecs managedRenderTime;
+        TimeMeasurement managedRenderTime;
 
         /**
          * The real time it took to render a frame (given in microseconds).
@@ -79,7 +85,7 @@ namespace ZEN {
          *      mechanisms isn't accounted for. Use ``renderTime``
          *      to calculate FPS.
          */
-        render_time_microsecs realRenderTime;
+        TimeMeasurement realRenderTime;
 
     };
 };

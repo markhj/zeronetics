@@ -19,8 +19,7 @@ ZEN::Result<ZEN::TimeMeasurement> ZEN::Timer::getTime() {
 }
 
 void ZEN::Timer::reset() {
-    end();
-    start();
+    m_startTime = std::chrono::high_resolution_clock::now();
 }
 
 void ZEN::Timer::end() {

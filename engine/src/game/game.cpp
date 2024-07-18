@@ -1,6 +1,5 @@
 #include "zeronetics/game/game.h"
 #include <chrono>
-#include <iostream>
 
 ZEN::Game::Game(const std::shared_ptr<IWindow> &window,
                 const std::shared_ptr<IRenderer> &renderer) : m_window(window),
@@ -12,32 +11,31 @@ void ZEN::Game::run() {
         m_renderer->initialize();
     }
 
+    m_timer.start();
+
     while (true) {
-        auto start = std::chrono::high_resolution_clock::now();
+        m_timer.reset();
 
         m_renderer->clear();
 
         m_renderer->render();
 
-        realRenderTime = std::chrono::duration_cast<std::chrono::microseconds>(
-                                 std::chrono::high_resolution_clock::now() - start)
-                                 .count();
+        realRenderTime = m_timer.getTime().result();
 
         m_window->handleInputs();
         m_window->handleBuffer();
 
-        managedRenderTime = std::chrono::duration_cast<std::chrono::microseconds>(
-                             std::chrono::high_resolution_clock::now() - start)
-                             .count();
+        managedRenderTime = m_timer.getTime().result();
     }
 
+    m_timer.end();
     m_window->close();
 }
 
 ZEN::fps_int ZEN::Game::getFPS() const noexcept {
-    return static_cast<fps_int>(floor(1000000.0 / managedRenderTime));
+    return static_cast<fps_int>(floor(1000000.0 / managedRenderTime.microsecs));
 }
 
-ZEN::render_time_microsecs ZEN::Game::getRealRenderTime() const noexcept {
+ZEN::TimeMeasurement ZEN::Game::getRealRenderTime() const noexcept {
     return realRenderTime;
 }

@@ -45,8 +45,9 @@ var NAVTREEINDEX0 =
 "classZEN_1_1File.html":[7,0,0,25],
 "classZEN_1_1File.html#a07fffa14b08276e53d838f22ad019824":[7,0,0,25,0],
 "classZEN_1_1File.html#a184a875338f6c6e7106dec3219012659":[7,0,0,25,1],
-"classZEN_1_1File.html#a2e11dda1e6f4b922151817be0b5f3485":[7,0,0,25,3],
-"classZEN_1_1File.html#a65ae60986993e4065a97aee87a62a7ba":[7,0,0,25,4],
+"classZEN_1_1File.html#a2e11dda1e6f4b922151817be0b5f3485":[7,0,0,25,4],
+"classZEN_1_1File.html#a61645374aac072d7a567821690f51606":[7,0,0,25,3],
+"classZEN_1_1File.html#a65ae60986993e4065a97aee87a62a7ba":[7,0,0,25,5],
 "classZEN_1_1File.html#aa9cac695798f8c6aa300c9e0182fc681":[7,0,0,25,2],
 "classZEN_1_1Game.html":[7,0,0,42],
 "classZEN_1_1Game.html#a3a4429d1317bf99ef32f44d72848e75b":[7,0,0,42,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "install-engine.html#autotoc_md5":[2,2],
 "install-engine.html#autotoc_md6":[2,3],
 "list-of-modules.html":[3,0],
-"log-configuration.html":[2,1,0],
-"log-configuration.html#autotoc_md55":[7]
+"log-configuration.html":[2,1,0]
 };

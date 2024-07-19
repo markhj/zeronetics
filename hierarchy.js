@@ -1,6 +1,9 @@
 var hierarchy =
 [
     [ "ZEN::AABB3D", "classZEN_1_1AABB3D.html", null ],
+    [ "ZEN::BeingObserved", "classZEN_1_1BeingObserved.html", [
+      [ "ZEN::Game", "classZEN_1_1Game.html", null ]
+    ] ],
     [ "ZEN::EngineInfo", "structZEN_1_1EngineInfo.html", null ],
     [ "ZEN::Entity", "classZEN_1_1Entity.html", [
       [ "ZEN::Entity3D", "classZEN_1_1Entity3D.html", [
@@ -9,7 +12,6 @@ var hierarchy =
       ] ]
     ] ],
     [ "ZEN::File", "classZEN_1_1File.html", null ],
-    [ "ZEN::Game", "classZEN_1_1Game.html", null ],
     [ "ZEN::GPUAllocation", "structZEN_1_1GPUAllocation.html", null ],
     [ "ZEN::HasUniqueId", "classZEN_1_1HasUniqueId.html", null ],
     [ "ZEN::OpenGL::IBindable< T >", "classZEN_1_1OpenGL_1_1IBindable.html", [
@@ -70,6 +72,11 @@ var hierarchy =
     [ "ZEN::MouseMovedEvent", "structZEN_1_1MouseMovedEvent.html", null ],
     [ "ZEN::MousePosition", "structZEN_1_1MousePosition.html", null ],
     [ "ZEN::MVP", "structZEN_1_1MVP.html", null ],
+    [ "ZEN::Observation", "structZEN_1_1Observation.html", null ],
+    [ "ZEN::Observer", "classZEN_1_1Observer.html", null ],
+    [ "observer_meta", null, [
+      [ "ZEN::ObserverMeta", "structZEN_1_1ObserverMeta.html", null ]
+    ] ],
     [ "ZEN::OS", "structZEN_1_1OS.html", null ],
     [ "ZEN::Path", "classZEN_1_1Path.html", null ],
     [ "ZEN::Version::Preview", "structZEN_1_1Version_1_1Preview.html", null ],

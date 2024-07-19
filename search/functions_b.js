@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['onclose_331',['onClose',['../classZEN_1_1IWindow.html#a066b8a8acc49c4b67ad6ce86775b1eed',1,'ZEN::IWindow::onClose()'],['../classZEN_1_1Window.html#a06380aa0c78a3a75770b9e2879e7d11e',1,'ZEN::Window::onClose()']]],
-  ['onkeystatechanged_332',['onKeyStateChanged',['../classZEN_1_1IInputManager.html#ab85f2241824542fa39a6d913213485b2',1,'ZEN::IInputManager']]],
-  ['onmousemoved_333',['onMouseMoved',['../classZEN_1_1IInputManager.html#a413dce472d921819d7f6e2ffbe5634e8',1,'ZEN::IInputManager']]]
+  ['notify_347',['notify',['../classZEN_1_1Observer.html#aa911a10a9439af75da239e8a4efdb61d',1,'ZEN::Observer']]],
+  ['notifyobservers_348',['notifyObservers',['../classZEN_1_1BeingObserved.html#a2be5a3c3b96bc02c20fe6e94b45e88d0',1,'ZEN::BeingObserved::notifyObservers(ObservationOf of, const ObserverMeta &amp;meta) const'],['../classZEN_1_1BeingObserved.html#ae3c49c0f9957f0d1cc46e5643822769f',1,'ZEN::BeingObserved::notifyObservers(ObservationOf of) const']]]
 ];

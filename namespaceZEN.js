@@ -62,6 +62,10 @@ var namespaceZEN =
     [ "MouseMovedEvent", "structZEN_1_1MouseMovedEvent.html", "structZEN_1_1MouseMovedEvent" ],
     [ "Path", "classZEN_1_1Path.html", "classZEN_1_1Path" ],
     [ "File", "classZEN_1_1File.html", "classZEN_1_1File" ],
+    [ "ObserverMeta", "structZEN_1_1ObserverMeta.html", null ],
+    [ "Observation", "structZEN_1_1Observation.html", "structZEN_1_1Observation" ],
+    [ "Observer", "classZEN_1_1Observer.html", "classZEN_1_1Observer" ],
+    [ "BeingObserved", "classZEN_1_1BeingObserved.html", "classZEN_1_1BeingObserved" ],
     [ "ResultError", "structZEN_1_1ResultError.html", "structZEN_1_1ResultError" ],
     [ "Result", "classZEN_1_1Result.html", "classZEN_1_1Result" ],
     [ "ScreenResolution", "structZEN_1_1ScreenResolution.html", "structZEN_1_1ScreenResolution" ],
@@ -96,6 +100,8 @@ var namespaceZEN =
     [ "gw_float", "namespaceZEN.html#a5089f560467278c4efaed05ce45f57a7", null ],
     [ "Mat4x4", "namespaceZEN.html#ab461dca77b42d0d525addaad0f5e0221", null ],
     [ "mouse_pos_axis", "namespaceZEN.html#a6ca0446a44cb9f650316f26a9cca2fe3", null ],
+    [ "observable_types", "namespaceZEN.html#a7439816c44d85092b28d2c25b39adaf4", null ],
+    [ "observer_meta", "namespaceZEN.html#ab1674f202009b939178c65481a0eeb57", null ],
     [ "render_time_microsecs", "namespaceZEN.html#a9db2510e515d0b17b4b62bda984ed569", null ],
     [ "unique_id", "namespaceZEN.html#a7431526b224ff13f286c1f418f45fc8b", null ],
     [ "Vec2", "namespaceZEN.html#ac57c2fadbbeb59f4896d28fc11e8871f", null ],
@@ -193,6 +199,10 @@ var namespaceZEN =
       [ "Info", "namespaceZEN.html#aa69bcfc31d926753fe3879eb54886386a4059b0251f66a18cb56f544728796875", null ],
       [ "Warning", "namespaceZEN.html#aa69bcfc31d926753fe3879eb54886386a0eaadb4fcb48a0a0ed7bc9868be9fbaa", null ],
       [ "Critical", "namespaceZEN.html#aa69bcfc31d926753fe3879eb54886386a278d01e5af56273bae1bb99a98b370cd", null ]
+    ] ],
+    [ "ObservationOf", "namespaceZEN.html#a1d13dce65d0c83e46709c26e995a7016", [
+      [ "Custom", "namespaceZEN.html#a1d13dce65d0c83e46709c26e995a7016a90589c47f06eb971d548591f23c285af", null ],
+      [ "FPS", "namespaceZEN.html#a1d13dce65d0c83e46709c26e995a7016ac123b11aa670647408778a3b81a21d70", null ]
     ] ],
     [ "Platform", "namespaceZEN.html#ad555d34e819d0776dc8d71e6e3b185c8", [
       [ "Windows", "namespaceZEN.html#ad555d34e819d0776dc8d71e6e3b185c8aaea23489ce3aa9b6406ebb28e0cda430", null ],

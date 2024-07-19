@@ -144,6 +144,14 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1File.html">File</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structZEN_1_1ObserverMeta.html">ObserverMeta</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structZEN_1_1Observation.html">Observation</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1Observer.html">Observer</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1BeingObserved.html">BeingObserved</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structZEN_1_1ResultError.html">ResultError</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1Result.html">Result</a></td></tr>
@@ -203,6 +211,12 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
+<tr class="memitem:a7439816c44d85092b28d2c25b39adaf4"><td class="memItemLeft" align="right" valign="top"><a id="a7439816c44d85092b28d2c25b39adaf4"></a>
+typedef std::variant&lt; int, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>observable_types</b></td></tr>
+<tr class="separator:a7439816c44d85092b28d2c25b39adaf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1674f202009b939178c65481a0eeb57"><td class="memItemLeft" align="right" valign="top"><a id="ab1674f202009b939178c65481a0eeb57"></a>
+typedef std::unordered_map&lt; std::string, observable_types &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>observer_meta</b></td></tr>
+<tr class="separator:ab1674f202009b939178c65481a0eeb57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac57c2fadbbeb59f4896d28fc11e8871f"><td class="memItemLeft" align="right" valign="top"><a id="ac57c2fadbbeb59f4896d28fc11e8871f"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>Vec2</b> = glm::vec2</td></tr>
 <tr class="separator:ac57c2fadbbeb59f4896d28fc11e8871f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -353,6 +367,10 @@ Enumerations</h2></td></tr>
 , <a class="el" href="namespaceZEN.html#a94472cd2dbf45750e85daff75fc8232da508eb90ad8473b8f7a4ed052a12ed74e">MSAA8X</a>
  }</td></tr>
 <tr class="separator:a94472cd2dbf45750e85daff75fc8232d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d13dce65d0c83e46709c26e995a7016"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceZEN.html#a1d13dce65d0c83e46709c26e995a7016">ObservationOf</a> { <b>Custom</b>
+, <b>FPS</b>
+ }</td></tr>
+<tr class="separator:a1d13dce65d0c83e46709c26e995a7016"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa69bcfc31d926753fe3879eb54886386"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceZEN.html#aa69bcfc31d926753fe3879eb54886386">LogLevel</a> { <b>Info</b>
 , <b>Warning</b>
 , <b>Critical</b>
@@ -659,6 +677,31 @@ Enumerations</h2></td></tr>
 </div><div class="memdoc">
 <p><a class="el" href="classZEN_1_1Log.html">Log</a> level (severity)</p>
 <p><a class="el" href="log-configuration.html">Configuring the log system</a> </p>
+
+</div>
+</div>
+<a id="a1d13dce65d0c83e46709c26e995a7016"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d13dce65d0c83e46709c26e995a7016">&#9670;&nbsp;</a></span>ObservationOf</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="namespaceZEN.html#a1d13dce65d0c83e46709c26e995a7016">ZEN::ObservationOf</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The category that is being observed.</p>
+<p>For non-native observation, you can use <code>Custom</code>.</p>
+<p><a class="el" href="observers.html">Observers</a> </p>
 
 </div>
 </div>

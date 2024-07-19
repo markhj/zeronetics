@@ -27,6 +27,7 @@ var NAVTREE =
   [ "Zeronetics Game Engine", "index.html", [
     [ "Getting started", "getting-started.html", "getting-started" ],
     [ "Tutorials", "tutorials.html", "tutorials" ],
+    [ "Observers", "observers.html", null ],
     [ "Manual", "manual.html", "manual" ],
     [ "Modules", "modules.html", "modules" ],
     [ "Engine architecture", "engine-arch.html", "engine-arch" ],
@@ -56,8 +57,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "",
-"install-engine.html#autotoc_md4",
-"structZEN_1_1Version.html"
+"index.html",
+"structZEN_1_1RenderManager.html#acff3f1f7378063edd7d1f01da0d509ba"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

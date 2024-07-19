@@ -74,6 +74,7 @@ var NAVTREEINDEX1 =
 "namespaceZEN.html#a3ff69a9dc86c8ce199f458ed659dbe95add36524a945bd1e360419ab73f162df0":[7,0,0,92,2],
 "namespaceZEN.html#a5089f560467278c4efaed05ce45f57a7":[7,0,0,72],
 "namespaceZEN.html#a5ac493fe076dd216cf2f69f8b01f05ef":[7,0,0,86],
+"namespaceZEN.html#a5ac493fe076dd216cf2f69f8b01f05efa24b6472fcfa59cddd3f7bbc326582b5f":[7,0,0,86,9],
 "namespaceZEN.html#a5ac493fe076dd216cf2f69f8b01f05efa278d01e5af56273bae1bb99a98b370cd":[7,0,0,86,1],
 "namespaceZEN.html#a5ac493fe076dd216cf2f69f8b01f05efa37e93c4876abdbf5d2143dd6310f1a14":[7,0,0,86,6],
 "namespaceZEN.html#a5ac493fe076dd216cf2f69f8b01f05efa4059b0251f66a18cb56f544728796875":[7,0,0,86,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "structZEN_1_1KeyMap.html":[8,0,0,21],
 "structZEN_1_1KeyStateEvent.html":[8,0,0,22],
 "structZEN_1_1KeyStateEvent.html#a6d8c2b1781eaf002500f5f1550b53790":[8,0,0,22,0],
-"structZEN_1_1KeyStateEvent.html#ac5084dcf49b737b1b68fe34901721af1":[8,0,0,22,1],
-"structZEN_1_1LogBehavior.html":[8,0,0,51]
+"structZEN_1_1KeyStateEvent.html#ac5084dcf49b737b1b68fe34901721af1":[8,0,0,22,1]
 };

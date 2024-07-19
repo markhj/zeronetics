@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"structZEN_1_1LogBehavior.html":[8,0,0,51],
 "structZEN_1_1LogBehavior.html#a2ea453ab613b2d112ec0f9b13fe0c313":[8,0,0,51,0],
 "structZEN_1_1LogFileEntry.html":[8,0,0,50],
 "structZEN_1_1LogFileEntry.html#a84c99abbdb3485366f9487485a194895":[8,0,0,50,1],

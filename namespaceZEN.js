@@ -203,7 +203,8 @@ var namespaceZEN =
       [ "Rendering", "namespaceZEN.html#a5ac493fe076dd216cf2f69f8b01f05efaa6e8f9aed2ac6481dc25a18a33342d03", null ],
       [ "RendererInternals", "namespaceZEN.html#a5ac493fe076dd216cf2f69f8b01f05efa37e93c4876abdbf5d2143dd6310f1a14", null ],
       [ "ShaderCompilation", "namespaceZEN.html#a5ac493fe076dd216cf2f69f8b01f05efaea199c4bea585e022d34acb82922eb17", null ],
-      [ "ShaderUse", "namespaceZEN.html#a5ac493fe076dd216cf2f69f8b01f05efa54dc3fb0e54d291e45aa3372ec0d9cc0", null ]
+      [ "ShaderUse", "namespaceZEN.html#a5ac493fe076dd216cf2f69f8b01f05efa54dc3fb0e54d291e45aa3372ec0d9cc0", null ],
+      [ "Controls", "namespaceZEN.html#a5ac493fe076dd216cf2f69f8b01f05efa24b6472fcfa59cddd3f7bbc326582b5f", null ]
     ] ],
     [ "LogLevel", "namespaceZEN.html#aa69bcfc31d926753fe3879eb54886386", [
       [ "Info", "namespaceZEN.html#aa69bcfc31d926753fe3879eb54886386a4059b0251f66a18cb56f544728796875", null ],

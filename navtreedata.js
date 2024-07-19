@@ -58,7 +58,7 @@ var NAVTREEINDEX =
 [
 "",
 "fps.html#autotoc_md47",
-"structZEN_1_1LogBehavior.html#a2ea453ab613b2d112ec0f9b13fe0c313"
+"structZEN_1_1LogBehavior.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

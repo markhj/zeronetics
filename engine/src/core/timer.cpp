@@ -25,3 +25,7 @@ void ZEN::Timer::reset() {
 void ZEN::Timer::end() {
     m_startTime = std::nullopt;
 }
+
+float ZEN::TimeMeasurement::toSeconds() const noexcept {
+    return microsecs / 1000000;
+}

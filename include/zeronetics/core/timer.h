@@ -12,6 +12,8 @@ namespace ZEN {
      */
     struct TimeMeasurement {
         long long microsecs = 0;
+
+        float toSeconds() const noexcept;
     };
 
     /**

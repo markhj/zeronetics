@@ -5,6 +5,7 @@
 @subpage settings  
 @subpage logging-index  
 @subpage geometry-math  
+@subpage orientation  
 @subpage entities  
 @subpage result  
 @subpage rendering

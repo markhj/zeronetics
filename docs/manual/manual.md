@@ -8,4 +8,5 @@
 @subpage orientation  
 @subpage entities  
 @subpage result  
-@subpage rendering
+@subpage rendering  
+@subpage observers

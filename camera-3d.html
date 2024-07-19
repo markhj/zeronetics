@@ -89,18 +89,18 @@ $(document).ready(function(){initNavTree('camera-3d.html',''); initResizable(); 
 <div class="contents">
 <div class="textblock"><p>The <a class="el" href="classZEN_1_1Camera3D.html">ZEN::Camera3D</a> entity provides essential information to the renderer in order to view 3D scenes.</p>
 <p>For a 3D camera you need to define a number of properties to accurately depict perspective.</p>
-<h2><a class="anchor" id="autotoc_md34"></a>
+<h2><a class="anchor" id="autotoc_md38"></a>
 📐 Aspect ratio</h2>
 <p><a class="anchor" id="a-camera-aspect-ratio"></a> The <b>aspect ratio</b> is the relationship between the window's width and height. You calculate it by diving the window width by the window height. You can get these values from <a class="el" href="structZEN_1_1Settings.html">ZEN::Settings</a>.</p>
 <p>The default value on the camera is <code>1.777</code> which corresponds to a standard 1920x1080 monitor.</p>
 <dl class="section note"><dt>Note</dt><dd>You must update the aspect ratio, when you apply new monitor settings.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>If you don't accurately set the aspect ratio to match the window proportions, the scene will render, but it might look stretched and off.</dd></dl>
-<h2><a class="anchor" id="autotoc_md35"></a>
+<h2><a class="anchor" id="autotoc_md39"></a>
 👀 Field of view</h2>
 <p>The <b>field of view</b> is the angle the camera can see.</p>
 <p>The value is given in radians.</p>
 <p>Default value corresponds to approx. 45&deg;.</p>
-<h2><a class="anchor" id="autotoc_md36"></a>
+<h2><a class="anchor" id="autotoc_md40"></a>
 ✂️ Clipping plane</h2>
 <p>The <b>clipping plane</b> defines the visible space ahead of the camera. It has a "near" and a "far" value. Anything outside this space will not be rendered (i.e. it will be <em>clipped</em>). </p>
 </div></div><!-- contents -->

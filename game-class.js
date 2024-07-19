@@ -1,5 +1,9 @@
 var game_class =
 [
+    [ "📌 Prerequisites", "observers.html#autotoc_md30", null ],
+    [ "🌘 Implementing an observable", "observers.html#autotoc_md31", null ],
+    [ "🔭 Implementing an observer", "observers.html#autotoc_md32", null ],
+    [ "Meta data", "observers.html#autotoc_md33", null ],
     [ "Game loop", "game-loop.html", [
       [ "Environment variable", "setting-up-a-game.html#autotoc_md7", null ],
       [ "CMake list", "setting-up-a-game.html#autotoc_md8", null ],
@@ -27,8 +31,8 @@ var game_class =
       ] ],
       [ "Notes", "logging.html#autotoc_md24", null ],
       [ "See also", "logging.html#autotoc_md25", [
-        [ "🔁 How it works", "game-loop.html#autotoc_md45", null ],
-        [ "See also", "game-loop.html#autotoc_md46", null ]
+        [ "🔁 How it works", "game-loop.html#autotoc_md49", null ],
+        [ "See also", "game-loop.html#autotoc_md50", null ]
       ] ]
     ] ],
     [ "Delta time", "delta.html", null ],

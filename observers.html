@@ -92,8 +92,46 @@ $(document).ready(function(){initNavTree('observers.html',''); initResizable(); 
 <li><a class="el" href="classZEN_1_1Observer.html">ZEN::Observer</a>: For classes which need to observe other objects</li>
 <li><a class="el" href="classZEN_1_1BeingObserved.html">ZEN::BeingObserved</a>: For classes which can be observed</li>
 </ul>
-<p>An example of this implementation is in <a class="el" href="classZEN_1_1Game.html">ZEN::Game</a>, where <a class="el" href="fps.html">FPS</a> is reported every few seconds to observers. </p>
-</div></div><!-- contents -->
+<p>An example of this implementation is in <a class="el" href="classZEN_1_1Game.html">ZEN::Game</a>, where <a class="el" href="fps.html">FPS</a> is reported every few seconds to observers.</p>
+<h2><a class="anchor" id="autotoc_md30"></a>
+📌 Prerequisites</h2>
+<p>This article assumes fundamental knowledge of observer patterns.</p>
+<h2><a class="anchor" id="autotoc_md31"></a>
+🌘 Implementing an observable</h2>
+<p>Creating a class that can be observed by other classes involves extending <a class="el" href="classZEN_1_1BeingObserved.html">ZEN::BeingObserved</a>.</p>
+<p>At the point in the code flow where you want to notify observers, you call <a class="el" href="classZEN_1_1BeingObserved.html#a2be5a3c3b96bc02c20fe6e94b45e88d0">ZEN::BeingObserved::notifyObservers</a>.</p>
+<div class="fragment"><div class="line"><span class="keyword">class </span>ObjectWithImportantInformation : <span class="keyword">public</span> BeingObserved {</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">    <span class="keywordtype">void</span> somethingHappens() {</div>
+<div class="line">        notifyObservers(ObservingOf::SettingsChanged);</div>
+<div class="line">    }</div>
+<div class="line">    </div>
+<div class="line">};</div>
+</div><!-- fragment --><p>When <code>notifyObservers</code> is called all attached observers will be notified.</p>
+<p>But wait, "attached observers"? Yes, you need to attach observers to instances of <code>ObjectWithImportantInformation</code>. This is done using:</p>
+<div class="fragment"><div class="line">ObjectWithImportantInformation observableInstance;</div>
+<div class="line">observableInstance.attachObserver(observer1);</div>
+<div class="line">observableInstance.attachObserver(observer2);</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md32"></a>
+🔭 Implementing an observer</h2>
+<p>Creating a class which can be observed involves extending <a class="el" href="classZEN_1_1Observer.html">ZEN::Observer</a>, and implementing the function <a class="el" href="classZEN_1_1Observer.html#aa911a10a9439af75da239e8a4efdb61d">ZEN::Observer::notify</a> virtual method.</p>
+<div class="fragment"><div class="line"><span class="keyword">class </span>MyClass : <span class="keyword">public</span> Observer {</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">    <span class="keywordtype">void</span> notify(<span class="keyword">const</span> Observation &amp;observation)<span class="keyword"> override </span>{</div>
+<div class="line">        <span class="comment">// Do something upon being notified </span></div>
+<div class="line">    }</div>
+<div class="line">};</div>
+</div><!-- fragment --><p>Instances of <code>MyClass</code> can be attached to instances of <a class="el" href="classZEN_1_1BeingObserved.html">ZEN::BeingObserved</a>, for example <a class="el" href="classZEN_1_1Game.html">ZEN::Game</a>.</p>
+<div class="fragment"><div class="line">std::shared_ptr&lt;MyClass&gt; myClass = std::make_shared&lt;MyClass&gt;(MyClass());</div>
+<div class="line"> </div>
+<div class="line">game.attachObserver(myClass);</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md33"></a>
+Meta data</h2>
+<p>The <a class="el" href="structZEN_1_1Observation.html">ZEN::Observation</a> which represents the "message" between an <br  />
+ observable object and its observers can contain meta data.</p>
+<p>Example from <a class="el" href="classZEN_1_1Game.html">ZEN::Game</a> class:</p>
+<div class="fragment"><div class="line">notifyObservers(ObservationOf::FPS, {{<span class="stringliteral">&quot;FPS&quot;</span>, currentFps}});</div>
+</div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- start footer part -->

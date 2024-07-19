@@ -6,6 +6,7 @@
 
 ## Modules
 
+@subpage control-systems  
 @subpage opengl
 
 ## Engine development

@@ -1,4 +1,7 @@
 #include "control-systems/control-assist.h"
+#include "zeronetics/logging/log.h"
+#include "zeronetics/logging/logging.h"
+#include <format>
 #include <iostream>
 
 void ZEN::ControlSystems::ControlManager::onKeyStateChanged(const KeyStateEvent &keyEvent) {
@@ -44,6 +47,8 @@ void ZEN::ControlSystems::SignalHandler::on(const char *signal, const std::funct
 
 void ZEN::ControlSystems::SignalHandler::invoke(const char *signal) noexcept(false) {
     if (!handles.contains(signal)) {
+        ZEN_WARN(std::format("Attempting to invoke non-existing signal: {}", signal),
+                 ZEN::LogCategory::Controls);
         return;
     }
     handles[signal]();

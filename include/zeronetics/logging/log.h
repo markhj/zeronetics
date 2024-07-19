@@ -48,6 +48,11 @@ namespace ZEN {
 
         ShaderCompilation,
         ShaderUse,
+
+        /**
+         * User inputs, mapping, handling of controls, etc.
+         */
+        Controls,
     };
 
     /**

@@ -69,6 +69,7 @@ namespace ZEN::ControlSystems {
          * Invoke/execute the handler associated with a signal.
          *
          * @note If no signal is defined, no actions will be taken.
+         *      But a ZEN_WARN will be raised.
          *
          * @note It cannot be guaranteed that exceptions aren't thrown from the handlers.
          *

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7ewindow_372',['~Window',['../classZEN_1_1Window.html#a919e5efd6e8a7544b9e8ad36769f6a35',1,'ZEN::Window']]]
+  ['warn_391',['warn',['../classZEN_1_1Log.html#a718cf7d1fa13ab3ee9943f08a66b64f7',1,'ZEN::Log']]]
 ];

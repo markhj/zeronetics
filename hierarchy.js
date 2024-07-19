@@ -25,8 +25,10 @@ var hierarchy =
       [ "ZEN::OpenGL::StdBinding< T >", "classZEN_1_1OpenGL_1_1StdBinding.html", null ]
     ] ],
     [ "ZEN::IInputManager", "classZEN_1_1IInputManager.html", [
-      [ "ZEN::BaseInputManager", "classZEN_1_1BaseInputManager.html", null ]
+      [ "ZEN::BaseInputManager", "classZEN_1_1BaseInputManager.html", null ],
+      [ "ZEN::ControlSystems::ControlManager", "classZEN_1_1ControlSystems_1_1ControlManager.html", null ]
     ] ],
+    [ "ZEN::ControlSystems::InputMapping", "classZEN_1_1ControlSystems_1_1InputMapping.html", null ],
     [ "ZEN::IRenderable", "classZEN_1_1IRenderable.html", [
       [ "ZEN::IRenderable3D", "classZEN_1_1IRenderable3D.html", [
         [ "ZEN::Mesh3D", "classZEN_1_1Mesh3D.html", null ]
@@ -83,6 +85,7 @@ var hierarchy =
     [ "ZEN::ResultError", "structZEN_1_1ResultError.html", null ],
     [ "ZEN::ScreenResolution", "structZEN_1_1ScreenResolution.html", null ],
     [ "ZEN::Settings", "structZEN_1_1Settings.html", null ],
+    [ "ZEN::ControlSystems::SignalHandler", "classZEN_1_1ControlSystems_1_1SignalHandler.html", null ],
     [ "ZEN::SystemInfo", "classZEN_1_1SystemInfo.html", null ],
     [ "ZEN::SystemInfoSheet", "structZEN_1_1SystemInfoSheet.html", null ],
     [ "ZEN::TimeMeasurement", "structZEN_1_1TimeMeasurement.html", null ],

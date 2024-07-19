@@ -5,10 +5,15 @@ var namespaceZEN =
     [ "Note", "build-info.html#autotoc_md80", [
       [ "🔠 What is a render group?", "render-groups.html#autotoc_md68", null ],
       [ "🚧 Working with groups", "render-groups.html#autotoc_md69", null ],
-      [ "An example", "opengl-bindable.html#autotoc_md103", null ],
-      [ "Functions", "opengl-bindable.html#autotoc_md104", [
-        [ "Short-hand for binding", "opengl-bindable.html#autotoc_md105", null ],
-        [ "With", "opengl-bindable.html#autotoc_md106", null ]
+      [ "💡 The idea", "control-systems-overview.html#autotoc_md103", null ],
+      [ "🎮 Basic usage", "control-systems-overview.html#autotoc_md104", null ],
+      [ "Simple mapping", "control-systems-overview.html#autotoc_md105", null ],
+      [ "🔀 Swap mappings", "control-systems-overview.html#autotoc_md106", null ],
+      [ "Key pressed and released", "control-systems-mapping.html#autotoc_md107", null ],
+      [ "An example", "opengl-bindable.html#autotoc_md108", null ],
+      [ "Functions", "opengl-bindable.html#autotoc_md109", [
+        [ "Short-hand for binding", "opengl-bindable.html#autotoc_md110", null ],
+        [ "With", "opengl-bindable.html#autotoc_md111", null ]
       ] ],
       [ "CMake file", "create-modules.html#autotoc_md85", null ],
       [ "Public headers", "create-modules.html#autotoc_md86", null ],
@@ -24,6 +29,11 @@ var namespaceZEN =
     [ "📘 Primary testing suite", "tests.html#autotoc_md100", null ],
     [ "📚 Organization", "tests.html#autotoc_md101", null ],
     [ "📦 Payloads", "tests.html#autotoc_md102", null ],
+    [ "ControlSystems", null, [
+      [ "InputMapping", "classZEN_1_1ControlSystems_1_1InputMapping.html", "classZEN_1_1ControlSystems_1_1InputMapping" ],
+      [ "SignalHandler", "classZEN_1_1ControlSystems_1_1SignalHandler.html", "classZEN_1_1ControlSystems_1_1SignalHandler" ],
+      [ "ControlManager", "classZEN_1_1ControlSystems_1_1ControlManager.html", "classZEN_1_1ControlSystems_1_1ControlManager" ]
+    ] ],
     [ "OpenGL", null, [
       [ "IBindable", "classZEN_1_1OpenGL_1_1IBindable.html", "classZEN_1_1OpenGL_1_1IBindable" ],
       [ "StdBinding", "classZEN_1_1OpenGL_1_1StdBinding.html", "classZEN_1_1OpenGL_1_1StdBinding" ],

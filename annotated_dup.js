@@ -1,6 +1,11 @@
 var annotated_dup =
 [
     [ "ZEN", "namespaceZEN.html", [
+      [ "ControlSystems", null, [
+        [ "InputMapping", "classZEN_1_1ControlSystems_1_1InputMapping.html", "classZEN_1_1ControlSystems_1_1InputMapping" ],
+        [ "SignalHandler", "classZEN_1_1ControlSystems_1_1SignalHandler.html", "classZEN_1_1ControlSystems_1_1SignalHandler" ],
+        [ "ControlManager", "classZEN_1_1ControlSystems_1_1ControlManager.html", "classZEN_1_1ControlSystems_1_1ControlManager" ]
+      ] ],
       [ "OpenGL", null, [
         [ "IBindable", "classZEN_1_1OpenGL_1_1IBindable.html", "classZEN_1_1OpenGL_1_1IBindable" ],
         [ "StdBinding", "classZEN_1_1OpenGL_1_1StdBinding.html", "classZEN_1_1OpenGL_1_1StdBinding" ],

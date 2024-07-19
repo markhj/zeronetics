@@ -45,3 +45,12 @@ risk a critical-level error.
 
 You can interact with the error and result, using
 ZEN::Result::error and ZEN::Result::result.
+
+## When to use ``Result``
+
+We use ``Result`` when we desire the behavior of ``std::optional``
+but with the possibility to explain the end-user or implementor
+what has gone wrong.
+
+The alternative is to use exceptions, which should be done when
+the error is recoverable or critical.

@@ -113,7 +113,11 @@ $(document).ready(function(){initNavTree('result.html',''); initResizable(); });
 <div class="line">    <span class="comment">// You can use carKeys.result() to extract the result</span></div>
 <div class="line">}</div>
 </div><!-- fragment --><dl class="section warning"><dt>Warning</dt><dd>You must check whether the <code>Result</code> contains an error or not prior to calling <code>error</code> and <code>result</code>, otherwise you risk a critical-level error.</dd></dl>
-<p>You can interact with the error and result, using <a class="el" href="classZEN_1_1Result.html#a13cb3332b5705cfc6964c675909dcec2">ZEN::Result::error</a> and <a class="el" href="classZEN_1_1Result.html#a9a15d5350d3887c0d378e81132115e21">ZEN::Result::result</a>. </p>
+<p>You can interact with the error and result, using <a class="el" href="classZEN_1_1Result.html#a13cb3332b5705cfc6964c675909dcec2">ZEN::Result::error</a> and <a class="el" href="classZEN_1_1Result.html#a9a15d5350d3887c0d378e81132115e21">ZEN::Result::result</a>.</p>
+<h2><a class="anchor" id="autotoc_md35"></a>
+When to use &lt;tt&gt;Result&lt;/tt&gt;</h2>
+<p>We use <code>Result</code> when we desire the behavior of <code>std::optional</code> but with the possibility to explain the end-user or implementor what has gone wrong.</p>
+<p>The alternative is to use exceptions, which should be done when the error is recoverable or critical. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

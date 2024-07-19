@@ -1,34 +1,34 @@
 var namespaceZEN =
 [
-    [ "Macros", "build-info.html#autotoc_md78", null ],
-    [ "Example", "build-info.html#autotoc_md79", null ],
-    [ "Note", "build-info.html#autotoc_md80", [
-      [ "🔠 What is a render group?", "render-groups.html#autotoc_md68", null ],
-      [ "🚧 Working with groups", "render-groups.html#autotoc_md69", null ],
-      [ "💡 The idea", "control-systems-overview.html#autotoc_md103", null ],
-      [ "🎮 Basic usage", "control-systems-overview.html#autotoc_md104", null ],
-      [ "Simple mapping", "control-systems-overview.html#autotoc_md105", null ],
-      [ "🔀 Swap mappings", "control-systems-overview.html#autotoc_md106", null ],
-      [ "Key pressed and released", "control-systems-mapping.html#autotoc_md107", null ],
-      [ "An example", "opengl-bindable.html#autotoc_md108", null ],
-      [ "Functions", "opengl-bindable.html#autotoc_md109", [
-        [ "Short-hand for binding", "opengl-bindable.html#autotoc_md110", null ],
-        [ "With", "opengl-bindable.html#autotoc_md111", null ]
+    [ "Macros", "build-info.html#autotoc_md79", null ],
+    [ "Example", "build-info.html#autotoc_md80", null ],
+    [ "Note", "build-info.html#autotoc_md81", [
+      [ "🔠 What is a render group?", "render-groups.html#autotoc_md69", null ],
+      [ "🚧 Working with groups", "render-groups.html#autotoc_md70", null ],
+      [ "💡 The idea", "control-systems-overview.html#autotoc_md104", null ],
+      [ "🎮 Basic usage", "control-systems-overview.html#autotoc_md105", null ],
+      [ "Simple mapping", "control-systems-overview.html#autotoc_md106", null ],
+      [ "🔀 Swap mappings", "control-systems-overview.html#autotoc_md107", null ],
+      [ "Key pressed and released", "control-systems-mapping.html#autotoc_md108", null ],
+      [ "An example", "opengl-bindable.html#autotoc_md109", null ],
+      [ "Functions", "opengl-bindable.html#autotoc_md110", [
+        [ "Short-hand for binding", "opengl-bindable.html#autotoc_md111", null ],
+        [ "With", "opengl-bindable.html#autotoc_md112", null ]
       ] ],
-      [ "CMake file", "create-modules.html#autotoc_md85", null ],
-      [ "Public headers", "create-modules.html#autotoc_md86", null ],
-      [ "Integrate in build process", "create-modules.html#autotoc_md87", null ]
+      [ "CMake file", "create-modules.html#autotoc_md86", null ],
+      [ "Public headers", "create-modules.html#autotoc_md87", null ],
+      [ "Integrate in build process", "create-modules.html#autotoc_md88", null ]
     ] ],
-    [ "Namespace", "create-modules.html#autotoc_md88", null ],
-    [ "How to make callbacks \"a la Zeronetics\"", "callbacks.html#autotoc_md81", null ],
-    [ "Examination of choices", "callbacks.html#autotoc_md82", [
-      [ "Using <tt>std::optional</tt>", "callbacks.html#autotoc_md83", null ],
-      [ "Smart pointers", "callbacks.html#autotoc_md84", null ]
+    [ "Namespace", "create-modules.html#autotoc_md89", null ],
+    [ "How to make callbacks \"a la Zeronetics\"", "callbacks.html#autotoc_md82", null ],
+    [ "Examination of choices", "callbacks.html#autotoc_md83", [
+      [ "Using <tt>std::optional</tt>", "callbacks.html#autotoc_md84", null ],
+      [ "Smart pointers", "callbacks.html#autotoc_md85", null ]
     ] ],
-    [ "🔀 Management of allocation", "arch-render-manager.html#autotoc_md75", null ],
-    [ "📘 Primary testing suite", "tests.html#autotoc_md100", null ],
-    [ "📚 Organization", "tests.html#autotoc_md101", null ],
-    [ "📦 Payloads", "tests.html#autotoc_md102", null ],
+    [ "🔀 Management of allocation", "arch-render-manager.html#autotoc_md76", null ],
+    [ "📘 Primary testing suite", "tests.html#autotoc_md101", null ],
+    [ "📚 Organization", "tests.html#autotoc_md102", null ],
+    [ "📦 Payloads", "tests.html#autotoc_md103", null ],
     [ "ControlSystems", null, [
       [ "InputMapping", "classZEN_1_1ControlSystems_1_1InputMapping.html", "classZEN_1_1ControlSystems_1_1InputMapping" ],
       [ "SignalHandler", "classZEN_1_1ControlSystems_1_1SignalHandler.html", "classZEN_1_1ControlSystems_1_1SignalHandler" ],

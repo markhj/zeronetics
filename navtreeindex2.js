@@ -1,6 +1,5 @@
 var NAVTREEINDEX2 =
 {
-"structZEN_1_1LogBehavior.html":[8,0,0,51],
 "structZEN_1_1LogBehavior.html#a2ea453ab613b2d112ec0f9b13fe0c313":[8,0,0,51,0],
 "structZEN_1_1LogFileEntry.html":[8,0,0,50],
 "structZEN_1_1LogFileEntry.html#a84c99abbdb3485366f9487485a194895":[8,0,0,50,1],
@@ -54,18 +53,20 @@ var NAVTREEINDEX2 =
 "structZEN_1_1Vertex3D.html#a5501e2cbbce4b957894a749d10715e9c":[8,0,0,43,1],
 "structZEN_1_1Vertex3D.html#aeeced967cb9977a159a0afbc087b445f":[8,0,0,43,0],
 "tensors.html":[3,4,1],
-"tensors.html#autotoc_md58":[3],
-"tensors.html#autotoc_md59":[4],
-"tensors.html#autotoc_md60":[5],
+"tensors.html#autotoc_md59":[3],
+"tensors.html#autotoc_md60":[4],
+"tensors.html#autotoc_md61":[5],
 "tests.html":[6,5],
-"tests.html#autotoc_md100":[7],
-"tests.html#autotoc_md101":[8],
-"tests.html#autotoc_md102":[9],
+"tests.html#autotoc_md101":[7],
+"tests.html#autotoc_md102":[8],
+"tests.html#autotoc_md103":[9],
 "timer.html":[3,1],
-"timer.html#autotoc_md37":[0],
+"timer.html#autotoc_md38":[0],
 "tutorials.html":[1],
 "tutorials.html#autotoc_md28":[3],
 "tutorials.html#autotoc_md29":[4],
 "vertices.html":[3,4,2],
-"vertices.html#autotoc_md61":[6]
+"vertices.html#autotoc_md62":[6],
+"":[7,0,0,10],
+"":[7,0,0,11]
 };

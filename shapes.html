@@ -88,13 +88,13 @@ $(document).ready(function(){initNavTree('shapes.html',''); initResizable(); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>As you can read in the <a class="el" href="geometry-relationships.html">article about geometric relationships</a> it's cumbersome to build shapes by specifying all the vertices and triangles they are made of. The concept of "shapes" is a way to ease this process.</p>
-<h2><a class="anchor" id="autotoc_md54"></a>
+<h2><a class="anchor" id="autotoc_md55"></a>
 🔷 Shapes</h2>
 <p>Every child class of ZEN::Shape contains a <a class="el" href="classZEN_1_1IShape.html#a2edb580c0205a6a33449ef446aad4b2d">getVertices</a> method, which returns the vertices that make up the shape.</p>
 <p>Example:</p>
 <div class="fragment"><div class="line"><a class="code" href="classZEN_1_1Cube.html">ZEN::Cube</a> cube(1.0, 5.0, 2.5);  <span class="comment">// Width, height, depth</span></div>
 <div class="ttc" id="aclassZEN_1_1Cube_html"><div class="ttname"><a href="classZEN_1_1Cube.html">ZEN::Cube</a></div><div class="ttdef"><b>Definition:</b> cube.h:8</div></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md55"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md56"></a>
 📃 List of shapes</h2>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -102,12 +102,12 @@ $(document).ready(function(){initNavTree('shapes.html',''); initResizable(); });
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone"><a class="el" href="classZEN_1_1Cube.html">ZEN::Cube</a>   </td><td class="markdownTableBodyNone">Forms a 3D cube   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md56"></a>
+<h2><a class="anchor" id="autotoc_md57"></a>
 ⭕ Custom shapes</h2>
 <p>You can build your own shapes by extending <a class="el" href="classZEN_1_1Shape3D.html">ZEN::Shape3D</a>, and implementing the <a class="el" href="classZEN_1_1IShape.html#a21d868feb2eabc68a587f7fb59d7f9fc">ZEN::IShape::make</a> method.</p>
 <p>The normal process is defining a constructor which takes the properties you need. A sphere, for instance, needs a radius. But exactly <em>which</em> arguments you have to take depend on the shape you want to construct.</p>
 <dl class="section note"><dt>Note</dt><dd>Important: You must implement the <code>make</code> method such that the center of the shape is at <code>(0, 0, 0)</code>, otherwise positioning will not work as expected.</dd></dl>
-<h2><a class="anchor" id="autotoc_md57"></a>
+<h2><a class="anchor" id="autotoc_md58"></a>
 📜 See also</h2>
 <p><a class="el" href="geometry-relationships.html">Geometry relationships</a> </p>
 </div></div><!-- contents -->

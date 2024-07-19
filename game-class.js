@@ -1,9 +1,5 @@
 var game_class =
 [
-    [ "📌 Prerequisites", "observers.html#autotoc_md30", null ],
-    [ "🌘 Implementing an observable", "observers.html#autotoc_md31", null ],
-    [ "🔭 Implementing an observer", "observers.html#autotoc_md32", null ],
-    [ "Meta data", "observers.html#autotoc_md33", null ],
     [ "Game loop", "game-loop.html", [
       [ "Environment variable", "setting-up-a-game.html#autotoc_md7", null ],
       [ "CMake list", "setting-up-a-game.html#autotoc_md8", null ],

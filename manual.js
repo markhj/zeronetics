@@ -8,5 +8,6 @@ var manual =
     [ "Orientation in the 3D space", "orientation.html", null ],
     [ "Entities", "entities.html", "entities" ],
     [ "Result", "result.html", null ],
-    [ "Rendering", "rendering.html", "rendering" ]
+    [ "Rendering", "rendering.html", "rendering" ],
+    [ "Observers", "observers.html", null ]
 ];

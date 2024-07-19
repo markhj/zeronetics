@@ -3,12 +3,6 @@ var namespaceZEN =
     [ "Macros", "build-info.html#autotoc_md79", null ],
     [ "Example", "build-info.html#autotoc_md80", null ],
     [ "Note", "build-info.html#autotoc_md81", [
-      [ "🔠 What is a render group?", "render-groups.html#autotoc_md69", null ],
-      [ "🚧 Working with groups", "render-groups.html#autotoc_md70", null ],
-      [ "💡 The idea", "control-systems-overview.html#autotoc_md104", null ],
-      [ "🎮 Basic usage", "control-systems-overview.html#autotoc_md105", null ],
-      [ "Simple mapping", "control-systems-overview.html#autotoc_md106", null ],
-      [ "🔀 Swap mappings", "control-systems-overview.html#autotoc_md107", null ],
       [ "Key pressed and released", "control-systems-mapping.html#autotoc_md108", null ],
       [ "An example", "opengl-bindable.html#autotoc_md109", null ],
       [ "Functions", "opengl-bindable.html#autotoc_md110", [

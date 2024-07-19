@@ -3,6 +3,7 @@
 #include "zeronetics/contracts/renderer.h"
 #include "zeronetics/contracts/window.h"
 #include "zeronetics/core/timer.h"
+#include "zeronetics/core/observer.h"
 #include <memory>
 
 namespace ZEN {
@@ -10,7 +11,7 @@ namespace ZEN {
      * The main game class which connects different components,
      * such as window and renderer, and maintains the game loop.
      */
-    class Game {
+    class Game : public BeingObserved {
     public:
         /**
          * Construct instance.

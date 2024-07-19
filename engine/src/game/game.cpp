@@ -13,6 +13,9 @@ void ZEN::Game::run() {
 
     m_timer.start();
 
+    Timer fpsTimer;
+    fpsTimer.start();
+
     while (true) {
         m_timer.reset();
 
@@ -26,6 +29,12 @@ void ZEN::Game::run() {
         m_window->handleBuffer();
 
         managedRenderTime = m_timer.getTime().result();
+
+        // Report FPS every second
+        if (fpsTimer.getTime().result().microsecs > 1 * 1000 * 1000) {
+            fpsTimer.reset();
+            notifyObservers(ObservationOf::FPS, {{"FPS", getFPS()}});
+        }
     }
 
     m_timer.end();

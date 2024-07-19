@@ -25,6 +25,7 @@
 #include "core/sysinfo.hpp"
 #include "core/version.h"
 #include "core/result.h"
+#include "core/observer.h"
 
 // Core: 3rd Level
 #include "core/aabb.h"

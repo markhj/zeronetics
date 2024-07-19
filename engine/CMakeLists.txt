@@ -14,6 +14,7 @@ set(CORE_SRC
         src/core/sysinfo.cpp
         src/core/result.cpp
         src/core/timer.cpp
+        src/core/observer.cpp
 
         # Core: 3rd layer
         src/core/aabb.cpp

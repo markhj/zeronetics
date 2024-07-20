@@ -94,15 +94,20 @@ $(document).ready(function(){initNavTree('shape_8h_source.html',''); initResizab
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceZEN.html">ZEN</a> {</div>
 <div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classZEN_1_1Shape3D.html">   14</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classZEN_1_1Shape3D.html">Shape3D</a> : <span class="keyword">public</span> <a class="code" href="classZEN_1_1IShape3D.html">IShape3D</a> {</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classZEN_1_1Shape3D.html#aadedfd4d1168261058e908ddc007efc1">   24</a></span>&#160;        [[nodiscard]] std::vector&lt;Vertex3D&gt; <a class="code" href="classZEN_1_1Shape3D.html#aadedfd4d1168261058e908ddc007efc1">getVertices</a>() noexcept final;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    private:</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        std::vector&lt;<a class="code" href="structZEN_1_1Vertex3D.html">Vertex3D</a>&gt; m_generated;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    };</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <a class="code" href="classZEN_1_1Shape3D.html">Shape3D</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classZEN_1_1Shape3D.html#a540a684882035463c27b94493feabb58">   23</a></span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classZEN_1_1Shape3D.html#a540a684882035463c27b94493feabb58">Shape3D</a>(std::vector&lt;Vertex3D&gt; vertices);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classZEN_1_1Shape3D.html#aadedfd4d1168261058e908ddc007efc1">   33</a></span>&#160;        [[nodiscard]] std::vector&lt;Vertex3D&gt; <a class="code" href="classZEN_1_1Shape3D.html#aadedfd4d1168261058e908ddc007efc1">getVertices</a>() noexcept final;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    private:</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        std::vector&lt;<a class="code" href="structZEN_1_1Vertex3D.html">Vertex3D</a>&gt; m_generated;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    };</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
 <div class="ttc" id="aclassZEN_1_1IShape3D_html"><div class="ttname"><a href="classZEN_1_1IShape3D.html">ZEN::IShape3D</a></div><div class="ttdef"><b>Definition:</b> shapes.h:49</div></div>
 <div class="ttc" id="aclassZEN_1_1Shape3D_html"><div class="ttname"><a href="classZEN_1_1Shape3D.html">ZEN::Shape3D</a></div><div class="ttdef"><b>Definition:</b> shape.h:14</div></div>
+<div class="ttc" id="aclassZEN_1_1Shape3D_html_a540a684882035463c27b94493feabb58"><div class="ttname"><a href="classZEN_1_1Shape3D.html#a540a684882035463c27b94493feabb58">ZEN::Shape3D::Shape3D</a></div><div class="ttdeci">Shape3D(std::vector&lt; Vertex3D &gt; vertices)</div></div>
 <div class="ttc" id="aclassZEN_1_1Shape3D_html_aadedfd4d1168261058e908ddc007efc1"><div class="ttname"><a href="classZEN_1_1Shape3D.html#aadedfd4d1168261058e908ddc007efc1">ZEN::Shape3D::getVertices</a></div><div class="ttdeci">std::vector&lt; Vertex3D &gt; getVertices() noexcept final</div></div>
 <div class="ttc" id="anamespaceZEN_html"><div class="ttname"><a href="namespaceZEN.html">ZEN</a></div><div class="ttdef"><b>Definition:</b> cameras.h:6</div></div>
 <div class="ttc" id="astructZEN_1_1Vertex3D_html"><div class="ttname"><a href="structZEN_1_1Vertex3D.html">ZEN::Vertex3D</a></div><div class="ttdef"><b>Definition:</b> vertices.h:16</div></div>

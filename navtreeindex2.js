@@ -1,5 +1,7 @@
 var NAVTREEINDEX2 =
 {
+"structZEN_1_1IRenderManager.html#a7f96a548c5e8a1724f1568d725fa36c6":[7,0,0,7,2],
+"structZEN_1_1IRenderManager.html#a9c7bf5c92b66b63891333b3219c7ec56":[7,0,0,7,1],
 "structZEN_1_1IRenderManager.html#aadbacbb19656db37e5310586b2b80d98":[7,0,0,7,3],
 "structZEN_1_1IRenderManager.html#ad585ca557d1fc559f6d18dea0ea94b1f":[7,0,0,7,0],
 "structZEN_1_1IRendererRequest.html":[7,0,0,5],
@@ -78,6 +80,6 @@ var NAVTREEINDEX2 =
 "vertices.html":[2,4,2],
 "vertices.html#autotoc_md67":[6],
 "":[6,0,0,11],
-"":[6,0,0,13],
-"":[6,0,0,12]
+"":[6,0,0,12],
+"":[6,0,0,13]
 };

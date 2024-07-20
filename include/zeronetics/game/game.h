@@ -27,6 +27,17 @@ namespace ZEN {
         void run();
 
         /**
+         * Retrieve current delta time value.
+         *
+         * @note Is 0.0 during rendering of the first frame.
+         *
+         * @ref delta
+         *
+         * @return
+         */
+        [[nodiscard]] dt_float getDeltaTime() const noexcept;
+
+        /**
          * Retrieve current FPS (frames per second).
          *
          * @ref fps

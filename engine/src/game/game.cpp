@@ -1,5 +1,6 @@
 #include "zeronetics/game/game.h"
 #include <chrono>
+#include <cmath>
 #include <iostream>
 
 ZEN::Game::Game(const std::shared_ptr<IWindow> &window,
@@ -30,6 +31,9 @@ void ZEN::Game::run() {
         m_window->handleInputs();
         m_window->handleBuffer();
 
+        // Calculate the time it took to render the scene (including
+        // frame rate adjustment), such that we can calculate the
+        // delta time value.
         managedRenderTime = m_timer.getTime().result();
         m_delta = 1.0f / managedRenderTime.microsecs;
 
@@ -45,9 +49,13 @@ void ZEN::Game::run() {
 }
 
 ZEN::fps_int ZEN::Game::getFPS() const noexcept {
-    return static_cast<fps_int>(floor(1000000.0 / managedRenderTime.microsecs));
+    return static_cast<fps_int>(std::floor(1.0f / getDeltaTime()));
 }
 
 ZEN::TimeMeasurement ZEN::Game::getRealRenderTime() const noexcept {
     return realRenderTime;
+}
+
+ZEN::dt_float ZEN::Game::getDeltaTime() const noexcept {
+    return m_delta;
 }

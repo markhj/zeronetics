@@ -1,5 +1,6 @@
 var NAVTREEINDEX1 =
 {
+"engine-core-structure.html#autotoc_md102":[2,5],
 "engine-core-structure.html#autotoc_md103":[2,6],
 "engine-core-structure.html#autotoc_md104":[2,7],
 "engine-core-structure.html#autotoc_md105":[2,8],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "settings.html#autotoc_md41":[1],
 "settings.html#autotoc_md42":[2],
 "shapes.html":[2,4,3],
-"shapes.html#autotoc_md60":[7],
-"shapes.html#autotoc_md61":[8]
+"shapes.html#autotoc_md60":[7]
 };

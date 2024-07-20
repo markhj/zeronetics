@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['why_20are_20log_20functions_20macros_3f_514',['Why are log functions macros?',['../log-why-macros.html',1,'engine-arch']]]
+  ['why_20are_20log_20functions_20macros_3f_516',['Why are log functions macros?',['../log-why-macros.html',1,'engine-arch']]]
 ];

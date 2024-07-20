@@ -11,10 +11,10 @@ var control_systems =
       [ "Meta data", "observers.html#autotoc_md38", [
         [ "🔠 What is a render group?", "render-groups.html#autotoc_md74", null ],
         [ "🚧 Working with groups", "render-groups.html#autotoc_md75", null ],
-        [ "💡 The idea", "control-systems-overview.html#autotoc_md109", null ],
-        [ "🎮 Basic usage", "control-systems-overview.html#autotoc_md110", null ],
-        [ "Simple mapping", "control-systems-overview.html#autotoc_md111", null ],
-        [ "🔀 Swap mappings", "control-systems-overview.html#autotoc_md112", null ]
+        [ "💡 The idea", "control-systems-overview.html#autotoc_md110", null ],
+        [ "🎮 Basic usage", "control-systems-overview.html#autotoc_md111", null ],
+        [ "Simple mapping", "control-systems-overview.html#autotoc_md112", null ],
+        [ "🔀 Swap mappings", "control-systems-overview.html#autotoc_md113", null ]
       ] ]
     ] ],
     [ "Input mapping", "control-systems-mapping.html", null ]

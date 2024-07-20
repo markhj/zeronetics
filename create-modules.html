@@ -133,7 +133,36 @@ Namespace</h2>
 <p>For modules, the choice of namespace is relatively free choice.</p>
 <p>However, as long as a module has any dependencies from the main engine, it's recommended to nest the module within <code><a class="el" href="namespaceZEN.html">ZEN</a></code> namespace. This is to make it clear that the module (probably) can't just be get unplugged from Zeronetics and applied in other projects.</p>
 <p>Larger modules, especially those with risk of name collisions, should be nested within their own namespace.</p>
-<p>Our OpenGL module, for example, resides in <code>ZEN::OpenGL</code>. This is to avoid collisions of common names such as <code>Shader</code> and <code>Renderer</code> which is likely to exist in other modules. </p>
+<p>Our OpenGL module, for example, resides in <code>ZEN::OpenGL</code>. This is to avoid collisions of common names such as <code>Shader</code> and <code>Renderer</code> which is likely to exist in other modules.</p>
+<h2><a class="anchor" id="autotoc_md95"></a>
+Tests</h2>
+<p>If you need to write automated tests for your module, you create a directory named <code>tests</code> in the module directory.</p>
+<p>Add a <code>CMakeLists.txt</code> such that the directory structure looks like:</p>
+<div class="fragment"><div class="line">modules/</div>
+<div class="line">└── awesome/</div>
+<div class="line">    ├── CMakeLists.txt</div>
+<div class="line">    ├── include/</div>
+<div class="line">    │   └── zeronetics/</div>
+<div class="line">    │       ├── awesome.h</div>
+<div class="line">    │       └── ...</div>
+<div class="line">    └── src/</div>
+<div class="line">        └── awesome.cpp</div>
+<div class="line">    └── tests/</div>
+<div class="line">        ├── src/</div>
+<div class="line">        └── CMakeLists.txt</div>
+</div><!-- fragment --><p>Within the <code>CMakeLists.txt</code> file you add the following source, where you replace <code>&lt;EXECUTABLE NAME&gt;</code> with: <code>tests_my_module´`. It's convention in Zeronetics that module you prefix with</code>tests_*``.</p>
+<div class="fragment"><div class="line">cmake_minimum_required(VERSION 3.28)</div>
+<div class="line">project(&lt;EXECUTABLE NAME&gt;)</div>
+<div class="line"> </div>
+<div class="line">set(CMAKE_CXX_STANDARD 20)</div>
+<div class="line"> </div>
+<div class="line">add_executable(&lt;EXECUTABLE NAME&gt; src/main.cpp)</div>
+<div class="line"> </div>
+<div class="line">target_link_libraries(&lt;EXECUTABLE NAME&gt; PRIVATE zeronetics)</div>
+<div class="line"> </div>
+<div class="line">target_include_directories(&lt;EXECUTABLE NAME&gt; PUBLIC ${ZEN_VENDOR_DIR}/cpp-bbunit/include)</div>
+</div><!-- fragment --><p>Continue by reading <a class="el" href="tests.html">Test organization</a> regarding how to structure your test setup, as from this point it resembles the main engine test suite.</p>
+<dl class="section note"><dt>Note</dt><dd>You can explore <code>control-systems</code> module for inspiration and learning. </dd></dl>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

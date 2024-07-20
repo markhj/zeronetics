@@ -3,26 +3,27 @@ var namespaceZEN =
     [ "Macros", "build-info.html#autotoc_md84", null ],
     [ "Example", "build-info.html#autotoc_md85", null ],
     [ "Note", "build-info.html#autotoc_md86", [
-      [ "Key pressed and released", "control-systems-mapping.html#autotoc_md113", null ],
-      [ "An example", "opengl-bindable.html#autotoc_md114", null ],
-      [ "Functions", "opengl-bindable.html#autotoc_md115", [
-        [ "Short-hand for binding", "opengl-bindable.html#autotoc_md116", null ],
-        [ "With", "opengl-bindable.html#autotoc_md117", null ]
+      [ "Key pressed and released", "control-systems-mapping.html#autotoc_md114", null ],
+      [ "An example", "opengl-bindable.html#autotoc_md115", null ],
+      [ "Functions", "opengl-bindable.html#autotoc_md116", [
+        [ "Short-hand for binding", "opengl-bindable.html#autotoc_md117", null ],
+        [ "With", "opengl-bindable.html#autotoc_md118", null ]
       ] ],
       [ "CMake file", "create-modules.html#autotoc_md91", null ],
       [ "Public headers", "create-modules.html#autotoc_md92", null ],
       [ "Integrate in build process", "create-modules.html#autotoc_md93", null ]
     ] ],
     [ "Namespace", "create-modules.html#autotoc_md94", null ],
+    [ "Tests", "create-modules.html#autotoc_md95", null ],
     [ "How to make callbacks \"a la Zeronetics\"", "callbacks.html#autotoc_md87", null ],
     [ "Examination of choices", "callbacks.html#autotoc_md88", [
       [ "Using <tt>std::optional</tt>", "callbacks.html#autotoc_md89", null ],
       [ "Smart pointers", "callbacks.html#autotoc_md90", null ]
     ] ],
     [ "🔀 Management of allocation", "arch-render-manager.html#autotoc_md81", null ],
-    [ "📘 Primary testing suite", "tests.html#autotoc_md106", null ],
-    [ "📚 Organization", "tests.html#autotoc_md107", null ],
-    [ "📦 Payloads", "tests.html#autotoc_md108", null ],
+    [ "📘 Primary testing suite", "tests.html#autotoc_md107", null ],
+    [ "📚 Organization", "tests.html#autotoc_md108", null ],
+    [ "📦 Payloads", "tests.html#autotoc_md109", null ],
     [ "ControlSystems", null, [
       [ "InputMapping", "classZEN_1_1ControlSystems_1_1InputMapping.html", "classZEN_1_1ControlSystems_1_1InputMapping" ],
       [ "SignalHandler", "classZEN_1_1ControlSystems_1_1SignalHandler.html", "classZEN_1_1ControlSystems_1_1SignalHandler" ],
@@ -40,6 +41,9 @@ var namespaceZEN =
       [ "gl_float", "opengl_8h.html#a3cf0cd9d8361f9a3e192fe9377abe102", null ],
       [ "gl_int", "opengl_8h.html#aa1b2a8f39523be4c06690265b90199ef", null ],
       [ "gl_uint", "opengl_8h.html#a32fc3170efffdd3e18329f464d582a0a", null ]
+    ] ],
+    [ "Tests", null, [
+      [ "ControlSystemsTest", "classZEN_1_1Tests_1_1ControlSystemsTest.html", "classZEN_1_1Tests_1_1ControlSystemsTest" ]
     ] ],
     [ "ICamera3D", "classZEN_1_1ICamera3D.html", "classZEN_1_1ICamera3D" ],
     [ "IInputManager", "classZEN_1_1IInputManager.html", "classZEN_1_1IInputManager" ],

@@ -15,6 +15,9 @@ var annotated_dup =
         [ "VAO", "classZEN_1_1OpenGL_1_1VAO.html", "classZEN_1_1OpenGL_1_1VAO" ],
         [ "VBO", "classZEN_1_1OpenGL_1_1VBO.html", "classZEN_1_1OpenGL_1_1VBO" ]
       ] ],
+      [ "Tests", null, [
+        [ "ControlSystemsTest", "classZEN_1_1Tests_1_1ControlSystemsTest.html", "classZEN_1_1Tests_1_1ControlSystemsTest" ]
+      ] ],
       [ "ICamera3D", "classZEN_1_1ICamera3D.html", "classZEN_1_1ICamera3D" ],
       [ "IInputManager", "classZEN_1_1IInputManager.html", "classZEN_1_1IInputManager" ],
       [ "IRendererRequest", "structZEN_1_1IRendererRequest.html", "structZEN_1_1IRendererRequest" ],

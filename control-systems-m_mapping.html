@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Zeronetics Game Engine: Member List</title>
+<title>Zeronetics Game Engine: Input m_mapping</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -64,7 +64,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('classZEN_1_1Window.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('control-systems-m_mapping.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -82,29 +82,24 @@ $(document).ready(function(){initNavTree('classZEN_1_1Window.html',''); initResi
 </iframe>
 </div>
 
-<div class="header">
+<div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">ZEN::Window Member List</div>  </div>
+<div class="title">Input m_mapping </div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>This is the complete list of members for <a class="el" href="classZEN_1_1Window.html">ZEN::Window</a>, including all inherited members.</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classZEN_1_1Window.html#a64cec0e02957378822f9e7ae0b9ee51d">close</a>() noexcept override</td><td class="entry"><a class="el" href="classZEN_1_1Window.html">ZEN::Window</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classZEN_1_1Window.html#a56421da6cc3290b940c3200b7a4f0a6f">generate</a>(const Settings &amp;settings) noexcept(false) override</td><td class="entry"><a class="el" href="classZEN_1_1Window.html">ZEN::Window</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classZEN_1_1Window.html#ab524ce373bdaa172859cb99e1cd207c9">handleBuffer</a>() override</td><td class="entry"><a class="el" href="classZEN_1_1Window.html">ZEN::Window</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classZEN_1_1Window.html#a6cc55ce77162a4b14859fc95593107cd">handleInputs</a>() override</td><td class="entry"><a class="el" href="classZEN_1_1Window.html">ZEN::Window</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classZEN_1_1Window.html#a06380aa0c78a3a75770b9e2879e7d11e">onClose</a>(std::function&lt; void()&gt; handle) override</td><td class="entry"><a class="el" href="classZEN_1_1Window.html">ZEN::Window</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classZEN_1_1Window.html#a965d2cb76adecf96af454395e8113ce0">process</a>(dt_float delta) override</td><td class="entry"><a class="el" href="classZEN_1_1Window.html">ZEN::Window</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classZEN_1_1Window.html#aeea1798c76919c2560775df3e4cd3093">regenerate</a>(const Settings &amp;settings) noexcept(false) override</td><td class="entry"><a class="el" href="classZEN_1_1Window.html">ZEN::Window</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classZEN_1_1Window.html#a38ebf8096b598b8ab3df8260ce742838">setInputManager</a>(const std::shared_ptr&lt; IInputManager &gt; &amp;inputManager) override</td><td class="entry"><a class="el" href="classZEN_1_1Window.html">ZEN::Window</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classZEN_1_1Window.html#af1d158bd7f1fc66a9af1fb45495ff240">windowTitle</a></td><td class="entry"><a class="el" href="classZEN_1_1Window.html">ZEN::Window</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classZEN_1_1Window.html#a919e5efd6e8a7544b9e8ad36769f6a35">~Window</a>()</td><td class="entry"><a class="el" href="classZEN_1_1Window.html">ZEN::Window</a></td><td class="entry"></td></tr>
-</table></div><!-- contents -->
+<div class="textblock"><p>In this article, we're going to review the various types of input m_mapping you can do with <a class="el" href="classZEN_1_1ControlSystems_1_1InputMapping.html">ZEN::ControlSystems::InputMapping</a>.</p>
+<h2><a class="anchor" id="autotoc_md114"></a>
+Key pressed and released</h2>
+<p>To map when a key has just been pressed, or just released, use these methods:</p>
+<div class="fragment"><div class="line">inputMapping-&gt;keyJustPressed(Key::W, <span class="stringliteral">&quot;start_running_forward&quot;</span>);</div>
+<div class="line">inputMapping-&gt;keyJustReleased(Key::W, <span class="stringliteral">&quot;stop_running_forward&quot;</span>);</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="modules.html">Modules</a></li><li class="navelem"><a class="el" href="control-systems.html">Control Systems</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>

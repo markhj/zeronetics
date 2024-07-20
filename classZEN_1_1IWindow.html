@@ -112,6 +112,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a527811644cc0b04c5f8d661d013fc45b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a567b2bae12bca462be7fbe744ee8be7e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1IWindow.html#a567b2bae12bca462be7fbe744ee8be7e">handleBuffer</a> ()=0</td></tr>
 <tr class="separator:a567b2bae12bca462be7fbe744ee8be7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab342b33490aaf6d1894c2d825ba16173"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1IWindow.html#ab342b33490aaf6d1894c2d825ba16173">process</a> (<a class="el" href="namespaceZEN.html#a1896aa89c3b0bbcccbd1b16d57410502">dt_float</a> delta)=0</td></tr>
+<tr class="separator:ab342b33490aaf6d1894c2d825ba16173"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2944bafe25694ec5fc62dd063227dc9f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1IWindow.html#a2944bafe25694ec5fc62dd063227dc9f">setInputManager</a> (const std::shared_ptr&lt; <a class="el" href="classZEN_1_1IInputManager.html">IInputManager</a> &gt; &amp;inputManager)=0</td></tr>
 <tr class="separator:a2944bafe25694ec5fc62dd063227dc9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -269,6 +271,41 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p>Implemented in <a class="el" href="classZEN_1_1Window.html#a06380aa0c78a3a75770b9e2879e7d11e">ZEN::Window</a>.</p>
+
+</div>
+</div>
+<a id="ab342b33490aaf6d1894c2d825ba16173"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab342b33490aaf6d1894c2d825ba16173">&#9670;&nbsp;</a></span>process()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ZEN::IWindow::process </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceZEN.html#a1896aa89c3b0bbcccbd1b16d57410502">dt_float</a>&#160;</td>
+          <td class="paramname"><em>delta</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Process to be run on every game loop iteration.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">delta</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="classZEN_1_1Window.html#a965d2cb76adecf96af454395e8113ce0">ZEN::Window</a>.</p>
 
 </div>
 </div>

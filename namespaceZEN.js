@@ -3,7 +3,7 @@ var namespaceZEN =
     [ "Macros", "build-info.html#autotoc_md84", null ],
     [ "Example", "build-info.html#autotoc_md85", null ],
     [ "Note", "build-info.html#autotoc_md86", [
-      [ "Key pressed and released", "control-systems-mapping.html#autotoc_md114", null ],
+      [ "Key pressed and released", "control-systems-m_mapping.html#autotoc_md114", null ],
       [ "An example", "opengl-bindable.html#autotoc_md115", null ],
       [ "Functions", "opengl-bindable.html#autotoc_md116", [
         [ "Short-hand for binding", "opengl-bindable.html#autotoc_md117", null ],
@@ -66,6 +66,7 @@ var namespaceZEN =
     [ "GPUAllocation", "structZEN_1_1GPUAllocation.html", "structZEN_1_1GPUAllocation" ],
     [ "KeyMap", "structZEN_1_1KeyMap.html", null ],
     [ "KeyStateEvent", "structZEN_1_1KeyStateEvent.html", "structZEN_1_1KeyStateEvent" ],
+    [ "KeyDownEvent", "structZEN_1_1KeyDownEvent.html", "structZEN_1_1KeyDownEvent" ],
     [ "MousePosition", "structZEN_1_1MousePosition.html", "structZEN_1_1MousePosition" ],
     [ "MouseMovedEvent", "structZEN_1_1MouseMovedEvent.html", "structZEN_1_1MouseMovedEvent" ],
     [ "Path", "classZEN_1_1Path.html", "classZEN_1_1Path" ],

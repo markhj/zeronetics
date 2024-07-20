@@ -39,6 +39,7 @@ var annotated_dup =
       [ "GPUAllocation", "structZEN_1_1GPUAllocation.html", "structZEN_1_1GPUAllocation" ],
       [ "KeyMap", "structZEN_1_1KeyMap.html", null ],
       [ "KeyStateEvent", "structZEN_1_1KeyStateEvent.html", "structZEN_1_1KeyStateEvent" ],
+      [ "KeyDownEvent", "structZEN_1_1KeyDownEvent.html", "structZEN_1_1KeyDownEvent" ],
       [ "MousePosition", "structZEN_1_1MousePosition.html", "structZEN_1_1MousePosition" ],
       [ "MouseMovedEvent", "structZEN_1_1MouseMovedEvent.html", "structZEN_1_1MouseMovedEvent" ],
       [ "Path", "classZEN_1_1Path.html", "classZEN_1_1Path" ],

@@ -66,6 +66,7 @@ var hierarchy =
     [ "ZEN::IWindow", "classZEN_1_1IWindow.html", [
       [ "ZEN::Window", "classZEN_1_1Window.html", null ]
     ] ],
+    [ "ZEN::KeyDownEvent", "structZEN_1_1KeyDownEvent.html", null ],
     [ "ZEN::KeyMap", "structZEN_1_1KeyMap.html", null ],
     [ "ZEN::KeyStateEvent", "structZEN_1_1KeyStateEvent.html", null ],
     [ "ZEN::Log", "classZEN_1_1Log.html", null ],

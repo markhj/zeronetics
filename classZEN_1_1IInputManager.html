@@ -100,6 +100,8 @@ Inheritance diagram for ZEN::IInputManager:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a67fa901f5ed43aaf78444dcdb4f24fee"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1IInputManager.html#a67fa901f5ed43aaf78444dcdb4f24fee">process</a> (<a class="el" href="namespaceZEN.html#a1896aa89c3b0bbcccbd1b16d57410502">dt_float</a> delta)=0</td></tr>
+<tr class="separator:a67fa901f5ed43aaf78444dcdb4f24fee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab85f2241824542fa39a6d913213485b2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1IInputManager.html#ab85f2241824542fa39a6d913213485b2">onKeyStateChanged</a> (const <a class="el" href="structZEN_1_1KeyStateEvent.html">KeyStateEvent</a> &amp;keyEvent)=0</td></tr>
 <tr class="separator:ab85f2241824542fa39a6d913213485b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a413dce472d921819d7f6e2ffbe5634e8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1IInputManager.html#a413dce472d921819d7f6e2ffbe5634e8">onMouseMoved</a> (const <a class="el" href="structZEN_1_1MouseMovedEvent.html">MouseMovedEvent</a> &amp;mouseMovedEvent)=0</td></tr>
@@ -168,6 +170,40 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">mouseMovedEvent</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a67fa901f5ed43aaf78444dcdb4f24fee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67fa901f5ed43aaf78444dcdb4f24fee">&#9670;&nbsp;</a></span>process()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ZEN::IInputManager::process </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceZEN.html#a1896aa89c3b0bbcccbd1b16d57410502">dt_float</a>&#160;</td>
+          <td class="paramname"><em>delta</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Process events on every iteration of the loop.</p>
+<p>This can be used, among other things, to handle key-down states.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">delta</td><td></td></tr>
   </table>
   </dd>
 </dl>

@@ -13,9 +13,9 @@ var control_systems =
         [ "🚧 Working with groups", "render-groups.html#autotoc_md75", null ],
         [ "💡 The idea", "control-systems-overview.html#autotoc_md110", null ],
         [ "🎮 Basic usage", "control-systems-overview.html#autotoc_md111", null ],
-        [ "Simple mapping", "control-systems-overview.html#autotoc_md112", null ],
+        [ "Simple m_mapping", "control-systems-overview.html#autotoc_md112", null ],
         [ "🔀 Swap mappings", "control-systems-overview.html#autotoc_md113", null ]
       ] ]
     ] ],
-    [ "Input mapping", "control-systems-mapping.html", null ]
+    [ "Input m_mapping", "control-systems-m_mapping.html", null ]
 ];

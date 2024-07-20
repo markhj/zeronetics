@@ -18,7 +18,6 @@ modules/
     │       └── ...
     └── src/
         └── awesome.cpp
-
 ````
 
 ### CMake file
@@ -92,3 +91,48 @@ be nested within their own namespace.
 Our OpenGL module, for example, resides in ``ZEN::OpenGL``. This is
 to avoid collisions of common names such as ``Shader`` and ``Renderer``
 which is likely to exist in other modules.
+
+## Tests
+
+If you need to write automated tests for your module, you create a 
+directory named ``tests`` in the module directory.
+
+Add a ``CMakeLists.txt`` such that the directory structure looks like:
+
+````text
+modules/
+└── awesome/
+    ├── CMakeLists.txt
+    ├── include/
+    │   └── zeronetics/
+    │       ├── awesome.h
+    │       └── ...
+    └── src/
+        └── awesome.cpp
+    └── tests/
+        ├── src/
+        └── CMakeLists.txt
+````
+
+Within the ``CMakeLists.txt`` file you add the following source,
+where you replace
+``<EXECUTABLE NAME>`` with: ``tests_my_module´`. It's convention in
+Zeronetics that module you prefix with ``tests_*``.
+
+````cmake
+cmake_minimum_required(VERSION 3.28)
+project(<EXECUTABLE NAME>)
+
+set(CMAKE_CXX_STANDARD 20)
+
+add_executable(<EXECUTABLE NAME> src/main.cpp)
+
+target_link_libraries(<EXECUTABLE NAME> PRIVATE zeronetics)
+
+target_include_directories(<EXECUTABLE NAME> PUBLIC ${ZEN_VENDOR_DIR}/cpp-bbunit/include)
+````
+
+Continue by reading @ref tests regarding how to structure your test setup,
+as from this point it resembles the main engine test suite.
+
+@note You can explore ``control-systems`` module for inspiration and learning.

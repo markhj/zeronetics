@@ -39,6 +39,10 @@ add_subdirectory(editor)
 include(cmake/modules.cmake)
 foreach (ZEN_MODULE ${ZEN_MODULES})
     add_subdirectory(modules/${ZEN_MODULE})
+    set(MODULE_TEST_PATH modules/${ZEN_MODULE}/tests)
+    if (EXISTS ${MODULE_TEST_PATH})
+        add_subdirectory(${MODULE_TEST_PATH})
+    endif ()
 endforeach ()
 
 # Tests

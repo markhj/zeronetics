@@ -13,8 +13,6 @@ namespace ZEN {
      */
     class Shape3D : public IShape3D {
     public:
-        explicit Shape3D(const std::vector<Vertex3D> &vertices);
-
         /**
          * Retrieve vertices that make up the shape.
          *

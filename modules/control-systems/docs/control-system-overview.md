@@ -51,7 +51,7 @@ ZEN::IInputManager.
 window->setInputManager(controlManager);
 ````
 
-## Simple mapping
+## Simple m_mapping
 
 In this example, we will map the press of the key ``A`` to the
 signal ``left``.
@@ -72,18 +72,18 @@ signalHandler->on("left", [&]() {
 And that's it! Now, when you open the game and press ``A```,
 you will see "Going left!" printed to the console.
 
-To learn more about the different mapping options, continue
-reading @ref control-systems-mapping.
+To learn more about the different m_mapping options, continue
+reading @ref control-systems-m_mapping.
 
 ## 🔀 Swap mappings
 
-Another advantage is that mapping and signal handling can get swapped
+Another advantage is that m_mapping and signal handling can get swapped
 on-the-fly (during run-time). For example, when you open the main menu,
 pause menu or a special HUD, you typically want to apply a completely
 different set of controls.
 
 This is achieved in the Control Systems module by swapping
-the "in-game mapping" to the "main menu mapping", and so forth.
+the "in-game m_mapping" to the "main menu m_mapping", and so forth.
 
 ````cpp
 auto inGameMapping = std::make_shared<InputMapping>(InputMapping());

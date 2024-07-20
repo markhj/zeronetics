@@ -48,6 +48,13 @@ namespace ZEN {
     };
 
     /**
+     * When a key is held down.
+     */
+    struct KeyDownEvent {
+        Key key;
+    };
+
+    /**
      * Mouse position
      */
     struct MousePosition {

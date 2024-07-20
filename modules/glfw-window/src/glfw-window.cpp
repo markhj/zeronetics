@@ -136,3 +136,9 @@ void ZEN::Window::setInputManager(const std::shared_ptr<IInputManager> &inputMan
 void ZEN::Window::onClose(std::function<void()> handle) {
     s_onCloseHandle = handle;
 }
+
+void ZEN::Window::process(ZEN::dt_float delta) {
+    if (s_inputManager) {
+        s_inputManager->process(delta);
+    }
+}

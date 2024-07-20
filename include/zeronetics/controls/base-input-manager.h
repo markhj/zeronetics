@@ -10,6 +10,15 @@ namespace ZEN {
      */
     class BaseInputManager : public IInputManager {
         /**
+         * Process events on every iteration of the loop.
+         *
+         * This can be used, among other things, to handle key-down states.
+         *
+         * @param delta
+         */
+        void process(dt_float delta) override {}
+
+        /**
          * Handle for when a key state is changed.
          *
          * @param keyEvent

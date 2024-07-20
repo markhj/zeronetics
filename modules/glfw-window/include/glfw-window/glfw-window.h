@@ -62,6 +62,13 @@ namespace ZEN {
         inline void handleBuffer() override;
 
         /**
+         * Process to be run on every game loop iteration.
+         *
+         * @param delta
+         */
+        void process(dt_float delta) override;
+
+        /**
          * Set (or replace) the Input Manager.
          *
          * @param inputManager

@@ -65,6 +65,11 @@ namespace ZEN {
         std::shared_ptr<IRenderer> m_renderer;
 
         /**
+         * Current delta time.
+         */
+        dt_float m_delta = 0.0;
+
+        /**
          * Time between two frames are rendered given in microseconds.
          *
          * You can use this to calculate the delta value.

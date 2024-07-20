@@ -52,6 +52,13 @@ namespace ZEN {
         virtual inline void handleBuffer() = 0;
 
         /**
+         * Process to be run on every game loop iteration.
+         *
+         * @param delta
+         */
+        virtual void process(dt_float delta) = 0;
+
+        /**
          * Set (or replace) the Input Manager.
          */
         virtual void setInputManager(const std::shared_ptr<IInputManager> &inputManager) = 0;

@@ -14,6 +14,15 @@ namespace ZEN {
     class IInputManager {
     public:
         /**
+         * Process events on every iteration of the loop.
+         *
+         * This can be used, among other things, to handle key-down states.
+         *
+         * @param delta
+         */
+        virtual void process(dt_float delta) = 0;
+
+        /**
          * Handle for when a key is pressed or released.
          *
          * @param keyEvent Informs the key state, the pressed key, etc.

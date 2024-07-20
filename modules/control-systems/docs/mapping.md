@@ -1,7 +1,7 @@
-@page control-systems-mapping Input mapping
+@page control-systems-m_mapping Input m_mapping
 
 In this article, we're going to review the various types of 
-input mapping you can do with ZEN::ControlSystems::InputMapping.
+input m_mapping you can do with ZEN::ControlSystems::InputMapping.
 
 ## Key pressed and released
 

@@ -28,6 +28,11 @@ namespace ZEN::ControlSystems {
         void keyJustReleased(Key key, const char* signal) noexcept;
 
         /**
+         * Signal to be sent, while a key is held down
+         */
+        void keyDown(Key key, const char* signal) noexcept;
+
+        /**
          * Retrieve the signal based on a ZEN::KeyStateEvent.
          *
          * @param keyStateEvent
@@ -35,10 +40,19 @@ namespace ZEN::ControlSystems {
          */
         [[nodiscard]] std::optional<const char *> getSignal(const KeyStateEvent &keyStateEvent) const noexcept;
 
+        /**
+         * Retrieve signal for when a key is held down.
+         *
+         * @param keyDownEvent
+         * @return
+         */
+        [[nodiscard]] std::optional<const char *> getSignal(const KeyDownEvent &keyDownEvent) const noexcept;
+
     private:
         enum Form {
             KeyPressed,
             KeyReleased,
+            KeyDown,
         };
 
         struct InputMap {
@@ -47,7 +61,7 @@ namespace ZEN::ControlSystems {
             const char *signal;
         };
 
-        std::vector<InputMap> mapping;
+        std::vector<InputMap> m_mapping;
     };
 
     /**
@@ -84,14 +98,14 @@ namespace ZEN::ControlSystems {
     /**
      * A more fully-fledged implementation of ZEN::IInputManager, which
      * helps you manage a wider range of controls "out of the box",
-     * utilizing an easy mapping system.
+     * utilizing an easy m_mapping system.
      *
      * @ref control-systems
      */
     class ControlManager : public IInputManager {
     public:
         /**
-         * Current input mapping, if any
+         * Current input m_mapping, if any
          */
         std::shared_ptr<InputMapping> inputMapping;
 
@@ -101,8 +115,12 @@ namespace ZEN::ControlSystems {
         std::shared_ptr<SignalHandler> signalHandler;
 
     private:
+        void process(dt_float delta) override;
+
         void onKeyStateChanged(const KeyStateEvent &keyEvent) override;
 
         void onMouseMoved(const MouseMovedEvent &mouseMovedEvent) override;
+
+        std::vector<Key> m_keysDown;
     };
 }

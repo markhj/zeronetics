@@ -1,5 +1,6 @@
 #include "zeronetics/game/game.h"
 #include <chrono>
+#include <iostream>
 
 ZEN::Game::Game(const std::shared_ptr<IWindow> &window,
                 const std::shared_ptr<IRenderer> &renderer) : m_window(window),
@@ -25,10 +26,12 @@ void ZEN::Game::run() {
 
         realRenderTime = m_timer.getTime().result();
 
+        m_window->process(m_delta);
         m_window->handleInputs();
         m_window->handleBuffer();
 
         managedRenderTime = m_timer.getTime().result();
+        m_delta = 1.0f / managedRenderTime.microsecs;
 
         // Report FPS every second
         if (fpsTimer.getTime().result().toSeconds() > 1.0) {

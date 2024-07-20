@@ -80,6 +80,14 @@ namespace ZEN::ControlSystems {
         void on(const char *signal, const std::function<void()> &handle) noexcept;
 
         /**
+         * Signals that can be processed with delta value.
+         *
+         * @param signal
+         * @param handle
+         */
+        void on(const char *signal, const std::function<void(dt_float delta)> &handle) noexcept;
+
+        /**
          * Invoke/execute the handler associated with a signal.
          *
          * @note If no signal is defined, no actions will be taken.
@@ -89,10 +97,12 @@ namespace ZEN::ControlSystems {
          *
          * @param signal
          */
-        void invoke(const char *signal) noexcept(false);
+        void invoke(const char *signal, std::optional<dt_float> delta) noexcept(false);
 
     private:
         std::unordered_map<const char *, std::function<void()>> handles;
+
+        std::unordered_map<const char *, std::function<void(dt_float delta)>> handlesWithDelta;
     };
 
     /**

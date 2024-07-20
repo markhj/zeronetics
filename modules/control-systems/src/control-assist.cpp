@@ -20,7 +20,7 @@ void ZEN::ControlSystems::ControlManager::onKeyStateChanged(const KeyStateEvent 
         return;
     }
 
-    signalHandler->invoke(signal.value());
+    signalHandler->invoke(signal.value(), std::nullopt);
 }
 
 void ZEN::ControlSystems::ControlManager::onMouseMoved(const MouseMovedEvent &mouseMovedEvent) {
@@ -34,7 +34,7 @@ void ZEN::ControlSystems::ControlManager::process(ZEN::dt_float delta) {
     std::for_each(m_keysDown.begin(), m_keysDown.end(), [&](const Key &key) {
         std::optional<const char *> signal = inputMapping->getSignal(KeyDownEvent{key});
         if (signal.has_value()) {
-            signalHandler->invoke(signal.value());
+            signalHandler->invoke(signal.value(), delta);
         }
     });
 }
@@ -77,11 +77,18 @@ void ZEN::ControlSystems::SignalHandler::on(const char *signal, const std::funct
     handles[signal] = handle;
 }
 
-void ZEN::ControlSystems::SignalHandler::invoke(const char *signal) noexcept(false) {
-    if (!handles.contains(signal)) {
+void ZEN::ControlSystems::SignalHandler::invoke(const char *signal,
+                                                std::optional<dt_float> delta) noexcept(false) {
+    if (handlesWithDelta.contains(signal) && delta.has_value()) {
+        handlesWithDelta[signal](delta.value());
+    } else if (handles.contains(signal)) {
+        handles[signal]();
+    } else {
         ZEN_WARN(std::format("Attempting to invoke non-existing signal: {}", signal),
                  ZEN::LogCategory::Controls);
-        return;
     }
-    handles[signal]();
+}
+
+void ZEN::ControlSystems::SignalHandler::on(const char *signal, const std::function<void(dt_float)> &handle) noexcept {
+    handlesWithDelta[signal] = handle;
 }

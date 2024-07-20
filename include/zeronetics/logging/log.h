@@ -50,7 +50,7 @@ namespace ZEN {
         ShaderUse,
 
         /**
-         * User inputs, m_mapping, handling of controls, etc.
+         * User inputs, mapping, handling of controls, etc.
          */
         Controls,
     };

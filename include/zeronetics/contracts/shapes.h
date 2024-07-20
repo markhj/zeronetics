@@ -12,6 +12,8 @@ namespace ZEN {
      *
      * @ref shapes
      * @ref geometry-relationships
+     * @ref custom-shape-vertices
+     * @ref custom-shape-class
      */
     template<typename T>
     class IShape {
@@ -41,6 +43,8 @@ namespace ZEN {
      *
      * @ref shapes
      * @ref geometry-relationships
+     * @ref custom-shape-vertices
+     * @ref custom-shape-class
      */
     class IShape3D : public IShape<Vertex3D> {
     public:

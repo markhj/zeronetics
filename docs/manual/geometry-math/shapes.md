@@ -40,3 +40,5 @@ work as expected.
 ## 📜 See also
 
 @ref geometry-relationships
+@ref custom-shape-vertices
+@ref custom-shape-class

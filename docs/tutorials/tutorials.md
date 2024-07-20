@@ -18,3 +18,9 @@ Check paths, as well as loading and saving to files
 
 @subpage logging  
 Log useful information at different levels.
+
+@subpage custom-shape-vertices  
+How to make shapes using a custom set of vertices
+
+@subpage custom-shape-class  
+Learn how to write a custom Shape class

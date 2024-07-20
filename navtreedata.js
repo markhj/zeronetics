@@ -56,8 +56,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"functions.html",
-"structZEN_1_1LogBehavior.html"
+"file-system.html#autotoc_md17",
+"structZEN_1_1IRendererRequest.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

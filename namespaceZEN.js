@@ -1,28 +1,28 @@
 var namespaceZEN =
 [
-    [ "Macros", "build-info.html#autotoc_md80", null ],
-    [ "Example", "build-info.html#autotoc_md81", null ],
-    [ "Note", "build-info.html#autotoc_md82", [
-      [ "Key pressed and released", "control-systems-mapping.html#autotoc_md109", null ],
-      [ "An example", "opengl-bindable.html#autotoc_md110", null ],
-      [ "Functions", "opengl-bindable.html#autotoc_md111", [
-        [ "Short-hand for binding", "opengl-bindable.html#autotoc_md112", null ],
-        [ "With", "opengl-bindable.html#autotoc_md113", null ]
+    [ "Macros", "build-info.html#autotoc_md84", null ],
+    [ "Example", "build-info.html#autotoc_md85", null ],
+    [ "Note", "build-info.html#autotoc_md86", [
+      [ "Key pressed and released", "control-systems-mapping.html#autotoc_md113", null ],
+      [ "An example", "opengl-bindable.html#autotoc_md114", null ],
+      [ "Functions", "opengl-bindable.html#autotoc_md115", [
+        [ "Short-hand for binding", "opengl-bindable.html#autotoc_md116", null ],
+        [ "With", "opengl-bindable.html#autotoc_md117", null ]
       ] ],
-      [ "CMake file", "create-modules.html#autotoc_md87", null ],
-      [ "Public headers", "create-modules.html#autotoc_md88", null ],
-      [ "Integrate in build process", "create-modules.html#autotoc_md89", null ]
+      [ "CMake file", "create-modules.html#autotoc_md91", null ],
+      [ "Public headers", "create-modules.html#autotoc_md92", null ],
+      [ "Integrate in build process", "create-modules.html#autotoc_md93", null ]
     ] ],
-    [ "Namespace", "create-modules.html#autotoc_md90", null ],
-    [ "How to make callbacks \"a la Zeronetics\"", "callbacks.html#autotoc_md83", null ],
-    [ "Examination of choices", "callbacks.html#autotoc_md84", [
-      [ "Using <tt>std::optional</tt>", "callbacks.html#autotoc_md85", null ],
-      [ "Smart pointers", "callbacks.html#autotoc_md86", null ]
+    [ "Namespace", "create-modules.html#autotoc_md94", null ],
+    [ "How to make callbacks \"a la Zeronetics\"", "callbacks.html#autotoc_md87", null ],
+    [ "Examination of choices", "callbacks.html#autotoc_md88", [
+      [ "Using <tt>std::optional</tt>", "callbacks.html#autotoc_md89", null ],
+      [ "Smart pointers", "callbacks.html#autotoc_md90", null ]
     ] ],
-    [ "🔀 Management of allocation", "arch-render-manager.html#autotoc_md77", null ],
-    [ "📘 Primary testing suite", "tests.html#autotoc_md102", null ],
-    [ "📚 Organization", "tests.html#autotoc_md103", null ],
-    [ "📦 Payloads", "tests.html#autotoc_md104", null ],
+    [ "🔀 Management of allocation", "arch-render-manager.html#autotoc_md81", null ],
+    [ "📘 Primary testing suite", "tests.html#autotoc_md106", null ],
+    [ "📚 Organization", "tests.html#autotoc_md107", null ],
+    [ "📦 Payloads", "tests.html#autotoc_md108", null ],
     [ "ControlSystems", null, [
       [ "InputMapping", "classZEN_1_1ControlSystems_1_1InputMapping.html", "classZEN_1_1ControlSystems_1_1InputMapping" ],
       [ "SignalHandler", "classZEN_1_1ControlSystems_1_1SignalHandler.html", "classZEN_1_1ControlSystems_1_1SignalHandler" ],

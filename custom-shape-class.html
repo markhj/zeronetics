@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Zeronetics Game Engine: Result</title>
+<title>Zeronetics Game Engine: Custom shape as class</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -64,7 +64,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('result.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('custom-shape-class.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -84,47 +84,57 @@ $(document).ready(function(){initNavTree('result.html',''); initResizable(); });
 
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Result </div>  </div>
+<div class="title">Custom shape as class </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <a class="el" href="classZEN_1_1Result.html">ZEN::Result</a> is inspired by Rust's namesake equivalent.</p>
-<p>The <code>Result</code> object is a container, which holds either the desired result, or an error detailing what happened. It's a dynamic, but streamlined, way of handling results, in cases where you maybe don't want to throw exceptions, or have another reason to treat it more lightly.</p>
-<h2><a class="anchor" id="autotoc_md39"></a>
-🔑 Basic usage</h2>
-<p>Your function must return <code>Result&lt;T&gt;</code> where <code>T</code> is the data type you expect when everything goes well.</p>
-<p>If an error occurs, you return <a class="el" href="structZEN_1_1ResultError.html">ZEN::ResultError</a>.</p>
-<p>Example:</p>
-<div class="fragment"><div class="line">Result&lt;CarKey&gt; getCarKeys(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> driverAge) {</div>
-<div class="line">    <span class="keywordflow">if</span> (driverAge &lt; 18) {</div>
-<div class="line">        <span class="keywordflow">return</span> <a class="code" href="structZEN_1_1ResultError.html">ZEN::ResultError</a>{.<a class="code" href="structZEN_1_1ResultError.html#a652fb8e319d0b2d91b795c90a6837741">errorCode</a> = 268};</div>
+<div class="textblock"><p>Creating a re-usable shape with customizable properties is fairly easy with Zeronetics. To achieve this you extend <a class="el" href="classZEN_1_1Shape3D.html">ZEN::Shape3D</a> and implement <a class="el" href="classZEN_1_1IShape.html#a21d868feb2eabc68a587f7fb59d7f9fc">ZEN::Shape3D::make</a>.</p>
+<h2><a class="anchor" id="autotoc_md10"></a>
+🔷 Example</h2>
+<p>Let's say we want to crete a triangle where we can define the width and height.</p>
+<div class="fragment"><div class="line"><span class="keyword">class </span>MyTriangle : <span class="keyword">public</span> Shape3D {</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">    MyTriangle(gw_float width, gw_float height) : m_width(width), m_height(height) {</div>
+<div class="line">        </div>
 <div class="line">    }</div>
-<div class="line">    <span class="keywordflow">return</span> CarKey();</div>
-<div class="line">}</div>
-<div class="ttc" id="astructZEN_1_1ResultError_html"><div class="ttname"><a href="structZEN_1_1ResultError.html">ZEN::ResultError</a></div><div class="ttdef"><b>Definition:</b> result.h:13</div></div>
-<div class="ttc" id="astructZEN_1_1ResultError_html_a652fb8e319d0b2d91b795c90a6837741"><div class="ttname"><a href="structZEN_1_1ResultError.html#a652fb8e319d0b2d91b795c90a6837741">ZEN::ResultError::errorCode</a></div><div class="ttdeci">std::optional&lt; int &gt; errorCode</div><div class="ttdef"><b>Definition:</b> result.h:17</div></div>
-</div><!-- fragment --><p>To read this example, we will do the following:</p>
-<div class="fragment"><div class="line">Result&lt;CarKey&gt; carKeys = getCarKeys(23);</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordflow">if</span> (carKeys.isError()) {</div>
-<div class="line">    <span class="comment">// Explain the driver that they are too young</span></div>
-<div class="line">    <span class="comment">// You can use carKeys.error() to extract the error.</span></div>
-<div class="line">} <span class="keywordflow">else</span> {</div>
-<div class="line">    <span class="comment">// Get in and start the car</span></div>
-<div class="line">    <span class="comment">// You can use carKeys.result() to extract the result</span></div>
-<div class="line">}</div>
-</div><!-- fragment --><dl class="section warning"><dt>Warning</dt><dd>You must check whether the <code>Result</code> contains an error or not prior to calling <code>error</code> and <code>result</code>, otherwise you risk a critical-level error.</dd></dl>
-<p>You can interact with the error and result, using <a class="el" href="classZEN_1_1Result.html#a13cb3332b5705cfc6964c675909dcec2">ZEN::Result::error</a> and <a class="el" href="classZEN_1_1Result.html#a9a15d5350d3887c0d378e81132115e21">ZEN::Result::result</a>.</p>
-<h2><a class="anchor" id="autotoc_md40"></a>
-When to use &lt;tt&gt;Result&lt;/tt&gt;</h2>
-<p>We use <code>Result</code> when we desire the behavior of <code>std::optional</code> but with the possibility to explain the end-user or implementor what has gone wrong.</p>
-<p>The alternative is to use exceptions, which should be done when the error is recoverable or critical. </p>
+<div class="line"><span class="keyword">protected</span>:</div>
+<div class="line">    [[nodiscard]] std::vector&lt;Vertex3D&gt; make() const noexcept<span class="keyword"> override </span>{</div>
+<div class="line">        std::vector&lt;Vertex3D&gt; result;</div>
+<div class="line">        </div>
+<div class="line">        <a class="code" href="namespaceZEN.html#a5089f560467278c4efaed05ce45f57a7">gw_float</a> hw = m_width / 2.0;</div>
+<div class="line">        <a class="code" href="namespaceZEN.html#a5089f560467278c4efaed05ce45f57a7">gw_float</a> hh = m_height / 2.0;</div>
+<div class="line">        </div>
+<div class="line">        result.push_back(Vertex3D{.position = {-w, -h, 0.0}});</div>
+<div class="line">        result.push_back(Vertex3D{.position = {w, -h, 0.0}});</div>
+<div class="line">        result.push_back(Vertex3D{.position = {0.0, h, 0.0}});</div>
+<div class="line">        </div>
+<div class="line">        <span class="keywordflow">return</span> result;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">private</span>:</div>
+<div class="line">    <a class="code" href="namespaceZEN.html#a5089f560467278c4efaed05ce45f57a7">gw_float</a> m_width, m_height;</div>
+<div class="line"> </div>
+<div class="line">};</div>
+<div class="ttc" id="anamespaceZEN_html_a5089f560467278c4efaed05ce45f57a7"><div class="ttname"><a href="namespaceZEN.html#a5089f560467278c4efaed05ce45f57a7">ZEN::gw_float</a></div><div class="ttdeci">float gw_float</div><div class="ttdef"><b>Definition:</b> typedefs.h:16</div></div>
+</div><!-- fragment --><p>What happens here is that we create three vertices will make up the triangle.</p>
+<p>The first vertex is the bottom-left corner, the second the bottom-right, and the third is the top.</p>
+<p>Remember that vertices must be given in counter-clockwise order.</p>
+<p><img src="https://res.cloudinary.com/drfztvfdh/image/upload/v1721454193/zeronetics/Custom_shape_-_Triangle_yonvjr.png" alt="" class="inline"/></p>
+<h2><a class="anchor" id="autotoc_md11"></a>
+📋 Notes</h2>
+<p>Remember to use <a class="el" href="namespaceZEN.html#a5089f560467278c4efaed05ce45f57a7">ZEN::gw_float</a>, because these are game world coordinates.</p>
+<p>When the shape has been generated it will be stored in a private property so it won't have to be re-computed on every request.</p>
+<p>@important You must define your set of vertices such that their combined center is at <code>(0, 0, 0)</code>, otherwise using the positioning system in Zeronetics will produce unexpected results.</p>
+<h2><a class="anchor" id="autotoc_md12"></a>
+📌 See also</h2>
+<p><a class="el" href="custom-shape-vertices.html">Custom shape from vertices</a> </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="manual.html">Manual</a></li>
+    <li class="navelem"><a class="el" href="tutorials.html">Tutorials</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>

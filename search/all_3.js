@@ -21,5 +21,7 @@ var searchData=
   ['createifnotexists_34',['createIfNotExists',['../classZEN_1_1File.html#aa9cac695798f8c6aa300c9e0182fc681',1,'ZEN::File']]],
   ['creating_20new_20modules_35',['Creating new modules',['../create-modules.html',1,'dev']]],
   ['critical_36',['critical',['../classZEN_1_1Log.html#aa550d58e15cd2d9894683f19c95ec8b8',1,'ZEN::Log']]],
-  ['cube_37',['Cube',['../classZEN_1_1Cube.html',1,'ZEN']]]
+  ['cube_37',['Cube',['../classZEN_1_1Cube.html',1,'ZEN']]],
+  ['custom_20shape_20as_20class_38',['Custom shape as class',['../custom-shape-class.html',1,'tutorials']]],
+  ['custom_20shape_20from_20vertices_39',['Custom shape from vertices',['../custom-shape-vertices.html',1,'tutorials']]]
 ];

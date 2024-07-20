@@ -15,7 +15,7 @@ uint8_t ZEN::VertexAttrSize::getSize(ZEN::VertexAttribute attr) {
         case VertexAttribute::colorRGBA:
             return 4;
         default:
-            ZEN_LIB_ERROR("Missing vertex attribute size m_mapping.");
+            ZEN_LIB_ERROR("Missing vertex attribute size mapping.");
             return 0;
     }
 }

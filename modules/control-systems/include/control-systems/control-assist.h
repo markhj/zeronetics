@@ -108,14 +108,14 @@ namespace ZEN::ControlSystems {
     /**
      * A more fully-fledged implementation of ZEN::IInputManager, which
      * helps you manage a wider range of controls "out of the box",
-     * utilizing an easy m_mapping system.
+     * utilizing an easy mapping system.
      *
      * @ref control-systems
      */
     class ControlManager : public IInputManager {
     public:
         /**
-         * Current input m_mapping, if any
+         * Current input mapping, if any
          */
         std::shared_ptr<InputMapping> inputMapping;
 

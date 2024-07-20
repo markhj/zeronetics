@@ -8,6 +8,8 @@ user inputs.
 The idea is that every user input gets mapped to a signal, and in a
 completely separate process the signal is translated to an action.
 
+![](https://res.cloudinary.com/drfztvfdh/image/upload/v1721452847/zeronetics/Contorl_mapping_-_Input_Mapping_1_m2hhmy.png)
+
 For starters, this means that several inputs can map the same action
 without the need of duplicate code. For example if Space Bar, primary mouse
 button and Joystick "X" all make the character jump, then all

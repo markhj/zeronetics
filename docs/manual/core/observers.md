@@ -12,6 +12,29 @@ is reported every few seconds to observers.
 
 This article assumes fundamental knowledge of observer patterns.
 
+## 🌐 Overview
+
+Any number of classes can implement ZEN::BeingObserved, which exposes
+a number of methods so other objects can "attach" and get notified
+when notable events happen within the ``BeingObserved`` class.
+
+When something of interest occurs, the extension of ``BeingObserved``
+calls ``notifyObservers``.
+
+It's the class which implements ``BeingObserved`` which is responsible
+for picking out the points that should trigger such notifications.
+
+![](https://res.cloudinary.com/drfztvfdh/image/upload/v1721449501/zeronetics/Observer_pattern_porw1e.png)
+
+Every attached observer will then be notified via their individual
+implementations of ZEN::Observer::notify.
+
+@note Example:
+A window instance may want to re-generate when video settings change.
+In this case the window class is the observer, and settings is
+"being observed". The settings class will notify its observers,
+among them window, when the settings are updated.
+
 ## 🌘 Implementing an observable
 
 Creating a class that can be observed by other classes involves

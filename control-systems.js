@@ -17,5 +17,5 @@ var control_systems =
         [ "🔀 Swap mappings", "control-systems-overview.html#autotoc_md113", null ]
       ] ]
     ] ],
-    [ "Input m_mapping", "control-systems-m_mapping.html", null ]
+    [ "Input mapping", "control-systems-mapping.html", null ]
 ];

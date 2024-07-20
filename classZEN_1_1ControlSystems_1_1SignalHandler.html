@@ -97,15 +97,17 @@ $(document).ready(function(){initNavTree('classZEN_1_1ControlSystems_1_1SignalHa
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a64087099dc984c55dfa14b73a4d696b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1ControlSystems_1_1SignalHandler.html#a64087099dc984c55dfa14b73a4d696b6">on</a> (const char *signal, const std::function&lt; void()&gt; &amp;handle) noexcept</td></tr>
 <tr class="separator:a64087099dc984c55dfa14b73a4d696b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a812fb963910680610643db31f24e6924"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1ControlSystems_1_1SignalHandler.html#a812fb963910680610643db31f24e6924">invoke</a> (const char *signal) noexcept(false)</td></tr>
-<tr class="separator:a812fb963910680610643db31f24e6924"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32c0091c7e3ffc8e2e54c993bf55df13"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1ControlSystems_1_1SignalHandler.html#a32c0091c7e3ffc8e2e54c993bf55df13">on</a> (const char *signal, const std::function&lt; void(<a class="el" href="namespaceZEN.html#a1896aa89c3b0bbcccbd1b16d57410502">dt_float</a> delta)&gt; &amp;handle) noexcept</td></tr>
+<tr class="separator:a32c0091c7e3ffc8e2e54c993bf55df13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12a4aa12603945f96fd866c3d3ca91d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1ControlSystems_1_1SignalHandler.html#a12a4aa12603945f96fd866c3d3ca91d8">invoke</a> (const char *signal, std::optional&lt; <a class="el" href="namespaceZEN.html#a1896aa89c3b0bbcccbd1b16d57410502">dt_float</a> &gt; delta) noexcept(false)</td></tr>
+<tr class="separator:a12a4aa12603945f96fd866c3d3ca91d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Signal handler</p>
 <p><a class="el" href="control-systems.html">Control Systems</a> </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a812fb963910680610643db31f24e6924"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a812fb963910680610643db31f24e6924">&#9670;&nbsp;</a></span>invoke()</h2>
+<a id="a12a4aa12603945f96fd866c3d3ca91d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12a4aa12603945f96fd866c3d3ca91d8">&#9670;&nbsp;</a></span>invoke()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -117,8 +119,18 @@ Public Member Functions</h2></td></tr>
           <td class="memname">void ZEN::ControlSystems::SignalHandler::invoke </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>signal</em></td><td>)</td>
+          <td class="paramname"><em>signal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">std::optional&lt; <a class="el" href="namespaceZEN.html#a1896aa89c3b0bbcccbd1b16d57410502">dt_float</a> &gt;&#160;</td>
+          <td class="paramname"><em>delta</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -141,7 +153,7 @@ It cannot be guaranteed that exceptions aren't thrown from the handlers.</dd></d
 </div>
 </div>
 <a id="a64087099dc984c55dfa14b73a4d696b6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a64087099dc984c55dfa14b73a4d696b6">&#9670;&nbsp;</a></span>on()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a64087099dc984c55dfa14b73a4d696b6">&#9670;&nbsp;</a></span>on() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -174,6 +186,50 @@ It cannot be guaranteed that exceptions aren't thrown from the handlers.</dd></d
 </table>
 </div><div class="memdoc">
 <p>The action to be taken, when <code>signal</code> is received.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">signal</td><td></td></tr>
+    <tr><td class="paramname">handle</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a32c0091c7e3ffc8e2e54c993bf55df13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32c0091c7e3ffc8e2e54c993bf55df13">&#9670;&nbsp;</a></span>on() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ZEN::ControlSystems::SignalHandler::on </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>signal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::function&lt; void(<a class="el" href="namespaceZEN.html#a1896aa89c3b0bbcccbd1b16d57410502">dt_float</a> delta)&gt; &amp;&#160;</td>
+          <td class="paramname"><em>handle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Signals that can be processed with delta value.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">signal</td><td></td></tr>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Zeronetics Game Engine: Input m_mapping</title>
+<title>Zeronetics Game Engine: Input mapping</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -64,7 +64,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('control-systems-m_mapping.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('control-systems-mapping.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -84,15 +84,23 @@ $(document).ready(function(){initNavTree('control-systems-m_mapping.html',''); i
 
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Input m_mapping </div>  </div>
+<div class="title">Input mapping </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>In this article, we're going to review the various types of input m_mapping you can do with <a class="el" href="classZEN_1_1ControlSystems_1_1InputMapping.html">ZEN::ControlSystems::InputMapping</a>.</p>
+<div class="textblock"><p>In this article, we're going to review the various types of input mapping you can do with <a class="el" href="classZEN_1_1ControlSystems_1_1InputMapping.html">ZEN::ControlSystems::InputMapping</a>.</p>
 <h2><a class="anchor" id="autotoc_md114"></a>
 Key pressed and released</h2>
 <p>To map when a key has just been pressed, or just released, use these methods:</p>
 <div class="fragment"><div class="line">inputMapping-&gt;keyJustPressed(Key::W, <span class="stringliteral">&quot;start_running_forward&quot;</span>);</div>
 <div class="line">inputMapping-&gt;keyJustReleased(Key::W, <span class="stringliteral">&quot;stop_running_forward&quot;</span>);</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md115"></a>
+Key down</h2>
+<p>While you're holding down a key, you can use:</p>
+<div class="fragment"><div class="line">inputMapping-&gt;keyDown(Key::W, <span class="stringliteral">&quot;moving_forward&quot;</span>);</div>
+</div><!-- fragment --><p>The corresponding signal handler <em>can</em> use delta value:</p>
+<div class="fragment"><div class="line">signalHandler-&gt;on(<span class="stringliteral">&quot;forward&quot;</span>, [&amp;](dt_float delta) {</div>
+<div class="line">    character-&gt;position.z -= 2.0f * delta;</div>
+<div class="line">});</div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

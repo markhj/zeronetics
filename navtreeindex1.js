@@ -1,5 +1,10 @@
 var NAVTREEINDEX1 =
 {
+"engine-core-structure.html#autotoc_md103":[2,6],
+"engine-core-structure.html#autotoc_md104":[2,7],
+"engine-core-structure.html#autotoc_md105":[2,8],
+"engine-core-structure.html#autotoc_md106":[2,9],
+"engine-core-structure.html#autotoc_md99":[2,2],
 "entities.html":[2,6],
 "entity-system.html":[2,6,0],
 "entity-system.html#autotoc_md47":[0,13],
@@ -213,10 +218,10 @@ var NAVTREEINDEX1 =
 "observers.html#autotoc_md38":[4],
 "opengl-allocation.html":[3,2,1],
 "opengl-bindable.html":[3,2,0],
-"opengl-bindable.html#autotoc_md115":[1],
 "opengl-bindable.html#autotoc_md116":[2],
-"opengl-bindable.html#autotoc_md117":[2,0],
-"opengl-bindable.html#autotoc_md118":[2,1],
+"opengl-bindable.html#autotoc_md117":[3],
+"opengl-bindable.html#autotoc_md118":[3,0],
+"opengl-bindable.html#autotoc_md119":[3,1],
 "opengl.html":[3,2],
 "opengl_8h.html#a32fc3170efffdd3e18329f464d582a0a":[6,0,0,12,10],
 "opengl_8h.html#a3cf0cd9d8361f9a3e192fe9377abe102":[6,0,0,12,8],
@@ -244,10 +249,5 @@ var NAVTREEINDEX1 =
 "settings.html#autotoc_md42":[2],
 "shapes.html":[2,4,3],
 "shapes.html#autotoc_md60":[7],
-"shapes.html#autotoc_md61":[8],
-"shapes.html#autotoc_md62":[9],
-"shapes.html#autotoc_md63":[10],
-"structZEN_1_1EngineInfo.html":[7,0,0,20],
-"structZEN_1_1GPUAllocation.html":[7,0,0,21],
-"structZEN_1_1GPUAllocation.html#ab1eab55ae852a9138e999eb8b46efbae":[7,0,0,21,1]
+"shapes.html#autotoc_md61":[8]
 };

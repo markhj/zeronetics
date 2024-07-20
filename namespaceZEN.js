@@ -3,11 +3,12 @@ var namespaceZEN =
     [ "Macros", "build-info.html#autotoc_md84", null ],
     [ "Example", "build-info.html#autotoc_md85", null ],
     [ "Note", "build-info.html#autotoc_md86", [
-      [ "Key pressed and released", "control-systems-m_mapping.html#autotoc_md114", null ],
-      [ "An example", "opengl-bindable.html#autotoc_md115", null ],
-      [ "Functions", "opengl-bindable.html#autotoc_md116", [
-        [ "Short-hand for binding", "opengl-bindable.html#autotoc_md117", null ],
-        [ "With", "opengl-bindable.html#autotoc_md118", null ]
+      [ "Key pressed and released", "control-systems-mapping.html#autotoc_md114", null ],
+      [ "Key down", "control-systems-mapping.html#autotoc_md115", null ],
+      [ "An example", "opengl-bindable.html#autotoc_md116", null ],
+      [ "Functions", "opengl-bindable.html#autotoc_md117", [
+        [ "Short-hand for binding", "opengl-bindable.html#autotoc_md118", null ],
+        [ "With", "opengl-bindable.html#autotoc_md119", null ]
       ] ],
       [ "CMake file", "create-modules.html#autotoc_md91", null ],
       [ "Public headers", "create-modules.html#autotoc_md92", null ],

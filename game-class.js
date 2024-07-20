@@ -27,8 +27,8 @@ var game_class =
       ] ],
       [ "Notes", "logging.html#autotoc_md24", null ],
       [ "See also", "logging.html#autotoc_md25", [
-        [ "🔁 How it works", "game-loop.html#autotoc_md50", null ],
-        [ "See also", "game-loop.html#autotoc_md51", null ]
+        [ "🔁 How it works", "game-loop.html#autotoc_md51", null ],
+        [ "See also", "game-loop.html#autotoc_md52", null ]
       ] ]
     ] ],
     [ "Delta time", "delta.html", null ],

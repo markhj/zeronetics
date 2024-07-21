@@ -65,3 +65,7 @@ window->setInputManager(myInputManager);
 
 From this point onwards, you should see the ``onKeyStateChanged`` method
 get invoked when a key is pressed or released.
+
+## See also
+
+@ref control-systems

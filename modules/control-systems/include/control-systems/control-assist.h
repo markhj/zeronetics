@@ -33,6 +33,30 @@ namespace ZEN::ControlSystems {
         void keyDown(Key key, const char* signal) noexcept;
 
         /**
+         * Signal to be sent in the moment a mouse button is clicked (not yet released).
+         *
+         * @param mouseButton
+         * @param signal
+         */
+        void mouseButtonJustClicked(MouseButton mouseButton, const char *signal) noexcept;
+
+        /**
+         * Signal for the moment a mouse button is released.
+         *
+         * @param mouseButton
+         * @param signal
+         */
+        void mouseButtonJustReleased(MouseButton mouseButton, const char *signal) noexcept;
+
+        /**
+         * Signal while a mouse button is held down.
+         *
+         * @param mouseButton
+         * @param signal
+         */
+        void mouseButtonDown(MouseButton mouseButton, const char *signal) noexcept;
+
+        /**
          * Retrieve the signal based on a ZEN::KeyStateEvent.
          *
          * @param keyStateEvent
@@ -48,16 +72,36 @@ namespace ZEN::ControlSystems {
          */
         [[nodiscard]] std::optional<const char *> getSignal(const KeyDownEvent &keyDownEvent) const noexcept;
 
+        /**
+         * Get a signal for a mouse button state event.
+         *
+         * @param mouseButtonStateEvent
+         * @return
+         */
+        [[nodiscard]] std::optional<const char *> getSignal(const MouseButtonStateEvent &mouseButtonStateEvent) const noexcept;
+
+        /**
+         * Retrieve signal for when a mouse button is held down.
+         *
+         * @param keyDownEvent
+         * @return
+         */
+        [[nodiscard]] std::optional<const char *> getSignal(const MouseButtonDownEvent &event) const noexcept;
+
     private:
         enum Form {
             KeyPressed,
             KeyReleased,
             KeyDown,
+            MouseButtonPressed,
+            MouseButtonReleased,
+            MouseButtonDown,
         };
 
         struct InputMap {
             Form form;
             Key key;
+            MouseButton mouseButton;
             const char *signal;
         };
 
@@ -131,6 +175,9 @@ namespace ZEN::ControlSystems {
 
         void onMouseMoved(const MouseMovedEvent &mouseMovedEvent) override;
 
+        void onMouseButtonStateChanged(const MouseButtonStateEvent &mouseButtonStateEvent) override;
+
         std::vector<Key> m_keysDown;
+        std::vector<MouseButton> m_mouseButtonsDown;
     };
 }

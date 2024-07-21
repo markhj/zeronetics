@@ -56,6 +56,26 @@ namespace {
         }
     }
 
+    void mouseButtonCallback(GLFWwindow *window, int button, int action, int mods) {
+        if (action > 1 || !s_inputManager) {
+            return;
+        }
+
+        // @todo: Add support for more mouse buttons
+        if (button > 1) {
+            return;
+        }
+
+        s_inputManager->onMouseButtonStateChanged({
+                .mouseButtonState = action == 1 ? ZEN::MouseButtonState::JustClicked : ZEN::MouseButtonState::JustReleased,
+                .mouseButton = button == 0 ? ZEN::MouseButton::PrimaryMouseButton : ZEN::MouseButton::SecondaryMouseButton,
+        });
+    }
+
+    void mouseWheelCallback(GLFWwindow *glfwWindow, double x, double y) {
+        // @todo: Implement mouse wheel callback
+    }
+
     void mouseMoveCallback(GLFWwindow *window, double x, double y) {
         if (!s_inputManager) {
             return;
@@ -105,9 +125,16 @@ void ZEN::Window::generate(const ZEN::Settings &settings) noexcept(false) {
 
     glfwMakeContextCurrent(glfwWindow);
 
-    glfwSetKeyCallback(glfwWindow, keyboardCallback);
-    glfwSetCursorPosCallback(glfwWindow, mouseMoveCallback);
+    // Close button
     glfwSetWindowCloseCallback(glfwWindow, closeWindowCallback);
+
+    // Keyboard
+    glfwSetKeyCallback(glfwWindow, keyboardCallback);
+
+    // Mouse
+    glfwSetCursorPosCallback(glfwWindow, mouseMoveCallback);
+    glfwSetMouseButtonCallback(glfwWindow, mouseButtonCallback);
+    glfwSetScrollCallback(glfwWindow, mouseWheelCallback);
 }
 
 void ZEN::Window::regenerate(const ZEN::Settings &settings) noexcept(false) {

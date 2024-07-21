@@ -32,8 +32,19 @@ namespace ZEN {
         /**
          * Handle for when the mouse cursor has been moved.
          *
+         * @ref mouse
+         *
          * @param mouseMovedEvent
          */
         virtual void onMouseMoved(const MouseMovedEvent &mouseMovedEvent) = 0;
+
+        /**
+         * Handle for when the state of a mouse button changes.
+         *
+         * @ref mouse
+         *
+         * @param mouseButtonStateEvent
+         */
+        virtual void onMouseButtonStateChanged(const MouseButtonStateEvent &mouseButtonStateEvent) = 0;
     };
 }

@@ -90,6 +90,22 @@ namespace ZEN {
     };
 
     /**
+     * Mouse button state
+     */
+    enum class MouseButtonState {
+        JustClicked,
+        JustReleased,
+    };
+
+    /**
+     * Mouse buttons
+     */
+    enum class MouseButton {
+        PrimaryMouseButton,
+        SecondaryMouseButton,
+    };
+
+    /**
      * Shader stages.
      */
     enum ShaderStage {

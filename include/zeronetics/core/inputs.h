@@ -48,10 +48,22 @@ namespace ZEN {
     };
 
     /**
+     * Event for when a mouse button state changes.
+     */
+    struct MouseButtonStateEvent {
+        MouseButtonState mouseButtonState;
+        MouseButton mouseButton;
+    };
+
+    /**
      * When a key is held down.
      */
     struct KeyDownEvent {
         Key key;
+    };
+
+    struct MouseButtonDownEvent {
+        MouseButton mouseButton;
     };
 
     /**

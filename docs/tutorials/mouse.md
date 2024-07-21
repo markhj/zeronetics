@@ -39,3 +39,20 @@ void onMouseMoved(const MouseMovedEvent &mouseMovedEvent) override {
     std::cout << mouseMovedEvent.relative.x << ", " << mouseMovedEvent.relative.y << "\n";
 }
 ````
+
+## Mouse buttons
+
+You can manage changes of mouse button states (click and released) with:
+
+````cpp
+void onMouseButtonStateChanged(const MouseButtonStateEvent &mouseButtonStateEvent) override {
+    // What to do...
+}
+````
+
+You can see available mouse buttons on ZEN::MouseButton and states on
+ZEN::MouseButtonState.
+
+## See also
+
+@ref control-systems

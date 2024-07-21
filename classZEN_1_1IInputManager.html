@@ -106,6 +106,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab85f2241824542fa39a6d913213485b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a413dce472d921819d7f6e2ffbe5634e8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1IInputManager.html#a413dce472d921819d7f6e2ffbe5634e8">onMouseMoved</a> (const <a class="el" href="structZEN_1_1MouseMovedEvent.html">MouseMovedEvent</a> &amp;mouseMovedEvent)=0</td></tr>
 <tr class="separator:a413dce472d921819d7f6e2ffbe5634e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a941a01aea9fac7f051296753261ed4f4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1IInputManager.html#a941a01aea9fac7f051296753261ed4f4">onMouseButtonStateChanged</a> (const <a class="el" href="structZEN_1_1MouseButtonStateEvent.html">MouseButtonStateEvent</a> &amp;mouseButtonStateEvent)=0</td></tr>
+<tr class="separator:a941a01aea9fac7f051296753261ed4f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Interface for an object which can be connected to a window in order to handle various user inputs such as key presses and mouse movement. </p>
@@ -143,6 +145,40 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a941a01aea9fac7f051296753261ed4f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a941a01aea9fac7f051296753261ed4f4">&#9670;&nbsp;</a></span>onMouseButtonStateChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ZEN::IInputManager::onMouseButtonStateChanged </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structZEN_1_1MouseButtonStateEvent.html">MouseButtonStateEvent</a> &amp;&#160;</td>
+          <td class="paramname"><em>mouseButtonStateEvent</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Handle for when the state of a mouse button changes.</p>
+<p><a class="el" href="mouse.html">Handling the mouse</a></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mouseButtonStateEvent</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a413dce472d921819d7f6e2ffbe5634e8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a413dce472d921819d7f6e2ffbe5634e8">&#9670;&nbsp;</a></span>onMouseMoved()</h2>
 
@@ -167,6 +203,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Handle for when the mouse cursor has been moved.</p>
+<p><a class="el" href="mouse.html">Handling the mouse</a></p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">mouseMovedEvent</td><td></td></tr>

@@ -1,30 +1,36 @@
 var namespaceZEN =
 [
-    [ "Macros", "build-info.html#autotoc_md84", null ],
-    [ "Example", "build-info.html#autotoc_md85", null ],
-    [ "Note", "build-info.html#autotoc_md86", [
-      [ "Key pressed and released", "control-systems-mapping.html#autotoc_md114", null ],
-      [ "Key down", "control-systems-mapping.html#autotoc_md115", null ],
-      [ "An example", "opengl-bindable.html#autotoc_md116", null ],
-      [ "Functions", "opengl-bindable.html#autotoc_md117", [
-        [ "Short-hand for binding", "opengl-bindable.html#autotoc_md118", null ],
-        [ "With", "opengl-bindable.html#autotoc_md119", null ]
+    [ "Macros", "build-info.html#autotoc_md87", null ],
+    [ "Example", "build-info.html#autotoc_md88", null ],
+    [ "Note", "build-info.html#autotoc_md89", [
+      [ "🆗 Keyboard", "control-systems-mapping.html#autotoc_md117", [
+        [ "Key pressed and released", "control-systems-mapping.html#autotoc_md118", null ],
+        [ "Key down", "control-systems-mapping.html#autotoc_md119", null ]
       ] ],
-      [ "CMake file", "create-modules.html#autotoc_md91", null ],
-      [ "Public headers", "create-modules.html#autotoc_md92", null ],
-      [ "Integrate in build process", "create-modules.html#autotoc_md93", null ]
+      [ "🐀 Mouse", "control-systems-mapping.html#autotoc_md120", [
+        [ "Mouse button clicked and released", "control-systems-mapping.html#autotoc_md121", null ],
+        [ "Mouse button down", "control-systems-mapping.html#autotoc_md122", null ]
+      ] ],
+      [ "An example", "opengl-bindable.html#autotoc_md123", null ],
+      [ "Functions", "opengl-bindable.html#autotoc_md124", [
+        [ "Short-hand for binding", "opengl-bindable.html#autotoc_md125", null ],
+        [ "With", "opengl-bindable.html#autotoc_md126", null ]
+      ] ],
+      [ "CMake file", "create-modules.html#autotoc_md94", null ],
+      [ "Public headers", "create-modules.html#autotoc_md95", null ],
+      [ "Integrate in build process", "create-modules.html#autotoc_md96", null ]
     ] ],
-    [ "Namespace", "create-modules.html#autotoc_md94", null ],
-    [ "Tests", "create-modules.html#autotoc_md95", null ],
-    [ "How to make callbacks \"a la Zeronetics\"", "callbacks.html#autotoc_md87", null ],
-    [ "Examination of choices", "callbacks.html#autotoc_md88", [
-      [ "Using <tt>std::optional</tt>", "callbacks.html#autotoc_md89", null ],
-      [ "Smart pointers", "callbacks.html#autotoc_md90", null ]
+    [ "Namespace", "create-modules.html#autotoc_md97", null ],
+    [ "Tests", "create-modules.html#autotoc_md98", null ],
+    [ "How to make callbacks \"a la Zeronetics\"", "callbacks.html#autotoc_md90", null ],
+    [ "Examination of choices", "callbacks.html#autotoc_md91", [
+      [ "Using <tt>std::optional</tt>", "callbacks.html#autotoc_md92", null ],
+      [ "Smart pointers", "callbacks.html#autotoc_md93", null ]
     ] ],
-    [ "🔀 Management of allocation", "arch-render-manager.html#autotoc_md81", null ],
-    [ "📘 Primary testing suite", "tests.html#autotoc_md107", null ],
-    [ "📚 Organization", "tests.html#autotoc_md108", null ],
-    [ "📦 Payloads", "tests.html#autotoc_md109", null ],
+    [ "🔀 Management of allocation", "arch-render-manager.html#autotoc_md84", null ],
+    [ "📘 Primary testing suite", "tests.html#autotoc_md110", null ],
+    [ "📚 Organization", "tests.html#autotoc_md111", null ],
+    [ "📦 Payloads", "tests.html#autotoc_md112", null ],
     [ "ControlSystems", null, [
       [ "InputMapping", "classZEN_1_1ControlSystems_1_1InputMapping.html", "classZEN_1_1ControlSystems_1_1InputMapping" ],
       [ "SignalHandler", "classZEN_1_1ControlSystems_1_1SignalHandler.html", "classZEN_1_1ControlSystems_1_1SignalHandler" ],
@@ -67,7 +73,9 @@ var namespaceZEN =
     [ "GPUAllocation", "structZEN_1_1GPUAllocation.html", "structZEN_1_1GPUAllocation" ],
     [ "KeyMap", "structZEN_1_1KeyMap.html", null ],
     [ "KeyStateEvent", "structZEN_1_1KeyStateEvent.html", "structZEN_1_1KeyStateEvent" ],
+    [ "MouseButtonStateEvent", "structZEN_1_1MouseButtonStateEvent.html", "structZEN_1_1MouseButtonStateEvent" ],
     [ "KeyDownEvent", "structZEN_1_1KeyDownEvent.html", "structZEN_1_1KeyDownEvent" ],
+    [ "MouseButtonDownEvent", "structZEN_1_1MouseButtonDownEvent.html", "structZEN_1_1MouseButtonDownEvent" ],
     [ "MousePosition", "structZEN_1_1MousePosition.html", "structZEN_1_1MousePosition" ],
     [ "MouseMovedEvent", "structZEN_1_1MouseMovedEvent.html", "structZEN_1_1MouseMovedEvent" ],
     [ "Path", "classZEN_1_1Path.html", "classZEN_1_1Path" ],
@@ -210,6 +218,14 @@ var namespaceZEN =
       [ "Info", "namespaceZEN.html#aa69bcfc31d926753fe3879eb54886386a4059b0251f66a18cb56f544728796875", null ],
       [ "Warning", "namespaceZEN.html#aa69bcfc31d926753fe3879eb54886386a0eaadb4fcb48a0a0ed7bc9868be9fbaa", null ],
       [ "Critical", "namespaceZEN.html#aa69bcfc31d926753fe3879eb54886386a278d01e5af56273bae1bb99a98b370cd", null ]
+    ] ],
+    [ "MouseButton", "namespaceZEN.html#a8a51e0df946c6f890a2823e8a1ca0240", [
+      [ "PrimaryMouseButton", "namespaceZEN.html#a8a51e0df946c6f890a2823e8a1ca0240accc85508cb5bc7228c6ef73f49476848", null ],
+      [ "SecondaryMouseButton", "namespaceZEN.html#a8a51e0df946c6f890a2823e8a1ca0240ae90f1be6898197b224aa6afb249ef624", null ]
+    ] ],
+    [ "MouseButtonState", "namespaceZEN.html#a005125c04c9758169bdc99cb0a557d09", [
+      [ "JustClicked", "namespaceZEN.html#a005125c04c9758169bdc99cb0a557d09a2b1ec63608b381f6053ce7cb31dc363a", null ],
+      [ "JustReleased", "namespaceZEN.html#a005125c04c9758169bdc99cb0a557d09a3621e68a905d433b120899458aeda38d", null ]
     ] ],
     [ "ObservationOf", "namespaceZEN.html#a1d13dce65d0c83e46709c26e995a7016", [
       [ "Custom", "namespaceZEN.html#a1d13dce65d0c83e46709c26e995a7016a90589c47f06eb971d548591f23c285af", null ],

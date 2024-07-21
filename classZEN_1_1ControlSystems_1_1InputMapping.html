@@ -102,17 +102,27 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a32a78ed145c46dfdc0017a2f6e93e1d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31dbc032a6c4a13eb95b93a2ea326f3e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1ControlSystems_1_1InputMapping.html#a31dbc032a6c4a13eb95b93a2ea326f3e">keyDown</a> (<a class="el" href="namespaceZEN.html#a68b344c77c113e5bffc15e7c46c125c5">Key</a> key, const char *signal) noexcept</td></tr>
 <tr class="separator:a31dbc032a6c4a13eb95b93a2ea326f3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a210a3f3697be8252be40f0115e9e861b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1ControlSystems_1_1InputMapping.html#a210a3f3697be8252be40f0115e9e861b">mouseButtonJustClicked</a> (<a class="el" href="namespaceZEN.html#a8a51e0df946c6f890a2823e8a1ca0240">MouseButton</a> mouseButton, const char *signal) noexcept</td></tr>
+<tr class="separator:a210a3f3697be8252be40f0115e9e861b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07d0f79ebc0935d9730b2c4c016c4096"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1ControlSystems_1_1InputMapping.html#a07d0f79ebc0935d9730b2c4c016c4096">mouseButtonJustReleased</a> (<a class="el" href="namespaceZEN.html#a8a51e0df946c6f890a2823e8a1ca0240">MouseButton</a> mouseButton, const char *signal) noexcept</td></tr>
+<tr class="separator:a07d0f79ebc0935d9730b2c4c016c4096"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a6e60cdd2c430654cfd4a2753a8d9c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1ControlSystems_1_1InputMapping.html#a5a6e60cdd2c430654cfd4a2753a8d9c1">mouseButtonDown</a> (<a class="el" href="namespaceZEN.html#a8a51e0df946c6f890a2823e8a1ca0240">MouseButton</a> mouseButton, const char *signal) noexcept</td></tr>
+<tr class="separator:a5a6e60cdd2c430654cfd4a2753a8d9c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f2a60016d271a71cb3334bb98e38496"><td class="memItemLeft" align="right" valign="top">std::optional&lt; const char * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1ControlSystems_1_1InputMapping.html#a5f2a60016d271a71cb3334bb98e38496">getSignal</a> (const <a class="el" href="structZEN_1_1KeyStateEvent.html">KeyStateEvent</a> &amp;keyStateEvent) const noexcept</td></tr>
 <tr class="separator:a5f2a60016d271a71cb3334bb98e38496"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebea4351ee97b002106c39cb8f506e68"><td class="memItemLeft" align="right" valign="top">std::optional&lt; const char * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1ControlSystems_1_1InputMapping.html#aebea4351ee97b002106c39cb8f506e68">getSignal</a> (const <a class="el" href="structZEN_1_1KeyDownEvent.html">KeyDownEvent</a> &amp;keyDownEvent) const noexcept</td></tr>
 <tr class="separator:aebea4351ee97b002106c39cb8f506e68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae27b6c139fa0062b3436c7cee64a9acb"><td class="memItemLeft" align="right" valign="top">std::optional&lt; const char * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1ControlSystems_1_1InputMapping.html#ae27b6c139fa0062b3436c7cee64a9acb">getSignal</a> (const <a class="el" href="structZEN_1_1MouseButtonStateEvent.html">MouseButtonStateEvent</a> &amp;mouseButtonStateEvent) const noexcept</td></tr>
+<tr class="separator:ae27b6c139fa0062b3436c7cee64a9acb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56f6dceceab05c25dc6f387acb8512f9"><td class="memItemLeft" align="right" valign="top">std::optional&lt; const char * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1ControlSystems_1_1InputMapping.html#a56f6dceceab05c25dc6f387acb8512f9">getSignal</a> (const <a class="el" href="structZEN_1_1MouseButtonDownEvent.html">MouseButtonDownEvent</a> &amp;event) const noexcept</td></tr>
+<tr class="separator:a56f6dceceab05c25dc6f387acb8512f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Mapping of user inputs across various control interfaces.</p>
 <p><a class="el" href="control-systems.html">Control Systems</a> </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aebea4351ee97b002106c39cb8f506e68"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aebea4351ee97b002106c39cb8f506e68">&#9670;&nbsp;</a></span>getSignal() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aebea4351ee97b002106c39cb8f506e68">&#9670;&nbsp;</a></span>getSignal() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -146,7 +156,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a5f2a60016d271a71cb3334bb98e38496"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5f2a60016d271a71cb3334bb98e38496">&#9670;&nbsp;</a></span>getSignal() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f2a60016d271a71cb3334bb98e38496">&#9670;&nbsp;</a></span>getSignal() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -172,6 +182,74 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">keyStateEvent</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a56f6dceceab05c25dc6f387acb8512f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56f6dceceab05c25dc6f387acb8512f9">&#9670;&nbsp;</a></span>getSignal() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt; const char * &gt; ZEN::ControlSystems::InputMapping::getSignal </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structZEN_1_1MouseButtonDownEvent.html">MouseButtonDownEvent</a> &amp;&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Retrieve signal for when a mouse button is held down.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">keyDownEvent</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="ae27b6c139fa0062b3436c7cee64a9acb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae27b6c139fa0062b3436c7cee64a9acb">&#9670;&nbsp;</a></span>getSignal() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt; const char * &gt; ZEN::ControlSystems::InputMapping::getSignal </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structZEN_1_1MouseButtonStateEvent.html">MouseButtonStateEvent</a> &amp;&#160;</td>
+          <td class="paramname"><em>mouseButtonStateEvent</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get a signal for a mouse button state event.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mouseButtonStateEvent</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -297,6 +375,138 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">key</td><td></td></tr>
+    <tr><td class="paramname">signal</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5a6e60cdd2c430654cfd4a2753a8d9c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a6e60cdd2c430654cfd4a2753a8d9c1">&#9670;&nbsp;</a></span>mouseButtonDown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ZEN::ControlSystems::InputMapping::mouseButtonDown </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceZEN.html#a8a51e0df946c6f890a2823e8a1ca0240">ZEN::MouseButton</a>&#160;</td>
+          <td class="paramname"><em>mouseButton</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>signal</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Signal while a mouse button is held down.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mouseButton</td><td></td></tr>
+    <tr><td class="paramname">signal</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a210a3f3697be8252be40f0115e9e861b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a210a3f3697be8252be40f0115e9e861b">&#9670;&nbsp;</a></span>mouseButtonJustClicked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ZEN::ControlSystems::InputMapping::mouseButtonJustClicked </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceZEN.html#a8a51e0df946c6f890a2823e8a1ca0240">ZEN::MouseButton</a>&#160;</td>
+          <td class="paramname"><em>mouseButton</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>signal</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Signal to be sent in the moment a mouse button is clicked (not yet released).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mouseButton</td><td></td></tr>
+    <tr><td class="paramname">signal</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a07d0f79ebc0935d9730b2c4c016c4096"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07d0f79ebc0935d9730b2c4c016c4096">&#9670;&nbsp;</a></span>mouseButtonJustReleased()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ZEN::ControlSystems::InputMapping::mouseButtonJustReleased </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceZEN.html#a8a51e0df946c6f890a2823e8a1ca0240">ZEN::MouseButton</a>&#160;</td>
+          <td class="paramname"><em>mouseButton</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>signal</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Signal for the moment a mouse button is released.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mouseButton</td><td></td></tr>
     <tr><td class="paramname">signal</td><td></td></tr>
   </table>
   </dd>

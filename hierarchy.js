@@ -72,6 +72,8 @@ var hierarchy =
     [ "ZEN::Log", "classZEN_1_1Log.html", null ],
     [ "ZEN::LogBehavior", "structZEN_1_1LogBehavior.html", null ],
     [ "ZEN::LogFileEntry", "structZEN_1_1LogFileEntry.html", null ],
+    [ "ZEN::MouseButtonDownEvent", "structZEN_1_1MouseButtonDownEvent.html", null ],
+    [ "ZEN::MouseButtonStateEvent", "structZEN_1_1MouseButtonStateEvent.html", null ],
     [ "ZEN::MouseMovedEvent", "structZEN_1_1MouseMovedEvent.html", null ],
     [ "ZEN::MousePosition", "structZEN_1_1MousePosition.html", null ],
     [ "ZEN::MVP", "structZEN_1_1MVP.html", null ],

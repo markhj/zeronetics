@@ -89,10 +89,10 @@ $(document).ready(function(){initNavTree('log-reporting.html',''); initResizable
 <div class="contents">
 <div class="textblock"><p>The regular <a class="el" href="logging.html">log system</a> will &mdash; depending on <a class="el" href="build-info.html">build configuration</a> &mdash; strip logging functionality from the code, when you build it for release.</p>
 <p>However, what about the case where a player of your game experiences an error, and wants to send you a bug report? Well, if we stripped all the log points that's not possible.</p>
-<h2><a class="anchor" id="autotoc_md72"></a>
+<h2><a class="anchor" id="autotoc_md75"></a>
 ✏️ What is reporting?</h2>
 <p>This is where this special <b>reporting level</b> of the log system comes in. It remains in the release build, and writes valuable information to the log file, including &mdash; but definitely not limited to &mdash; system information, graphics driver, and events you've actively decided to log at this level.</p>
-<h2><a class="anchor" id="autotoc_md73"></a>
+<h2><a class="anchor" id="autotoc_md76"></a>
 📋 Usage</h2>
 <p>Early in your game code, you should start the reporting.</p>
 <div class="fragment"><div class="line">ZEN_REPORT_START();</div>

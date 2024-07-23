@@ -15,6 +15,7 @@ set(CORE_SRC
         src/core/result.cpp
         src/core/timer.cpp
         src/core/observer.cpp
+        src/process/process.cpp
 
         # Core: 3rd layer
         src/core/aabb.cpp
@@ -22,6 +23,7 @@ set(CORE_SRC
 
         # Traits
         src/traits/has-unique-id.cpp
+        src/traits/processor.cpp
 
         # Adv. structures
         src/render/render-manager.cpp

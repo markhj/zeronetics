@@ -54,6 +54,7 @@
 #include "game/game.h"
 #include "logging/logging.h"
 #include "render/render-manager.h"
+#include "zeronetics/process/process.h"
 
 // Shapes
 #include "shapes/3d/cube.h"

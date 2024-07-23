@@ -194,4 +194,17 @@ namespace ZEN {
          */
         MSAA8X,
     };
+
+    /**
+     * The activity state of a ZEN::Process.
+     *
+     * @ref process
+     * @ref process-lifecycle
+     */
+    enum class ProcessState {
+        Pending,
+        Active,
+        Paused,
+        Killed,
+    };
 }

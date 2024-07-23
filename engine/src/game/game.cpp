@@ -23,7 +23,7 @@ void ZEN::Game::run() {
 
         m_renderer->clear();
 
-        loop(m_delta);
+        processAll(m_delta);
 
         m_renderer->render();
 

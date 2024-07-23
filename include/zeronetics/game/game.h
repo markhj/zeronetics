@@ -2,8 +2,9 @@
 
 #include "zeronetics/contracts/renderer.h"
 #include "zeronetics/contracts/window.h"
-#include "zeronetics/core/timer.h"
 #include "zeronetics/core/observer.h"
+#include "zeronetics/core/timer.h"
+#include "zeronetics/traits/processor.h"
 #include <memory>
 
 namespace ZEN {
@@ -11,7 +12,8 @@ namespace ZEN {
      * The main game class which connects different components,
      * such as window and renderer, and maintains the game loop.
      */
-    class Game : public BeingObserved {
+    class Game : public BeingObserved,
+                 public Processor {
     public:
         /**
          * Construct instance.
@@ -25,13 +27,6 @@ namespace ZEN {
          * Run the game loop.
          */
         void run();
-
-        /**
-         * Loop function which should be implemented by the game.
-         *
-         * @param delta
-         */
-        virtual void loop(dt_float delta) = 0;
 
         /**
          * Retrieve current delta time value.
@@ -120,6 +115,5 @@ namespace ZEN {
          *      to calculate FPS.
          */
         TimeMeasurement realRenderTime;
-
     };
 };

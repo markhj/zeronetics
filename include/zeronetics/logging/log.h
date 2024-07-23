@@ -53,6 +53,11 @@ namespace ZEN {
          * User inputs, mapping, handling of controls, etc.
          */
         Controls,
+
+        /**
+         * Related to the management and life-cycle of processes.
+         */
+        Process,
     };
 
     /**

@@ -202,6 +202,8 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1Log.html">Log</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1Process.html">Process</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structZEN_1_1RendererRequest.html">RendererRequest</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structZEN_1_1RenderGroup3D.html">RenderGroup3D</a></td></tr>
@@ -211,6 +213,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1Cube.html">Cube</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1HasUniqueId.html">HasUniqueId</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1Processor.html">Processor</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1Window.html">Window</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -381,6 +385,12 @@ Enumerations</h2></td></tr>
 , <a class="el" href="namespaceZEN.html#a94472cd2dbf45750e85daff75fc8232da508eb90ad8473b8f7a4ed052a12ed74e">MSAA8X</a>
  }</td></tr>
 <tr class="separator:a94472cd2dbf45750e85daff75fc8232d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc6f343ed5175d8edbb395413b31378e"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceZEN.html#acc6f343ed5175d8edbb395413b31378e">ProcessState</a> { <b>Pending</b>
+, <b>Active</b>
+, <b>Paused</b>
+, <b>Killed</b>
+ }</td></tr>
+<tr class="separator:acc6f343ed5175d8edbb395413b31378e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d13dce65d0c83e46709c26e995a7016"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceZEN.html#a1d13dce65d0c83e46709c26e995a7016">ObservationOf</a> { <b>Custom</b>
 , <b>FPS</b>
  }</td></tr>
@@ -403,6 +413,7 @@ Enumerations</h2></td></tr>
 , <br />
 &#160;&#160;<b>ShaderUse</b>
 , <a class="el" href="namespaceZEN.html#a5ac493fe076dd216cf2f69f8b01f05efa24b6472fcfa59cddd3f7bbc326582b5f">Controls</a>
+, <a class="el" href="namespaceZEN.html#a5ac493fe076dd216cf2f69f8b01f05efab6ec7abeb6ae29cc35a4b47475e12afe">Process</a>
 <br />
  }</td></tr>
 <tr class="separator:a5ac493fe076dd216cf2f69f8b01f05ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -669,6 +680,8 @@ Enumerations</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="a5ac493fe076dd216cf2f69f8b01f05efa24b6472fcfa59cddd3f7bbc326582b5f"></a>Controls&#160;</td><td class="fielddoc"><p>User inputs, mapping, handling of controls, etc. </p>
 </td></tr>
+<tr><td class="fieldname"><a id="a5ac493fe076dd216cf2f69f8b01f05efab6ec7abeb6ae29cc35a4b47475e12afe"></a>Process&#160;</td><td class="fielddoc"><p>Related to the management and life-cycle of processes. </p>
+</td></tr>
 </table>
 
 </div>
@@ -765,6 +778,30 @@ Enumerations</h2></td></tr>
 <p>The category that is being observed.</p>
 <p>For non-native observation, you can use <code>Custom</code>.</p>
 <p><a class="el" href="observers.html">Observers</a> </p>
+
+</div>
+</div>
+<a id="acc6f343ed5175d8edbb395413b31378e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc6f343ed5175d8edbb395413b31378e">&#9670;&nbsp;</a></span>ProcessState</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="namespaceZEN.html#acc6f343ed5175d8edbb395413b31378e">ZEN::ProcessState</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The activity state of a <a class="el" href="classZEN_1_1Process.html">ZEN::Process</a>.</p>
+<p><a class="el" href="process.html">Processes</a> <a class="el" href="process-lifecycle.html">Life-cycle of a process</a> </p>
 
 </div>
 </div>

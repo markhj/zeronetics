@@ -1,36 +1,36 @@
 var namespaceZEN =
 [
-    [ "Macros", "build-info.html#autotoc_md87", null ],
-    [ "Example", "build-info.html#autotoc_md88", null ],
-    [ "Note", "build-info.html#autotoc_md89", [
-      [ "🆗 Keyboard", "control-systems-mapping.html#autotoc_md117", [
-        [ "Key pressed and released", "control-systems-mapping.html#autotoc_md118", null ],
-        [ "Key down", "control-systems-mapping.html#autotoc_md119", null ]
+    [ "Macros", "build-info.html#autotoc_md95", null ],
+    [ "Example", "build-info.html#autotoc_md96", null ],
+    [ "Note", "build-info.html#autotoc_md97", [
+      [ "🆗 Keyboard", "control-systems-mapping.html#autotoc_md125", [
+        [ "Key pressed and released", "control-systems-mapping.html#autotoc_md126", null ],
+        [ "Key down", "control-systems-mapping.html#autotoc_md127", null ]
       ] ],
-      [ "🐀 Mouse", "control-systems-mapping.html#autotoc_md120", [
-        [ "Mouse button clicked and released", "control-systems-mapping.html#autotoc_md121", null ],
-        [ "Mouse button down", "control-systems-mapping.html#autotoc_md122", null ]
+      [ "🐀 Mouse", "control-systems-mapping.html#autotoc_md128", [
+        [ "Mouse button clicked and released", "control-systems-mapping.html#autotoc_md129", null ],
+        [ "Mouse button down", "control-systems-mapping.html#autotoc_md130", null ]
       ] ],
-      [ "An example", "opengl-bindable.html#autotoc_md123", null ],
-      [ "Functions", "opengl-bindable.html#autotoc_md124", [
-        [ "Short-hand for binding", "opengl-bindable.html#autotoc_md125", null ],
-        [ "With", "opengl-bindable.html#autotoc_md126", null ]
+      [ "An example", "opengl-bindable.html#autotoc_md131", null ],
+      [ "Functions", "opengl-bindable.html#autotoc_md132", [
+        [ "Short-hand for binding", "opengl-bindable.html#autotoc_md133", null ],
+        [ "With", "opengl-bindable.html#autotoc_md134", null ]
       ] ],
-      [ "CMake file", "create-modules.html#autotoc_md94", null ],
-      [ "Public headers", "create-modules.html#autotoc_md95", null ],
-      [ "Integrate in build process", "create-modules.html#autotoc_md96", null ]
+      [ "CMake file", "create-modules.html#autotoc_md102", null ],
+      [ "Public headers", "create-modules.html#autotoc_md103", null ],
+      [ "Integrate in build process", "create-modules.html#autotoc_md104", null ]
     ] ],
-    [ "Namespace", "create-modules.html#autotoc_md97", null ],
-    [ "Tests", "create-modules.html#autotoc_md98", null ],
-    [ "How to make callbacks \"a la Zeronetics\"", "callbacks.html#autotoc_md90", null ],
-    [ "Examination of choices", "callbacks.html#autotoc_md91", [
-      [ "Using <tt>std::optional</tt>", "callbacks.html#autotoc_md92", null ],
-      [ "Smart pointers", "callbacks.html#autotoc_md93", null ]
+    [ "Namespace", "create-modules.html#autotoc_md105", null ],
+    [ "Tests", "create-modules.html#autotoc_md106", null ],
+    [ "How to make callbacks \"a la Zeronetics\"", "callbacks.html#autotoc_md98", null ],
+    [ "Examination of choices", "callbacks.html#autotoc_md99", [
+      [ "Using <tt>std::optional</tt>", "callbacks.html#autotoc_md100", null ],
+      [ "Smart pointers", "callbacks.html#autotoc_md101", null ]
     ] ],
-    [ "🔀 Management of allocation", "arch-render-manager.html#autotoc_md84", null ],
-    [ "📘 Primary testing suite", "tests.html#autotoc_md110", null ],
-    [ "📚 Organization", "tests.html#autotoc_md111", null ],
-    [ "📦 Payloads", "tests.html#autotoc_md112", null ],
+    [ "🔀 Management of allocation", "arch-render-manager.html#autotoc_md92", null ],
+    [ "📘 Primary testing suite", "tests.html#autotoc_md118", null ],
+    [ "📚 Organization", "tests.html#autotoc_md119", null ],
+    [ "📦 Payloads", "tests.html#autotoc_md120", null ],
     [ "ControlSystems", null, [
       [ "InputMapping", "classZEN_1_1ControlSystems_1_1InputMapping.html", "classZEN_1_1ControlSystems_1_1InputMapping" ],
       [ "SignalHandler", "classZEN_1_1ControlSystems_1_1SignalHandler.html", "classZEN_1_1ControlSystems_1_1SignalHandler" ],
@@ -106,11 +106,13 @@ var namespaceZEN =
     [ "LogFileEntry", "structZEN_1_1LogFileEntry.html", "structZEN_1_1LogFileEntry" ],
     [ "LogBehavior", "structZEN_1_1LogBehavior.html", "structZEN_1_1LogBehavior" ],
     [ "Log", "classZEN_1_1Log.html", null ],
+    [ "Process", "classZEN_1_1Process.html", "classZEN_1_1Process" ],
     [ "RendererRequest", "structZEN_1_1RendererRequest.html", null ],
     [ "RenderGroup3D", "structZEN_1_1RenderGroup3D.html", null ],
     [ "RenderManager", "structZEN_1_1RenderManager.html", "structZEN_1_1RenderManager" ],
     [ "Cube", "classZEN_1_1Cube.html", "classZEN_1_1Cube" ],
     [ "HasUniqueId", "classZEN_1_1HasUniqueId.html", "classZEN_1_1HasUniqueId" ],
+    [ "Processor", "classZEN_1_1Processor.html", "classZEN_1_1Processor" ],
     [ "Window", "classZEN_1_1Window.html", "classZEN_1_1Window" ],
     [ "dt_float", "namespaceZEN.html#a1896aa89c3b0bbcccbd1b16d57410502", null ],
     [ "fps_int", "namespaceZEN.html#a6e336ae4a649a81112a7105f7705954c", null ],
@@ -212,7 +214,8 @@ var namespaceZEN =
       [ "RendererInternals", "namespaceZEN.html#a5ac493fe076dd216cf2f69f8b01f05efa37e93c4876abdbf5d2143dd6310f1a14", null ],
       [ "ShaderCompilation", "namespaceZEN.html#a5ac493fe076dd216cf2f69f8b01f05efaea199c4bea585e022d34acb82922eb17", null ],
       [ "ShaderUse", "namespaceZEN.html#a5ac493fe076dd216cf2f69f8b01f05efa54dc3fb0e54d291e45aa3372ec0d9cc0", null ],
-      [ "Controls", "namespaceZEN.html#a5ac493fe076dd216cf2f69f8b01f05efa24b6472fcfa59cddd3f7bbc326582b5f", null ]
+      [ "Controls", "namespaceZEN.html#a5ac493fe076dd216cf2f69f8b01f05efa24b6472fcfa59cddd3f7bbc326582b5f", null ],
+      [ "Process", "namespaceZEN.html#a5ac493fe076dd216cf2f69f8b01f05efab6ec7abeb6ae29cc35a4b47475e12afe", null ]
     ] ],
     [ "LogLevel", "namespaceZEN.html#aa69bcfc31d926753fe3879eb54886386", [
       [ "Info", "namespaceZEN.html#aa69bcfc31d926753fe3879eb54886386a4059b0251f66a18cb56f544728796875", null ],
@@ -235,6 +238,12 @@ var namespaceZEN =
       [ "Windows", "namespaceZEN.html#ad555d34e819d0776dc8d71e6e3b185c8aaea23489ce3aa9b6406ebb28e0cda430", null ],
       [ "Linux", "namespaceZEN.html#ad555d34e819d0776dc8d71e6e3b185c8aedc9f0a5a5d57797bf68e37364743831", null ],
       [ "Mac", "namespaceZEN.html#ad555d34e819d0776dc8d71e6e3b185c8a1748c0644a50090814d3e170723ccc5c", null ]
+    ] ],
+    [ "ProcessState", "namespaceZEN.html#acc6f343ed5175d8edbb395413b31378e", [
+      [ "Pending", "namespaceZEN.html#acc6f343ed5175d8edbb395413b31378ea2d13df6f8b5e4c5af9f87e0dc39df69d", null ],
+      [ "Active", "namespaceZEN.html#acc6f343ed5175d8edbb395413b31378ea4d3d769b812b6faa6b76e1a8abaece2d", null ],
+      [ "Paused", "namespaceZEN.html#acc6f343ed5175d8edbb395413b31378eae99180abf47a8b3a856e0bcb2656990a", null ],
+      [ "Killed", "namespaceZEN.html#acc6f343ed5175d8edbb395413b31378eafa0f11c1d4a8554282671bca496fa8d4", null ]
     ] ],
     [ "RenderManagerRequest", "namespaceZEN.html#a6b91990426cccd5daddb56813b87fba6", [
       [ "Allocate", "namespaceZEN.html#a6b91990426cccd5daddb56813b87fba6ac9baacf6cca6c54626e594639081177f", null ],

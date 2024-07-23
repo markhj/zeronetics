@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['tesscontrol_491',['TessControl',['../namespaceZEN.html#aa45d0a550aed22035e4c5545f82290bea56e321ccefb517f264e2cce7ebf3e488',1,'ZEN']]],
-  ['tessevaluation_492',['TessEvaluation',['../namespaceZEN.html#aa45d0a550aed22035e4c5545f82290bea8ae2e6d70aa9488e3c11f0ff6ca4dd27',1,'ZEN']]]
+  ['rendererinit_523',['RendererInit',['../namespaceZEN.html#a5ac493fe076dd216cf2f69f8b01f05efacf48c3dcb3d12b3c90852b98a6a885f9',1,'ZEN']]]
 ];

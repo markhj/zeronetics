@@ -72,11 +72,13 @@ var annotated_dup =
       [ "LogFileEntry", "structZEN_1_1LogFileEntry.html", "structZEN_1_1LogFileEntry" ],
       [ "LogBehavior", "structZEN_1_1LogBehavior.html", "structZEN_1_1LogBehavior" ],
       [ "Log", "classZEN_1_1Log.html", null ],
+      [ "Process", "classZEN_1_1Process.html", "classZEN_1_1Process" ],
       [ "RendererRequest", "structZEN_1_1RendererRequest.html", null ],
       [ "RenderGroup3D", "structZEN_1_1RenderGroup3D.html", null ],
       [ "RenderManager", "structZEN_1_1RenderManager.html", "structZEN_1_1RenderManager" ],
       [ "Cube", "classZEN_1_1Cube.html", "classZEN_1_1Cube" ],
       [ "HasUniqueId", "classZEN_1_1HasUniqueId.html", "classZEN_1_1HasUniqueId" ],
+      [ "Processor", "classZEN_1_1Processor.html", "classZEN_1_1Processor" ],
       [ "Window", "classZEN_1_1Window.html", "classZEN_1_1Window" ]
     ] ]
 ];

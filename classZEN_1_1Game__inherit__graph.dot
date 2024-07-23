@@ -6,4 +6,6 @@ digraph "ZEN::Game"
   Node1 [label="ZEN::Game",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="ZEN::BeingObserved",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classZEN_1_1BeingObserved.html",tooltip=" "];
+  Node3 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="ZEN::Processor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classZEN_1_1Processor.html",tooltip=" "];
 }

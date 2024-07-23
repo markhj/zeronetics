@@ -11,13 +11,13 @@ digraph "Graphical Class Hierarchy"
   Node2 [label="ZEN::Camera3D",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classZEN_1_1Camera3D.html",tooltip=" "];
   Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node3 [label="ZEN::Mesh3D",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classZEN_1_1Mesh3D.html",tooltip=" "];
-  Node23 [label="ZEN::IRenderable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classZEN_1_1IRenderable.html",tooltip=" "];
-  Node23 -> Node24 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node24 [label="ZEN::IRenderable3D",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classZEN_1_1IRenderable3D.html",tooltip=" "];
-  Node24 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node39 [label="ZEN::ITransforms3D",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classZEN_1_1ITransforms3D.html",tooltip=" "];
-  Node39 -> Node40 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node40 [label="ZEN::ICamera3D",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classZEN_1_1ICamera3D.html",tooltip=" "];
-  Node40 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node39 -> Node24 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node24 [label="ZEN::IRenderable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classZEN_1_1IRenderable.html",tooltip=" "];
+  Node24 -> Node25 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node25 [label="ZEN::IRenderable3D",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classZEN_1_1IRenderable3D.html",tooltip=" "];
+  Node25 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node40 [label="ZEN::ITransforms3D",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classZEN_1_1ITransforms3D.html",tooltip=" "];
+  Node40 -> Node41 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node41 [label="ZEN::ICamera3D",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classZEN_1_1ICamera3D.html",tooltip=" "];
+  Node41 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node40 -> Node25 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
 }

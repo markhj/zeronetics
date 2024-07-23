@@ -13,7 +13,9 @@ var hierarchy =
     ] ],
     [ "ZEN::File", "classZEN_1_1File.html", null ],
     [ "ZEN::GPUAllocation", "structZEN_1_1GPUAllocation.html", null ],
-    [ "ZEN::HasUniqueId", "classZEN_1_1HasUniqueId.html", null ],
+    [ "ZEN::HasUniqueId", "classZEN_1_1HasUniqueId.html", [
+      [ "ZEN::Process", "classZEN_1_1Process.html", null ]
+    ] ],
     [ "ZEN::OpenGL::IBindable< T >", "classZEN_1_1OpenGL_1_1IBindable.html", [
       [ "ZEN::OpenGL::StdBinding< gl_uint >", "classZEN_1_1OpenGL_1_1StdBinding.html", [
         [ "ZEN::OpenGL::Object", "classZEN_1_1OpenGL_1_1Object.html", [
@@ -85,6 +87,9 @@ var hierarchy =
     [ "ZEN::OS", "structZEN_1_1OS.html", null ],
     [ "ZEN::Path", "classZEN_1_1Path.html", null ],
     [ "ZEN::Version::Preview", "structZEN_1_1Version_1_1Preview.html", null ],
+    [ "ZEN::Processor", "classZEN_1_1Processor.html", [
+      [ "ZEN::Game", "classZEN_1_1Game.html", null ]
+    ] ],
     [ "ZEN::ResultError", "structZEN_1_1ResultError.html", null ],
     [ "ZEN::ScreenResolution", "structZEN_1_1ScreenResolution.html", null ],
     [ "ZEN::Settings", "structZEN_1_1Settings.html", null ],

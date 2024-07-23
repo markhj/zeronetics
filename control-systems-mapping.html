@@ -88,15 +88,15 @@ $(document).ready(function(){initNavTree('control-systems-mapping.html',''); ini
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>In this article, we're going to review the various types of input mapping you can do with <a class="el" href="classZEN_1_1ControlSystems_1_1InputMapping.html">ZEN::ControlSystems::InputMapping</a>.</p>
-<h2><a class="anchor" id="autotoc_md117"></a>
+<h2><a class="anchor" id="autotoc_md125"></a>
 🆗 Keyboard</h2>
-<h3><a class="anchor" id="autotoc_md118"></a>
+<h3><a class="anchor" id="autotoc_md126"></a>
 Key pressed and released</h3>
 <p>To map when a key has just been pressed, or just released, use these methods:</p>
 <div class="fragment"><div class="line">inputMapping-&gt;keyJustPressed(Key::W, <span class="stringliteral">&quot;start_running_forward&quot;</span>);</div>
 <div class="line">inputMapping-&gt;keyJustReleased(Key::W, <span class="stringliteral">&quot;stop_running_forward&quot;</span>);</div>
 </div><!-- fragment --><p>Available keys can be seen on <a class="el" href="namespaceZEN.html#a68b344c77c113e5bffc15e7c46c125c5">ZEN::Key</a> enumerator.</p>
-<h3><a class="anchor" id="autotoc_md119"></a>
+<h3><a class="anchor" id="autotoc_md127"></a>
 Key down</h3>
 <p>While you're holding down a key, you can use:</p>
 <div class="fragment"><div class="line">inputMapping-&gt;keyDown(Key::W, <span class="stringliteral">&quot;moving_forward&quot;</span>);</div>
@@ -104,15 +104,15 @@ Key down</h3>
 <div class="fragment"><div class="line">signalHandler-&gt;on(<span class="stringliteral">&quot;forward&quot;</span>, [&amp;](dt_float delta) {</div>
 <div class="line">    character-&gt;position.z -= 2.0f * delta;</div>
 <div class="line">});</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md120"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md128"></a>
 🐀 Mouse</h2>
-<h3><a class="anchor" id="autotoc_md121"></a>
+<h3><a class="anchor" id="autotoc_md129"></a>
 Mouse button clicked and released</h3>
 <p>In a fashion eerily similar to the keyboard, you can track when the mouse button is first clicked and when it's released.</p>
 <div class="fragment"><div class="line">inputMapping-&gt;mouseButtonJustClicked(MouseButton::PrimaryMouseButton, <span class="stringliteral">&quot;start_shooting&quot;</span>);</div>
 <div class="line">inputMapping-&gt;mouseButtonJustReleased(MouseButton::PrimaryMouseButton, <span class="stringliteral">&quot;stop_shooting&quot;</span>);</div>
 </div><!-- fragment --><p>Available buttons can be seen on <a class="el" href="namespaceZEN.html#a8a51e0df946c6f890a2823e8a1ca0240">ZEN::MouseButton</a>.</p>
-<h3><a class="anchor" id="autotoc_md122"></a>
+<h3><a class="anchor" id="autotoc_md130"></a>
 Mouse button down</h3>
 <p>You can signal when a mouse button is held down using <code>mouseButtonDown</code>:</p>
 <div class="fragment"><div class="line">inputMapping-&gt;mouseButtonDown(MouseButton::PrimaryMouseButton, <span class="stringliteral">&quot;fly&quot;</span>);</div>

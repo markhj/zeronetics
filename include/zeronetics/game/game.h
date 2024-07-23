@@ -27,6 +27,13 @@ namespace ZEN {
         void run();
 
         /**
+         * Loop function which should be implemented by the game.
+         *
+         * @param delta
+         */
+        virtual void loop(dt_float delta) = 0;
+
+        /**
          * Retrieve current delta time value.
          *
          * @note Is 0.0 during rendering of the first frame.
@@ -59,7 +66,17 @@ namespace ZEN {
          */
         [[nodiscard]] TimeMeasurement getRealRenderTime() const noexcept;
 
+        /**
+         * Request the end the game loop.
+         */
+        void requestExit() noexcept;
+
     private:
+        /**
+         * Indicates when to exit the game loop.
+         */
+        bool keepOpen = true;
+
         /**
          * Window instance.
          */

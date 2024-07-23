@@ -3,6 +3,19 @@
 #include <algorithm>
 #include <format>
 
+double ZEN::Log::messageCooldown = 5.0;
+double ZEN::Log::messageCooldownInterval = 2.0;
+
+std::optional<ZEN::File> ZEN::Log::logFile;
+
+std::map<ZEN::LogLevel, ZEN::LogBehavior> ZEN::Log::behaviors = {
+        {ZEN::LogLevel::Info, {ZEN::LogAction::Console}},
+        {ZEN::LogLevel::Warning, {ZEN::LogAction::ConsoleErr}},
+        {ZEN::LogLevel::Critical, {ZEN::LogAction::Exception}},
+};
+
+std::vector<ZEN::LogCategory> ZEN::Log::blacklistCategories = {};
+
 namespace {
     const char *NO_INFO_LABEL = "-";
 
@@ -22,28 +35,8 @@ namespace {
         strm << std::put_time(&now_tm, format);
         return strm.str();
     }
-}
 
-double ZEN::Log::messageCooldown = 5.0;
-double ZEN::Log::messageCooldownInterval = 2.0;
-
-std::optional<ZEN::File> ZEN::Log::logFile;
-
-std::map<ZEN::LogLevel, ZEN::LogBehavior> ZEN::Log::behaviors = {
-        {ZEN::LogLevel::Info, {ZEN::LogAction::Console}},
-        {ZEN::LogLevel::Warning, {ZEN::LogAction::ConsoleErr}},
-        {ZEN::LogLevel::Critical, {ZEN::LogAction::Exception}},
-};
-
-std::vector<ZEN::LogCategory> ZEN::Log::blacklistCategories = {};
-
-void ZEN::Log::message(ZEN::LogLevel level,
-                       ZEN::LogCategory category,
-                       std::string msg) {
-
-    // @todo: https://github.com/markhj/zeronetics/issues/7
-    //      Optimization of the code below
-    if (level != LogLevel::Info) {
+    std::optional<std::string> checkCooldownState(std::string msg) {
         bool found = false;
         auto now = std::chrono::system_clock::now();
         for (auto iter = cooldown.begin(); iter != cooldown.end();) {
@@ -51,7 +44,7 @@ void ZEN::Log::message(ZEN::LogLevel level,
 
             // When the message has existed long enough on the cooldown list
             // without being invoked again, it's deleted
-            if (elapsed.count() > messageCooldown) {
+            if (elapsed.count() > ZEN::Log::messageCooldown) {
                 iter = cooldown.erase(iter);
             } else {
                 if (iter->msg == msg) {
@@ -59,11 +52,11 @@ void ZEN::Log::message(ZEN::LogLevel level,
                     ++iter->count;
 
                     // Time between showing the message
-                    if (elapsed.count() > messageCooldownInterval) {
+                    if (elapsed.count() > ZEN::Log::messageCooldownInterval) {
                         msg += std::format(" [{}]", iter->count);
                         iter->created = now;
                     } else {
-                        return;
+                        return std::nullopt;
                     }
                 }
                 ++iter;
@@ -74,6 +67,21 @@ void ZEN::Log::message(ZEN::LogLevel level,
         // on the cooldown list.
         if (!found) {
             cooldown.emplace_back(msg, now);
+        }
+
+        return msg;
+    }
+}
+
+void ZEN::Log::message(ZEN::LogLevel level,
+                       ZEN::LogCategory category,
+                       std::string msg) {
+    if (level != LogLevel::Info) {
+        std::optional<std::string> cooldownResult = checkCooldownState(msg);
+        if (cooldownResult.has_value()) {
+            msg = cooldownResult.value();
+        } else {
+            return;
         }
     }
 
@@ -126,7 +134,11 @@ void ZEN::Log::logToFile(const ZEN::LogFileEntry &logFileEntry) {
     std::string str;
 
     if (logFileEntry.records.empty()) {
-        str += std::format("[{}] {}\n\n", getTimeStamp("%H:%M:%I"), logFileEntry.message);
+        std::optional<std::string> cooldownResult = checkCooldownState(logFileEntry.message);
+        if (!cooldownResult.has_value()) {
+            return;
+        }
+        str += std::format("[{}] {}\n\n", getTimeStamp("%H:%M:%I"), cooldownResult.value());
     } else {
         str += std::format("[{}]\n", logFileEntry.message);
         for (const auto &item: logFileEntry.records) {

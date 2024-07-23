@@ -18,10 +18,12 @@ void ZEN::Game::run() {
     Timer fpsTimer;
     fpsTimer.start();
 
-    while (true) {
+    while (keepOpen) {
         m_timer.reset();
 
         m_renderer->clear();
+
+        loop(m_delta);
 
         m_renderer->render();
 
@@ -58,4 +60,8 @@ ZEN::TimeMeasurement ZEN::Game::getRealRenderTime() const noexcept {
 
 ZEN::dt_float ZEN::Game::getDeltaTime() const noexcept {
     return m_delta;
+}
+
+void ZEN::Game::requestExit() noexcept {
+    keepOpen = false;
 }

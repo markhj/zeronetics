@@ -187,6 +187,8 @@ namespace ZEN {
         static void logToFileIfCategory(LogCategory category,
                                         const LogFileEntry &logFileEntry);
 
+
+
         static std::optional<File> logFile;
     };
 }

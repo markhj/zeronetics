@@ -1,5 +1,8 @@
 var NAVTREEINDEX2 =
 {
+"namespacemembers_eval.html":[6,1,3],
+"namespacemembers_type.html":[6,1,1],
+"namespaces.html":[6,0],
 "observers.html":[2,10],
 "observers.html#autotoc_md37":[0],
 "observers.html#autotoc_md38":[1],
@@ -147,8 +150,5 @@ var NAVTREEINDEX2 =
 "tutorials.html#autotoc_md35":[3],
 "tutorials.html#autotoc_md36":[4],
 "vertices.html":[2,4,2],
-"vertices.html#autotoc_md70":[6],
-"":[6,0,0,12],
-"":[6,0,0,13],
-"":[6,0,0,11]
+"vertices.html#autotoc_md70":[6]
 };

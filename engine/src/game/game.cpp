@@ -37,7 +37,7 @@ void ZEN::Game::run() {
         // frame rate adjustment), such that we can calculate the
         // delta time value.
         managedRenderTime = m_timer.getTime().result();
-        m_delta = 1.0f / managedRenderTime.microsecs;
+        m_delta = managedRenderTime.toSeconds();
 
         // Report FPS every second
         if (fpsTimer.getTime().result().toSeconds() > 1.0) {

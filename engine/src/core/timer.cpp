@@ -11,11 +11,10 @@ ZEN::Result<ZEN::TimeMeasurement> ZEN::Timer::getTime() {
         };
     }
 
-    return ZEN::TimeMeasurement{
-            std::chrono::duration_cast<std::chrono::microseconds>(
-                    std::chrono::high_resolution_clock::now() - m_startTime.value())
-                    .count()
-    };
+    auto elapsed = std::chrono::high_resolution_clock::now() - m_startTime.value();
+    auto microsecs = std::chrono::duration_cast<std::chrono::microseconds>(elapsed).count();
+
+    return Result<TimeMeasurement>{TimeMeasurement{microsecs}};
 }
 
 void ZEN::Timer::reset() {
@@ -27,5 +26,5 @@ void ZEN::Timer::end() {
 }
 
 float ZEN::TimeMeasurement::toSeconds() const noexcept {
-    return microsecs / 1000000;
+    return static_cast<float>(microsecs) / 1000000.0f;
 }

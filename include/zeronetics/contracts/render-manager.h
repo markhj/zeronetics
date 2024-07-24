@@ -32,6 +32,11 @@ namespace ZEN {
      */
     struct IRenderGroup3D {
         /**
+         * Draw primitive type
+         */
+        DrawPrimitive drawPrimitive = DrawPrimitive::Triangles;
+
+        /**
          * Shader with which the renderables of the group must be rendered.
          */
         std::shared_ptr<IShader> shader;

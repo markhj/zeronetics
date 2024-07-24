@@ -50,6 +50,20 @@ namespace {
             vertices.emplace_back(defaultColors[defaultColorPos].b);
         }
     }
+
+    GLenum getPrimitive(ZEN::DrawPrimitive drawPrimitive) {
+        switch (drawPrimitive) {
+            case ZEN::DrawPrimitive::Points:
+                return GL_POINTS;
+            case ZEN::DrawPrimitive::Lines:
+                return GL_LINES;
+            case ZEN::DrawPrimitive::Triangles:
+                return GL_TRIANGLES;
+            default:
+                ZEN_LIB_ERROR("Missing case in drawPrimitive.");
+                return GL_TRIANGLES;
+        }
+    }
 }
 
 void ZEN::OpenGL::Renderer::render() {
@@ -92,7 +106,7 @@ void ZEN::OpenGL::Renderer::render() {
                 }
                 gpu_alloc_int first = alloc->index / assumedVertexSize;
                 gpu_alloc_int count = alloc->size / assumedVertexSize;
-                glDrawArrays(GL_TRIANGLES, first, count);
+                glDrawArrays(getPrimitive(group->drawPrimitive), first, count);
             }
         });
     }

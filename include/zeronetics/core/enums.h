@@ -207,4 +207,13 @@ namespace ZEN {
         Paused,
         Killed,
     };
+
+    /**
+     * Draw primitive type (combination of vertices)
+     */
+    enum class DrawPrimitive {
+        Points,
+        Lines,
+        Triangles,
+    };
 }

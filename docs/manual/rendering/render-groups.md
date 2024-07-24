@@ -47,4 +47,21 @@ And last, the group must be added to your render manager.
 renderManager->renderGroups3d.push_back(myGroup);
 ````
 
+## 🔵 Primitive types
 
+You can decide whether a group should be rendered as points, lines
+or triangles.
+
+````cpp
+myGroup->drawPrimitive = DrawPrimitive::Lines;
+````
+
+The value can be set as an option from ZEN::DrawPrimitive.
+
+Most common options are:
+
+| Option                        |
+|-------------------------------|
+| ZEN::DrawPrimitive::Points    |
+| ZEN::DrawPrimitive::Lines     |
+| ZEN::DrawPrimitive::Triangles |

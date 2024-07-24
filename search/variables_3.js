@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['errorcode_463',['errorCode',['../structZEN_1_1ResultError.html#a652fb8e319d0b2d91b795c90a6837741',1,'ZEN::ResultError']]],
-  ['errormessage_464',['errorMessage',['../structZEN_1_1ResultError.html#a65625010e05a09c94e8d382336927db0',1,'ZEN::ResultError']]]
+  ['drawprimitive_465',['drawPrimitive',['../structZEN_1_1IRenderGroup3D.html#ae1bf9d07d1220cc6655566fe8f9eee10',1,'ZEN::IRenderGroup3D']]]
 ];

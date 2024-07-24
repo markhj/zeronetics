@@ -14,8 +14,8 @@ var rendering =
         [ "📐 Aspect ratio", "camera-3d.html#autotoc_md47", null ],
         [ "👀 Field of view", "camera-3d.html#autotoc_md48", null ],
         [ "✂️ Clipping plane", "camera-3d.html#autotoc_md49", null ],
-        [ "🎨 What is a render manager?", "render-manager.html#autotoc_md87", null ],
-        [ "🎥 The \"scene\"", "render-manager.html#autotoc_md88", null ]
+        [ "🎨 What is a render manager?", "render-manager.html#autotoc_md88", null ],
+        [ "🎥 The \"scene\"", "render-manager.html#autotoc_md89", null ]
       ] ]
     ] ],
     [ "Render groups", "render-groups.html", null ]

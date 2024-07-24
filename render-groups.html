@@ -106,7 +106,23 @@ $(document).ready(function(){initNavTree('render-groups.html',''); initResizable
 </div><!-- fragment --><dl class="section warning"><dt>Warning</dt><dd>If you don't connect a shader, the group will be skipped during rendering.</dd></dl>
 <p>And last, the group must be added to your render manager.</p>
 <div class="fragment"><div class="line">renderManager-&gt;renderGroups3d.push_back(myGroup);</div>
-</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md87"></a>
+🔵 Primitive types</h2>
+<p>You can decide whether a group should be rendered as points, lines or triangles.</p>
+<div class="fragment"><div class="line">myGroup-&gt;drawPrimitive = DrawPrimitive::Lines;</div>
+</div><!-- fragment --><p>The value can be set as an option from <a class="el" href="namespaceZEN.html#a5e3ff6a32fb59dbae12505b9fe9b2591">ZEN::DrawPrimitive</a>.</p>
+<p>Most common options are:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Option    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">ZEN::DrawPrimitive::Points    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">ZEN::DrawPrimitive::Lines    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">ZEN::DrawPrimitive::Triangles   </td></tr>
+</table>
+</div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- start footer part -->

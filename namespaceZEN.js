@@ -1,36 +1,36 @@
 var namespaceZEN =
 [
-    [ "Macros", "build-info.html#autotoc_md95", null ],
-    [ "Example", "build-info.html#autotoc_md96", null ],
-    [ "Note", "build-info.html#autotoc_md97", [
-      [ "🆗 Keyboard", "control-systems-mapping.html#autotoc_md125", [
-        [ "Key pressed and released", "control-systems-mapping.html#autotoc_md126", null ],
-        [ "Key down", "control-systems-mapping.html#autotoc_md127", null ]
+    [ "Macros", "build-info.html#autotoc_md96", null ],
+    [ "Example", "build-info.html#autotoc_md97", null ],
+    [ "Note", "build-info.html#autotoc_md98", [
+      [ "🆗 Keyboard", "control-systems-mapping.html#autotoc_md126", [
+        [ "Key pressed and released", "control-systems-mapping.html#autotoc_md127", null ],
+        [ "Key down", "control-systems-mapping.html#autotoc_md128", null ]
       ] ],
-      [ "🐀 Mouse", "control-systems-mapping.html#autotoc_md128", [
-        [ "Mouse button clicked and released", "control-systems-mapping.html#autotoc_md129", null ],
-        [ "Mouse button down", "control-systems-mapping.html#autotoc_md130", null ]
+      [ "🐀 Mouse", "control-systems-mapping.html#autotoc_md129", [
+        [ "Mouse button clicked and released", "control-systems-mapping.html#autotoc_md130", null ],
+        [ "Mouse button down", "control-systems-mapping.html#autotoc_md131", null ]
       ] ],
-      [ "An example", "opengl-bindable.html#autotoc_md131", null ],
-      [ "Functions", "opengl-bindable.html#autotoc_md132", [
-        [ "Short-hand for binding", "opengl-bindable.html#autotoc_md133", null ],
-        [ "With", "opengl-bindable.html#autotoc_md134", null ]
+      [ "An example", "opengl-bindable.html#autotoc_md132", null ],
+      [ "Functions", "opengl-bindable.html#autotoc_md133", [
+        [ "Short-hand for binding", "opengl-bindable.html#autotoc_md134", null ],
+        [ "With", "opengl-bindable.html#autotoc_md135", null ]
       ] ],
-      [ "CMake file", "create-modules.html#autotoc_md102", null ],
-      [ "Public headers", "create-modules.html#autotoc_md103", null ],
-      [ "Integrate in build process", "create-modules.html#autotoc_md104", null ]
+      [ "CMake file", "create-modules.html#autotoc_md103", null ],
+      [ "Public headers", "create-modules.html#autotoc_md104", null ],
+      [ "Integrate in build process", "create-modules.html#autotoc_md105", null ]
     ] ],
-    [ "Namespace", "create-modules.html#autotoc_md105", null ],
-    [ "Tests", "create-modules.html#autotoc_md106", null ],
-    [ "How to make callbacks \"a la Zeronetics\"", "callbacks.html#autotoc_md98", null ],
-    [ "Examination of choices", "callbacks.html#autotoc_md99", [
-      [ "Using <tt>std::optional</tt>", "callbacks.html#autotoc_md100", null ],
-      [ "Smart pointers", "callbacks.html#autotoc_md101", null ]
+    [ "Namespace", "create-modules.html#autotoc_md106", null ],
+    [ "Tests", "create-modules.html#autotoc_md107", null ],
+    [ "How to make callbacks \"a la Zeronetics\"", "callbacks.html#autotoc_md99", null ],
+    [ "Examination of choices", "callbacks.html#autotoc_md100", [
+      [ "Using <tt>std::optional</tt>", "callbacks.html#autotoc_md101", null ],
+      [ "Smart pointers", "callbacks.html#autotoc_md102", null ]
     ] ],
-    [ "🔀 Management of allocation", "arch-render-manager.html#autotoc_md92", null ],
-    [ "📘 Primary testing suite", "tests.html#autotoc_md118", null ],
-    [ "📚 Organization", "tests.html#autotoc_md119", null ],
-    [ "📦 Payloads", "tests.html#autotoc_md120", null ],
+    [ "🔀 Management of allocation", "arch-render-manager.html#autotoc_md93", null ],
+    [ "📘 Primary testing suite", "tests.html#autotoc_md119", null ],
+    [ "📚 Organization", "tests.html#autotoc_md120", null ],
+    [ "📦 Payloads", "tests.html#autotoc_md121", null ],
     [ "ControlSystems", null, [
       [ "InputMapping", "classZEN_1_1ControlSystems_1_1InputMapping.html", "classZEN_1_1ControlSystems_1_1InputMapping" ],
       [ "SignalHandler", "classZEN_1_1ControlSystems_1_1SignalHandler.html", "classZEN_1_1ControlSystems_1_1SignalHandler" ],
@@ -132,6 +132,11 @@ var namespaceZEN =
       [ "MSAA2X", "namespaceZEN.html#a94472cd2dbf45750e85daff75fc8232da8de30e6b7f9a6cabc95bd5fdc3c45cf8", null ],
       [ "MSAA4X", "namespaceZEN.html#a94472cd2dbf45750e85daff75fc8232daf7e4b021eaa6b2491718b9f7cc471d13", null ],
       [ "MSAA8X", "namespaceZEN.html#a94472cd2dbf45750e85daff75fc8232da508eb90ad8473b8f7a4ed052a12ed74e", null ]
+    ] ],
+    [ "DrawPrimitive", "namespaceZEN.html#a5e3ff6a32fb59dbae12505b9fe9b2591", [
+      [ "Points", "namespaceZEN.html#a5e3ff6a32fb59dbae12505b9fe9b2591a75dd5f1160a3f02b6fae89c54361a1b3", null ],
+      [ "Lines", "namespaceZEN.html#a5e3ff6a32fb59dbae12505b9fe9b2591aa0b0293a2db49f5f93c15a62e095c819", null ],
+      [ "Triangles", "namespaceZEN.html#a5e3ff6a32fb59dbae12505b9fe9b2591a7ca66fdfaad3eb33fc65d7490178f856", null ]
     ] ],
     [ "Key", "namespaceZEN.html#a68b344c77c113e5bffc15e7c46c125c5", [
       [ "A", "namespaceZEN.html#a68b344c77c113e5bffc15e7c46c125c5a7fc56270e7a70fa81a5935b72eacbe29", null ],

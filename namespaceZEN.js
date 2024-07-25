@@ -110,6 +110,7 @@ var namespaceZEN =
     [ "Entity", "classZEN_1_1Entity.html", null ],
     [ "Entity3D", "classZEN_1_1Entity3D.html", null ],
     [ "Game", "classZEN_1_1Game.html", "classZEN_1_1Game" ],
+    [ "Strings", "classZEN_1_1Strings.html", null ],
     [ "LogFileEntry", "structZEN_1_1LogFileEntry.html", "structZEN_1_1LogFileEntry" ],
     [ "LogBehavior", "structZEN_1_1LogBehavior.html", "structZEN_1_1LogBehavior" ],
     [ "Log", "classZEN_1_1Log.html", null ],
@@ -284,7 +285,5 @@ var namespaceZEN =
       [ "Tangent3D", "namespaceZEN.html#a3ff69a9dc86c8ce199f458ed659dbe95a37f496488f33af6369ca0f222a3dd531", null ],
       [ "BiTangent3D", "namespaceZEN.html#a3ff69a9dc86c8ce199f458ed659dbe95a32124a1c731ec83c76ef579165109c7a", null ],
       [ "TextureUV", "namespaceZEN.html#a3ff69a9dc86c8ce199f458ed659dbe95aa56ce4eca00a84fe12ab4761ff770a40", null ]
-    ] ],
-    [ "toLowerCase", "namespaceZEN.html#a13a6c243f1781292a3ff9431d40be7fd", null ],
-    [ "toUpperCase", "namespaceZEN.html#abe24d8166be8bb697b8feb45a824585a", null ]
+    ] ]
 ];

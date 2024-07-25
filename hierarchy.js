@@ -99,6 +99,7 @@ var hierarchy =
     [ "ZEN::Settings", "structZEN_1_1Settings.html", null ],
     [ "ZEN::ShaderBlueprint", "structZEN_1_1ShaderBlueprint.html", null ],
     [ "ZEN::ControlSystems::SignalHandler", "classZEN_1_1ControlSystems_1_1SignalHandler.html", null ],
+    [ "ZEN::Strings", "classZEN_1_1Strings.html", null ],
     [ "ZEN::SystemInfo", "classZEN_1_1SystemInfo.html", null ],
     [ "ZEN::SystemInfoSheet", "structZEN_1_1SystemInfoSheet.html", null ],
     [ "BBUnit::TestCase", null, [

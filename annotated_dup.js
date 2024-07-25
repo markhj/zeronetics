@@ -76,6 +76,7 @@ var annotated_dup =
       [ "Entity", "classZEN_1_1Entity.html", null ],
       [ "Entity3D", "classZEN_1_1Entity3D.html", null ],
       [ "Game", "classZEN_1_1Game.html", "classZEN_1_1Game" ],
+      [ "Strings", "classZEN_1_1Strings.html", null ],
       [ "LogFileEntry", "structZEN_1_1LogFileEntry.html", "structZEN_1_1LogFileEntry" ],
       [ "LogBehavior", "structZEN_1_1LogBehavior.html", "structZEN_1_1LogBehavior" ],
       [ "Log", "classZEN_1_1Log.html", null ],

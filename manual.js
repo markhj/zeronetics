@@ -1,5 +1,6 @@
 var manual =
 [
+    [ "Helper functions", "helpers.html", null ],
     [ "The Game class", "game-class.html", "game-class" ],
     [ "Timer", "timer.html", null ],
     [ "Settings", "settings.html", null ],

@@ -33,7 +33,10 @@ var game_class =
       [ "📌 See also", "custom-shape-vertices.html#autotoc_md13", null ],
       [ "🔷 Example", "custom-shape-class.html#autotoc_md10", null ],
       [ "📋 Notes", "custom-shape-class.html#autotoc_md11", null ],
-      [ "📌 See also", "custom-shape-class.html#autotoc_md12", [
+      [ "📌 See also", "custom-shape-class.html#autotoc_md12", null ],
+      [ "🔠 Strings", "helpers.html#autotoc_md71", [
+        [ "Include", "helpers.html#autotoc_md72", null ],
+        [ "To lower and upper-case", "helpers.html#autotoc_md73", null ],
         [ "🔁 How it works", "game-loop.html#autotoc_md58", null ],
         [ "See also", "game-loop.html#autotoc_md59", null ]
       ] ]

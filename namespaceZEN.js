@@ -1,36 +1,36 @@
 var namespaceZEN =
 [
-    [ "Macros", "build-info.html#autotoc_md96", null ],
-    [ "Example", "build-info.html#autotoc_md97", null ],
-    [ "Note", "build-info.html#autotoc_md98", [
-      [ "🆗 Keyboard", "control-systems-mapping.html#autotoc_md126", [
-        [ "Key pressed and released", "control-systems-mapping.html#autotoc_md127", null ],
-        [ "Key down", "control-systems-mapping.html#autotoc_md128", null ]
+    [ "Macros", "build-info.html#autotoc_md99", null ],
+    [ "Example", "build-info.html#autotoc_md100", null ],
+    [ "Note", "build-info.html#autotoc_md101", [
+      [ "🆗 Keyboard", "control-systems-mapping.html#autotoc_md130", [
+        [ "Key pressed and released", "control-systems-mapping.html#autotoc_md131", null ],
+        [ "Key down", "control-systems-mapping.html#autotoc_md132", null ]
       ] ],
-      [ "🐀 Mouse", "control-systems-mapping.html#autotoc_md129", [
-        [ "Mouse button clicked and released", "control-systems-mapping.html#autotoc_md130", null ],
-        [ "Mouse button down", "control-systems-mapping.html#autotoc_md131", null ]
+      [ "🐀 Mouse", "control-systems-mapping.html#autotoc_md133", [
+        [ "Mouse button clicked and released", "control-systems-mapping.html#autotoc_md134", null ],
+        [ "Mouse button down", "control-systems-mapping.html#autotoc_md135", null ]
       ] ],
-      [ "An example", "opengl-bindable.html#autotoc_md132", null ],
-      [ "Functions", "opengl-bindable.html#autotoc_md133", [
-        [ "Short-hand for binding", "opengl-bindable.html#autotoc_md134", null ],
-        [ "With", "opengl-bindable.html#autotoc_md135", null ]
+      [ "An example", "opengl-bindable.html#autotoc_md136", null ],
+      [ "Functions", "opengl-bindable.html#autotoc_md137", [
+        [ "Short-hand for binding", "opengl-bindable.html#autotoc_md138", null ],
+        [ "With", "opengl-bindable.html#autotoc_md139", null ]
       ] ],
-      [ "CMake file", "create-modules.html#autotoc_md103", null ],
-      [ "Public headers", "create-modules.html#autotoc_md104", null ],
-      [ "Integrate in build process", "create-modules.html#autotoc_md105", null ]
+      [ "CMake file", "create-modules.html#autotoc_md106", null ],
+      [ "Public headers", "create-modules.html#autotoc_md107", null ],
+      [ "Integrate in build process", "create-modules.html#autotoc_md108", null ]
     ] ],
-    [ "Namespace", "create-modules.html#autotoc_md106", null ],
-    [ "Tests", "create-modules.html#autotoc_md107", null ],
-    [ "How to make callbacks \"a la Zeronetics\"", "callbacks.html#autotoc_md99", null ],
-    [ "Examination of choices", "callbacks.html#autotoc_md100", [
-      [ "Using <tt>std::optional</tt>", "callbacks.html#autotoc_md101", null ],
-      [ "Smart pointers", "callbacks.html#autotoc_md102", null ]
+    [ "Namespace", "create-modules.html#autotoc_md109", null ],
+    [ "Tests", "create-modules.html#autotoc_md110", null ],
+    [ "How to make callbacks \"a la Zeronetics\"", "callbacks.html#autotoc_md102", null ],
+    [ "Examination of choices", "callbacks.html#autotoc_md103", [
+      [ "Using <tt>std::optional</tt>", "callbacks.html#autotoc_md104", null ],
+      [ "Smart pointers", "callbacks.html#autotoc_md105", null ]
     ] ],
-    [ "🔀 Management of allocation", "arch-render-manager.html#autotoc_md93", null ],
-    [ "📘 Primary testing suite", "tests.html#autotoc_md119", null ],
-    [ "📚 Organization", "tests.html#autotoc_md120", null ],
-    [ "📦 Payloads", "tests.html#autotoc_md121", null ],
+    [ "🔀 Management of allocation", "arch-render-manager.html#autotoc_md96", null ],
+    [ "📘 Primary testing suite", "tests.html#autotoc_md123", null ],
+    [ "📚 Organization", "tests.html#autotoc_md124", null ],
+    [ "📦 Payloads", "tests.html#autotoc_md125", null ],
     [ "ControlSystems", null, [
       [ "InputMapping", "classZEN_1_1ControlSystems_1_1InputMapping.html", "classZEN_1_1ControlSystems_1_1InputMapping" ],
       [ "SignalHandler", "classZEN_1_1ControlSystems_1_1SignalHandler.html", "classZEN_1_1ControlSystems_1_1SignalHandler" ],
@@ -284,5 +284,7 @@ var namespaceZEN =
       [ "Tangent3D", "namespaceZEN.html#a3ff69a9dc86c8ce199f458ed659dbe95a37f496488f33af6369ca0f222a3dd531", null ],
       [ "BiTangent3D", "namespaceZEN.html#a3ff69a9dc86c8ce199f458ed659dbe95a32124a1c731ec83c76ef579165109c7a", null ],
       [ "TextureUV", "namespaceZEN.html#a3ff69a9dc86c8ce199f458ed659dbe95aa56ce4eca00a84fe12ab4761ff770a40", null ]
-    ] ]
+    ] ],
+    [ "toLowerCase", "namespaceZEN.html#a13a6c243f1781292a3ff9431d40be7fd", null ],
+    [ "toUpperCase", "namespaceZEN.html#abe24d8166be8bb697b8feb45a824585a", null ]
 ];

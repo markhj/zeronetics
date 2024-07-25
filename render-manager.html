@@ -89,7 +89,7 @@ $(document).ready(function(){initNavTree('render-manager.html',''); initResizabl
 <div class="contents">
 <div class="textblock"><p>In Zeronetics, there's loose coupling between the renderer (e.g. <a class="el" href="opengl.html">OpenGL</a>) and the logic which manages objects.</p>
 <p>The gap between the two is filled with an implementation of <a class="el" href="structZEN_1_1IRenderManager.html">ZEN::IRenderManager</a>.</p>
-<h2><a class="anchor" id="autotoc_md88"></a>
+<h2><a class="anchor" id="autotoc_md91"></a>
 🎨 What is a render manager?</h2>
 <p>The purpose of the render manager is to <b>facilitate two-way communication</b> between the objects you want to render and the renderer.</p>
 <p>When an object moves 10 pixels to the left, the object will not itself directly communicate this change to the renderer. Instead, it will communicate to the render manager, which is then responsible for communicating with the renderer.</p>
@@ -98,7 +98,7 @@ $(document).ready(function(){initNavTree('render-manager.html',''); initResizabl
 <p><img src="https://res.cloudinary.com/drfztvfdh/image/upload/v1721036345/zeronetics/Render_manager_flow_z6tszr.png" alt="" class="inline"/></p>
 <p>The Render Manager itself has no actual authority, instead it's continually managed by the "scene" and the renderer.</p>
 <dl class="section note"><dt>Note</dt><dd>It's up to the renderer implementation to manage these requests. For more in-depth information on <em>why</em> this is, you can read <a class="el" href="arch-render-manager.html">Control flow of rendering</a>.</dd></dl>
-<h2><a class="anchor" id="autotoc_md89"></a>
+<h2><a class="anchor" id="autotoc_md92"></a>
 🎥 The "scene"</h2>
 <p>It's intentional that we haven't been super-specific about "what" is controlling the objects.</p>
 <p>This has to do with the loose coupling and design choices in Zeronetics, where we desire to make it possible to swap all the moving parts.</p>

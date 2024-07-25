@@ -4,5 +4,7 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="ZEN::TimeMeasurement",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structZEN_1_1TimeMeasurement.html",tooltip=" "];
+  Node70 [label="BBUnit::TestCase",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node70 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="ZEN::Tests::ControlSystemsTest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classZEN_1_1Tests_1_1ControlSystemsTest.html",tooltip=" "];
 }

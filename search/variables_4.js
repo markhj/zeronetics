@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['errorcode_466',['errorCode',['../structZEN_1_1ResultError.html#a652fb8e319d0b2d91b795c90a6837741',1,'ZEN::ResultError']]],
-  ['errormessage_467',['errorMessage',['../structZEN_1_1ResultError.html#a65625010e05a09c94e8d382336927db0',1,'ZEN::ResultError']]]
+  ['errorcode_468',['errorCode',['../structZEN_1_1ResultError.html#a652fb8e319d0b2d91b795c90a6837741',1,'ZEN::ResultError']]],
+  ['errormessage_469',['errorMessage',['../structZEN_1_1ResultError.html#a65625010e05a09c94e8d382336927db0',1,'ZEN::ResultError']]]
 ];

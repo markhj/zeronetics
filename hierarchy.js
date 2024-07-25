@@ -13,6 +13,7 @@ var hierarchy =
     ] ],
     [ "ZEN::File", "classZEN_1_1File.html", null ],
     [ "ZEN::GPUAllocation", "structZEN_1_1GPUAllocation.html", null ],
+    [ "ZEN::Gizmos::Grid3D", "classZEN_1_1Gizmos_1_1Grid3D.html", null ],
     [ "ZEN::HasUniqueId", "classZEN_1_1HasUniqueId.html", [
       [ "ZEN::Process", "classZEN_1_1Process.html", null ]
     ] ],

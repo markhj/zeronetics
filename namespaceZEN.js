@@ -36,6 +36,9 @@ var namespaceZEN =
       [ "SignalHandler", "classZEN_1_1ControlSystems_1_1SignalHandler.html", "classZEN_1_1ControlSystems_1_1SignalHandler" ],
       [ "ControlManager", "classZEN_1_1ControlSystems_1_1ControlManager.html", "classZEN_1_1ControlSystems_1_1ControlManager" ]
     ] ],
+    [ "Gizmos", null, [
+      [ "Grid3D", "classZEN_1_1Gizmos_1_1Grid3D.html", "classZEN_1_1Gizmos_1_1Grid3D" ]
+    ] ],
     [ "OpenGL", null, [
       [ "IBindable", "classZEN_1_1OpenGL_1_1IBindable.html", "classZEN_1_1OpenGL_1_1IBindable" ],
       [ "StdBinding", "classZEN_1_1OpenGL_1_1StdBinding.html", "classZEN_1_1OpenGL_1_1StdBinding" ],

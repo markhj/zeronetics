@@ -2,7 +2,8 @@
 set(ZEN_MODULES
         glfw-window
         opengl-renderer
-        control-systems)
+        control-systems
+        gizmos)
 
 # Define the vendor (third-party) libraries required on a per-module basis.
 # This ensures that dependency libraries are linked when consumed by client apps.

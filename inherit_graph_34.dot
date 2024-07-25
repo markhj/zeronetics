@@ -4,19 +4,7 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="ZEN::OpenGL::IBindable\< T \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classZEN_1_1OpenGL_1_1IBindable.html",tooltip=" "];
-  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node1 [label="ZEN::OpenGL::StdBinding\l\< gl_uint \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classZEN_1_1OpenGL_1_1StdBinding.html",tooltip=" "];
-  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="ZEN::OpenGL::Object",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classZEN_1_1OpenGL_1_1Object.html",tooltip=" "];
-  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="ZEN::OpenGL::VAO",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classZEN_1_1OpenGL_1_1VAO.html",tooltip=" "];
-  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4 [label="ZEN::OpenGL::VBO",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classZEN_1_1OpenGL_1_1VBO.html",tooltip=" "];
-  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node5 [label="ZEN::OpenGL::Shader",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classZEN_1_1OpenGL_1_1Shader.html",tooltip=" "];
-  Node0 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node6 [label="ZEN::OpenGL::StdBinding\< T \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classZEN_1_1OpenGL_1_1StdBinding.html",tooltip=" "];
-  Node35 [label="ZEN::IShader",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classZEN_1_1IShader.html",tooltip=" "];
-  Node35 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node60 [label="observer_meta",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node60 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="ZEN::ObserverMeta",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structZEN_1_1ObserverMeta.html",tooltip=" "];
 }

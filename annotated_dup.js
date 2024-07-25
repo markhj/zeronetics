@@ -19,7 +19,8 @@ var annotated_dup =
         [ "VBO", "classZEN_1_1OpenGL_1_1VBO.html", "classZEN_1_1OpenGL_1_1VBO" ]
       ] ],
       [ "Tests", null, [
-        [ "ControlSystemsTest", "classZEN_1_1Tests_1_1ControlSystemsTest.html", "classZEN_1_1Tests_1_1ControlSystemsTest" ]
+        [ "ControlSystemsTest", "classZEN_1_1Tests_1_1ControlSystemsTest.html", "classZEN_1_1Tests_1_1ControlSystemsTest" ],
+        [ "GLSLShaderBuilderTest", "classZEN_1_1Tests_1_1GLSLShaderBuilderTest.html", "classZEN_1_1Tests_1_1GLSLShaderBuilderTest" ]
       ] ],
       [ "ICamera3D", "classZEN_1_1ICamera3D.html", "classZEN_1_1ICamera3D" ],
       [ "IInputManager", "classZEN_1_1IInputManager.html", "classZEN_1_1IInputManager" ],
@@ -29,6 +30,7 @@ var annotated_dup =
       [ "IRenderable", "classZEN_1_1IRenderable.html", "classZEN_1_1IRenderable" ],
       [ "IRenderable3D", "classZEN_1_1IRenderable3D.html", "classZEN_1_1IRenderable3D" ],
       [ "IRenderer", "classZEN_1_1IRenderer.html", "classZEN_1_1IRenderer" ],
+      [ "IShaderBuilder", "classZEN_1_1IShaderBuilder.html", "classZEN_1_1IShaderBuilder" ],
       [ "IShader", "classZEN_1_1IShader.html", "classZEN_1_1IShader" ],
       [ "IShape", "classZEN_1_1IShape.html", "classZEN_1_1IShape" ],
       [ "IShape3D", "classZEN_1_1IShape3D.html", null ],
@@ -57,6 +59,7 @@ var annotated_dup =
       [ "Result", "classZEN_1_1Result.html", "classZEN_1_1Result" ],
       [ "ScreenResolution", "structZEN_1_1ScreenResolution.html", "structZEN_1_1ScreenResolution" ],
       [ "Settings", "structZEN_1_1Settings.html", "structZEN_1_1Settings" ],
+      [ "ShaderBlueprint", "structZEN_1_1ShaderBlueprint.html", "structZEN_1_1ShaderBlueprint" ],
       [ "Shape3D", "classZEN_1_1Shape3D.html", "classZEN_1_1Shape3D" ],
       [ "OS", "structZEN_1_1OS.html", "structZEN_1_1OS" ],
       [ "SystemInfoSheet", "structZEN_1_1SystemInfoSheet.html", "structZEN_1_1SystemInfoSheet" ],
@@ -66,6 +69,7 @@ var annotated_dup =
       [ "Timer", "classZEN_1_1Timer.html", "classZEN_1_1Timer" ],
       [ "Version", "structZEN_1_1Version.html", "structZEN_1_1Version" ],
       [ "Vertex3D", "structZEN_1_1Vertex3D.html", "structZEN_1_1Vertex3D" ],
+      [ "VertexAttrName", "classZEN_1_1VertexAttrName.html", null ],
       [ "VertexAttrSize", "classZEN_1_1VertexAttrSize.html", null ],
       [ "Camera3D", "classZEN_1_1Camera3D.html", "classZEN_1_1Camera3D" ],
       [ "Mesh3D", "classZEN_1_1Mesh3D.html", "classZEN_1_1Mesh3D" ],
@@ -82,6 +86,7 @@ var annotated_dup =
       [ "Cube", "classZEN_1_1Cube.html", "classZEN_1_1Cube" ],
       [ "HasUniqueId", "classZEN_1_1HasUniqueId.html", "classZEN_1_1HasUniqueId" ],
       [ "Processor", "classZEN_1_1Processor.html", "classZEN_1_1Processor" ],
-      [ "Window", "classZEN_1_1Window.html", "classZEN_1_1Window" ]
+      [ "Window", "classZEN_1_1Window.html", "classZEN_1_1Window" ],
+      [ "GLSLShaderBuilder", "classZEN_1_1GLSLShaderBuilder.html", "classZEN_1_1GLSLShaderBuilder" ]
     ] ]
 ];

@@ -52,6 +52,9 @@ var hierarchy =
     [ "ZEN::IShader", "classZEN_1_1IShader.html", [
       [ "ZEN::OpenGL::Shader", "classZEN_1_1OpenGL_1_1Shader.html", null ]
     ] ],
+    [ "ZEN::IShaderBuilder", "classZEN_1_1IShaderBuilder.html", [
+      [ "ZEN::GLSLShaderBuilder", "classZEN_1_1GLSLShaderBuilder.html", null ]
+    ] ],
     [ "ZEN::IShape< T >", "classZEN_1_1IShape.html", null ],
     [ "ZEN::IShape< Vertex3D >", "classZEN_1_1IShape.html", [
       [ "ZEN::IShape3D", "classZEN_1_1IShape3D.html", [
@@ -94,11 +97,13 @@ var hierarchy =
     [ "ZEN::ResultError", "structZEN_1_1ResultError.html", null ],
     [ "ZEN::ScreenResolution", "structZEN_1_1ScreenResolution.html", null ],
     [ "ZEN::Settings", "structZEN_1_1Settings.html", null ],
+    [ "ZEN::ShaderBlueprint", "structZEN_1_1ShaderBlueprint.html", null ],
     [ "ZEN::ControlSystems::SignalHandler", "classZEN_1_1ControlSystems_1_1SignalHandler.html", null ],
     [ "ZEN::SystemInfo", "classZEN_1_1SystemInfo.html", null ],
     [ "ZEN::SystemInfoSheet", "structZEN_1_1SystemInfoSheet.html", null ],
     [ "BBUnit::TestCase", null, [
-      [ "ZEN::Tests::ControlSystemsTest", "classZEN_1_1Tests_1_1ControlSystemsTest.html", null ]
+      [ "ZEN::Tests::ControlSystemsTest", "classZEN_1_1Tests_1_1ControlSystemsTest.html", null ],
+      [ "ZEN::Tests::GLSLShaderBuilderTest", "classZEN_1_1Tests_1_1GLSLShaderBuilderTest.html", null ]
     ] ],
     [ "ZEN::TimeMeasurement", "structZEN_1_1TimeMeasurement.html", null ],
     [ "ZEN::Timer", "classZEN_1_1Timer.html", null ],
@@ -113,5 +118,6 @@ var hierarchy =
     ] ],
     [ "ZEN::Version", "structZEN_1_1Version.html", null ],
     [ "ZEN::Vertex3D", "structZEN_1_1Vertex3D.html", null ],
+    [ "ZEN::VertexAttrName", "classZEN_1_1VertexAttrName.html", null ],
     [ "ZEN::VertexAttrSize", "classZEN_1_1VertexAttrSize.html", null ]
 ];

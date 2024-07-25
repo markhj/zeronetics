@@ -53,7 +53,8 @@ var namespaceZEN =
       [ "gl_uint", "opengl_8h.html#a32fc3170efffdd3e18329f464d582a0a", null ]
     ] ],
     [ "Tests", null, [
-      [ "ControlSystemsTest", "classZEN_1_1Tests_1_1ControlSystemsTest.html", "classZEN_1_1Tests_1_1ControlSystemsTest" ]
+      [ "ControlSystemsTest", "classZEN_1_1Tests_1_1ControlSystemsTest.html", "classZEN_1_1Tests_1_1ControlSystemsTest" ],
+      [ "GLSLShaderBuilderTest", "classZEN_1_1Tests_1_1GLSLShaderBuilderTest.html", "classZEN_1_1Tests_1_1GLSLShaderBuilderTest" ]
     ] ],
     [ "ICamera3D", "classZEN_1_1ICamera3D.html", "classZEN_1_1ICamera3D" ],
     [ "IInputManager", "classZEN_1_1IInputManager.html", "classZEN_1_1IInputManager" ],
@@ -63,6 +64,7 @@ var namespaceZEN =
     [ "IRenderable", "classZEN_1_1IRenderable.html", "classZEN_1_1IRenderable" ],
     [ "IRenderable3D", "classZEN_1_1IRenderable3D.html", "classZEN_1_1IRenderable3D" ],
     [ "IRenderer", "classZEN_1_1IRenderer.html", "classZEN_1_1IRenderer" ],
+    [ "IShaderBuilder", "classZEN_1_1IShaderBuilder.html", "classZEN_1_1IShaderBuilder" ],
     [ "IShader", "classZEN_1_1IShader.html", "classZEN_1_1IShader" ],
     [ "IShape", "classZEN_1_1IShape.html", "classZEN_1_1IShape" ],
     [ "IShape3D", "classZEN_1_1IShape3D.html", null ],
@@ -91,6 +93,7 @@ var namespaceZEN =
     [ "Result", "classZEN_1_1Result.html", "classZEN_1_1Result" ],
     [ "ScreenResolution", "structZEN_1_1ScreenResolution.html", "structZEN_1_1ScreenResolution" ],
     [ "Settings", "structZEN_1_1Settings.html", "structZEN_1_1Settings" ],
+    [ "ShaderBlueprint", "structZEN_1_1ShaderBlueprint.html", "structZEN_1_1ShaderBlueprint" ],
     [ "Shape3D", "classZEN_1_1Shape3D.html", "classZEN_1_1Shape3D" ],
     [ "OS", "structZEN_1_1OS.html", "structZEN_1_1OS" ],
     [ "SystemInfoSheet", "structZEN_1_1SystemInfoSheet.html", "structZEN_1_1SystemInfoSheet" ],
@@ -100,6 +103,7 @@ var namespaceZEN =
     [ "Timer", "classZEN_1_1Timer.html", "classZEN_1_1Timer" ],
     [ "Version", "structZEN_1_1Version.html", "structZEN_1_1Version" ],
     [ "Vertex3D", "structZEN_1_1Vertex3D.html", "structZEN_1_1Vertex3D" ],
+    [ "VertexAttrName", "classZEN_1_1VertexAttrName.html", null ],
     [ "VertexAttrSize", "classZEN_1_1VertexAttrSize.html", null ],
     [ "Camera3D", "classZEN_1_1Camera3D.html", "classZEN_1_1Camera3D" ],
     [ "Mesh3D", "classZEN_1_1Mesh3D.html", "classZEN_1_1Mesh3D" ],
@@ -117,6 +121,7 @@ var namespaceZEN =
     [ "HasUniqueId", "classZEN_1_1HasUniqueId.html", "classZEN_1_1HasUniqueId" ],
     [ "Processor", "classZEN_1_1Processor.html", "classZEN_1_1Processor" ],
     [ "Window", "classZEN_1_1Window.html", "classZEN_1_1Window" ],
+    [ "GLSLShaderBuilder", "classZEN_1_1GLSLShaderBuilder.html", "classZEN_1_1GLSLShaderBuilder" ],
     [ "dt_float", "namespaceZEN.html#a1896aa89c3b0bbcccbd1b16d57410502", null ],
     [ "fps_int", "namespaceZEN.html#a6e336ae4a649a81112a7105f7705954c", null ],
     [ "gpu_alloc_int", "namespaceZEN.html#add96e6cf45c9f06715b3fae49d078f35", null ],
@@ -252,6 +257,10 @@ var namespaceZEN =
       [ "Active", "namespaceZEN.html#acc6f343ed5175d8edbb395413b31378ea4d3d769b812b6faa6b76e1a8abaece2d", null ],
       [ "Paused", "namespaceZEN.html#acc6f343ed5175d8edbb395413b31378eae99180abf47a8b3a856e0bcb2656990a", null ],
       [ "Killed", "namespaceZEN.html#acc6f343ed5175d8edbb395413b31378eafa0f11c1d4a8554282671bca496fa8d4", null ]
+    ] ],
+    [ "Projection", "namespaceZEN.html#afe36e25feafd68478583d7d4d941cdd1", [
+      [ "Orthographic", "namespaceZEN.html#afe36e25feafd68478583d7d4d941cdd1a03424250432f2aa71de95579d2c0eaeb", null ],
+      [ "Perspective", "namespaceZEN.html#afe36e25feafd68478583d7d4d941cdd1aa80420eef88d11f77532f1b9cb467fa3", null ]
     ] ],
     [ "RenderManagerRequest", "namespaceZEN.html#a6b91990426cccd5daddb56813b87fba6", [
       [ "Allocate", "namespaceZEN.html#a6b91990426cccd5daddb56813b87fba6ac9baacf6cca6c54626e594639081177f", null ],

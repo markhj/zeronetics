@@ -216,4 +216,9 @@ namespace ZEN {
         Lines,
         Triangles,
     };
+
+    enum class Projection {
+        Orthographic,
+        Perspective,
+    };
 }

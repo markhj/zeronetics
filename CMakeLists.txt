@@ -39,9 +39,19 @@ add_subdirectory(editor)
 include(cmake/modules.cmake)
 foreach (ZEN_MODULE ${ZEN_MODULES})
     add_subdirectory(modules/${ZEN_MODULE})
-    set(MODULE_TEST_PATH modules/${ZEN_MODULE}/tests)
+
+    # If a "tests" directory exists, we will include its CMake file
+    # in the build process
+    set(MODULE_TEST_PATH ${ZEN_MODULES_DIR}/${ZEN_MODULE}/tests)
     if (EXISTS ${MODULE_TEST_PATH})
         add_subdirectory(${MODULE_TEST_PATH})
+
+        # Furthermore, if its test suite has payloads, we will copy
+        # those to the directory from which the test executable will run
+        set(MODULE_TEST_PAYLOAD_PATH ${ZEN_MODULES_DIR}/${ZEN_MODULE}/tests/payloads)
+        if (EXISTS ${MODULE_TEST_PAYLOAD_PATH})
+            file(COPY ${MODULE_TEST_PAYLOAD_PATH} DESTINATION ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
+        endif ()
     endif ()
 endforeach ()
 

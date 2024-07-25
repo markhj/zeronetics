@@ -2,6 +2,7 @@
 set(ZEN_MODULES
         glfw-window
         opengl-renderer
+        glsl-shader-builder
         control-systems
         gizmos)
 

@@ -21,19 +21,20 @@
 #include "core/gpu-alloc.h"
 #include "core/inputs.h"
 #include "core/io.h"
+#include "core/observer.h"
+#include "core/result.h"
 #include "core/settings.h"
+#include "core/shader-blueprint.h"
 #include "core/sysinfo.hpp"
 #include "core/version.h"
-#include "core/result.h"
-#include "core/observer.h"
 
 // Core: 3rd Level
 #include "core/aabb.h"
 #include "core/attributes.h"
 #include "core/shape.h"
 #include "core/tensors.h"
-#include "core/vertices.h"
 #include "core/timer.h"
+#include "core/vertices.h"
 
 // Contracts
 #include "contracts/cameras.h"
@@ -41,6 +42,7 @@
 #include "contracts/render-manager.h"
 #include "contracts/renderable.h"
 #include "contracts/renderer.h"
+#include "contracts/shader-builder.h"
 #include "contracts/shader.h"
 #include "contracts/shapes.h"
 #include "contracts/transforms.h"

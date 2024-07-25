@@ -5,6 +5,7 @@
 #include "enums.h"
 
 #include <optional>
+#include <string>
 
 namespace ZEN {
     /**
@@ -23,6 +24,18 @@ namespace ZEN {
          * Color (RGB)
          */
         std::optional<ColorRGB> color;
+    };
+
+    class VertexAttrName {
+    public:
+        /**
+         * Get the stringified name for an attribute.
+         * This is useful in a few scenarios including Shader Builder translations.
+         *
+         * @param attr
+         * @return
+         */
+        static std::string getAsString(VertexAttribute attr);
     };
 
     /**

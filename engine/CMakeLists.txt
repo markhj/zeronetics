@@ -21,6 +21,9 @@ set(CORE_SRC
         src/core/aabb.cpp
         src/core/vertices.cpp
 
+        # Helpers
+        src/helpers/strings.cpp
+
         # Traits
         src/traits/has-unique-id.cpp
         src/traits/processor.cpp

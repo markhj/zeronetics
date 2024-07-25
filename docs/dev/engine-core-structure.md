@@ -8,15 +8,16 @@ header inclusion and dependencies.
 The hierarchy consists of these layers, reading from top-to-bottom, where
 the top comprises the most basic and fundamental structures.
 
-| Level                          | Description                                                                  |
-|--------------------------------|------------------------------------------------------------------------------|
-| **Core**: Fundamentals         | Typedefs, macros, enumerators                                                |
-| **Core**: 2<sup>nd</sup> Level | Structs and classes with no dependencies outside own file                    |
-| **Core**: 3<sup>rd</sup> Level | Structs and classes (with dependencies _only_ from ``vendor``)               |
-| Contracts                      | Interfaces with _only_ pure virtual functions                                |
-| Traits                         | Supporting traits to implement re-usable functionality                       |
-| Adv. structures                | Classes with more complexity, such as ZEN::Game, as well as abstract classes |
-| Modules                        | Modules exist in isolation from each other, but can use the entire engine    |
+| Level                          | Description                                                                      |
+|--------------------------------|----------------------------------------------------------------------------------|
+| **Core**: Fundamentals         | Typedefs, macros, enumerators                                                    |
+| **Core**: 2<sup>nd</sup> Level | Structs and classes with no dependencies outside own file                        |
+| **Core**: 3<sup>rd</sup> Level | Structs and classes (with dependencies _only_ from ``vendor``)                   |
+| Contracts                      | Interfaces with _only_ pure virtual functions                                    |
+| Helpers                        | Functions in the global scope with common functionality, such as "to lower-case" |
+| Traits                         | Supporting traits to implement re-usable functionality                           |
+| Adv. structures                | Classes with more complexity, such as ZEN::Game, as well as abstract classes     |
+| Modules                        | Modules exist in isolation from each other, but can use the entire engine        |
 
 Each level can depend on items from prior levels. Meaning, ``contracts``
 can depend on any core level, but _not_ on advanced structures or modules.
@@ -93,6 +94,16 @@ from ``core`` and other contracts.
 
 Remember that: Contracts must only have pure virtual functions.
 For abstract classes, see the next chapter.
+
+## 💼 Helpers
+
+**Dependency from same layer**: Not allowed.  
+**Location:** ``include/helpers/``
+
+Functions in the global scope which have very common, useful
+functionality.
+
+They must be simple in nature.
 
 ## 💎 Traits
 

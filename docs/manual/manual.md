@@ -1,5 +1,6 @@
 @page manual Manual
 
+@subpage helpers  
 @subpage game-class  
 @subpage timer  
 @subpage settings  

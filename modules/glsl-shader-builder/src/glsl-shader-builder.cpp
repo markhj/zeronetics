@@ -2,15 +2,7 @@
 #include <format>
 
 #include "zeronetics/logging/logging.h"
-
-namespace {
-    std::string toLower(const std::string &input) {
-        std::string result = input;
-        std::transform(result.begin(), result.end(), result.begin(),
-                       [](unsigned char c) { return std::tolower(c); });
-        return result;
-    }
-}
+#include "zeronetics/helpers/strings.h"
 
 std::optional<std::string> ZEN::GLSLShaderBuilder::make(const ShaderBlueprint &blueprint,
                                                         ShaderStage shaderStage) noexcept(false) {
@@ -54,7 +46,7 @@ void ZEN::GLSLShaderBuilder::vertex(const ShaderBlueprint &blueprint) noexcept(f
     for (const VertexAttribute &attribute: blueprint.attributes) {
         add(std::format("out vec{} {};",
                         VertexAttrSize::getSize(attribute),
-                        toLower(VertexAttrName::getAsString(attribute))));
+                        toLowerCase(VertexAttrName::getAsString(attribute))));
     }
 
     // Uniform values
@@ -78,7 +70,7 @@ void ZEN::GLSLShaderBuilder::vertex(const ShaderBlueprint &blueprint) noexcept(f
     // Map the "out" declarations
     for (const VertexAttribute &attribute: blueprint.attributes) {
         std::string name = VertexAttrName::getAsString(attribute);
-        add(std::format("{} = a{};", toLower(name), name));
+        add(std::format("{} = a{};", toLowerCase(name), name));
     }
 
     dedent();
@@ -97,7 +89,7 @@ void ZEN::GLSLShaderBuilder::fragment(const ShaderBlueprint &blueprint) noexcept
     for (const VertexAttribute &attribute: blueprint.attributes) {
         add(std::format("in vec{} {};",
                         VertexAttrSize::getSize(attribute),
-                        toLower(VertexAttrName::getAsString(attribute))));
+                        toLowerCase(VertexAttrName::getAsString(attribute))));
     }
 
     std::optional<uint8_t> colorSize;

@@ -48,6 +48,9 @@
 #include "contracts/transforms.h"
 #include "contracts/window.h"
 
+// Helpers
+#include "helpers/strings.h"
+
 // Traits
 #include "traits/has-unique-id.h"
 

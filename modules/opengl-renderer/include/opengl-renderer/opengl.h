@@ -26,8 +26,19 @@ namespace ZEN::OpenGL {
 
         void clear() noexcept override;
 
+        void setRenderManager(const std::shared_ptr<IRenderManager> &renderManager) noexcept(false) override;
+
     private:
+        struct VaoVboPair {
+            VAO vao;
+            VBO vbo;
+        };
+
+        std::unordered_map<unique_id, VaoVboPair> layerVaoVbos;
+
         bool m_initialized = false;
+
+        std::shared_ptr<IRenderManager> m_renderManager;
 
         void handleReallocations();
 

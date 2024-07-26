@@ -6,14 +6,29 @@
 #include <memory>
 
 namespace ZEN {
+    /**
+     *
+     */
     struct RendererRequest : public IRendererRequest {};
 
+    /**
+     *
+     */
     struct RenderGroup3D : public IRenderGroup3D {
     };
 
-    struct RenderLayer : public IRenderLayer {
+    /**
+     *
+     */
+    class RenderLayer : public IRenderLayer,
+                        public HasUniqueId {
+    public:
+        [[nodiscard]] unique_id getLayerId() noexcept override;
     };
 
+    /**
+     *
+     */
     struct RenderManager : public IRenderManager {
         void resetAllocations() const noexcept override;
     };

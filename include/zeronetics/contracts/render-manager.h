@@ -43,7 +43,8 @@ namespace ZEN {
     };
 
 
-    struct IRenderLayer {
+    class IRenderLayer {
+    public:
         /**
          * Draw primitive type
          */
@@ -60,6 +61,8 @@ namespace ZEN {
          * @ref render-groups
          */
         std::vector<std::shared_ptr<IRenderGroup3D>> renderGroups3d;
+
+        [[nodiscard]] virtual unique_id getLayerId() noexcept = 0;
     };
 
     /**

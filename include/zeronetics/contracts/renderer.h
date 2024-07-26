@@ -8,7 +8,7 @@ namespace ZEN {
      */
     class IRenderer {
     public:
-        std::shared_ptr<IRenderManager> renderManager;
+        virtual void setRenderManager(const std::shared_ptr<IRenderManager> &renderManager) noexcept(false) = 0;
 
         virtual void initialize() = 0;
 

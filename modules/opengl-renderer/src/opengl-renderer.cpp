@@ -67,17 +67,17 @@ namespace {
 }
 
 void ZEN::OpenGL::Renderer::render() {
-    if (!renderManager) {
+    if (!m_renderManager) {
         ZEN_WARN("No render manager provided", ZEN::LogCategory::Rendering);
         return;
     }
 
-    while (!renderManager->requests.empty()) {
-        processRequest(renderManager->requests.begin()->get());
-        renderManager->requests.erase(renderManager->requests.begin());
+    while (!m_renderManager->requests.empty()) {
+        processRequest(m_renderManager->requests.begin()->get());
+        m_renderManager->requests.erase(m_renderManager->requests.begin());
     }
 
-    for (const auto &layer: renderManager->layers) {
+    for (const auto &layer: m_renderManager->layers) {
         if (!layer->camera3d) {
             ZEN_WARN("No camera on render manager", ZEN::LogCategory::Rendering);
             continue;
@@ -116,6 +116,15 @@ void ZEN::OpenGL::Renderer::render() {
     }
 }
 
+void ZEN::OpenGL::Renderer::setRenderManager(const std::shared_ptr<IRenderManager> &renderManager) noexcept(false) {
+    if (m_renderManager) {
+        ZEN_CRITICAL("Swapping render managers on-the-fly is not supported.");
+        return;
+    }
+
+    m_renderManager = renderManager;
+}
+
 void ZEN::OpenGL::Renderer::initialize() {
     // @todo: https://github.com/markhj/zeronetics/issues/6
     //      Fix this point of tight coupling to GLFW.
@@ -144,7 +153,7 @@ void ZEN::OpenGL::Renderer::clear() noexcept {
 }
 
 void ZEN::OpenGL::Renderer::handleReallocations() {
-    for (const auto &layer: renderManager->layers) {
+    for (const auto &layer: m_renderManager->layers) {
         for (const auto &group: layer->renderGroups3d) {
             for (auto &renderable3d: group->renderables3d) {
                 if (renderable3d.second->gpuAlloc.has_value()) {
@@ -158,7 +167,7 @@ void ZEN::OpenGL::Renderer::handleReallocations() {
                 if (!allocation.has_value()) {
                     ZEN_INFO("Resize required", ZEN::LogCategory::RendererInternals);
                     vbo->resize(vbo->getCurrentSize() * 2);
-                    renderManager->resetAllocations();
+                    m_renderManager->resetAllocations();
                     handleReallocations();
                     return;
                 }

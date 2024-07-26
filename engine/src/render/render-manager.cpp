@@ -1,5 +1,8 @@
 #include "zeronetics/render/render-manager.h"
 
+ZEN::unique_id ZEN::RenderLayer::getLayerId() noexcept {
+    return getUniqueId();
+}
 
 void ZEN::RenderManager::resetAllocations() const noexcept {
     for (const auto &layer: layers) {

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['errorcode_492',['errorCode',['../structZEN_1_1ResultError.html#a652fb8e319d0b2d91b795c90a6837741',1,'ZEN::ResultError']]],
-  ['errormessage_493',['errorMessage',['../structZEN_1_1ResultError.html#a65625010e05a09c94e8d382336927db0',1,'ZEN::ResultError']]]
+  ['fieldofview_500',['fieldOfView',['../classZEN_1_1Camera3D.html#acb1998f2b1d979a19fa51ed0a48e533e',1,'ZEN::Camera3D']]]
 ];

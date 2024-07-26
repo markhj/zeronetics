@@ -96,22 +96,85 @@ Inheritance diagram for ZEN::IRenderLayer:</div>
 <div class="dyncontent">
 <div class="center"><img src="classZEN_1_1IRenderLayer__inherit__graph.png" border="0" usemap="#aZEN_1_1IRenderLayer_inherit__map" alt="Inheritance graph"/></div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for ZEN::IRenderLayer:</div>
+<div class="dyncontent">
+<div class="center"><img src="classZEN_1_1IRenderLayer__coll__graph.png" border="0" usemap="#aZEN_1_1IRenderLayer_coll__map" alt="Collaboration graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad31028bc7b196a348e4859fdd9b67462"><td class="memItemLeft" align="right" valign="top"><a id="ad31028bc7b196a348e4859fdd9b67462"></a>
-virtual <a class="el" href="namespaceZEN.html#a7431526b224ff13f286c1f418f45fc8b">unique_id</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getLayerId</b> () noexcept=0</td></tr>
+<tr class="memitem:ad31028bc7b196a348e4859fdd9b67462"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespaceZEN.html#a7431526b224ff13f286c1f418f45fc8b">unique_id</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1IRenderLayer.html#ad31028bc7b196a348e4859fdd9b67462">getLayerId</a> () noexcept=0</td></tr>
 <tr class="separator:ad31028bc7b196a348e4859fdd9b67462"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a957225993f018ac6833e621ac87422a3"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; <a class="el" href="namespaceZEN.html#a3ff69a9dc86c8ce199f458ed659dbe95">VertexAttribute</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1IRenderLayer.html#a957225993f018ac6833e621ac87422a3">getAttributes</a> () const noexcept=0</td></tr>
+<tr class="separator:a957225993f018ac6833e621ac87422a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ab8f0a2753a38dbd64ca363339469bb93"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceZEN.html#a5e3ff6a32fb59dbae12505b9fe9b2591">DrawPrimitive</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1IRenderLayer.html#ab8f0a2753a38dbd64ca363339469bb93">drawPrimitive</a> = DrawPrimitive::Triangles</td></tr>
-<tr class="separator:ab8f0a2753a38dbd64ca363339469bb93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a087ded5f954d6b9e4ea2d4d3d48ff696"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structZEN_1_1RenderSettings.html">RenderSettings</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1IRenderLayer.html#a087ded5f954d6b9e4ea2d4d3d48ff696">settings</a></td></tr>
+<tr class="separator:a087ded5f954d6b9e4ea2d4d3d48ff696"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5a4f726e05746c26dd0778e78f7364b"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classZEN_1_1ICamera3D.html">ICamera3D</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1IRenderLayer.html#af5a4f726e05746c26dd0778e78f7364b">camera3d</a></td></tr>
 <tr class="separator:af5a4f726e05746c26dd0778e78f7364b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0225e5d3582f402aab0e2d63a940781e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="structZEN_1_1IRenderGroup3D.html">IRenderGroup3D</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1IRenderLayer.html#a0225e5d3582f402aab0e2d63a940781e">renderGroups3d</a></td></tr>
 <tr class="separator:a0225e5d3582f402aab0e2d63a940781e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a957225993f018ac6833e621ac87422a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a957225993f018ac6833e621ac87422a3">&#9670;&nbsp;</a></span>getAttributes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::vector&lt;<a class="el" href="namespaceZEN.html#a3ff69a9dc86c8ce199f458ed659dbe95">VertexAttribute</a>&gt; ZEN::IRenderLayer::getAttributes </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Retrieve list of attributes which make up each vertex. </p>
+
+<p>Implemented in <a class="el" href="classZEN_1_1RenderLayer.html#a7d278394a5fada3612f1c4144250f30f">ZEN::RenderLayer</a>.</p>
+
+</div>
+</div>
+<a id="ad31028bc7b196a348e4859fdd9b67462"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad31028bc7b196a348e4859fdd9b67462">&#9670;&nbsp;</a></span>getLayerId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="namespaceZEN.html#a7431526b224ff13f286c1f418f45fc8b">unique_id</a> ZEN::IRenderLayer::getLayerId </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Retrieve unique ID for this layer. </p>
+
+<p>Implemented in <a class="el" href="classZEN_1_1RenderLayer.html#a578db8d909598f01e61d6cd2a102ec31">ZEN::RenderLayer</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="af5a4f726e05746c26dd0778e78f7364b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af5a4f726e05746c26dd0778e78f7364b">&#9670;&nbsp;</a></span>camera3d</h2>
@@ -128,21 +191,6 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ab8f0a2753a38dbd64ca363339469bb93"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab8f0a2753a38dbd64ca363339469bb93">&#9670;&nbsp;</a></span>drawPrimitive</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespaceZEN.html#a5e3ff6a32fb59dbae12505b9fe9b2591">DrawPrimitive</a> ZEN::IRenderLayer::drawPrimitive = DrawPrimitive::Triangles</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Draw primitive type </p>
-
-</div>
-</div>
 <a id="a0225e5d3582f402aab0e2d63a940781e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0225e5d3582f402aab0e2d63a940781e">&#9670;&nbsp;</a></span>renderGroups3d</h2>
 
@@ -156,6 +204,21 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>List of relevant groups.</p>
 <p><a class="el" href="render-groups.html">Render groups</a> </p>
+
+</div>
+</div>
+<a id="a087ded5f954d6b9e4ea2d4d3d48ff696"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a087ded5f954d6b9e4ea2d4d3d48ff696">&#9670;&nbsp;</a></span>settings</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structZEN_1_1RenderSettings.html">RenderSettings</a> ZEN::IRenderLayer::settings</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Render settings, such as depth testing and primitive type (point, line, triangle, etc.) </p>
 
 </div>
 </div>

@@ -103,9 +103,13 @@ Collaboration diagram for ZEN::RenderLayer:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a578db8d909598f01e61d6cd2a102ec31"><td class="memItemLeft" align="right" valign="top"><a id="a578db8d909598f01e61d6cd2a102ec31"></a>
-<a class="el" href="namespaceZEN.html#a7431526b224ff13f286c1f418f45fc8b">unique_id</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getLayerId</b> () noexcept override</td></tr>
+<tr class="memitem:a8e7e3d1d7e4a40ff3548e9c102eb820d"><td class="memItemLeft" align="right" valign="top"><a id="a8e7e3d1d7e4a40ff3548e9c102eb820d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>RenderLayer</b> (const std::vector&lt; <a class="el" href="namespaceZEN.html#a3ff69a9dc86c8ce199f458ed659dbe95">VertexAttribute</a> &gt; &amp;attributes)</td></tr>
+<tr class="separator:a8e7e3d1d7e4a40ff3548e9c102eb820d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a578db8d909598f01e61d6cd2a102ec31"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceZEN.html#a7431526b224ff13f286c1f418f45fc8b">unique_id</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1RenderLayer.html#a578db8d909598f01e61d6cd2a102ec31">getLayerId</a> () noexcept override</td></tr>
 <tr class="separator:a578db8d909598f01e61d6cd2a102ec31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d278394a5fada3612f1c4144250f30f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespaceZEN.html#a3ff69a9dc86c8ce199f458ed659dbe95">VertexAttribute</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1RenderLayer.html#a7d278394a5fada3612f1c4144250f30f">getAttributes</a> () const noexcept override</td></tr>
+<tr class="separator:a7d278394a5fada3612f1c4144250f30f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classZEN_1_1HasUniqueId"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classZEN_1_1HasUniqueId')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classZEN_1_1HasUniqueId.html">ZEN::HasUniqueId</a></td></tr>
 <tr class="memitem:a2fc2014361822c13a261ad9a8876c36c inherit pub_methods_classZEN_1_1HasUniqueId"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceZEN.html#a7431526b224ff13f286c1f418f45fc8b">unique_id</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1HasUniqueId.html#a2fc2014361822c13a261ad9a8876c36c">getUniqueId</a> () noexcept</td></tr>
 <tr class="separator:a2fc2014361822c13a261ad9a8876c36c inherit pub_methods_classZEN_1_1HasUniqueId"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -113,13 +117,70 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_attribs_classZEN_1_1IRenderLayer"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classZEN_1_1IRenderLayer')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classZEN_1_1IRenderLayer.html">ZEN::IRenderLayer</a></td></tr>
-<tr class="memitem:ab8f0a2753a38dbd64ca363339469bb93 inherit pub_attribs_classZEN_1_1IRenderLayer"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceZEN.html#a5e3ff6a32fb59dbae12505b9fe9b2591">DrawPrimitive</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1IRenderLayer.html#ab8f0a2753a38dbd64ca363339469bb93">drawPrimitive</a> = DrawPrimitive::Triangles</td></tr>
-<tr class="separator:ab8f0a2753a38dbd64ca363339469bb93 inherit pub_attribs_classZEN_1_1IRenderLayer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a087ded5f954d6b9e4ea2d4d3d48ff696 inherit pub_attribs_classZEN_1_1IRenderLayer"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structZEN_1_1RenderSettings.html">RenderSettings</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1IRenderLayer.html#a087ded5f954d6b9e4ea2d4d3d48ff696">settings</a></td></tr>
+<tr class="separator:a087ded5f954d6b9e4ea2d4d3d48ff696 inherit pub_attribs_classZEN_1_1IRenderLayer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5a4f726e05746c26dd0778e78f7364b inherit pub_attribs_classZEN_1_1IRenderLayer"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classZEN_1_1ICamera3D.html">ICamera3D</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1IRenderLayer.html#af5a4f726e05746c26dd0778e78f7364b">camera3d</a></td></tr>
 <tr class="separator:af5a4f726e05746c26dd0778e78f7364b inherit pub_attribs_classZEN_1_1IRenderLayer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0225e5d3582f402aab0e2d63a940781e inherit pub_attribs_classZEN_1_1IRenderLayer"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="structZEN_1_1IRenderGroup3D.html">IRenderGroup3D</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1IRenderLayer.html#a0225e5d3582f402aab0e2d63a940781e">renderGroups3d</a></td></tr>
 <tr class="separator:a0225e5d3582f402aab0e2d63a940781e inherit pub_attribs_classZEN_1_1IRenderLayer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a7d278394a5fada3612f1c4144250f30f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d278394a5fada3612f1c4144250f30f">&#9670;&nbsp;</a></span>getAttributes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="namespaceZEN.html#a3ff69a9dc86c8ce199f458ed659dbe95">VertexAttribute</a>&gt; ZEN::RenderLayer::getAttributes </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Retrieve list of attributes which make up each vertex. </p>
+
+<p>Implements <a class="el" href="classZEN_1_1IRenderLayer.html#a957225993f018ac6833e621ac87422a3">ZEN::IRenderLayer</a>.</p>
+
+</div>
+</div>
+<a id="a578db8d909598f01e61d6cd2a102ec31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a578db8d909598f01e61d6cd2a102ec31">&#9670;&nbsp;</a></span>getLayerId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceZEN.html#a7431526b224ff13f286c1f418f45fc8b">unique_id</a> ZEN::RenderLayer::getLayerId </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Retrieve unique ID for this layer. </p>
+
+<p>Implements <a class="el" href="classZEN_1_1IRenderLayer.html#ad31028bc7b196a348e4859fdd9b67462">ZEN::IRenderLayer</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/zeronetics/render/<a class="el" href="render_2render-manager_8h_source.html">render-manager.h</a></li>
 </ul>

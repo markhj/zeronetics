@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['drawprimitive_491',['drawPrimitive',['../classZEN_1_1IRenderLayer.html#ab8f0a2753a38dbd64ca363339469bb93',1,'ZEN::IRenderLayer']]]
+  ['errorcode_498',['errorCode',['../structZEN_1_1ResultError.html#a652fb8e319d0b2d91b795c90a6837741',1,'ZEN::ResultError']]],
+  ['errormessage_499',['errorMessage',['../structZEN_1_1ResultError.html#a65625010e05a09c94e8d382336927db0',1,'ZEN::ResultError']]]
 ];

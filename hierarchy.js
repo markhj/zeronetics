@@ -98,6 +98,7 @@ var hierarchy =
     [ "ZEN::Processor", "classZEN_1_1Processor.html", [
       [ "ZEN::Game", "classZEN_1_1Game.html", null ]
     ] ],
+    [ "ZEN::RenderSettings", "structZEN_1_1RenderSettings.html", null ],
     [ "ZEN::ResultError", "structZEN_1_1ResultError.html", null ],
     [ "ZEN::ScreenResolution", "structZEN_1_1ScreenResolution.html", null ],
     [ "ZEN::Settings", "structZEN_1_1Settings.html", null ],
@@ -124,5 +125,6 @@ var hierarchy =
     [ "ZEN::Version", "structZEN_1_1Version.html", null ],
     [ "ZEN::Vertex3D", "structZEN_1_1Vertex3D.html", null ],
     [ "ZEN::VertexAttrName", "classZEN_1_1VertexAttrName.html", null ],
-    [ "ZEN::VertexAttrSize", "classZEN_1_1VertexAttrSize.html", null ]
+    [ "ZEN::VertexAttrSize", "classZEN_1_1VertexAttrSize.html", null ],
+    [ "ZEN::Vertices", "classZEN_1_1Vertices.html", null ]
 ];

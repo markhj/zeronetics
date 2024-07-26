@@ -85,6 +85,7 @@ $(document).ready(function(){initNavTree('classZEN_1_1Shape3D.html',''); initRes
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="classZEN_1_1Shape3D-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ZEN::Shape3D Class Reference</div>  </div>
@@ -110,11 +111,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aadedfd4d1168261058e908ddc007efc1"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structZEN_1_1Vertex3D.html">Vertex3D</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1Shape3D.html#aadedfd4d1168261058e908ddc007efc1">getVertices</a> () noexcept final</td></tr>
 <tr class="separator:aadedfd4d1168261058e908ddc007efc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pro_methods_classZEN_1_1IShape"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classZEN_1_1IShape')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classZEN_1_1IShape.html">ZEN::IShape&lt; Vertex3D &gt;</a></td></tr>
-<tr class="memitem:a21d868feb2eabc68a587f7fb59d7f9fc inherit pro_methods_classZEN_1_1IShape"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; <a class="el" href="structZEN_1_1Vertex3D.html">Vertex3D</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1IShape.html#a21d868feb2eabc68a587f7fb59d7f9fc">make</a> () const noexcept=0</td></tr>
-<tr class="separator:a21d868feb2eabc68a587f7fb59d7f9fc inherit pro_methods_classZEN_1_1IShape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a15ba82eb3b53a5b94a9ecea7512a8db3"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structZEN_1_1Vertex3D.html">Vertex3D</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1Shape3D.html#a15ba82eb3b53a5b94a9ecea7512a8db3">make</a> () const noexcept override</td></tr>
+<tr class="separator:a15ba82eb3b53a5b94a9ecea7512a8db3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>3D shape</p>
@@ -181,6 +181,37 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 <p>Implements <a class="el" href="classZEN_1_1IShape.html#a2edb580c0205a6a33449ef446aad4b2d">ZEN::IShape&lt; Vertex3D &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a15ba82eb3b53a5b94a9ecea7512a8db3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15ba82eb3b53a5b94a9ecea7512a8db3">&#9670;&nbsp;</a></span>make()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="structZEN_1_1Vertex3D.html">Vertex3D</a>&gt; ZEN::Shape3D::make </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Construct and return the shape vertices.</p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p>Implements <a class="el" href="classZEN_1_1IShape.html#a21d868feb2eabc68a587f7fb59d7f9fc">ZEN::IShape&lt; Vertex3D &gt;</a>.</p>
+
+<p>Reimplemented in <a class="el" href="classZEN_1_1Cube.html#a55245ac8e39d86c8ba06f24067cd7da5">ZEN::Cube</a>.</p>
 
 </div>
 </div>

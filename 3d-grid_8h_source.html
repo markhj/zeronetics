@@ -89,16 +89,37 @@ $(document).ready(function(){initNavTree('3d-grid_8h_source.html',''); initResiz
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;zeronetics/render/render-manager.h&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">namespace </span>ZEN::Gizmos {</div>
-<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="classZEN_1_1Gizmos_1_1Grid3D.html">    5</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classZEN_1_1Gizmos_1_1Grid3D.html">Grid3D</a> {</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;        <a class="code" href="structZEN_1_1RenderGroup3D.html">RenderGroup3D</a> generate();</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    };</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;}</div>
-<div class="ttc" id="aclassZEN_1_1Gizmos_1_1Grid3D_html"><div class="ttname"><a href="classZEN_1_1Gizmos_1_1Grid3D.html">ZEN::Gizmos::Grid3D</a></div><div class="ttdef"><b>Definition:</b> 3d-grid.h:5</div></div>
-<div class="ttc" id="astructZEN_1_1RenderGroup3D_html"><div class="ttname"><a href="structZEN_1_1RenderGroup3D.html">ZEN::RenderGroup3D</a></div><div class="ttdef"><b>Definition:</b> render-manager.h:17</div></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;zeronetics/core/shader-blueprint.h&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;zeronetics/render/render-manager.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span>ZEN::Gizmos {</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="classZEN_1_1Gizmos_1_1Grid3D.html">    7</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classZEN_1_1Gizmos_1_1Grid3D.html">Grid3D</a> {</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        [[nodiscard]] <a class="code" href="structZEN_1_1ShaderBlueprint.html">ShaderBlueprint</a> getShaderBlueprint() <span class="keyword">const</span> noexcept;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <a class="code" href="classZEN_1_1RenderLayer.html">RenderLayer</a> generate();</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        uint16_t lines = 10;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <a class="code" href="namespaceZEN.html#a5089f560467278c4efaed05ce45f57a7">gw_float</a> spacing = 1.0;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <a class="code" href="classZEN_1_1ColorRGB.html">ColorRGB</a> lineColor = <a class="code" href="classZEN_1_1ColorRGB.html">ColorRGB</a>(1.0, 1.0, 1.0),</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                 xAxisColor = <a class="code" href="classZEN_1_1ColorRGB.html">ColorRGB</a>(1.0, 0.0, 0.0),</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                 yAxisColor = <a class="code" href="classZEN_1_1ColorRGB.html">ColorRGB</a>(0.0, 1.0, 0.0),</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                 zAxisColor = <a class="code" href="classZEN_1_1ColorRGB.html">ColorRGB</a>(0.0, 0.0, 1.0);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        std::vector&lt;VertexAttribute&gt; m_attributes = {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                VertexAttribute::Position3D,</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                VertexAttribute::ColorRGB,</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        };</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    };</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
+<div class="ttc" id="aclassZEN_1_1ColorRGB_html"><div class="ttname"><a href="classZEN_1_1ColorRGB.html">ZEN::ColorRGB</a></div><div class="ttdef"><b>Definition:</b> attributes.h:6</div></div>
+<div class="ttc" id="aclassZEN_1_1Gizmos_1_1Grid3D_html"><div class="ttname"><a href="classZEN_1_1Gizmos_1_1Grid3D.html">ZEN::Gizmos::Grid3D</a></div><div class="ttdef"><b>Definition:</b> 3d-grid.h:7</div></div>
+<div class="ttc" id="aclassZEN_1_1RenderLayer_html"><div class="ttname"><a href="classZEN_1_1RenderLayer.html">ZEN::RenderLayer</a></div><div class="ttdef"><b>Definition:</b> render-manager.h:24</div></div>
+<div class="ttc" id="anamespaceZEN_html_a5089f560467278c4efaed05ce45f57a7"><div class="ttname"><a href="namespaceZEN.html#a5089f560467278c4efaed05ce45f57a7">ZEN::gw_float</a></div><div class="ttdeci">float gw_float</div><div class="ttdef"><b>Definition:</b> typedefs.h:16</div></div>
+<div class="ttc" id="astructZEN_1_1ShaderBlueprint_html"><div class="ttname"><a href="structZEN_1_1ShaderBlueprint.html">ZEN::ShaderBlueprint</a></div><div class="ttdef"><b>Definition:</b> shader-blueprint.h:11</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

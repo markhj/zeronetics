@@ -32,6 +32,9 @@ namespace ZEN {
          */
         [[nodiscard]] std::vector<Vertex3D> getVertices() noexcept final;
 
+    protected:
+        [[nodiscard]] std::vector<Vertex3D> make() const noexcept override;
+
     private:
         /**
          * Caching of vertices.

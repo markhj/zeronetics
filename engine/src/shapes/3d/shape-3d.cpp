@@ -12,3 +12,7 @@ std::vector<ZEN::Vertex3D> ZEN::Shape3D::getVertices() noexcept {
 
 ZEN::Shape3D::Shape3D(std::vector<Vertex3D> vertices) : m_generated(std::move(vertices)) {
 }
+
+std::vector<ZEN::Vertex3D> ZEN::Shape3D::make() const noexcept {
+    return m_generated;
+}

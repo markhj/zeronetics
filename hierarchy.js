@@ -46,6 +46,9 @@ var hierarchy =
     [ "ZEN::IRenderGroup3D", "structZEN_1_1IRenderGroup3D.html", [
       [ "ZEN::RenderGroup3D", "structZEN_1_1RenderGroup3D.html", null ]
     ] ],
+    [ "ZEN::IRenderLayer", "structZEN_1_1IRenderLayer.html", [
+      [ "ZEN::RenderLayer", "structZEN_1_1RenderLayer.html", null ]
+    ] ],
     [ "ZEN::IRenderManager", "structZEN_1_1IRenderManager.html", [
       [ "ZEN::RenderManager", "structZEN_1_1RenderManager.html", null ]
     ] ],

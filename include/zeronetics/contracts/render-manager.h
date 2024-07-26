@@ -32,11 +32,6 @@ namespace ZEN {
      */
     struct IRenderGroup3D {
         /**
-         * Draw primitive type
-         */
-        DrawPrimitive drawPrimitive = DrawPrimitive::Triangles;
-
-        /**
          * Shader with which the renderables of the group must be rendered.
          */
         std::shared_ptr<IShader> shader;
@@ -45,6 +40,26 @@ namespace ZEN {
          * Unordered list of renderables.
          */
         std::unordered_map<std::string, std::shared_ptr<IRenderable3D>> renderables3d;
+    };
+
+
+    struct IRenderLayer {
+        /**
+         * Draw primitive type
+         */
+        DrawPrimitive drawPrimitive = DrawPrimitive::Triangles;
+
+        /**
+         * The primary camera.
+         */
+        std::shared_ptr<ICamera3D> camera3d;
+
+        /**
+         * List of relevant groups.
+         *
+         * @ref render-groups
+         */
+        std::vector<std::shared_ptr<IRenderGroup3D>> renderGroups3d;
     };
 
     /**
@@ -62,21 +77,11 @@ namespace ZEN {
      */
     struct IRenderManager {
         /**
-         * The primary camera.
-         */
-        std::shared_ptr<ICamera3D> camera3d;
-
-        /**
-         * List of relevant groups.
-         *
-         * @ref render-groups
-         */
-        std::vector<std::shared_ptr<IRenderGroup3D>> renderGroups3d;
-
-        /**
          * List of requests.
          */
         std::vector<std::unique_ptr<IRendererRequest>> requests;
+
+        std::vector<std::shared_ptr<IRenderLayer>> layers;
 
         /**
          * Reset the allocation details contained within all renderables

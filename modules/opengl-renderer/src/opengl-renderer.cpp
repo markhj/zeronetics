@@ -70,45 +70,49 @@ void ZEN::OpenGL::Renderer::render() {
     if (!renderManager) {
         ZEN_WARN("No render manager provided", ZEN::LogCategory::Rendering);
         return;
-    } else if (!renderManager->camera3d) {
-        ZEN_WARN("No camera on render manager", ZEN::LogCategory::Rendering);
-        return;
     }
-
-    glEnable(GL_DEPTH_TEST);
 
     while (!renderManager->requests.empty()) {
         processRequest(renderManager->requests.begin()->get());
         renderManager->requests.erase(renderManager->requests.begin());
     }
 
-    MVP mvp = renderManager->camera3d->getModelViewProjection();
-
-    for (const auto &group: renderManager->renderGroups3d) {
-        if (!group->shader) {
-            ZEN_WARN("A render group is missing shader.", LogCategory::ShaderUse);
+    for (const auto &layer: renderManager->layers) {
+        if (!layer->camera3d) {
+            ZEN_WARN("No camera on render manager", ZEN::LogCategory::Rendering);
             continue;
         }
 
-        group->shader->set("model", mvp.model);
-        group->shader->set("view", mvp.view);
-        group->shader->set("projection", mvp.projection);
+        glEnable(GL_DEPTH_TEST);
 
-        group->shader->use();
+        MVP mvp = layer->camera3d->getModelViewProjection();
 
-        // @todo: https://github.com/markhj/zeronetics/issues/5
-        //      This part will eventually be optimized.
-        vao->with([&]() {
-            for (const auto &renderable: group->renderables3d) {
-                std::optional<GPUAllocation> alloc = renderable.second->gpuAlloc;
-                if (!alloc.has_value()) {
-                    continue;
-                }
-                gpu_alloc_int first = alloc->index / assumedVertexSize;
-                gpu_alloc_int count = alloc->size / assumedVertexSize;
-                glDrawArrays(getPrimitive(group->drawPrimitive), first, count);
+        for (const auto &group: layer->renderGroups3d) {
+            if (!group->shader) {
+                ZEN_WARN("A render group is missing shader.", LogCategory::ShaderUse);
+                continue;
             }
-        });
+
+            group->shader->set("model", mvp.model);
+            group->shader->set("view", mvp.view);
+            group->shader->set("projection", mvp.projection);
+
+            group->shader->use();
+
+            // @todo: https://github.com/markhj/zeronetics/issues/5
+            //      This part will eventually be optimized.
+            vao->with([&]() {
+                for (const auto &renderable: group->renderables3d) {
+                    std::optional<GPUAllocation> alloc = renderable.second->gpuAlloc;
+                    if (!alloc.has_value()) {
+                        continue;
+                    }
+                    gpu_alloc_int first = alloc->index / assumedVertexSize;
+                    gpu_alloc_int count = alloc->size / assumedVertexSize;
+                    glDrawArrays(getPrimitive(layer->drawPrimitive), first, count);
+                }
+            });
+        }
     }
 }
 
@@ -140,27 +144,29 @@ void ZEN::OpenGL::Renderer::clear() noexcept {
 }
 
 void ZEN::OpenGL::Renderer::handleReallocations() {
-    for (const auto &group: renderManager->renderGroups3d) {
-        for (auto &renderable3d: group->renderables3d) {
-            if (renderable3d.second->gpuAlloc.has_value()) {
-                continue;
+    for (const auto &layer: renderManager->layers) {
+        for (const auto &group: layer->renderGroups3d) {
+            for (auto &renderable3d: group->renderables3d) {
+                if (renderable3d.second->gpuAlloc.has_value()) {
+                    continue;
+                }
+                std::vector<GLfloat> vertices;
+                for (const Vertex3D &v: renderable3d.second->getVertices()) {
+                    appendFloatsFromVertex(vertices, v);
+                }
+                std::optional<ZEN::GPUAllocation> allocation = vbo->allocate(vertices.size());
+                if (!allocation.has_value()) {
+                    ZEN_INFO("Resize required", ZEN::LogCategory::RendererInternals);
+                    vbo->resize(vbo->getCurrentSize() * 2);
+                    renderManager->resetAllocations();
+                    handleReallocations();
+                    return;
+                }
+                renderable3d.second->gpuAlloc = allocation;
+                vbo->updateData(renderable3d.second->gpuAlloc.value(), vertices);
+                ZEN_INFO(std::format("Re-allocated: [Index: {}, Size: {}]", allocation->index, allocation->size),
+                         ZEN::LogCategory::RendererInternals);
             }
-            std::vector<GLfloat> vertices;
-            for (const Vertex3D &v: renderable3d.second->getVertices()) {
-                appendFloatsFromVertex(vertices, v);
-            }
-            std::optional<ZEN::GPUAllocation> allocation = vbo->allocate(vertices.size());
-            if (!allocation.has_value()) {
-                ZEN_INFO("Resize required", ZEN::LogCategory::RendererInternals);
-                vbo->resize(vbo->getCurrentSize() * 2);
-                renderManager->resetAllocations();
-                handleReallocations();
-                return;
-            }
-            renderable3d.second->gpuAlloc = allocation;
-            vbo->updateData(renderable3d.second->gpuAlloc.value(), vertices);
-            ZEN_INFO(std::format("Re-allocated: [Index: {}, Size: {}]", allocation->index, allocation->size),
-                     ZEN::LogCategory::RendererInternals);
         }
     }
 }

@@ -16,8 +16,6 @@
 #include <stdexcept>
 
 namespace {
-    //    std::shared_ptr<ZEN::OpenGL::VAO> vao;
-    //    std::shared_ptr<ZEN::OpenGL::VBO> vbo;
     struct VaoVboPair {
         std::shared_ptr<ZEN::OpenGL::VAO> vao;
         std::shared_ptr<ZEN::OpenGL::VBO> vbo;
@@ -163,14 +161,6 @@ void ZEN::OpenGL::Renderer::initialize() {
         layerVaoVbos[id].vao->initialize();
         layerVaoVbos[id].vao->attachVBO(layerVaoVbos[id].vbo, {VertexAttribute::Position3D, VertexAttribute::ColorRGB});
     }
-
-//    vbo = std::make_shared<VBO>(VBO());
-//    vbo->initialize();
-//    vbo->resize(1000);
-//
-//    vao = std::make_shared<VAO>(VAO());
-//    vao->initialize();
-//    vao->attachVBO(vbo, {VertexAttribute::Position3D, VertexAttribute::ColorRGB});
 }
 
 bool ZEN::OpenGL::Renderer::isInitialized() const noexcept {
@@ -212,10 +202,7 @@ void ZEN::OpenGL::Renderer::handleReallocations() {
 }
 
 void ZEN::OpenGL::Renderer::processRequest(ZEN::IRendererRequest *request) {
-    // @todo: This will be changed
-    auto layerId = m_renderManager->layers[0]->getLayerId();
-    auto vbo = layerVaoVbos[layerId].vbo;
-
+    auto vbo = layerVaoVbos[request->renderLayer->getLayerId()].vbo;
 
     switch (request->request) {
         case RenderManagerRequest::Allocate: {

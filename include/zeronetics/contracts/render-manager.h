@@ -8,22 +8,6 @@
 #include <memory>
 
 namespace ZEN {
-    /**
-     * Contract for renderer request
-     *
-     * @ref render-manager
-     */
-    struct IRendererRequest {
-        /**
-         * The type of request, e.g. allocation or de-allocation.
-         */
-        RenderManagerRequest request;
-
-        /**
-         * The target renderable.
-         */
-        std::shared_ptr<IRenderable3D> renderable3d;
-    };
 
     /**
      * Render group
@@ -63,6 +47,28 @@ namespace ZEN {
         std::vector<std::shared_ptr<IRenderGroup3D>> renderGroups3d;
 
         [[nodiscard]] virtual unique_id getLayerId() noexcept = 0;
+    };
+
+    /**
+     * Contract for renderer request
+     *
+     * @ref render-manager
+     */
+    struct IRendererRequest {
+        /**
+         * The type of request, e.g. allocation or de-allocation.
+         */
+        RenderManagerRequest request;
+
+        /**
+         * The target renderable.
+         */
+        std::shared_ptr<IRenderable3D> renderable3d;
+
+        /**
+         * The layer which holds authority over the request.
+         */
+        std::shared_ptr<IRenderLayer> renderLayer;
     };
 
     /**

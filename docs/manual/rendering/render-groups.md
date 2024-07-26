@@ -1,5 +1,8 @@
 @page render-groups Render groups
 
+@warning This documentation is potentially not up-to-date,
+as refactoring of involving this component is currently taking place.
+
 ## 🔠 What is a render group?
 
 A **render group** is a collection of renderable objects and

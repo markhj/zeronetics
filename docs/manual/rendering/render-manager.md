@@ -1,5 +1,8 @@
 @page render-manager Understanding render management
 
+@warning This documentation is potentially not up-to-date,
+as refactoring of involving this component is currently taking place.
+
 In Zeronetics, there's loose coupling between the renderer (e.g.
 @ref opengl "OpenGL") and the logic which manages objects.
 

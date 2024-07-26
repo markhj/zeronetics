@@ -1,6 +1,7 @@
 #include "zeronetics/core/vertices.h"
 #include "zeronetics/logging/logging.h"
 
+
 uint8_t ZEN::VertexAttrSize::getSize(ZEN::VertexAttribute attr) {
     switch (attr) {
         case VertexAttribute::Position2D:
@@ -18,6 +19,15 @@ uint8_t ZEN::VertexAttrSize::getSize(ZEN::VertexAttribute attr) {
             ZEN_LIB_ERROR("Missing vertex attribute size mapping.");
             return 0;
     }
+}
+uint8_t ZEN::VertexAttrSize::getSize(const std::vector<VertexAttribute> &attributes) {
+    uint8_t size = 0;
+    std::for_each(attributes.begin(),
+                  attributes.end(),
+                  [&](const VertexAttribute &vertexAttribute) {
+                    size += getSize(vertexAttribute);
+                  });
+    return size;
 }
 
 std::string ZEN::VertexAttrName::getAsString(ZEN::VertexAttribute attr) {

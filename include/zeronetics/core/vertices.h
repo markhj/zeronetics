@@ -53,5 +53,13 @@ namespace ZEN {
          * @return
          */
         static uint8_t getSize(VertexAttribute attr);
+
+        /**
+         * Retrieve the total size of attributes (contained in a list).
+         *
+         * @param attributes
+         * @return
+         */
+        static uint8_t getSize(const std::vector<VertexAttribute> &attributes);
     };
 }

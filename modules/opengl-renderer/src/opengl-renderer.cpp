@@ -5,6 +5,7 @@
 
 #include "zeronetics/core/tensors.h"
 #include "zeronetics/core/vertices.h"
+#include "zeronetics/helpers/vertices.h"
 #include "zeronetics/logging/logging.h"
 
 #include <glad/glad.h>
@@ -23,38 +24,6 @@ namespace {
 
     std::unordered_map<ZEN::unique_id, VaoVboPair> layerVaoVbos;
 
-    int defaultColorPos = 0;
-    std::vector<ZEN::ColorRGB> defaultColors = {
-            {0.0, 0.2, 1.0},
-            {1.0, 1.0, 1.0},
-            {0.6, 0.2, 0.6},
-    };
-
-    // @todo: Will be removed, once the more flexible implementation of
-    //      VBO is added.
-    unsigned int assumedVertexSize = 6;
-
-    inline void appendFloatsFromVertex(std::vector<ZEN::OpenGL::gl_float> &vertices, const ZEN::Vertex3D &v) {
-        // @todo: Will be rewritten to be more flexible,
-        //      when more vertex attributes are implemented
-        vertices.emplace_back(v.position.x);
-        vertices.emplace_back(v.position.y);
-        vertices.emplace_back(v.position.z);
-        if (v.color.has_value()) {
-            vertices.emplace_back(v.color->r);
-            vertices.emplace_back(v.color->g);
-            vertices.emplace_back(v.color->b);
-        } else {
-            ++defaultColorPos;
-            if (defaultColorPos >= defaultColors.size()) {
-                defaultColorPos = 0;
-            }
-            vertices.emplace_back(defaultColors[defaultColorPos].r);
-            vertices.emplace_back(defaultColors[defaultColorPos].g);
-            vertices.emplace_back(defaultColors[defaultColorPos].b);
-        }
-    }
-
     GLenum getPrimitive(ZEN::DrawPrimitive drawPrimitive) {
         switch (drawPrimitive) {
             case ZEN::DrawPrimitive::Points:
@@ -67,6 +36,21 @@ namespace {
                 ZEN_LIB_ERROR("Missing case in drawPrimitive.");
                 return GL_TRIANGLES;
         }
+    }
+
+    /**
+     * A quick-hand method to avoid a large amount of if/else statements.
+     */
+    inline void setEnum(GLenum key, bool value) {
+        if (value) {
+            glEnable(key);
+        } else {
+            glDisable(key);
+        }
+    }
+
+    void processSettings(const ZEN::RenderSettings &settings) {
+        setEnum(GL_DEPTH_TEST, settings.depthTesting);
     }
 }
 
@@ -87,7 +71,7 @@ void ZEN::OpenGL::Renderer::render() {
             continue;
         }
 
-        glEnable(GL_DEPTH_TEST);
+        processSettings(layer->settings);
 
         MVP mvp = layer->camera3d->getModelViewProjection();
 
@@ -103,6 +87,8 @@ void ZEN::OpenGL::Renderer::render() {
 
             group->shader->use();
 
+            uint8_t vertexSize = VertexAttrSize::getSize(layer->getAttributes());
+
             // @todo: https://github.com/markhj/zeronetics/issues/5
             //      This part will eventually be optimized.
             layerVaoVbos[layer->getLayerId()].vao->with([&]() {
@@ -111,9 +97,9 @@ void ZEN::OpenGL::Renderer::render() {
                     if (!alloc.has_value()) {
                         continue;
                     }
-                    gpu_alloc_int first = alloc->index / assumedVertexSize;
-                    gpu_alloc_int count = alloc->size / assumedVertexSize;
-                    glDrawArrays(getPrimitive(layer->drawPrimitive), first, count);
+                    gpu_alloc_int first = alloc->index / vertexSize;
+                    gpu_alloc_int count = alloc->size / vertexSize;
+                    glDrawArrays(getPrimitive(layer->settings.draw), first, count);
                 }
             });
         }
@@ -159,7 +145,7 @@ void ZEN::OpenGL::Renderer::initialize() {
         layerVaoVbos[id].vbo->resize(1000);
 
         layerVaoVbos[id].vao->initialize();
-        layerVaoVbos[id].vao->attachVBO(layerVaoVbos[id].vbo, {VertexAttribute::Position3D, VertexAttribute::ColorRGB});
+        layerVaoVbos[id].vao->attachVBO(layerVaoVbos[id].vbo, layer->getAttributes());
     }
 }
 
@@ -181,7 +167,8 @@ void ZEN::OpenGL::Renderer::handleReallocations() {
                 }
                 std::vector<GLfloat> vertices;
                 for (const Vertex3D &v: renderable3d.second->getVertices()) {
-                    appendFloatsFromVertex(vertices, v);
+                    auto asFloats = Vertices::flattenVertex3D(v, layer->getAttributes());
+                    vertices.insert(vertices.end(), asFloats.begin(), asFloats.end());
                 }
                 auto vbo = layerVaoVbos[layer->getLayerId()].vbo;
                 std::optional<ZEN::GPUAllocation> allocation = vbo->allocate(vertices.size());
@@ -208,7 +195,8 @@ void ZEN::OpenGL::Renderer::processRequest(ZEN::IRendererRequest *request) {
         case RenderManagerRequest::Allocate: {
             std::vector<GLfloat> vertices;
             for (const Vertex3D &v: request->renderable3d->getVertices()) {
-                appendFloatsFromVertex(vertices, v);
+                auto asFloats = Vertices::flattenVertex3D(v, request->renderLayer->getAttributes());
+                vertices.insert(vertices.end(), asFloats.begin(), asFloats.end());
             }
 
             std::optional<GPUAllocation> allocation = vbo->allocate(vertices.size());
@@ -230,7 +218,8 @@ void ZEN::OpenGL::Renderer::processRequest(ZEN::IRendererRequest *request) {
             }
             std::vector<GLfloat> vertices;
             for (const Vertex3D &v: request->renderable3d->getVertices()) {
-                appendFloatsFromVertex(vertices, v);
+                auto asFloats = Vertices::flattenVertex3D(v, request->renderLayer->getAttributes());
+                vertices.insert(vertices.end(), asFloats.begin(), asFloats.end());
             }
             vbo->updateData(request->renderable3d->gpuAlloc.value(), vertices);
             break;

@@ -36,7 +36,6 @@ namespace ZEN::OpenGL {
         void handleReallocations();
 
         inline void processRequest(IRendererRequest *request);
-
     };
 
     /**

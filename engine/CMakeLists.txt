@@ -23,6 +23,7 @@ set(CORE_SRC
 
         # Helpers
         src/helpers/strings.cpp
+        src/helpers/vertices.cpp
 
         # Traits
         src/traits/has-unique-id.cpp

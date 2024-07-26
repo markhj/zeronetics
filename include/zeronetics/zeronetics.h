@@ -22,6 +22,7 @@
 #include "core/inputs.h"
 #include "core/io.h"
 #include "core/observer.h"
+#include "core/render-settings.h"
 #include "core/result.h"
 #include "core/settings.h"
 #include "core/shader-blueprint.h"
@@ -50,9 +51,11 @@
 
 // Helpers
 #include "helpers/strings.h"
+#include "helpers/vertices.h"
 
 // Traits
 #include "traits/has-unique-id.h"
+#include "traits/processor.h"
 
 // Adv. structures
 #include "controls/base-input-manager.h"

@@ -23,7 +23,15 @@ namespace ZEN {
     class RenderLayer : public IRenderLayer,
                         public HasUniqueId {
     public:
+        explicit RenderLayer(const std::vector<VertexAttribute> &attributes);
+
         [[nodiscard]] unique_id getLayerId() noexcept override;
+
+        [[nodiscard]] std::vector<VertexAttribute> getAttributes() const noexcept override;
+
+    private:
+        std::vector<VertexAttribute> m_attributes;
+
     };
 
     /**

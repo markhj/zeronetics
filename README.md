@@ -5,11 +5,11 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?label=license)
 
 **Zeronetics** is an experimental 3D game engine developed mainly for educational
-and learning purpose.
+and learning purposes.
 
 ## ⚠️ Usage
 
-> Warning: Do not use this engine for production, or games you intend to ship.
+> Warning: Do not use this engine for any type of production usage.
 
 ## 🌿 Features
 
@@ -20,7 +20,7 @@ could replace the "out of the box"-OpenGL renderer with your own.
 
 ## 🪲 Requests and bugs
 
-**Feature requests**, as well as **bug reporting**, takes place on the
+**Feature requests** and **bug reporting** take place on the
 [issues page on GitHub](https://github.com/markhj/zeronetics/issues).
 
 ## 📜 Documentation

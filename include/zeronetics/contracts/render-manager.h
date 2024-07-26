@@ -5,10 +5,11 @@
 #include "renderable.h"
 #include "shader.h"
 
+#include "zeronetics/core/render-settings.h"
+
 #include <memory>
 
 namespace ZEN {
-
     /**
      * Render group
      *
@@ -26,13 +27,13 @@ namespace ZEN {
         std::unordered_map<std::string, std::shared_ptr<IRenderable3D>> renderables3d;
     };
 
-
     class IRenderLayer {
     public:
         /**
-         * Draw primitive type
+         * Render settings, such as depth testing and primitive type
+         * (point, line, triangle, etc.)
          */
-        DrawPrimitive drawPrimitive = DrawPrimitive::Triangles;
+        RenderSettings settings;
 
         /**
          * The primary camera.
@@ -46,7 +47,15 @@ namespace ZEN {
          */
         std::vector<std::shared_ptr<IRenderGroup3D>> renderGroups3d;
 
+        /**
+         * Retrieve unique ID for this layer.
+         */
         [[nodiscard]] virtual unique_id getLayerId() noexcept = 0;
+
+        /**
+         * Retrieve list of attributes which make up each vertex.
+         */
+        [[nodiscard]] virtual std::vector<VertexAttribute> getAttributes() const noexcept = 0;
     };
 
     /**
@@ -97,7 +106,5 @@ namespace ZEN {
          * in the manager.
          */
         virtual void resetAllocations() const noexcept = 0;
-
     };
 }
-

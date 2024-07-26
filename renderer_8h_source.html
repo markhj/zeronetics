@@ -94,7 +94,7 @@ $(document).ready(function(){initNavTree('renderer_8h_source.html',''); initResi
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceZEN.html">ZEN</a> {</div>
 <div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classZEN_1_1IRenderer.html">    9</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classZEN_1_1IRenderer.html">IRenderer</a> {</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        std::shared_ptr&lt;IRenderManager&gt; renderManager;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> setRenderManager(<span class="keyword">const</span> std::shared_ptr&lt;IRenderManager&gt; &amp;renderManager) noexcept(<span class="keyword">false</span>) = 0;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> initialize() = 0;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>

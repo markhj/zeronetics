@@ -1,7 +1,7 @@
 var searchData=
 [
   ['callbacks_18',['Callbacks',['../callbacks.html',1,'dev']]],
-  ['camera3d_19',['camera3d',['../structZEN_1_1IRenderLayer.html#af5a4f726e05746c26dd0778e78f7364b',1,'ZEN::IRenderLayer']]],
+  ['camera3d_19',['camera3d',['../classZEN_1_1IRenderLayer.html#af5a4f726e05746c26dd0778e78f7364b',1,'ZEN::IRenderLayer']]],
   ['camera3d_20',['Camera3D',['../classZEN_1_1Camera3D.html',1,'ZEN']]],
   ['clippingplane_21',['clippingPlane',['../classZEN_1_1Camera3D.html#ab6dd8427bb4bc8f2c914a7c0b2fa871b',1,'ZEN::Camera3D']]],
   ['close_22',['close',['../classZEN_1_1IWindow.html#ac20b4467e8d3fee02198065c8507d004',1,'ZEN::IWindow::close()'],['../classZEN_1_1Window.html#a64cec0e02957378822f9e7ae0b9ee51d',1,'ZEN::Window::close()']]],

@@ -15,7 +15,8 @@ var hierarchy =
     [ "ZEN::GPUAllocation", "structZEN_1_1GPUAllocation.html", null ],
     [ "ZEN::Gizmos::Grid3D", "classZEN_1_1Gizmos_1_1Grid3D.html", null ],
     [ "ZEN::HasUniqueId", "classZEN_1_1HasUniqueId.html", [
-      [ "ZEN::Process", "classZEN_1_1Process.html", null ]
+      [ "ZEN::Process", "classZEN_1_1Process.html", null ],
+      [ "ZEN::RenderLayer", "classZEN_1_1RenderLayer.html", null ]
     ] ],
     [ "ZEN::OpenGL::IBindable< T >", "classZEN_1_1OpenGL_1_1IBindable.html", [
       [ "ZEN::OpenGL::StdBinding< gl_uint >", "classZEN_1_1OpenGL_1_1StdBinding.html", [
@@ -46,8 +47,8 @@ var hierarchy =
     [ "ZEN::IRenderGroup3D", "structZEN_1_1IRenderGroup3D.html", [
       [ "ZEN::RenderGroup3D", "structZEN_1_1RenderGroup3D.html", null ]
     ] ],
-    [ "ZEN::IRenderLayer", "structZEN_1_1IRenderLayer.html", [
-      [ "ZEN::RenderLayer", "structZEN_1_1RenderLayer.html", null ]
+    [ "ZEN::IRenderLayer", "classZEN_1_1IRenderLayer.html", [
+      [ "ZEN::RenderLayer", "classZEN_1_1RenderLayer.html", null ]
     ] ],
     [ "ZEN::IRenderManager", "structZEN_1_1IRenderManager.html", [
       [ "ZEN::RenderManager", "structZEN_1_1RenderManager.html", null ]

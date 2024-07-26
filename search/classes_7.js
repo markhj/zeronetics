@@ -9,7 +9,7 @@ var searchData=
   ['irenderer_327',['IRenderer',['../classZEN_1_1IRenderer.html',1,'ZEN']]],
   ['irendererrequest_328',['IRendererRequest',['../structZEN_1_1IRendererRequest.html',1,'ZEN']]],
   ['irendergroup3d_329',['IRenderGroup3D',['../structZEN_1_1IRenderGroup3D.html',1,'ZEN']]],
-  ['irenderlayer_330',['IRenderLayer',['../structZEN_1_1IRenderLayer.html',1,'ZEN']]],
+  ['irenderlayer_330',['IRenderLayer',['../classZEN_1_1IRenderLayer.html',1,'ZEN']]],
   ['irendermanager_331',['IRenderManager',['../structZEN_1_1IRenderManager.html',1,'ZEN']]],
   ['ishader_332',['IShader',['../classZEN_1_1IShader.html',1,'ZEN']]],
   ['ishaderbuilder_333',['IShaderBuilder',['../classZEN_1_1IShaderBuilder.html',1,'ZEN']]],

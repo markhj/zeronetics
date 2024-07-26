@@ -18,7 +18,7 @@ var searchData=
   ['irenderer_120',['IRenderer',['../classZEN_1_1IRenderer.html',1,'ZEN']]],
   ['irendererrequest_121',['IRendererRequest',['../structZEN_1_1IRendererRequest.html',1,'ZEN']]],
   ['irendergroup3d_122',['IRenderGroup3D',['../structZEN_1_1IRenderGroup3D.html',1,'ZEN']]],
-  ['irenderlayer_123',['IRenderLayer',['../structZEN_1_1IRenderLayer.html',1,'ZEN']]],
+  ['irenderlayer_123',['IRenderLayer',['../classZEN_1_1IRenderLayer.html',1,'ZEN']]],
   ['irendermanager_124',['IRenderManager',['../structZEN_1_1IRenderManager.html',1,'ZEN']]],
   ['isattached_125',['isAttached',['../classZEN_1_1Processor.html#a8608c5e098a747cc0d0098f069afb99b',1,'ZEN::Processor']]],
   ['isdirectory_126',['isDirectory',['../classZEN_1_1Path.html#aa5451df9658c05386ef0b823a33d57a8',1,'ZEN::Path']]],

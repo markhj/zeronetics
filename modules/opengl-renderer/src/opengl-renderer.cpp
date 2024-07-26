@@ -16,8 +16,14 @@
 #include <stdexcept>
 
 namespace {
-    std::shared_ptr<ZEN::OpenGL::VAO> vao;
-    std::shared_ptr<ZEN::OpenGL::VBO> vbo;
+    //    std::shared_ptr<ZEN::OpenGL::VAO> vao;
+    //    std::shared_ptr<ZEN::OpenGL::VBO> vbo;
+    struct VaoVboPair {
+        std::shared_ptr<ZEN::OpenGL::VAO> vao;
+        std::shared_ptr<ZEN::OpenGL::VBO> vbo;
+    };
+
+    std::unordered_map<ZEN::unique_id, VaoVboPair> layerVaoVbos;
 
     int defaultColorPos = 0;
     std::vector<ZEN::ColorRGB> defaultColors = {
@@ -79,7 +85,7 @@ void ZEN::OpenGL::Renderer::render() {
 
     for (const auto &layer: m_renderManager->layers) {
         if (!layer->camera3d) {
-            ZEN_WARN("No camera on render manager", ZEN::LogCategory::Rendering);
+            ZEN_WARN("No camera on render layer.", ZEN::LogCategory::Rendering);
             continue;
         }
 
@@ -101,7 +107,7 @@ void ZEN::OpenGL::Renderer::render() {
 
             // @todo: https://github.com/markhj/zeronetics/issues/5
             //      This part will eventually be optimized.
-            vao->with([&]() {
+            layerVaoVbos[layer->getLayerId()].vao->with([&]() {
                 for (const auto &renderable: group->renderables3d) {
                     std::optional<GPUAllocation> alloc = renderable.second->gpuAlloc;
                     if (!alloc.has_value()) {
@@ -132,15 +138,39 @@ void ZEN::OpenGL::Renderer::initialize() {
         throw std::runtime_error("Failed to initialize GLAD.");
     }
 
+    if (!m_renderManager) {
+        ZEN_CRITICAL("Cannot initialize renderer without a render manager.");
+        return;
+    }
+
+    if (m_renderManager->layers.empty()) {
+        ZEN_CRITICAL("There are no layers on the render manager.");
+        return;
+    }
+
     m_initialized = true;
 
-    vbo = std::make_shared<VBO>(VBO());
-    vbo->initialize();
-    vbo->resize(1000);
+    for (const std::shared_ptr<IRenderLayer> &layer: m_renderManager->layers) {
+        unique_id id = layer->getLayerId();
+        layerVaoVbos[id] = VaoVboPair{
+                .vao = std::make_shared<VAO>(VAO()),
+                .vbo = std::make_shared<VBO>(VBO()),
+        };
 
-    vao = std::make_shared<VAO>(VAO());
-    vao->initialize();
-    vao->attachVBO(vbo, {VertexAttribute::Position3D, VertexAttribute::ColorRGB});
+        layerVaoVbos[id].vbo->initialize();
+        layerVaoVbos[id].vbo->resize(1000);
+
+        layerVaoVbos[id].vao->initialize();
+        layerVaoVbos[id].vao->attachVBO(layerVaoVbos[id].vbo, {VertexAttribute::Position3D, VertexAttribute::ColorRGB});
+    }
+
+//    vbo = std::make_shared<VBO>(VBO());
+//    vbo->initialize();
+//    vbo->resize(1000);
+//
+//    vao = std::make_shared<VAO>(VAO());
+//    vao->initialize();
+//    vao->attachVBO(vbo, {VertexAttribute::Position3D, VertexAttribute::ColorRGB});
 }
 
 bool ZEN::OpenGL::Renderer::isInitialized() const noexcept {
@@ -163,6 +193,7 @@ void ZEN::OpenGL::Renderer::handleReallocations() {
                 for (const Vertex3D &v: renderable3d.second->getVertices()) {
                     appendFloatsFromVertex(vertices, v);
                 }
+                auto vbo = layerVaoVbos[layer->getLayerId()].vbo;
                 std::optional<ZEN::GPUAllocation> allocation = vbo->allocate(vertices.size());
                 if (!allocation.has_value()) {
                     ZEN_INFO("Resize required", ZEN::LogCategory::RendererInternals);
@@ -181,12 +212,18 @@ void ZEN::OpenGL::Renderer::handleReallocations() {
 }
 
 void ZEN::OpenGL::Renderer::processRequest(ZEN::IRendererRequest *request) {
+    // @todo: This will be changed
+    auto layerId = m_renderManager->layers[0]->getLayerId();
+    auto vbo = layerVaoVbos[layerId].vbo;
+
+
     switch (request->request) {
         case RenderManagerRequest::Allocate: {
             std::vector<GLfloat> vertices;
             for (const Vertex3D &v: request->renderable3d->getVertices()) {
                 appendFloatsFromVertex(vertices, v);
             }
+
             std::optional<GPUAllocation> allocation = vbo->allocate(vertices.size());
             if (allocation.has_value()) {
                 request->renderable3d->gpuAlloc = allocation;

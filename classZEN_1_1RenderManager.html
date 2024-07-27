@@ -90,6 +90,8 @@ $(document).ready(function(){initNavTree('classZEN_1_1RenderManager.html',''); i
 <div class="title">ZEN::RenderManager Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="render_2render-manager_8h_source.html">render-manager.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ZEN::RenderManager:</div>
 <div class="dyncontent">
@@ -113,15 +115,49 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9e6cf42bb491b40f653e475757a3378a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b4784a079fcdad704de8d6568203744"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1RenderManager.html#a3b4784a079fcdad704de8d6568203744">forEachRequest</a> (const std::function&lt; void(const std::shared_ptr&lt; <a class="el" href="structZEN_1_1IRendererRequest.html">IRendererRequest</a> &gt; &amp;<a class="el" href="classZEN_1_1RenderManager.html#a7caa2deb8d46b2620487480592d9d8fc">request</a>)&gt; &amp;handle) override</td></tr>
 <tr class="separator:a3b4784a079fcdad704de8d6568203744"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_attribs_classZEN_1_1IRenderManager"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classZEN_1_1IRenderManager')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classZEN_1_1IRenderManager.html">ZEN::IRenderManager</a></td></tr>
-<tr class="memitem:abbdb5d49ded12faeee5e49824d73be2f inherit pub_attribs_classZEN_1_1IRenderManager"><td class="memItemLeft" align="right" valign="top"><a id="abbdb5d49ded12faeee5e49824d73be2f"></a>
-std::vector&lt; std::shared_ptr&lt; <a class="el" href="classZEN_1_1IRenderLayer.html">IRenderLayer</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>layers</b></td></tr>
-<tr class="separator:abbdb5d49ded12faeee5e49824d73be2f inherit pub_attribs_classZEN_1_1IRenderManager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a961af51876407ab646d0a529dcd09de4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1RenderManager.html#a961af51876407ab646d0a529dcd09de4">attachLayer</a> (const std::shared_ptr&lt; <a class="el" href="classZEN_1_1IRenderLayer.html">IRenderLayer</a> &gt; &amp;layer) override</td></tr>
+<tr class="separator:a961af51876407ab646d0a529dcd09de4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0979845e03fe8f69cf71d3c6e56824c5"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="classZEN_1_1IRenderLayer.html">IRenderLayer</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1RenderManager.html#a0979845e03fe8f69cf71d3c6e56824c5">getLayers</a> () override</td></tr>
+<tr class="separator:a0979845e03fe8f69cf71d3c6e56824c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Implementation of basic Render Manager. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a961af51876407ab646d0a529dcd09de4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a961af51876407ab646d0a529dcd09de4">&#9670;&nbsp;</a></span>attachLayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ZEN::RenderManager::attachLayer </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classZEN_1_1IRenderLayer.html">IRenderLayer</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>layer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Attach a render layer.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">layer</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classZEN_1_1IRenderManager.html#a07b9ba226b6c5a391375f9aa8815b8a3">ZEN::IRenderManager</a>.</p>
+
+</div>
+</div>
 <a id="a9e6cf42bb491b40f653e475757a3378a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9e6cf42bb491b40f653e475757a3378a">&#9670;&nbsp;</a></span>clearRequests()</h2>
 
@@ -140,11 +176,11 @@ std::vector&lt; std::shared_ptr&lt; <a class="el" href="classZEN_1_1IRenderLayer
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Clear the list of requests. </p>
+<p>Clear all pending requests. </p>
 
 <p>Implements <a class="el" href="classZEN_1_1IRenderManager.html#ad4b1cfa990052d300df28584f7d5cbca">ZEN::IRenderManager</a>.</p>
 
@@ -169,12 +205,11 @@ std::vector&lt; std::shared_ptr&lt; <a class="el" href="classZEN_1_1IRenderLayer
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Iterate through pending requests and clear the list once handled.</p>
-<dl class="section note"><dt>Note</dt><dd>This is an alternative approach to using <code>getRequests</code> and <code>clearRequests</code> which leverages more handling to the processor.</dd></dl>
+<p>Iterate through all requests, and clear them in the end.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">handle</td><td></td></tr>
@@ -183,6 +218,35 @@ std::vector&lt; std::shared_ptr&lt; <a class="el" href="classZEN_1_1IRenderLayer
 </dl>
 
 <p>Implements <a class="el" href="classZEN_1_1IRenderManager.html#a833d86e30df27aced157be36464ec12e">ZEN::IRenderManager</a>.</p>
+
+</div>
+</div>
+<a id="a0979845e03fe8f69cf71d3c6e56824c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0979845e03fe8f69cf71d3c6e56824c5">&#9670;&nbsp;</a></span>getLayers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::shared_ptr&lt;<a class="el" href="classZEN_1_1IRenderLayer.html">IRenderLayer</a>&gt; &gt; ZEN::RenderManager::getLayers </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the list of layers.</p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p>Implements <a class="el" href="classZEN_1_1IRenderManager.html#a5ea12745d52d8f16207e320e90c486f9">ZEN::IRenderManager</a>.</p>
 
 </div>
 </div>
@@ -204,12 +268,11 @@ std::vector&lt; std::shared_ptr&lt; <a class="el" href="classZEN_1_1IRenderLayer
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Retrieve the list of requests.</p>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<p>Retrieve all pending requests. </p><dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 <p>Implements <a class="el" href="classZEN_1_1IRenderManager.html#aa0d6bad2b259678d6a8ca7e0cd5a0f1b">ZEN::IRenderManager</a>.</p>
 
@@ -234,11 +297,11 @@ std::vector&lt; std::shared_ptr&lt; <a class="el" href="classZEN_1_1IRenderLayer
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Submit a request.</p>
+<p>Make a reuqest.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">request</td><td></td></tr>
@@ -272,7 +335,7 @@ std::vector&lt; std::shared_ptr&lt; <a class="el" href="classZEN_1_1IRenderLayer
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Reset the allocation details contained within all renderables in the manager. </p>
+<p>Reset all existing allocations in all layers. </p>
 
 <p>Implements <a class="el" href="classZEN_1_1IRenderManager.html#ad585ca557d1fc559f6d18dea0ea94b1f">ZEN::IRenderManager</a>.</p>
 

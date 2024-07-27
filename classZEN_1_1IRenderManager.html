@@ -85,7 +85,6 @@ $(document).ready(function(){initNavTree('classZEN_1_1IRenderManager.html',''); 
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="classZEN_1_1IRenderManager-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ZEN::IRenderManager Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -101,6 +100,10 @@ Inheritance diagram for ZEN::IRenderManager:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a07b9ba226b6c5a391375f9aa8815b8a3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1IRenderManager.html#a07b9ba226b6c5a391375f9aa8815b8a3">attachLayer</a> (const std::shared_ptr&lt; <a class="el" href="classZEN_1_1IRenderLayer.html">IRenderLayer</a> &gt; &amp;layer)=0</td></tr>
+<tr class="separator:a07b9ba226b6c5a391375f9aa8815b8a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ea12745d52d8f16207e320e90c486f9"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; std::shared_ptr&lt; <a class="el" href="classZEN_1_1IRenderLayer.html">IRenderLayer</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1IRenderManager.html#a5ea12745d52d8f16207e320e90c486f9">getLayers</a> ()=0</td></tr>
+<tr class="separator:a5ea12745d52d8f16207e320e90c486f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad585ca557d1fc559f6d18dea0ea94b1f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1IRenderManager.html#ad585ca557d1fc559f6d18dea0ea94b1f">resetAllocations</a> () const noexcept=0</td></tr>
 <tr class="separator:ad585ca557d1fc559f6d18dea0ea94b1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2370a68bf88c3fe29943af3949527891"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1IRenderManager.html#a2370a68bf88c3fe29943af3949527891">request</a> (const <a class="el" href="structZEN_1_1IRendererRequest.html">IRendererRequest</a> &amp;request)=0</td></tr>
@@ -111,18 +114,47 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad4b1cfa990052d300df28584f7d5cbca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a833d86e30df27aced157be36464ec12e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1IRenderManager.html#a833d86e30df27aced157be36464ec12e">forEachRequest</a> (const std::function&lt; void(const std::shared_ptr&lt; <a class="el" href="structZEN_1_1IRendererRequest.html">IRendererRequest</a> &gt; &amp;<a class="el" href="classZEN_1_1IRenderManager.html#a2370a68bf88c3fe29943af3949527891">request</a>)&gt; &amp;handle)=0</td></tr>
 <tr class="separator:a833d86e30df27aced157be36464ec12e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:abbdb5d49ded12faeee5e49824d73be2f"><td class="memItemLeft" align="right" valign="top"><a id="abbdb5d49ded12faeee5e49824d73be2f"></a>
-std::vector&lt; std::shared_ptr&lt; <a class="el" href="classZEN_1_1IRenderLayer.html">IRenderLayer</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>layers</b></td></tr>
-<tr class="separator:abbdb5d49ded12faeee5e49824d73be2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A Render Manager is a way for "something" and a renderer to communicate, without introducing coupling between that "something" and the renderer. The "something" is typically some sort of scene-related object, but it doesn't have to be.</p>
 <p>They have different authorities over the render manager, and can both update its data. For instance, a scene-like object can place requests, and the renderer can remove them, when they are processed.</p>
 <p><a class="el" href="render-manager.html">Understanding render management</a> </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a07b9ba226b6c5a391375f9aa8815b8a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07b9ba226b6c5a391375f9aa8815b8a3">&#9670;&nbsp;</a></span>attachLayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ZEN::IRenderManager::attachLayer </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classZEN_1_1IRenderLayer.html">IRenderLayer</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>layer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Attach a render layer.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">layer</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="classZEN_1_1RenderManager.html#a961af51876407ab646d0a529dcd09de4">ZEN::RenderManager</a>.</p>
+
+</div>
+</div>
 <a id="ad4b1cfa990052d300df28584f7d5cbca"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad4b1cfa990052d300df28584f7d5cbca">&#9670;&nbsp;</a></span>clearRequests()</h2>
 
@@ -184,6 +216,35 @@ std::vector&lt; std::shared_ptr&lt; <a class="el" href="classZEN_1_1IRenderLayer
 </dl>
 
 <p>Implemented in <a class="el" href="classZEN_1_1RenderManager.html#a3b4784a079fcdad704de8d6568203744">ZEN::RenderManager</a>.</p>
+
+</div>
+</div>
+<a id="a5ea12745d52d8f16207e320e90c486f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ea12745d52d8f16207e320e90c486f9">&#9670;&nbsp;</a></span>getLayers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::vector&lt;std::shared_ptr&lt;<a class="el" href="classZEN_1_1IRenderLayer.html">IRenderLayer</a>&gt; &gt; ZEN::IRenderManager::getLayers </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Retrieve list of layers.</p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p>Implemented in <a class="el" href="classZEN_1_1RenderManager.html#a0979845e03fe8f69cf71d3c6e56824c5">ZEN::RenderManager</a>.</p>
 
 </div>
 </div>

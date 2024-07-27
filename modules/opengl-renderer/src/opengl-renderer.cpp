@@ -64,7 +64,7 @@ void ZEN::OpenGL::Renderer::render() {
         processRequest(request);
     });
 
-    for (const auto &layer: m_renderManager->layers) {
+    for (const auto &layer: m_renderManager->getLayers()) {
         if (!layer->camera3d) {
             ZEN_WARN("No camera on render layer.", ZEN::LogCategory::Rendering);
             continue;
@@ -126,14 +126,14 @@ void ZEN::OpenGL::Renderer::initialize() {
         return;
     }
 
-    if (m_renderManager->layers.empty()) {
+    if (m_renderManager->getLayers().empty()) {
         ZEN_CRITICAL("There are no layers on the render manager.");
         return;
     }
 
     m_initialized = true;
 
-    for (const std::shared_ptr<IRenderLayer> &layer: m_renderManager->layers) {
+    for (const std::shared_ptr<IRenderLayer> &layer: m_renderManager->getLayers()) {
         unique_id id = layer->getLayerId();
         layerVaoVbos[id] = VaoVboPair{
                 .vao = std::make_shared<VAO>(VAO()),
@@ -158,7 +158,7 @@ void ZEN::OpenGL::Renderer::clear() noexcept {
 }
 
 void ZEN::OpenGL::Renderer::handleReallocations() {
-    for (const auto &layer: m_renderManager->layers) {
+    for (const auto &layer: m_renderManager->getLayers()) {
         for (const auto &group: layer->renderGroups3d) {
             for (auto &renderable3d: group->renderables3d) {
                 if (renderable3d.second->gpuAlloc.has_value()) {

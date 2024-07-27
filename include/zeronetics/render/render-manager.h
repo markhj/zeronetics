@@ -7,26 +7,41 @@
 
 namespace ZEN {
     /**
-     *
+     * Basic Renderer Request
      */
     struct RendererRequest : public IRendererRequest {};
 
     /**
-     *
+     * 3D Render Group
      */
-    struct RenderGroup3D : public IRenderGroup3D {
-    };
+    struct RenderGroup3D : public IRenderGroup3D {};
 
     /**
-     *
+     * Render Layer
      */
     class RenderLayer : public IRenderLayer,
                         public HasUniqueId {
     public:
+        /**
+         * Initialize a render layer with a specified list of vertex
+         * attributes.
+         *
+         * @param attributes
+         */
         explicit RenderLayer(const std::vector<VertexAttribute> &attributes);
 
+        /**
+         * The this layer's unique ID.
+         *
+         * @return
+         */
         [[nodiscard]] unique_id getLayerId() noexcept override;
 
+        /**
+         * Get the vertex attributes assigned to this layer.
+         *
+         * @return
+         */
         [[nodiscard]] std::vector<VertexAttribute> getAttributes() const noexcept override;
 
     private:
@@ -34,35 +49,58 @@ namespace ZEN {
     };
 
     /**
-     *
+     * Implementation of basic Render Manager.
      */
     class RenderManager : public IRenderManager {
     public:
+        /**
+         * Reset all existing allocations in all layers.
+         */
         void resetAllocations() const noexcept override;
 
-        virtual void request(const IRendererRequest &request) override {
-            m_requests.push_back(std::make_shared<RendererRequest>(request));
-        };
+        /**
+         * Make a reuqest.
+         *
+         * @param request
+         */
+        virtual void request(const IRendererRequest &request) override;
 
-        virtual std::vector<std::shared_ptr<IRendererRequest>> getRequests() override {
-            return m_requests;
-        };
+        /**
+         * Retrieve all pending requests.
+         * @return
+         */
+        virtual std::vector<std::shared_ptr<IRendererRequest>> getRequests() override;
 
-        void clearRequests() override {
-            m_requests.clear();
-        }
+        /**
+         * Clear all pending requests.
+         */
+        void clearRequests() override;
 
-        void forEachRequest(const std::function<void(const std::shared_ptr<IRendererRequest> &request)> &handle) override {
-            std::for_each(m_requests.begin(),
-                          m_requests.end(),
-                          [&](const std::shared_ptr<IRendererRequest> &item) {
-                                handle(item);
-                          });
+        /**
+         * Iterate through all requests, and clear them in the end.
+         *
+         * @param handle
+         */
+        void forEachRequest(const std::function<void(const std::shared_ptr<IRendererRequest> &request)> &handle) override;
 
-            clearRequests();
-        }
+        /**
+         * Attach a render layer.
+         *
+         * @param layer
+         */
+        void attachLayer(const std::shared_ptr<IRenderLayer> &layer) override;
+
+        /**
+         * Get the list of layers.
+         *
+         * @return
+         */
+        std::vector<std::shared_ptr<IRenderLayer>> getLayers() override;
 
     private:
         std::vector<std::shared_ptr<IRendererRequest>> m_requests;
+
+        std::vector<std::shared_ptr<IRenderLayer>> m_layers;
+
     };
 }

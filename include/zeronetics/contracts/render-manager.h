@@ -95,7 +95,19 @@ namespace ZEN {
      */
     class IRenderManager {
     public:
-        std::vector<std::shared_ptr<IRenderLayer>> layers;
+        /**
+         * Attach a render layer.
+         *
+         * @param layer
+         */
+        virtual void attachLayer(const std::shared_ptr<IRenderLayer> &layer) = 0;
+
+        /**
+         * Retrieve list of layers.
+         *
+         * @return
+         */
+        virtual std::vector<std::shared_ptr<IRenderLayer>> getLayers() = 0;
 
         /**
          * Reset the allocation details contained within all renderables

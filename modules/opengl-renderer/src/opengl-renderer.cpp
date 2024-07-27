@@ -225,7 +225,12 @@ void ZEN::OpenGL::Renderer::processRequest(ZEN::IRendererRequest *request) {
             break;
         }
         case RenderManagerRequest::Deallocate:
-            // @todo: Implement de-allocation requests to OpenGL renderer
+            std::optional<GPUAllocation> alloc = request->renderable3d->gpuAlloc;
+            if (!alloc.has_value()) {
+                return;
+            }
+            vbo->deallocate(alloc->index, alloc->size);
+            request->renderable3d->gpuAlloc.reset();
             break;
     }
 }

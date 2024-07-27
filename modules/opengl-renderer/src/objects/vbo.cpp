@@ -60,3 +60,13 @@ std::optional<ZEN::GPUAllocation> ZEN::OpenGL::VBO::allocate(ZEN::gpu_alloc_int 
 ZEN::gpu_alloc_int ZEN::OpenGL::VBO::getCurrentSize() const noexcept {
     return currentSize;
 }
+
+void ZEN::OpenGL::VBO::deallocate(ZEN::gpu_alloc_int from, ZEN::gpu_alloc_int size) {
+    with([&]() {
+        std::vector<float> n;
+        while (n.size() < size) {
+            n.emplace_back(0.0);
+        }
+        glBufferSubData(GL_ARRAY_BUFFER, from * sizeof(GLfloat), size * sizeof(GLfloat), n.data());
+    });
+}

@@ -62,6 +62,11 @@ namespace ZEN::OpenGL {
         std::optional<GPUAllocation> allocate(gpu_alloc_int size);
 
         /**
+         * Deallocate a segment of the GPU buffer.
+         */
+        void deallocate(gpu_alloc_int from, gpu_alloc_int size);
+
+        /**
          * Update data at the specified location (allocation).
          *
          * @param allocation

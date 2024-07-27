@@ -50,8 +50,8 @@ var hierarchy =
     [ "ZEN::IRenderLayer", "classZEN_1_1IRenderLayer.html", [
       [ "ZEN::RenderLayer", "classZEN_1_1RenderLayer.html", null ]
     ] ],
-    [ "ZEN::IRenderManager", "structZEN_1_1IRenderManager.html", [
-      [ "ZEN::RenderManager", "structZEN_1_1RenderManager.html", null ]
+    [ "ZEN::IRenderManager", "classZEN_1_1IRenderManager.html", [
+      [ "ZEN::RenderManager", "classZEN_1_1RenderManager.html", null ]
     ] ],
     [ "ZEN::IShader", "classZEN_1_1IShader.html", [
       [ "ZEN::OpenGL::Shader", "classZEN_1_1OpenGL_1_1Shader.html", null ]

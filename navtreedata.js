@@ -55,9 +55,9 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"",
-"classZEN_1_1Timer.html#acd15ebda1d3096775d6b43905d6439f3",
-"namespaceZEN.html#a8a51e0df946c6f890a2823e8a1ca0240"
+"annotated.html",
+"classZEN_1_1SystemInfo.html",
+"namespaceZEN.html#a6f413524c1a3cf3b76dce9a72a3e9be5a3621e68a905d433b120899458aeda38d"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

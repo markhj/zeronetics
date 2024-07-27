@@ -98,7 +98,7 @@ $(document).ready(function(){initNavTree('render-groups.html',''); initResizable
 <h2><a class="anchor" id="autotoc_md89"></a>
 🚧 Working with groups</h2>
 <p>To create a render group, you instantiate a <a class="el" href="structZEN_1_1RenderGroup3D.html">ZEN::RenderGroup3D</a>, connect it with a shader and add renderables.</p>
-<p>Groups should be created as shared pointers to be usable with <a class="el" href="structZEN_1_1RenderManager.html">ZEN::RenderManager</a>.</p>
+<p>Groups should be created as shared pointers to be usable with <a class="el" href="classZEN_1_1RenderManager.html">ZEN::RenderManager</a>.</p>
 <div class="fragment"><div class="line">std::shared_ptr&lt;RenderGroup3D&gt; myGroup = std::make_shared&lt;RenderGroup3D&gt;(RenderGroup3D());</div>
 <div class="line">myGroup-&gt;shader = someShader;</div>
 <div class="line">myGroup-&gt;renderables3d.push_back(object1);</div>

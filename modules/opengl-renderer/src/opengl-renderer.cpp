@@ -60,10 +60,9 @@ void ZEN::OpenGL::Renderer::render() {
         return;
     }
 
-    while (!m_renderManager->requests.empty()) {
-        processRequest(m_renderManager->requests.begin()->get());
-        m_renderManager->requests.erase(m_renderManager->requests.begin());
-    }
+    m_renderManager->forEachRequest([&](const std::shared_ptr<IRendererRequest> &request) {
+        processRequest(request);
+    });
 
     for (const auto &layer: m_renderManager->layers) {
         if (!layer->camera3d) {
@@ -188,7 +187,7 @@ void ZEN::OpenGL::Renderer::handleReallocations() {
     }
 }
 
-void ZEN::OpenGL::Renderer::processRequest(ZEN::IRendererRequest *request) {
+void ZEN::OpenGL::Renderer::processRequest(const std::shared_ptr<IRendererRequest> &request) {
     auto vbo = layerVaoVbos[request->renderLayer->getLayerId()].vbo;
 
     switch (request->request) {

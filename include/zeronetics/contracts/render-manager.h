@@ -93,12 +93,8 @@ namespace ZEN {
      *
      * @ref render-manager
      */
-    struct IRenderManager {
-        /**
-         * List of requests.
-         */
-        std::vector<std::unique_ptr<IRendererRequest>> requests;
-
+    class IRenderManager {
+    public:
         std::vector<std::shared_ptr<IRenderLayer>> layers;
 
         /**
@@ -106,5 +102,34 @@ namespace ZEN {
          * in the manager.
          */
         virtual void resetAllocations() const noexcept = 0;
+
+        /**
+         * Submit a request.
+         *
+         * @param request
+         */
+        virtual void request(const IRendererRequest &request) = 0;
+
+        /**
+         * Retrieve the list of requests.
+         *
+         * @return
+         */
+        virtual std::vector<std::shared_ptr<IRendererRequest>> getRequests() = 0;
+
+        /**
+         * Clear the list of requests.
+         */
+        virtual void clearRequests() = 0;
+
+        /**
+         * Iterate through pending requests and clear the list once handled.
+         *
+         * @note This is an alternative approach to using ``getRequests`` and
+         *      ``clearRequests`` which leverages more handling to the processor.
+         *
+         * @param handle
+         */
+        virtual void forEachRequest(const std::function<void(const std::shared_ptr<IRendererRequest> &request)> &handle) = 0;
     };
 }

@@ -35,7 +35,7 @@ namespace ZEN::OpenGL {
 
         void handleReallocations();
 
-        inline void processRequest(IRendererRequest *request);
+        inline void processRequest(const std::shared_ptr<IRendererRequest> &request);
     };
 
     /**

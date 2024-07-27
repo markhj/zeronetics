@@ -31,13 +31,38 @@ namespace ZEN {
 
     private:
         std::vector<VertexAttribute> m_attributes;
-
     };
 
     /**
      *
      */
-    struct RenderManager : public IRenderManager {
+    class RenderManager : public IRenderManager {
+    public:
         void resetAllocations() const noexcept override;
+
+        virtual void request(const IRendererRequest &request) override {
+            m_requests.push_back(std::make_shared<RendererRequest>(request));
+        };
+
+        virtual std::vector<std::shared_ptr<IRendererRequest>> getRequests() override {
+            return m_requests;
+        };
+
+        void clearRequests() override {
+            m_requests.clear();
+        }
+
+        void forEachRequest(const std::function<void(const std::shared_ptr<IRendererRequest> &request)> &handle) override {
+            std::for_each(m_requests.begin(),
+                          m_requests.end(),
+                          [&](const std::shared_ptr<IRendererRequest> &item) {
+                                handle(item);
+                          });
+
+            clearRequests();
+        }
+
+    private:
+        std::vector<std::shared_ptr<IRendererRequest>> m_requests;
     };
 }

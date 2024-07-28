@@ -16,13 +16,14 @@ inline void createFace(std::vector<ZEN::Vertex3D> &res,
                        const ZEN::Vec3 &a,
                        const ZEN::Vec3 &b,
                        const ZEN::Vec3 &c,
-                       const ZEN::Vec3 &d) {
-    res.push_back({.position = a});
-    res.push_back({.position = b});
-    res.push_back({.position = c});
-    res.push_back({.position = d});
-    res.push_back({.position = c});
-    res.push_back({.position = b});
+                       const ZEN::Vec3 &d,
+                       const ZEN::Vec3 &normal) {
+    res.push_back({.position = a, .normal = normal});
+    res.push_back({.position = b, .normal = normal});
+    res.push_back({.position = c, .normal = normal});
+    res.push_back({.position = d, .normal = normal});
+    res.push_back({.position = c, .normal = normal});
+    res.push_back({.position = b, .normal = normal});
 }
 
 std::vector<ZEN::Vertex3D> ZEN::Cube::make() const noexcept {
@@ -38,21 +39,24 @@ std::vector<ZEN::Vertex3D> ZEN::Cube::make() const noexcept {
                    {-x, -y, i * z},
                    {x, -y, i * z},
                    {-x, y, i * z},
-                   {x, y, i * z});
+                   {x, y, i * z},
+                   i * Vec3(0.0, 0.0, 1.0));
 
         // Sides
         createFace(res,
                    {i * x, -y, -z},
                    {i * x, y, -z},
                    {i * x, -y, z},
-                   {i * x, y, z});
+                   {i * x, y, z},
+                   i * Vec3(1.0, 0.0, 0.0));
 
         // Top and bottom
         createFace(res,
                    {-x, i * y, -z},
                    {x, i * y, -z},
                    {-x, i * y, z},
-                   {x, i * y, z});
+                   {x, i * y, z},
+                   i * Vec3(0.0, 1.0, 0.0));
     }
 
     return res;

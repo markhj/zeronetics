@@ -4,6 +4,8 @@
 #include "zeronetics/logging/logging.h"
 #include "zeronetics/helpers/strings.h"
 
+#include "glsl-repo.h"
+
 std::optional<std::string> ZEN::GLSLShaderBuilder::make(const ShaderBlueprint &blueprint,
                                                         ShaderStage shaderStage) noexcept(false) {
     if (blueprint.attributes.empty()) {
@@ -93,38 +95,15 @@ void ZEN::GLSLShaderBuilder::fragment(const ShaderBlueprint &blueprint) noexcept
     }
 
     // Camera
-    add("struct Camera3D {");
-    indent();
-    add("vec3 position;");
-    dedent();
-    add("};");
+    add(structCamera3D);
     section();
     add("uniform Camera3D camera3d;");
 
     // Point Light 3D
     if (blueprint.lightSupport.slotsPointLight3D > 0) {
-        add("struct PointLight3D {");
-        indent();
-        add("vec3 position;");
-        add("vec3 color;");
-        add("float constant;");
-        add("float linear;");
-        add("float quadratic;");
-        dedent();
-        add("};");
+        add(structPointLight3D);
         section();
-
-        add("vec3 calculatePointLight3D(PointLight3D light) {");
-        indent();
-        add("vec3 viewDir = normalize(camera3d.position - position);");
-        add("vec3 lightDir = normalize(light.position - position);");
-        add("float diff = max(dot(normal, lightDir), 0.0);");
-        add("float distance = length(light.position - position);");
-        add("float attenuation = 1.0 / (light.constant + light.linear * distance + light.quadratic * (distance * distance));");
-        add("return attenuation * light.color * diff;");
-        dedent();
-        add("}");
-
+        add(calculatePointLight3D);
         section();
         add(std::format("uniform PointLight3D pointLight3D[{}];", blueprint.lightSupport.slotsPointLight3D));
     }

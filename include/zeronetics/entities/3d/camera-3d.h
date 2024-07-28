@@ -5,6 +5,8 @@
 #include "zeronetics/core/typedefs.h"
 #include "zeronetics/entities/entity.h"
 
+#include <memory>
+
 namespace ZEN {
     /**
      * Implementation of 3D camera.
@@ -39,5 +41,8 @@ namespace ZEN {
          * @return
          */
         [[nodiscard]] MVP getModelViewProjection() const noexcept override;
+
+        void setOnShader(const std::string &key,
+                         const std::shared_ptr<IShader> &shader) override;
     };
 }

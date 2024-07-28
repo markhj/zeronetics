@@ -1,9 +1,19 @@
 #pragma once
 
+#include <memory>
+
+#include "shader.h"
 #include "transforms.h"
 #include "zeronetics/core/tensors.h"
 
 namespace ZEN {
+    class ICamera {
+    public:
+        virtual void setOnShader(const std::string &key,
+                                 const std::shared_ptr<IShader> &shader) = 0;
+
+    };
+
     /**
      * 3D camera contract
      *
@@ -27,6 +37,9 @@ namespace ZEN {
          * @return
          */
         [[nodiscard]] virtual MVP getModelViewProjection() const noexcept = 0;
+
+        virtual void setOnShader(const std::string &key,
+                                 const std::shared_ptr<IShader> &shader) = 0;
 
     };
 }

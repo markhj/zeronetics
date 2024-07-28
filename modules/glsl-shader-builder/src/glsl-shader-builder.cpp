@@ -92,6 +92,43 @@ void ZEN::GLSLShaderBuilder::fragment(const ShaderBlueprint &blueprint) noexcept
                         Strings::toLowerCase(VertexAttrName::getAsString(attribute))));
     }
 
+    // Camera
+    add("struct Camera3D {");
+    indent();
+    add("vec3 position;");
+    dedent();
+    add("};");
+    section();
+    add("uniform Camera3D camera3d;");
+
+    // Point Light 3D
+    if (blueprint.lightSupport.slotsPointLight3D > 0) {
+        add("struct PointLight3D {");
+        indent();
+        add("vec3 position;");
+        add("vec3 color;");
+        add("float constant;");
+        add("float linear;");
+        add("float quadratic;");
+        dedent();
+        add("};");
+        section();
+
+        add("vec3 calculatePointLight3D(PointLight3D light) {");
+        indent();
+        add("vec3 viewDir = normalize(camera3d.position - position);");
+        add("vec3 lightDir = normalize(light.position - position);");
+        add("float diff = max(dot(normal, lightDir), 0.0);");
+        add("float distance = length(light.position - position);");
+        add("float attenuation = 1.0 / (light.constant + light.linear * distance + light.quadratic * (distance * distance));");
+        add("return attenuation * light.color * diff;");
+        dedent();
+        add("}");
+
+        section();
+        add(std::format("uniform PointLight3D pointLight3D[{}];", blueprint.lightSupport.slotsPointLight3D));
+    }
+
     std::optional<uint8_t> colorSize;
     for (const VertexAttribute &attribute: blueprint.attributes) {
         if (attribute == VertexAttribute::ColorRGB) {
@@ -100,14 +137,37 @@ void ZEN::GLSLShaderBuilder::fragment(const ShaderBlueprint &blueprint) noexcept
         }
     }
 
+    // Projection uniforms
+    if (blueprint.projection == Projection::Perspective) {
+        add("uniform mat4 view;");
+        add("uniform mat4 model;");
+        add("uniform mat4 projection;");
+    }
+
     // Main function
     section();
     add("void main() {");
     indent();
-    if (colorSize.has_value()) {
-        add("FragColor = vec4(color, 1.0);");
+
+    if (blueprint.lightSupport.slotsPointLight3D > 0) {
+        add("vec3 light = vec3(0.0, 0.0, 0.0);");
+        add("for (int i = 0; i <= " + std::to_string(blueprint.lightSupport.slotsPointLight3D) + "; i++) {");
+        indent();
+        add("if (pointLight3D[i].color.r > 0 || pointLight3D[i].color.g > 0 || pointLight3D[i].color.b > 0) {");
+        indent();
+        add("light += calculatePointLight3D(pointLight3D[i]);");
+        dedent();
+        add("}");
+        dedent();
+        add("}");
     } else {
-        add("FragColor = vec4(1.0, 1.0, 1.0, 1.0);");
+        add("vec3 light = vec3(1.0, 1.0, 1.0);");
+    }
+
+    if (colorSize.has_value()) {
+        add("FragColor = vec4(color * light, 1.0);");
+    } else {
+        add("FragColor = vec4(vec3(1.0, 1.0, 1.0) * light, 1.0);");
     }
     dedent();
     add("}", false);

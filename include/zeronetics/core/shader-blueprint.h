@@ -5,6 +5,10 @@
 #include "zeronetics/core/vertices.h"
 
 namespace ZEN {
+    struct LightSupport {
+        uint16_t slotsPointLight3D = 0;
+    };
+
     /**
      * A description/request of the shader to be build by a Shader Builder.
      */
@@ -12,5 +16,7 @@ namespace ZEN {
         std::vector<VertexAttribute> attributes;
 
         Projection projection = Projection::Orthographic;
+
+        LightSupport lightSupport;
     };
 }

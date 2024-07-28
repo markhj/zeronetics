@@ -80,6 +80,8 @@ void ZEN::OpenGL::Renderer::render() {
                 continue;
             }
 
+            layer->camera3d->setOnShader("camera3d", group->shader);
+
             group->shader->set("model", mvp.model);
             group->shader->set("view", mvp.view);
             group->shader->set("projection", mvp.projection);

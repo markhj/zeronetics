@@ -49,6 +49,8 @@ namespace ZEN {
         ShaderCompilation,
         ShaderUse,
 
+        VertexDataIntegrity,
+
         /**
          * User inputs, mapping, handling of controls, etc.
          */

@@ -24,6 +24,11 @@ namespace ZEN {
          * Color (RGB)
          */
         std::optional<ColorRGB> color;
+
+        /**
+         * Normal
+         */
+        std::optional<Vec3> normal;
     };
 
     class VertexAttrName {

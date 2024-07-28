@@ -3,8 +3,13 @@
 #include "zeronetics/core/tensors.h"
 
 namespace ZEN {
-    class ITransforms3D {
+    class IPosition3D {
     public:
         Vec3 position = Vec3(0.0);
+    };
+
+    class ITransforms3D : public IPosition3D {
+    public:
+
     };
 }

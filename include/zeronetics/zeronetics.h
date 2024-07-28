@@ -40,6 +40,7 @@
 // Contracts
 #include "contracts/cameras.h"
 #include "contracts/input-manager.h"
+#include "contracts/lights.h"
 #include "contracts/render-manager.h"
 #include "contracts/renderable.h"
 #include "contracts/renderer.h"

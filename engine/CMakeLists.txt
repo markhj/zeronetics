@@ -40,6 +40,7 @@ set(CORE_SRC
 
         # Entities
         src/entities/entity.cpp
+        src/entities/3d/point-light-3d.cpp
         src/entities/3d/camera-3d.cpp
         src/entities/3d/mesh-3d.cpp)
 

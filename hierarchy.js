@@ -28,13 +28,14 @@ var hierarchy =
       ] ],
       [ "ZEN::OpenGL::StdBinding< T >", "classZEN_1_1OpenGL_1_1StdBinding.html", null ]
     ] ],
+    [ "ZEN::ICamera", "classZEN_1_1ICamera.html", null ],
     [ "ZEN::IInputManager", "classZEN_1_1IInputManager.html", [
       [ "ZEN::BaseInputManager", "classZEN_1_1BaseInputManager.html", null ],
       [ "ZEN::ControlSystems::ControlManager", "classZEN_1_1ControlSystems_1_1ControlManager.html", null ]
     ] ],
-    [ "ZEN::ILight", "structZEN_1_1ILight.html", [
-      [ "ZEN::IPointLight", "structZEN_1_1IPointLight.html", [
-        [ "ZEN::PointLight3D", "structZEN_1_1PointLight3D.html", null ]
+    [ "ZEN::ILight", "classZEN_1_1ILight.html", [
+      [ "ZEN::IPointLight", "classZEN_1_1IPointLight.html", [
+        [ "ZEN::PointLight3D", "classZEN_1_1PointLight3D.html", null ]
       ] ]
     ] ],
     [ "ZEN::ControlSystems::InputMapping", "classZEN_1_1ControlSystems_1_1InputMapping.html", null ],
@@ -47,7 +48,7 @@ var hierarchy =
           [ "ZEN::Mesh3D", "classZEN_1_1Mesh3D.html", null ]
         ] ]
       ] ],
-      [ "ZEN::PointLight3D", "structZEN_1_1PointLight3D.html", null ]
+      [ "ZEN::PointLight3D", "classZEN_1_1PointLight3D.html", null ]
     ] ],
     [ "ZEN::IRenderable", "classZEN_1_1IRenderable.html", [
       [ "ZEN::IRenderable3D", "classZEN_1_1IRenderable3D.html", null ]
@@ -87,6 +88,7 @@ var hierarchy =
     [ "ZEN::KeyDownEvent", "structZEN_1_1KeyDownEvent.html", null ],
     [ "ZEN::KeyMap", "structZEN_1_1KeyMap.html", null ],
     [ "ZEN::KeyStateEvent", "structZEN_1_1KeyStateEvent.html", null ],
+    [ "ZEN::LightSupport", "structZEN_1_1LightSupport.html", null ],
     [ "ZEN::Log", "classZEN_1_1Log.html", null ],
     [ "ZEN::LogBehavior", "structZEN_1_1LogBehavior.html", null ],
     [ "ZEN::LogFileEntry", "structZEN_1_1LogFileEntry.html", null ],

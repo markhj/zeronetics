@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['w_546',['w',['../structZEN_1_1ScreenResolution.html#a5fab5dac2e263ef0da8fdc2ca86466d7',1,'ZEN::ScreenResolution']]],
-  ['windowtitle_547',['windowTitle',['../classZEN_1_1Window.html#af1d158bd7f1fc66a9af1fb45495ff240',1,'ZEN::Window']]]
+  ['up_554',['up',['../classZEN_1_1ICamera3D.html#a1910db2e075042c786d15f3b1572250d',1,'ZEN::ICamera3D']]]
 ];

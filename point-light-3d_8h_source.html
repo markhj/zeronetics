@@ -91,17 +91,19 @@ $(document).ready(function(){initNavTree('point-light-3d_8h_source.html',''); in
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;zeronetics/contracts/lights.h&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;zeronetics/contracts/transforms.h&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;zeronetics/core/tensors.h&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceZEN.html">ZEN</a> {</div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="structZEN_1_1PointLight3D.html">    8</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structZEN_1_1PointLight3D.html">PointLight3D</a> : <span class="keyword">public</span> <a class="code" href="structZEN_1_1IPointLight.html">IPointLight</a>,</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;                          <span class="keyword">public</span> <a class="code" href="classZEN_1_1IPosition3D.html">IPosition3D</a> {</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    };</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;}</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceZEN.html">ZEN</a> {</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="classZEN_1_1PointLight3D.html">    7</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classZEN_1_1PointLight3D.html">PointLight3D</a> : <span class="keyword">public</span> <a class="code" href="classZEN_1_1IPointLight.html">IPointLight</a>,</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;                          <span class="keyword">public</span> <a class="code" href="classZEN_1_1IPosition3D.html">IPosition3D</a> {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <span class="keywordtype">void</span> setOnShader(<span class="keyword">const</span> std::string &amp;key,</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;                         <span class="keyword">const</span> std::shared_ptr&lt;ZEN::IShader&gt; &amp;shader) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    };</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div>
+<div class="ttc" id="aclassZEN_1_1IPointLight_html"><div class="ttname"><a href="classZEN_1_1IPointLight.html">ZEN::IPointLight</a></div><div class="ttdef"><b>Definition:</b> lights.h:17</div></div>
 <div class="ttc" id="aclassZEN_1_1IPosition3D_html"><div class="ttname"><a href="classZEN_1_1IPosition3D.html">ZEN::IPosition3D</a></div><div class="ttdef"><b>Definition:</b> transforms.h:6</div></div>
-<div class="ttc" id="anamespaceZEN_html"><div class="ttname"><a href="namespaceZEN.html">ZEN</a></div><div class="ttdef"><b>Definition:</b> cameras.h:6</div></div>
-<div class="ttc" id="astructZEN_1_1IPointLight_html"><div class="ttname"><a href="structZEN_1_1IPointLight.html">ZEN::IPointLight</a></div><div class="ttdef"><b>Definition:</b> lights.h:10</div></div>
-<div class="ttc" id="astructZEN_1_1PointLight3D_html"><div class="ttname"><a href="structZEN_1_1PointLight3D.html">ZEN::PointLight3D</a></div><div class="ttdef"><b>Definition:</b> point-light-3d.h:9</div></div>
+<div class="ttc" id="aclassZEN_1_1PointLight3D_html"><div class="ttname"><a href="classZEN_1_1PointLight3D.html">ZEN::PointLight3D</a></div><div class="ttdef"><b>Definition:</b> point-light-3d.h:8</div></div>
+<div class="ttc" id="anamespaceZEN_html"><div class="ttname"><a href="namespaceZEN.html">ZEN</a></div><div class="ttdef"><b>Definition:</b> cameras.h:9</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

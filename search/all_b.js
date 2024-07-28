@@ -1,16 +1,17 @@
 var searchData=
 [
-  ['life_2dcycle_20of_20a_20process_155',['Life-cycle of a process',['../process-lifecycle.html',1,'process']]],
-  ['list_20of_20modules_156',['List of modules',['../list-of-modules.html',1,'modules']]],
-  ['load_157',['load',['../classZEN_1_1File.html#a0cc4142b931d800f7de9eb90ec168ff4',1,'ZEN::File']]],
-  ['loadorcreate_158',['loadOrCreate',['../classZEN_1_1File.html#abd8403f6fd4d0f0785af38423dcbfb08',1,'ZEN::File']]],
-  ['log_159',['Log',['../classZEN_1_1Log.html',1,'ZEN']]],
-  ['log_20reports_160',['Log reports',['../log-reporting.html',1,'logging-index']]],
-  ['logaction_161',['LogAction',['../namespaceZEN.html#a6ffef313adb6e833eed3b2dc6665636a',1,'ZEN']]],
-  ['logbehavior_162',['LogBehavior',['../structZEN_1_1LogBehavior.html',1,'ZEN']]],
-  ['logcategory_163',['LogCategory',['../namespaceZEN.html#a5ac493fe076dd216cf2f69f8b01f05ef',1,'ZEN']]],
-  ['logfileentry_164',['LogFileEntry',['../structZEN_1_1LogFileEntry.html',1,'ZEN']]],
-  ['logging_165',['Logging',['../logging.html',1,'tutorials'],['../logging-index.html',1,'manual']]],
-  ['logging_20in_20engine_20development_166',['Logging in engine development',['../log-engine-dev.html',1,'logging-index']]],
-  ['loglevel_167',['LogLevel',['../namespaceZEN.html#aa69bcfc31d926753fe3879eb54886386',1,'ZEN']]]
+  ['life_2dcycle_20of_20a_20process_157',['Life-cycle of a process',['../process-lifecycle.html',1,'process']]],
+  ['lightsupport_158',['LightSupport',['../structZEN_1_1LightSupport.html',1,'ZEN']]],
+  ['list_20of_20modules_159',['List of modules',['../list-of-modules.html',1,'modules']]],
+  ['load_160',['load',['../classZEN_1_1File.html#a0cc4142b931d800f7de9eb90ec168ff4',1,'ZEN::File']]],
+  ['loadorcreate_161',['loadOrCreate',['../classZEN_1_1File.html#abd8403f6fd4d0f0785af38423dcbfb08',1,'ZEN::File']]],
+  ['log_162',['Log',['../classZEN_1_1Log.html',1,'ZEN']]],
+  ['log_20reports_163',['Log reports',['../log-reporting.html',1,'logging-index']]],
+  ['logaction_164',['LogAction',['../namespaceZEN.html#a6ffef313adb6e833eed3b2dc6665636a',1,'ZEN']]],
+  ['logbehavior_165',['LogBehavior',['../structZEN_1_1LogBehavior.html',1,'ZEN']]],
+  ['logcategory_166',['LogCategory',['../namespaceZEN.html#a5ac493fe076dd216cf2f69f8b01f05ef',1,'ZEN']]],
+  ['logfileentry_167',['LogFileEntry',['../structZEN_1_1LogFileEntry.html',1,'ZEN']]],
+  ['logging_168',['Logging',['../logging.html',1,'tutorials'],['../logging-index.html',1,'manual']]],
+  ['logging_20in_20engine_20development_169',['Logging in engine development',['../log-engine-dev.html',1,'logging-index']]],
+  ['loglevel_170',['LogLevel',['../namespaceZEN.html#aa69bcfc31d926753fe3879eb54886386',1,'ZEN']]]
 ];

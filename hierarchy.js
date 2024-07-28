@@ -32,11 +32,25 @@ var hierarchy =
       [ "ZEN::BaseInputManager", "classZEN_1_1BaseInputManager.html", null ],
       [ "ZEN::ControlSystems::ControlManager", "classZEN_1_1ControlSystems_1_1ControlManager.html", null ]
     ] ],
-    [ "ZEN::ControlSystems::InputMapping", "classZEN_1_1ControlSystems_1_1InputMapping.html", null ],
-    [ "ZEN::IRenderable", "classZEN_1_1IRenderable.html", [
-      [ "ZEN::IRenderable3D", "classZEN_1_1IRenderable3D.html", [
-        [ "ZEN::Mesh3D", "classZEN_1_1Mesh3D.html", null ]
+    [ "ZEN::ILight", "structZEN_1_1ILight.html", [
+      [ "ZEN::IPointLight", "structZEN_1_1IPointLight.html", [
+        [ "ZEN::PointLight3D", "structZEN_1_1PointLight3D.html", null ]
       ] ]
+    ] ],
+    [ "ZEN::ControlSystems::InputMapping", "classZEN_1_1ControlSystems_1_1InputMapping.html", null ],
+    [ "ZEN::IPosition3D", "classZEN_1_1IPosition3D.html", [
+      [ "ZEN::ITransforms3D", "classZEN_1_1ITransforms3D.html", [
+        [ "ZEN::ICamera3D", "classZEN_1_1ICamera3D.html", [
+          [ "ZEN::Camera3D", "classZEN_1_1Camera3D.html", null ]
+        ] ],
+        [ "ZEN::IRenderable3D", "classZEN_1_1IRenderable3D.html", [
+          [ "ZEN::Mesh3D", "classZEN_1_1Mesh3D.html", null ]
+        ] ]
+      ] ],
+      [ "ZEN::PointLight3D", "structZEN_1_1PointLight3D.html", null ]
+    ] ],
+    [ "ZEN::IRenderable", "classZEN_1_1IRenderable.html", [
+      [ "ZEN::IRenderable3D", "classZEN_1_1IRenderable3D.html", null ]
     ] ],
     [ "ZEN::IRenderer", "classZEN_1_1IRenderer.html", [
       [ "ZEN::OpenGL::Renderer", "classZEN_1_1OpenGL_1_1Renderer.html", null ]
@@ -66,12 +80,6 @@ var hierarchy =
           [ "ZEN::Cube", "classZEN_1_1Cube.html", null ]
         ] ]
       ] ]
-    ] ],
-    [ "ZEN::ITransforms3D", "classZEN_1_1ITransforms3D.html", [
-      [ "ZEN::ICamera3D", "classZEN_1_1ICamera3D.html", [
-        [ "ZEN::Camera3D", "classZEN_1_1Camera3D.html", null ]
-      ] ],
-      [ "ZEN::IRenderable3D", "classZEN_1_1IRenderable3D.html", null ]
     ] ],
     [ "ZEN::IWindow", "classZEN_1_1IWindow.html", [
       [ "ZEN::Window", "classZEN_1_1Window.html", null ]

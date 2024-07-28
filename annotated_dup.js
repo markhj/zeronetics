@@ -2,9 +2,11 @@ var annotated_dup =
 [
     [ "ZEN", "namespaceZEN.html", [
       [ "ControlSystems", null, [
+        [ "IAssist", "classZEN_1_1ControlSystems_1_1IAssist.html", "classZEN_1_1ControlSystems_1_1IAssist" ],
         [ "InputMapping", "classZEN_1_1ControlSystems_1_1InputMapping.html", "classZEN_1_1ControlSystems_1_1InputMapping" ],
         [ "SignalHandler", "classZEN_1_1ControlSystems_1_1SignalHandler.html", "classZEN_1_1ControlSystems_1_1SignalHandler" ],
-        [ "ControlManager", "classZEN_1_1ControlSystems_1_1ControlManager.html", "classZEN_1_1ControlSystems_1_1ControlManager" ]
+        [ "ControlManager", "classZEN_1_1ControlSystems_1_1ControlManager.html", "classZEN_1_1ControlSystems_1_1ControlManager" ],
+        [ "FreeCamera", "classZEN_1_1ControlSystems_1_1FreeCamera.html", "classZEN_1_1ControlSystems_1_1FreeCamera" ]
       ] ],
       [ "Gizmos", null, [
         [ "Grid3D", "classZEN_1_1Gizmos_1_1Grid3D.html", "classZEN_1_1Gizmos_1_1Grid3D" ]
@@ -46,6 +48,8 @@ var annotated_dup =
       [ "ColorRGB", "classZEN_1_1ColorRGB.html", null ],
       [ "ColorRGBA", "classZEN_1_1ColorRGBA.html", null ],
       [ "EngineInfo", "structZEN_1_1EngineInfo.html", null ],
+      [ "ViewportSize", "structZEN_1_1ViewportSize.html", "structZEN_1_1ViewportSize" ],
+      [ "Globals", "structZEN_1_1Globals.html", null ],
       [ "GPUAllocation", "structZEN_1_1GPUAllocation.html", "structZEN_1_1GPUAllocation" ],
       [ "KeyMap", "structZEN_1_1KeyMap.html", null ],
       [ "KeyStateEvent", "structZEN_1_1KeyStateEvent.html", "structZEN_1_1KeyStateEvent" ],
@@ -63,7 +67,7 @@ var annotated_dup =
       [ "RenderSettings", "structZEN_1_1RenderSettings.html", "structZEN_1_1RenderSettings" ],
       [ "ResultError", "structZEN_1_1ResultError.html", "structZEN_1_1ResultError" ],
       [ "Result", "classZEN_1_1Result.html", "classZEN_1_1Result" ],
-      [ "ScreenResolution", "structZEN_1_1ScreenResolution.html", "structZEN_1_1ScreenResolution" ],
+      [ "ScreenResolution", "structZEN_1_1ScreenResolution.html", null ],
       [ "Settings", "structZEN_1_1Settings.html", "structZEN_1_1Settings" ],
       [ "LightSupport", "structZEN_1_1LightSupport.html", "structZEN_1_1LightSupport" ],
       [ "ShaderBlueprint", "structZEN_1_1ShaderBlueprint.html", "structZEN_1_1ShaderBlueprint" ],

@@ -55,9 +55,9 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"",
-"classZEN_1_1RenderLayer.html#a578db8d909598f01e61d6cd2a102ec31",
-"namespaceZEN.html#a68b344c77c113e5bffc15e7c46c125c5add7536794b63bf90eccfd37f9b147d7f"
+"annotated.html",
+"classZEN_1_1Processor.html#a4e5a38729d0cde4110fbbaeae19d5b59",
+"namespaceZEN.html#a68b344c77c113e5bffc15e7c46c125c5ac1d9f50f86825a1a2302ec2449c17196"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

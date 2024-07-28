@@ -12,11 +12,15 @@ var hierarchy =
       ] ]
     ] ],
     [ "ZEN::File", "classZEN_1_1File.html", null ],
+    [ "ZEN::Globals", "structZEN_1_1Globals.html", null ],
     [ "ZEN::GPUAllocation", "structZEN_1_1GPUAllocation.html", null ],
     [ "ZEN::Gizmos::Grid3D", "classZEN_1_1Gizmos_1_1Grid3D.html", null ],
     [ "ZEN::HasUniqueId", "classZEN_1_1HasUniqueId.html", [
       [ "ZEN::Process", "classZEN_1_1Process.html", null ],
       [ "ZEN::RenderLayer", "classZEN_1_1RenderLayer.html", null ]
+    ] ],
+    [ "ZEN::ControlSystems::IAssist", "classZEN_1_1ControlSystems_1_1IAssist.html", [
+      [ "ZEN::ControlSystems::FreeCamera", "classZEN_1_1ControlSystems_1_1FreeCamera.html", null ]
     ] ],
     [ "ZEN::OpenGL::IBindable< T >", "classZEN_1_1OpenGL_1_1IBindable.html", [
       [ "ZEN::OpenGL::StdBinding< gl_uint >", "classZEN_1_1OpenGL_1_1StdBinding.html", [
@@ -110,7 +114,6 @@ var hierarchy =
     ] ],
     [ "ZEN::RenderSettings", "structZEN_1_1RenderSettings.html", null ],
     [ "ZEN::ResultError", "structZEN_1_1ResultError.html", null ],
-    [ "ZEN::ScreenResolution", "structZEN_1_1ScreenResolution.html", null ],
     [ "ZEN::Settings", "structZEN_1_1Settings.html", null ],
     [ "ZEN::ShaderBlueprint", "structZEN_1_1ShaderBlueprint.html", null ],
     [ "ZEN::ControlSystems::SignalHandler", "classZEN_1_1ControlSystems_1_1SignalHandler.html", null ],
@@ -136,5 +139,8 @@ var hierarchy =
     [ "ZEN::Vertex3D", "structZEN_1_1Vertex3D.html", null ],
     [ "ZEN::VertexAttrName", "classZEN_1_1VertexAttrName.html", null ],
     [ "ZEN::VertexAttrSize", "classZEN_1_1VertexAttrSize.html", null ],
-    [ "ZEN::Vertices", "classZEN_1_1Vertices.html", null ]
+    [ "ZEN::Vertices", "classZEN_1_1Vertices.html", null ],
+    [ "ZEN::ViewportSize", "structZEN_1_1ViewportSize.html", [
+      [ "ZEN::ScreenResolution", "structZEN_1_1ScreenResolution.html", null ]
+    ] ]
 ];

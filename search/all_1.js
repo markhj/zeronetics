@@ -9,7 +9,8 @@ var searchData=
   ['append_7',['append',['../classZEN_1_1File.html#a184a875338f6c6e7106dec3219012659',1,'ZEN::File']]],
   ['architecture_8',['Architecture',['../arch.html',1,'engine-arch']]],
   ['aspectratio_9',['aspectRatio',['../classZEN_1_1Camera3D.html#a58cebc10675174daf11ee061689d3686',1,'ZEN::Camera3D']]],
-  ['attach_10',['attach',['../classZEN_1_1Processor.html#a4e5a38729d0cde4110fbbaeae19d5b59',1,'ZEN::Processor']]],
-  ['attachlayer_11',['attachLayer',['../classZEN_1_1IRenderManager.html#a07b9ba226b6c5a391375f9aa8815b8a3',1,'ZEN::IRenderManager::attachLayer()'],['../classZEN_1_1RenderManager.html#a961af51876407ab646d0a529dcd09de4',1,'ZEN::RenderManager::attachLayer()']]],
-  ['attachobserver_12',['attachObserver',['../classZEN_1_1BeingObserved.html#aa2cbb8b388fda0be3173ebbf1fbf42dd',1,'ZEN::BeingObserved']]]
+  ['assists_10',['assists',['../classZEN_1_1ControlSystems_1_1ControlManager.html#ab3a0becf9e7f830cd7bacd983fddb1b2',1,'ZEN::ControlSystems::ControlManager']]],
+  ['attach_11',['attach',['../classZEN_1_1Processor.html#a4e5a38729d0cde4110fbbaeae19d5b59',1,'ZEN::Processor']]],
+  ['attachlayer_12',['attachLayer',['../classZEN_1_1IRenderManager.html#a07b9ba226b6c5a391375f9aa8815b8a3',1,'ZEN::IRenderManager::attachLayer()'],['../classZEN_1_1RenderManager.html#a961af51876407ab646d0a529dcd09de4',1,'ZEN::RenderManager::attachLayer()']]],
+  ['attachobserver_13',['attachObserver',['../classZEN_1_1BeingObserved.html#aa2cbb8b388fda0be3173ebbf1fbf42dd',1,'ZEN::BeingObserved']]]
 ];

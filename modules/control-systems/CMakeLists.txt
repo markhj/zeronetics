@@ -3,7 +3,9 @@ project(control-systems)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_library(control-systems STATIC src/control-assist.cpp)
+add_library(control-systems STATIC
+        src/control-assist.cpp
+        src/free-camera.cpp)
 
 target_link_libraries(control-systems PRIVATE zeronetics)
 

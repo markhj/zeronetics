@@ -18,6 +18,7 @@
 
 // Core: 2nd Level
 #include "core/engine-info.h"
+#include "core/globals.h"
 #include "core/gpu-alloc.h"
 #include "core/inputs.h"
 #include "core/io.h"

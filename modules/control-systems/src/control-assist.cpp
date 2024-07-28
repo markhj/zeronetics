@@ -24,6 +24,9 @@ void ZEN::ControlSystems::ControlManager::onKeyStateChanged(const KeyStateEvent 
 }
 
 void ZEN::ControlSystems::ControlManager::onMouseMoved(const MouseMovedEvent &mouseMovedEvent) {
+    for (std::shared_ptr<IAssist> &assist: assists) {
+        assist->onMouseMoved(mouseMovedEvent);
+    }
 }
 
 void ZEN::ControlSystems::ControlManager::process(ZEN::dt_float delta) {
@@ -31,10 +34,13 @@ void ZEN::ControlSystems::ControlManager::process(ZEN::dt_float delta) {
         return;
     }
 
+    std::vector<std::string> activeSignals = {};
+
     std::for_each(m_keysDown.begin(), m_keysDown.end(), [&](const Key &key) {
         std::optional<const char *> signal = inputMapping->getSignal(KeyDownEvent{key});
         if (signal.has_value()) {
             signalHandler->invoke(signal.value(), delta);
+            activeSignals.emplace_back(signal.value());
         }
     });
 
@@ -42,8 +48,16 @@ void ZEN::ControlSystems::ControlManager::process(ZEN::dt_float delta) {
         std::optional<const char *> signal = inputMapping->getSignal(MouseButtonDownEvent{mouseButton});
         if (signal.has_value()) {
             signalHandler->invoke(signal.value(), delta);
+            auto it = std::find(activeSignals.begin(), activeSignals.end(), signal.value());
+            if (it == activeSignals.end()) {
+                activeSignals.emplace_back(signal.value());
+            }
         }
     });
+
+    for (std::shared_ptr<IAssist> &assist: assists) {
+        assist->process(delta, activeSignals);
+    }
 }
 
 void ZEN::ControlSystems::ControlManager::onMouseButtonStateChanged(const ZEN::MouseButtonStateEvent &mouseButtonStateEvent) {

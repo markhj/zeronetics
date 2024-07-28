@@ -1,5 +1,6 @@
 #pragma once
 
+#include <cstdint>
 namespace ZEN {
     /**
      * Indicates if a key has just been pressed,
@@ -220,5 +221,9 @@ namespace ZEN {
     enum class Projection {
         Orthographic,
         Perspective,
+    };
+
+    struct ViewportSize {
+        uint16_t w, h;
     };
 }

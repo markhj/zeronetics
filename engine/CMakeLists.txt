@@ -16,6 +16,7 @@ set(CORE_SRC
         src/core/timer.cpp
         src/core/observer.cpp
         src/process/process.cpp
+        src/core/globals.cpp
 
         # Core: 3rd layer
         src/core/aabb.cpp

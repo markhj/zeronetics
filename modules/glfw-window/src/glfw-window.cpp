@@ -1,5 +1,6 @@
 #include "glfw-window/glfw-window.h"
 #include "zeronetics/core/inputs.h"
+#include "zeronetics/core/globals.h"
 #include "zeronetics/logging/logging.h"
 
 #include <optional>
@@ -122,6 +123,8 @@ void ZEN::Window::generate(const ZEN::Settings &settings) noexcept(false) {
                                   windowTitle,
                                   nullptr,
                                   nullptr);
+
+    ZEN::Globals::viewportSize = settings.screenResolution;
 
     glfwMakeContextCurrent(glfwWindow);
 

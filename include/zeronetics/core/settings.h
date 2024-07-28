@@ -1,22 +1,13 @@
 #pragma once
 
+#include "zeronetics/core/enums.h"
 #include <cstdint>
 
 namespace ZEN {
     /**
      * Screen resolution with width and height.
      */
-    struct ScreenResolution {
-        /**
-         * Screen width in pixels.
-         */
-        uint16_t w;
-
-        /**
-         * Screen height in pixels.
-         */
-        uint16_t h;
-    };
+    struct ScreenResolution : public ViewportSize {};
 
     /**
      * Hardware settings, including graphics and audio.

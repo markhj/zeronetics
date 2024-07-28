@@ -1,9 +1,22 @@
 #pragma once
 
+#include "zeronetics/core/typedefs.h"
 #include "zeronetics/contracts/input-manager.h"
+
 #include <functional>
+#include <vector>
+#include <string>
 
 namespace ZEN::ControlSystems {
+    class IAssist {
+    public:
+        virtual void process(dt_float delta,
+                             const std::vector<std::string> &signals) = 0;
+
+        virtual void onMouseMoved(const MouseMovedEvent &mouseMovedEvent) = 0;
+
+    };
+
     /**
      * Mapping of user inputs across various control interfaces.
      *
@@ -167,6 +180,11 @@ namespace ZEN::ControlSystems {
          * Current signal handler, if any
          */
         std::shared_ptr<SignalHandler> signalHandler;
+
+        /**
+         * List of assists.
+         */
+        std::vector<std::shared_ptr<IAssist>> assists;
 
     private:
         void process(dt_float delta) override;

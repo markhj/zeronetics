@@ -5,6 +5,7 @@
 ZEN::RenderLayer ZEN::Gizmos::Grid3D::generate() {
     RenderLayer renderLayer(m_attributes);
     renderLayer.settings.draw = DrawPrimitive::Lines;
+    renderLayer.settings.lineSize = 2.0;
 
     std::vector<Vertex3D> vertices;
     gw_float lineLength = static_cast<gw_float>(lines) * spacing;

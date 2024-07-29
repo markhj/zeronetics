@@ -51,6 +51,8 @@ namespace {
 
     void processSettings(const ZEN::RenderSettings &settings) {
         setEnum(GL_DEPTH_TEST, settings.depthTesting);
+
+        glLineWidth(settings.lineSize);
     }
 }
 

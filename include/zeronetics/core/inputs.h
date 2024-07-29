@@ -43,7 +43,14 @@ namespace ZEN {
      * if "ESC" has just been released.
      */
     struct KeyStateEvent {
+        /**
+         * The new state of the key (e.g. released)
+         */
         KeyState keyState;
+
+        /**
+         * The key.
+         */
         Key key;
     };
 
@@ -51,7 +58,14 @@ namespace ZEN {
      * Event for when a mouse button state changes.
      */
     struct MouseButtonStateEvent {
+        /**
+         * The new state of the mouse button (e.g. released)
+         */
         MouseButtonState mouseButtonState;
+
+        /**
+         * The specific mouse button.
+         */
         MouseButton mouseButton;
     };
 
@@ -59,10 +73,16 @@ namespace ZEN {
      * When a key is held down.
      */
     struct KeyDownEvent {
+        /**
+         * The key which is held down.
+         */
         Key key;
     };
 
     struct MouseButtonDownEvent {
+        /**
+         * The specific mouse button which is held down.
+         */
         MouseButton mouseButton;
     };
 

@@ -42,6 +42,12 @@ namespace ZEN {
          */
         [[nodiscard]] MVP getModelViewProjection() const noexcept override;
 
+        /**
+         * Instruct the shader on properties of this camera.
+         *
+         * @param key
+         * @param shader
+         */
         void setOnShader(const std::string &key,
                          const std::shared_ptr<IShader> &shader) override;
     };

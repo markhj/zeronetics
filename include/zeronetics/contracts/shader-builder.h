@@ -25,6 +25,13 @@ namespace ZEN {
      */
     class IShaderBuilder {
     public:
+        /**
+         * Create the shader code based on the blueprint and shader stage.
+         *
+         * @param blueprint
+         * @param shaderStage
+         * @return
+         */
         virtual std::optional<std::string> make(const ShaderBlueprint &blueprint,
                                                 ShaderStage shaderStage) noexcept(false) = 0;
     };

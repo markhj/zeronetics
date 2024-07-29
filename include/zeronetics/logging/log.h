@@ -26,22 +26,9 @@ namespace ZEN {
      */
     enum class LogCategory {
         None,
-
         Critical,
-
-        /**
-         * General information, not fit for other categories.
-         */
         Info,
-
-        /**
-         * Errors related to the file system, such as loading files
-         */
         FileSystem,
-
-        /**
-         * Rendering or renderer related information.
-         */
         RendererInit,
         Rendering,
         RendererInternals,
@@ -50,15 +37,7 @@ namespace ZEN {
         ShaderUse,
 
         VertexDataIntegrity,
-
-        /**
-         * User inputs, mapping, handling of controls, etc.
-         */
         Controls,
-
-        /**
-         * Related to the management and life-cycle of processes.
-         */
         Process,
     };
 

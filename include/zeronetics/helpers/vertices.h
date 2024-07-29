@@ -7,6 +7,21 @@
 namespace ZEN {
     class Vertices {
     public:
+        /**
+         * Build a "flat" vector of floats with the values of
+         * a vertex in the order provided by attributes.
+         *
+         * Example: If attributes consists of 3D position and RGB
+         *      color, the output will be floats representing:
+         *      X Y Z R G B
+         *
+         * This method is useful for translating vertex data to
+         * some renderers.
+         *
+         * @param vertex
+         * @param attributes
+         * @return
+         */
         static std::vector<gw_float> flattenVertex3D(const Vertex3D &vertex,
                                                      const std::vector<VertexAttribute> &attributes);
 

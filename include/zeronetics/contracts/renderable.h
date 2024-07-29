@@ -16,9 +16,17 @@ namespace ZEN {
         std::optional<GPUAllocation> gpuAlloc;
     };
 
+    /**
+     * Contract for 3D Renderable
+     */
     class IRenderable3D : public IRenderable,
                           public ITransforms3D {
     public:
+        /**
+         * Get the vertices which make up the renderable.
+         *
+         * @return
+         */
         [[nodiscard]] virtual std::vector<Vertex3D> getVertices() const noexcept = 0;
     };
 }

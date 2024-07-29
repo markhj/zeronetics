@@ -7,8 +7,18 @@
 #include "zeronetics/core/tensors.h"
 
 namespace ZEN {
+    /**
+     * Camera Contract
+     */
     class ICamera {
     public:
+        /**
+         * All cameras must implement a function which can specify
+         * uniform data about the camera on a shader.
+         *
+         * @param key
+         * @param shader
+         */
         virtual void setOnShader(const std::string &key,
                                  const std::shared_ptr<IShader> &shader) = 0;
 
@@ -38,6 +48,12 @@ namespace ZEN {
          */
         [[nodiscard]] virtual MVP getModelViewProjection() const noexcept = 0;
 
+        /**
+         * Set information about the camera on the shader.
+         *
+         * @param key
+         * @param shader
+         */
         virtual void setOnShader(const std::string &key,
                                  const std::shared_ptr<IShader> &shader) = 0;
 

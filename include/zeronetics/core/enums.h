@@ -1,6 +1,7 @@
 #pragma once
 
 #include <cstdint>
+
 namespace ZEN {
     /**
      * Indicates if a key has just been pressed,
@@ -84,9 +85,23 @@ namespace ZEN {
         Esc = 256,
     };
 
+    /**
+     * OS/Platform
+     */
     enum class Platform {
+        /**
+         * Any Windows version.
+         */
         Windows,
+
+        /**
+         * Any Linux distribution.
+         */
         Linux,
+
+        /**
+         * MAC
+         */
         Mac,
     };
 
@@ -102,7 +117,16 @@ namespace ZEN {
      * Mouse buttons
      */
     enum class MouseButton {
+        /**
+         * Usually the left mouse button, but left-handed users
+         * may have mirrored settings on their system, and in those
+         * cases the primary button will be the right.
+         */
         PrimaryMouseButton,
+
+        /**
+         * Usually the right mouse button.
+         */
         SecondaryMouseButton,
     };
 
@@ -164,8 +188,19 @@ namespace ZEN {
      * to a ZEN::IRenderer.
      */
     enum class RenderManagerRequest {
+        /**
+         * Allocate an object on the GPU.
+         */
         Allocate,
+
+        /**
+         * De-allocate an object from GPU memory.
+         */
         Deallocate,
+
+        /**
+         * Make updates to an allocated space in the GPU memory.
+         */
         Update,
     };
 
@@ -218,11 +253,24 @@ namespace ZEN {
         Triangles,
     };
 
+    /**
+     * Enum class representing different types of projection in 3D graphics.
+     */
     enum class Projection {
+        /**
+         * Objects are the same size regardless of depth
+         */
         Orthographic,
+
+        /**
+         * Objects appear smaller as they are farther away
+         */
         Perspective,
     };
 
+    /**
+     * Size of the viewport.
+     */
     struct ViewportSize {
         uint16_t w, h;
     };

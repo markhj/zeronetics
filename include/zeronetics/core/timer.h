@@ -11,8 +11,16 @@ namespace ZEN {
      * The value is by default given in microseconds.
      */
     struct TimeMeasurement {
+        /**
+         * Micro-seconds
+         */
         long long microsecs = 0;
 
+        /**
+         * Convert micro-seconds to seconds.
+         *
+         * @return
+         */
         float toSeconds() const noexcept;
     };
 

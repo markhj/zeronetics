@@ -51,14 +51,6 @@ namespace ZEN {
     typedef unsigned int gpu_alloc_int;
 
     /**
-     * The type for storing and reading elapsed time between
-     * frames in the game loop.
-     *
-     * @ref fps
-     */
-    typedef long long render_time_microsecs;
-
-    /**
      * Value for frames per second (FPS)
      *
      * @ref fps

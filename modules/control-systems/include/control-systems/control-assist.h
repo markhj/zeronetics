@@ -12,16 +12,21 @@ namespace ZEN::ControlSystems {
         std::vector<const char *> signals;
     };
 
-    class IAssist {
+    class Assist {
     public:
         virtual void process(dt_float delta,
                              const std::vector<std::string> &signals) = 0;
 
         virtual void onMouseMoved(const MouseMovedEvent &mouseMovedEvent) = 0;
 
-        virtual bool isInitialized() const noexcept = 0;
-
         virtual AssistInitialization initialize() = 0;
+
+        AssistInitialization start();
+
+        bool isInitialized() const noexcept;
+
+    private:
+        bool m_initialized = false;
 
     };
 
@@ -193,7 +198,7 @@ namespace ZEN::ControlSystems {
          */
         std::shared_ptr<SignalHandler> signalHandler;
 
-        void attachAssist(const std::shared_ptr<IAssist> &assist) noexcept;
+        void attachAssist(const std::shared_ptr<Assist> &assist) noexcept;
 
     private:
         void process(dt_float delta) override;
@@ -210,6 +215,6 @@ namespace ZEN::ControlSystems {
         /**
          * List of assists.
          */
-        std::vector<std::shared_ptr<IAssist>> assists;
+        std::vector<std::shared_ptr<Assist>> assists;
     };
 }

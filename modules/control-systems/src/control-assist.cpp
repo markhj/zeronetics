@@ -24,7 +24,7 @@ void ZEN::ControlSystems::ControlManager::onKeyStateChanged(const KeyStateEvent 
 }
 
 void ZEN::ControlSystems::ControlManager::onMouseMoved(const MouseMovedEvent &mouseMovedEvent) {
-    for (std::shared_ptr<IAssist> &assist: assists) {
+    for (std::shared_ptr<Assist> &assist: assists) {
         assist->onMouseMoved(mouseMovedEvent);
     }
 }
@@ -55,7 +55,7 @@ void ZEN::ControlSystems::ControlManager::process(ZEN::dt_float delta) {
         }
     });
 
-    for (std::shared_ptr<IAssist> &assist: assists) {
+    for (std::shared_ptr<Assist> &assist: assists) {
         assist->process(delta, activeSignals);
     }
 }
@@ -80,7 +80,7 @@ void ZEN::ControlSystems::ControlManager::onMouseButtonStateChanged(const ZEN::M
     signalHandler->invoke(signal.value(), std::nullopt);
 }
 
-void ZEN::ControlSystems::ControlManager::attachAssist(const std::shared_ptr<IAssist> &assist) noexcept {
+void ZEN::ControlSystems::ControlManager::attachAssist(const std::shared_ptr<Assist> &assist) noexcept {
     assists.emplace_back(assist);
     auto init = assist->initialize();
 
@@ -196,4 +196,13 @@ void ZEN::ControlSystems::SignalHandler::on(const char *signal, const std::funct
 
 void ZEN::ControlSystems::SignalHandler::lockSignals(const std::vector<const char *> &signals) noexcept {
     m_lockedSignals.insert(m_lockedSignals.end(), signals.begin(), signals.end());
+}
+
+bool ZEN::ControlSystems::Assist::isInitialized() const noexcept {
+    return m_initialized;
+}
+
+ZEN::ControlSystems::AssistInitialization ZEN::ControlSystems::Assist::start() {
+    m_initialized = true;
+    return initialize();
 }

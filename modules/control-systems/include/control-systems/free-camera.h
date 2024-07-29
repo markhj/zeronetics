@@ -8,7 +8,7 @@
 #include <vector>
 
 namespace ZEN::ControlSystems {
-    class FreeCamera : public IAssist {
+    class FreeCamera : public Assist {
     public:
         /**
          * Order: Forward, Left, Backward, Right
@@ -25,13 +25,9 @@ namespace ZEN::ControlSystems {
 
         void onMouseMoved(const MouseMovedEvent &mouseMovedEvent) override;
 
-        bool isInitialized() const noexcept override;
-
         AssistInitialization initialize() override;
 
     private:
-        bool initialized = false;
-
         gw_float xzAngle = 0.0,
                  yAngle = 0.0;
     };

@@ -67,10 +67,6 @@ void ZEN::ControlSystems::FreeCamera::onMouseMoved(const ZEN::MouseMovedEvent &m
     camera3d->target = camera3d->position + Vec3(sin(xzAngle), sin(M_PI * 0.5 * yAngle), cos(xzAngle));
 }
 
-bool ZEN::ControlSystems::FreeCamera::isInitialized() const noexcept {
-    return initialized;
-}
-
 ZEN::ControlSystems::AssistInitialization ZEN::ControlSystems::FreeCamera::initialize() {
     xzAngle = atan2(camera3d->target.z - camera3d->position.z, camera3d->target.x - camera3d->position.x);
     yAngle = atan2(camera3d->target.y, camera3d->position.y);
@@ -79,8 +75,6 @@ ZEN::ControlSystems::AssistInitialization ZEN::ControlSystems::FreeCamera::initi
     std::for_each(signals.begin(), signals.end(), [&](const auto &item) {
         res.emplace_back(item);
     });
-
-    initialized = true;
 
     return {
             .signals = res,

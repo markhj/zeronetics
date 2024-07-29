@@ -1,9 +1,5 @@
 var NAVTREEINDEX2 =
 {
-"namespaceZEN.html#a68b344c77c113e5bffc15e7c46c125c5a892a245e287c163080b23db737d3c4c9":[6,0,0,109,34],
-"namespaceZEN.html#a68b344c77c113e5bffc15e7c46c125c5a8d9c307cb7f3c4a32822a51922d1ceaa":[6,0,0,109,13],
-"namespaceZEN.html#a68b344c77c113e5bffc15e7c46c125c5a8f3ef772e7594d7bfa750070d97e40b9":[6,0,0,109,44],
-"namespaceZEN.html#a68b344c77c113e5bffc15e7c46c125c5a91f4253ca587ca8ac4e63b9ceb351f5d":[6,0,0,109,58],
 "namespaceZEN.html#a68b344c77c113e5bffc15e7c46c125c5a96f9c4eb595a467d02e35c723f63ebf7":[6,0,0,109,54],
 "namespaceZEN.html#a68b344c77c113e5bffc15e7c46c125c5a982621712db76f723b7bb88b631dc64d":[6,0,0,109,51],
 "namespaceZEN.html#a68b344c77c113e5bffc15e7c46c125c5a9d5ed678fe57bcca610140957afab571":[6,0,0,109,1],
@@ -244,5 +240,9 @@ var NAVTREEINDEX2 =
 "tutorials.html#autotoc_md35":[3],
 "tutorials.html#autotoc_md36":[4],
 "vertices.html":[2,5,2],
-"vertices.html#autotoc_md70":[6]
+"vertices.html#autotoc_md70":[6],
+"":[6,0,0,11],
+"":[6,0,0,14],
+"":[6,0,0,12],
+"":[6,0,0,13]
 };

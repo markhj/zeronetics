@@ -13,10 +13,20 @@ and learning purposes.
 
 ## 🌿 Features
 
-**Decoupling and modularity** makes it easy to swap modules. For example, you
+🔨 **Code-first** **3D game engine** providing you with a
+growing list of tools to build games and graphics applications.
+
+🎮 **Controls** are easy to set up and manage with a flexible and swappable
+mappings. Using **Control Assist Systems** it's even easy to create common
+use-cases such as free-moving camera.
+
+✏️ Zeronetics comes bundled with an **Editor** used to visually create
+your game world.
+
+📦 **Decoupling and modularity** makes it easy to swap modules. For example, you
 could replace the "out of the box"-OpenGL renderer with your own.
 
-... That's about it for now 😐 This is, like, version ``0.1.x``.
+_**More to be added as the project grows**_ 😊
 
 ## 🪲 Requests and bugs
 

@@ -124,6 +124,8 @@ void ZEN::Window::generate(const ZEN::Settings &settings) noexcept(false) {
                                   nullptr,
                                   nullptr);
 
+    glfwSwapInterval(settings.vSync ? 1 : 0);
+
     ZEN::Globals::viewportSize = settings.screenResolution;
 
     glfwMakeContextCurrent(glfwWindow);

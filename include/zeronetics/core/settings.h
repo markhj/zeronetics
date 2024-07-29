@@ -24,5 +24,10 @@ namespace ZEN {
          * Anti-alias.
          */
         AntiAlias antiAlias = AntiAlias::MSAA4X;
+
+        /**
+         * Vertical sync. (V-Sync)
+         */
+        bool vSync = true;
     };
 }

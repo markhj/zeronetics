@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['normal_546',['normal',['../structZEN_1_1Vertex3D.html#a951c4cbfb269d8a2f115e20136532797',1,'ZEN::Vertex3D']]]
+  ['of_544',['of',['../structZEN_1_1Observation.html#a660497889f2d3611d98cc1da6ee979a6',1,'ZEN::Observation']]]
 ];

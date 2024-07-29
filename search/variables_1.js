@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['behaviors_531',['behaviors',['../classZEN_1_1Log.html#adb81df76548e8d2d007f52e56f84171d',1,'ZEN::Log']]],
-  ['blacklistcategories_532',['blacklistCategories',['../classZEN_1_1Log.html#a8b16731d9cd3c5ec6efa8f6cb0bf249f',1,'ZEN::Log']]]
+  ['behaviors_529',['behaviors',['../classZEN_1_1Log.html#adb81df76548e8d2d007f52e56f84171d',1,'ZEN::Log']]],
+  ['blacklistcategories_530',['blacklistCategories',['../classZEN_1_1Log.html#a8b16731d9cd3c5ec6efa8f6cb0bf249f',1,'ZEN::Log']]]
 ];

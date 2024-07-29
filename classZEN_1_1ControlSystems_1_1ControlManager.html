@@ -85,7 +85,6 @@ $(document).ready(function(){initNavTree('classZEN_1_1ControlSystems_1_1ControlM
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="classZEN_1_1ControlSystems_1_1ControlManager-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ZEN::ControlSystems::ControlManager Class Reference</div>  </div>
@@ -106,52 +105,20 @@ Collaboration diagram for ZEN::ControlSystems::ControlManager:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a95b5f7e450f18fb2f6a6f6e0b0893d5b"><td class="memItemLeft" align="right" valign="top"><a id="a95b5f7e450f18fb2f6a6f6e0b0893d5b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setInputMapping</b> (const std::shared_ptr&lt; <a class="el" href="classZEN_1_1ControlSystems_1_1InputMapping.html">InputMapping</a> &gt; &amp;inputMapping)</td></tr>
+<tr class="separator:a95b5f7e450f18fb2f6a6f6e0b0893d5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97bc23b5084c33f8a64293c07afe9d40"><td class="memItemLeft" align="right" valign="top"><a id="a97bc23b5084c33f8a64293c07afe9d40"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setSignalHandler</b> (const std::shared_ptr&lt; <a class="el" href="classZEN_1_1ControlSystems_1_1SignalHandler.html">SignalHandler</a> &gt; &amp;signalHandler)</td></tr>
+<tr class="separator:a97bc23b5084c33f8a64293c07afe9d40"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8975c23ba9e8ce2ff20d23c60d00206"><td class="memItemLeft" align="right" valign="top"><a id="aa8975c23ba9e8ce2ff20d23c60d00206"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>attachAssist</b> (const std::shared_ptr&lt; <a class="el" href="classZEN_1_1ControlSystems_1_1Assist.html">Assist</a> &gt; &amp;assist) noexcept</td></tr>
 <tr class="separator:aa8975c23ba9e8ce2ff20d23c60d00206"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a210406c601b78a8dc3147caac63d315f"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classZEN_1_1ControlSystems_1_1InputMapping.html">InputMapping</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1ControlSystems_1_1ControlManager.html#a210406c601b78a8dc3147caac63d315f">inputMapping</a></td></tr>
-<tr class="separator:a210406c601b78a8dc3147caac63d315f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57894cd519db7b2bf90e70278048a6ad"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classZEN_1_1ControlSystems_1_1SignalHandler.html">SignalHandler</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1ControlSystems_1_1ControlManager.html#a57894cd519db7b2bf90e70278048a6ad">signalHandler</a></td></tr>
-<tr class="separator:a57894cd519db7b2bf90e70278048a6ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A more fully-fledged implementation of <a class="el" href="classZEN_1_1IInputManager.html">ZEN::IInputManager</a>, which helps you manage a wider range of controls "out of the box", utilizing an easy mapping system.</p>
 <p><a class="el" href="control-systems.html">Control Systems</a> </p>
-</div><h2 class="groupheader">Member Data Documentation</h2>
-<a id="a210406c601b78a8dc3147caac63d315f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a210406c601b78a8dc3147caac63d315f">&#9670;&nbsp;</a></span>inputMapping</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::shared_ptr&lt;<a class="el" href="classZEN_1_1ControlSystems_1_1InputMapping.html">InputMapping</a>&gt; ZEN::ControlSystems::ControlManager::inputMapping</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Current input mapping, if any </p>
-
-</div>
-</div>
-<a id="a57894cd519db7b2bf90e70278048a6ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a57894cd519db7b2bf90e70278048a6ad">&#9670;&nbsp;</a></span>signalHandler</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::shared_ptr&lt;<a class="el" href="classZEN_1_1ControlSystems_1_1SignalHandler.html">SignalHandler</a>&gt; ZEN::ControlSystems::ControlManager::signalHandler</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Current signal handler, if any </p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following files:<ul>
+</div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>modules/control-systems/include/control-systems/<a class="el" href="control-assist_8h_source.html">control-assist.h</a></li>
 <li>modules/control-systems/src/control-assist.cpp</li>
 </ul>

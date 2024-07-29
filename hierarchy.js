@@ -1,6 +1,10 @@
 var hierarchy =
 [
     [ "ZEN::AABB3D", "classZEN_1_1AABB3D.html", null ],
+    [ "ZEN::ControlSystems::Assist", "classZEN_1_1ControlSystems_1_1Assist.html", [
+      [ "ZEN::ControlSystems::FreeCamera", "classZEN_1_1ControlSystems_1_1FreeCamera.html", null ]
+    ] ],
+    [ "ZEN::ControlSystems::AssistInitialization", "structZEN_1_1ControlSystems_1_1AssistInitialization.html", null ],
     [ "ZEN::BeingObserved", "classZEN_1_1BeingObserved.html", [
       [ "ZEN::Game", "classZEN_1_1Game.html", null ]
     ] ],
@@ -18,9 +22,6 @@ var hierarchy =
     [ "ZEN::HasUniqueId", "classZEN_1_1HasUniqueId.html", [
       [ "ZEN::Process", "classZEN_1_1Process.html", null ],
       [ "ZEN::RenderLayer", "classZEN_1_1RenderLayer.html", null ]
-    ] ],
-    [ "ZEN::ControlSystems::IAssist", "classZEN_1_1ControlSystems_1_1IAssist.html", [
-      [ "ZEN::ControlSystems::FreeCamera", "classZEN_1_1ControlSystems_1_1FreeCamera.html", null ]
     ] ],
     [ "ZEN::OpenGL::IBindable< T >", "classZEN_1_1OpenGL_1_1IBindable.html", [
       [ "ZEN::OpenGL::StdBinding< gl_uint >", "classZEN_1_1OpenGL_1_1StdBinding.html", [

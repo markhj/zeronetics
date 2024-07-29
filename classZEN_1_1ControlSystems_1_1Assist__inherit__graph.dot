@@ -1,9 +1,9 @@
-digraph "ZEN::ControlSystems::IAssist"
+digraph "ZEN::ControlSystems::Assist"
 {
  // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="ZEN::ControlSystems\l::IAssist",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 [label="ZEN::ControlSystems\l::Assist",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="ZEN::ControlSystems\l::FreeCamera",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classZEN_1_1ControlSystems_1_1FreeCamera.html",tooltip=" "];
 }

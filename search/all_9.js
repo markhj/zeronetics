@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['iassist_115',['IAssist',['../classZEN_1_1ControlSystems_1_1IAssist.html',1,'ZEN::ControlSystems']]],
   ['ibindable_116',['IBindable',['../classZEN_1_1OpenGL_1_1IBindable.html',1,'ZEN::OpenGL']]],
   ['icamera_117',['ICamera',['../classZEN_1_1ICamera.html',1,'ZEN']]],
   ['icamera3d_118',['ICamera3D',['../classZEN_1_1ICamera3D.html',1,'ZEN']]],

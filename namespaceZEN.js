@@ -32,7 +32,8 @@ var namespaceZEN =
     [ "📚 Organization", "tests.html#autotoc_md124", null ],
     [ "📦 Payloads", "tests.html#autotoc_md125", null ],
     [ "ControlSystems", null, [
-      [ "IAssist", "classZEN_1_1ControlSystems_1_1IAssist.html", "classZEN_1_1ControlSystems_1_1IAssist" ],
+      [ "AssistInitialization", "structZEN_1_1ControlSystems_1_1AssistInitialization.html", "structZEN_1_1ControlSystems_1_1AssistInitialization" ],
+      [ "Assist", "classZEN_1_1ControlSystems_1_1Assist.html", "classZEN_1_1ControlSystems_1_1Assist" ],
       [ "InputMapping", "classZEN_1_1ControlSystems_1_1InputMapping.html", "classZEN_1_1ControlSystems_1_1InputMapping" ],
       [ "SignalHandler", "classZEN_1_1ControlSystems_1_1SignalHandler.html", "classZEN_1_1ControlSystems_1_1SignalHandler" ],
       [ "ControlManager", "classZEN_1_1ControlSystems_1_1ControlManager.html", "classZEN_1_1ControlSystems_1_1ControlManager" ],

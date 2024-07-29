@@ -105,16 +105,26 @@ Collaboration diagram for ZEN::ControlSystems::FreeCamera:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a2312699985ee2b3b6e122c57c5f508d9"><td class="memItemLeft" align="right" valign="top"><a id="a2312699985ee2b3b6e122c57c5f508d9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>process</b> (<a class="el" href="namespaceZEN.html#a1896aa89c3b0bbcccbd1b16d57410502">dt_float</a> delta, const std::vector&lt; std::string &gt; &amp;<a class="el" href="classZEN_1_1ControlSystems_1_1FreeCamera.html#ac4f5c787c6fc8821048d1be405604892">signals</a>) override</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>process</b> (<a class="el" href="namespaceZEN.html#a1896aa89c3b0bbcccbd1b16d57410502">dt_float</a> delta, const std::vector&lt; std::string &gt; &amp;<a class="el" href="classZEN_1_1ControlSystems_1_1FreeCamera.html#a392188dbfa4024119f6b34ee681f3509">signals</a>) override</td></tr>
 <tr class="separator:a2312699985ee2b3b6e122c57c5f508d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1d3908c114ff26f4ac1a3b7bc39cee5"><td class="memItemLeft" align="right" valign="top"><a id="ad1d3908c114ff26f4ac1a3b7bc39cee5"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>onMouseMoved</b> (const <a class="el" href="structZEN_1_1MouseMovedEvent.html">MouseMovedEvent</a> &amp;mouseMovedEvent) override</td></tr>
 <tr class="separator:ad1d3908c114ff26f4ac1a3b7bc39cee5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1299cc42e45c880422c445835e6b6272"><td class="memItemLeft" align="right" valign="top"><a id="a1299cc42e45c880422c445835e6b6272"></a>
+<a class="el" href="structZEN_1_1ControlSystems_1_1AssistInitialization.html">AssistInitialization</a>&#160;</td><td class="memItemRight" valign="bottom"><b>initialize</b> () override</td></tr>
+<tr class="separator:a1299cc42e45c880422c445835e6b6272"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classZEN_1_1ControlSystems_1_1Assist"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classZEN_1_1ControlSystems_1_1Assist')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classZEN_1_1ControlSystems_1_1Assist.html">ZEN::ControlSystems::Assist</a></td></tr>
+<tr class="memitem:a9c9564c1a76d08a2dc7e1dab15da6490 inherit pub_methods_classZEN_1_1ControlSystems_1_1Assist"><td class="memItemLeft" align="right" valign="top"><a id="a9c9564c1a76d08a2dc7e1dab15da6490"></a>
+<a class="el" href="structZEN_1_1ControlSystems_1_1AssistInitialization.html">AssistInitialization</a>&#160;</td><td class="memItemRight" valign="bottom"><b>start</b> ()</td></tr>
+<tr class="separator:a9c9564c1a76d08a2dc7e1dab15da6490 inherit pub_methods_classZEN_1_1ControlSystems_1_1Assist"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a574432e6c16522f8fbe1000ec3662602 inherit pub_methods_classZEN_1_1ControlSystems_1_1Assist"><td class="memItemLeft" align="right" valign="top"><a id="a574432e6c16522f8fbe1000ec3662602"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isInitialized</b> () const noexcept</td></tr>
+<tr class="separator:a574432e6c16522f8fbe1000ec3662602 inherit pub_methods_classZEN_1_1ControlSystems_1_1Assist"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ac4f5c787c6fc8821048d1be405604892"><td class="memItemLeft" align="right" valign="top">std::array&lt; std::string, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1ControlSystems_1_1FreeCamera.html#ac4f5c787c6fc8821048d1be405604892">signals</a></td></tr>
-<tr class="separator:ac4f5c787c6fc8821048d1be405604892"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a392188dbfa4024119f6b34ee681f3509"><td class="memItemLeft" align="right" valign="top">std::array&lt; const char *, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1ControlSystems_1_1FreeCamera.html#a392188dbfa4024119f6b34ee681f3509">signals</a></td></tr>
+<tr class="separator:a392188dbfa4024119f6b34ee681f3509"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af037421995abf713f2b2c3156da840c7"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classZEN_1_1ICamera3D.html">ICamera3D</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1ControlSystems_1_1FreeCamera.html#af037421995abf713f2b2c3156da840c7">camera3d</a></td></tr>
 <tr class="separator:af037421995abf713f2b2c3156da840c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -134,14 +144,14 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ac4f5c787c6fc8821048d1be405604892"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac4f5c787c6fc8821048d1be405604892">&#9670;&nbsp;</a></span>signals</h2>
+<a id="a392188dbfa4024119f6b34ee681f3509"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a392188dbfa4024119f6b34ee681f3509">&#9670;&nbsp;</a></span>signals</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::array&lt;std::string, 4&gt; ZEN::ControlSystems::FreeCamera::signals</td>
+          <td class="memname">std::array&lt;const char *, 4&gt; ZEN::ControlSystems::FreeCamera::signals</td>
         </tr>
       </table>
 </div><div class="memdoc">

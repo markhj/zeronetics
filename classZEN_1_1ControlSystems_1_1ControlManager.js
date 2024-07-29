@@ -1,6 +1,6 @@
 var classZEN_1_1ControlSystems_1_1ControlManager =
 [
-    [ "assists", "classZEN_1_1ControlSystems_1_1ControlManager.html#ab3a0becf9e7f830cd7bacd983fddb1b2", null ],
+    [ "attachAssist", "classZEN_1_1ControlSystems_1_1ControlManager.html#aa8975c23ba9e8ce2ff20d23c60d00206", null ],
     [ "inputMapping", "classZEN_1_1ControlSystems_1_1ControlManager.html#a210406c601b78a8dc3147caac63d315f", null ],
     [ "signalHandler", "classZEN_1_1ControlSystems_1_1ControlManager.html#a57894cd519db7b2bf90e70278048a6ad", null ]
 ];

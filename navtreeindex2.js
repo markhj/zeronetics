@@ -1,5 +1,14 @@
 var NAVTREEINDEX2 =
 {
+"namespaceZEN.html#a68b344c77c113e5bffc15e7c46c125c5a8f3ef772e7594d7bfa750070d97e40b9":[6,0,0,109,44],
+"namespaceZEN.html#a68b344c77c113e5bffc15e7c46c125c5a91f4253ca587ca8ac4e63b9ceb351f5d":[6,0,0,109,58],
+"namespaceZEN.html#a68b344c77c113e5bffc15e7c46c125c5a96f9c4eb595a467d02e35c723f63ebf7":[6,0,0,109,54],
+"namespaceZEN.html#a68b344c77c113e5bffc15e7c46c125c5a982621712db76f723b7bb88b631dc64d":[6,0,0,109,51],
+"namespaceZEN.html#a68b344c77c113e5bffc15e7c46c125c5a9d5ed678fe57bcca610140957afab571":[6,0,0,109,1],
+"namespaceZEN.html#a68b344c77c113e5bffc15e7c46c125c5aa5f3c6a11b03839d46af9fb43c97c188":[6,0,0,109,10],
+"namespaceZEN.html#a68b344c77c113e5bffc15e7c46c125c5aa9c36f4c9964ca6d35d89231402a8211":[6,0,0,109,42],
+"namespaceZEN.html#a68b344c77c113e5bffc15e7c46c125c5ab213ce22ca6ad4eda8db82966b9b6e5a":[6,0,0,109,35],
+"namespaceZEN.html#a68b344c77c113e5bffc15e7c46c125c5ab9ece18c950afbfa6b0fdbfa4ff731d3":[6,0,0,109,19],
 "namespaceZEN.html#a68b344c77c113e5bffc15e7c46c125c5ac1d9f50f86825a1a2302ec2449c17196":[6,0,0,109,7],
 "namespaceZEN.html#a68b344c77c113e5bffc15e7c46c125c5ac661a3579840ef796d61991c886e498a":[6,0,0,109,46],
 "namespaceZEN.html#a68b344c77c113e5bffc15e7c46c125c5acd7d13ceea728b08555f7c818cfb13ef":[6,0,0,109,50],
@@ -132,6 +141,8 @@ var NAVTREEINDEX2 =
 "shapes.html#autotoc_md64":[8],
 "shapes.html#autotoc_md65":[9],
 "shapes.html#autotoc_md66":[10],
+"structZEN_1_1ControlSystems_1_1AssistInitialization.html":[7,0,0,0,0],
+"structZEN_1_1ControlSystems_1_1AssistInitialization.html#abeaf461704cbcbd1ad7e686df5085ec9":[7,0,0,0,0,0],
 "structZEN_1_1EngineInfo.html":[7,0,0,27],
 "structZEN_1_1GPUAllocation.html":[7,0,0,30],
 "structZEN_1_1GPUAllocation.html#ab1eab55ae852a9138e999eb8b46efbae":[7,0,0,30,1],
@@ -231,9 +242,5 @@ var NAVTREEINDEX2 =
 "tutorials.html#autotoc_md35":[3],
 "tutorials.html#autotoc_md36":[4],
 "vertices.html":[2,5,2],
-"vertices.html#autotoc_md70":[6],
-"":[6,0,0,13],
-"":[6,0,0,11],
-"":[6,0,0,14],
-"":[6,0,0,12]
+"vertices.html#autotoc_md70":[6]
 };

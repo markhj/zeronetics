@@ -192,6 +192,7 @@ var NAVTREEINDEX2 =
 "structZEN_1_1RenderGroup3D.html":[7,0,0,75],
 "structZEN_1_1RenderSettings.html":[7,0,0,44],
 "structZEN_1_1RenderSettings.html#a2a4084c9b8935bd6ba829e51ff64c417":[7,0,0,44,1],
+"structZEN_1_1RenderSettings.html#a778895166190bc77af9c97fa56da9583":[7,0,0,44,2],
 "structZEN_1_1RenderSettings.html#ae698ee8df78cedc37f7dd5cedf69d9bc":[7,0,0,44,0],
 "structZEN_1_1RendererRequest.html":[7,0,0,74],
 "structZEN_1_1ResultError.html":[7,0,0,45],
@@ -242,8 +243,8 @@ var NAVTREEINDEX2 =
 "tutorials.html#autotoc_md36":[4],
 "vertices.html":[2,5,2],
 "vertices.html#autotoc_md70":[6],
-"":[6,0,0,12],
 "":[6,0,0,11],
-"":[6,0,0,13],
-"":[6,0,0,14]
+"":[6,0,0,12],
+"":[6,0,0,14],
+"":[6,0,0,13]
 };

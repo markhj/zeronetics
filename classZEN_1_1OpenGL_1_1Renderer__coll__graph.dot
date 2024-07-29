@@ -6,4 +6,8 @@ digraph "ZEN::OpenGL::Renderer"
   Node1 [label="ZEN::OpenGL::Renderer",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="ZEN::IRenderer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classZEN_1_1IRenderer.html",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" backgroundColor" ,fontname="Helvetica"];
+  Node3 [label="ZEN::ColorRGB",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classZEN_1_1ColorRGB.html",tooltip=" "];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Vec3",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
 }

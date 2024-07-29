@@ -201,6 +201,7 @@ var NAVTREEINDEX2 =
 "structZEN_1_1ScreenResolution.html":[7,0,0,47],
 "structZEN_1_1Settings.html":[7,0,0,48],
 "structZEN_1_1Settings.html#a3813b8b06b1d1c38f87e2418ab28c19e":[7,0,0,48,1],
+"structZEN_1_1Settings.html#ab445066449f2de6207968fe68feb2042":[7,0,0,48,2],
 "structZEN_1_1Settings.html#ad95cd6f443d84ef03b7242f10fa9d107":[7,0,0,48,0],
 "structZEN_1_1ShaderBlueprint.html":[7,0,0,50],
 "structZEN_1_1ShaderBlueprint.html#a21ee1e9dcbb564814f4d91f844c7359c":[7,0,0,50,2],
@@ -243,8 +244,8 @@ var NAVTREEINDEX2 =
 "tutorials.html#autotoc_md36":[4],
 "vertices.html":[2,5,2],
 "vertices.html#autotoc_md70":[6],
-"":[6,0,0,11],
-"":[6,0,0,12],
 "":[6,0,0,14],
+"":[6,0,0,12],
+"":[6,0,0,11],
 "":[6,0,0,13]
 };

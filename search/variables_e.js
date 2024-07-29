@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['windowtitle_560',['windowTitle',['../classZEN_1_1Window.html#af1d158bd7f1fc66a9af1fb45495ff240',1,'ZEN::Window']]]
+  ['vsync_560',['vSync',['../structZEN_1_1Settings.html#ab445066449f2de6207968fe68feb2042',1,'ZEN::Settings']]]
 ];

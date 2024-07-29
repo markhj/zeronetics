@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['x_561',['x',['../structZEN_1_1MousePosition.html#aee305fd0967cf64c67af8400f89253bd',1,'ZEN::MousePosition']]]
+  ['windowtitle_561',['windowTitle',['../classZEN_1_1Window.html#af1d158bd7f1fc66a9af1fb45495ff240',1,'ZEN::Window']]]
 ];

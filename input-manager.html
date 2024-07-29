@@ -111,10 +111,12 @@ Example</h2>
 </div><!-- fragment --><p>However, at this point the method does nothing. It's empty.</p>
 <p>You can explore <a class="el" href="structZEN_1_1KeyStateEvent.html">ZEN::KeyStateEvent</a> for learn about all the options, but in the following example, we'll do "something" when the <em>A</em>-key has just been pressed. Let's zoom in on the <code>onKeyStateChanged</code> method:</p>
 <div class="fragment"><div class="line"><span class="keywordtype">void</span> onKeyStateChanged(<span class="keyword">const</span> <a class="code" href="structZEN_1_1KeyStateEvent.html">ZEN::KeyStateEvent</a> &amp;keyEvent)<span class="keyword"> override </span>{</div>
-<div class="line">    <span class="keywordflow">if</span> (keyEvent.key == ZEN::Key::A &amp;&amp; keyEvent.keyState == ZEN::KeyState::JustPressed) {</div>
+<div class="line">    <span class="keywordflow">if</span> (keyEvent.<a class="code" href="structZEN_1_1KeyStateEvent.html#a6d8c2b1781eaf002500f5f1550b53790">key</a> == ZEN::Key::A &amp;&amp; keyEvent.<a class="code" href="structZEN_1_1KeyStateEvent.html#ac5084dcf49b737b1b68fe34901721af1">keyState</a> == ZEN::KeyState::JustPressed) {</div>
 <div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;A was just pressed!&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line">    }</div>
 <div class="line">}</div>
+<div class="ttc" id="astructZEN_1_1KeyStateEvent_html_a6d8c2b1781eaf002500f5f1550b53790"><div class="ttname"><a href="structZEN_1_1KeyStateEvent.html#a6d8c2b1781eaf002500f5f1550b53790">ZEN::KeyStateEvent::key</a></div><div class="ttdeci">Key key</div><div class="ttdef"><b>Definition:</b> inputs.h:54</div></div>
+<div class="ttc" id="astructZEN_1_1KeyStateEvent_html_ac5084dcf49b737b1b68fe34901721af1"><div class="ttname"><a href="structZEN_1_1KeyStateEvent.html#ac5084dcf49b737b1b68fe34901721af1">ZEN::KeyStateEvent::keyState</a></div><div class="ttdeci">KeyState keyState</div><div class="ttdef"><b>Definition:</b> inputs.h:49</div></div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md22"></a>
 Connecting to window</h2>
 <p>However, before your input manager is useful, it must be connected to a <a class="el" href="classZEN_1_1Window.html">ZEN::Window</a> instance.</p>

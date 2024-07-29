@@ -94,22 +94,28 @@ $(document).ready(function(){initNavTree('renderer_8h_source.html',''); initResi
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceZEN.html">ZEN</a> {</div>
 <div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classZEN_1_1IRenderer.html">    9</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classZEN_1_1IRenderer.html">IRenderer</a> {</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <a class="code" href="classZEN_1_1ColorRGB.html">ColorRGB</a> backgroundColor = <a class="code" href="classZEN_1_1ColorRGB.html">ColorRGB</a>(0.0, 0.02, 0.1);</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> setRenderManager(<span class="keyword">const</span> std::shared_ptr&lt;IRenderManager&gt; &amp;renderManager) noexcept(<span class="keyword">false</span>) = 0;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> initialize() = 0;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        [[nodiscard]] <span class="keyword">virtual</span> <span class="keywordtype">bool</span> isInitialized() <span class="keyword">const</span> noexcept = 0;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> clear() noexcept = 0;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> render() = 0;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    };</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
-<div class="ttc" id="aclassZEN_1_1ColorRGB_html"><div class="ttname"><a href="classZEN_1_1ColorRGB.html">ZEN::ColorRGB</a></div><div class="ttdef"><b>Definition:</b> attributes.h:6</div></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classZEN_1_1IRenderer.html#a5a6a3936abecbdf31382a8cf484f28a1">   14</a></span>&#160;        <a class="code" href="classZEN_1_1ColorRGB.html">ColorRGB</a> <a class="code" href="classZEN_1_1IRenderer.html#a5a6a3936abecbdf31382a8cf484f28a1">backgroundColor</a> = <a class="code" href="classZEN_1_1ColorRGB.html">ColorRGB</a>(0.0, 0.02, 0.1);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classZEN_1_1IRenderer.html#aec105d41f088106ab0c80269aa8fe3dd">   22</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classZEN_1_1IRenderer.html#aec105d41f088106ab0c80269aa8fe3dd">setRenderManager</a>(<span class="keyword">const</span> std::shared_ptr&lt;IRenderManager&gt; &amp;renderManager) noexcept(<span class="keyword">false</span>) = 0;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classZEN_1_1IRenderer.html#a4cb5a24a6542d8e3c35b7545f6370815">   27</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classZEN_1_1IRenderer.html#a4cb5a24a6542d8e3c35b7545f6370815">initialize</a>() = 0;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classZEN_1_1IRenderer.html#ac2bcdead8d3c2202def1b3215190b051">   34</a></span>&#160;        [[nodiscard]] <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classZEN_1_1IRenderer.html#ac2bcdead8d3c2202def1b3215190b051">isInitialized</a>() const noexcept = 0;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classZEN_1_1IRenderer.html#a6bae965df1402e9e0a7957781159604b">   40</a></span>&#160;        virtual <span class="keywordtype">void</span> <a class="code" href="classZEN_1_1IRenderer.html#a6bae965df1402e9e0a7957781159604b">clear</a>() noexcept = 0;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classZEN_1_1IRenderer.html#afd3e2c4d017da54153f30e31b09a3694">   45</a></span>&#160;        virtual <span class="keywordtype">void</span> <a class="code" href="classZEN_1_1IRenderer.html#afd3e2c4d017da54153f30e31b09a3694">render</a>() = 0;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    };</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
+<div class="ttc" id="aclassZEN_1_1ColorRGB_html"><div class="ttname"><a href="classZEN_1_1ColorRGB.html">ZEN::ColorRGB</a></div><div class="ttdef"><b>Definition:</b> attributes.h:15</div></div>
 <div class="ttc" id="aclassZEN_1_1IRenderer_html"><div class="ttname"><a href="classZEN_1_1IRenderer.html">ZEN::IRenderer</a></div><div class="ttdef"><b>Definition:</b> renderer.h:9</div></div>
+<div class="ttc" id="aclassZEN_1_1IRenderer_html_a4cb5a24a6542d8e3c35b7545f6370815"><div class="ttname"><a href="classZEN_1_1IRenderer.html#a4cb5a24a6542d8e3c35b7545f6370815">ZEN::IRenderer::initialize</a></div><div class="ttdeci">virtual void initialize()=0</div></div>
+<div class="ttc" id="aclassZEN_1_1IRenderer_html_a5a6a3936abecbdf31382a8cf484f28a1"><div class="ttname"><a href="classZEN_1_1IRenderer.html#a5a6a3936abecbdf31382a8cf484f28a1">ZEN::IRenderer::backgroundColor</a></div><div class="ttdeci">ColorRGB backgroundColor</div><div class="ttdef"><b>Definition:</b> renderer.h:14</div></div>
+<div class="ttc" id="aclassZEN_1_1IRenderer_html_a6bae965df1402e9e0a7957781159604b"><div class="ttname"><a href="classZEN_1_1IRenderer.html#a6bae965df1402e9e0a7957781159604b">ZEN::IRenderer::clear</a></div><div class="ttdeci">virtual void clear() noexcept=0</div></div>
+<div class="ttc" id="aclassZEN_1_1IRenderer_html_ac2bcdead8d3c2202def1b3215190b051"><div class="ttname"><a href="classZEN_1_1IRenderer.html#ac2bcdead8d3c2202def1b3215190b051">ZEN::IRenderer::isInitialized</a></div><div class="ttdeci">virtual bool isInitialized() const noexcept=0</div></div>
+<div class="ttc" id="aclassZEN_1_1IRenderer_html_aec105d41f088106ab0c80269aa8fe3dd"><div class="ttname"><a href="classZEN_1_1IRenderer.html#aec105d41f088106ab0c80269aa8fe3dd">ZEN::IRenderer::setRenderManager</a></div><div class="ttdeci">virtual void setRenderManager(const std::shared_ptr&lt; IRenderManager &gt; &amp;renderManager) noexcept(false)=0</div></div>
+<div class="ttc" id="aclassZEN_1_1IRenderer_html_afd3e2c4d017da54153f30e31b09a3694"><div class="ttname"><a href="classZEN_1_1IRenderer.html#afd3e2c4d017da54153f30e31b09a3694">ZEN::IRenderer::render</a></div><div class="ttdeci">virtual void render()=0</div></div>
 <div class="ttc" id="anamespaceZEN_html"><div class="ttname"><a href="namespaceZEN.html">ZEN</a></div><div class="ttdef"><b>Definition:</b> cameras.h:9</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

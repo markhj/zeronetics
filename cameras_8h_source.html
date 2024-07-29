@@ -96,33 +96,35 @@ $(document).ready(function(){initNavTree('cameras_8h_source.html',''); initResiz
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;zeronetics/core/tensors.h&quot;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
 <div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="namespaceZEN.html">    9</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceZEN.html">ZEN</a> {</div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classZEN_1_1ICamera.html">   10</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classZEN_1_1ICamera.html">ICamera</a> {</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> setOnShader(<span class="keyword">const</span> std::string &amp;key,</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;                                 <span class="keyword">const</span> std::shared_ptr&lt;IShader&gt; &amp;shader) = 0;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    };</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classZEN_1_1ICamera3D.html">   22</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classZEN_1_1ICamera3D.html">ICamera3D</a> : <span class="keyword">public</span> <a class="code" href="classZEN_1_1ITransforms3D.html">ITransforms3D</a> {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classZEN_1_1ICamera3D.html#a93b00ae16a80115922bb352849bfb912">   27</a></span>&#160;        Vec3 <a class="code" href="classZEN_1_1ICamera3D.html#a93b00ae16a80115922bb352849bfb912">target</a> = Vec3(0.0);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classZEN_1_1ICamera3D.html#a1910db2e075042c786d15f3b1572250d">   32</a></span>&#160;        Vec3 <a class="code" href="classZEN_1_1ICamera3D.html#a1910db2e075042c786d15f3b1572250d">up</a> = Vec3(0.0, 1.0, 0.0);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classZEN_1_1ICamera3D.html#a8142e328962447bfbe52390de0c5d759">   39</a></span>&#160;        [[nodiscard]] <span class="keyword">virtual</span> <a class="code" href="structZEN_1_1MVP.html">MVP</a> <a class="code" href="classZEN_1_1ICamera3D.html#a8142e328962447bfbe52390de0c5d759">getModelViewProjection</a>() const noexcept = 0;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        virtual <span class="keywordtype">void</span> setOnShader(const std::<span class="keywordtype">string</span> &amp;key,</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                                 const std::shared_ptr&lt;<a class="code" href="classZEN_1_1IShader.html">IShader</a>&gt; &amp;shader) = 0;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classZEN_1_1ICamera.html">   13</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classZEN_1_1ICamera.html">ICamera</a> {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classZEN_1_1ICamera.html#aaa30e5d26157a2f29d71be50d202c1fb">   22</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classZEN_1_1ICamera.html#aaa30e5d26157a2f29d71be50d202c1fb">setOnShader</a>(<span class="keyword">const</span> std::string &amp;key,</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                                 <span class="keyword">const</span> std::shared_ptr&lt;IShader&gt; &amp;shader) = 0;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    };</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classZEN_1_1ICamera3D.html">   32</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classZEN_1_1ICamera3D.html">ICamera3D</a> : <span class="keyword">public</span> <a class="code" href="classZEN_1_1ITransforms3D.html">ITransforms3D</a> {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classZEN_1_1ICamera3D.html#a93b00ae16a80115922bb352849bfb912">   37</a></span>&#160;        Vec3 <a class="code" href="classZEN_1_1ICamera3D.html#a93b00ae16a80115922bb352849bfb912">target</a> = Vec3(0.0);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classZEN_1_1ICamera3D.html#a1910db2e075042c786d15f3b1572250d">   42</a></span>&#160;        Vec3 <a class="code" href="classZEN_1_1ICamera3D.html#a1910db2e075042c786d15f3b1572250d">up</a> = Vec3(0.0, 1.0, 0.0);</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    };</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
-<div class="ttc" id="aclassZEN_1_1ICamera3D_html"><div class="ttname"><a href="classZEN_1_1ICamera3D.html">ZEN::ICamera3D</a></div><div class="ttdef"><b>Definition:</b> cameras.h:22</div></div>
-<div class="ttc" id="aclassZEN_1_1ICamera3D_html_a1910db2e075042c786d15f3b1572250d"><div class="ttname"><a href="classZEN_1_1ICamera3D.html#a1910db2e075042c786d15f3b1572250d">ZEN::ICamera3D::up</a></div><div class="ttdeci">Vec3 up</div><div class="ttdef"><b>Definition:</b> cameras.h:32</div></div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classZEN_1_1ICamera3D.html#a8142e328962447bfbe52390de0c5d759">   49</a></span>&#160;        [[nodiscard]] <span class="keyword">virtual</span> <a class="code" href="structZEN_1_1MVP.html">MVP</a> <a class="code" href="classZEN_1_1ICamera3D.html#a8142e328962447bfbe52390de0c5d759">getModelViewProjection</a>() const noexcept = 0;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classZEN_1_1ICamera3D.html#acfc134a47ac017c9eeb351e357f53141">   57</a></span>&#160;        virtual <span class="keywordtype">void</span> <a class="code" href="classZEN_1_1ICamera3D.html#acfc134a47ac017c9eeb351e357f53141">setOnShader</a>(const std::<span class="keywordtype">string</span> &amp;key,</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                                 const std::shared_ptr&lt;<a class="code" href="classZEN_1_1IShader.html">IShader</a>&gt; &amp;shader) = 0;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    };</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
+<div class="ttc" id="aclassZEN_1_1ICamera3D_html"><div class="ttname"><a href="classZEN_1_1ICamera3D.html">ZEN::ICamera3D</a></div><div class="ttdef"><b>Definition:</b> cameras.h:32</div></div>
+<div class="ttc" id="aclassZEN_1_1ICamera3D_html_a1910db2e075042c786d15f3b1572250d"><div class="ttname"><a href="classZEN_1_1ICamera3D.html#a1910db2e075042c786d15f3b1572250d">ZEN::ICamera3D::up</a></div><div class="ttdeci">Vec3 up</div><div class="ttdef"><b>Definition:</b> cameras.h:42</div></div>
 <div class="ttc" id="aclassZEN_1_1ICamera3D_html_a8142e328962447bfbe52390de0c5d759"><div class="ttname"><a href="classZEN_1_1ICamera3D.html#a8142e328962447bfbe52390de0c5d759">ZEN::ICamera3D::getModelViewProjection</a></div><div class="ttdeci">virtual MVP getModelViewProjection() const noexcept=0</div></div>
-<div class="ttc" id="aclassZEN_1_1ICamera3D_html_a93b00ae16a80115922bb352849bfb912"><div class="ttname"><a href="classZEN_1_1ICamera3D.html#a93b00ae16a80115922bb352849bfb912">ZEN::ICamera3D::target</a></div><div class="ttdeci">Vec3 target</div><div class="ttdef"><b>Definition:</b> cameras.h:27</div></div>
-<div class="ttc" id="aclassZEN_1_1ICamera_html"><div class="ttname"><a href="classZEN_1_1ICamera.html">ZEN::ICamera</a></div><div class="ttdef"><b>Definition:</b> cameras.h:10</div></div>
+<div class="ttc" id="aclassZEN_1_1ICamera3D_html_a93b00ae16a80115922bb352849bfb912"><div class="ttname"><a href="classZEN_1_1ICamera3D.html#a93b00ae16a80115922bb352849bfb912">ZEN::ICamera3D::target</a></div><div class="ttdeci">Vec3 target</div><div class="ttdef"><b>Definition:</b> cameras.h:37</div></div>
+<div class="ttc" id="aclassZEN_1_1ICamera3D_html_acfc134a47ac017c9eeb351e357f53141"><div class="ttname"><a href="classZEN_1_1ICamera3D.html#acfc134a47ac017c9eeb351e357f53141">ZEN::ICamera3D::setOnShader</a></div><div class="ttdeci">virtual void setOnShader(const std::string &amp;key, const std::shared_ptr&lt; IShader &gt; &amp;shader)=0</div></div>
+<div class="ttc" id="aclassZEN_1_1ICamera_html"><div class="ttname"><a href="classZEN_1_1ICamera.html">ZEN::ICamera</a></div><div class="ttdef"><b>Definition:</b> cameras.h:13</div></div>
+<div class="ttc" id="aclassZEN_1_1ICamera_html_aaa30e5d26157a2f29d71be50d202c1fb"><div class="ttname"><a href="classZEN_1_1ICamera.html#aaa30e5d26157a2f29d71be50d202c1fb">ZEN::ICamera::setOnShader</a></div><div class="ttdeci">virtual void setOnShader(const std::string &amp;key, const std::shared_ptr&lt; IShader &gt; &amp;shader)=0</div></div>
 <div class="ttc" id="aclassZEN_1_1IShader_html"><div class="ttname"><a href="classZEN_1_1IShader.html">ZEN::IShader</a></div><div class="ttdef"><b>Definition:</b> shader.h:11</div></div>
-<div class="ttc" id="aclassZEN_1_1ITransforms3D_html"><div class="ttname"><a href="classZEN_1_1ITransforms3D.html">ZEN::ITransforms3D</a></div><div class="ttdef"><b>Definition:</b> transforms.h:11</div></div>
+<div class="ttc" id="aclassZEN_1_1ITransforms3D_html"><div class="ttname"><a href="classZEN_1_1ITransforms3D.html">ZEN::ITransforms3D</a></div><div class="ttdef"><b>Definition:</b> transforms.h:22</div></div>
 <div class="ttc" id="anamespaceZEN_html"><div class="ttname"><a href="namespaceZEN.html">ZEN</a></div><div class="ttdef"><b>Definition:</b> cameras.h:9</div></div>
 <div class="ttc" id="astructZEN_1_1MVP_html"><div class="ttname"><a href="structZEN_1_1MVP.html">ZEN::MVP</a></div><div class="ttdef"><b>Definition:</b> tensors.h:20</div></div>
 </div><!-- fragment --></div><!-- contents -->

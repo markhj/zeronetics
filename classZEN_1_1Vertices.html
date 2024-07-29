@@ -93,8 +93,7 @@ $(document).ready(function(){initNavTree('classZEN_1_1Vertices.html',''); initRe
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a5e64bc170f6374c59e4936ba89456358"><td class="memItemLeft" align="right" valign="top"><a id="a5e64bc170f6374c59e4936ba89456358"></a>
-static std::vector&lt; <a class="el" href="namespaceZEN.html#a5089f560467278c4efaed05ce45f57a7">gw_float</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>flattenVertex3D</b> (const <a class="el" href="structZEN_1_1Vertex3D.html">Vertex3D</a> &amp;vertex, const std::vector&lt; <a class="el" href="namespaceZEN.html#a3ff69a9dc86c8ce199f458ed659dbe95">VertexAttribute</a> &gt; &amp;attributes)</td></tr>
+<tr class="memitem:a5e64bc170f6374c59e4936ba89456358"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="namespaceZEN.html#a5089f560467278c4efaed05ce45f57a7">gw_float</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1Vertices.html#a5e64bc170f6374c59e4936ba89456358">flattenVertex3D</a> (const <a class="el" href="structZEN_1_1Vertex3D.html">Vertex3D</a> &amp;vertex, const std::vector&lt; <a class="el" href="namespaceZEN.html#a3ff69a9dc86c8ce199f458ed659dbe95">VertexAttribute</a> &gt; &amp;attributes)</td></tr>
 <tr class="separator:a5e64bc170f6374c59e4936ba89456358"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97c36451c214c7bce2b5420d48436c0b"><td class="memItemLeft" align="right" valign="top">static Vec3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1Vertices.html#a97c36451c214c7bce2b5420d48436c0b">calculateNormal</a> (const Vec3 &amp;a, const Vec3 &amp;b, const Vec3 &amp;c) noexcept</td></tr>
 <tr class="separator:a97c36451c214c7bce2b5420d48436c0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -146,6 +145,53 @@ static std::vector&lt; <a class="el" href="namespaceZEN.html#a5089f560467278c4ef
     <tr><td class="paramname">a</td><td></td></tr>
     <tr><td class="paramname">b</td><td></td></tr>
     <tr><td class="paramname">c</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a5e64bc170f6374c59e4936ba89456358"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e64bc170f6374c59e4936ba89456358">&#9670;&nbsp;</a></span>flattenVertex3D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::vector&lt;<a class="el" href="namespaceZEN.html#a5089f560467278c4efaed05ce45f57a7">gw_float</a>&gt; ZEN::Vertices::flattenVertex3D </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structZEN_1_1Vertex3D.html">Vertex3D</a> &amp;&#160;</td>
+          <td class="paramname"><em>vertex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="namespaceZEN.html#a3ff69a9dc86c8ce199f458ed659dbe95">VertexAttribute</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>attributes</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Build a "flat" vector of floats with the values of a vertex in the order provided by attributes.</p>
+<p>Example: If attributes consists of 3D position and RGB color, the output will be floats representing: X Y Z R G B</p>
+<p>This method is useful for translating vertex data to some renderers.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vertex</td><td></td></tr>
+    <tr><td class="paramname">attributes</td><td></td></tr>
   </table>
   </dd>
 </dl>

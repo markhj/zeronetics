@@ -100,19 +100,62 @@ Collaboration diagram for ZEN::ShaderBlueprint:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ad1bde66042970a8d06eea7dd11822cff"><td class="memItemLeft" align="right" valign="top"><a id="ad1bde66042970a8d06eea7dd11822cff"></a>
-std::vector&lt; <a class="el" href="namespaceZEN.html#a3ff69a9dc86c8ce199f458ed659dbe95">VertexAttribute</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>attributes</b></td></tr>
+<tr class="memitem:ad1bde66042970a8d06eea7dd11822cff"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespaceZEN.html#a3ff69a9dc86c8ce199f458ed659dbe95">VertexAttribute</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structZEN_1_1ShaderBlueprint.html#ad1bde66042970a8d06eea7dd11822cff">attributes</a></td></tr>
 <tr class="separator:ad1bde66042970a8d06eea7dd11822cff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21ee1e9dcbb564814f4d91f844c7359c"><td class="memItemLeft" align="right" valign="top"><a id="a21ee1e9dcbb564814f4d91f844c7359c"></a>
-Projection&#160;</td><td class="memItemRight" valign="bottom"><b>projection</b> = Projection::Orthographic</td></tr>
+<tr class="memitem:a21ee1e9dcbb564814f4d91f844c7359c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceZEN.html#afe36e25feafd68478583d7d4d941cdd1">Projection</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structZEN_1_1ShaderBlueprint.html#a21ee1e9dcbb564814f4d91f844c7359c">projection</a> = <a class="el" href="namespaceZEN.html#afe36e25feafd68478583d7d4d941cdd1a03424250432f2aa71de95579d2c0eaeb">Projection::Orthographic</a></td></tr>
 <tr class="separator:a21ee1e9dcbb564814f4d91f844c7359c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab76fe7f2e41a134829829e74471e5c04"><td class="memItemLeft" align="right" valign="top"><a id="ab76fe7f2e41a134829829e74471e5c04"></a>
-<a class="el" href="structZEN_1_1LightSupport.html">LightSupport</a>&#160;</td><td class="memItemRight" valign="bottom"><b>lightSupport</b></td></tr>
+<tr class="memitem:ab76fe7f2e41a134829829e74471e5c04"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structZEN_1_1LightSupport.html">LightSupport</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structZEN_1_1ShaderBlueprint.html#ab76fe7f2e41a134829829e74471e5c04">lightSupport</a></td></tr>
 <tr class="separator:ab76fe7f2e41a134829829e74471e5c04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A description/request of the shader to be build by a Shader Builder. </p>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
+</div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="ad1bde66042970a8d06eea7dd11822cff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1bde66042970a8d06eea7dd11822cff">&#9670;&nbsp;</a></span>attributes</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="namespaceZEN.html#a3ff69a9dc86c8ce199f458ed659dbe95">VertexAttribute</a>&gt; ZEN::ShaderBlueprint::attributes</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>List of vertex attributes which will be baked into the source codes for the shader stages. </p>
+
+</div>
+</div>
+<a id="ab76fe7f2e41a134829829e74471e5c04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab76fe7f2e41a134829829e74471e5c04">&#9670;&nbsp;</a></span>lightSupport</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structZEN_1_1LightSupport.html">LightSupport</a> ZEN::ShaderBlueprint::lightSupport</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Light support, for instance how many slots must be available for various types of lights. </p>
+
+</div>
+</div>
+<a id="a21ee1e9dcbb564814f4d91f844c7359c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21ee1e9dcbb564814f4d91f844c7359c">&#9670;&nbsp;</a></span>projection</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceZEN.html#afe36e25feafd68478583d7d4d941cdd1">Projection</a> ZEN::ShaderBlueprint::projection = <a class="el" href="namespaceZEN.html#afe36e25feafd68478583d7d4d941cdd1a03424250432f2aa71de95579d2c0eaeb">Projection::Orthographic</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Code will be changed by the shader builder to respect the projection. </p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
 <li>include/zeronetics/core/<a class="el" href="shader-blueprint_8h_source.html">shader-blueprint.h</a></li>
 </ul>
 </div><!-- contents -->

@@ -91,6 +91,8 @@ $(document).ready(function(){initNavTree('classZEN_1_1ILight.html',''); initResi
 <div class="title">ZEN::ILight Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="lights_8h_source.html">lights.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ZEN::ILight:</div>
 <div class="dyncontent">
@@ -104,16 +106,79 @@ Collaboration diagram for ZEN::ILight:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a98c0d0edb50157af6af0d19f03e7f0f8"><td class="memItemLeft" align="right" valign="top"><a id="a98c0d0edb50157af6af0d19f03e7f0f8"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setOnShader</b> (const std::string &amp;key, const std::shared_ptr&lt; <a class="el" href="classZEN_1_1IShader.html">ZEN::IShader</a> &gt; &amp;shader)=0</td></tr>
+<tr class="memitem:a98c0d0edb50157af6af0d19f03e7f0f8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1ILight.html#a98c0d0edb50157af6af0d19f03e7f0f8">setOnShader</a> (const std::string &amp;key, const std::shared_ptr&lt; <a class="el" href="classZEN_1_1IShader.html">ZEN::IShader</a> &gt; &amp;shader)=0</td></tr>
 <tr class="separator:a98c0d0edb50157af6af0d19f03e7f0f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:aa8cf9da72bc1e22fb38a347d41e031ff"><td class="memItemLeft" align="right" valign="top"><a id="aa8cf9da72bc1e22fb38a347d41e031ff"></a>
-<a class="el" href="classZEN_1_1ColorRGB.html">ColorRGB</a>&#160;</td><td class="memItemRight" valign="bottom"><b>color</b> = <a class="el" href="classZEN_1_1ColorRGB.html">ColorRGB</a>(1.0, 1.0, 1.0)</td></tr>
+<tr class="memitem:aa8cf9da72bc1e22fb38a347d41e031ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classZEN_1_1ColorRGB.html">ColorRGB</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1ILight.html#aa8cf9da72bc1e22fb38a347d41e031ff">color</a> = <a class="el" href="classZEN_1_1ColorRGB.html">ColorRGB</a>(1.0, 1.0, 1.0)</td></tr>
 <tr class="separator:aa8cf9da72bc1e22fb38a347d41e031ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Light Contract </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a98c0d0edb50157af6af0d19f03e7f0f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98c0d0edb50157af6af0d19f03e7f0f8">&#9670;&nbsp;</a></span>setOnShader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ZEN::ILight::setOnShader </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classZEN_1_1IShader.html">ZEN::IShader</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>shader</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Store information about the light on the shader.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td></td></tr>
+    <tr><td class="paramname">shader</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="classZEN_1_1PointLight3D.html#a18a8806baccbf263629a0fc672aa5387">ZEN::PointLight3D</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="aa8cf9da72bc1e22fb38a347d41e031ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8cf9da72bc1e22fb38a347d41e031ff">&#9670;&nbsp;</a></span>color</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classZEN_1_1ColorRGB.html">ColorRGB</a> ZEN::ILight::color = <a class="el" href="classZEN_1_1ColorRGB.html">ColorRGB</a>(1.0, 1.0, 1.0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Light color. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/zeronetics/contracts/<a class="el" href="lights_8h_source.html">lights.h</a></li>
 </ul>

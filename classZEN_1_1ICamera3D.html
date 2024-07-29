@@ -108,8 +108,7 @@ Collaboration diagram for ZEN::ICamera3D:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8142e328962447bfbe52390de0c5d759"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structZEN_1_1MVP.html">MVP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1ICamera3D.html#a8142e328962447bfbe52390de0c5d759">getModelViewProjection</a> () const noexcept=0</td></tr>
 <tr class="separator:a8142e328962447bfbe52390de0c5d759"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acfc134a47ac017c9eeb351e357f53141"><td class="memItemLeft" align="right" valign="top"><a id="acfc134a47ac017c9eeb351e357f53141"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setOnShader</b> (const std::string &amp;key, const std::shared_ptr&lt; <a class="el" href="classZEN_1_1IShader.html">IShader</a> &gt; &amp;shader)=0</td></tr>
+<tr class="memitem:acfc134a47ac017c9eeb351e357f53141"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1ICamera3D.html#acfc134a47ac017c9eeb351e357f53141">setOnShader</a> (const std::string &amp;key, const std::shared_ptr&lt; <a class="el" href="classZEN_1_1IShader.html">IShader</a> &gt; &amp;shader)=0</td></tr>
 <tr class="separator:acfc134a47ac017c9eeb351e357f53141"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -119,8 +118,7 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a1910db2e075042c786d15f3b1572250d"><td class="memItemLeft" align="right" valign="top">Vec3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1ICamera3D.html#a1910db2e075042c786d15f3b1572250d">up</a> = Vec3(0.0, 1.0, 0.0)</td></tr>
 <tr class="separator:a1910db2e075042c786d15f3b1572250d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_classZEN_1_1IPosition3D"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classZEN_1_1IPosition3D')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classZEN_1_1IPosition3D.html">ZEN::IPosition3D</a></td></tr>
-<tr class="memitem:aae7713429be62bb19cc35de9bd6920fa inherit pub_attribs_classZEN_1_1IPosition3D"><td class="memItemLeft" align="right" valign="top"><a id="aae7713429be62bb19cc35de9bd6920fa"></a>
-Vec3&#160;</td><td class="memItemRight" valign="bottom"><b>position</b> = Vec3(0.0)</td></tr>
+<tr class="memitem:aae7713429be62bb19cc35de9bd6920fa inherit pub_attribs_classZEN_1_1IPosition3D"><td class="memItemLeft" align="right" valign="top">Vec3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1IPosition3D.html#aae7713429be62bb19cc35de9bd6920fa">position</a> = Vec3(0.0)</td></tr>
 <tr class="separator:aae7713429be62bb19cc35de9bd6920fa inherit pub_attribs_classZEN_1_1IPosition3D"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -153,6 +151,52 @@ Vec3&#160;</td><td class="memItemRight" valign="bottom"><b>position</b> = Vec3(0
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 <p>Implemented in <a class="el" href="classZEN_1_1Camera3D.html#aa68a25b3906a276cdeeafc84c52e5bf6">ZEN::Camera3D</a>.</p>
+
+</div>
+</div>
+<a id="acfc134a47ac017c9eeb351e357f53141"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfc134a47ac017c9eeb351e357f53141">&#9670;&nbsp;</a></span>setOnShader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ZEN::ICamera3D::setOnShader </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classZEN_1_1IShader.html">IShader</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>shader</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set information about the camera on the shader.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td></td></tr>
+    <tr><td class="paramname">shader</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="classZEN_1_1Camera3D.html#a2b6b20974c6394c0480bf1b0bf463d5d">ZEN::Camera3D</a>.</p>
 
 </div>
 </div>

@@ -116,6 +116,10 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 <li>calculateNormal()
 : <a class="el" href="classZEN_1_1Vertices.html#a97c36451c214c7bce2b5420d48436c0b">ZEN::Vertices</a>
 </li>
+<li>clear()
+: <a class="el" href="classZEN_1_1IRenderer.html#a6bae965df1402e9e0a7957781159604b">ZEN::IRenderer</a>
+, <a class="el" href="classZEN_1_1OpenGL_1_1Renderer.html#a7cf60d7b8ba7b854f3de0a94ec8cceb5">ZEN::OpenGL::Renderer</a>
+</li>
 <li>clearRequests()
 : <a class="el" href="classZEN_1_1IRenderManager.html#ad4b1cfa990052d300df28584f7d5cbca">ZEN::IRenderManager</a>
 , <a class="el" href="classZEN_1_1RenderManager.html#a9e6cf42bb491b40f653e475757a3378a">ZEN::RenderManager</a>
@@ -137,6 +141,9 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 </li>
 <li>critical()
 : <a class="el" href="classZEN_1_1Log.html#aa550d58e15cd2d9894683f19c95ec8b8">ZEN::Log</a>
+</li>
+<li>Cube()
+: <a class="el" href="classZEN_1_1Cube.html#ac3fa1c1492aee460813f07b0ef7ae292">ZEN::Cube</a>
 </li>
 </ul>
 
@@ -171,6 +178,9 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 <li>File()
 : <a class="el" href="classZEN_1_1File.html#a07fffa14b08276e53d838f22ad019824">ZEN::File</a>
 </li>
+<li>flattenVertex3D()
+: <a class="el" href="classZEN_1_1Vertices.html#a5e64bc170f6374c59e4936ba89456358">ZEN::Vertices</a>
+</li>
 <li>forEachRequest()
 : <a class="el" href="classZEN_1_1IRenderManager.html#a833d86e30df27aced157be36464ec12e">ZEN::IRenderManager</a>
 , <a class="el" href="classZEN_1_1RenderManager.html#a3b4784a079fcdad704de8d6568203744">ZEN::RenderManager</a>
@@ -186,6 +196,9 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 : <a class="el" href="classZEN_1_1IWindow.html#acfd336d6e779919ae66728b26a2995f2">ZEN::IWindow</a>
 , <a class="el" href="classZEN_1_1Window.html#a56421da6cc3290b940c3200b7a4f0a6f">ZEN::Window</a>
 </li>
+<li>get()
+: <a class="el" href="classZEN_1_1SystemInfo.html#a3fcd55aab13a58406e40693b91eb66b7">ZEN::SystemInfo</a>
+</li>
 <li>getAbsolute()
 : <a class="el" href="classZEN_1_1Path.html#a4bc6f7c006c8aa616a4bb6c53b34d273">ZEN::Path</a>
 </li>
@@ -196,8 +209,14 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 : <a class="el" href="classZEN_1_1IRenderLayer.html#a957225993f018ac6833e621ac87422a3">ZEN::IRenderLayer</a>
 , <a class="el" href="classZEN_1_1RenderLayer.html#a7d278394a5fada3612f1c4144250f30f">ZEN::RenderLayer</a>
 </li>
+<li>getBitness()
+: <a class="el" href="classZEN_1_1SystemInfo.html#abc5084905dae66878e5b26cce6a3347f">ZEN::SystemInfo</a>
+</li>
 <li>getContextId()
 : <a class="el" href="classZEN_1_1OpenGL_1_1VBO.html#a13df296a2953adb592acf14d4a60f4b8">ZEN::OpenGL::VBO</a>
+</li>
+<li>getCPUCores()
+: <a class="el" href="classZEN_1_1SystemInfo.html#ae5a4f52548d0bd33ff8974e043b82d1e">ZEN::SystemInfo</a>
 </li>
 <li>getCurrentSize()
 : <a class="el" href="classZEN_1_1OpenGL_1_1VBO.html#af7cd3d563d9c154c1db835294f9ebcf6">ZEN::OpenGL::VBO</a>
@@ -222,6 +241,12 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 <li>getModelViewProjection()
 : <a class="el" href="classZEN_1_1Camera3D.html#aa68a25b3906a276cdeeafc84c52e5bf6">ZEN::Camera3D</a>
 , <a class="el" href="classZEN_1_1ICamera3D.html#a8142e328962447bfbe52390de0c5d759">ZEN::ICamera3D</a>
+</li>
+<li>getPlatform()
+: <a class="el" href="classZEN_1_1SystemInfo.html#a4cb4a2c9c242c1f8a9356dade00bb61a">ZEN::SystemInfo</a>
+</li>
+<li>getPlatformAsString()
+: <a class="el" href="classZEN_1_1SystemInfo.html#a0bda291dbb22cba54242397b9cf65026">ZEN::SystemInfo</a>
 </li>
 <li>getProcessState()
 : <a class="el" href="classZEN_1_1Process.html#a1dd617e06dfaf974fa8690df28d2d625">ZEN::Process</a>
@@ -249,7 +274,8 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 : <a class="el" href="structZEN_1_1EngineInfo.html#ab57513f50c918c8fd9f805922895bbc1">ZEN::EngineInfo</a>
 </li>
 <li>getVertices()
-: <a class="el" href="classZEN_1_1IShape.html#a2edb580c0205a6a33449ef446aad4b2d">ZEN::IShape&lt; T &gt;</a>
+: <a class="el" href="classZEN_1_1IRenderable3D.html#a0c5e075778610fc3812f8efeea2fe64b">ZEN::IRenderable3D</a>
+, <a class="el" href="classZEN_1_1IShape.html#a2edb580c0205a6a33449ef446aad4b2d">ZEN::IShape&lt; T &gt;</a>
 , <a class="el" href="classZEN_1_1Mesh3D.html#af3b29f89290efe4ee0b02f2dfe4a211d">ZEN::Mesh3D</a>
 , <a class="el" href="classZEN_1_1Shape3D.html#aadedfd4d1168261058e908ddc007efc1">ZEN::Shape3D</a>
 </li>
@@ -273,7 +299,9 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 : <a class="el" href="classZEN_1_1Log.html#af742c21efb209fd0b8eb80eec0559349">ZEN::Log</a>
 </li>
 <li>initialize()
-: <a class="el" href="classZEN_1_1OpenGL_1_1VBO.html#a537cdbbfe4e8e0bb098377a641d8d224">ZEN::OpenGL::VBO</a>
+: <a class="el" href="classZEN_1_1IRenderer.html#a4cb5a24a6542d8e3c35b7545f6370815">ZEN::IRenderer</a>
+, <a class="el" href="classZEN_1_1OpenGL_1_1Renderer.html#ad9a3541039b49c6db90ed781c9033a54">ZEN::OpenGL::Renderer</a>
+, <a class="el" href="classZEN_1_1OpenGL_1_1VBO.html#a537cdbbfe4e8e0bb098377a641d8d224">ZEN::OpenGL::VBO</a>
 </li>
 <li>invoke()
 : <a class="el" href="classZEN_1_1ControlSystems_1_1SignalHandler.html#a12a4aa12603945f96fd866c3d3ca91d8">ZEN::ControlSystems::SignalHandler</a>
@@ -289,6 +317,10 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 </li>
 <li>isFile()
 : <a class="el" href="classZEN_1_1Path.html#a7a2fb09374802f253a94fbc90b0b3870">ZEN::Path</a>
+</li>
+<li>isInitialized()
+: <a class="el" href="classZEN_1_1IRenderer.html#ac2bcdead8d3c2202def1b3215190b051">ZEN::IRenderer</a>
+, <a class="el" href="classZEN_1_1OpenGL_1_1Renderer.html#a2ad08ef6b8c5feb8785666b5f2c0edaf">ZEN::OpenGL::Renderer</a>
 </li>
 </ul>
 
@@ -322,6 +354,8 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 <h3><a id="index_m"></a>- m -</h3><ul>
 <li>make()
 : <a class="el" href="classZEN_1_1Cube.html#a55245ac8e39d86c8ba06f24067cd7da5">ZEN::Cube</a>
+, <a class="el" href="classZEN_1_1GLSLShaderBuilder.html#a02de1f2afd28d562a24081cb4e8af9f0">ZEN::GLSLShaderBuilder</a>
+, <a class="el" href="classZEN_1_1IShaderBuilder.html#ab8a3257dab53a42333ea4c03276f8969">ZEN::IShaderBuilder</a>
 , <a class="el" href="classZEN_1_1IShape.html#a21d868feb2eabc68a587f7fb59d7f9fc">ZEN::IShape&lt; T &gt;</a>
 , <a class="el" href="classZEN_1_1Shape3D.html#a15ba82eb3b53a5b94a9ecea7512a8db3">ZEN::Shape3D</a>
 </li>
@@ -409,6 +443,10 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 : <a class="el" href="classZEN_1_1IWindow.html#af3a8a1b75f2a6a588720a8c62b80886e">ZEN::IWindow</a>
 , <a class="el" href="classZEN_1_1Window.html#aeea1798c76919c2560775df3e4cd3093">ZEN::Window</a>
 </li>
+<li>render()
+: <a class="el" href="classZEN_1_1IRenderer.html#afd3e2c4d017da54153f30e31b09a3694">ZEN::IRenderer</a>
+, <a class="el" href="classZEN_1_1OpenGL_1_1Renderer.html#a585462defe204ce42e7a2dc5df0c021a">ZEN::OpenGL::Renderer</a>
+</li>
 <li>RenderLayer()
 : <a class="el" href="classZEN_1_1RenderLayer.html#a8e7e3d1d7e4a40ff3548e9c102eb820d">ZEN::RenderLayer</a>
 </li>
@@ -447,7 +485,7 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 <h3><a id="index_s"></a>- s -</h3><ul>
 <li>set()
 : <a class="el" href="classZEN_1_1IShader.html#a579609389c4c4c64b5d0ec13d4a9b264">ZEN::IShader</a>
-, <a class="el" href="classZEN_1_1OpenGL_1_1Shader.html#a039c241c305b02eec64887c7c5118500">ZEN::OpenGL::Shader</a>
+, <a class="el" href="classZEN_1_1OpenGL_1_1Shader.html#a87505bbca1498027ac6796cf13649e33">ZEN::OpenGL::Shader</a>
 </li>
 <li>setData()
 : <a class="el" href="classZEN_1_1File.html#a65ae60986993e4065a97aee87a62a7ba">ZEN::File</a>
@@ -455,6 +493,17 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 <li>setInputManager()
 : <a class="el" href="classZEN_1_1IWindow.html#a2944bafe25694ec5fc62dd063227dc9f">ZEN::IWindow</a>
 , <a class="el" href="classZEN_1_1Window.html#a38ebf8096b598b8ab3df8260ce742838">ZEN::Window</a>
+</li>
+<li>setOnShader()
+: <a class="el" href="classZEN_1_1Camera3D.html#a2b6b20974c6394c0480bf1b0bf463d5d">ZEN::Camera3D</a>
+, <a class="el" href="classZEN_1_1ICamera3D.html#acfc134a47ac017c9eeb351e357f53141">ZEN::ICamera3D</a>
+, <a class="el" href="classZEN_1_1ICamera.html#aaa30e5d26157a2f29d71be50d202c1fb">ZEN::ICamera</a>
+, <a class="el" href="classZEN_1_1ILight.html#a98c0d0edb50157af6af0d19f03e7f0f8">ZEN::ILight</a>
+, <a class="el" href="classZEN_1_1PointLight3D.html#a18a8806baccbf263629a0fc672aa5387">ZEN::PointLight3D</a>
+</li>
+<li>setRenderManager()
+: <a class="el" href="classZEN_1_1IRenderer.html#aec105d41f088106ab0c80269aa8fe3dd">ZEN::IRenderer</a>
+, <a class="el" href="classZEN_1_1OpenGL_1_1Renderer.html#af1995132c6f8fcee68d4664c5161d8c1">ZEN::OpenGL::Renderer</a>
 </li>
 <li>setSource()
 : <a class="el" href="classZEN_1_1IShader.html#a387b70960044055bd1cf395c7fd54f95">ZEN::IShader</a>
@@ -482,6 +531,9 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 </li>
 <li>toLowerCase()
 : <a class="el" href="classZEN_1_1Strings.html#a3f116c9d0ab1a58d7f7c568ba16412ae">ZEN::Strings</a>
+</li>
+<li>toSeconds()
+: <a class="el" href="structZEN_1_1TimeMeasurement.html#a316b4cad4a087b727d497da6166d5500">ZEN::TimeMeasurement</a>
 </li>
 <li>toSemVer()
 : <a class="el" href="structZEN_1_1Version.html#a1eda9ea788b65bd03aae57fe7cd58938">ZEN::Version</a>

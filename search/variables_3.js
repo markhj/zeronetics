@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['errorcode_534',['errorCode',['../structZEN_1_1ResultError.html#a652fb8e319d0b2d91b795c90a6837741',1,'ZEN::ResultError']]],
-  ['errormessage_535',['errorMessage',['../structZEN_1_1ResultError.html#a65625010e05a09c94e8d382336927db0',1,'ZEN::ResultError']]]
+  ['depthtesting_588',['depthTesting',['../structZEN_1_1RenderSettings.html#ae698ee8df78cedc37f7dd5cedf69d9bc',1,'ZEN::RenderSettings']]],
+  ['draw_589',['draw',['../structZEN_1_1RenderSettings.html#a2a4084c9b8935bd6ba829e51ff64c417',1,'ZEN::RenderSettings']]]
 ];

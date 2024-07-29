@@ -146,7 +146,6 @@ var namespaceZEN =
     [ "mouse_pos_axis", "namespaceZEN.html#a6ca0446a44cb9f650316f26a9cca2fe3", null ],
     [ "observable_types", "namespaceZEN.html#a7439816c44d85092b28d2c25b39adaf4", null ],
     [ "observer_meta", "namespaceZEN.html#ab1674f202009b939178c65481a0eeb57", null ],
-    [ "render_time_microsecs", "namespaceZEN.html#a9db2510e515d0b17b4b62bda984ed569", null ],
     [ "unique_id", "namespaceZEN.html#a7431526b224ff13f286c1f418f45fc8b", null ],
     [ "Vec2", "namespaceZEN.html#ac57c2fadbbeb59f4896d28fc11e8871f", null ],
     [ "Vec3", "namespaceZEN.html#a0d7569c6075d08a03f47973dc968b9fc", null ],

@@ -90,6 +90,8 @@ $(document).ready(function(){initNavTree('classZEN_1_1PointLight3D.html',''); in
 <div class="title">ZEN::PointLight3D Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="point-light-3d_8h_source.html">point-light-3d.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ZEN::PointLight3D:</div>
 <div class="dyncontent">
@@ -103,8 +105,7 @@ Collaboration diagram for ZEN::PointLight3D:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a18a8806baccbf263629a0fc672aa5387"><td class="memItemLeft" align="right" valign="top"><a id="a18a8806baccbf263629a0fc672aa5387"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setOnShader</b> (const std::string &amp;key, const std::shared_ptr&lt; <a class="el" href="classZEN_1_1IShader.html">ZEN::IShader</a> &gt; &amp;shader) override</td></tr>
+<tr class="memitem:a18a8806baccbf263629a0fc672aa5387"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1PointLight3D.html#a18a8806baccbf263629a0fc672aa5387">setOnShader</a> (const std::string &amp;key, const std::shared_ptr&lt; <a class="el" href="classZEN_1_1IShader.html">ZEN::IShader</a> &gt; &amp;shader) override</td></tr>
 <tr class="separator:a18a8806baccbf263629a0fc672aa5387"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
@@ -120,14 +121,63 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>linear</b> = 0.01</t
 float&#160;</td><td class="memItemRight" valign="bottom"><b>quadratic</b> = 0.032</td></tr>
 <tr class="separator:a1a769248464ed34092f1bae384b4b0a7 inherit pub_attribs_classZEN_1_1IPointLight"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_classZEN_1_1ILight"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classZEN_1_1ILight')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classZEN_1_1ILight.html">ZEN::ILight</a></td></tr>
-<tr class="memitem:aa8cf9da72bc1e22fb38a347d41e031ff inherit pub_attribs_classZEN_1_1ILight"><td class="memItemLeft" align="right" valign="top"><a id="aa8cf9da72bc1e22fb38a347d41e031ff"></a>
-<a class="el" href="classZEN_1_1ColorRGB.html">ColorRGB</a>&#160;</td><td class="memItemRight" valign="bottom"><b>color</b> = <a class="el" href="classZEN_1_1ColorRGB.html">ColorRGB</a>(1.0, 1.0, 1.0)</td></tr>
+<tr class="memitem:aa8cf9da72bc1e22fb38a347d41e031ff inherit pub_attribs_classZEN_1_1ILight"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classZEN_1_1ColorRGB.html">ColorRGB</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1ILight.html#aa8cf9da72bc1e22fb38a347d41e031ff">color</a> = <a class="el" href="classZEN_1_1ColorRGB.html">ColorRGB</a>(1.0, 1.0, 1.0)</td></tr>
 <tr class="separator:aa8cf9da72bc1e22fb38a347d41e031ff inherit pub_attribs_classZEN_1_1ILight"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_classZEN_1_1IPosition3D"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classZEN_1_1IPosition3D')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classZEN_1_1IPosition3D.html">ZEN::IPosition3D</a></td></tr>
-<tr class="memitem:aae7713429be62bb19cc35de9bd6920fa inherit pub_attribs_classZEN_1_1IPosition3D"><td class="memItemLeft" align="right" valign="top"><a id="aae7713429be62bb19cc35de9bd6920fa"></a>
-Vec3&#160;</td><td class="memItemRight" valign="bottom"><b>position</b> = Vec3(0.0)</td></tr>
+<tr class="memitem:aae7713429be62bb19cc35de9bd6920fa inherit pub_attribs_classZEN_1_1IPosition3D"><td class="memItemLeft" align="right" valign="top">Vec3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1IPosition3D.html#aae7713429be62bb19cc35de9bd6920fa">position</a> = Vec3(0.0)</td></tr>
 <tr class="separator:aae7713429be62bb19cc35de9bd6920fa inherit pub_attribs_classZEN_1_1IPosition3D"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Point Light in 3D</p>
+<p>Point lights shine in all directions with limited distance.</p>
+<p>They have position, but not direction. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a18a8806baccbf263629a0fc672aa5387"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18a8806baccbf263629a0fc672aa5387">&#9670;&nbsp;</a></span>setOnShader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ZEN::PointLight3D::setOnShader </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classZEN_1_1IShader.html">ZEN::IShader</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>shader</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Instruct the shader about the properties of this point light.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td></td></tr>
+    <tr><td class="paramname">shader</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classZEN_1_1ILight.html#a98c0d0edb50157af6af0d19f03e7f0f8">ZEN::ILight</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/zeronetics/entities/3d/<a class="el" href="point-light-3d_8h_source.html">point-light-3d.h</a></li>
 </ul>

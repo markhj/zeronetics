@@ -45,7 +45,7 @@ var NAVTREE =
       [ "Class Index", "classes.html", null ],
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
-        [ "All", "functions.html", null ],
+        [ "All", "functions.html", "functions_dup" ],
         [ "Functions", "functions_func.html", null ],
         [ "Variables", "functions_vars.html", null ]
       ] ]
@@ -55,9 +55,10 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"annotated.html",
-"classZEN_1_1Process.html#a6494ed4c287f19da4a8448f2d4c5dff1",
-"namespaceZEN.html#a68b344c77c113e5bffc15e7c46c125c5a91f4253ca587ca8ac4e63b9ceb351f5d"
+"",
+"classZEN_1_1Process.html",
+"namespaceZEN.html#a68b344c77c113e5bffc15e7c46c125c5a21c2e59531c8710156d34a3c30ac81d5",
+"structZEN_1_1Vertex3D.html#a951c4cbfb269d8a2f115e20136532797"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

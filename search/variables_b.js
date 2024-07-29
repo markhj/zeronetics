@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['screenresolution_554',['screenResolution',['../structZEN_1_1Settings.html#a3813b8b06b1d1c38f87e2418ab28c19e',1,'ZEN::Settings']]],
-  ['settings_555',['settings',['../classZEN_1_1IRenderLayer.html#a087ded5f954d6b9e4ea2d4d3d48ff696',1,'ZEN::IRenderLayer']]],
-  ['shader_556',['shader',['../structZEN_1_1IRenderGroup3D.html#af8e255f798bbd701ff562e2de74b73d1',1,'ZEN::IRenderGroup3D']]],
-  ['signals_557',['signals',['../classZEN_1_1ControlSystems_1_1FreeCamera.html#a392188dbfa4024119f6b34ee681f3509',1,'ZEN::ControlSystems::FreeCamera']]]
+  ['of_607',['of',['../structZEN_1_1Observation.html#a660497889f2d3611d98cc1da6ee979a6',1,'ZEN::Observation']]],
+  ['os_608',['os',['../structZEN_1_1SystemInfoSheet.html#adb132afba239d189c2f59ca9937d6986',1,'ZEN::SystemInfoSheet']]]
 ];

@@ -100,8 +100,7 @@ Inheritance diagram for ZEN::IShaderBuilder:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab8a3257dab53a42333ea4c03276f8969"><td class="memItemLeft" align="right" valign="top"><a id="ab8a3257dab53a42333ea4c03276f8969"></a>
-virtual std::optional&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>make</b> (const <a class="el" href="structZEN_1_1ShaderBlueprint.html">ShaderBlueprint</a> &amp;blueprint, <a class="el" href="namespaceZEN.html#aa45d0a550aed22035e4c5545f82290be">ShaderStage</a> shaderStage) noexcept(false)=0</td></tr>
+<tr class="memitem:ab8a3257dab53a42333ea4c03276f8969"><td class="memItemLeft" align="right" valign="top">virtual std::optional&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1IShaderBuilder.html#ab8a3257dab53a42333ea4c03276f8969">make</a> (const <a class="el" href="structZEN_1_1ShaderBlueprint.html">ShaderBlueprint</a> &amp;blueprint, <a class="el" href="namespaceZEN.html#aa45d0a550aed22035e4c5545f82290be">ShaderStage</a> shaderStage) noexcept(false)=0</td></tr>
 <tr class="separator:ab8a3257dab53a42333ea4c03276f8969"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -109,7 +108,55 @@ virtual std::optional&lt; std::string &gt;&#160;</td><td class="memItemRight" va
 <p>Renderer implementations are responsible for implementing the functions which generate the code which works for them.</p>
 <p>Shader Builders can be used for a number of purposes.</p>
 <p>1) For starters, they make it easy to beginners to write simple shaders. 2) Components, such as gizmos, can provide recipes for shaders, without concerning themselves with the rendering technology (OpenGL, Vulkan, DirectX, something else) </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ab8a3257dab53a42333ea4c03276f8969"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8a3257dab53a42333ea4c03276f8969">&#9670;&nbsp;</a></span>make()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::optional&lt;std::string&gt; ZEN::IShaderBuilder::make </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structZEN_1_1ShaderBlueprint.html">ShaderBlueprint</a> &amp;&#160;</td>
+          <td class="paramname"><em>blueprint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceZEN.html#aa45d0a550aed22035e4c5545f82290be">ShaderStage</a>&#160;</td>
+          <td class="paramname"><em>shaderStage</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Create the shader code based on the blueprint and shader stage.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">blueprint</td><td></td></tr>
+    <tr><td class="paramname">shaderStage</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p>Implemented in <a class="el" href="classZEN_1_1GLSLShaderBuilder.html#a02de1f2afd28d562a24081cb4e8af9f0">ZEN::GLSLShaderBuilder</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/zeronetics/contracts/<a class="el" href="shader-builder_8h_source.html">shader-builder.h</a></li>
 </ul>
 </div><!-- contents -->

@@ -90,19 +90,67 @@ $(document).ready(function(){initNavTree('structZEN_1_1RenderSettings.html','');
 <div class="title">ZEN::RenderSettings Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="render-settings_8h_source.html">render-settings.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ae698ee8df78cedc37f7dd5cedf69d9bc"><td class="memItemLeft" align="right" valign="top"><a id="ae698ee8df78cedc37f7dd5cedf69d9bc"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>depthTesting</b> = true</td></tr>
+<tr class="memitem:ae698ee8df78cedc37f7dd5cedf69d9bc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structZEN_1_1RenderSettings.html#ae698ee8df78cedc37f7dd5cedf69d9bc">depthTesting</a> = true</td></tr>
 <tr class="separator:ae698ee8df78cedc37f7dd5cedf69d9bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a778895166190bc77af9c97fa56da9583"><td class="memItemLeft" align="right" valign="top"><a id="a778895166190bc77af9c97fa56da9583"></a>
-<a class="el" href="namespaceZEN.html#a5089f560467278c4efaed05ce45f57a7">gw_float</a>&#160;</td><td class="memItemRight" valign="bottom"><b>lineSize</b> = 1.0</td></tr>
+<tr class="memitem:a778895166190bc77af9c97fa56da9583"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceZEN.html#a5089f560467278c4efaed05ce45f57a7">gw_float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structZEN_1_1RenderSettings.html#a778895166190bc77af9c97fa56da9583">lineSize</a> = 1.0</td></tr>
 <tr class="separator:a778895166190bc77af9c97fa56da9583"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a4084c9b8935bd6ba829e51ff64c417"><td class="memItemLeft" align="right" valign="top"><a id="a2a4084c9b8935bd6ba829e51ff64c417"></a>
-<a class="el" href="namespaceZEN.html#a5e3ff6a32fb59dbae12505b9fe9b2591">DrawPrimitive</a>&#160;</td><td class="memItemRight" valign="bottom"><b>draw</b> = DrawPrimitive::Triangles</td></tr>
+<tr class="memitem:a2a4084c9b8935bd6ba829e51ff64c417"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceZEN.html#a5e3ff6a32fb59dbae12505b9fe9b2591">DrawPrimitive</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structZEN_1_1RenderSettings.html#a2a4084c9b8935bd6ba829e51ff64c417">draw</a> = DrawPrimitive::Triangles</td></tr>
 <tr class="separator:a2a4084c9b8935bd6ba829e51ff64c417"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="structZEN_1_1Settings.html">Settings</a> on a per-layer basis. Every layer is coupled with an instance of this struct, which allows every layer to have individual preferences such as depth testing and draw mode. </p>
+</div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="ae698ee8df78cedc37f7dd5cedf69d9bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae698ee8df78cedc37f7dd5cedf69d9bc">&#9670;&nbsp;</a></span>depthTesting</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ZEN::RenderSettings::depthTesting = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Enable or disable depth testing</p>
+<p>When depth resting is enabled it's the Z-coordinate of a vertex which determines the visible order. When it's disabled, it's the order in which vertices are rendered which take priority. </p>
+
+</div>
+</div>
+<a id="a2a4084c9b8935bd6ba829e51ff64c417"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a4084c9b8935bd6ba829e51ff64c417">&#9670;&nbsp;</a></span>draw</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceZEN.html#a5e3ff6a32fb59dbae12505b9fe9b2591">DrawPrimitive</a> ZEN::RenderSettings::draw = DrawPrimitive::Triangles</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The draw mode. Among a few options are points, lines and triangles. Triangles are the common choice to rendering 3D objects. </p>
+
+</div>
+</div>
+<a id="a778895166190bc77af9c97fa56da9583"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a778895166190bc77af9c97fa56da9583">&#9670;&nbsp;</a></span>lineSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceZEN.html#a5089f560467278c4efaed05ce45f57a7">gw_float</a> ZEN::RenderSettings::lineSize = 1.0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The width of line primitives. </p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>include/zeronetics/core/<a class="el" href="render-settings_8h_source.html">render-settings.h</a></li>
 </ul>

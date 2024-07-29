@@ -94,21 +94,27 @@ $(document).ready(function(){initNavTree('shader-blueprint_8h_source.html',''); 
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;zeronetics/core/vertices.h&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceZEN.html">ZEN</a> {</div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="structZEN_1_1LightSupport.html">    8</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structZEN_1_1LightSupport.html">LightSupport</a> {</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        uint16_t slotsPointLight3D = 0;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    };</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="structZEN_1_1ShaderBlueprint.html">   15</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structZEN_1_1ShaderBlueprint.html">ShaderBlueprint</a> {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        std::vector&lt;VertexAttribute&gt; attributes;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        Projection projection = Projection::Orthographic;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="structZEN_1_1LightSupport.html">LightSupport</a> lightSupport;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    };</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="structZEN_1_1LightSupport.html">   12</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structZEN_1_1LightSupport.html">LightSupport</a> {</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="structZEN_1_1LightSupport.html#a360e149c1324796b252cda47f6688f61">   16</a></span>&#160;        uint16_t <a class="code" href="structZEN_1_1LightSupport.html#a360e149c1324796b252cda47f6688f61">slotsPointLight3D</a> = 0;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    };</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="structZEN_1_1ShaderBlueprint.html">   22</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structZEN_1_1ShaderBlueprint.html">ShaderBlueprint</a> {</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structZEN_1_1ShaderBlueprint.html#ad1bde66042970a8d06eea7dd11822cff">   27</a></span>&#160;        std::vector&lt;VertexAttribute&gt; <a class="code" href="structZEN_1_1ShaderBlueprint.html#ad1bde66042970a8d06eea7dd11822cff">attributes</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="structZEN_1_1ShaderBlueprint.html#a21ee1e9dcbb564814f4d91f844c7359c">   33</a></span>&#160;        <a class="code" href="namespaceZEN.html#afe36e25feafd68478583d7d4d941cdd1">Projection</a> <a class="code" href="structZEN_1_1ShaderBlueprint.html#a21ee1e9dcbb564814f4d91f844c7359c">projection</a> = <a class="code" href="namespaceZEN.html#afe36e25feafd68478583d7d4d941cdd1a03424250432f2aa71de95579d2c0eaeb">Projection::Orthographic</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="structZEN_1_1ShaderBlueprint.html#ab76fe7f2e41a134829829e74471e5c04">   39</a></span>&#160;        <a class="code" href="structZEN_1_1LightSupport.html">LightSupport</a> <a class="code" href="structZEN_1_1ShaderBlueprint.html#ab76fe7f2e41a134829829e74471e5c04">lightSupport</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    };</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
 <div class="ttc" id="anamespaceZEN_html"><div class="ttname"><a href="namespaceZEN.html">ZEN</a></div><div class="ttdef"><b>Definition:</b> cameras.h:9</div></div>
-<div class="ttc" id="astructZEN_1_1LightSupport_html"><div class="ttname"><a href="structZEN_1_1LightSupport.html">ZEN::LightSupport</a></div><div class="ttdef"><b>Definition:</b> shader-blueprint.h:8</div></div>
-<div class="ttc" id="astructZEN_1_1ShaderBlueprint_html"><div class="ttname"><a href="structZEN_1_1ShaderBlueprint.html">ZEN::ShaderBlueprint</a></div><div class="ttdef"><b>Definition:</b> shader-blueprint.h:15</div></div>
+<div class="ttc" id="anamespaceZEN_html_afe36e25feafd68478583d7d4d941cdd1"><div class="ttname"><a href="namespaceZEN.html#afe36e25feafd68478583d7d4d941cdd1">ZEN::Projection</a></div><div class="ttdeci">Projection</div><div class="ttdef"><b>Definition:</b> enums.h:259</div></div>
+<div class="ttc" id="anamespaceZEN_html_afe36e25feafd68478583d7d4d941cdd1a03424250432f2aa71de95579d2c0eaeb"><div class="ttname"><a href="namespaceZEN.html#afe36e25feafd68478583d7d4d941cdd1a03424250432f2aa71de95579d2c0eaeb">ZEN::Projection::Orthographic</a></div><div class="ttdeci">@ Orthographic</div></div>
+<div class="ttc" id="astructZEN_1_1LightSupport_html"><div class="ttname"><a href="structZEN_1_1LightSupport.html">ZEN::LightSupport</a></div><div class="ttdef"><b>Definition:</b> shader-blueprint.h:12</div></div>
+<div class="ttc" id="astructZEN_1_1LightSupport_html_a360e149c1324796b252cda47f6688f61"><div class="ttname"><a href="structZEN_1_1LightSupport.html#a360e149c1324796b252cda47f6688f61">ZEN::LightSupport::slotsPointLight3D</a></div><div class="ttdeci">uint16_t slotsPointLight3D</div><div class="ttdef"><b>Definition:</b> shader-blueprint.h:16</div></div>
+<div class="ttc" id="astructZEN_1_1ShaderBlueprint_html"><div class="ttname"><a href="structZEN_1_1ShaderBlueprint.html">ZEN::ShaderBlueprint</a></div><div class="ttdef"><b>Definition:</b> shader-blueprint.h:22</div></div>
+<div class="ttc" id="astructZEN_1_1ShaderBlueprint_html_a21ee1e9dcbb564814f4d91f844c7359c"><div class="ttname"><a href="structZEN_1_1ShaderBlueprint.html#a21ee1e9dcbb564814f4d91f844c7359c">ZEN::ShaderBlueprint::projection</a></div><div class="ttdeci">Projection projection</div><div class="ttdef"><b>Definition:</b> shader-blueprint.h:33</div></div>
+<div class="ttc" id="astructZEN_1_1ShaderBlueprint_html_ab76fe7f2e41a134829829e74471e5c04"><div class="ttname"><a href="structZEN_1_1ShaderBlueprint.html#ab76fe7f2e41a134829829e74471e5c04">ZEN::ShaderBlueprint::lightSupport</a></div><div class="ttdeci">LightSupport lightSupport</div><div class="ttdef"><b>Definition:</b> shader-blueprint.h:39</div></div>
+<div class="ttc" id="astructZEN_1_1ShaderBlueprint_html_ad1bde66042970a8d06eea7dd11822cff"><div class="ttname"><a href="structZEN_1_1ShaderBlueprint.html#ad1bde66042970a8d06eea7dd11822cff">ZEN::ShaderBlueprint::attributes</a></div><div class="ttdeci">std::vector&lt; VertexAttribute &gt; attributes</div><div class="ttdef"><b>Definition:</b> shader-blueprint.h:27</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

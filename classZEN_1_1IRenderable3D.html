@@ -90,6 +90,8 @@ $(document).ready(function(){initNavTree('classZEN_1_1IRenderable3D.html',''); i
 <div class="title">ZEN::IRenderable3D Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="renderable_8h_source.html">renderable.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ZEN::IRenderable3D:</div>
 <div class="dyncontent">
@@ -103,8 +105,7 @@ Collaboration diagram for ZEN::IRenderable3D:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0c5e075778610fc3812f8efeea2fe64b"><td class="memItemLeft" align="right" valign="top"><a id="a0c5e075778610fc3812f8efeea2fe64b"></a>
-virtual std::vector&lt; <a class="el" href="structZEN_1_1Vertex3D.html">Vertex3D</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getVertices</b> () const noexcept=0</td></tr>
+<tr class="memitem:a0c5e075778610fc3812f8efeea2fe64b"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; <a class="el" href="structZEN_1_1Vertex3D.html">Vertex3D</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1IRenderable3D.html#a0c5e075778610fc3812f8efeea2fe64b">getVertices</a> () const noexcept=0</td></tr>
 <tr class="separator:a0c5e075778610fc3812f8efeea2fe64b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
@@ -113,10 +114,41 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:ae9170d41f8b46841f293cb6e83c42958 inherit pub_attribs_classZEN_1_1IRenderable"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="structZEN_1_1GPUAllocation.html">GPUAllocation</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1IRenderable.html#ae9170d41f8b46841f293cb6e83c42958">gpuAlloc</a></td></tr>
 <tr class="separator:ae9170d41f8b46841f293cb6e83c42958 inherit pub_attribs_classZEN_1_1IRenderable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_classZEN_1_1IPosition3D"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classZEN_1_1IPosition3D')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classZEN_1_1IPosition3D.html">ZEN::IPosition3D</a></td></tr>
-<tr class="memitem:aae7713429be62bb19cc35de9bd6920fa inherit pub_attribs_classZEN_1_1IPosition3D"><td class="memItemLeft" align="right" valign="top"><a id="aae7713429be62bb19cc35de9bd6920fa"></a>
-Vec3&#160;</td><td class="memItemRight" valign="bottom"><b>position</b> = Vec3(0.0)</td></tr>
+<tr class="memitem:aae7713429be62bb19cc35de9bd6920fa inherit pub_attribs_classZEN_1_1IPosition3D"><td class="memItemLeft" align="right" valign="top">Vec3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1IPosition3D.html#aae7713429be62bb19cc35de9bd6920fa">position</a> = Vec3(0.0)</td></tr>
 <tr class="separator:aae7713429be62bb19cc35de9bd6920fa inherit pub_attribs_classZEN_1_1IPosition3D"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Contract for 3D Renderable </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a0c5e075778610fc3812f8efeea2fe64b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c5e075778610fc3812f8efeea2fe64b">&#9670;&nbsp;</a></span>getVertices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::vector&lt;<a class="el" href="structZEN_1_1Vertex3D.html">Vertex3D</a>&gt; ZEN::IRenderable3D::getVertices </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the vertices which make up the renderable.</p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p>Implemented in <a class="el" href="classZEN_1_1Mesh3D.html#af3b29f89290efe4ee0b02f2dfe4a211d">ZEN::Mesh3D</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/zeronetics/contracts/<a class="el" href="renderable_8h_source.html">renderable.h</a></li>
 </ul>

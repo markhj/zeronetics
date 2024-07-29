@@ -4,7 +4,7 @@
 #include <format>
 
 void ZEN::ControlSystems::ControlManager::onKeyStateChanged(const KeyStateEvent &keyEvent) {
-    if (!inputMapping || !signalHandler) {
+    if (!m_inputMapping || !m_signalHandler) {
         return;
     }
 
@@ -15,12 +15,12 @@ void ZEN::ControlSystems::ControlManager::onKeyStateChanged(const KeyStateEvent 
         m_keysDown.emplace_back(keyEvent.key);
     }
 
-    std::optional<const char *> signal = inputMapping->getSignal(keyEvent);
+    std::optional<const char *> signal = m_inputMapping->getSignal(keyEvent);
     if (!signal.has_value()) {
         return;
     }
 
-    signalHandler->invoke(signal.value(), std::nullopt);
+    m_signalHandler->invoke(signal.value(), std::nullopt);
 }
 
 void ZEN::ControlSystems::ControlManager::onMouseMoved(const MouseMovedEvent &mouseMovedEvent) {
@@ -30,24 +30,24 @@ void ZEN::ControlSystems::ControlManager::onMouseMoved(const MouseMovedEvent &mo
 }
 
 void ZEN::ControlSystems::ControlManager::process(ZEN::dt_float delta) {
-    if (!inputMapping || !signalHandler) {
+    if (!m_inputMapping || !m_signalHandler) {
         return;
     }
 
     std::vector<std::string> activeSignals = {};
 
     std::for_each(m_keysDown.begin(), m_keysDown.end(), [&](const Key &key) {
-        std::optional<const char *> signal = inputMapping->getSignal(KeyDownEvent{key});
+        std::optional<const char *> signal = m_inputMapping->getSignal(KeyDownEvent{key});
         if (signal.has_value()) {
-            signalHandler->invoke(signal.value(), delta);
+            m_signalHandler->invoke(signal.value(), delta);
             activeSignals.emplace_back(signal.value());
         }
     });
 
     std::for_each(m_mouseButtonsDown.begin(), m_mouseButtonsDown.end(), [&](const MouseButton &mouseButton) {
-        std::optional<const char *> signal = inputMapping->getSignal(MouseButtonDownEvent{mouseButton});
+        std::optional<const char *> signal = m_inputMapping->getSignal(MouseButtonDownEvent{mouseButton});
         if (signal.has_value()) {
-            signalHandler->invoke(signal.value(), delta);
+            m_signalHandler->invoke(signal.value(), delta);
             auto it = std::find(activeSignals.begin(), activeSignals.end(), signal.value());
             if (it == activeSignals.end()) {
                 activeSignals.emplace_back(signal.value());
@@ -61,7 +61,7 @@ void ZEN::ControlSystems::ControlManager::process(ZEN::dt_float delta) {
 }
 
 void ZEN::ControlSystems::ControlManager::onMouseButtonStateChanged(const ZEN::MouseButtonStateEvent &mouseButtonStateEvent) {
-    if (!inputMapping || !signalHandler) {
+    if (!m_inputMapping || !m_signalHandler) {
         return;
     }
 
@@ -72,20 +72,32 @@ void ZEN::ControlSystems::ControlManager::onMouseButtonStateChanged(const ZEN::M
         m_mouseButtonsDown.emplace_back(mouseButtonStateEvent.mouseButton);
     }
 
-    std::optional<const char *> signal = inputMapping->getSignal(mouseButtonStateEvent);
+    std::optional<const char *> signal = m_inputMapping->getSignal(mouseButtonStateEvent);
     if (!signal.has_value()) {
         return;
     }
 
-    signalHandler->invoke(signal.value(), std::nullopt);
+    m_signalHandler->invoke(signal.value(), std::nullopt);
 }
 
 void ZEN::ControlSystems::ControlManager::attachAssist(const std::shared_ptr<Assist> &assist) noexcept {
     assists.emplace_back(assist);
-    auto init = assist->initialize();
+    assist->start();
 
-    if (signalHandler) {
-        signalHandler->lockSignals(init.signals);
+    if (m_signalHandler) {
+        m_signalHandler->lockSignals(assist->getSignals());
+    }
+}
+
+void ZEN::ControlSystems::ControlManager::setInputMapping(const std::shared_ptr<InputMapping> &inputMapping) {
+    m_inputMapping = inputMapping;
+}
+
+void ZEN::ControlSystems::ControlManager::setSignalHandler(const std::shared_ptr<SignalHandler> &signalHandler) {
+    m_signalHandler = signalHandler;
+
+    for (auto &assist: assists) {
+        signalHandler->lockSignals(assist->getSignals());
     }
 }
 
@@ -203,6 +215,9 @@ bool ZEN::ControlSystems::Assist::isInitialized() const noexcept {
 }
 
 ZEN::ControlSystems::AssistInitialization ZEN::ControlSystems::Assist::start() {
+    initialize();
     m_initialized = true;
-    return initialize();
+    return {
+            .signals = getSignals(),
+    };
 }

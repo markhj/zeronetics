@@ -25,7 +25,9 @@ namespace ZEN::ControlSystems {
 
         void onMouseMoved(const MouseMovedEvent &mouseMovedEvent) override;
 
-        AssistInitialization initialize() override;
+        void initialize() override;
+
+        std::vector<const char *> getSignals() override;
 
     private:
         gw_float xzAngle = 0.0,

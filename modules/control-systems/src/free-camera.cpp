@@ -67,16 +67,15 @@ void ZEN::ControlSystems::FreeCamera::onMouseMoved(const ZEN::MouseMovedEvent &m
     camera3d->target = camera3d->position + Vec3(sin(xzAngle), sin(M_PI * 0.5 * yAngle), cos(xzAngle));
 }
 
-ZEN::ControlSystems::AssistInitialization ZEN::ControlSystems::FreeCamera::initialize() {
+void ZEN::ControlSystems::FreeCamera::initialize() {
     xzAngle = atan2(camera3d->target.z - camera3d->position.z, camera3d->target.x - camera3d->position.x);
     yAngle = atan2(camera3d->target.y, camera3d->position.y);
+}
 
+std::vector<const char *> ZEN::ControlSystems::FreeCamera::getSignals() {
     std::vector<const char *> res;
     std::for_each(signals.begin(), signals.end(), [&](const auto &item) {
         res.emplace_back(item);
     });
-
-    return {
-            .signals = res,
-    };
+    return res;
 }

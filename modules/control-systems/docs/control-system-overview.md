@@ -32,16 +32,16 @@ all the parts together.
 
 ````cpp
 std::shared_ptr<ControlManager> controlManager = std::make_shared<ControlManager>(ControlManager());
-std::shared_ptr<InputMapping> inputMapping = std::make_shared<InputMapping>(InputMapping());
-std::shared_ptr<SignalHandler> signalHandler = std::make_shared<SignalHandler>(SignalHandler());
+std::shared_ptr<InputMapping> m_inputMapping = std::make_shared<InputMapping>(InputMapping());
+std::shared_ptr<SignalHandler> m_signalHandler = std::make_shared<SignalHandler>(SignalHandler());
 ````
 
 Next, we'll connect the ``InputMapping``
 and ``SignalHandler`` to ``ControlManager``.
 
 ````cpp
-controlManager->inputMapping = inputMapping;
-controlManager->signalHandler = signalHandler;
+controlManager->m_inputMapping = m_inputMapping;
+controlManager->m_signalHandler = m_signalHandler;
 ````
 
 And, finally, we need to instruct the ZEN::Window instance to use _this_
@@ -57,14 +57,14 @@ In this example, we will map the press of the key ``A`` to the
 signal ``left``.
 
 ````cpp
-inputMapping->keyJustPressed(Key::A, "left");
+m_inputMapping->keyJustPressed(Key::A, "left");
 ````
 
 And we'll instruct the ``SignalHandler`` to process the signal
 ``left`` by printing a message that says "Going left!".
 
 ````cpp
-signalHandler->on("left", [&]() {
+m_signalHandler->on("left", [&]() {
     std::cout << "Going left!" << std::endl;
 });
 ````
@@ -90,10 +90,10 @@ auto inGameMapping = std::make_shared<InputMapping>(InputMapping());
 auto mainMenuMapping = std::make_shared<InputMapping>(InputMapping());
 
 // Code for when the game starts
-controlManager->inputMapping = inGameMapping;
+controlManager->m_inputMapping = inGameMapping;
 
 // When code is executed to open the main menu
-controlManager->inputMapping = mainMenuMapping;
+controlManager->m_inputMapping = mainMenuMapping;
 ````
 
 Of course, you can do the same with signal handling, but this is

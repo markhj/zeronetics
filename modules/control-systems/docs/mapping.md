@@ -11,8 +11,8 @@ To map when a key has just been pressed, or just released, use
 these methods:
 
 ````cpp
-inputMapping->keyJustPressed(Key::W, "start_running_forward");
-inputMapping->keyJustReleased(Key::W, "stop_running_forward");
+m_inputMapping->keyJustPressed(Key::W, "start_running_forward");
+m_inputMapping->keyJustReleased(Key::W, "stop_running_forward");
 ````
 
 Available keys can be seen on ZEN::Key enumerator.
@@ -22,13 +22,13 @@ Available keys can be seen on ZEN::Key enumerator.
 While you're holding down a key, you can use:
 
 ````cpp
-inputMapping->keyDown(Key::W, "moving_forward");
+m_inputMapping->keyDown(Key::W, "moving_forward");
 ````
 
 The corresponding signal handler _can_ use delta value:
 
 ````cpp
-signalHandler->on("forward", [&](dt_float delta) {
+m_signalHandler->on("forward", [&](dt_float delta) {
     character->position.z -= 2.0f * delta;
 });
 ````
@@ -41,8 +41,8 @@ In a fashion eerily similar to the keyboard, you can track when
 the mouse button is first clicked and when it's released.
 
 ````cpp
-inputMapping->mouseButtonJustClicked(MouseButton::PrimaryMouseButton, "start_shooting");
-inputMapping->mouseButtonJustReleased(MouseButton::PrimaryMouseButton, "stop_shooting");
+m_inputMapping->mouseButtonJustClicked(MouseButton::PrimaryMouseButton, "start_shooting");
+m_inputMapping->mouseButtonJustReleased(MouseButton::PrimaryMouseButton, "stop_shooting");
 ````
 
 Available buttons can be seen on ZEN::MouseButton.
@@ -52,5 +52,5 @@ Available buttons can be seen on ZEN::MouseButton.
 You can signal when a mouse button is held down using ``mouseButtonDown``:
 
 ````cpp
-inputMapping->mouseButtonDown(MouseButton::PrimaryMouseButton, "fly");
+m_inputMapping->mouseButtonDown(MouseButton::PrimaryMouseButton, "fly");
 ````

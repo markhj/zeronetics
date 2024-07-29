@@ -19,7 +19,9 @@ namespace ZEN::ControlSystems {
 
         virtual void onMouseMoved(const MouseMovedEvent &mouseMovedEvent) = 0;
 
-        virtual AssistInitialization initialize() = 0;
+        virtual void initialize() = 0;
+
+        virtual std::vector<const char *> getSignals() = 0;
 
         AssistInitialization start();
 
@@ -188,15 +190,9 @@ namespace ZEN::ControlSystems {
      */
     class ControlManager : public IInputManager {
     public:
-        /**
-         * Current input mapping, if any
-         */
-        std::shared_ptr<InputMapping> inputMapping;
+        void setInputMapping(const std::shared_ptr<InputMapping> &inputMapping);
 
-        /**
-         * Current signal handler, if any
-         */
-        std::shared_ptr<SignalHandler> signalHandler;
+        void setSignalHandler(const std::shared_ptr<SignalHandler> &signalHandler);
 
         void attachAssist(const std::shared_ptr<Assist> &assist) noexcept;
 
@@ -211,6 +207,16 @@ namespace ZEN::ControlSystems {
 
         std::vector<Key> m_keysDown;
         std::vector<MouseButton> m_mouseButtonsDown;
+
+        /**
+         * Current signal handler, if any
+         */
+        std::shared_ptr<SignalHandler> m_signalHandler;
+
+        /**
+         * Current input mapping, if any
+         */
+        std::shared_ptr<InputMapping> m_inputMapping;
 
         /**
          * List of assists.

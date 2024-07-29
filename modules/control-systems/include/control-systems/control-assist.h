@@ -8,12 +8,20 @@
 #include <string>
 
 namespace ZEN::ControlSystems {
+    struct AssistInitialization {
+        std::vector<const char *> signals;
+    };
+
     class IAssist {
     public:
         virtual void process(dt_float delta,
                              const std::vector<std::string> &signals) = 0;
 
         virtual void onMouseMoved(const MouseMovedEvent &mouseMovedEvent) = 0;
+
+        virtual bool isInitialized() const noexcept = 0;
+
+        virtual AssistInitialization initialize() = 0;
 
     };
 
@@ -156,7 +164,11 @@ namespace ZEN::ControlSystems {
          */
         void invoke(const char *signal, std::optional<dt_float> delta) noexcept(false);
 
+        void lockSignals(const std::vector<const char *> &signals) noexcept;
+
     private:
+        std::vector<const char *> m_lockedSignals;
+
         std::unordered_map<const char *, std::function<void()>> handles;
 
         std::unordered_map<const char *, std::function<void(dt_float delta)>> handlesWithDelta;
@@ -181,10 +193,7 @@ namespace ZEN::ControlSystems {
          */
         std::shared_ptr<SignalHandler> signalHandler;
 
-        /**
-         * List of assists.
-         */
-        std::vector<std::shared_ptr<IAssist>> assists;
+        void attachAssist(const std::shared_ptr<IAssist> &assist) noexcept;
 
     private:
         void process(dt_float delta) override;
@@ -197,5 +206,10 @@ namespace ZEN::ControlSystems {
 
         std::vector<Key> m_keysDown;
         std::vector<MouseButton> m_mouseButtonsDown;
+
+        /**
+         * List of assists.
+         */
+        std::vector<std::shared_ptr<IAssist>> assists;
     };
 }

@@ -80,6 +80,15 @@ void ZEN::ControlSystems::ControlManager::onMouseButtonStateChanged(const ZEN::M
     signalHandler->invoke(signal.value(), std::nullopt);
 }
 
+void ZEN::ControlSystems::ControlManager::attachAssist(const std::shared_ptr<IAssist> &assist) noexcept {
+    assists.emplace_back(assist);
+    auto init = assist->initialize();
+
+    if (signalHandler) {
+        signalHandler->lockSignals(init.signals);
+    }
+}
+
 void ZEN::ControlSystems::InputMapping::keyJustPressed(ZEN::Key key, const char *signal) noexcept {
     m_mapping.push_back({
             .form = Form::KeyPressed,
@@ -173,11 +182,18 @@ void ZEN::ControlSystems::SignalHandler::invoke(const char *signal,
     } else if (handles.contains(signal)) {
         handles[signal]();
     } else {
-        ZEN_WARN(std::format("Attempting to invoke non-existing signal: {}", signal),
-                 ZEN::LogCategory::Controls);
+        auto it = std::find(m_lockedSignals.begin(), m_lockedSignals.end(), signal);
+        if (it == m_lockedSignals.end()) {
+            ZEN_WARN(std::format("Attempting to invoke non-existing signal: {}", signal),
+                     ZEN::LogCategory::Controls);
+        }
     }
 }
 
 void ZEN::ControlSystems::SignalHandler::on(const char *signal, const std::function<void(dt_float)> &handle) noexcept {
     handlesWithDelta[signal] = handle;
+}
+
+void ZEN::ControlSystems::SignalHandler::lockSignals(const std::vector<const char *> &signals) noexcept {
+    m_lockedSignals.insert(m_lockedSignals.end(), signals.begin(), signals.end());
 }

@@ -13,7 +13,7 @@ namespace ZEN::ControlSystems {
         /**
          * Order: Forward, Left, Backward, Right
          */
-        std::array<std::string, 4> signals;
+        std::array<const char *, 4> signals;
 
         /**
          * The camera instance to be manipulated.
@@ -24,6 +24,10 @@ namespace ZEN::ControlSystems {
                      const std::vector<std::string> &signals) override;
 
         void onMouseMoved(const MouseMovedEvent &mouseMovedEvent) override;
+
+        bool isInitialized() const noexcept override;
+
+        AssistInitialization initialize() override;
 
     private:
         bool initialized = false;

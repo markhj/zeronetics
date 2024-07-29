@@ -14,7 +14,7 @@ namespace {
 
 void ZEN::ControlSystems::FreeCamera::process(dt_float delta,
                                               const std::vector<std::string> &incomingSignals) {
-    if (signals[0].empty() || signals[1].empty() || signals[2].empty() || signals[3].empty()) {
+    if (!signals[0] || !signals[1] || !signals[2] || !signals[3]) {
         ZEN_WARN("You must declare all four signals in Free Camera.", ZEN::LogCategory::Controls);
         return;
     }
@@ -22,12 +22,6 @@ void ZEN::ControlSystems::FreeCamera::process(dt_float delta,
     if (!camera3d) {
         ZEN_WARN("You must define a camera in Free Camera.", ZEN::LogCategory::Controls);
         return;
-    }
-
-    if (!initialized) {
-        xzAngle = atan2(camera3d->target.z - camera3d->position.z, camera3d->target.x - camera3d->position.x);
-        yAngle = atan2(camera3d->target.y, camera3d->position.y);
-        initialized = true;
     }
 
     bool forward = hasSignal(signals[0], incomingSignals);
@@ -71,4 +65,24 @@ void ZEN::ControlSystems::FreeCamera::onMouseMoved(const ZEN::MouseMovedEvent &m
     yAngle = (half - mouseMovedEvent.position.y) / half;
 
     camera3d->target = camera3d->position + Vec3(sin(xzAngle), sin(M_PI * 0.5 * yAngle), cos(xzAngle));
+}
+
+bool ZEN::ControlSystems::FreeCamera::isInitialized() const noexcept {
+    return initialized;
+}
+
+ZEN::ControlSystems::AssistInitialization ZEN::ControlSystems::FreeCamera::initialize() {
+    xzAngle = atan2(camera3d->target.z - camera3d->position.z, camera3d->target.x - camera3d->position.x);
+    yAngle = atan2(camera3d->target.y, camera3d->position.y);
+
+    std::vector<const char *> res;
+    std::for_each(signals.begin(), signals.end(), [&](const auto &item) {
+        res.emplace_back(item);
+    });
+
+    initialized = true;
+
+    return {
+            .signals = res,
+    };
 }

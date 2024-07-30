@@ -11,9 +11,22 @@ namespace ZEN {
      */
     struct LightSupport {
         /**
+         * Number of 3D Directional Lights
+         */
+        uint16_t slotsDirectionalLight3D = 0;
+
+        /**
          * Number of 3D Point Lights.
          */
         uint16_t slotsPointLight3D = 0;
+
+        /**
+         * Returns true, if at least one of the light types
+         * has room for at least one light.
+         *
+         * @return
+         */
+        [[nodiscard]] bool hasAnyLight() const noexcept;
     };
 
     /**

@@ -99,6 +99,15 @@ void ZEN::GLSLShaderBuilder::fragment(const ShaderBlueprint &blueprint) noexcept
     section();
     add("uniform Camera3D camera3d;");
 
+    // Directional Light 3D
+    if (blueprint.lightSupport.slotsDirectionalLight3D > 0) {
+        add(structDirectionalLight3D);
+        section();
+        add(calculateDirectionalLight3D);
+        section();
+        add(std::format("uniform DirectionalLight3D directionalLight3D[{}];", blueprint.lightSupport.slotsDirectionalLight3D));
+    }
+
     // Point Light 3D
     if (blueprint.lightSupport.slotsPointLight3D > 0) {
         add(structPointLight3D);
@@ -128,8 +137,26 @@ void ZEN::GLSLShaderBuilder::fragment(const ShaderBlueprint &blueprint) noexcept
     add("void main() {");
     indent();
 
-    if (blueprint.lightSupport.slotsPointLight3D > 0) {
+    // If any type of light is supported the light color starts at nothing
+    if (blueprint.lightSupport.hasAnyLight()) {
         add("vec3 light = vec3(0.0, 0.0, 0.0);");
+    } else {
+        add("vec3 light = vec3(1.0, 1.0, 1.0);");
+    }
+
+    if (blueprint.lightSupport.slotsDirectionalLight3D > 0) {
+        add("for (int i = 0; i <= " + std::to_string(blueprint.lightSupport.slotsDirectionalLight3D) + "; i++) {");
+        indent();
+        add("if (directionalLight3D[i].color.r > 0 || directionalLight3D[i].color.g > 0 || directionalLight3D[i].color.b > 0) {");
+        indent();
+        add("light += calculateDirectionalLight3D(directionalLight3D[i]);");
+        dedent();
+        add("}");
+        dedent();
+        add("}");
+    }
+
+    if (blueprint.lightSupport.slotsPointLight3D > 0) {
         add("for (int i = 0; i <= " + std::to_string(blueprint.lightSupport.slotsPointLight3D) + "; i++) {");
         indent();
         add("if (pointLight3D[i].color.r > 0 || pointLight3D[i].color.g > 0 || pointLight3D[i].color.b > 0) {");
@@ -139,8 +166,6 @@ void ZEN::GLSLShaderBuilder::fragment(const ShaderBlueprint &blueprint) noexcept
         add("}");
         dedent();
         add("}");
-    } else {
-        add("vec3 light = vec3(1.0, 1.0, 1.0);");
     }
 
     if (colorSize.has_value()) {

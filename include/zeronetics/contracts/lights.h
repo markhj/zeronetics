@@ -27,6 +27,15 @@ namespace ZEN {
     };
 
     /**
+     * Directional Light Contract
+     */
+    template<typename T>
+    class IDirectionalLight : public ILight {
+    public:
+        T direction;
+    };
+
+    /**
      * Point Light Contract
      */
     class IPointLight : public ILight {

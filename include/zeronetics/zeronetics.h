@@ -73,6 +73,7 @@
 
 // Entities
 #include "entities/3d/camera-3d.h"
+#include "entities/3d/directional-light-3d.h"
 #include "entities/3d/mesh-3d.h"
 #include "entities/3d/point-light-3d.h"
 #include "entities/entity.h"

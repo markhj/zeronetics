@@ -17,6 +17,7 @@ set(CORE_SRC
         src/core/observer.cpp
         src/process/process.cpp
         src/core/globals.cpp
+        src/core/shader-blueprint.cpp
 
         # Core: 3rd layer
         src/core/aabb.cpp
@@ -42,6 +43,7 @@ set(CORE_SRC
         # Entities
         src/entities/entity.cpp
         src/entities/3d/point-light-3d.cpp
+        src/entities/3d/directional-light-3d.cpp
         src/entities/3d/camera-3d.cpp
         src/entities/3d/mesh-3d.cpp)
 

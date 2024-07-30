@@ -56,4 +56,9 @@ namespace ZEN {
      * @ref fps
      */
     typedef uint16_t fps_int;
+
+    /**
+     * Type for the ID of registered assets.
+     */
+    typedef uint32_t registered_asset_id;
 }

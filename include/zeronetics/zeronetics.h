@@ -39,6 +39,8 @@
 #include "core/vertices.h"
 
 // Contracts
+#include "contracts/asset-types.h"
+#include "contracts/assets.h"
 #include "contracts/cameras.h"
 #include "contracts/input-manager.h"
 #include "contracts/lights.h"

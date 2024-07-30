@@ -1,5 +1,7 @@
 #pragma once
 
+#include "asset-types.h"
+#include "assets.h"
 #include "zeronetics/contracts/render-manager.h"
 
 namespace ZEN {
@@ -43,6 +45,5 @@ namespace ZEN {
          * Render loop.
          */
         virtual void render() = 0;
-
     };
 }

@@ -4,6 +4,7 @@ set(ZEN_MODULES
         opengl-renderer
         glsl-shader-builder
         control-systems
+        assets
         gizmos)
 
 # Define the vendor (third-party) libraries required on a per-module basis.

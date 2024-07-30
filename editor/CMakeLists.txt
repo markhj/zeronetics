@@ -21,7 +21,7 @@ add_executable(editor
         ${ZEN_VENDOR_DIR}/imgui/backends/imgui_impl_opengl3.cpp
         )
 
-target_link_libraries(editor PRIVATE zeronetics glfw)
+target_link_libraries(editor PRIVATE zeronetics glfw opengl-renderer glsl-shader-builder gizmos control-systems)
 
 target_include_directories(editor PRIVATE ${ZEN_VENDOR_DIR}/glfw/include)
 target_include_directories(editor PUBLIC ${ZEN_VENDOR_DIR}/imgui)

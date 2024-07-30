@@ -196,7 +196,6 @@ namespace ZEN::ControlSystems {
 
         void attachAssist(const std::shared_ptr<Assist> &assist) noexcept;
 
-    private:
         void process(dt_float delta) override;
 
         void onKeyStateChanged(const KeyStateEvent &keyEvent) override;
@@ -205,6 +204,7 @@ namespace ZEN::ControlSystems {
 
         void onMouseButtonStateChanged(const MouseButtonStateEvent &mouseButtonStateEvent) override;
 
+    private:
         std::vector<Key> m_keysDown;
         std::vector<MouseButton> m_mouseButtonsDown;
 

@@ -10,3 +10,6 @@
 [submodule "vendor/cpp-bbunit"]
 	path = vendor/cpp-bbunit
 	url = https://github.com/markhj/cpp-bbunit
+[submodule "vendor/imgui"]
+	path = vendor/imgui
+	url = https://github.com/ocornut/imgui

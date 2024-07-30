@@ -13,7 +13,11 @@ ZEN::Path file1("existing-file.txt");
 ZEN::Path file2("file-does-not-exist.txt");
 ````
 
-But to check whether the path actually exists, you can use ZEN::Path::exists:
+The purpose of the ``Path`` class is to serve information about
+files and directories without directly coupling doing so to any
+actions (such as _loading_ a file).
+
+You use ZEN::Path::exists to check if a path exists.
 
 `````cpp
 if (file1.exists()) {

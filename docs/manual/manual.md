@@ -1,14 +1,24 @@
 @page manual Manual
 
-@subpage helpers  
-@subpage game-class  
-@subpage timer  
+  
+## 📎 Basics
+
 @subpage settings  
 @subpage logging-index  
 @subpage geometry-math  
-@subpage orientation  
-@subpage process  
+@subpage process
+
+## 🌐 Game world
+
+@subpage game-class  
+@subpage orientation     
 @subpage entities  
-@subpage result  
 @subpage rendering  
+
+
+## 🔨 Utilities
+
+@subpage helpers  
+@subpage timer  
+@subpage result  
 @subpage observers

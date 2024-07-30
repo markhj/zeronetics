@@ -3,7 +3,9 @@
 This page is relevant for those interested in contributing to Zeronetics,
 or working on forks of it.
 
-@ref arch
+## Overview of the engine
+
+@subpage arch
 
 @subpage engine-core-structure
 
@@ -11,18 +13,16 @@ or working on forks of it.
 
 @subpage create-modules
 
-@subpage callbacks
-
-## Rendering
-
-@subpage arch-render-manager
-
-## Logging
+## Working on the engine
 
 @ref log-engine-dev
 
-@ref log-why-macros
-
-## Tests
-
 @subpage tests
+
+## Design decisions
+
+@subpage arch-render-manager
+
+@subpage log-why-macros
+
+@subpage callbacks

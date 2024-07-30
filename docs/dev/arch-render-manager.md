@@ -6,12 +6,13 @@ This document details decision-making about the engine design.
 
 As you've probably read in @ref render-manager, the renderer
 is responsible for managing requests. In theory, this means the
-renderer could just discard the requests, or do the exact
-opposite of what's requested. _In theory_.
+renderer can do whatever it wants with the requests. It could
+completely ignore them, do the exact opposite of what's requested,
+and so forth. But that's _in theory_.
 
-But on the other hand it gives renderers the ability to manage
-allocation, de-allocation and updates in a way which is
-performance-wise optimal for the specific renderer.
+The reason renderers are given this freedom is granting them
+the ability to manage allocation, de-allocation and updates in a
+way which is performance-wise optimal for the specific renderer.
 Keep in mind that
 renderers don't work the same way, and we should make as few
 assumptions about renderers as possible, and especially about

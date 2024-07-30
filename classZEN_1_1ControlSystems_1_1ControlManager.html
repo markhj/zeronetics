@@ -114,11 +114,163 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setSignalHandler</b> 
 <tr class="memitem:aa8975c23ba9e8ce2ff20d23c60d00206"><td class="memItemLeft" align="right" valign="top"><a id="aa8975c23ba9e8ce2ff20d23c60d00206"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>attachAssist</b> (const std::shared_ptr&lt; <a class="el" href="classZEN_1_1ControlSystems_1_1Assist.html">Assist</a> &gt; &amp;assist) noexcept</td></tr>
 <tr class="separator:aa8975c23ba9e8ce2ff20d23c60d00206"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fa42068f3c79d7fa6f35c048a9aeed9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1ControlSystems_1_1ControlManager.html#a3fa42068f3c79d7fa6f35c048a9aeed9">process</a> (<a class="el" href="namespaceZEN.html#a1896aa89c3b0bbcccbd1b16d57410502">dt_float</a> delta) override</td></tr>
+<tr class="separator:a3fa42068f3c79d7fa6f35c048a9aeed9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8671d8e9e6f8c887ba53e755c43af1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1ControlSystems_1_1ControlManager.html#af8671d8e9e6f8c887ba53e755c43af1e">onKeyStateChanged</a> (const <a class="el" href="structZEN_1_1KeyStateEvent.html">KeyStateEvent</a> &amp;keyEvent) override</td></tr>
+<tr class="separator:af8671d8e9e6f8c887ba53e755c43af1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab701ca9a871b9b97bb6901c2a2c1e874"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1ControlSystems_1_1ControlManager.html#ab701ca9a871b9b97bb6901c2a2c1e874">onMouseMoved</a> (const <a class="el" href="structZEN_1_1MouseMovedEvent.html">MouseMovedEvent</a> &amp;mouseMovedEvent) override</td></tr>
+<tr class="separator:ab701ca9a871b9b97bb6901c2a2c1e874"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54ebc4dee94f340e0181afa60b8ad4bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1ControlSystems_1_1ControlManager.html#a54ebc4dee94f340e0181afa60b8ad4bc">onMouseButtonStateChanged</a> (const <a class="el" href="structZEN_1_1MouseButtonStateEvent.html">MouseButtonStateEvent</a> &amp;mouseButtonStateEvent) override</td></tr>
+<tr class="separator:a54ebc4dee94f340e0181afa60b8ad4bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A more fully-fledged implementation of <a class="el" href="classZEN_1_1IInputManager.html">ZEN::IInputManager</a>, which helps you manage a wider range of controls "out of the box", utilizing an easy mapping system.</p>
 <p><a class="el" href="control-systems.html">Control Systems</a> </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="af8671d8e9e6f8c887ba53e755c43af1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8671d8e9e6f8c887ba53e755c43af1e">&#9670;&nbsp;</a></span>onKeyStateChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ZEN::ControlSystems::ControlManager::onKeyStateChanged </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structZEN_1_1KeyStateEvent.html">KeyStateEvent</a> &amp;&#160;</td>
+          <td class="paramname"><em>keyEvent</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Handle for when a key is pressed or released.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">keyEvent</td><td>Informs the key state, the pressed key, etc. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classZEN_1_1IInputManager.html#ab85f2241824542fa39a6d913213485b2">ZEN::IInputManager</a>.</p>
+
+</div>
+</div>
+<a id="a54ebc4dee94f340e0181afa60b8ad4bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54ebc4dee94f340e0181afa60b8ad4bc">&#9670;&nbsp;</a></span>onMouseButtonStateChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ZEN::ControlSystems::ControlManager::onMouseButtonStateChanged </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structZEN_1_1MouseButtonStateEvent.html">MouseButtonStateEvent</a> &amp;&#160;</td>
+          <td class="paramname"><em>mouseButtonStateEvent</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Handle for when the state of a mouse button changes.</p>
+<p><a class="el" href="mouse.html">Handling the mouse</a></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mouseButtonStateEvent</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classZEN_1_1IInputManager.html#a941a01aea9fac7f051296753261ed4f4">ZEN::IInputManager</a>.</p>
+
+</div>
+</div>
+<a id="ab701ca9a871b9b97bb6901c2a2c1e874"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab701ca9a871b9b97bb6901c2a2c1e874">&#9670;&nbsp;</a></span>onMouseMoved()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ZEN::ControlSystems::ControlManager::onMouseMoved </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structZEN_1_1MouseMovedEvent.html">MouseMovedEvent</a> &amp;&#160;</td>
+          <td class="paramname"><em>mouseMovedEvent</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Handle for when the mouse cursor has been moved.</p>
+<p><a class="el" href="mouse.html">Handling the mouse</a></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mouseMovedEvent</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classZEN_1_1IInputManager.html#a413dce472d921819d7f6e2ffbe5634e8">ZEN::IInputManager</a>.</p>
+
+</div>
+</div>
+<a id="a3fa42068f3c79d7fa6f35c048a9aeed9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fa42068f3c79d7fa6f35c048a9aeed9">&#9670;&nbsp;</a></span>process()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ZEN::ControlSystems::ControlManager::process </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceZEN.html#a1896aa89c3b0bbcccbd1b16d57410502">dt_float</a>&#160;</td>
+          <td class="paramname"><em>delta</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><a class="el" href="classZEN_1_1Process.html">Process</a> events on every iteration of the loop.</p>
+<p>This can be used, among other things, to handle key-down states.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">delta</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classZEN_1_1IInputManager.html#a67fa901f5ed43aaf78444dcdb4f24fee">ZEN::IInputManager</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>modules/control-systems/include/control-systems/<a class="el" href="control-assist_8h_source.html">control-assist.h</a></li>
 <li>modules/control-systems/src/control-assist.cpp</li>
 </ul>

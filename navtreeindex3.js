@@ -1,5 +1,9 @@
 var NAVTREEINDEX3 =
 {
+"structZEN_1_1ResultError.html#a65625010e05a09c94e8d382336927db0":[6,0,0,51,1],
+"structZEN_1_1ScreenResolution.html":[6,0,0,53],
+"structZEN_1_1Settings.html":[6,0,0,54],
+"structZEN_1_1Settings.html#a3813b8b06b1d1c38f87e2418ab28c19e":[6,0,0,54,1],
 "structZEN_1_1Settings.html#ab445066449f2de6207968fe68feb2042":[6,0,0,54,2],
 "structZEN_1_1Settings.html#ad95cd6f443d84ef03b7242f10fa9d107":[6,0,0,54,0],
 "structZEN_1_1ShaderBlueprint.html":[6,0,0,56],

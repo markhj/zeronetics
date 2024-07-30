@@ -55,9 +55,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "",
-"classZEN_1_1OpenGL_1_1VBO.html#a4d585f94f595957fb87c457ebcaaa720",
-"namespaceZEN.html#a5ac493fe076dd216cf2f69f8b01f05efa4059b0251f66a18cb56f544728796875",
-"structZEN_1_1Settings.html#ab445066449f2de6207968fe68feb2042"
+"classZEN_1_1OpenGL_1_1VAO.html#aabcf172d82cdaa41cb85874c68af3a8b",
+"namespaceZEN.html#a5ac493fe076dd216cf2f69f8b01f05ef",
+"structZEN_1_1ResultError.html#a65625010e05a09c94e8d382336927db0"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

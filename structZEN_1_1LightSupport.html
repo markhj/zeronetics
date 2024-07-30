@@ -84,6 +84,7 @@ $(document).ready(function(){initNavTree('structZEN_1_1LightSupport.html',''); i
 
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="structZEN_1_1LightSupport-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -93,14 +94,64 @@ $(document).ready(function(){initNavTree('structZEN_1_1LightSupport.html',''); i
 
 <p><code>#include &lt;<a class="el" href="shader-blueprint_8h_source.html">shader-blueprint.h</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:aad35bc95cf621e596107b1837f100a12"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structZEN_1_1LightSupport.html#aad35bc95cf621e596107b1837f100a12">hasAnyLight</a> () const noexcept</td></tr>
+<tr class="separator:aad35bc95cf621e596107b1837f100a12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
+<tr class="memitem:a0160a864ae5da3d6f404bf96cc314819"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structZEN_1_1LightSupport.html#a0160a864ae5da3d6f404bf96cc314819">slotsDirectionalLight3D</a> = 0</td></tr>
+<tr class="separator:a0160a864ae5da3d6f404bf96cc314819"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a360e149c1324796b252cda47f6688f61"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structZEN_1_1LightSupport.html#a360e149c1324796b252cda47f6688f61">slotsPointLight3D</a> = 0</td></tr>
 <tr class="separator:a360e149c1324796b252cda47f6688f61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Group light support. You specify the number of slots per light-type. </p>
-</div><h2 class="groupheader">Member Data Documentation</h2>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="aad35bc95cf621e596107b1837f100a12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad35bc95cf621e596107b1837f100a12">&#9670;&nbsp;</a></span>hasAnyLight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ZEN::LightSupport::hasAnyLight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true, if at least one of the light types has room for at least one light.</p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a0160a864ae5da3d6f404bf96cc314819"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0160a864ae5da3d6f404bf96cc314819">&#9670;&nbsp;</a></span>slotsDirectionalLight3D</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t ZEN::LightSupport::slotsDirectionalLight3D = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Number of 3D Directional Lights </p>
+
+</div>
+</div>
 <a id="a360e149c1324796b252cda47f6688f61"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a360e149c1324796b252cda47f6688f61">&#9670;&nbsp;</a></span>slotsPointLight3D</h2>
 

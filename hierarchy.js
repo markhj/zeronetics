@@ -47,6 +47,10 @@ var hierarchy =
       [ "ZEN::ControlSystems::ControlManager", "classZEN_1_1ControlSystems_1_1ControlManager.html", null ]
     ] ],
     [ "ZEN::ILight", "classZEN_1_1ILight.html", [
+      [ "ZEN::IDirectionalLight< Vec3 >", "classZEN_1_1IDirectionalLight.html", [
+        [ "ZEN::DirectionalLight3D", "classZEN_1_1DirectionalLight3D.html", null ]
+      ] ],
+      [ "ZEN::IDirectionalLight< T >", "classZEN_1_1IDirectionalLight.html", null ],
       [ "ZEN::IPointLight", "classZEN_1_1IPointLight.html", [
         [ "ZEN::PointLight3D", "classZEN_1_1PointLight3D.html", null ]
       ] ]

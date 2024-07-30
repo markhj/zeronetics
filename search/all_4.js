@@ -6,7 +6,9 @@ var searchData=
   ['delta_20time_57',['Delta time',['../delta.html',1,'game-class']]],
   ['depthtesting_58',['depthTesting',['../structZEN_1_1RenderSettings.html#ae698ee8df78cedc37f7dd5cedf69d9bc',1,'ZEN::RenderSettings']]],
   ['detach_59',['detach',['../classZEN_1_1Processor.html#a5c1a182fd61ab14f55c6eaf40d13241a',1,'ZEN::Processor']]],
-  ['draw_60',['draw',['../structZEN_1_1RenderSettings.html#a2a4084c9b8935bd6ba829e51ff64c417',1,'ZEN::RenderSettings']]],
-  ['drawprimitive_61',['DrawPrimitive',['../namespaceZEN.html#a5e3ff6a32fb59dbae12505b9fe9b2591',1,'ZEN']]],
-  ['dt_5ffloat_62',['dt_float',['../namespaceZEN.html#a1896aa89c3b0bbcccbd1b16d57410502',1,'ZEN']]]
+  ['direction_60',['direction',['../classZEN_1_1DirectionalLight3D.html#a6497a2f1456a8419bacfa3813a2c20a4',1,'ZEN::DirectionalLight3D']]],
+  ['directionallight3d_61',['DirectionalLight3D',['../classZEN_1_1DirectionalLight3D.html',1,'ZEN']]],
+  ['draw_62',['draw',['../structZEN_1_1RenderSettings.html#a2a4084c9b8935bd6ba829e51ff64c417',1,'ZEN::RenderSettings']]],
+  ['drawprimitive_63',['DrawPrimitive',['../namespaceZEN.html#a5e3ff6a32fb59dbae12505b9fe9b2591',1,'ZEN']]],
+  ['dt_5ffloat_64',['dt_float',['../namespaceZEN.html#a1896aa89c3b0bbcccbd1b16d57410502',1,'ZEN']]]
 ];

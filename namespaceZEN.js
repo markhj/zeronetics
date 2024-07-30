@@ -31,6 +31,10 @@ var namespaceZEN =
     [ "📘 Primary testing suite", "tests.html#autotoc_md123", null ],
     [ "📚 Organization", "tests.html#autotoc_md124", null ],
     [ "📦 Payloads", "tests.html#autotoc_md125", null ],
+    [ "Assets", null, [
+      [ "AssetManager", "classZEN_1_1Assets_1_1AssetManager.html", null ],
+      [ "Texture2D", "classZEN_1_1Assets_1_1Texture2D.html", null ]
+    ] ],
     [ "ControlSystems", null, [
       [ "AssistInitialization", "structZEN_1_1ControlSystems_1_1AssistInitialization.html", "structZEN_1_1ControlSystems_1_1AssistInitialization" ],
       [ "Assist", "classZEN_1_1ControlSystems_1_1Assist.html", "classZEN_1_1ControlSystems_1_1Assist" ],
@@ -59,6 +63,10 @@ var namespaceZEN =
       [ "ControlSystemsTest", "classZEN_1_1Tests_1_1ControlSystemsTest.html", "classZEN_1_1Tests_1_1ControlSystemsTest" ],
       [ "GLSLShaderBuilderTest", "classZEN_1_1Tests_1_1GLSLShaderBuilderTest.html", "classZEN_1_1Tests_1_1GLSLShaderBuilderTest" ]
     ] ],
+    [ "ITexture2D", "classZEN_1_1ITexture2D.html", null ],
+    [ "IRegisteredAsset", "classZEN_1_1IRegisteredAsset.html", "classZEN_1_1IRegisteredAsset" ],
+    [ "IAsset", "classZEN_1_1IAsset.html", "classZEN_1_1IAsset" ],
+    [ "IAssetManager", "classZEN_1_1IAssetManager.html", null ],
     [ "ICamera", "classZEN_1_1ICamera.html", "classZEN_1_1ICamera" ],
     [ "ICamera3D", "classZEN_1_1ICamera3D.html", "classZEN_1_1ICamera3D" ],
     [ "IInputManager", "classZEN_1_1IInputManager.html", "classZEN_1_1IInputManager" ],
@@ -146,6 +154,7 @@ var namespaceZEN =
     [ "mouse_pos_axis", "namespaceZEN.html#a6ca0446a44cb9f650316f26a9cca2fe3", null ],
     [ "observable_types", "namespaceZEN.html#a7439816c44d85092b28d2c25b39adaf4", null ],
     [ "observer_meta", "namespaceZEN.html#ab1674f202009b939178c65481a0eeb57", null ],
+    [ "registered_asset_id", "namespaceZEN.html#aa1d9268c36f7b8ab0bfd896ad58cfa55", null ],
     [ "unique_id", "namespaceZEN.html#a7431526b224ff13f286c1f418f45fc8b", null ],
     [ "Vec2", "namespaceZEN.html#ac57c2fadbbeb59f4896d28fc11e8871f", null ],
     [ "Vec3", "namespaceZEN.html#a0d7569c6075d08a03f47973dc968b9fc", null ],

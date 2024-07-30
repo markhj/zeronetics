@@ -1,6 +1,10 @@
 var annotated_dup =
 [
     [ "ZEN", "namespaceZEN.html", [
+      [ "Assets", null, [
+        [ "AssetManager", "classZEN_1_1Assets_1_1AssetManager.html", null ],
+        [ "Texture2D", "classZEN_1_1Assets_1_1Texture2D.html", null ]
+      ] ],
       [ "ControlSystems", null, [
         [ "AssistInitialization", "structZEN_1_1ControlSystems_1_1AssistInitialization.html", "structZEN_1_1ControlSystems_1_1AssistInitialization" ],
         [ "Assist", "classZEN_1_1ControlSystems_1_1Assist.html", "classZEN_1_1ControlSystems_1_1Assist" ],
@@ -25,6 +29,10 @@ var annotated_dup =
         [ "ControlSystemsTest", "classZEN_1_1Tests_1_1ControlSystemsTest.html", "classZEN_1_1Tests_1_1ControlSystemsTest" ],
         [ "GLSLShaderBuilderTest", "classZEN_1_1Tests_1_1GLSLShaderBuilderTest.html", "classZEN_1_1Tests_1_1GLSLShaderBuilderTest" ]
       ] ],
+      [ "ITexture2D", "classZEN_1_1ITexture2D.html", null ],
+      [ "IRegisteredAsset", "classZEN_1_1IRegisteredAsset.html", "classZEN_1_1IRegisteredAsset" ],
+      [ "IAsset", "classZEN_1_1IAsset.html", "classZEN_1_1IAsset" ],
+      [ "IAssetManager", "classZEN_1_1IAssetManager.html", null ],
       [ "ICamera", "classZEN_1_1ICamera.html", "classZEN_1_1ICamera" ],
       [ "ICamera3D", "classZEN_1_1ICamera3D.html", "classZEN_1_1ICamera3D" ],
       [ "IInputManager", "classZEN_1_1IInputManager.html", "classZEN_1_1IInputManager" ],

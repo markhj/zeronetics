@@ -23,6 +23,14 @@ var hierarchy =
       [ "ZEN::Process", "classZEN_1_1Process.html", null ],
       [ "ZEN::RenderLayer", "classZEN_1_1RenderLayer.html", null ]
     ] ],
+    [ "ZEN::IAsset", "classZEN_1_1IAsset.html", [
+      [ "ZEN::ITexture2D", "classZEN_1_1ITexture2D.html", [
+        [ "ZEN::Assets::Texture2D", "classZEN_1_1Assets_1_1Texture2D.html", null ]
+      ] ]
+    ] ],
+    [ "ZEN::IAssetManager", "classZEN_1_1IAssetManager.html", [
+      [ "ZEN::Assets::AssetManager", "classZEN_1_1Assets_1_1AssetManager.html", null ]
+    ] ],
     [ "ZEN::OpenGL::IBindable< T >", "classZEN_1_1OpenGL_1_1IBindable.html", [
       [ "ZEN::OpenGL::StdBinding< gl_uint >", "classZEN_1_1OpenGL_1_1StdBinding.html", [
         [ "ZEN::OpenGL::Object", "classZEN_1_1OpenGL_1_1Object.html", [
@@ -55,6 +63,7 @@ var hierarchy =
       ] ],
       [ "ZEN::PointLight3D", "classZEN_1_1PointLight3D.html", null ]
     ] ],
+    [ "ZEN::IRegisteredAsset", "classZEN_1_1IRegisteredAsset.html", null ],
     [ "ZEN::IRenderable", "classZEN_1_1IRenderable.html", [
       [ "ZEN::IRenderable3D", "classZEN_1_1IRenderable3D.html", null ]
     ] ],

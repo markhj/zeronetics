@@ -94,7 +94,8 @@ $(document).ready(function(){initNavTree('file-system.html',''); initResizable()
 <div class="fragment"><div class="line"><a class="code" href="classZEN_1_1Path.html">ZEN::Path</a> file1(<span class="stringliteral">&quot;existing-file.txt&quot;</span>);</div>
 <div class="line"><a class="code" href="classZEN_1_1Path.html">ZEN::Path</a> file2(<span class="stringliteral">&quot;file-does-not-exist.txt&quot;</span>);</div>
 <div class="ttc" id="aclassZEN_1_1Path_html"><div class="ttname"><a href="classZEN_1_1Path.html">ZEN::Path</a></div><div class="ttdef"><b>Definition:</b> io.h:19</div></div>
-</div><!-- fragment --><p>But to check whether the path actually exists, you can use <a class="el" href="classZEN_1_1Path.html#aaffcda4785646f73a654c17e90edf680">ZEN::Path::exists</a>:</p>
+</div><!-- fragment --><p>The purpose of the <code>Path</code> class is to serve information about files and directories without directly coupling doing so to any actions (such as <em>loading</em> a file).</p>
+<p>You use <a class="el" href="classZEN_1_1Path.html#aaffcda4785646f73a654c17e90edf680">ZEN::Path::exists</a> to check if a path exists.</p>
 <div class="fragment"><div class="line"><span class="keywordflow">if</span> (file1.exists()) {</div>
 <div class="line">    <span class="comment">// ...</span></div>
 <div class="line">}</div>

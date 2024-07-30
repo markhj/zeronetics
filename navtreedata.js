@@ -29,7 +29,6 @@ var NAVTREE =
     [ "Tutorials", "tutorials.html", "tutorials" ],
     [ "Manual", "manual.html", "manual" ],
     [ "Modules", "modules.html", "modules" ],
-    [ "Engine architecture", "engine-arch.html", "engine-arch" ],
     [ "Engine development", "dev.html", "dev" ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
@@ -57,8 +56,8 @@ var NAVTREEINDEX =
 [
 "",
 "classZEN_1_1OpenGL_1_1VBO.html#a4d585f94f595957fb87c457ebcaaa720",
-"namespaceZEN.html#a5ac493fe076dd216cf2f69f8b01f05efaa6e8f9aed2ac6481dc25a18a33342d03",
-"structZEN_1_1ShaderBlueprint.html#a21ee1e9dcbb564814f4d91f844c7359c"
+"namespaceZEN.html#a5ac493fe076dd216cf2f69f8b01f05efa4059b0251f66a18cb56f544728796875",
+"structZEN_1_1Settings.html#ab445066449f2de6207968fe68feb2042"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

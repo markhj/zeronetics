@@ -88,12 +88,12 @@ $(document).ready(function(){initNavTree('process-introduction.html',''); initRe
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>A <a class="el" href="classZEN_1_1Process.html">process</a> is any class which inherits <code><a class="el" href="classZEN_1_1Process.html">ZEN::Process</a></code>. Any such class can be attached to the <a class="el" href="game-loop.html">game loop</a>, and it can literally entail anything from a simple timer over physics computation to the main character.</p>
-<h2><a class="anchor" id="autotoc_md83"></a>
+<h2><a class="anchor" id="autotoc_md87"></a>
 🍂 Life cycle</h2>
 <p>A process can theoretically be attached to any number of <a class="el" href="classZEN_1_1Processor.html">processors</a>, but in most use-cases that's just the primary <a class="el" href="game-loop.html">game loop</a>.</p>
 <p>When a process is attached to a processor it becomes active, and starts executing its functionality. Underway, it can be paused, killed or detached, which has different effects and consequences.</p>
 <p>For more information, please read <a class="el" href="process-lifecycle.html">Life-cycle of a process</a>.</p>
-<h2><a class="anchor" id="autotoc_md84"></a>
+<h2><a class="anchor" id="autotoc_md88"></a>
 📲 Implementation</h2>
 <p>To implement a new process class, you extend <a class="el" href="classZEN_1_1Process.html">ZEN::Process</a>. In theory, you don't have to do anything else, but your process won't do anything. You will in most cases need to implement both or one of <a class="el" href="classZEN_1_1Process.html#ae2a70585906ad1d93f4176e11a86b00a">ZEN::Process::onReady</a> onReady and/or <a class="el" href="classZEN_1_1Process.html#af21d448f0c85afb3f8b9ec2b80f807c3">ZEN::Process::onProcess</a> onProcess.</p>
 <p>In a limited set of use-cases, you may want to do some additional processing when the class is attached and detached. If not, you can leave those functions out.</p>
@@ -120,7 +120,7 @@ $(document).ready(function(){initNavTree('process-introduction.html',''); initRe
 <div class="ttc" id="aclassZEN_1_1Process_html_a81179a3e0bccf88a839c74b6546ffbb5"><div class="ttname"><a href="classZEN_1_1Process.html#a81179a3e0bccf88a839c74b6546ffbb5">ZEN::Process::onAttach</a></div><div class="ttdeci">virtual void onAttach()</div></div>
 <div class="ttc" id="aclassZEN_1_1Process_html_ae2a70585906ad1d93f4176e11a86b00a"><div class="ttname"><a href="classZEN_1_1Process.html#ae2a70585906ad1d93f4176e11a86b00a">ZEN::Process::onReady</a></div><div class="ttdeci">virtual void onReady()</div></div>
 <div class="ttc" id="aclassZEN_1_1Process_html_af21d448f0c85afb3f8b9ec2b80f807c3"><div class="ttname"><a href="classZEN_1_1Process.html#af21d448f0c85afb3f8b9ec2b80f807c3">ZEN::Process::onProcess</a></div><div class="ttdeci">virtual void onProcess(dt_float delta)</div></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md85"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md89"></a>
 💫 Usage</h2>
 <p>Assuming you've created a <a class="el" href="classZEN_1_1Game.html">ZEN::Game</a> instance (or another process handler), then you attach it to the process this way:</p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> myProcess = std::make_shared&lt;MyProcess&gt;(MyProcess());</div>
@@ -129,7 +129,7 @@ $(document).ready(function(){initNavTree('process-introduction.html',''); initRe
 </div><!-- fragment --><p>If needed, the process can be detached using <a class="el" href="classZEN_1_1Processor.html#a5c1a182fd61ab14f55c6eaf40d13241a">ZEN::Processor::detach</a>.</p>
 <div class="fragment"><div class="line">game.detach(process);</div>
 </div><!-- fragment --><p>And that's all. Doing this will attach a process to the game loop.</p>
-<h2><a class="anchor" id="autotoc_md86"></a>
+<h2><a class="anchor" id="autotoc_md90"></a>
 See also</h2>
 <p><a class="el" href="process-lifecycle.html">Life-cycle of a process</a> </p>
 </div></div><!-- contents -->

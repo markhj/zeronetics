@@ -8,7 +8,7 @@ var searchData=
   ['antialias_6',['antiAlias',['../structZEN_1_1Settings.html#ad95cd6f443d84ef03b7242f10fa9d107',1,'ZEN::Settings']]],
   ['antialias_7',['AntiAlias',['../namespaceZEN.html#a94472cd2dbf45750e85daff75fc8232d',1,'ZEN']]],
   ['append_8',['append',['../classZEN_1_1File.html#a184a875338f6c6e7106dec3219012659',1,'ZEN::File']]],
-  ['architecture_9',['Architecture',['../arch.html',1,'engine-arch']]],
+  ['architecture_9',['Architecture',['../arch.html',1,'dev']]],
   ['aspectratio_10',['aspectRatio',['../classZEN_1_1Camera3D.html#a58cebc10675174daf11ee061689d3686',1,'ZEN::Camera3D']]],
   ['assetmanager_11',['AssetManager',['../classZEN_1_1Assets_1_1AssetManager.html',1,'ZEN::Assets']]],
   ['assist_12',['Assist',['../classZEN_1_1ControlSystems_1_1Assist.html',1,'ZEN::ControlSystems']]],

@@ -88,7 +88,7 @@ $(document).ready(function(){initNavTree('fps.html',''); initResizable(); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>One of the key metrics in game rendering that almost everyone is familiar with is <b>FPS</b>, or <b>frames per second</b>.</p>
-<h2><a class="anchor" id="autotoc_md56"></a>
+<h2><a class="anchor" id="autotoc_md57"></a>
 💻 FPS</h2>
 <p>FPS is an expression of how well the hardware and the game's code perform in unison. The higher the number, the better.</p>
 <p>Essentially, it calculates how many frames the machine is able to render per second.</p>
@@ -97,7 +97,7 @@ $(document).ready(function(){initNavTree('fps.html',''); initResizable(); });
 <div class="fragment"><div class="line"><a class="code" href="namespaceZEN.html#a6e336ae4a649a81112a7105f7705954c">fps_int</a> currentFPS = game.getFPS();</div>
 <div class="ttc" id="anamespaceZEN_html_a6e336ae4a649a81112a7105f7705954c"><div class="ttname"><a href="namespaceZEN.html#a6e336ae4a649a81112a7105f7705954c">ZEN::fps_int</a></div><div class="ttdeci">uint16_t fps_int</div><div class="ttdef"><b>Definition:</b> typedefs.h:58</div></div>
 </div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>The <code>fps_int</code> is a <code>typedef</code> defined in Zeronetics to streamline use of integers for FPS calculations.</dd></dl>
-<h2><a class="anchor" id="autotoc_md57"></a>
+<h2><a class="anchor" id="autotoc_md58"></a>
 ⌛ Real render time</h2>
 <p>However, FPS can &mdash; and often is &mdash; artificially limited to match the monitor's frame rate, and thereby reduce the risk of artifacts, such as "_screen tear_." It's therefore not guaranteed to be a waterproof expression for how well your game is performing.</p>
 <p>When profiling &mdash; knowing how well your game loop actually performs &amp;mdash you might want to use <a class="el" href="classZEN_1_1Game.html#a8d0f8a450e5169f41f3f5d1fb11a7402">ZEN::Game::getRealRenderTime</a> instead.</p>

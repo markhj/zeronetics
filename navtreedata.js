@@ -55,10 +55,10 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"annotated.html",
-"classZEN_1_1OpenGL_1_1VBO.html#acc8618f87f8a1bffbb42f2c685751aaa",
-"namespaceZEN.html#a5ac493fe076dd216cf2f69f8b01f05efaea199c4bea585e022d34acb82922eb17",
-"structZEN_1_1TimeMeasurement.html"
+"",
+"classZEN_1_1OpenGL_1_1VBO.html#a4d585f94f595957fb87c457ebcaaa720",
+"namespaceZEN.html#a5ac493fe076dd216cf2f69f8b01f05efaa6e8f9aed2ac6481dc25a18a33342d03",
+"structZEN_1_1ShaderBlueprint.html#a21ee1e9dcbb564814f4d91f844c7359c"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -1,10 +1,5 @@
 var NAVTREEINDEX2 =
 {
-"namespaceZEN.html#a3ff69a9dc86c8ce199f458ed659dbe95a386be58411c901d5d6eee7d2bc77a3c6":[5,0,0,138,3],
-"namespaceZEN.html#a3ff69a9dc86c8ce199f458ed659dbe95a87a38700a829dd10d638d3106e2241fa":[5,0,0,138,4],
-"namespaceZEN.html#a3ff69a9dc86c8ce199f458ed659dbe95aa56ce4eca00a84fe12ab4761ff770a40":[5,0,0,138,7],
-"namespaceZEN.html#a3ff69a9dc86c8ce199f458ed659dbe95aaddd775d68e086cd7614c000594f84c5":[5,0,0,138,1],
-"namespaceZEN.html#a3ff69a9dc86c8ce199f458ed659dbe95add36524a945bd1e360419ab73f162df0":[5,0,0,138,2],
 "namespaceZEN.html#a5089f560467278c4efaed05ce45f57a7":[5,0,0,113],
 "namespaceZEN.html#a5ac493fe076dd216cf2f69f8b01f05ef":[5,0,0,128],
 "namespaceZEN.html#a5ac493fe076dd216cf2f69f8b01f05efa24b6472fcfa59cddd3f7bbc326582b5f":[5,0,0,128,10],
@@ -249,5 +244,10 @@ var NAVTREEINDEX2 =
 "structZEN_1_1Observation.html#af985633a28b1628720508245571644ac":[6,0,0,47,0],
 "structZEN_1_1ObserverMeta.html":[6,0,0,46],
 "structZEN_1_1RenderGroup3D.html":[6,0,0,82],
-"structZEN_1_1RenderSettings.html":[6,0,0,50]
+"structZEN_1_1RenderSettings.html":[6,0,0,50],
+"structZEN_1_1RenderSettings.html#a2a4084c9b8935bd6ba829e51ff64c417":[6,0,0,50,1],
+"structZEN_1_1RenderSettings.html#a778895166190bc77af9c97fa56da9583":[6,0,0,50,2],
+"structZEN_1_1RenderSettings.html#ae698ee8df78cedc37f7dd5cedf69d9bc":[6,0,0,50,0],
+"structZEN_1_1RendererRequest.html":[6,0,0,81],
+"structZEN_1_1ResultError.html":[6,0,0,51]
 };

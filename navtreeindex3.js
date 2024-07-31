@@ -1,10 +1,5 @@
 var NAVTREEINDEX3 =
 {
-"structZEN_1_1RenderSettings.html#a2a4084c9b8935bd6ba829e51ff64c417":[6,0,0,50,1],
-"structZEN_1_1RenderSettings.html#a778895166190bc77af9c97fa56da9583":[6,0,0,50,2],
-"structZEN_1_1RenderSettings.html#ae698ee8df78cedc37f7dd5cedf69d9bc":[6,0,0,50,0],
-"structZEN_1_1RendererRequest.html":[6,0,0,81],
-"structZEN_1_1ResultError.html":[6,0,0,51],
 "structZEN_1_1ResultError.html#a652fb8e319d0b2d91b795c90a6837741":[6,0,0,51,0],
 "structZEN_1_1ResultError.html#a65625010e05a09c94e8d382336927db0":[6,0,0,51,1],
 "structZEN_1_1ScreenResolution.html":[6,0,0,53],
@@ -52,5 +47,10 @@ var NAVTREEINDEX3 =
 "tutorials.html#autotoc_md40":[3],
 "tutorials.html#autotoc_md41":[4],
 "vertices.html":[2,2,2],
-"vertices.html#autotoc_md76":[8]
+"vertices.html#autotoc_md76":[8],
+"":[5,0,0,23],
+"":[5,0,0,21],
+"":[5,0,0,24],
+"":[5,0,0,22],
+"":[5,0,0,20]
 };

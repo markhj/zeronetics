@@ -89,24 +89,26 @@ $(document).ready(function(){initNavTree('install-engine.html',''); initResizabl
 <div class="contents">
 <div class="textblock"><p>The first step toward building a game with Zeronetics is to install and build the engine.</p>
 <p>The engine will be set up in a neutral location, and then referenced by your game using an environment variable. But more about that in <a class="el" href="setting-up-a-game.html">Create a game</a>.</p>
-<h2><a class="anchor" id="autotoc_md3"></a>
-Clone</h2>
-<p>First, navigate to where you want to install the engine, and clone the source code.</p>
+<h2><a class="anchor" id="autotoc_md7"></a>
+⤵️ Clone</h2>
+<p><a class="anchor" id="install-engine-clone"></a> First, navigate to where you want to install the engine, and clone the source code.</p>
 <div class="fragment"><div class="line">git clone https://github.com/markhj/zeronetics</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md4"></a>
-Initializing submodules</h2>
-<p>That was pretty easy, right? The next step isn't much harder. Now, we initialize the Git submodules. In other words, we clone the engine's dependencies.</p>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md8"></a>
+📦 Initializing submodules</h2>
+<p><a class="anchor" id="install-engine-submodules"></a> That was pretty easy, right? The next step isn't much harder. Now, we initialize the Git submodules. In other words, we clone the engine's dependencies.</p>
 <div class="fragment"><div class="line">git submodule init</div>
 <div class="line">git submodule update</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md5"></a>
-Build</h2>
-<p>And now it's time to build the engine.</p>
-<p>This is IDE-specific or done with command-line <code>cmake</code>.</p>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md9"></a>
+🔨 Build</h2>
+<p>There's not a single way to build the engine because this depends on your IDE or whether you use plain <code>cmake</code>.</p>
 <blockquote class="doxtable">
 <p>Important: Preferably, you build the engine for both debug and release mode. That will make easier for you, as you're probably going to switch between the two when developing your game. </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md6"></a>
-And now?</h2>
+<h3><a class="anchor" id="autotoc_md10"></a>
+Build guides</h3>
+<p><a class="el" href="build-clion.html">Build engine with CLion</a></p>
+<h2><a class="anchor" id="autotoc_md11"></a>
+▶️ And now?</h2>
 <p>Now where the engine is built and ready to use, you can continue reading <a class="el" href="setting-up-a-game.html">Create a game</a>. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->

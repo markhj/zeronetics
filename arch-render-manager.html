@@ -88,7 +88,7 @@ $(document).ready(function(){initNavTree('arch-render-manager.html',''); initRes
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>This document details decision-making about the engine design.</p>
-<h2><a class="anchor" id="autotoc_md101"></a>
+<h2><a class="anchor" id="autotoc_md106"></a>
 🔀 Management of allocation</h2>
 <p>As you've probably read in <a class="el" href="render-manager.html">Understanding render management</a>, the renderer is responsible for managing requests. In theory, this means the renderer can do whatever it wants with the requests. It could completely ignore them, do the exact opposite of what's requested, and so forth. But that's <em>in theory</em>.</p>
 <p>The reason renderers are given this freedom is granting them the ability to manage allocation, de-allocation and updates in a way which is performance-wise optimal for the specific renderer. Keep in mind that renderers don't work the same way, and we should make as few assumptions about renderers as possible, and especially about <em>how</em> they work. The more assumptions we make, the harder it is to implement a new renderer in a way where it performs to its absolute best.</p>

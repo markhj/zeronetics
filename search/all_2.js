@@ -7,5 +7,6 @@ var searchData=
   ['bindto_22',['bindTo',['../classZEN_1_1OpenGL_1_1VBO.html#a629ecd1b02289bc7ff93b28b4d70ac72',1,'ZEN::OpenGL::VBO']]],
   ['bitness_23',['bitness',['../structZEN_1_1OS.html#aabf16c5da26d8fffe2f87ed4ed244a95',1,'ZEN::OS']]],
   ['blacklistcategories_24',['blacklistCategories',['../classZEN_1_1Log.html#a8b16731d9cd3c5ec6efa8f6cb0bf249f',1,'ZEN::Log']]],
-  ['build_20information_25',['Build information',['../build-info.html',1,'dev']]]
+  ['build_20engine_20with_20clion_25',['Build engine with CLion',['../build-clion.html',1,'install-engine']]],
+  ['build_20information_26',['Build information',['../build-info.html',1,'dev']]]
 ];

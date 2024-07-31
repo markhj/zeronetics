@@ -89,7 +89,7 @@ $(document).ready(function(){initNavTree('result.html',''); initResizable(); });
 <div class="contents">
 <div class="textblock"><p>The <a class="el" href="classZEN_1_1Result.html">ZEN::Result</a> is inspired by Rust's namesake equivalent.</p>
 <p>The <code>Result</code> object is a container, which holds either the desired result, or an error detailing what happened. It's a dynamic, but streamlined, way of handling results, in cases where you maybe don't want to throw exceptions, or have another reason to treat it more lightly.</p>
-<h2><a class="anchor" id="autotoc_md42"></a>
+<h2><a class="anchor" id="autotoc_md47"></a>
 🔑 Basic usage</h2>
 <p>Your function must return <code>Result&lt;T&gt;</code> where <code>T</code> is the data type you expect when everything goes well.</p>
 <p>If an error occurs, you return <a class="el" href="structZEN_1_1ResultError.html">ZEN::ResultError</a>.</p>
@@ -114,7 +114,7 @@ $(document).ready(function(){initNavTree('result.html',''); initResizable(); });
 <div class="line">}</div>
 </div><!-- fragment --><dl class="section warning"><dt>Warning</dt><dd>You must check whether the <code>Result</code> contains an error or not prior to calling <code>error</code> and <code>result</code>, otherwise you risk a critical-level error.</dd></dl>
 <p>You can interact with the error and result, using <a class="el" href="classZEN_1_1Result.html#a13cb3332b5705cfc6964c675909dcec2">ZEN::Result::error</a> and <a class="el" href="classZEN_1_1Result.html#a9a15d5350d3887c0d378e81132115e21">ZEN::Result::result</a>.</p>
-<h2><a class="anchor" id="autotoc_md43"></a>
+<h2><a class="anchor" id="autotoc_md48"></a>
 When to use &lt;tt&gt;Result&lt;/tt&gt;</h2>
 <p>We use <code>Result</code> when we desire the behavior of <code>std::optional</code> but with the possibility to explain the end-user or implementor what has gone wrong.</p>
 <p>The alternative is to use exceptions, which should be done when the error is recoverable or critical. </p>

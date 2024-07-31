@@ -88,7 +88,7 @@ $(document).ready(function(){initNavTree('custom-shape-class.html',''); initResi
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>Creating a re-usable shape with customizable properties is fairly easy with Zeronetics. To achieve this you extend <a class="el" href="classZEN_1_1Shape3D.html">ZEN::Shape3D</a> and implement <a class="el" href="classZEN_1_1Shape3D.html#a15ba82eb3b53a5b94a9ecea7512a8db3">ZEN::Shape3D::make</a>.</p>
-<h2><a class="anchor" id="autotoc_md10"></a>
+<h2><a class="anchor" id="autotoc_md15"></a>
 🔷 Example</h2>
 <p>Let's say we want to crete a triangle where we can define the width and height.</p>
 <div class="fragment"><div class="line"><span class="keyword">class </span>MyTriangle : <span class="keyword">public</span> Shape3D {</div>
@@ -120,12 +120,12 @@ $(document).ready(function(){initNavTree('custom-shape-class.html',''); initResi
 <p>The first vertex is the bottom-left corner, the second the bottom-right, and the third is the top.</p>
 <p>Remember that vertices must be given in counter-clockwise order.</p>
 <p><img src="https://res.cloudinary.com/drfztvfdh/image/upload/v1721454193/zeronetics/Custom_shape_-_Triangle_yonvjr.png" alt="" class="inline"/></p>
-<h2><a class="anchor" id="autotoc_md11"></a>
+<h2><a class="anchor" id="autotoc_md16"></a>
 📋 Notes</h2>
 <p>Remember to use <a class="el" href="namespaceZEN.html#a5089f560467278c4efaed05ce45f57a7">ZEN::gw_float</a>, because these are game world coordinates.</p>
 <p>When the shape has been generated it will be stored in a private property so it won't have to be re-computed on every request.</p>
 <p>@important You must define your set of vertices such that their combined center is at <code>(0, 0, 0)</code>, otherwise using the positioning system in Zeronetics will produce unexpected results.</p>
-<h2><a class="anchor" id="autotoc_md12"></a>
+<h2><a class="anchor" id="autotoc_md17"></a>
 📌 See also</h2>
 <p><a class="el" href="custom-shape-vertices.html">Custom shape from vertices</a> </p>
 </div></div><!-- contents -->

@@ -93,10 +93,10 @@ $(document).ready(function(){initNavTree('observers.html',''); initResizable(); 
 <li><a class="el" href="classZEN_1_1BeingObserved.html">ZEN::BeingObserved</a>: For classes which can be observed</li>
 </ul>
 <p>An example of this implementation is in <a class="el" href="classZEN_1_1Game.html">ZEN::Game</a>, where <a class="el" href="fps.html">FPS</a> is reported every few seconds to observers.</p>
-<h2><a class="anchor" id="autotoc_md37"></a>
+<h2><a class="anchor" id="autotoc_md42"></a>
 📌 Prerequisites</h2>
 <p>This article assumes fundamental knowledge of observer patterns.</p>
-<h2><a class="anchor" id="autotoc_md38"></a>
+<h2><a class="anchor" id="autotoc_md43"></a>
 🌐 Overview</h2>
 <p>Any number of classes can implement <a class="el" href="classZEN_1_1BeingObserved.html">ZEN::BeingObserved</a>, which exposes a number of methods so other objects can "attach" and get notified when notable events happen within the <code>BeingObserved</code> class.</p>
 <p>When something of interest occurs, the extension of <code>BeingObserved</code> calls <code>notifyObservers</code>.</p>
@@ -104,7 +104,7 @@ $(document).ready(function(){initNavTree('observers.html',''); initResizable(); 
 <p><img src="https://res.cloudinary.com/drfztvfdh/image/upload/v1721449501/zeronetics/Observer_pattern_porw1e.png" alt="" class="inline"/></p>
 <p>Every attached observer will then be notified via their individual implementations of <a class="el" href="classZEN_1_1Observer.html#aa911a10a9439af75da239e8a4efdb61d">ZEN::Observer::notify</a>.</p>
 <dl class="section note"><dt>Note</dt><dd>Example: A window instance may want to re-generate when video settings change. In this case the window class is the observer, and settings is "being observed". The settings class will notify its observers, among them window, when the settings are updated.</dd></dl>
-<h2><a class="anchor" id="autotoc_md39"></a>
+<h2><a class="anchor" id="autotoc_md44"></a>
 🌘 Implementing an observable</h2>
 <p>Creating a class that can be observed by other classes involves extending <a class="el" href="classZEN_1_1BeingObserved.html">ZEN::BeingObserved</a>.</p>
 <p>At the point in the code flow where you want to notify observers, you call <a class="el" href="classZEN_1_1BeingObserved.html#a2be5a3c3b96bc02c20fe6e94b45e88d0">ZEN::BeingObserved::notifyObservers</a>.</p>
@@ -120,7 +120,7 @@ $(document).ready(function(){initNavTree('observers.html',''); initResizable(); 
 <div class="fragment"><div class="line">ObjectWithImportantInformation observableInstance;</div>
 <div class="line">observableInstance.attachObserver(observer1);</div>
 <div class="line">observableInstance.attachObserver(observer2);</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md40"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md45"></a>
 🔭 Implementing an observer</h2>
 <p>Creating a class which can be observed involves extending <a class="el" href="classZEN_1_1Observer.html">ZEN::Observer</a>, and implementing the function <a class="el" href="classZEN_1_1Observer.html#aa911a10a9439af75da239e8a4efdb61d">ZEN::Observer::notify</a> virtual method.</p>
 <div class="fragment"><div class="line"><span class="keyword">class </span>MyClass : <span class="keyword">public</span> Observer {</div>
@@ -133,7 +133,7 @@ $(document).ready(function(){initNavTree('observers.html',''); initResizable(); 
 <div class="fragment"><div class="line">std::shared_ptr&lt;MyClass&gt; myClass = std::make_shared&lt;MyClass&gt;(MyClass());</div>
 <div class="line"> </div>
 <div class="line">game.attachObserver(myClass);</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md41"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md46"></a>
 Meta data</h2>
 <p>The <a class="el" href="structZEN_1_1Observation.html">ZEN::Observation</a> which represents the "message" between an <br  />
  observable object and its observers can contain meta data.</p>

@@ -88,7 +88,7 @@ $(document).ready(function(){initNavTree('file-system.html',''); initResizable()
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>Working with paths, directories and files in Zeronetics require knowledge of only two classes. Let's get started!</p>
-<h2><a class="anchor" id="autotoc_md14"></a>
+<h2><a class="anchor" id="autotoc_md19"></a>
 📂 Paths</h2>
 <p><a class="el" href="classZEN_1_1Path.html">ZEN::Path</a> is instantiated with a relative or absolute path that either does or doesn't exist. Both of these will work:</p>
 <div class="fragment"><div class="line"><a class="code" href="classZEN_1_1Path.html">ZEN::Path</a> file1(<span class="stringliteral">&quot;existing-file.txt&quot;</span>);</div>
@@ -99,16 +99,16 @@ $(document).ready(function(){initNavTree('file-system.html',''); initResizable()
 <div class="fragment"><div class="line"><span class="keywordflow">if</span> (file1.exists()) {</div>
 <div class="line">    <span class="comment">// ...</span></div>
 <div class="line">}</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md15"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md20"></a>
 Other useful functions</h3>
 <ul>
 <li><a class="el" href="classZEN_1_1Path.html#aa5451df9658c05386ef0b823a33d57a8">ZEN::Path::isDirectory</a></li>
 <li><a class="el" href="classZEN_1_1Path.html#a7a2fb09374802f253a94fbc90b0b3870">ZEN::Path::isFile</a></li>
 <li><a class="el" href="classZEN_1_1Path.html#a4bc6f7c006c8aa616a4bb6c53b34d273">ZEN::Path::getAbsolute</a></li>
 </ul>
-<h2><a class="anchor" id="autotoc_md16"></a>
+<h2><a class="anchor" id="autotoc_md21"></a>
 📄 Files</h2>
-<h3><a class="anchor" id="autotoc_md17"></a>
+<h3><a class="anchor" id="autotoc_md22"></a>
 Instantiating</h3>
 <p>There are several ways to instantiate a <a class="el" href="classZEN_1_1File.html">ZEN::File</a> object.</p>
 <p>You can create one directly from <a class="el" href="classZEN_1_1Path.html">ZEN::Path</a>:</p>
@@ -125,7 +125,7 @@ Instantiating</h3>
 <div class="fragment"><div class="line"><a class="code" href="classZEN_1_1File.html">ZEN::File</a> myFile = <a class="code" href="classZEN_1_1File.html#abd8403f6fd4d0f0785af38423dcbfb08">ZEN::File::loadOrCreate</a>(<span class="stringliteral">&quot;/path/to/file&quot;</span>);</div>
 <div class="ttc" id="aclassZEN_1_1File_html_abd8403f6fd4d0f0785af38423dcbfb08"><div class="ttname"><a href="classZEN_1_1File.html#abd8403f6fd4d0f0785af38423dcbfb08">ZEN::File::loadOrCreate</a></div><div class="ttdeci">static File loadOrCreate(const Path &amp;path)</div></div>
 </div><!-- fragment --><dl class="section warning"><dt>Warning</dt><dd>If <code>loadOrCreate</code> is applied to an existing directory, a critical-level message is raised.</dd></dl>
-<h3><a class="anchor" id="autotoc_md18"></a>
+<h3><a class="anchor" id="autotoc_md23"></a>
 Get file data</h3>
 <p>You can store all the contents of a file in a std::string using <a class="el" href="classZEN_1_1File.html#a2e11dda1e6f4b922151817be0b5f3485">ZEN::File::getData</a>.</p>
 <p>The methods return a <a class="el" href="classZEN_1_1Result.html">ZEN::Result</a> with a <code>std::string</code>.</p>
@@ -136,7 +136,7 @@ Get file data</h3>
 <div class="line">} <span class="keywordflow">else</span> {</div>
 <div class="line">    <span class="comment">// Do what needs to be done with the file contents</span></div>
 <div class="line">}</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md19"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md24"></a>
 Append to file</h3>
 <p>You can append data to a file using <a class="el" href="classZEN_1_1File.html#a184a875338f6c6e7106dec3219012659">ZEN::File::append</a>.</p>
 <div class="fragment"><div class="line"><a class="code" href="classZEN_1_1File.html">ZEN::File</a> myFile = <span class="comment">/* Create instance of File */</span>;</div>
@@ -144,7 +144,7 @@ Append to file</h3>
 <div class="line">myFile.<a class="code" href="classZEN_1_1File.html#a184a875338f6c6e7106dec3219012659">append</a>(<span class="stringliteral">&quot;Adding data to the file&quot;</span>);</div>
 <div class="ttc" id="aclassZEN_1_1File_html_a184a875338f6c6e7106dec3219012659"><div class="ttname"><a href="classZEN_1_1File.html#a184a875338f6c6e7106dec3219012659">ZEN::File::append</a></div><div class="ttdeci">void append(const std::string &amp;text)</div></div>
 </div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>You need to manage line-breaks in the file on your own. <code>append</code> will not add any line-breaks on its own.</dd></dl>
-<h3><a class="anchor" id="autotoc_md20"></a>
+<h3><a class="anchor" id="autotoc_md25"></a>
 Set file data</h3>
 <p>You can replace all existing data of a file using <a class="el" href="classZEN_1_1File.html#a65ae60986993e4065a97aee87a62a7ba">ZEN::File::setData</a>. This differs from <a class="el" href="classZEN_1_1File.html#a184a875338f6c6e7106dec3219012659">ZEN::File::append</a> which adds data at the end of existing.</p>
 <div class="fragment"><div class="line">myFile.<a class="code" href="classZEN_1_1File.html#a65ae60986993e4065a97aee87a62a7ba">setData</a>(<span class="stringliteral">&quot;New data&quot;</span>);</div>

@@ -95,7 +95,7 @@ $(document).ready(function(){initNavTree('input-manager.html',''); initResizable
 </ul>
 <p>Most use-cases suffice with option two, so that's the one we'll go with.</p>
 <p>Remember that you can see all required methods in the page about <a class="el" href="classZEN_1_1IInputManager.html">ZEN::IInputManager</a>.</p>
-<h2><a class="anchor" id="autotoc_md21"></a>
+<h2><a class="anchor" id="autotoc_md26"></a>
 Example</h2>
 <p>In almost every game you need to manage key presses, so let's look at that.</p>
 <p>The basic implementation would be:</p>
@@ -117,7 +117,7 @@ Example</h2>
 <div class="line">}</div>
 <div class="ttc" id="astructZEN_1_1KeyStateEvent_html_a6d8c2b1781eaf002500f5f1550b53790"><div class="ttname"><a href="structZEN_1_1KeyStateEvent.html#a6d8c2b1781eaf002500f5f1550b53790">ZEN::KeyStateEvent::key</a></div><div class="ttdeci">Key key</div><div class="ttdef"><b>Definition:</b> inputs.h:54</div></div>
 <div class="ttc" id="astructZEN_1_1KeyStateEvent_html_ac5084dcf49b737b1b68fe34901721af1"><div class="ttname"><a href="structZEN_1_1KeyStateEvent.html#ac5084dcf49b737b1b68fe34901721af1">ZEN::KeyStateEvent::keyState</a></div><div class="ttdeci">KeyState keyState</div><div class="ttdef"><b>Definition:</b> inputs.h:49</div></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md22"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md27"></a>
 Connecting to window</h2>
 <p>However, before your input manager is useful, it must be connected to a <a class="el" href="classZEN_1_1Window.html">ZEN::Window</a> instance.</p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> myInputManager = std::make_shared&lt;MyInputManager&gt;(MyInputManager());</div>
@@ -126,7 +126,7 @@ Connecting to window</h2>
 <div class="line"> </div>
 <div class="line">window-&gt;setInputManager(myInputManager);</div>
 </div><!-- fragment --><p>From this point onwards, you should see the <code>onKeyStateChanged</code> method get invoked when a key is pressed or released.</p>
-<h2><a class="anchor" id="autotoc_md23"></a>
+<h2><a class="anchor" id="autotoc_md28"></a>
 See also</h2>
 <p><a class="el" href="control-systems.html">Control Systems</a> </p>
 </div></div><!-- contents -->

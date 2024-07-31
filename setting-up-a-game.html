@@ -89,11 +89,11 @@ $(document).ready(function(){initNavTree('setting-up-a-game.html',''); initResiz
 <div class="contents">
 <div class="textblock"><dl class="section warning"><dt>Warning</dt><dd>The engine is still a few features short of being able to produce gameplay. Therefore, this article is incomplete.</dd></dl>
 <p>This page assumes you've already <a class="el" href="install-engine.html">installed and built the engine</a>.</p>
-<h2><a class="anchor" id="autotoc_md7"></a>
+<h2><a class="anchor" id="autotoc_md12"></a>
 Environment variable</h2>
 <p>Step one is to make an environment variable visible to CMake. This differs depending on IDE or whether you're using command-line <code>cmake</code>.</p>
 <p>The variable must be named <code>ZERONETICS_DIR</code> and contain the path to where the engine is installed.</p>
-<h2><a class="anchor" id="autotoc_md8"></a>
+<h2><a class="anchor" id="autotoc_md13"></a>
 CMake list</h2>
 <p>In your game's <code>CMakeLists.txt</code> file, you add:</p>
 <div class="fragment"><div class="line">find_package(zeronetics REQUIRED)</div>
@@ -104,7 +104,7 @@ CMake list</h2>
 <blockquote class="doxtable">
 <p>Important: If you already have a <code>target_link_libraries</code>, you only need to append <code>zeronetics</code> and the modules there. Creating a second directive will cause problems. </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md9"></a>
+<h2><a class="anchor" id="autotoc_md14"></a>
 Creating the window</h2>
 <p>Now, let's review how to get a window on the screen. This is done in a few steps:</p>
 <ul>

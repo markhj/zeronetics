@@ -1,44 +1,44 @@
 var namespaceZEN =
 [
-    [ "Hierarchy", "engine-core-structure.html#autotoc_md119", null ],
-    [ "🔨 Core: Fundamentals", "engine-core-structure.html#autotoc_md120", null ],
-    [ "📚 Core: 2nd level", "engine-core-structure.html#autotoc_md121", null ],
-    [ "📥 Core: 3rd level", "engine-core-structure.html#autotoc_md122", null ],
-    [ "📜 Contracts", "engine-core-structure.html#autotoc_md123", null ],
-    [ "💼 Helpers", "engine-core-structure.html#autotoc_md124", null ],
-    [ "💎 Traits", "engine-core-structure.html#autotoc_md125", null ],
-    [ "📱 Advanced structures", "engine-core-structure.html#autotoc_md126", null ],
-    [ "📦 Modules", "engine-core-structure.html#autotoc_md127", null ],
-    [ "Macros", "build-info.html#autotoc_md104", null ],
-    [ "Example", "build-info.html#autotoc_md105", null ],
-    [ "Note", "build-info.html#autotoc_md106", [
-      [ "🆗 Keyboard", "control-systems-mapping.html#autotoc_md135", [
-        [ "Key pressed and released", "control-systems-mapping.html#autotoc_md136", null ],
-        [ "Key down", "control-systems-mapping.html#autotoc_md137", null ]
+    [ "Hierarchy", "engine-core-structure.html#autotoc_md124", null ],
+    [ "🔨 Core: Fundamentals", "engine-core-structure.html#autotoc_md125", null ],
+    [ "📚 Core: 2nd level", "engine-core-structure.html#autotoc_md126", null ],
+    [ "📥 Core: 3rd level", "engine-core-structure.html#autotoc_md127", null ],
+    [ "📜 Contracts", "engine-core-structure.html#autotoc_md128", null ],
+    [ "💼 Helpers", "engine-core-structure.html#autotoc_md129", null ],
+    [ "💎 Traits", "engine-core-structure.html#autotoc_md130", null ],
+    [ "📱 Advanced structures", "engine-core-structure.html#autotoc_md131", null ],
+    [ "📦 Modules", "engine-core-structure.html#autotoc_md132", null ],
+    [ "Macros", "build-info.html#autotoc_md109", null ],
+    [ "Example", "build-info.html#autotoc_md110", null ],
+    [ "Note", "build-info.html#autotoc_md111", [
+      [ "🆗 Keyboard", "control-systems-mapping.html#autotoc_md140", [
+        [ "Key pressed and released", "control-systems-mapping.html#autotoc_md141", null ],
+        [ "Key down", "control-systems-mapping.html#autotoc_md142", null ]
       ] ],
-      [ "🐀 Mouse", "control-systems-mapping.html#autotoc_md138", [
-        [ "Mouse button clicked and released", "control-systems-mapping.html#autotoc_md139", null ],
-        [ "Mouse button down", "control-systems-mapping.html#autotoc_md140", null ]
+      [ "🐀 Mouse", "control-systems-mapping.html#autotoc_md143", [
+        [ "Mouse button clicked and released", "control-systems-mapping.html#autotoc_md144", null ],
+        [ "Mouse button down", "control-systems-mapping.html#autotoc_md145", null ]
       ] ],
-      [ "An example", "opengl-bindable.html#autotoc_md141", null ],
-      [ "Functions", "opengl-bindable.html#autotoc_md142", [
-        [ "Short-hand for binding", "opengl-bindable.html#autotoc_md143", null ],
-        [ "With", "opengl-bindable.html#autotoc_md144", null ]
+      [ "An example", "opengl-bindable.html#autotoc_md146", null ],
+      [ "Functions", "opengl-bindable.html#autotoc_md147", [
+        [ "Short-hand for binding", "opengl-bindable.html#autotoc_md148", null ],
+        [ "With", "opengl-bindable.html#autotoc_md149", null ]
       ] ],
-      [ "CMake file", "create-modules.html#autotoc_md111", null ],
-      [ "Public headers", "create-modules.html#autotoc_md112", null ],
-      [ "Integrate in build process", "create-modules.html#autotoc_md113", null ]
+      [ "CMake file", "create-modules.html#autotoc_md116", null ],
+      [ "Public headers", "create-modules.html#autotoc_md117", null ],
+      [ "Integrate in build process", "create-modules.html#autotoc_md118", null ]
     ] ],
-    [ "Namespace", "create-modules.html#autotoc_md114", null ],
-    [ "Tests", "create-modules.html#autotoc_md115", null ],
-    [ "📘 Primary testing suite", "tests.html#autotoc_md128", null ],
-    [ "📚 Organization", "tests.html#autotoc_md129", null ],
-    [ "📦 Payloads", "tests.html#autotoc_md130", null ],
-    [ "🔀 Management of allocation", "arch-render-manager.html#autotoc_md101", null ],
-    [ "How to make callbacks \"a la Zeronetics\"", "callbacks.html#autotoc_md107", null ],
-    [ "Examination of choices", "callbacks.html#autotoc_md108", [
-      [ "Using <tt>std::optional</tt>", "callbacks.html#autotoc_md109", null ],
-      [ "Smart pointers", "callbacks.html#autotoc_md110", null ]
+    [ "Namespace", "create-modules.html#autotoc_md119", null ],
+    [ "Tests", "create-modules.html#autotoc_md120", null ],
+    [ "📘 Primary testing suite", "tests.html#autotoc_md133", null ],
+    [ "📚 Organization", "tests.html#autotoc_md134", null ],
+    [ "📦 Payloads", "tests.html#autotoc_md135", null ],
+    [ "🔀 Management of allocation", "arch-render-manager.html#autotoc_md106", null ],
+    [ "How to make callbacks \"a la Zeronetics\"", "callbacks.html#autotoc_md112", null ],
+    [ "Examination of choices", "callbacks.html#autotoc_md113", [
+      [ "Using <tt>std::optional</tt>", "callbacks.html#autotoc_md114", null ],
+      [ "Smart pointers", "callbacks.html#autotoc_md115", null ]
     ] ],
     [ "Assets", null, [
       [ "AssetManager", "classZEN_1_1Assets_1_1AssetManager.html", null ],

@@ -31,7 +31,7 @@ The ``ControlManager`` is the instance which will be passed to the
 all the parts together.
 
 ````cpp
-std::shared_ptr<ControlManager> controlManager = std::make_shared<ControlManager>(ControlManager());
+std::shared_ptr<ControlManager> m_controlManager = std::make_shared<ControlManager>(ControlManager());
 std::shared_ptr<InputMapping> m_inputMapping = std::make_shared<InputMapping>(InputMapping());
 std::shared_ptr<SignalHandler> m_signalHandler = std::make_shared<SignalHandler>(SignalHandler());
 ````
@@ -40,15 +40,15 @@ Next, we'll connect the ``InputMapping``
 and ``SignalHandler`` to ``ControlManager``.
 
 ````cpp
-controlManager->m_inputMapping = m_inputMapping;
-controlManager->m_signalHandler = m_signalHandler;
+m_controlManager->m_inputMapping = m_inputMapping;
+m_controlManager->m_signalHandler = m_signalHandler;
 ````
 
 And, finally, we need to instruct the ZEN::Window instance to use _this_
 ZEN::IInputManager.
 
 ````cpp
-window->setInputManager(controlManager);
+window->setInputManager(m_controlManager);
 ````
 
 ## Simple mapping
@@ -90,10 +90,10 @@ auto inGameMapping = std::make_shared<InputMapping>(InputMapping());
 auto mainMenuMapping = std::make_shared<InputMapping>(InputMapping());
 
 // Code for when the game starts
-controlManager->m_inputMapping = inGameMapping;
+m_controlManager->m_inputMapping = inGameMapping;
 
 // When code is executed to open the main menu
-controlManager->m_inputMapping = mainMenuMapping;
+m_controlManager->m_inputMapping = mainMenuMapping;
 ````
 
 Of course, you can do the same with signal handling, but this is

@@ -7,6 +7,7 @@ include_directories(${ZEN_VENDOR_DIR}/glad/include)
 
 add_executable(editor
         src/main.cpp
+        src/editor.cpp
 
         ${ZEN_VENDOR_DIR}/glad/src/glad.c
 

@@ -5,9 +5,11 @@ and build the engine.
 
 The engine will be set up in a neutral location, and then referenced by
 your game using an environment variable. But more about that in
-@ref setting-up-a-game. 
+@ref setting-up-a-game.
 
-## Clone
+## ⤵️ Clone
+
+@anchor install-engine-clone
 
 First, navigate to where you want to install the engine,
 and clone the source code.
@@ -16,7 +18,9 @@ and clone the source code.
 git clone https://github.com/markhj/zeronetics
 ````
 
-## Initializing submodules
+## 📦 Initializing submodules
+
+@anchor install-engine-submodules
 
 That was pretty easy, right? The next step isn't much harder.
 Now, we initialize the Git submodules. In other words, we clone
@@ -27,18 +31,21 @@ git submodule init
 git submodule update
 ````
 
-## Build
+## 🔨 Build
 
-And now it's time to build the engine.
-
-This is IDE-specific or done with command-line ``cmake``.
+There's not a single way to build the engine because this depends
+on your IDE or whether you use plain ``cmake``.
 
 > Important: Preferably, you build the engine for both debug
 > and release mode. That will make easier for you, as you're
 > probably going to switch between the two when developing your
 > game.
 
-## And now?
+### Build guides
+
+@subpage build-clion
+
+## ▶️ And now?
 
 Now where the engine is built and ready to use, you can continue
 reading @ref setting-up-a-game.

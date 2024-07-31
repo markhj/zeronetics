@@ -45,15 +45,17 @@ target_include_directories(awesome PUBLIC
 ### Public headers
 
 To make your module consumable by client apps (i.e. games), you add
-a directory called ``include``. It's up to you to structure this directory,
-but it's recommended to add header files in a subdirectory, to reduce
-the risk of collisions in the client project.
-Normally, the subdirectory would just be ``zeronetics``.
+a directory called ``include``.
+
+It's up to you to structure this directory, but it's recommended to
+add header files in a subdirectory, to reduce the risk of collisions
+in the client project. Normally, the subdirectory would just be
+``zeronetics``.
 
 ### Integrate in build process
 
 To make the module part of the build process, you must add the module name
-(``awesome``) to the list ``ZEN_MODULES`` found in ``cmake/modules-inc.cmake``.
+(``awesome``) to the list ``ZEN_MODULES`` found in ``cmake/modules.cmake``.
 
 ````cmake
 set(ZEN_MODULES
@@ -78,7 +80,7 @@ part of the build process.
 
 ## Namespace
 
-For modules, the choice of namespace is relatively free choice.
+For modules, the choice of namespace is a free choice.
 
 However, as long as a module has any dependencies from the main engine,
 it's recommended to nest the module within ``ZEN`` namespace. This is

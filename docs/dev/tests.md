@@ -1,6 +1,7 @@
 @page tests Test organization
 
-The unit and feature testing suite is implemented with [C++ BBUnit](https://github.com/markhj/cpp-bbunit).
+The unit and feature testing suite is implemented with
+[C++ BBUnit](https://github.com/markhj/cpp-bbunit).
 
 ## 📘 Primary testing suite
 
@@ -10,7 +11,7 @@ testing suites.
 
 ## 📚 Organization
 
-Test cases are located in the ``tests/src/cases/`` directory, and consists of
+Test cases are located in the ``tests/src/cases/`` directory, and consist of
 a header and source file pair.
 
 Tests from the main engine reside in the ``ZEN::Tests`` namespace.
@@ -27,7 +28,7 @@ A test case is allowed to manipulate content within its assigned payload
 directory.
 
 @important The directory is not rebuilt upon re-running C++ BBUnit. The
-directory is managed by CMake. If a test run manipulates contents during
+directory is managed by CMake. If a test manipulates contents during
 run-time, and the second run has certain expectations, you may see your
 test cases fail. Make sure to account for this. In most cases, it suffices
 to have files which are treated as static, and others as dynamic.

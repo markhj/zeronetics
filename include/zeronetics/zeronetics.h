@@ -20,6 +20,7 @@
 #include "core/engine-info.h"
 #include "core/globals.h"
 #include "core/gpu-alloc.h"
+#include "core/image-data.h"
 #include "core/inputs.h"
 #include "core/io.h"
 #include "core/observer.h"

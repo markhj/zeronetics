@@ -30,6 +30,7 @@ set(CORE_SRC
         # Traits
         src/traits/has-unique-id.cpp
         src/traits/processor.cpp
+        src/traits/loads-image.cpp
 
         # Adv. structures
         src/render/render-manager.cpp
@@ -52,3 +53,4 @@ add_library(zeronetics STATIC ${CORE_SRC})
 target_link_libraries(zeronetics PRIVATE ${ZEN_MODULES})
 
 target_include_directories(zeronetics PUBLIC ${ZEN_VENDOR_DIR}/glm)
+target_include_directories(zeronetics PUBLIC ${ZEN_VENDOR_DIR}/stb)

@@ -1,4 +1,5 @@
 #include "editor.h"
+#include "editor-ui.h"
 
 #include <gizmos/3d-grid.h>
 #include <glsl-shader-builder/glsl-shader-builder.h>
@@ -73,6 +74,18 @@ void ZenEdit::Editor::initialize() noexcept(false) {
 void ZenEdit::Editor::run() {
     ImGuiIO &io = ImGui::GetIO();
 
+    Container mainContainer{
+            .title = "Objects"};
+
+    Button btnAddCube;
+    btnAddCube.text = "Cube";
+    btnAddCube.onClick = [&]() { addCube(); };
+
+    mainContainer.elements.push_back(std::make_shared<Button>(btnAddCube));
+
+    EditorUI editorUi;
+    editorUi.containers.push_back(&mainContainer);
+
     while (!glfwWindowShouldClose(m_window)) {
         m_delta = 1.0f / io.Framerate;
 
@@ -83,10 +96,7 @@ void ZenEdit::Editor::run() {
         ImGui_ImplGlfw_NewFrame();
         ImGui::NewFrame();
 
-        ImGui::Begin("Hello, world!");
-
-        ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / io.Framerate, io.Framerate);
-        ImGui::End();
+        editorUi.render();
 
         ImGui::Render();
         m_renderer->render();
@@ -132,6 +142,25 @@ void ZenEdit::Editor::mouseMoveCallback(GLFWwindow *window, double x, double y) 
     });
 
     s_lastPosition = {mx, my};
+}
+
+void ZenEdit::Editor::addCube() {
+    auto box = std::make_shared<Cube>(Cube(0.5));
+    auto renderable = std::make_shared<Mesh3D>(Mesh3D(box));
+
+    ++m_nextObjectId;
+
+    renderable->position = Vec3(-static_cast<gw_float>(m_nextObjectId), 0.0, 1.0);
+
+    std::string objId = "Obj" + std::to_string(m_nextObjectId);
+
+    m_mainLayer->renderGroups3d[0]->renderables3d[objId] = renderable;
+
+    m_renderManager->request(RendererRequest{
+            RenderManagerRequest::Allocate,
+            m_mainLayer->renderGroups3d[0]->renderables3d[objId],
+            m_mainLayer,
+    });
 }
 
 void ZenEdit::Editor::setUpMainLayer() {
@@ -208,6 +237,11 @@ void ZenEdit::Editor::configureControls() {
     m_inputMapping->keyDown(Key::S, "back");
     m_inputMapping->keyDown(Key::A, "left");
     m_inputMapping->keyDown(Key::D, "right");
+    m_inputMapping->keyJustPressed(Key::F, "toggle_free_camera");
+
+    m_signalHandler->on("toggle_free_camera", [&]() {
+        m_freeCameraAssist->enabled = !m_freeCameraAssist->enabled;
+    });
 
     m_controlManager->setInputMapping(m_inputMapping);
     m_controlManager->setSignalHandler(m_signalHandler);
@@ -217,5 +251,6 @@ void ZenEdit::Editor::setUpFreeCamera() {
     m_freeCameraAssist = std::make_shared<FreeCamera>(FreeCamera());
     m_freeCameraAssist->camera3d = m_camera;
     m_freeCameraAssist->signals = {"forward", "left", "back", "right"};
+    m_freeCameraAssist->enabled = false;
     m_controlManager->attachAssist(m_freeCameraAssist);
 }

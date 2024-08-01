@@ -14,6 +14,8 @@ namespace ZEN::ControlSystems {
 
     class Assist {
     public:
+        bool enabled = true;
+
         virtual void process(dt_float delta,
                              const std::vector<std::string> &signals) = 0;
 
@@ -25,7 +27,7 @@ namespace ZEN::ControlSystems {
 
         AssistInitialization start();
 
-        bool isInitialized() const noexcept;
+        [[nodiscard]] bool isInitialized() const noexcept;
 
     private:
         bool m_initialized = false;

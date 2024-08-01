@@ -45,6 +45,10 @@ namespace ZenEdit {
 
         float m_delta;
 
+        bool m_freeCameraActive = false;
+
+        uint16_t m_nextObjectId = 1;
+
         std::vector<VertexAttribute> m_defaultAttribs = {VertexAttribute::Position3D,
                                                          VertexAttribute::ColorRGB,
                                                          VertexAttribute::Normal3D};
@@ -52,6 +56,8 @@ namespace ZenEdit {
         static void keyboardCallback(GLFWwindow *window, int key, int scancode, int action, int mods);
 
         static void mouseMoveCallback(GLFWwindow *window, double x, double y);
+
+        void addCube();
 
         void setUpMainLayer();
 

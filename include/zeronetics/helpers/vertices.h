@@ -5,6 +5,11 @@
 #include <vector>
 
 namespace ZEN {
+    /**
+     * Helper functions to work with vertices.
+     *
+     * @ref helpers
+     */
     class Vertices {
     public:
         /**

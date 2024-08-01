@@ -3,8 +3,9 @@
 The ZEN::Settings object assist with managing settings for 
 window, video, audio, etc.
 
-It does not concern itself directly with mapping of keys, etc.
-because this is implemented by other classes in Zeronetics.
+It does not concern itself directly with mapping of keys and
+other controls because this is implemented by other classes in
+Zeronetics.
 
 ## 📺 Generating the window
 

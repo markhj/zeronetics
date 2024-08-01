@@ -12,7 +12,7 @@ ZEN::Timer timer;
 timer.start();
 ````
 
-Whenever needed, you can now grab the duration since the timer was started.
+Whenever needed, you can grab the duration since the timer was started.
 The return value is provided as ``ZEN::Result<ZEN::TimeMeasurement>``.
 
 ````cpp

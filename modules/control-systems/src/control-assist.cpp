@@ -25,7 +25,9 @@ void ZEN::ControlSystems::ControlManager::onKeyStateChanged(const KeyStateEvent 
 
 void ZEN::ControlSystems::ControlManager::onMouseMoved(const MouseMovedEvent &mouseMovedEvent) {
     for (std::shared_ptr<Assist> &assist: assists) {
-        assist->onMouseMoved(mouseMovedEvent);
+        if (assist->enabled) {
+            assist->onMouseMoved(mouseMovedEvent);
+        }
     }
 }
 
@@ -56,7 +58,9 @@ void ZEN::ControlSystems::ControlManager::process(ZEN::dt_float delta) {
     });
 
     for (std::shared_ptr<Assist> &assist: assists) {
-        assist->process(delta, activeSignals);
+        if (assist->enabled) {
+            assist->process(delta, activeSignals);
+        }
     }
 }
 

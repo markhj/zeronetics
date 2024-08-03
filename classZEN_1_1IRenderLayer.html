@@ -108,6 +108,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad31028bc7b196a348e4859fdd9b67462"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a957225993f018ac6833e621ac87422a3"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; <a class="el" href="namespaceZEN.html#a3ff69a9dc86c8ce199f458ed659dbe95">VertexAttribute</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1IRenderLayer.html#a957225993f018ac6833e621ac87422a3">getAttributes</a> () const noexcept=0</td></tr>
 <tr class="separator:a957225993f018ac6833e621ac87422a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ae53d22f8c2241cbdb2f7996a39e264"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1IRenderLayer.html#a9ae53d22f8c2241cbdb2f7996a39e264">generateFrom</a> (const std::shared_ptr&lt; <a class="el" href="classZEN_1_1IScene.html">IScene</a> &gt; &amp;scene)=0</td></tr>
+<tr class="separator:a9ae53d22f8c2241cbdb2f7996a39e264"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -119,6 +121,41 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a0225e5d3582f402aab0e2d63a940781e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a9ae53d22f8c2241cbdb2f7996a39e264"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ae53d22f8c2241cbdb2f7996a39e264">&#9670;&nbsp;</a></span>generateFrom()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ZEN::IRenderLayer::generateFrom </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classZEN_1_1IScene.html">IScene</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>scene</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Create the layer content from a scene object.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scene</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="classZEN_1_1RenderLayer.html#a4b3985d2231775cefb928541eacb60cc">ZEN::RenderLayer</a>.</p>
+
+</div>
+</div>
 <a id="a957225993f018ac6833e621ac87422a3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a957225993f018ac6833e621ac87422a3">&#9670;&nbsp;</a></span>getAttributes()</h2>
 

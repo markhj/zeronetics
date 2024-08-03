@@ -90,7 +90,7 @@ $(document).ready(function(){initNavTree('process-adv-lifecycle.html',''); initR
 <div class="textblock"><p>In this chapter we take a look at more advanced and rare use-cases of the process life-cycle management, namely the ability to pause, resume and kill the process.</p>
 <p>These actions are mainly needed in complex games, and in particular to halt processing of expensive function calls, when they aren't needed.</p>
 <dl class="section note"><dt>Note</dt><dd>These techniques are rarely needed for simpler games.</dd></dl>
-<h2><a class="anchor" id="autotoc_md90"></a>
+<h2><a class="anchor" id="autotoc_md93"></a>
 ▶️ Pause and resume</h2>
 <p>A process can paused and resumed using <a class="el" href="classZEN_1_1Process.html#a66be7d08362103e4725c39b7d519d827">ZEN::Process::pause</a> and <a class="el" href="classZEN_1_1Process.html#a2160d33de1c863751fc40edf0886aa24">ZEN::Process::resume</a>. They are executed directly on the process instance, which means that in the edge cases where a process may be attached to several processor, the effect is universal.</p>
 <p>Assume we have:</p>
@@ -101,7 +101,7 @@ $(document).ready(function(){initNavTree('process-adv-lifecycle.html',''); initR
 <div class="fragment"><div class="line">myProcess.pause();</div>
 </div><!-- fragment --><p>And when it's ready to run again:</p>
 <div class="fragment"><div class="line">myProcess.resume();</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md91"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md94"></a>
 💀 Killing a process</h2>
 <p>When you kill a process it remains attached, but stops processing and cannot be resumed, even if you explicitly call the <code>resume</code> function.</p>
 <div class="fragment"><div class="line">myProcess.kill();</div>

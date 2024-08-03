@@ -97,6 +97,23 @@ To lower and upper-case</h3>
 <p>You can convert string to lower and uppercase using ZEN::toLowerCase and ZEN::toUpperCase.</p>
 <p>Example:</p>
 <div class="fragment"><div class="line">std::string lowerCase = toLowerCase(<span class="stringliteral">&quot;Hello, World!&quot;</span>);  <span class="comment">// hello, world!</span></div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md80"></a>
+Vertices</h2>
+<h3><a class="anchor" id="autotoc_md81"></a>
+Flatten vertex</h3>
+<p>To <b>flatten a vertex</b> basically means extracting its numeric values and putting them into row on a vector. This has a number of applications, among others it's useful for some renderers when they need to allocate data on the GPU.</p>
+<p>A list of vertex attributes determine which properties to extract and in which order.</p>
+<p>See <a class="el" href="classZEN_1_1Vertices.html#a5e64bc170f6374c59e4936ba89456358">ZEN::Vertices::flattenVertex3D</a>.</p>
+<h3><a class="anchor" id="autotoc_md82"></a>
+Calculate normal</h3>
+<p>When given three points you can calculate the normal to the surface they form in combination.</p>
+<p>It's important that the points are given in <b>counter clock-wise order</b>, otherwise the normal will point the opposite way of what's expected.</p>
+<p>To calculate a normal use <a class="el" href="classZEN_1_1Vertices.html#a97c36451c214c7bce2b5420d48436c0b">ZEN::Vertices::calculateNormal</a>:</p>
+<div class="fragment"><div class="line"><span class="comment">// Assuming Vec3 instances a, b and c have been defined already</span></div>
+<div class="line"> </div>
+<div class="line"><a class="code" href="namespaceZEN.html#a0d7569c6075d08a03f47973dc968b9fc">Vec3</a> normal = <a class="code" href="classZEN_1_1Vertices.html#a97c36451c214c7bce2b5420d48436c0b">ZEN::Vertices::calculateNormal</a>(a, b, c);</div>
+<div class="ttc" id="aclassZEN_1_1Vertices_html_a97c36451c214c7bce2b5420d48436c0b"><div class="ttname"><a href="classZEN_1_1Vertices.html#a97c36451c214c7bce2b5420d48436c0b">ZEN::Vertices::calculateNormal</a></div><div class="ttdeci">static Vec3 calculateNormal(const Vec3 &amp;a, const Vec3 &amp;b, const Vec3 &amp;c) noexcept</div></div>
+<div class="ttc" id="anamespaceZEN_html_a0d7569c6075d08a03f47973dc968b9fc"><div class="ttname"><a href="namespaceZEN.html#a0d7569c6075d08a03f47973dc968b9fc">ZEN::Vec3</a></div><div class="ttdeci">glm::vec3 Vec3</div><div class="ttdef"><b>Definition:</b> tensors.h:20</div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

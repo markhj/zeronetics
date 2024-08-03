@@ -2,14 +2,14 @@ var entities =
 [
     [ "Entity system", "entity-system.html", [
       [ "➡️ Forward", "orientation.html#autotoc_md68", [
-        [ "🔇 Log level behavior", "log-configuration.html#autotoc_md80", [
-          [ "Example", "log-configuration.html#autotoc_md81", null ]
+        [ "🔇 Log level behavior", "log-configuration.html#autotoc_md83", [
+          [ "Example", "log-configuration.html#autotoc_md84", null ]
         ] ],
-        [ "✂️ Blacklisting categories", "log-configuration.html#autotoc_md82", null ],
-        [ "✏️ What is reporting?", "log-reporting.html#autotoc_md85", null ],
-        [ "📋 Usage", "log-reporting.html#autotoc_md86", null ],
-        [ "Library error", "log-engine-dev.html#autotoc_md83", [
-          [ "Example", "log-engine-dev.html#autotoc_md84", null ]
+        [ "✂️ Blacklisting categories", "log-configuration.html#autotoc_md85", null ],
+        [ "✏️ What is reporting?", "log-reporting.html#autotoc_md88", null ],
+        [ "📋 Usage", "log-reporting.html#autotoc_md89", null ],
+        [ "Library error", "log-engine-dev.html#autotoc_md86", [
+          [ "Example", "log-engine-dev.html#autotoc_md87", null ]
         ] ],
         [ "↗️ Vectors", "tensors.html#autotoc_md73", null ],
         [ "🔢 Matrices", "tensors.html#autotoc_md74", null ],
@@ -21,14 +21,14 @@ var entities =
         [ "📜 See also", "shapes.html#autotoc_md72", null ],
         [ "🔢 Meshes and vertices", "geometry-relationships.html#autotoc_md66", null ],
         [ "🔷 Shapes", "geometry-relationships.html#autotoc_md67", null ],
-        [ "🍂 Life cycle", "process-introduction.html#autotoc_md92", null ],
-        [ "📲 Implementation", "process-introduction.html#autotoc_md93", null ],
-        [ "💫 Usage", "process-introduction.html#autotoc_md94", null ],
-        [ "See also", "process-introduction.html#autotoc_md95", null ],
-        [ "🐣 Basic life-cycle", "process-lifecycle.html#autotoc_md96", null ],
-        [ "📜 See also", "process-lifecycle.html#autotoc_md97", null ],
-        [ "▶️ Pause and resume", "process-adv-lifecycle.html#autotoc_md90", null ],
-        [ "💀 Killing a process", "process-adv-lifecycle.html#autotoc_md91", null ],
+        [ "🍂 Life cycle", "process-introduction.html#autotoc_md95", null ],
+        [ "📲 Implementation", "process-introduction.html#autotoc_md96", null ],
+        [ "💫 Usage", "process-introduction.html#autotoc_md97", null ],
+        [ "See also", "process-introduction.html#autotoc_md98", null ],
+        [ "🐣 Basic life-cycle", "process-lifecycle.html#autotoc_md99", null ],
+        [ "📜 See also", "process-lifecycle.html#autotoc_md100", null ],
+        [ "▶️ Pause and resume", "process-adv-lifecycle.html#autotoc_md93", null ],
+        [ "💀 Killing a process", "process-adv-lifecycle.html#autotoc_md94", null ],
         [ "🔁 How it works", "game-loop.html#autotoc_md64", null ],
         [ "See also", "game-loop.html#autotoc_md65", null ],
         [ "💀 The problem", "delta.html#autotoc_md59", null ],

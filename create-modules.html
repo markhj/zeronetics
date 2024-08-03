@@ -98,7 +98,7 @@ $(document).ready(function(){initNavTree('create-modules.html',''); initResizabl
 <div class="line">    │       └── ...</div>
 <div class="line">    └── src/</div>
 <div class="line">        └── awesome.cpp</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md116"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md119"></a>
 CMake file</h3>
 <p>Within this directory, you must create a <code>CMakeLists.txt</code> which will be included in the build system pipeline.</p>
 <p>The basic format for a module's CMake is:</p>
@@ -114,11 +114,11 @@ CMake file</h3>
 <div class="line">target_include_directories(awesome PUBLIC</div>
 <div class="line">        ${CMAKE_CURRENT_SOURCE_DIR}/include</div>
 <div class="line">)</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md117"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md120"></a>
 Public headers</h3>
 <p>To make your module consumable by client apps (i.e. games), you add a directory called <code>include</code>.</p>
 <p>It's up to you to structure this directory, but it's recommended to add header files in a subdirectory, to reduce the risk of collisions in the client project. Normally, the subdirectory would just be <code>zeronetics</code>.</p>
-<h3><a class="anchor" id="autotoc_md118"></a>
+<h3><a class="anchor" id="autotoc_md121"></a>
 Integrate in build process</h3>
 <p>To make the module part of the build process, you must add the module name (<code>awesome</code>) to the list <code>ZEN_MODULES</code> found in <code>cmake/modules.cmake</code>.</p>
 <div class="fragment"><div class="line">set(ZEN_MODULES</div>
@@ -129,13 +129,13 @@ Integrate in build process</h3>
 <p>Example:</p>
 <div class="fragment"><div class="line">set(LIBS_AWESOME glfw3)</div>
 </div><!-- fragment --><p>When you refresh your CMake configuration, the <em>Awesome</em> module is now part of the build process.</p>
-<h2><a class="anchor" id="autotoc_md119"></a>
+<h2><a class="anchor" id="autotoc_md122"></a>
 Namespace</h2>
 <p>For modules, the choice of namespace is a free choice.</p>
 <p>However, as long as a module has any dependencies from the main engine, it's recommended to nest the module within <code><a class="el" href="namespaceZEN.html">ZEN</a></code> namespace. This is to make it clear that the module (probably) can't just be get unplugged from Zeronetics and applied in other projects.</p>
 <p>Larger modules, especially those with risk of name collisions, should be nested within their own namespace.</p>
 <p>Our OpenGL module, for example, resides in <code>ZEN::OpenGL</code>. This is to avoid collisions of common names such as <code>Shader</code> and <code>Renderer</code> which is likely to exist in other modules.</p>
-<h2><a class="anchor" id="autotoc_md120"></a>
+<h2><a class="anchor" id="autotoc_md123"></a>
 Tests</h2>
 <p>If you need to write automated tests for your module, you create a directory named <code>tests</code> in the module directory.</p>
 <p>Add a <code>CMakeLists.txt</code> such that the directory structure looks like:</p>

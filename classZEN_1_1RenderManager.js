@@ -1,5 +1,6 @@
 var classZEN_1_1RenderManager =
 [
+    [ "allocateLayer", "classZEN_1_1RenderManager.html#a9b30c1a72d07a0ff5be58b954b0f42dc", null ],
     [ "attachLayer", "classZEN_1_1RenderManager.html#a961af51876407ab646d0a529dcd09de4", null ],
     [ "clearRequests", "classZEN_1_1RenderManager.html#a9e6cf42bb491b40f653e475757a3378a", null ],
     [ "forEachRequest", "classZEN_1_1RenderManager.html#a3b4784a079fcdad704de8d6568203744", null ],

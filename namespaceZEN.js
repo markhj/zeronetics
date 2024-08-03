@@ -1,44 +1,44 @@
 var namespaceZEN =
 [
-    [ "Hierarchy", "engine-core-structure.html#autotoc_md124", null ],
-    [ "🔨 Core: Fundamentals", "engine-core-structure.html#autotoc_md125", null ],
-    [ "📚 Core: 2nd level", "engine-core-structure.html#autotoc_md126", null ],
-    [ "📥 Core: 3rd level", "engine-core-structure.html#autotoc_md127", null ],
-    [ "📜 Contracts", "engine-core-structure.html#autotoc_md128", null ],
-    [ "💼 Helpers", "engine-core-structure.html#autotoc_md129", null ],
-    [ "💎 Traits", "engine-core-structure.html#autotoc_md130", null ],
-    [ "📱 Advanced structures", "engine-core-structure.html#autotoc_md131", null ],
-    [ "📦 Modules", "engine-core-structure.html#autotoc_md132", null ],
-    [ "Macros", "build-info.html#autotoc_md109", null ],
-    [ "Example", "build-info.html#autotoc_md110", null ],
-    [ "Note", "build-info.html#autotoc_md111", [
-      [ "🆗 Keyboard", "control-systems-mapping.html#autotoc_md140", [
-        [ "Key pressed and released", "control-systems-mapping.html#autotoc_md141", null ],
-        [ "Key down", "control-systems-mapping.html#autotoc_md142", null ]
+    [ "Hierarchy", "engine-core-structure.html#autotoc_md127", null ],
+    [ "🔨 Core: Fundamentals", "engine-core-structure.html#autotoc_md128", null ],
+    [ "📚 Core: 2nd level", "engine-core-structure.html#autotoc_md129", null ],
+    [ "📥 Core: 3rd level", "engine-core-structure.html#autotoc_md130", null ],
+    [ "📜 Contracts", "engine-core-structure.html#autotoc_md131", null ],
+    [ "💼 Helpers", "engine-core-structure.html#autotoc_md132", null ],
+    [ "💎 Traits", "engine-core-structure.html#autotoc_md133", null ],
+    [ "📱 Advanced structures", "engine-core-structure.html#autotoc_md134", null ],
+    [ "📦 Modules", "engine-core-structure.html#autotoc_md135", null ],
+    [ "Macros", "build-info.html#autotoc_md112", null ],
+    [ "Example", "build-info.html#autotoc_md113", null ],
+    [ "Note", "build-info.html#autotoc_md114", [
+      [ "🆗 Keyboard", "control-systems-mapping.html#autotoc_md143", [
+        [ "Key pressed and released", "control-systems-mapping.html#autotoc_md144", null ],
+        [ "Key down", "control-systems-mapping.html#autotoc_md145", null ]
       ] ],
-      [ "🐀 Mouse", "control-systems-mapping.html#autotoc_md143", [
-        [ "Mouse button clicked and released", "control-systems-mapping.html#autotoc_md144", null ],
-        [ "Mouse button down", "control-systems-mapping.html#autotoc_md145", null ]
+      [ "🐀 Mouse", "control-systems-mapping.html#autotoc_md146", [
+        [ "Mouse button clicked and released", "control-systems-mapping.html#autotoc_md147", null ],
+        [ "Mouse button down", "control-systems-mapping.html#autotoc_md148", null ]
       ] ],
-      [ "An example", "opengl-bindable.html#autotoc_md146", null ],
-      [ "Functions", "opengl-bindable.html#autotoc_md147", [
-        [ "Short-hand for binding", "opengl-bindable.html#autotoc_md148", null ],
-        [ "With", "opengl-bindable.html#autotoc_md149", null ]
+      [ "An example", "opengl-bindable.html#autotoc_md149", null ],
+      [ "Functions", "opengl-bindable.html#autotoc_md150", [
+        [ "Short-hand for binding", "opengl-bindable.html#autotoc_md151", null ],
+        [ "With", "opengl-bindable.html#autotoc_md152", null ]
       ] ],
-      [ "CMake file", "create-modules.html#autotoc_md116", null ],
-      [ "Public headers", "create-modules.html#autotoc_md117", null ],
-      [ "Integrate in build process", "create-modules.html#autotoc_md118", null ]
+      [ "CMake file", "create-modules.html#autotoc_md119", null ],
+      [ "Public headers", "create-modules.html#autotoc_md120", null ],
+      [ "Integrate in build process", "create-modules.html#autotoc_md121", null ]
     ] ],
-    [ "Namespace", "create-modules.html#autotoc_md119", null ],
-    [ "Tests", "create-modules.html#autotoc_md120", null ],
-    [ "📘 Primary testing suite", "tests.html#autotoc_md133", null ],
-    [ "📚 Organization", "tests.html#autotoc_md134", null ],
-    [ "📦 Payloads", "tests.html#autotoc_md135", null ],
-    [ "🔀 Management of allocation", "arch-render-manager.html#autotoc_md106", null ],
-    [ "How to make callbacks \"a la Zeronetics\"", "callbacks.html#autotoc_md112", null ],
-    [ "Examination of choices", "callbacks.html#autotoc_md113", [
-      [ "Using <tt>std::optional</tt>", "callbacks.html#autotoc_md114", null ],
-      [ "Smart pointers", "callbacks.html#autotoc_md115", null ]
+    [ "Namespace", "create-modules.html#autotoc_md122", null ],
+    [ "Tests", "create-modules.html#autotoc_md123", null ],
+    [ "📘 Primary testing suite", "tests.html#autotoc_md136", null ],
+    [ "📚 Organization", "tests.html#autotoc_md137", null ],
+    [ "📦 Payloads", "tests.html#autotoc_md138", null ],
+    [ "🔀 Management of allocation", "arch-render-manager.html#autotoc_md109", null ],
+    [ "How to make callbacks \"a la Zeronetics\"", "callbacks.html#autotoc_md115", null ],
+    [ "Examination of choices", "callbacks.html#autotoc_md116", [
+      [ "Using <tt>std::optional</tt>", "callbacks.html#autotoc_md117", null ],
+      [ "Smart pointers", "callbacks.html#autotoc_md118", null ]
     ] ],
     [ "Assets", null, [
       [ "AssetManager", "classZEN_1_1Assets_1_1AssetManager.html", null ],
@@ -72,6 +72,9 @@ var namespaceZEN =
       [ "ControlSystemsTest", "classZEN_1_1Tests_1_1ControlSystemsTest.html", "classZEN_1_1Tests_1_1ControlSystemsTest" ],
       [ "GLSLShaderBuilderTest", "classZEN_1_1Tests_1_1GLSLShaderBuilderTest.html", "classZEN_1_1Tests_1_1GLSLShaderBuilderTest" ]
     ] ],
+    [ "Traits", null, [
+      [ "LoadsImages", "classZEN_1_1Traits_1_1LoadsImages.html", "classZEN_1_1Traits_1_1LoadsImages" ]
+    ] ],
     [ "ITexture2D", "classZEN_1_1ITexture2D.html", null ],
     [ "IRegisteredAsset", "classZEN_1_1IRegisteredAsset.html", "classZEN_1_1IRegisteredAsset" ],
     [ "IAsset", "classZEN_1_1IAsset.html", "classZEN_1_1IAsset" ],
@@ -89,6 +92,8 @@ var namespaceZEN =
     [ "IRenderable", "classZEN_1_1IRenderable.html", "classZEN_1_1IRenderable" ],
     [ "IRenderable3D", "classZEN_1_1IRenderable3D.html", "classZEN_1_1IRenderable3D" ],
     [ "IRenderer", "classZEN_1_1IRenderer.html", "classZEN_1_1IRenderer" ],
+    [ "IScene", "classZEN_1_1IScene.html", "classZEN_1_1IScene" ],
+    [ "ISceneLoader", "classZEN_1_1ISceneLoader.html", "classZEN_1_1ISceneLoader" ],
     [ "IShaderBuilder", "classZEN_1_1IShaderBuilder.html", "classZEN_1_1IShaderBuilder" ],
     [ "IShader", "classZEN_1_1IShader.html", "classZEN_1_1IShader" ],
     [ "IShape", "classZEN_1_1IShape.html", "classZEN_1_1IShape" ],
@@ -104,6 +109,7 @@ var namespaceZEN =
     [ "ViewportSize", "structZEN_1_1ViewportSize.html", "structZEN_1_1ViewportSize" ],
     [ "Globals", "structZEN_1_1Globals.html", null ],
     [ "GPUAllocation", "structZEN_1_1GPUAllocation.html", "structZEN_1_1GPUAllocation" ],
+    [ "ImageData", "structZEN_1_1ImageData.html", "structZEN_1_1ImageData" ],
     [ "KeyMap", "structZEN_1_1KeyMap.html", null ],
     [ "KeyStateEvent", "structZEN_1_1KeyStateEvent.html", "structZEN_1_1KeyStateEvent" ],
     [ "MouseButtonStateEvent", "structZEN_1_1MouseButtonStateEvent.html", "structZEN_1_1MouseButtonStateEvent" ],
@@ -152,11 +158,13 @@ var namespaceZEN =
     [ "RenderGroup3D", "structZEN_1_1RenderGroup3D.html", null ],
     [ "RenderLayer", "classZEN_1_1RenderLayer.html", "classZEN_1_1RenderLayer" ],
     [ "RenderManager", "classZEN_1_1RenderManager.html", "classZEN_1_1RenderManager" ],
+    [ "Scene", "classZEN_1_1Scene.html", "classZEN_1_1Scene" ],
     [ "Cube", "classZEN_1_1Cube.html", "classZEN_1_1Cube" ],
     [ "HasUniqueId", "classZEN_1_1HasUniqueId.html", "classZEN_1_1HasUniqueId" ],
     [ "Processor", "classZEN_1_1Processor.html", "classZEN_1_1Processor" ],
     [ "Window", "classZEN_1_1Window.html", "classZEN_1_1Window" ],
     [ "GLSLShaderBuilder", "classZEN_1_1GLSLShaderBuilder.html", "classZEN_1_1GLSLShaderBuilder" ],
+    [ "SceneLoaderHxl", "classZEN_1_1SceneLoaderHxl.html", "classZEN_1_1SceneLoaderHxl" ],
     [ "dt_float", "namespaceZEN.html#a1896aa89c3b0bbcccbd1b16d57410502", null ],
     [ "fps_int", "namespaceZEN.html#a6e336ae4a649a81112a7105f7705954c", null ],
     [ "gpu_alloc_int", "namespaceZEN.html#add96e6cf45c9f06715b3fae49d078f35", null ],
@@ -260,6 +268,7 @@ var namespaceZEN =
       [ "RendererInit", "namespaceZEN.html#a5ac493fe076dd216cf2f69f8b01f05efacf48c3dcb3d12b3c90852b98a6a885f9", null ],
       [ "Rendering", "namespaceZEN.html#a5ac493fe076dd216cf2f69f8b01f05efaa6e8f9aed2ac6481dc25a18a33342d03", null ],
       [ "RendererInternals", "namespaceZEN.html#a5ac493fe076dd216cf2f69f8b01f05efa37e93c4876abdbf5d2143dd6310f1a14", null ],
+      [ "DataFileIntegrity", "namespaceZEN.html#a5ac493fe076dd216cf2f69f8b01f05efa2381aa6faa84836c53ed9dc10639f59b", null ],
       [ "ShaderCompilation", "namespaceZEN.html#a5ac493fe076dd216cf2f69f8b01f05efaea199c4bea585e022d34acb82922eb17", null ],
       [ "ShaderUse", "namespaceZEN.html#a5ac493fe076dd216cf2f69f8b01f05efa54dc3fb0e54d291e45aa3372ec0d9cc0", null ],
       [ "VertexDataIntegrity", "namespaceZEN.html#a5ac493fe076dd216cf2f69f8b01f05efad16607abdbeff0595f775870e1d9bb49", null ],

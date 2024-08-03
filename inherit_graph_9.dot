@@ -22,16 +22,16 @@ digraph "Graphical Class Hierarchy"
   Node39 [label="ZEN::IPointLight",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classZEN_1_1IPointLight.html",tooltip=" "];
   Node39 -> Node40 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node40 [label="ZEN::PointLight3D",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classZEN_1_1PointLight3D.html",tooltip=" "];
-  Node42 [label="ZEN::IPosition3D",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classZEN_1_1IPosition3D.html",tooltip=" "];
-  Node42 -> Node43 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node43 [label="ZEN::ITransforms3D",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classZEN_1_1ITransforms3D.html",tooltip=" "];
+  Node43 [label="ZEN::IPosition3D",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classZEN_1_1IPosition3D.html",tooltip=" "];
   Node43 -> Node44 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node44 [label="ZEN::ICamera3D",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classZEN_1_1ICamera3D.html",tooltip=" "];
-  Node44 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node43 -> Node45 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node45 [label="ZEN::IRenderable3D",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classZEN_1_1IRenderable3D.html",tooltip=" "];
-  Node45 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node42 -> Node40 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node47 [label="ZEN::IRenderable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classZEN_1_1IRenderable.html",tooltip=" "];
-  Node47 -> Node45 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node44 [label="ZEN::ITransforms3D",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classZEN_1_1ITransforms3D.html",tooltip=" "];
+  Node44 -> Node45 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node45 [label="ZEN::ICamera3D",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classZEN_1_1ICamera3D.html",tooltip=" "];
+  Node45 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node44 -> Node46 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node46 [label="ZEN::IRenderable3D",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classZEN_1_1IRenderable3D.html",tooltip=" "];
+  Node46 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node43 -> Node40 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node48 [label="ZEN::IRenderable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classZEN_1_1IRenderable.html",tooltip=" "];
+  Node48 -> Node46 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
 }

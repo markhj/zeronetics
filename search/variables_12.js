@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['windowtitle_655',['windowTitle',['../classZEN_1_1Window.html#af1d158bd7f1fc66a9af1fb45495ff240',1,'ZEN::Window']]]
+  ['viewportsize_693',['viewportSize',['../structZEN_1_1Globals.html#ab8831b9c377afb03bc9043a31a29df3f',1,'ZEN::Globals']]],
+  ['vsync_694',['vSync',['../structZEN_1_1Settings.html#ab445066449f2de6207968fe68feb2042',1,'ZEN::Settings']]]
 ];

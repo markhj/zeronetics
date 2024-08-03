@@ -45,7 +45,7 @@ var NAVTREE =
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", "functions_dup" ],
-        [ "Functions", "functions_func.html", null ],
+        [ "Functions", "functions_func.html", "functions_func" ],
         [ "Variables", "functions_vars.html", null ]
       ] ]
     ] ]
@@ -55,9 +55,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"classZEN_1_1OpenGL_1_1VAO.html#aabcf172d82cdaa41cb85874c68af3a8b",
-"namespaceZEN.html#a5089f560467278c4efaed05ce45f57a7",
-"structZEN_1_1ResultError.html#a652fb8e319d0b2d91b795c90a6837741"
+"classZEN_1_1OpenGL_1_1StdBinding.html#a78b4f541c0c91012dfc0d19eaae10c63",
+"log-reporting.html#autotoc_md88",
+"structZEN_1_1IRendererRequest.html#a9f7bb18e8a90185ea60092275387e432"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

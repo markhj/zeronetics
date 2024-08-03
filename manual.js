@@ -1,9 +1,9 @@
 var manual =
 [
     [ "Settings", "settings.html", [
-      [ "📎 Basics", "manual.html#autotoc_md87", null ],
-      [ "🌐 Game world", "manual.html#autotoc_md88", null ],
-      [ "🔨 Utilities", "manual.html#autotoc_md89", [
+      [ "📎 Basics", "manual.html#autotoc_md90", null ],
+      [ "🌐 Game world", "manual.html#autotoc_md91", null ],
+      [ "🔨 Utilities", "manual.html#autotoc_md92", [
         [ "Environment variable", "setting-up-a-game.html#autotoc_md12", null ],
         [ "CMake list", "setting-up-a-game.html#autotoc_md13", null ],
         [ "Creating the window", "setting-up-a-game.html#autotoc_md14", null ],

@@ -29,6 +29,9 @@ var annotated_dup =
         [ "ControlSystemsTest", "classZEN_1_1Tests_1_1ControlSystemsTest.html", "classZEN_1_1Tests_1_1ControlSystemsTest" ],
         [ "GLSLShaderBuilderTest", "classZEN_1_1Tests_1_1GLSLShaderBuilderTest.html", "classZEN_1_1Tests_1_1GLSLShaderBuilderTest" ]
       ] ],
+      [ "Traits", null, [
+        [ "LoadsImages", "classZEN_1_1Traits_1_1LoadsImages.html", "classZEN_1_1Traits_1_1LoadsImages" ]
+      ] ],
       [ "ITexture2D", "classZEN_1_1ITexture2D.html", null ],
       [ "IRegisteredAsset", "classZEN_1_1IRegisteredAsset.html", "classZEN_1_1IRegisteredAsset" ],
       [ "IAsset", "classZEN_1_1IAsset.html", "classZEN_1_1IAsset" ],
@@ -46,6 +49,8 @@ var annotated_dup =
       [ "IRenderable", "classZEN_1_1IRenderable.html", "classZEN_1_1IRenderable" ],
       [ "IRenderable3D", "classZEN_1_1IRenderable3D.html", "classZEN_1_1IRenderable3D" ],
       [ "IRenderer", "classZEN_1_1IRenderer.html", "classZEN_1_1IRenderer" ],
+      [ "IScene", "classZEN_1_1IScene.html", "classZEN_1_1IScene" ],
+      [ "ISceneLoader", "classZEN_1_1ISceneLoader.html", "classZEN_1_1ISceneLoader" ],
       [ "IShaderBuilder", "classZEN_1_1IShaderBuilder.html", "classZEN_1_1IShaderBuilder" ],
       [ "IShader", "classZEN_1_1IShader.html", "classZEN_1_1IShader" ],
       [ "IShape", "classZEN_1_1IShape.html", "classZEN_1_1IShape" ],
@@ -61,6 +66,7 @@ var annotated_dup =
       [ "ViewportSize", "structZEN_1_1ViewportSize.html", "structZEN_1_1ViewportSize" ],
       [ "Globals", "structZEN_1_1Globals.html", null ],
       [ "GPUAllocation", "structZEN_1_1GPUAllocation.html", "structZEN_1_1GPUAllocation" ],
+      [ "ImageData", "structZEN_1_1ImageData.html", "structZEN_1_1ImageData" ],
       [ "KeyMap", "structZEN_1_1KeyMap.html", null ],
       [ "KeyStateEvent", "structZEN_1_1KeyStateEvent.html", "structZEN_1_1KeyStateEvent" ],
       [ "MouseButtonStateEvent", "structZEN_1_1MouseButtonStateEvent.html", "structZEN_1_1MouseButtonStateEvent" ],
@@ -109,10 +115,12 @@ var annotated_dup =
       [ "RenderGroup3D", "structZEN_1_1RenderGroup3D.html", null ],
       [ "RenderLayer", "classZEN_1_1RenderLayer.html", "classZEN_1_1RenderLayer" ],
       [ "RenderManager", "classZEN_1_1RenderManager.html", "classZEN_1_1RenderManager" ],
+      [ "Scene", "classZEN_1_1Scene.html", "classZEN_1_1Scene" ],
       [ "Cube", "classZEN_1_1Cube.html", "classZEN_1_1Cube" ],
       [ "HasUniqueId", "classZEN_1_1HasUniqueId.html", "classZEN_1_1HasUniqueId" ],
       [ "Processor", "classZEN_1_1Processor.html", "classZEN_1_1Processor" ],
       [ "Window", "classZEN_1_1Window.html", "classZEN_1_1Window" ],
-      [ "GLSLShaderBuilder", "classZEN_1_1GLSLShaderBuilder.html", "classZEN_1_1GLSLShaderBuilder" ]
+      [ "GLSLShaderBuilder", "classZEN_1_1GLSLShaderBuilder.html", "classZEN_1_1GLSLShaderBuilder" ],
+      [ "SceneLoaderHxl", "classZEN_1_1SceneLoaderHxl.html", "classZEN_1_1SceneLoaderHxl" ]
     ] ]
 ];

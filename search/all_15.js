@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['warn_365',['warn',['../classZEN_1_1Log.html#a718cf7d1fa13ab3ee9943f08a66b64f7',1,'ZEN::Log']]],
-  ['why_20are_20log_20functions_20macros_3f_366',['Why are log functions macros?',['../log-why-macros.html',1,'dev']]],
-  ['window_367',['Window',['../classZEN_1_1Window.html',1,'ZEN']]],
-  ['windows_368',['Windows',['../namespaceZEN.html#ad555d34e819d0776dc8d71e6e3b185c8aaea23489ce3aa9b6406ebb28e0cda430',1,'ZEN']]],
-  ['windowtitle_369',['windowTitle',['../classZEN_1_1Window.html#af1d158bd7f1fc66a9af1fb45495ff240',1,'ZEN::Window']]]
+  ['warn_385',['warn',['../classZEN_1_1Log.html#a718cf7d1fa13ab3ee9943f08a66b64f7',1,'ZEN::Log']]],
+  ['why_20are_20log_20functions_20macros_3f_386',['Why are log functions macros?',['../log-why-macros.html',1,'dev']]],
+  ['window_387',['Window',['../classZEN_1_1Window.html',1,'ZEN']]],
+  ['windows_388',['Windows',['../namespaceZEN.html#ad555d34e819d0776dc8d71e6e3b185c8aaea23489ce3aa9b6406ebb28e0cda430',1,'ZEN']]],
+  ['windowtitle_389',['windowTitle',['../classZEN_1_1Window.html#af1d158bd7f1fc66a9af1fb45495ff240',1,'ZEN::Window']]]
 ];

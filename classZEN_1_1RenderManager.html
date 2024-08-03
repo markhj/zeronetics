@@ -117,12 +117,49 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3b4784a079fcdad704de8d6568203744"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a961af51876407ab646d0a529dcd09de4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1RenderManager.html#a961af51876407ab646d0a529dcd09de4">attachLayer</a> (const std::shared_ptr&lt; <a class="el" href="classZEN_1_1IRenderLayer.html">IRenderLayer</a> &gt; &amp;layer) override</td></tr>
 <tr class="separator:a961af51876407ab646d0a529dcd09de4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b30c1a72d07a0ff5be58b954b0f42dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1RenderManager.html#a9b30c1a72d07a0ff5be58b954b0f42dc">allocateLayer</a> (const std::shared_ptr&lt; <a class="el" href="classZEN_1_1IRenderLayer.html">IRenderLayer</a> &gt; &amp;layer) override</td></tr>
+<tr class="separator:a9b30c1a72d07a0ff5be58b954b0f42dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0979845e03fe8f69cf71d3c6e56824c5"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="classZEN_1_1IRenderLayer.html">IRenderLayer</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1RenderManager.html#a0979845e03fe8f69cf71d3c6e56824c5">getLayers</a> () override</td></tr>
 <tr class="separator:a0979845e03fe8f69cf71d3c6e56824c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Implementation of basic Render Manager. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a9b30c1a72d07a0ff5be58b954b0f42dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b30c1a72d07a0ff5be58b954b0f42dc">&#9670;&nbsp;</a></span>allocateLayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ZEN::RenderManager::allocateLayer </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classZEN_1_1IRenderLayer.html">IRenderLayer</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>layer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Allocate the renderables contained on a layer.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">layer</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classZEN_1_1IRenderManager.html#aea06626342fa951ed15d53bf386cfccd">ZEN::IRenderManager</a>.</p>
+
+</div>
+</div>
 <a id="a961af51876407ab646d0a529dcd09de4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a961af51876407ab646d0a529dcd09de4">&#9670;&nbsp;</a></span>attachLayer()</h2>
 

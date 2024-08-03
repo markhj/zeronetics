@@ -33,6 +33,8 @@ namespace ZEN {
         Rendering,
         RendererInternals,
 
+        DataFileIntegrity,
+
         ShaderCompilation,
         ShaderUse,
 
@@ -70,6 +72,7 @@ namespace ZEN {
      * @ref log-configuration
      */
     struct LogBehavior {
+        
         LogAction takeAction = LogAction::Console;
     };
 

@@ -48,6 +48,7 @@
 #include "contracts/render-manager.h"
 #include "contracts/renderable.h"
 #include "contracts/renderer.h"
+#include "contracts/scene.h"
 #include "contracts/shader-builder.h"
 #include "contracts/shader.h"
 #include "contracts/shapes.h"

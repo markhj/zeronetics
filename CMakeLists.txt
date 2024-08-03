@@ -20,6 +20,8 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/build/${BUILD_TYP
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/build/${BUILD_TYPE_LOWER}/lib)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/build/${BUILD_TYPE_LOWER}/bin)
 
+#set(OUTPUT_DIR ${CMAKE_CURRENT_SOURCE_DIR})
+
 # Create directories (which due to subdirectories might not be possible to generate otherwise)
 file(MAKE_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/build/docs)
 
@@ -28,6 +30,7 @@ include_directories(include)
 # Build vendor projects
 add_subdirectory(vendor/glfw)
 add_subdirectory(vendor/glm)
+add_subdirectory(vendor/cpp-hxl-lang)
 
 # Engine
 add_subdirectory(engine)

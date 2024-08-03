@@ -18,6 +18,7 @@ set(CORE_SRC
         src/process/process.cpp
         src/core/globals.cpp
         src/core/shader-blueprint.cpp
+        src/scene/scene.cpp
 
         # Core: 3rd layer
         src/core/aabb.cpp
@@ -36,6 +37,8 @@ set(CORE_SRC
         src/render/render-manager.cpp
         src/logging/log.cpp
         src/game/game.cpp
+        src/scene/scene.cpp
+        ../modules/scene-loader-hxl/src/scene-loader-hxl.cpp
 
         # Shapes
         src/shapes/3d/shape-3d.cpp

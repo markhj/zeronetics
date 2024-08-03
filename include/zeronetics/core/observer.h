@@ -84,7 +84,8 @@ namespace ZEN {
          * When a noteworthy event has happened within the implementation class
          * this method is used to notify the attached observers.
          *
-         * @param observation
+         * @param of
+         * @param meta
          */
         void notifyObservers(ObservationOf of,
                              const ObserverMeta &meta) const;

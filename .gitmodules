@@ -13,3 +13,6 @@
 [submodule "vendor/imgui"]
 	path = vendor/imgui
 	url = https://github.com/ocornut/imgui
+[submodule "vendor/cpp-hxl-lang"]
+	path = vendor/cpp-hxl-lang
+	url = https://github.com/markhj/cpp-hxl-lang

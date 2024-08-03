@@ -44,6 +44,13 @@ namespace ZEN {
          */
         [[nodiscard]] std::vector<VertexAttribute> getAttributes() const noexcept override;
 
+        /**
+         * Create the layer content from a scene object.
+         *
+         * @param scene
+         */
+        void generateFrom(const std::shared_ptr<IScene> &scene) override;
+
     private:
         std::vector<VertexAttribute> m_attributes;
     };
@@ -89,6 +96,13 @@ namespace ZEN {
          * @param layer
          */
         void attachLayer(const std::shared_ptr<IRenderLayer> &layer) override;
+
+        /**
+         * Allocate the renderables contained on a layer.
+         *
+         * @param layer
+         */
+        void allocateLayer(const std::shared_ptr<IRenderLayer> &layer) override;
 
         /**
          * Get the list of layers.

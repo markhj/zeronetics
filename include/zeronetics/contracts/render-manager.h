@@ -6,6 +6,7 @@
 #include "shader.h"
 
 #include "zeronetics/core/render-settings.h"
+#include "zeronetics/scene/scene.h"
 
 #include <memory>
 
@@ -56,6 +57,13 @@ namespace ZEN {
          * Retrieve list of attributes which make up each vertex.
          */
         [[nodiscard]] virtual std::vector<VertexAttribute> getAttributes() const noexcept = 0;
+
+        /**
+         * Create the layer content from a scene object.
+         *
+         * @param scene
+         */
+        virtual void generateFrom(const std::shared_ptr<IScene> &scene) = 0;
     };
 
     /**
@@ -101,6 +109,13 @@ namespace ZEN {
          * @param layer
          */
         virtual void attachLayer(const std::shared_ptr<IRenderLayer> &layer) = 0;
+
+        /**
+         * Allocate the renderables contained on a layer.
+         *
+         * @param layer
+         */
+        virtual void allocateLayer(const std::shared_ptr<IRenderLayer> &layer) = 0;
 
         /**
          * Retrieve list of layers.

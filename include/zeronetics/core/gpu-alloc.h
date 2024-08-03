@@ -7,9 +7,17 @@ namespace ZEN {
      * Information about where a vertex or a set of
      * vertices have been allocated in the GPU.
      *
-     * Primarily used by renderes.
+     * Primarily used by renderers.
      */
     struct GPUAllocation {
-        gpu_alloc_int index = 0, size = 0;
+        /**
+         * The position of the allocation.
+         */
+        gpu_alloc_int index = 0;
+
+        /**
+         * Size of allocation.
+         */
+        gpu_alloc_int size = 0;
     };
 }

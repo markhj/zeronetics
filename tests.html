@@ -88,14 +88,14 @@ $(document).ready(function(){initNavTree('tests.html',''); initResizable(); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>The unit and feature testing suite is implemented with <a href="https://github.com/markhj/cpp-bbunit">C++ BBUnit</a>.</p>
-<h2><a class="anchor" id="autotoc_md136"></a>
+<h2><a class="anchor" id="autotoc_md143"></a>
 📘 Primary testing suite</h2>
 <p>The primary testing suite, located in the <code>tests</code> directory, performs tests on the main engine code. Note that modules have individual, separate testing suites.</p>
-<h2><a class="anchor" id="autotoc_md137"></a>
+<h2><a class="anchor" id="autotoc_md144"></a>
 📚 Organization</h2>
 <p>Test cases are located in the <code>tests/src/cases/</code> directory, and consist of a header and source file pair.</p>
 <p>Tests from the main engine reside in the <code>ZEN::Tests</code> namespace.</p>
-<h2><a class="anchor" id="autotoc_md138"></a>
+<h2><a class="anchor" id="autotoc_md145"></a>
 📦 Payloads</h2>
 <p>The directory <code>tests/payloads</code> contains data files which can be read by the test cases. It is copied to the build directory when CMake refreshes.</p>
 <dl class="section note"><dt>Note</dt><dd>Copying the directory is necessary, because the built executable reads relative paths from its new home.</dd></dl>

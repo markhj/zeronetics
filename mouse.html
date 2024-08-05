@@ -87,11 +87,11 @@ $(document).ready(function(){initNavTree('mouse.html',''); initResizable(); });
 <div class="title">Handling the mouse </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h2><a class="anchor" id="autotoc_md36"></a>
+<div class="textblock"><h2><a class="anchor" id="autotoc_md41"></a>
 Prerequisites</h2>
 <p>Before reading this article, you must read:</p>
 <p><a class="el" href="input-manager.html">Input Manager</a></p>
-<h2><a class="anchor" id="autotoc_md37"></a>
+<h2><a class="anchor" id="autotoc_md42"></a>
 Mouse movement</h2>
 <p>Whenever the mouse moves within the window, it triggers an event. When the mouse is outside the window, or completely still, there will be no event reporting.</p>
 <p>To listen to mouse movements, add content to the <a class="el" href="classZEN_1_1IInputManager.html#a413dce472d921819d7f6e2ffbe5634e8">ZEN::IInputManager::onMouseMoved</a> method.</p>
@@ -109,14 +109,14 @@ Mouse movement</h2>
 <div class="fragment"><div class="line"><span class="keywordtype">void</span> onMouseMoved(<span class="keyword">const</span> MouseMovedEvent &amp;mouseMovedEvent)<span class="keyword"> override </span>{</div>
 <div class="line">    std::cout &lt;&lt; mouseMovedEvent.relative.x &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; mouseMovedEvent.relative.y &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line">}</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md38"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md43"></a>
 Mouse buttons</h2>
 <p>You can manage changes of mouse button states (click and released) with:</p>
 <div class="fragment"><div class="line"><span class="keywordtype">void</span> onMouseButtonStateChanged(<span class="keyword">const</span> MouseButtonStateEvent &amp;mouseButtonStateEvent)<span class="keyword"> override </span>{</div>
 <div class="line">    <span class="comment">// What to do...</span></div>
 <div class="line">}</div>
 </div><!-- fragment --><p>You can see available mouse buttons on <a class="el" href="namespaceZEN.html#a8a51e0df946c6f890a2823e8a1ca0240">ZEN::MouseButton</a> and states on <a class="el" href="namespaceZEN.html#a005125c04c9758169bdc99cb0a557d09">ZEN::MouseButtonState</a>.</p>
-<h2><a class="anchor" id="autotoc_md39"></a>
+<h2><a class="anchor" id="autotoc_md44"></a>
 See also</h2>
 <p><a class="el" href="control-systems.html">Control Systems</a> </p>
 </div></div><!-- contents -->

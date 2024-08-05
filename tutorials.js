@@ -2,6 +2,7 @@ var tutorials =
 [
     [ "Input Manager", "input-manager.html", null ],
     [ "Handling the mouse", "mouse.html", null ],
+    [ "Working with lights", "lights-tutorial.html", null ],
     [ "File system", "file-system.html", null ],
     [ "Logging", "logging.html", null ],
     [ "Custom shape from vertices", "custom-shape-vertices.html", null ],

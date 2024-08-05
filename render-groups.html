@@ -88,14 +88,14 @@ $(document).ready(function(){initNavTree('render-groups.html',''); initResizable
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><dl class="section warning"><dt>Warning</dt><dd>This documentation is potentially not up-to-date, as refactoring of involving this component is currently taking place.</dd></dl>
-<h2><a class="anchor" id="autotoc_md101"></a>
+<h2><a class="anchor" id="autotoc_md108"></a>
 🔠 What is a render group?</h2>
 <p>A <b>render group</b> is a collection of renderable objects and a shader. Render groups are mainly used in the <a class="el" href="render-manager.html">render manager</a> to structure the render flow.</p>
 <p>The idea is that objects which anyway need to use the same shader are grouped together, such that the shader only need to be activated <em>once</em>. If the renderables weren't organized in groups you'd end up activating the same shader ten times, if there were ten renderables.</p>
 <p><img src="https://res.cloudinary.com/drfztvfdh/image/upload/v1721036992/zeronetics/Render_groups_lqydnc.png" alt="" class="inline"/></p>
 <p>As you can see, if we rendered objects in the order they were provided, we'd have fragmented structure, where every shader would need to be activated several times.</p>
 <dl class="section note"><dt>Note</dt><dd>Render groups open up for more opportunities for performance optimization, in the future.</dd></dl>
-<h2><a class="anchor" id="autotoc_md102"></a>
+<h2><a class="anchor" id="autotoc_md109"></a>
 🚧 Working with groups</h2>
 <p>To create a render group, you instantiate a <a class="el" href="structZEN_1_1RenderGroup3D.html">ZEN::RenderGroup3D</a>, connect it with a shader and add renderables.</p>
 <p>Groups should be created as shared pointers to be usable with <a class="el" href="classZEN_1_1RenderManager.html">ZEN::RenderManager</a>.</p>
@@ -107,7 +107,7 @@ $(document).ready(function(){initNavTree('render-groups.html',''); initResizable
 </div><!-- fragment --><dl class="section warning"><dt>Warning</dt><dd>If you don't connect a shader, the group will be skipped during rendering.</dd></dl>
 <p>And last, the group must be added to your render manager.</p>
 <div class="fragment"><div class="line">renderManager-&gt;renderGroups3d.push_back(myGroup);</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md103"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md110"></a>
 🔵 Primitive types</h2>
 <p>You can decide whether a group should be rendered as points, lines or triangles.</p>
 <div class="fragment"><div class="line">myGroup-&gt;drawPrimitive = DrawPrimitive::Lines;</div>

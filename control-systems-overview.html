@@ -88,13 +88,13 @@ $(document).ready(function(){initNavTree('control-systems-overview.html',''); in
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>The <b>Control Systems</b> module provides a flexible system for managing user inputs.</p>
-<h2><a class="anchor" id="autotoc_md139"></a>
+<h2><a class="anchor" id="autotoc_md146"></a>
 💡 The idea</h2>
 <p>The idea is that every user input gets mapped to a signal, and in a completely separate process the signal is translated to an action.</p>
 <p><img src="https://res.cloudinary.com/drfztvfdh/image/upload/v1721452847/zeronetics/Contorl_mapping_-_Input_Mapping_1_m2hhmy.png" alt="" class="inline"/></p>
 <p>For starters, this means that several inputs can map the same action without the need of duplicate code. For example if Space Bar, primary mouse button and Joystick "X" all make the character jump, then all these inputs simply map to the "jump" signal, rather than each implementing the action of jumping (or pointing to a part of the code which makes the jump).</p>
 <p>On the other side of the coin is a process which maps signals to actions. This system doesn't know which user inputs were given, it just receives the signal "jump", and decides what to do with it.</p>
-<h2><a class="anchor" id="autotoc_md140"></a>
+<h2><a class="anchor" id="autotoc_md147"></a>
 🎮 Basic usage</h2>
 <p>First, we instantiate <a class="el" href="classZEN_1_1ControlSystems_1_1ControlManager.html">ZEN::ControlSystems::ControlManager</a>, <a class="el" href="classZEN_1_1ControlSystems_1_1InputMapping.html">ZEN::ControlSystems::InputMapping</a> and <a class="el" href="classZEN_1_1ControlSystems_1_1SignalHandler.html">ZEN::ControlSystems::SignalHandler</a>.</p>
 <p>The <code>ControlManager</code> is the instance which will be passed to the <code><a class="el" href="classZEN_1_1Window.html#a38ebf8096b598b8ab3df8260ce742838">ZEN::Window::setInputManager</a></code>. It's the "umbrella" class which binds all the parts together.</p>
@@ -106,7 +106,7 @@ $(document).ready(function(){initNavTree('control-systems-overview.html',''); in
 <div class="line">m_controlManager-&gt;m_signalHandler = m_signalHandler;</div>
 </div><!-- fragment --><p>And, finally, we need to instruct the <a class="el" href="classZEN_1_1Window.html">ZEN::Window</a> instance to use <em>this</em> <a class="el" href="classZEN_1_1IInputManager.html">ZEN::IInputManager</a>.</p>
 <div class="fragment"><div class="line">window-&gt;setInputManager(m_controlManager);</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md141"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md148"></a>
 Simple mapping</h2>
 <p>In this example, we will map the press of the key <code>A</code> to the signal <code>left</code>.</p>
 <div class="fragment"><div class="line">m_inputMapping-&gt;keyJustPressed(Key::A, <span class="stringliteral">&quot;left&quot;</span>);</div>
@@ -116,7 +116,7 @@ Simple mapping</h2>
 <div class="line">});</div>
 </div><!-- fragment --><p>And that's it! Now, when you open the game and press <code>A</code>`, you will see "Going left!" printed to the console.</p>
 <p>To learn more about the different mapping options, continue reading <a class="el" href="control-systems-mapping.html">Input mapping</a>.</p>
-<h2><a class="anchor" id="autotoc_md142"></a>
+<h2><a class="anchor" id="autotoc_md149"></a>
 🔀 Swap mappings</h2>
 <p>Another advantage is that mapping and signal handling can get swapped on-the-fly (during run-time). For example, when you open the main menu, pause menu or a special HUD, you typically want to apply a completely different set of controls.</p>
 <p>This is achieved in the Control Systems module by swapping the "in-game mapping" to the "main menu mapping", and so forth.</p>

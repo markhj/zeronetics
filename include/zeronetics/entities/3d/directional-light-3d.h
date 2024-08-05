@@ -5,6 +5,8 @@
 namespace ZEN {
     /**
      * Directional Light for 3D Scene
+     *
+     * @ref lights-tutorial
      */
     class DirectionalLight3D : public IDirectionalLight<Vec3> {
     public:

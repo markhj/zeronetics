@@ -22,6 +22,8 @@ namespace ZEN {
      * 2) Components, such as gizmos, can provide recipes for shaders, without
      *      concerning themselves with the rendering technology (OpenGL, Vulkan,
      *      DirectX, something else)
+     *
+     * @ref shader-builder
      */
     class IShaderBuilder {
     public:

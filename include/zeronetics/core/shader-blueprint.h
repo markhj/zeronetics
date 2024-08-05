@@ -8,6 +8,9 @@ namespace ZEN {
     /**
      * Group light support.
      * You specify the number of slots per light-type.
+     *
+     * @ref shader-builder
+     * @ref lights-tutorial
      */
     struct LightSupport {
         /**
@@ -31,6 +34,8 @@ namespace ZEN {
 
     /**
      * A description/request of the shader to be build by a Shader Builder.
+     *
+     * @ref shader-builder
      */
     struct ShaderBlueprint {
         /**

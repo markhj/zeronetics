@@ -8,6 +8,8 @@
 namespace ZEN {
     /**
      * Light Contract
+     *
+     * @ref lights-tutorial
      */
     class ILight {
     public:
@@ -28,6 +30,8 @@ namespace ZEN {
 
     /**
      * Directional Light Contract
+     *
+     * @ref lights-tutorial
      */
     template<typename T>
     class IDirectionalLight : public ILight {
@@ -37,6 +41,8 @@ namespace ZEN {
 
     /**
      * Point Light Contract
+     *
+     * @ref lights-tutorial
      */
     class IPointLight : public ILight {
     public:

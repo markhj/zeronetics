@@ -10,6 +10,8 @@ namespace ZEN {
      * Point lights shine in all directions with limited distance.
      *
      * They have position, but not direction.
+     *
+     * @ref lights-tutorial
      */
     class PointLight3D : public IPointLight,
                          public IPosition3D {

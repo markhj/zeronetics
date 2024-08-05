@@ -175,6 +175,7 @@ var NAVTREEINDEX0 =
 "classZEN_1_1IRenderer.html#afd3e2c4d017da54153f30e31b09a3694":[7,0,0,22,3],
 "classZEN_1_1IScene.html":[7,0,0,23],
 "classZEN_1_1IScene.html#a228c486c435a31e136c7efbc8bc0b8c5":[7,0,0,23,0],
+"classZEN_1_1IScene.html#a841eff926b60e75797d098f1196c8b87":[7,0,0,23,2],
 "classZEN_1_1IScene.html#aa2b1e10f6297a6d84d3c3bd8cc654739":[7,0,0,23,1],
 "classZEN_1_1ISceneLoader.html":[7,0,0,24],
 "classZEN_1_1ISceneLoader.html#a83f37af339157405b008029f60fa7773":[7,0,0,24,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "classZEN_1_1OpenGL_1_1Shader.html#ae2fba179cd00631e076a4ff74093343e":[7,0,0,3,3,8],
 "classZEN_1_1OpenGL_1_1StdBinding.html":[7,0,0,3,1],
 "classZEN_1_1OpenGL_1_1StdBinding.html#a62dcb8612aed02d08de74e5a995bfb06":[7,0,0,3,1,0],
-"classZEN_1_1OpenGL_1_1StdBinding.html#a6edb7c4020ba61c708f0b850a5a0cd1e":[7,0,0,3,1,6],
-"classZEN_1_1OpenGL_1_1StdBinding.html#a75bc71be72ccc4041663f3416af9cbdd":[7,0,0,3,1,4]
+"classZEN_1_1OpenGL_1_1StdBinding.html#a6edb7c4020ba61c708f0b850a5a0cd1e":[7,0,0,3,1,6]
 };

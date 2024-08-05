@@ -89,29 +89,32 @@ $(document).ready(function(){initNavTree('contracts_2scene_8h_source.html',''); 
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;zeronetics/core/io.h&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;renderable.h&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceZEN.html">ZEN</a> {</div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classZEN_1_1IScene.html">    9</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classZEN_1_1IScene.html">IScene</a> {</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> add(<span class="keyword">const</span> std::shared_ptr&lt;IRenderable3D&gt; &amp;renderable) noexcept = 0;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        [[nodiscard]] <span class="keyword">virtual</span> std::vector&lt;std::shared_ptr&lt;IRenderable3D&gt;&gt; getRenderable3Ds() <span class="keyword">const</span> noexcept = 0;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    };</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classZEN_1_1ISceneLoader.html">   24</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classZEN_1_1ISceneLoader.html">ISceneLoader</a> {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classZEN_1_1ISceneLoader.html#a83f37af339157405b008029f60fa7773">   32</a></span>&#160;        <span class="keyword">virtual</span> std::shared_ptr&lt;IScene&gt; <a class="code" href="classZEN_1_1ISceneLoader.html#a83f37af339157405b008029f60fa7773">load</a>(<span class="keyword">const</span> <a class="code" href="classZEN_1_1File.html">File</a> &amp;file) = 0;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    };</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;zeronetics/contracts/cameras.h&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;zeronetics/core/io.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;renderable.h&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceZEN.html">ZEN</a> {</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classZEN_1_1IScene.html">   10</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classZEN_1_1IScene.html">IScene</a> {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        std::shared_ptr&lt;ICamera3D&gt; camera3d;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> add(<span class="keyword">const</span> std::shared_ptr&lt;IRenderable3D&gt; &amp;renderable) noexcept = 0;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        [[nodiscard]] <span class="keyword">virtual</span> std::vector&lt;std::shared_ptr&lt;IRenderable3D&gt;&gt; getRenderable3Ds() <span class="keyword">const</span> noexcept = 0;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    };</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classZEN_1_1ISceneLoader.html">   27</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classZEN_1_1ISceneLoader.html">ISceneLoader</a> {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classZEN_1_1ISceneLoader.html#a83f37af339157405b008029f60fa7773">   35</a></span>&#160;        <span class="keyword">virtual</span> std::shared_ptr&lt;IScene&gt; <a class="code" href="classZEN_1_1ISceneLoader.html#a83f37af339157405b008029f60fa7773">load</a>(<span class="keyword">const</span> <a class="code" href="classZEN_1_1File.html">File</a> &amp;file) = 0;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    };</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
 <div class="ttc" id="aclassZEN_1_1File_html"><div class="ttname"><a href="classZEN_1_1File.html">ZEN::File</a></div><div class="ttdef"><b>Definition:</b> io.h:72</div></div>
-<div class="ttc" id="aclassZEN_1_1ISceneLoader_html"><div class="ttname"><a href="classZEN_1_1ISceneLoader.html">ZEN::ISceneLoader</a></div><div class="ttdef"><b>Definition:</b> scene.h:24</div></div>
+<div class="ttc" id="aclassZEN_1_1ISceneLoader_html"><div class="ttname"><a href="classZEN_1_1ISceneLoader.html">ZEN::ISceneLoader</a></div><div class="ttdef"><b>Definition:</b> scene.h:27</div></div>
 <div class="ttc" id="aclassZEN_1_1ISceneLoader_html_a83f37af339157405b008029f60fa7773"><div class="ttname"><a href="classZEN_1_1ISceneLoader.html#a83f37af339157405b008029f60fa7773">ZEN::ISceneLoader::load</a></div><div class="ttdeci">virtual std::shared_ptr&lt; IScene &gt; load(const File &amp;file)=0</div></div>
-<div class="ttc" id="aclassZEN_1_1IScene_html"><div class="ttname"><a href="classZEN_1_1IScene.html">ZEN::IScene</a></div><div class="ttdef"><b>Definition:</b> scene.h:9</div></div>
+<div class="ttc" id="aclassZEN_1_1IScene_html"><div class="ttname"><a href="classZEN_1_1IScene.html">ZEN::IScene</a></div><div class="ttdef"><b>Definition:</b> scene.h:10</div></div>
 <div class="ttc" id="anamespaceZEN_html"><div class="ttname"><a href="namespaceZEN.html">ZEN</a></div><div class="ttdef"><b>Definition:</b> asset-types.h:5</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

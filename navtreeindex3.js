@@ -1,5 +1,6 @@
 var NAVTREEINDEX3 =
 {
+"structZEN_1_1GPUAllocation.html":[7,0,0,39],
 "structZEN_1_1GPUAllocation.html#ab1eab55ae852a9138e999eb8b46efbae":[7,0,0,39,1],
 "structZEN_1_1GPUAllocation.html#ab8b8aa9cec2f637225346e8444efcddd":[7,0,0,39,0],
 "structZEN_1_1Globals.html":[7,0,0,38],
@@ -107,10 +108,10 @@ var NAVTREEINDEX3 =
 "tutorials.html#autotoc_md46":[4],
 "vertices.html":[2,2,2],
 "vertices.html#autotoc_md83":[8],
-"":[6,0,0,20],
-"":[6,0,0,25],
-"":[6,0,0,24],
 "":[6,0,0,23],
 "":[6,0,0,22],
-"":[6,0,0,21]
+"":[6,0,0,24],
+"":[6,0,0,21],
+"":[6,0,0,25],
+"":[6,0,0,20]
 };

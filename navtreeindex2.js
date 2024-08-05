@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"list-of-modules.html":[4,0],
 "log-configuration.html":[2,1,0],
 "log-configuration.html#autotoc_md90":[0],
 "log-configuration.html#autotoc_md91":[0,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX2 =
 "shapes.html#autotoc_md79":[12],
 "structZEN_1_1ControlSystems_1_1AssistInitialization.html":[7,0,0,1,0],
 "structZEN_1_1ControlSystems_1_1AssistInitialization.html#abeaf461704cbcbd1ad7e686df5085ec9":[7,0,0,1,0,0],
-"structZEN_1_1EngineInfo.html":[7,0,0,36],
-"structZEN_1_1GPUAllocation.html":[7,0,0,39]
+"structZEN_1_1EngineInfo.html":[7,0,0,36]
 };

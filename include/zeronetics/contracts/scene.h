@@ -1,5 +1,6 @@
 #pragma once
 
+#include "zeronetics/contracts/cameras.h"
 #include "zeronetics/core/io.h"
 #include "renderable.h"
 
@@ -8,6 +9,8 @@
 namespace ZEN {
     class IScene {
     public:
+        std::shared_ptr<ICamera3D> camera3d;
+
         virtual void add(const std::shared_ptr<IRenderable3D> &renderable) noexcept = 0;
 
         [[nodiscard]] virtual std::vector<std::shared_ptr<IRenderable3D>> getRenderable3Ds() const noexcept = 0;

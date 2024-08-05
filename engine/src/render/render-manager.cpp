@@ -22,6 +22,8 @@ void ZEN::RenderLayer::generateFrom(const std::shared_ptr<IScene> &scene) {
         // @todo: Replace with name from HXL file:
         renderGroups3d[0]->renderables3d["Obj" + std::to_string(i)] = item;
     }
+
+    camera3d = scene->camera3d;
 }
 
 void ZEN::RenderManager::resetAllocations() const noexcept {

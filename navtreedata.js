@@ -55,10 +55,10 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"annotated.html",
-"classZEN_1_1OpenGL_1_1StdBinding.html#a75bc71be72ccc4041663f3416af9cbdd",
-"list-of-modules.html",
-"structZEN_1_1GPUAllocation.html"
+"",
+"classZEN_1_1OpenGL_1_1Shader.html#ad56cd2df67bb591d905febf1057fb2f1",
+"lights-tutorial.html",
+"shapes.html#autotoc_md77"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -1,5 +1,11 @@
 var NAVTREEINDEX2 =
 {
+"lights-tutorial.html":[1,2],
+"lights-tutorial.html#autotoc_md29":[12],
+"lights-tutorial.html#autotoc_md30":[13],
+"lights-tutorial.html#autotoc_md31":[13,4],
+"lights-tutorial.html#autotoc_md32":[13,5],
+"lights-tutorial.html#autotoc_md33":[14],
 "list-of-modules.html":[4,0],
 "log-configuration.html":[2,1,0],
 "log-configuration.html#autotoc_md90":[0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX2 =
 "settings.html#autotoc_md56":[2,26],
 "shader-builder.html":[3],
 "shapes.html":[2,2,3],
-"shapes.html#autotoc_md76":[9],
-"shapes.html#autotoc_md77":[10],
-"shapes.html#autotoc_md78":[11],
-"shapes.html#autotoc_md79":[12],
-"structZEN_1_1ControlSystems_1_1AssistInitialization.html":[7,0,0,1,0],
-"structZEN_1_1ControlSystems_1_1AssistInitialization.html#abeaf461704cbcbd1ad7e686df5085ec9":[7,0,0,1,0,0],
-"structZEN_1_1EngineInfo.html":[7,0,0,36]
+"shapes.html#autotoc_md76":[9]
 };

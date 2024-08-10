@@ -7,9 +7,15 @@ include_directories(${ZEN_VENDOR_DIR}/glad/include)
 
 add_executable(editor
         src/main.cpp
+
+        # Editor
         src/editor.cpp
         src/editor-ui.cpp
+        src/utilities/editor-utility.cpp
+        src/utilities/main-menu.cpp
+        src/utilities/about.cpp
 
+        # GLAD
         ${ZEN_VENDOR_DIR}/glad/src/glad.c
 
         # ImGui

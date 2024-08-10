@@ -1,5 +1,6 @@
 #include "editor.h"
 #include "editor-ui.h"
+#include "utilities/about.h"
 
 #include <gizmos/3d-grid.h>
 #include <glsl-shader-builder/glsl-shader-builder.h>
@@ -86,6 +87,9 @@ void ZenEdit::Editor::run() {
     EditorUI editorUi;
     editorUi.containers.push_back(&mainContainer);
 
+    MainMenu mainMenu = createMainMenu();
+    About about(&m_showAbout);
+
     while (!glfwWindowShouldClose(m_window)) {
         m_delta = 1.0f / io.Framerate;
 
@@ -96,7 +100,12 @@ void ZenEdit::Editor::run() {
         ImGui_ImplGlfw_NewFrame();
         ImGui::NewFrame();
 
+        mainMenu.render();
         editorUi.render();
+
+        if (m_showAbout) {
+            about.render();
+        }
 
         ImGui::Render();
         m_renderer->render();
@@ -164,9 +173,6 @@ void ZenEdit::Editor::addCube() {
 }
 
 void ZenEdit::Editor::setUpMainLayer() {
-    auto box = std::make_shared<Cube>(Cube(0.5));
-    auto triangle2 = std::make_shared<Mesh3D>(Mesh3D(box));
-
     ZEN::GLSLShaderBuilder shaderBuilder;
     ZEN::ShaderBlueprint blueprint{
             .attributes = m_defaultAttribs,
@@ -187,18 +193,11 @@ void ZenEdit::Editor::setUpMainLayer() {
     m_mainLayer = std::make_shared<RenderLayer>(RenderLayer(m_defaultAttribs));
     std::shared_ptr<RenderGroup3D> renderGroup = std::make_shared<RenderGroup3D>(RenderGroup3D());
     renderGroup->shader = shader;
-    renderGroup->renderables3d["Cube"] = triangle2;
 
     m_mainLayer->camera3d = m_camera;
+    m_mainLayer->renderGroups3d.emplace_back(renderGroup);
     m_renderManager->attachLayer(m_mainLayer);
 
-    m_renderManager->request(RendererRequest{
-            RenderManagerRequest::Allocate,
-            renderGroup->renderables3d["Cube"],
-            m_mainLayer,
-    });
-
-    m_mainLayer->renderGroups3d.emplace_back(renderGroup);
 }
 
 void ZenEdit::Editor::setUpGrid() {
@@ -253,4 +252,26 @@ void ZenEdit::Editor::setUpFreeCamera() {
     m_freeCameraAssist->signals = {"forward", "left", "back", "right"};
     m_freeCameraAssist->enabled = false;
     m_controlManager->attachAssist(m_freeCameraAssist);
+}
+
+void ZenEdit::Editor::saveFile() {
+    std::cout << "Save file";
+}
+
+ZenEdit::MainMenu ZenEdit::Editor::createMainMenu() {
+    MainMenuItem fileMenu{};
+    fileMenu.title = "File";
+    fileMenu.items.emplace_back(MainMenuItem{MainMenuType::Item, "Save", "", {}, [&](){ saveFile(); }});
+    fileMenu.items.emplace_back(MainMenuItem{MainMenuType::Separator});
+    fileMenu.items.emplace_back(MainMenuItem{MainMenuType::Item, "Exit", "", {}, [&](){ std::exit(0); }});
+
+    MainMenuItem helpMenu{};
+    helpMenu.title = "Help";
+    helpMenu.items.emplace_back(MainMenuItem{MainMenuType::Item, "About...", "", {}, [&](){ m_showAbout = true; }});
+
+    MainMenu mainMenu;
+    mainMenu.mainMenuItems.emplace_back(fileMenu);
+    mainMenu.mainMenuItems.emplace_back(helpMenu);
+
+    return mainMenu;
 }

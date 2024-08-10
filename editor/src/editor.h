@@ -9,6 +9,7 @@
 #include "control-systems/free-camera.h"
 #include "zeronetics/entities/3d/camera-3d.h"
 #include "zeronetics/render/render-manager.h"
+#include "utilities/main-menu.h"
 
 #include <control-systems/control-assist.h>
 #include <opengl-renderer/opengl.h>
@@ -47,6 +48,10 @@ namespace ZenEdit {
 
         bool m_freeCameraActive = false;
 
+        bool m_showAbout = false;
+
+        MainMenu createMainMenu();
+
         uint16_t m_nextObjectId = 1;
 
         std::vector<VertexAttribute> m_defaultAttribs = {VertexAttribute::Position3D,
@@ -66,5 +71,7 @@ namespace ZenEdit {
         void configureControls();
 
         void setUpFreeCamera();
+
+        void saveFile();
     };
 }

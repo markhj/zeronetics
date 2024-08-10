@@ -7,6 +7,7 @@
 ## Modules
 
 @subpage control-systems  
+@subpage glsl-shader-builder  
 @subpage opengl
 
 ## Engine development

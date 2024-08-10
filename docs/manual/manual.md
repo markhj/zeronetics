@@ -12,9 +12,12 @@
 
 @subpage game-class  
 @subpage orientation     
-@subpage entities  
-@subpage rendering  
+@subpage entities 
 
+## 🎇 Rendering
+
+@subpage rendering  
+@subpage shaders
 
 ## 🔨 Utilities
 

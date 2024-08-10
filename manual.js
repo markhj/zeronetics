@@ -3,7 +3,8 @@ var manual =
     [ "Settings", "settings.html", [
       [ "📎 Basics", "manual.html#autotoc_md97", null ],
       [ "🌐 Game world", "manual.html#autotoc_md98", null ],
-      [ "🔨 Utilities", "manual.html#autotoc_md99", [
+      [ "🎇 Rendering", "manual.html#autotoc_md99", null ],
+      [ "🔨 Utilities", "manual.html#autotoc_md100", [
         [ "Environment variable", "setting-up-a-game.html#autotoc_md12", null ],
         [ "CMake list", "setting-up-a-game.html#autotoc_md13", null ],
         [ "Creating the window", "setting-up-a-game.html#autotoc_md14", null ],
@@ -60,6 +61,7 @@ var manual =
     [ "Orientation in the 3D space", "orientation.html", null ],
     [ "Entities", "entities.html", "entities" ],
     [ "Rendering", "rendering.html", "rendering" ],
+    [ "Shaders", "shaders.html", "shaders" ],
     [ "Helper functions", "helpers.html", null ],
     [ "Timer", "timer.html", null ],
     [ "Result", "result.html", null ],

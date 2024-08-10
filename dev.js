@@ -1,11 +1,11 @@
 var dev =
 [
     [ "Architecture", "arch.html", [
-      [ "Overview of the engine", "dev.html#autotoc_md131", null ],
-      [ "Working on the engine", "dev.html#autotoc_md132", null ],
-      [ "Design decisions", "dev.html#autotoc_md133", [
-        [ "💫 Overview", "arch.html#autotoc_md117", null ],
-        [ "See also", "arch.html#autotoc_md118", null ]
+      [ "Overview of the engine", "dev.html#autotoc_md133", null ],
+      [ "Working on the engine", "dev.html#autotoc_md134", null ],
+      [ "Design decisions", "dev.html#autotoc_md135", [
+        [ "💫 Overview", "arch.html#autotoc_md119", null ],
+        [ "See also", "arch.html#autotoc_md120", null ]
       ] ]
     ] ],
     [ "Core structure", "engine-core-structure.html", null ],

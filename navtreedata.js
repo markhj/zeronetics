@@ -28,7 +28,6 @@ var NAVTREE =
     [ "Getting started", "getting-started.html", "getting-started" ],
     [ "Tutorials", "tutorials.html", "tutorials" ],
     [ "Manual", "manual.html", "manual" ],
-    [ "Shader Builder", "shader-builder.html", null ],
     [ "Modules", "modules.html", "modules" ],
     [ "Engine development", "dev.html", "dev" ],
     [ "Namespaces", "namespaces.html", [
@@ -57,8 +56,8 @@ var NAVTREEINDEX =
 [
 "",
 "classZEN_1_1OpenGL_1_1Shader.html#ad56cd2df67bb591d905febf1057fb2f1",
-"lights-tutorial.html",
-"shapes.html#autotoc_md77"
+"install-engine.html#autotoc_md9",
+"shader-builder.html#autotoc_md114"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

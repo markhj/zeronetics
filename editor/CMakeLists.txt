@@ -11,6 +11,12 @@ add_executable(editor
         # Editor
         src/editor.cpp
         src/editor-ui.cpp
+
+        # UI Elements
+        src/ui-elements/ui-element.cpp
+        src/ui-elements/button.cpp
+
+        # Utilities
         src/utilities/editor-utility.cpp
         src/utilities/main-menu.cpp
         src/utilities/about.cpp

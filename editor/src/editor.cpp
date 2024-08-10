@@ -1,5 +1,6 @@
 #include "editor.h"
 #include "editor-ui.h"
+#include "ui-elements/button.h"
 #include "utilities/about.h"
 
 #include <gizmos/3d-grid.h>

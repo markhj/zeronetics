@@ -13,9 +13,3 @@ void ZenEdit::EditorUI::render() {
         ImGui::End();
     });
 }
-
-void ZenEdit::Button::render() {
-    if (ImGui::Button(text, {150, 30})) {
-        onClick();
-    }
-}

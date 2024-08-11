@@ -5,16 +5,16 @@ of the process life-cycle management, namely the ability to pause,
 resume and kill the process.
 
 These actions are mainly needed in complex games, and in particular
-to halt processing of expensive function calls, when they aren't needed.
+to halt processing of expensive function calls.
 
 @note These techniques are rarely needed for simpler games.
 
 ## ▶️ Pause and resume
 
-A process can paused and resumed using ZEN::Process::pause and
+A process can be paused and resumed using ZEN::Process::pause and
 ZEN::Process::resume. They are executed directly on the process instance,
 which means that in the edge cases where a process may be attached
-to several processor, the effect is universal.
+to several processors, the effect is universal.
 
 Assume we have:
 
@@ -24,7 +24,7 @@ auto myProcess = std::make_shared<MyProcess>(MyProcess());
 game.attach(myProcess);
 ````
 
-At a time when you don't need the process to actively run, you call
+At a time when you no longer need the process to actively run, you call
 
 ````cpp
 myProcess.pause();

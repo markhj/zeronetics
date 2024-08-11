@@ -20,7 +20,7 @@ To retrieve the FPS, call ZEN::Game::getFPS.
 fps_int currentFPS = game.getFPS();
 ````
 
-@note The ``fps_int`` is a ``typedef`` defined in Zeronetics
+@note The ZEN::fps_int is a ``typedef`` defined in Zeronetics
 to streamline use of integers for FPS calculations.
 
 ## ⌛ Real render time
@@ -29,7 +29,7 @@ However, FPS can &mdash; and often is &mdash; artificially
 limited to match the monitor's frame rate, and thereby reduce
 the risk of artifacts, such as "_screen tear_." It's therefore
 not guaranteed to be a waterproof expression for how well your
-game is performing.
+code is performing.
 
 When profiling &mdash; knowing how well your
 game loop actually performs &mdash you might want to use

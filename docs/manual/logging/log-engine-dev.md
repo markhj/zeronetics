@@ -9,6 +9,7 @@
 to find implementation and design errors.
 
 ### Example
+
 In the ZEN::OpenGL::Shader we map the engine-native enumerator
 ZEN::ShaderStage to corresponding GLAD definitions. Let's say
 a new stage is added to the enumerator in a future version,

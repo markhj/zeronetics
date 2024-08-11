@@ -1,9 +1,11 @@
 @page process-introduction Introduction to processes
 
 A @ref ZEN::Process "process" is any class which inherits ``ZEN::Process``.
-Any such class can be attached to the @ref game-loop "game loop", and it
-can literally entail anything from a simple timer over physics computation
-to the main character.
+Any such class can be attached to the @ref game-loop "game loop", and have
+its respective logic executed in every iteration.
+
+A process can revolve around almost anything, ranging from a simple timer
+over physics computation to the main character controls.
 
 ## 🍂 Life cycle
 

@@ -2,18 +2,22 @@
 
 The **tensors** in Zeronetics currently include:
 
-- Vectors in 2D, 3D and 4D
+- Vectors in 2, 3 and 4 dimensions
 - 4x4 Matrix
 
-## ↗️ Vectors
+These classes are implemented as extensions of
+[GLM](https://github.com/g-truc/glm).
 
-There are three **vectors** are:
+## ↗️ Classes
 
-| Class         |
-|---------------|
-| ``ZEN::Vec2`` |
-| ``ZEN::Vec3`` |
-| ``ZEN::Vec4`` |
+| Class           |
+|-----------------|
+| ``ZEN::Vec2``   |
+| ``ZEN::Vec3``   |
+| ``ZEN::Vec4``   |
+| ``ZEN::Mat4x4`` |
+
+## 🔢 Initialization
 
 They can be initialized with all axes or with scalar. For instance:
 
@@ -25,11 +29,22 @@ Vec3 size(1.0, 2.0, 3.0);
 Vec3 position(0.0);
 ````
 
-## 🔢 Matrices
+## ➕ Arithmetic operations
 
-There's currently just the ``ZEN::Mat4x4`` matrix available.
+You can add and subtract using:
 
-## 🔧 Implementation
+````cpp
+Vec3 a(1.0), b(2.0);
 
-``Vec2``, ``Vec3``, ``Vec4`` and ``Mat4x4`` are based on
-corresponding implementations in [GLM](https://github.com/g-truc/glm).
+Vec3 added = a + b;
+Vec3 sub = a - b;
+````
+
+You can also multiply and divide the components:
+
+````cpp
+Vec3 a(1.0);
+
+Vec3 b = a * 3.0;
+Vec3 c = a / 1.5;
+````

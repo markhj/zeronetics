@@ -18,11 +18,12 @@ see on-screen.
 ## 🔷 Shapes
 
 **Shapes** are not a required part of forming meshes, but they are there
-to ease the process of building commonly used shapes.
+to ease the process of building commonly used shapes, such as
+@ref ZEN::Cube "cubes".
 
-To put in perspective: A simple shape like a cube requires 12 triangles
+To put it into perspective: A simple shape like a cube requires 12 triangles
 (2 for each of the six sides). Explicitly defining these 12 triangles for
-every cube becomes very trivial and cumbersome. So, instead you have the
-ZEN::Cube shape, and an array of other shapes.
+every cube is very cumbersome. Instead, you have the
+ZEN::Cube "cube shape", and an array of other shapes.
 
-@note You can build your own shapes by extending ZEN::Shape3D.
+@note You can build your own re-usable shapes by extending ZEN::Shape3D.

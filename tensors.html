@@ -89,12 +89,12 @@ $(document).ready(function(){initNavTree('tensors.html',''); initResizable(); })
 <div class="contents">
 <div class="textblock"><p>The <b>tensors</b> in Zeronetics currently include:</p>
 <ul>
-<li>Vectors in 2D, 3D and 4D</li>
+<li>Vectors in 2, 3 and 4 dimensions</li>
 <li>4x4 Matrix</li>
 </ul>
+<p>These classes are implemented as extensions of <a href="https://github.com/g-truc/glm">GLM</a>.</p>
 <h2><a class="anchor" id="autotoc_md80"></a>
-↗️ Vectors</h2>
-<p>There are three <b>vectors</b> are:</p>
+↗️ Classes</h2>
 <table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">Class    </th></tr>
@@ -103,8 +103,12 @@ $(document).ready(function(){initNavTree('tensors.html',''); initResizable(); })
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><code><a class="el" href="namespaceZEN.html#a0d7569c6075d08a03f47973dc968b9fc">ZEN::Vec3</a></code>    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><code><a class="el" href="namespaceZEN.html#a60b4537cbcd9d222259ed59ba00e0dae">ZEN::Vec4</a></code>   </td></tr>
+<td class="markdownTableBodyNone"><code><a class="el" href="namespaceZEN.html#a60b4537cbcd9d222259ed59ba00e0dae">ZEN::Vec4</a></code>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code><a class="el" href="namespaceZEN.html#ab461dca77b42d0d525addaad0f5e0221">ZEN::Mat4x4</a></code>   </td></tr>
 </table>
+<h2><a class="anchor" id="autotoc_md81"></a>
+🔢 Initialization</h2>
 <p>They can be initialized with all axes or with scalar. For instance:</p>
 <div class="fragment"><div class="line"><span class="comment">// By coordinate</span></div>
 <div class="line"><a class="code" href="namespaceZEN.html#a0d7569c6075d08a03f47973dc968b9fc">Vec3</a> size(1.0, 2.0, 3.0);</div>
@@ -112,13 +116,19 @@ $(document).ready(function(){initNavTree('tensors.html',''); initResizable(); })
 <div class="line"><span class="comment">// Scalar</span></div>
 <div class="line"><a class="code" href="namespaceZEN.html#a0d7569c6075d08a03f47973dc968b9fc">Vec3</a> position(0.0);</div>
 <div class="ttc" id="anamespaceZEN_html_a0d7569c6075d08a03f47973dc968b9fc"><div class="ttname"><a href="namespaceZEN.html#a0d7569c6075d08a03f47973dc968b9fc">ZEN::Vec3</a></div><div class="ttdeci">glm::vec3 Vec3</div><div class="ttdef"><b>Definition:</b> tensors.h:20</div></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md81"></a>
-🔢 Matrices</h2>
-<p>There's currently just the <code><a class="el" href="namespaceZEN.html#ab461dca77b42d0d525addaad0f5e0221">ZEN::Mat4x4</a></code> matrix available.</p>
-<h2><a class="anchor" id="autotoc_md82"></a>
-🔧 Implementation</h2>
-<p><code>Vec2</code>, <code>Vec3</code>, <code>Vec4</code> and <code>Mat4x4</code> are based on corresponding implementations in <a href="https://github.com/g-truc/glm">GLM</a>. </p>
-</div></div><!-- contents -->
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md82"></a>
+➕ Arithmetic operations</h2>
+<p>You can add and subtract using:</p>
+<div class="fragment"><div class="line"><a class="code" href="namespaceZEN.html#a0d7569c6075d08a03f47973dc968b9fc">Vec3</a> a(1.0), b(2.0);</div>
+<div class="line"> </div>
+<div class="line"><a class="code" href="namespaceZEN.html#a0d7569c6075d08a03f47973dc968b9fc">Vec3</a> added = a + b;</div>
+<div class="line"><a class="code" href="namespaceZEN.html#a0d7569c6075d08a03f47973dc968b9fc">Vec3</a> sub = a - b;</div>
+</div><!-- fragment --><p>You can also multiply and divide the components:</p>
+<div class="fragment"><div class="line"><a class="code" href="namespaceZEN.html#a0d7569c6075d08a03f47973dc968b9fc">Vec3</a> a(1.0);</div>
+<div class="line"> </div>
+<div class="line"><a class="code" href="namespaceZEN.html#a0d7569c6075d08a03f47973dc968b9fc">Vec3</a> b = a * 3.0;</div>
+<div class="line"><a class="code" href="namespaceZEN.html#a0d7569c6075d08a03f47973dc968b9fc">Vec3</a> c = a / 1.5;</div>
+</div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- start footer part -->

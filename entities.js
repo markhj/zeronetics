@@ -13,9 +13,9 @@ var entities =
         [ "Library error", "log-engine-dev.html#autotoc_md93", [
           [ "Example", "log-engine-dev.html#autotoc_md94", null ]
         ] ],
-        [ "↗️ Vectors", "tensors.html#autotoc_md80", null ],
-        [ "🔢 Matrices", "tensors.html#autotoc_md81", null ],
-        [ "🔧 Implementation", "tensors.html#autotoc_md82", null ],
+        [ "↗️ Classes", "tensors.html#autotoc_md80", null ],
+        [ "🔢 Initialization", "tensors.html#autotoc_md81", null ],
+        [ "➕ Arithmetic operations", "tensors.html#autotoc_md82", null ],
         [ "See also", "vertices.html#autotoc_md83", null ],
         [ "🔷 Shapes", "shapes.html#autotoc_md76", null ],
         [ "📃 List of shapes", "shapes.html#autotoc_md77", null ],

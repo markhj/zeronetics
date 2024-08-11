@@ -87,7 +87,8 @@ $(document).ready(function(){initNavTree('process-introduction.html',''); initRe
 <div class="title">Introduction to processes </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>A <a class="el" href="classZEN_1_1Process.html">process</a> is any class which inherits <code><a class="el" href="classZEN_1_1Process.html">ZEN::Process</a></code>. Any such class can be attached to the <a class="el" href="game-loop.html">game loop</a>, and it can literally entail anything from a simple timer over physics computation to the main character.</p>
+<div class="textblock"><p>A <a class="el" href="classZEN_1_1Process.html">process</a> is any class which inherits <code><a class="el" href="classZEN_1_1Process.html">ZEN::Process</a></code>. Any such class can be attached to the <a class="el" href="game-loop.html">game loop</a>, and have its respective logic executed in every iteration.</p>
+<p>A process can revolve around almost anything, ranging from a simple timer over physics computation to the main character controls.</p>
 <h2><a class="anchor" id="autotoc_md103"></a>
 🍂 Life cycle</h2>
 <p>A process can theoretically be attached to any number of <a class="el" href="classZEN_1_1Processor.html">processors</a>, but in most use-cases that's just the primary <a class="el" href="game-loop.html">game loop</a>.</p>

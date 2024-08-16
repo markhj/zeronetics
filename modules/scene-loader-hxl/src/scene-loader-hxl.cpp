@@ -5,6 +5,7 @@
 #include "zeronetics/shapes/3d/cube.h"
 
 #include "hxl-lang/hxl-lang.h"
+#include "zeronetics/contracts/shader-builder.h"
 #include "zeronetics/logging/logging.h"
 
 namespace {
@@ -17,6 +18,8 @@ namespace {
     std::vector<std::shared_ptr<ZEN::IRenderable3D>> listMesh3d;
 
     std::unordered_map<std::string, std::shared_ptr<ZEN::Cube>> listCubes;
+
+    std::unordered_map<std::string, std::shared_ptr<ZEN::ShaderBlueprint>> listShaderBlueprints;
 
     void setVec3(ZEN::Vec3 *vec,
                  const char *key,
@@ -43,6 +46,9 @@ ZEN::SceneLoaderHxl::SceneLoaderHxl() {
 
     schema.types.push_back({"Cube"});
     schema.types[0].properties.push_back({"size", HXL::DataType::Float, HXL::ValueStructure::Array});
+
+    schema.types.push_back({"ShaderBuilder"});
+    schema.types[0].properties.push_back({"color", HXL::DataType::Float, HXL::ValueStructure::Array});
 
     schema.types.push_back({"Camera3D"});
     schema.types[0].properties.push_back({"position", HXL::DataType::Float, HXL::ValueStructure::Array});
@@ -80,9 +86,16 @@ ZEN::SceneLoaderHxl::SceneLoaderHxl() {
         setVec3(&camera3d->target, "target", node.properties);
     };
 
+    HXL::DeserializationHandle dsShaderBuilder{"ShaderBuilder"};
+    dsShaderBuilder.handle = [&](const HXL::DeserializedNode &node) {
+        std::shared_ptr<ShaderBlueprint> shaderBuilder = std::make_shared<ShaderBlueprint>(ShaderBlueprint());
+        listShaderBlueprints[node.name] = shaderBuilder;
+    };
+
     deserializationProtocol.handles.push_back(dsMesh);
     deserializationProtocol.handles.push_back(dsCamera3d);
     deserializationProtocol.handles.push_back(dsCube);
+    deserializationProtocol.handles.push_back(dsShaderBuilder);
 }
 
 std::shared_ptr<ZEN::IScene> ZEN::SceneLoaderHxl::load(const ZEN::File &file) {

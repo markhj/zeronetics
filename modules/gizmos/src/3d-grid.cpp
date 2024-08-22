@@ -7,6 +7,8 @@ ZEN::RenderLayer ZEN::Gizmos::Grid3D::generate() {
     renderLayer.settings.draw = DrawPrimitive::Lines;
     renderLayer.settings.lineSize = 2.0;
 
+    Vec3 normal(0.0);
+
     std::vector<Vertex3D> vertices;
     gw_float lineLength = static_cast<gw_float>(lines) * spacing;
     gw_float halfLine = lineLength / 2.0f;
@@ -14,28 +16,28 @@ ZEN::RenderLayer ZEN::Gizmos::Grid3D::generate() {
 
     // Draw lines that stop shortly before the center
     for (const gw_float posNeg: {1.0f, -1.0f}) {
-        vertices.push_back({.position = Vec3(posNeg * halfLine, 0.0, 0.0)});
-        vertices.push_back({.position = Vec3(posNeg * spacing, 0.0, 0.0)});
-        vertices.push_back({.position = Vec3(0.0, 0.0, posNeg * halfLine)});
-        vertices.push_back({.position = Vec3(0.0, 0.0, posNeg * spacing)});
+        vertices.push_back({.position = Vec3(posNeg * halfLine, 0.0, 0.0), .normal = normal});
+        vertices.push_back({.position = Vec3(posNeg * spacing, 0.0, 0.0), .normal = normal});
+        vertices.push_back({.position = Vec3(0.0, 0.0, posNeg * halfLine), .normal = normal});
+        vertices.push_back({.position = Vec3(0.0, 0.0, posNeg * spacing), .normal = normal});
     }
 
     // Draw axis lines
     gw_float axisLength = spacing * 0.9f;
-    vertices.push_back({.position = Vec3(), .color = xAxisColor});
-    vertices.push_back({.position = Vec3(axisLength, 0.0, 0.0), .color = xAxisColor});
-    vertices.push_back({.position = Vec3(), .color = yAxisColor});
-    vertices.push_back({.position = Vec3(0.0, axisLength, 0.0), .color = yAxisColor});
-    vertices.push_back({.position = Vec3(), .color = zAxisColor});
-    vertices.push_back({.position = Vec3(0.0, 0.0, axisLength), .color = zAxisColor});
+    vertices.push_back({.position = Vec3(), .color = xAxisColor, .normal = normal});
+    vertices.push_back({.position = Vec3(axisLength, 0.0, 0.0), .color = xAxisColor, .normal = normal});
+    vertices.push_back({.position = Vec3(), .color = yAxisColor, .normal = normal});
+    vertices.push_back({.position = Vec3(0.0, axisLength, 0.0), .color = yAxisColor, .normal = normal});
+    vertices.push_back({.position = Vec3(), .color = zAxisColor, .normal = normal});
+    vertices.push_back({.position = Vec3(0.0, 0.0, axisLength), .color = zAxisColor, .normal = normal});
 
     // Draw other lines
     for (uint16_t i = 1; i <= lines / 2; ++i) {
         for (const gw_float posNeg: {1.0f, -1.0f}) {
-            vertices.push_back({.position = Vec3(posNeg * d, 0.0, -halfLine), .color = lineColor});
-            vertices.push_back({.position = Vec3(posNeg * d, 0.0, halfLine), .color = lineColor});
-            vertices.push_back({.position = Vec3(-halfLine, 0.0, posNeg * d), .color = lineColor});
-            vertices.push_back({.position = Vec3(halfLine, 0.0, posNeg * d), .color = lineColor});
+            vertices.push_back({.position = Vec3(posNeg * d, 0.0, -halfLine), .color = lineColor, .normal = normal});
+            vertices.push_back({.position = Vec3(posNeg * d, 0.0, halfLine), .color = lineColor, .normal = normal});
+            vertices.push_back({.position = Vec3(-halfLine, 0.0, posNeg * d), .color = lineColor, .normal = normal});
+            vertices.push_back({.position = Vec3(halfLine, 0.0, posNeg * d), .color = lineColor, .normal = normal});
         }
         d += spacing;
     }

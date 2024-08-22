@@ -62,14 +62,24 @@ namespace {
             return;
         }
 
-        // @todo: Add support for more mouse buttons
-        if (button > 1) {
-            return;
+        ZEN::MouseButton mouseButton;
+        switch (button) {
+            case 0:
+                mouseButton = ZEN::MouseButton::PrimaryMouseButton;
+                break;
+            case 1:
+                mouseButton = ZEN::MouseButton::SecondaryMouseButton;
+                break;
+            case 2:
+                mouseButton = ZEN::MouseButton::MiddleMouseButton;
+                break;
+            default:
+                return;
         }
 
         s_inputManager->onMouseButtonStateChanged({
                 .mouseButtonState = action == 1 ? ZEN::MouseButtonState::JustClicked : ZEN::MouseButtonState::JustReleased,
-                .mouseButton = button == 0 ? ZEN::MouseButton::PrimaryMouseButton : ZEN::MouseButton::SecondaryMouseButton,
+                .mouseButton = mouseButton,
         });
     }
 

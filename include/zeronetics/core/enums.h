@@ -128,6 +128,8 @@ namespace ZEN {
          * Usually the right mouse button.
          */
         SecondaryMouseButton,
+
+        MiddleMouseButton,
     };
 
     /**

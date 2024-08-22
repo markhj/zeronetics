@@ -57,7 +57,7 @@ var NAVTREEINDEX =
 "",
 "classZEN_1_1OpenGL_1_1Shader.html#ad56cd2df67bb591d905febf1057fb2f1",
 "install-engine.html#autotoc_md9",
-"shader-builder.html#autotoc_md114"
+"shader-builder.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

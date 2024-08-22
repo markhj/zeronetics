@@ -282,7 +282,8 @@ var namespaceZEN =
     ] ],
     [ "MouseButton", "namespaceZEN.html#a8a51e0df946c6f890a2823e8a1ca0240", [
       [ "PrimaryMouseButton", "namespaceZEN.html#a8a51e0df946c6f890a2823e8a1ca0240accc85508cb5bc7228c6ef73f49476848", null ],
-      [ "SecondaryMouseButton", "namespaceZEN.html#a8a51e0df946c6f890a2823e8a1ca0240ae90f1be6898197b224aa6afb249ef624", null ]
+      [ "SecondaryMouseButton", "namespaceZEN.html#a8a51e0df946c6f890a2823e8a1ca0240ae90f1be6898197b224aa6afb249ef624", null ],
+      [ "MiddleMouseButton", "namespaceZEN.html#a8a51e0df946c6f890a2823e8a1ca0240afa7bd556789c77d275d6af5ba42c6539", null ]
     ] ],
     [ "MouseButtonState", "namespaceZEN.html#a005125c04c9758169bdc99cb0a557d09", [
       [ "JustClicked", "namespaceZEN.html#a005125c04c9758169bdc99cb0a557d09a2b1ec63608b381f6053ce7cb31dc363a", null ],

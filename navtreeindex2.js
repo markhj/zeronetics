@@ -160,6 +160,7 @@ var NAVTREEINDEX2 =
 "namespaceZEN.html#a8a51e0df946c6f890a2823e8a1ca0240":[5,0,0,136],
 "namespaceZEN.html#a8a51e0df946c6f890a2823e8a1ca0240accc85508cb5bc7228c6ef73f49476848":[5,0,0,136,0],
 "namespaceZEN.html#a8a51e0df946c6f890a2823e8a1ca0240ae90f1be6898197b224aa6afb249ef624":[5,0,0,136,1],
+"namespaceZEN.html#a8a51e0df946c6f890a2823e8a1ca0240afa7bd556789c77d275d6af5ba42c6539":[5,0,0,136,2],
 "namespaceZEN.html#a94472cd2dbf45750e85daff75fc8232d":[5,0,0,129],
 "namespaceZEN.html#a94472cd2dbf45750e85daff75fc8232da508eb90ad8473b8f7a4ed052a12ed74e":[5,0,0,129,3],
 "namespaceZEN.html#a94472cd2dbf45750e85daff75fc8232da6adf97f83acf6453d4a6a4b1070f3754":[5,0,0,129,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX2 =
 "settings.html":[2,0],
 "settings.html#autotoc_md54":[3,25],
 "settings.html#autotoc_md55":[3,25,0],
-"settings.html#autotoc_md56":[3,26],
-"shader-builder.html":[2,8,0]
+"settings.html#autotoc_md56":[3,26]
 };

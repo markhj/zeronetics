@@ -1,5 +1,6 @@
 var NAVTREEINDEX3 =
 {
+"shader-builder.html":[2,8,0],
 "shader-builder.html#autotoc_md114":[8],
 "shaders.html":[2,8],
 "shapes.html":[2,2,3],

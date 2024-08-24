@@ -54,7 +54,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"",
+"annotated.html",
 "classZEN_1_1OpenGL_1_1Shader.html#ad56cd2df67bb591d905febf1057fb2f1",
 "install-engine.html#autotoc_md8",
 "settings.html#autotoc_md56"

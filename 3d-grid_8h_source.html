@@ -93,31 +93,43 @@ $(document).ready(function(){initNavTree('3d-grid_8h_source.html',''); initResiz
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;zeronetics/render/render-manager.h&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span>ZEN::Gizmos {</div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="classZEN_1_1Gizmos_1_1Grid3D.html">    7</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classZEN_1_1Gizmos_1_1Grid3D.html">Grid3D</a> {</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        [[nodiscard]] <a class="code" href="structZEN_1_1ShaderBlueprint.html">ShaderBlueprint</a> getShaderBlueprint() <span class="keyword">const</span> noexcept;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <a class="code" href="classZEN_1_1RenderLayer.html">RenderLayer</a> generate();</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        uint16_t lines = 10;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <a class="code" href="namespaceZEN.html#a5089f560467278c4efaed05ce45f57a7">gw_float</a> spacing = 1.0;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <a class="code" href="classZEN_1_1ColorRGB.html">ColorRGB</a> lineColor = <a class="code" href="classZEN_1_1ColorRGB.html">ColorRGB</a>(1.0, 1.0, 1.0),</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                 xAxisColor = <a class="code" href="classZEN_1_1ColorRGB.html">ColorRGB</a>(1.0, 0.0, 0.0),</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                 yAxisColor = <a class="code" href="classZEN_1_1ColorRGB.html">ColorRGB</a>(0.0, 1.0, 0.0),</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                 zAxisColor = <a class="code" href="classZEN_1_1ColorRGB.html">ColorRGB</a>(0.0, 0.0, 1.0);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        std::vector&lt;VertexAttribute&gt; m_attributes = {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                VertexAttribute::Position3D,</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                VertexAttribute::ColorRGB,</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        };</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    };</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classZEN_1_1Gizmos_1_1Grid3D.html">   17</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classZEN_1_1Gizmos_1_1Grid3D.html">Grid3D</a> {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classZEN_1_1Gizmos_1_1Grid3D.html#a500007f0eb54b5c9cb1e5ffa04a726b7">   22</a></span>&#160;        uint16_t <a class="code" href="classZEN_1_1Gizmos_1_1Grid3D.html#a500007f0eb54b5c9cb1e5ffa04a726b7">lines</a> = 10;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classZEN_1_1Gizmos_1_1Grid3D.html#adab82f3edccd19503badd218fc105d50">   27</a></span>&#160;        <a class="code" href="namespaceZEN.html#a5089f560467278c4efaed05ce45f57a7">gw_float</a> <a class="code" href="classZEN_1_1Gizmos_1_1Grid3D.html#adab82f3edccd19503badd218fc105d50">spacing</a> = 1.0;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classZEN_1_1Gizmos_1_1Grid3D.html#a081895d7f0c22a3a8467b3dfd996e17e">   32</a></span>&#160;        <a class="code" href="classZEN_1_1ColorRGB.html">ColorRGB</a> <a class="code" href="classZEN_1_1Gizmos_1_1Grid3D.html#a081895d7f0c22a3a8467b3dfd996e17e">lineColor</a> = <a class="code" href="classZEN_1_1ColorRGB.html">ColorRGB</a>(1.0, 1.0, 1.0);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classZEN_1_1Gizmos_1_1Grid3D.html#abd8a9d2313c8d051cc6be1bc46740752">   37</a></span>&#160;        <a class="code" href="classZEN_1_1ColorRGB.html">ColorRGB</a> <a class="code" href="classZEN_1_1Gizmos_1_1Grid3D.html#abd8a9d2313c8d051cc6be1bc46740752">xAxisColor</a> = <a class="code" href="classZEN_1_1ColorRGB.html">ColorRGB</a>(1.0, 0.0, 0.0);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classZEN_1_1Gizmos_1_1Grid3D.html#a411ebd14fa2df3d9af0dd63c905154a3">   42</a></span>&#160;        <a class="code" href="classZEN_1_1ColorRGB.html">ColorRGB</a> <a class="code" href="classZEN_1_1Gizmos_1_1Grid3D.html#a411ebd14fa2df3d9af0dd63c905154a3">yAxisColor</a> = <a class="code" href="classZEN_1_1ColorRGB.html">ColorRGB</a>(0.0, 1.0, 0.0);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classZEN_1_1Gizmos_1_1Grid3D.html#a5f18335f7c8990719a3ab30e98e73681">   47</a></span>&#160;        <a class="code" href="classZEN_1_1ColorRGB.html">ColorRGB</a> <a class="code" href="classZEN_1_1Gizmos_1_1Grid3D.html#a5f18335f7c8990719a3ab30e98e73681">zAxisColor</a> = <a class="code" href="classZEN_1_1ColorRGB.html">ColorRGB</a>(0.0, 0.0, 1.0);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        [[nodiscard]] <a class="code" href="structZEN_1_1ShaderBlueprint.html">ShaderBlueprint</a> <a class="code" href="classZEN_1_1Gizmos_1_1Grid3D.html#a8143c3784bdba05eaa1a5aadcb7466b2">getShaderBlueprint</a>() const noexcept;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <a class="code" href="classZEN_1_1RenderLayer.html">RenderLayer</a> <a class="code" href="classZEN_1_1Gizmos_1_1Grid3D.html#a9f7866ced565cdffeb2f03e39d775ff2">generate</a>();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    private:</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        std::vector&lt;<a class="code" href="namespaceZEN.html#a3ff69a9dc86c8ce199f458ed659dbe95">VertexAttribute</a>&gt; m_attributes = {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                VertexAttribute::Position3D,</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                VertexAttribute::ColorRGB,</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        };</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    };</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
 <div class="ttc" id="aclassZEN_1_1ColorRGB_html"><div class="ttname"><a href="classZEN_1_1ColorRGB.html">ZEN::ColorRGB</a></div><div class="ttdef"><b>Definition:</b> attributes.h:15</div></div>
-<div class="ttc" id="aclassZEN_1_1Gizmos_1_1Grid3D_html"><div class="ttname"><a href="classZEN_1_1Gizmos_1_1Grid3D.html">ZEN::Gizmos::Grid3D</a></div><div class="ttdef"><b>Definition:</b> 3d-grid.h:7</div></div>
+<div class="ttc" id="aclassZEN_1_1Gizmos_1_1Grid3D_html"><div class="ttname"><a href="classZEN_1_1Gizmos_1_1Grid3D.html">ZEN::Gizmos::Grid3D</a></div><div class="ttdef"><b>Definition:</b> 3d-grid.h:17</div></div>
+<div class="ttc" id="aclassZEN_1_1Gizmos_1_1Grid3D_html_a081895d7f0c22a3a8467b3dfd996e17e"><div class="ttname"><a href="classZEN_1_1Gizmos_1_1Grid3D.html#a081895d7f0c22a3a8467b3dfd996e17e">ZEN::Gizmos::Grid3D::lineColor</a></div><div class="ttdeci">ColorRGB lineColor</div><div class="ttdef"><b>Definition:</b> 3d-grid.h:32</div></div>
+<div class="ttc" id="aclassZEN_1_1Gizmos_1_1Grid3D_html_a411ebd14fa2df3d9af0dd63c905154a3"><div class="ttname"><a href="classZEN_1_1Gizmos_1_1Grid3D.html#a411ebd14fa2df3d9af0dd63c905154a3">ZEN::Gizmos::Grid3D::yAxisColor</a></div><div class="ttdeci">ColorRGB yAxisColor</div><div class="ttdef"><b>Definition:</b> 3d-grid.h:42</div></div>
+<div class="ttc" id="aclassZEN_1_1Gizmos_1_1Grid3D_html_a500007f0eb54b5c9cb1e5ffa04a726b7"><div class="ttname"><a href="classZEN_1_1Gizmos_1_1Grid3D.html#a500007f0eb54b5c9cb1e5ffa04a726b7">ZEN::Gizmos::Grid3D::lines</a></div><div class="ttdeci">uint16_t lines</div><div class="ttdef"><b>Definition:</b> 3d-grid.h:22</div></div>
+<div class="ttc" id="aclassZEN_1_1Gizmos_1_1Grid3D_html_a5f18335f7c8990719a3ab30e98e73681"><div class="ttname"><a href="classZEN_1_1Gizmos_1_1Grid3D.html#a5f18335f7c8990719a3ab30e98e73681">ZEN::Gizmos::Grid3D::zAxisColor</a></div><div class="ttdeci">ColorRGB zAxisColor</div><div class="ttdef"><b>Definition:</b> 3d-grid.h:47</div></div>
+<div class="ttc" id="aclassZEN_1_1Gizmos_1_1Grid3D_html_a8143c3784bdba05eaa1a5aadcb7466b2"><div class="ttname"><a href="classZEN_1_1Gizmos_1_1Grid3D.html#a8143c3784bdba05eaa1a5aadcb7466b2">ZEN::Gizmos::Grid3D::getShaderBlueprint</a></div><div class="ttdeci">ShaderBlueprint getShaderBlueprint() const noexcept</div><div class="ttdef"><b>Definition:</b> 3d-grid.cpp:54</div></div>
+<div class="ttc" id="aclassZEN_1_1Gizmos_1_1Grid3D_html_a9f7866ced565cdffeb2f03e39d775ff2"><div class="ttname"><a href="classZEN_1_1Gizmos_1_1Grid3D.html#a9f7866ced565cdffeb2f03e39d775ff2">ZEN::Gizmos::Grid3D::generate</a></div><div class="ttdeci">RenderLayer generate()</div><div class="ttdef"><b>Definition:</b> 3d-grid.cpp:5</div></div>
+<div class="ttc" id="aclassZEN_1_1Gizmos_1_1Grid3D_html_abd8a9d2313c8d051cc6be1bc46740752"><div class="ttname"><a href="classZEN_1_1Gizmos_1_1Grid3D.html#abd8a9d2313c8d051cc6be1bc46740752">ZEN::Gizmos::Grid3D::xAxisColor</a></div><div class="ttdeci">ColorRGB xAxisColor</div><div class="ttdef"><b>Definition:</b> 3d-grid.h:37</div></div>
+<div class="ttc" id="aclassZEN_1_1Gizmos_1_1Grid3D_html_adab82f3edccd19503badd218fc105d50"><div class="ttname"><a href="classZEN_1_1Gizmos_1_1Grid3D.html#adab82f3edccd19503badd218fc105d50">ZEN::Gizmos::Grid3D::spacing</a></div><div class="ttdeci">gw_float spacing</div><div class="ttdef"><b>Definition:</b> 3d-grid.h:27</div></div>
 <div class="ttc" id="aclassZEN_1_1RenderLayer_html"><div class="ttname"><a href="classZEN_1_1RenderLayer.html">ZEN::RenderLayer</a></div><div class="ttdef"><b>Definition:</b> render-manager.h:23</div></div>
+<div class="ttc" id="anamespaceZEN_html_a3ff69a9dc86c8ce199f458ed659dbe95"><div class="ttname"><a href="namespaceZEN.html#a3ff69a9dc86c8ce199f458ed659dbe95">ZEN::VertexAttribute</a></div><div class="ttdeci">VertexAttribute</div><div class="ttdef"><b>Definition:</b> enums.h:173</div></div>
 <div class="ttc" id="anamespaceZEN_html_a5089f560467278c4efaed05ce45f57a7"><div class="ttname"><a href="namespaceZEN.html#a5089f560467278c4efaed05ce45f57a7">ZEN::gw_float</a></div><div class="ttdeci">float gw_float</div><div class="ttdef"><b>Definition:</b> typedefs.h:16</div></div>
 <div class="ttc" id="astructZEN_1_1ShaderBlueprint_html"><div class="ttname"><a href="structZEN_1_1ShaderBlueprint.html">ZEN::ShaderBlueprint</a></div><div class="ttdef"><b>Definition:</b> shader-blueprint.h:40</div></div>
 </div><!-- fragment --></div><!-- contents -->

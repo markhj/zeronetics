@@ -88,7 +88,7 @@ $(document).ready(function(){initNavTree('opengl-bindable.html',''); initResizab
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>When working with the OpenGL module, you often work with bindable contexts (VAO, VBO, shaders, framebuffers, textures, etc.). To ease this work you can use the <a class="el" href="classZEN_1_1OpenGL_1_1StdBinding.html">ZEN::OpenGL::StdBinding</a>.</p>
-<h2><a class="anchor" id="autotoc_md158"></a>
+<h2><a class="anchor" id="autotoc_md164"></a>
 An example</h2>
 <p>Let's review the shader to get an understanding. The <a class="el" href="classZEN_1_1OpenGL_1_1Shader.html">ZEN::OpenGL::Shader</a> extends <code><a class="el" href="classZEN_1_1OpenGL_1_1StdBinding.html">ZEN::OpenGL::StdBinding</a>&lt;gl_uint&gt;</code>.</p>
 <p>This provides basic binding functionality, but you have to implement a few functions on your own, which are specific to each context.</p>
@@ -111,15 +111,15 @@ An example</h2>
 <div class="line">    glGetIntegerv(GL_CURRENT_PROGRAM, &amp;currentProgram);</div>
 <div class="line">    <span class="keywordflow">return</span> currentProgram;</div>
 <div class="line">}</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md159"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md165"></a>
 Functions</h2>
-<h3><a class="anchor" id="autotoc_md160"></a>
+<h3><a class="anchor" id="autotoc_md166"></a>
 Short-hand for binding</h3>
 <p>You bind to a context with <code>bind</code>.</p>
 <div class="fragment"><div class="line">myShader-&gt;bind();</div>
 </div><!-- fragment --><p>And unbind:</p>
 <div class="fragment"><div class="line">myShader-&gt;unbind();</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md161"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md167"></a>
 With</h3>
 <p><a class="el" href="classZEN_1_1OpenGL_1_1StdBinding.html">ZEN::OpenGL::StdBinding</a> provides a series of useful functions. Most importantly, the <code>with</code> function, which safely enters and leaves a context. By "safely," is meant that if another context was bound by the time <code>with</code> is called, the flow is returned to that context after <code>with</code>.</p>
 <div class="fragment"><div class="line">shader1-&gt;bind();</div>

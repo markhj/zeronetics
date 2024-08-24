@@ -1,5 +1,13 @@
 var NAVTREEINDEX2 =
 {
+"input-manager.html":[1,0],
+"input-manager.html#autotoc_md26":[5],
+"input-manager.html#autotoc_md27":[6],
+"input-manager.html#autotoc_md28":[7],
+"install-engine.html":[0,0],
+"install-engine.html#autotoc_md10":[2,2,0],
+"install-engine.html#autotoc_md11":[2,3],
+"install-engine.html#autotoc_md7":[2,0],
 "install-engine.html#autotoc_md8":[2,1],
 "install-engine.html#autotoc_md9":[2,2],
 "lights-tutorial.html":[1,2],
@@ -208,10 +216,10 @@ var NAVTREEINDEX2 =
 "observers.html#autotoc_md51":[9],
 "opengl-allocation.html":[3,3,1],
 "opengl-bindable.html":[3,3,0],
-"opengl-bindable.html#autotoc_md158":[2],
-"opengl-bindable.html#autotoc_md159":[3],
-"opengl-bindable.html#autotoc_md160":[3,0],
-"opengl-bindable.html#autotoc_md161":[3,1],
+"opengl-bindable.html#autotoc_md164":[2],
+"opengl-bindable.html#autotoc_md165":[3],
+"opengl-bindable.html#autotoc_md166":[3,0],
+"opengl-bindable.html#autotoc_md167":[3,1],
 "opengl.html":[3,3],
 "opengl_8h.html#a32fc3170efffdd3e18329f464d582a0a":[5,0,0,23,10],
 "opengl_8h.html#a3cf0cd9d8361f9a3e192fe9377abe102":[5,0,0,23,8],
@@ -241,13 +249,5 @@ var NAVTREEINDEX2 =
 "render-manager.html#autotoc_md113":[4],
 "rendering.html":[2,7],
 "result.html":[2,11],
-"result.html#autotoc_md52":[3],
-"result.html#autotoc_md53":[4],
-"setting-up-a-game.html":[0,1],
-"setting-up-a-game.html#autotoc_md12":[0],
-"setting-up-a-game.html#autotoc_md13":[1],
-"setting-up-a-game.html#autotoc_md14":[2],
-"settings.html":[2,0],
-"settings.html#autotoc_md54":[3,25],
-"settings.html#autotoc_md55":[3,25,0]
+"result.html#autotoc_md52":[3]
 };

@@ -1,5 +1,13 @@
 var NAVTREEINDEX3 =
 {
+"result.html#autotoc_md53":[4],
+"setting-up-a-game.html":[0,1],
+"setting-up-a-game.html#autotoc_md12":[0],
+"setting-up-a-game.html#autotoc_md13":[1],
+"setting-up-a-game.html#autotoc_md14":[2],
+"settings.html":[2,0],
+"settings.html#autotoc_md54":[3,25],
+"settings.html#autotoc_md55":[3,25,0],
 "settings.html#autotoc_md56":[3,26],
 "shader-builder.html":[2,8,0],
 "shader-builder.html#autotoc_md114":[8],
@@ -120,10 +128,10 @@ var NAVTREEINDEX3 =
 "tutorials.html#autotoc_md46":[4],
 "vertices.html":[2,2,2],
 "vertices.html#autotoc_md83":[8],
-"":[5,0,0,23],
-"":[5,0,0,22],
-"":[5,0,0,25],
-"":[5,0,0,20],
 "":[5,0,0,21],
-"":[5,0,0,24]
+"":[5,0,0,20],
+"":[5,0,0,22],
+"":[5,0,0,23],
+"":[5,0,0,24],
+"":[5,0,0,25]
 };

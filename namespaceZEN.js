@@ -20,11 +20,18 @@ var namespaceZEN =
         [ "Mouse button clicked and released", "control-systems-mapping.html#autotoc_md156", null ],
         [ "Mouse button down", "control-systems-mapping.html#autotoc_md157", null ]
       ] ],
-      [ "An example", "opengl-bindable.html#autotoc_md158", null ],
-      [ "Functions", "opengl-bindable.html#autotoc_md159", [
-        [ "Short-hand for binding", "opengl-bindable.html#autotoc_md160", null ],
-        [ "With", "opengl-bindable.html#autotoc_md161", null ]
+      [ "An example", "opengl-bindable.html#autotoc_md164", null ],
+      [ "Functions", "opengl-bindable.html#autotoc_md165", [
+        [ "Short-hand for binding", "opengl-bindable.html#autotoc_md166", null ],
+        [ "With", "opengl-bindable.html#autotoc_md167", null ]
       ] ],
+      [ "🎲 How it works", "grid-3d.html#autotoc_md158", null ],
+      [ "🔨 Working with 3D grid", "grid-3d.html#autotoc_md159", [
+        [ "Setting up", "grid-3d.html#autotoc_md160", null ],
+        [ "Example: Compiling shader for OpenGL", "grid-3d.html#autotoc_md161", null ],
+        [ "Final touches", "grid-3d.html#autotoc_md162", null ]
+      ] ],
+      [ "📌 See also", "grid-3d.html#autotoc_md163", null ],
       [ "CMake file", "create-modules.html#autotoc_md128", null ],
       [ "Public headers", "create-modules.html#autotoc_md129", null ],
       [ "Integrate in build process", "create-modules.html#autotoc_md130", null ]

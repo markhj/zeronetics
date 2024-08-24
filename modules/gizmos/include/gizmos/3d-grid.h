@@ -9,8 +9,7 @@ namespace ZEN::Gizmos {
         [[nodiscard]] ShaderBlueprint getShaderBlueprint() const noexcept;
 
         RenderLayer generate();
-
-    private:
+        
         uint16_t lines = 10;
 
         gw_float spacing = 1.0;
@@ -20,6 +19,7 @@ namespace ZEN::Gizmos {
                  yAxisColor = ColorRGB(0.0, 1.0, 0.0),
                  zAxisColor = ColorRGB(0.0, 0.0, 1.0);
 
+    private:
         std::vector<VertexAttribute> m_attributes = {
                 VertexAttribute::Position3D,
                 VertexAttribute::ColorRGB,

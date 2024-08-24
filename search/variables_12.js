@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['viewportsize_696',['viewportSize',['../structZEN_1_1Globals.html#ab8831b9c377afb03bc9043a31a29df3f',1,'ZEN::Globals']]],
-  ['vsync_697',['vSync',['../structZEN_1_1Settings.html#ab445066449f2de6207968fe68feb2042',1,'ZEN::Settings']]]
+  ['up_706',['up',['../classZEN_1_1ICamera3D.html#a1910db2e075042c786d15f3b1572250d',1,'ZEN::ICamera3D']]]
 ];

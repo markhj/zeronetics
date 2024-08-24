@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"install-engine.html#autotoc_md8":[2,1],
 "install-engine.html#autotoc_md9":[2,2],
 "lights-tutorial.html":[1,2],
 "lights-tutorial.html#autotoc_md29":[12],
@@ -248,6 +249,5 @@ var NAVTREEINDEX2 =
 "setting-up-a-game.html#autotoc_md14":[2],
 "settings.html":[2,0],
 "settings.html#autotoc_md54":[3,25],
-"settings.html#autotoc_md55":[3,25,0],
-"settings.html#autotoc_md56":[3,26]
+"settings.html#autotoc_md55":[3,25,0]
 };

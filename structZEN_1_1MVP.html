@@ -95,19 +95,62 @@ $(document).ready(function(){initNavTree('structZEN_1_1MVP.html',''); initResiza
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:abdb8595318f642237e6e52335bcdbd67"><td class="memItemLeft" align="right" valign="top"><a id="abdb8595318f642237e6e52335bcdbd67"></a>
-<a class="el" href="namespaceZEN.html#ab461dca77b42d0d525addaad0f5e0221">Mat4x4</a>&#160;</td><td class="memItemRight" valign="bottom"><b>model</b></td></tr>
+<tr class="memitem:abdb8595318f642237e6e52335bcdbd67"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceZEN.html#ab461dca77b42d0d525addaad0f5e0221">Mat4x4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structZEN_1_1MVP.html#abdb8595318f642237e6e52335bcdbd67">model</a></td></tr>
 <tr class="separator:abdb8595318f642237e6e52335bcdbd67"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc9d50d34e2a022c2522c517b5cd417f"><td class="memItemLeft" align="right" valign="top"><a id="abc9d50d34e2a022c2522c517b5cd417f"></a>
-<a class="el" href="namespaceZEN.html#ab461dca77b42d0d525addaad0f5e0221">Mat4x4</a>&#160;</td><td class="memItemRight" valign="bottom"><b>view</b></td></tr>
+<tr class="memitem:abc9d50d34e2a022c2522c517b5cd417f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceZEN.html#ab461dca77b42d0d525addaad0f5e0221">Mat4x4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structZEN_1_1MVP.html#abc9d50d34e2a022c2522c517b5cd417f">view</a></td></tr>
 <tr class="separator:abc9d50d34e2a022c2522c517b5cd417f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeddae6f59025298f79d3a94cc96e7731"><td class="memItemLeft" align="right" valign="top"><a id="aeddae6f59025298f79d3a94cc96e7731"></a>
-<a class="el" href="namespaceZEN.html#ab461dca77b42d0d525addaad0f5e0221">Mat4x4</a>&#160;</td><td class="memItemRight" valign="bottom"><b>projection</b></td></tr>
+<tr class="memitem:aeddae6f59025298f79d3a94cc96e7731"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceZEN.html#ab461dca77b42d0d525addaad0f5e0221">Mat4x4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structZEN_1_1MVP.html#aeddae6f59025298f79d3a94cc96e7731">projection</a></td></tr>
 <tr class="separator:aeddae6f59025298f79d3a94cc96e7731"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Model-View-Projection container. </p>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
+</div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="abdb8595318f642237e6e52335bcdbd67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdb8595318f642237e6e52335bcdbd67">&#9670;&nbsp;</a></span>model</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceZEN.html#ab461dca77b42d0d525addaad0f5e0221">Mat4x4</a> ZEN::MVP::model</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The Model matrix transforms local object coordinates. </p>
+
+</div>
+</div>
+<a id="aeddae6f59025298f79d3a94cc96e7731"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeddae6f59025298f79d3a94cc96e7731">&#9670;&nbsp;</a></span>projection</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceZEN.html#ab461dca77b42d0d525addaad0f5e0221">Mat4x4</a> ZEN::MVP::projection</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The Projection matrix transforms camera coordinates into clip space, handling the perspective division (for perspective projection) or maintaining parallel lines (for orthographic projection). It defines the frustum and how the 3D scene is projected onto a 2D surface. </p>
+
+</div>
+</div>
+<a id="abc9d50d34e2a022c2522c517b5cd417f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc9d50d34e2a022c2522c517b5cd417f">&#9670;&nbsp;</a></span>view</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceZEN.html#ab461dca77b42d0d525addaad0f5e0221">Mat4x4</a> ZEN::MVP::view</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The View matrix transforms world coordinates into camera (view) coordinates, effectively positioning and orienting the camera within the scene. This matrix represents the camera's position and orientation. </p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
 <li>include/zeronetics/core/<a class="el" href="tensors_8h_source.html">tensors.h</a></li>
 </ul>
 </div><!-- contents -->

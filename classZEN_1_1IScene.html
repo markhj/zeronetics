@@ -91,6 +91,8 @@ $(document).ready(function(){initNavTree('classZEN_1_1IScene.html',''); initResi
 <div class="title">ZEN::IScene Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="contracts_2scene_8h_source.html">scene.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ZEN::IScene:</div>
 <div class="dyncontent">
@@ -99,19 +101,99 @@ Inheritance diagram for ZEN::IScene:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a228c486c435a31e136c7efbc8bc0b8c5"><td class="memItemLeft" align="right" valign="top"><a id="a228c486c435a31e136c7efbc8bc0b8c5"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>add</b> (const std::shared_ptr&lt; <a class="el" href="classZEN_1_1IRenderable3D.html">IRenderable3D</a> &gt; &amp;renderable) noexcept=0</td></tr>
+<tr class="memitem:a228c486c435a31e136c7efbc8bc0b8c5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1IScene.html#a228c486c435a31e136c7efbc8bc0b8c5">add</a> (const std::shared_ptr&lt; <a class="el" href="classZEN_1_1IRenderable3D.html">IRenderable3D</a> &gt; &amp;renderable) noexcept=0</td></tr>
 <tr class="separator:a228c486c435a31e136c7efbc8bc0b8c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2b1e10f6297a6d84d3c3bd8cc654739"><td class="memItemLeft" align="right" valign="top"><a id="aa2b1e10f6297a6d84d3c3bd8cc654739"></a>
-virtual std::vector&lt; std::shared_ptr&lt; <a class="el" href="classZEN_1_1IRenderable3D.html">IRenderable3D</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getRenderable3Ds</b> () const noexcept=0</td></tr>
+<tr class="memitem:aa2b1e10f6297a6d84d3c3bd8cc654739"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; std::shared_ptr&lt; <a class="el" href="classZEN_1_1IRenderable3D.html">IRenderable3D</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1IScene.html#aa2b1e10f6297a6d84d3c3bd8cc654739">getRenderable3Ds</a> () const noexcept=0</td></tr>
 <tr class="separator:aa2b1e10f6297a6d84d3c3bd8cc654739"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a841eff926b60e75797d098f1196c8b87"><td class="memItemLeft" align="right" valign="top"><a id="a841eff926b60e75797d098f1196c8b87"></a>
-std::shared_ptr&lt; <a class="el" href="classZEN_1_1ICamera3D.html">ICamera3D</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>camera3d</b></td></tr>
+<tr class="memitem:a841eff926b60e75797d098f1196c8b87"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classZEN_1_1ICamera3D.html">ICamera3D</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1IScene.html#a841eff926b60e75797d098f1196c8b87">camera3d</a></td></tr>
 <tr class="separator:a841eff926b60e75797d098f1196c8b87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="classZEN_1_1Scene.html">Scene</a> Contract </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a228c486c435a31e136c7efbc8bc0b8c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a228c486c435a31e136c7efbc8bc0b8c5">&#9670;&nbsp;</a></span>add()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ZEN::IScene::add </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classZEN_1_1IRenderable3D.html">IRenderable3D</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>renderable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Add a renderable to the scene.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">renderable</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="classZEN_1_1Scene.html#a54b72820c33996dcdea529d11aa0c13c">ZEN::Scene</a>.</p>
+
+</div>
+</div>
+<a id="aa2b1e10f6297a6d84d3c3bd8cc654739"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2b1e10f6297a6d84d3c3bd8cc654739">&#9670;&nbsp;</a></span>getRenderable3Ds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::vector&lt;std::shared_ptr&lt;<a class="el" href="classZEN_1_1IRenderable3D.html">IRenderable3D</a>&gt; &gt; ZEN::IScene::getRenderable3Ds </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get all renderables from the scene.</p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p>Implemented in <a class="el" href="classZEN_1_1Scene.html#a0f01f981f52982f41f8626b1a21ffa46">ZEN::Scene</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a841eff926b60e75797d098f1196c8b87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a841eff926b60e75797d098f1196c8b87">&#9670;&nbsp;</a></span>camera3d</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classZEN_1_1ICamera3D.html">ICamera3D</a>&gt; ZEN::IScene::camera3d</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>3D camera </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/zeronetics/contracts/<a class="el" href="contracts_2scene_8h_source.html">scene.h</a></li>
 </ul>

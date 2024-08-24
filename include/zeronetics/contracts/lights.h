@@ -46,8 +46,19 @@ namespace ZEN {
      */
     class IPointLight : public ILight {
     public:
-        float constant = 1.0,
-              linear = 0.01,
-              quadratic = 0.032;
+        /**
+         * Constant attenuation factor (minimal light falloff)
+         */
+        float constant = 1.0;
+
+        /**
+         * Linear attenuation factor (light diminishes linearly with distance)
+         */
+        float linear = 0.01;
+
+        /**
+         * Quadratic attenuation factor (light diminishes exponentially with distance)
+         */
+        float quadratic = 0.032;
     };
 }

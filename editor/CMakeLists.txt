@@ -5,6 +5,8 @@ set(CMAKE_CXX_STANDARD 20)
 
 include_directories(${ZEN_VENDOR_DIR}/glad/include)
 
+include_directories(src/ui-elements)
+
 add_executable(editor
         src/main.cpp
 
@@ -15,6 +17,9 @@ add_executable(editor
         # UI Elements
         src/ui-elements/ui-element.cpp
         src/ui-elements/button.cpp
+        src/ui-elements/label.cpp
+        src/ui-elements/separator.cpp
+        src/ui-elements/box.cpp
 
         # Utilities
         src/utilities/editor-utility.cpp

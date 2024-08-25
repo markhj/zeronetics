@@ -121,6 +121,10 @@ var annotated_dup =
       [ "Processor", "classZEN_1_1Processor.html", "classZEN_1_1Processor" ],
       [ "Window", "classZEN_1_1Window.html", "classZEN_1_1Window" ],
       [ "GLSLShaderBuilder", "classZEN_1_1GLSLShaderBuilder.html", "classZEN_1_1GLSLShaderBuilder" ],
+      [ "HxlNodeValue", "structZEN_1_1HxlNodeValue.html", "structZEN_1_1HxlNodeValue" ],
+      [ "HxlNode", "structZEN_1_1HxlNode.html", "structZEN_1_1HxlNode" ],
+      [ "HxlDocument", "structZEN_1_1HxlDocument.html", "structZEN_1_1HxlDocument" ],
+      [ "HxlSerializer", "classZEN_1_1HxlSerializer.html", null ],
       [ "SceneLoaderHxl", "classZEN_1_1SceneLoaderHxl.html", "classZEN_1_1SceneLoaderHxl" ]
     ] ]
 ];

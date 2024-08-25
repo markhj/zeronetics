@@ -4,9 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="ZEN::IInputManager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classZEN_1_1IInputManager.html",tooltip=" "];
-  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node1 [label="ZEN::BaseInputManager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classZEN_1_1BaseInputManager.html",tooltip=" "];
-  Node0 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="ZEN::ControlSystems\l::ControlManager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classZEN_1_1ControlSystems_1_1ControlManager.html",tooltip=" "];
+  Node0 [label="ZEN::HxlSerializer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classZEN_1_1HxlSerializer.html",tooltip=" "];
 }

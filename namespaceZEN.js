@@ -171,6 +171,10 @@ var namespaceZEN =
     [ "Processor", "classZEN_1_1Processor.html", "classZEN_1_1Processor" ],
     [ "Window", "classZEN_1_1Window.html", "classZEN_1_1Window" ],
     [ "GLSLShaderBuilder", "classZEN_1_1GLSLShaderBuilder.html", "classZEN_1_1GLSLShaderBuilder" ],
+    [ "HxlNodeValue", "structZEN_1_1HxlNodeValue.html", "structZEN_1_1HxlNodeValue" ],
+    [ "HxlNode", "structZEN_1_1HxlNode.html", "structZEN_1_1HxlNode" ],
+    [ "HxlDocument", "structZEN_1_1HxlDocument.html", "structZEN_1_1HxlDocument" ],
+    [ "HxlSerializer", "classZEN_1_1HxlSerializer.html", null ],
     [ "SceneLoaderHxl", "classZEN_1_1SceneLoaderHxl.html", "classZEN_1_1SceneLoaderHxl" ],
     [ "dt_float", "namespaceZEN.html#a1896aa89c3b0bbcccbd1b16d57410502", null ],
     [ "fps_int", "namespaceZEN.html#a6e336ae4a649a81112a7105f7705954c", null ],
@@ -195,6 +199,9 @@ var namespaceZEN =
       [ "Points", "namespaceZEN.html#a5e3ff6a32fb59dbae12505b9fe9b2591a75dd5f1160a3f02b6fae89c54361a1b3", null ],
       [ "Lines", "namespaceZEN.html#a5e3ff6a32fb59dbae12505b9fe9b2591aa0b0293a2db49f5f93c15a62e095c819", null ],
       [ "Triangles", "namespaceZEN.html#a5e3ff6a32fb59dbae12505b9fe9b2591a7ca66fdfaad3eb33fc65d7490178f856", null ]
+    ] ],
+    [ "HxlDataType", "namespaceZEN.html#aee6772d95bef30448d4b28b2fe2eef49", [
+      [ "String", "namespaceZEN.html#aee6772d95bef30448d4b28b2fe2eef49a27118326006d3829667a400ad23d5d98", null ]
     ] ],
     [ "Key", "namespaceZEN.html#a68b344c77c113e5bffc15e7c46c125c5", [
       [ "A", "namespaceZEN.html#a68b344c77c113e5bffc15e7c46c125c5a7fc56270e7a70fa81a5935b72eacbe29", null ],

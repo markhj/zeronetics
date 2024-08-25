@@ -1,5 +1,6 @@
 var NAVTREEINDEX1 =
 {
+"classZEN_1_1OpenGL_1_1Shader.html#ab8dfa3f47655e2bce864e0eeff187eca":[6,0,0,3,3,11],
 "classZEN_1_1OpenGL_1_1Shader.html#ad56cd2df67bb591d905febf1057fb2f1":[6,0,0,3,3,5],
 "classZEN_1_1OpenGL_1_1Shader.html#ae0f270ae9135bcd657bda5e91b2491d2":[6,0,0,3,3,4],
 "classZEN_1_1OpenGL_1_1Shader.html#ae2fba179cd00631e076a4ff74093343e":[6,0,0,3,3,8],
@@ -72,9 +73,9 @@ var NAVTREEINDEX1 =
 "classZEN_1_1Scene.html":[6,0,0,89],
 "classZEN_1_1Scene.html#a0f01f981f52982f41f8626b1a21ffa46":[6,0,0,89,1],
 "classZEN_1_1Scene.html#a54b72820c33996dcdea529d11aa0c13c":[6,0,0,89,0],
-"classZEN_1_1SceneLoaderHxl.html":[6,0,0,95],
-"classZEN_1_1SceneLoaderHxl.html#a6348886bd1c41554133062e4d8693ac8":[6,0,0,95,1],
-"classZEN_1_1SceneLoaderHxl.html#a94f722c4a40d02d8ad7f1f58416c6088":[6,0,0,95,0],
+"classZEN_1_1SceneLoaderHxl.html":[6,0,0,99],
+"classZEN_1_1SceneLoaderHxl.html#a6348886bd1c41554133062e4d8693ac8":[6,0,0,99,1],
+"classZEN_1_1SceneLoaderHxl.html#a94f722c4a40d02d8ad7f1f58416c6088":[6,0,0,99,0],
 "classZEN_1_1Shape3D.html":[6,0,0,61],
 "classZEN_1_1Shape3D.html#a15ba82eb3b53a5b94a9ecea7512a8db3":[6,0,0,61,3],
 "classZEN_1_1Shape3D.html#a540a684882035463c27b94493feabb58":[6,0,0,61,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "helpers.html#autotoc_md87":[1],
 "helpers.html#autotoc_md88":[1,0],
 "helpers.html#autotoc_md89":[1,1],
-"hierarchy.html":[6,2],
-"index.html":[]
+"hierarchy.html":[6,2]
 };

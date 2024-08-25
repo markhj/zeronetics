@@ -122,6 +122,7 @@ var NAVTREEINDEX0 =
 "classZEN_1_1Gizmos_1_1Grid3D.html#adab82f3edccd19503badd218fc105d50":[6,0,0,2,0,4],
 "classZEN_1_1HasUniqueId.html":[6,0,0,91],
 "classZEN_1_1HasUniqueId.html#a2fc2014361822c13a261ad9a8876c36c":[6,0,0,91,0],
+"classZEN_1_1HxlSerializer.html":[6,0,0,98],
 "classZEN_1_1IAsset.html":[6,0,0,8],
 "classZEN_1_1IAsset.html#acef2ba99a83c6dd31ec5c971b9a37513":[6,0,0,8,0],
 "classZEN_1_1IAsset.html#acf3b184e88bb7cd594ca4ed5b8b2dba5":[6,0,0,8,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "classZEN_1_1OpenGL_1_1Shader.html#a8671e51a74be500077440fbb753a04cf":[6,0,0,3,3,2],
 "classZEN_1_1OpenGL_1_1Shader.html#a87505bbca1498027ac6796cf13649e33":[6,0,0,3,3,7],
 "classZEN_1_1OpenGL_1_1Shader.html#aa6b45b8c6969716d95e0e800e10e0120":[6,0,0,3,3,6],
-"classZEN_1_1OpenGL_1_1Shader.html#aaeb83a15e709d50be52b7d931730d9a0":[6,0,0,3,3,0],
-"classZEN_1_1OpenGL_1_1Shader.html#ab8dfa3f47655e2bce864e0eeff187eca":[6,0,0,3,3,11]
+"classZEN_1_1OpenGL_1_1Shader.html#aaeb83a15e709d50be52b7d931730d9a0":[6,0,0,3,3,0]
 };

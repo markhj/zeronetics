@@ -23,6 +23,10 @@ var hierarchy =
       [ "ZEN::Process", "classZEN_1_1Process.html", null ],
       [ "ZEN::RenderLayer", "classZEN_1_1RenderLayer.html", null ]
     ] ],
+    [ "ZEN::HxlDocument", "structZEN_1_1HxlDocument.html", null ],
+    [ "ZEN::HxlNode", "structZEN_1_1HxlNode.html", null ],
+    [ "ZEN::HxlNodeValue", "structZEN_1_1HxlNodeValue.html", null ],
+    [ "ZEN::HxlSerializer", "classZEN_1_1HxlSerializer.html", null ],
     [ "ZEN::IAsset", "classZEN_1_1IAsset.html", [
       [ "ZEN::ITexture2D", "classZEN_1_1ITexture2D.html", [
         [ "ZEN::Assets::Texture2D", "classZEN_1_1Assets_1_1Texture2D.html", null ]

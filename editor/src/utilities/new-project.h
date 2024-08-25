@@ -15,6 +15,8 @@ namespace ZenEdit {
 
         void render() override;
 
+        std::function<void(Path rootFolder)> onCreate = [&](const Path &rootFolder) {};
+
     private:
         bool *m_showBox;
 
@@ -33,6 +35,5 @@ namespace ZenEdit {
         void createProject();
 
         void copyStub(const Path &root, const char *file);
-
     };
 }

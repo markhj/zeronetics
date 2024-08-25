@@ -33,6 +33,7 @@ add_executable(editor
         src/utilities/scene-entity.cpp
         src/utilities/font-manager.cpp
         src/utilities/project-settings.cpp
+        src/utilities/load-project.cpp
 
         # GLAD
         ${ZEN_VENDOR_DIR}/glad/src/glad.c
@@ -48,8 +49,16 @@ add_executable(editor
         ${ZEN_VENDOR_DIR}/imgui/backends/imgui_impl_opengl3.cpp
         )
 
-target_link_libraries(editor PRIVATE zeronetics glfw opengl-renderer glsl-shader-builder gizmos control-systems)
+target_link_libraries(editor PRIVATE
+        zeronetics
+        glfw
+        opengl-renderer
+        glsl-shader-builder
+        gizmos
+        cpp_hxl_lang
+        control-systems)
 
+target_include_directories(editor PUBLIC ${ZEN_VENDOR_DIR}/cpp-hxl-lang/include)
 target_include_directories(editor PRIVATE ${ZEN_VENDOR_DIR}/glfw/include)
 target_include_directories(editor PUBLIC ${ZEN_VENDOR_DIR}/imgui)
 

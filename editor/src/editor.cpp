@@ -4,6 +4,7 @@
 #include "utilities/about.h"
 #include "utilities/editor-ui.h"
 #include "utilities/font-manager.h"
+#include "utilities/load-project.h"
 #include "utilities/new-project.h"
 #include "utilities/project-settings.h"
 #include "utilities/side-panel.h"
@@ -100,8 +101,17 @@ void ZenEdit::Editor::run() {
     MainMenu mainMenu = createMainMenu();
     About about(&m_showAbout);
     NewProject newProject(&m_showNewProject);
+    LoadProject loadProject(&m_showLoadProject);
     ProjectSettings projectSettings(&m_showProjectSettings, m_project);
     SidePanel sidePanel;
+
+    newProject.onCreate = [&](const Path &path) {
+        m_project->load(path);
+    };
+
+    loadProject.onLoad =  [&](const Path &path) {
+        m_project->load(path);
+    };
 
     FontManager::initialize();
 
@@ -131,6 +141,10 @@ void ZenEdit::Editor::run() {
 
         if (m_showProjectSettings) {
             projectSettings.render();
+        }
+
+        if (m_showLoadProject) {
+            loadProject.render();
         }
 
         FontManager::end();
@@ -281,7 +295,7 @@ void ZenEdit::Editor::setUpFreeCamera() {
 }
 
 void ZenEdit::Editor::saveFile() {
-    std::cout << "Save file";
+    m_project->save();
 }
 
 ZenEdit::MainMenu ZenEdit::Editor::createMainMenu() {
@@ -289,6 +303,7 @@ ZenEdit::MainMenu ZenEdit::Editor::createMainMenu() {
     fileMenu.title = "File";
     fileMenu.items.emplace_back(MainMenuItem{MainMenuType::Item, "New Project...", "", {}, [&]() { m_showNewProject = true; }});
     fileMenu.items.emplace_back(MainMenuItem{MainMenuType::Separator});
+    fileMenu.items.emplace_back(MainMenuItem{MainMenuType::Item, "Load...", "", {}, [&]() { m_showLoadProject = true; }});
     fileMenu.items.emplace_back(MainMenuItem{MainMenuType::Item, "Save", "", {}, [&]() { saveFile(); }});
     fileMenu.items.emplace_back(MainMenuItem{MainMenuType::Separator});
     fileMenu.items.emplace_back(MainMenuItem{MainMenuType::Item, "Exit", "", {}, [&]() { std::exit(0); }});

@@ -1,11 +1,5 @@
 var NAVTREEINDEX3 =
 {
-"render-manager.html":[2,7,0],
-"render-manager.html#autotoc_md112":[3],
-"render-manager.html#autotoc_md113":[4],
-"rendering.html":[2,7],
-"result.html":[2,11],
-"result.html#autotoc_md52":[3],
 "result.html#autotoc_md53":[4],
 "setting-up-a-game.html":[0,1],
 "setting-up-a-game.html#autotoc_md12":[0],
@@ -133,5 +127,11 @@ var NAVTREEINDEX3 =
 "tutorials.html#autotoc_md45":[3],
 "tutorials.html#autotoc_md46":[4],
 "vertices.html":[2,2,2],
-"vertices.html#autotoc_md83":[8]
+"vertices.html#autotoc_md83":[8],
+"":[5,0,0,21],
+"":[5,0,0,20],
+"":[5,0,0,22],
+"":[5,0,0,23],
+"":[5,0,0,24],
+"":[5,0,0,25]
 };

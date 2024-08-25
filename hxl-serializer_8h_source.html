@@ -104,8 +104,8 @@ $(document).ready(function(){initNavTree('hxl-serializer_8h_source.html',''); in
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    };</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
 <div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="structZEN_1_1HxlNode.html">   17</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structZEN_1_1HxlNode.html">HxlNode</a> {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">char</span> *type, *name;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        std::map&lt;const char *, HxlNodeValue&gt; properties;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        std::string type, name;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        std::map&lt;std::string, HxlNodeValue&gt; properties;</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    };</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
 <div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="structZEN_1_1HxlDocument.html">   22</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structZEN_1_1HxlDocument.html">HxlDocument</a> {</div>

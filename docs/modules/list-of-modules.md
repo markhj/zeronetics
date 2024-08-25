@@ -4,7 +4,7 @@
 |-------------------------|--------------------------|-----------------------------------------------|
 | ``assets``              | -                        | Standard asset manager                        |
 | ``control-systems``     | @ref control-systems     | Standard control system with assists          |
-| ``gizmos``              | -                        | Misc. gizmos/tools for 3D editing             |
+| ``gizmos``              | @ref gizmos              | Misc. gizmos/tools for 3D editing             |
 | ``glfw-window``         | -                        | Creates window and handles inputs, using GLFW |
 | ``glsl-shader-builder`` | @ref glsl-shader-builder | Shader builder for OpenGL/GLSL                |
 | ``opengl-renderer``     | @ref opengl              | Renders OpenGL using GLAD                     |

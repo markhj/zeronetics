@@ -24,7 +24,7 @@ std::optional<ZEN::MousePosition> s_lastPosition;
 ZenEdit::Editor::Editor() : m_renderer(std::make_shared<OpenGL::Renderer>(OpenGL::Renderer())),
                             m_renderManager(std::make_shared<RenderManager>(RenderManager())),
                             m_camera(std::make_shared<Camera3D>(Camera3D())) {
-    m_camera->position = Vec3(2.0);
+    m_camera->position = Vec3(4.0);
     m_camera->target = Vec3(0.0);
 }
 
@@ -209,6 +209,7 @@ void ZenEdit::Editor::setUpMainLayer() {
 
 void ZenEdit::Editor::setUpGrid() {
     auto grid3d = ZEN::Gizmos::Grid3D();
+    grid3d.lines = 30;
 
     m_gridLayer = std::make_shared<RenderLayer>(grid3d.generate());
 

@@ -8,7 +8,8 @@
 
 @subpage control-systems  
 @subpage glsl-shader-builder  
-@subpage opengl
+@subpage opengl  
+@subpage gizmos
 
 ## Engine development
 

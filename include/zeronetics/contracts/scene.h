@@ -7,12 +7,28 @@
 #include <memory>
 
 namespace ZEN {
+    /**
+     * Scene Contract
+     */
     class IScene {
     public:
+        /**
+         * 3D camera
+         */
         std::shared_ptr<ICamera3D> camera3d;
 
+        /**
+         * Add a renderable to the scene.
+         *
+         * @param renderable
+         */
         virtual void add(const std::shared_ptr<IRenderable3D> &renderable) noexcept = 0;
 
+        /**
+         * Get all renderables from the scene.
+         *
+         * @return
+         */
         [[nodiscard]] virtual std::vector<std::shared_ptr<IRenderable3D>> getRenderable3Ds() const noexcept = 0;
 
     };

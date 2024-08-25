@@ -32,6 +32,8 @@ namespace ZenEdit {
 
         std::shared_ptr<Project> m_project;
 
+        std::shared_ptr<Scene> m_activeScene;
+
         std::shared_ptr<OpenGL::Renderer> m_renderer;
 
         std::shared_ptr<RenderManager> m_renderManager;

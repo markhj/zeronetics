@@ -26,7 +26,9 @@ std::optional<ZEN::MousePosition> s_lastPosition;
 ZenEdit::Editor::Editor() : m_renderer(std::make_shared<OpenGL::Renderer>(OpenGL::Renderer())),
                             m_renderManager(std::make_shared<RenderManager>(RenderManager())),
                             m_camera(std::make_shared<Camera3D>(Camera3D())),
-                            m_project(std::make_shared<Project>(Project())) {
+                            m_project(std::make_shared<Project>(Project())),
+                            m_activeScene(std::make_shared<Scene>(Scene())),
+                            m_delta(0.0) {
     m_camera->position = Vec3(4.0);
     m_camera->target = Vec3(0.0);
 }

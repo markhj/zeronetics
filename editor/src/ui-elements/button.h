@@ -8,6 +8,8 @@ namespace ZenEdit {
     public:
         const char *text;
 
+        bool disabled = false;
+
         std::function<void()> onClick = []() {};
 
         void render() override;

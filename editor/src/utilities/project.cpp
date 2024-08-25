@@ -1,7 +1,7 @@
 #include "project.h"
 #include "hxl-lang/hxl-lang.h"
+#include "hxl-serializer/hxl-serializer.h"
 #include <iostream>
-
 
 namespace {
     HXL::Schema schema;
@@ -57,5 +57,18 @@ void ZenEdit::Project::save() {
     Path hxlProject(m_path->getAbsolute() + "/project.hxl");
     File hxlSource(hxlProject);
 
-    hxlSource.setData(std::format("<Project>\n\tname: \"{}\"\n", name));
+    std::string source = HxlSerializer::serialize({.nodes = {
+                                                           HxlNode{
+                                                                   .type = "Project",
+                                                                   .name = "Project",
+                                                                   .properties = {
+                                                                           {"name", HxlNodeValue{
+                                                                                            .dataType = HxlDataType::String,
+                                                                                            .values = {name},
+                                                                                    }},
+                                                                   },
+                                                           },
+                                                   }});
+
+    hxlSource.setData(source);
 }

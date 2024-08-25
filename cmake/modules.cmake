@@ -6,6 +6,7 @@ set(ZEN_MODULES
         control-systems
         assets
         gizmos
+        hxl-serializer
         scene-loader-hxl)
 
 # Define the vendor (third-party) libraries required on a per-module basis.
@@ -14,3 +15,4 @@ set(LIBS_GLFW_WINDOW glfw3)
 set(LIBS_OPENGL_RENDERER)
 set(LIBS_CONTROL_SYSTEMS)
 set(LIBS_SCENE_LOADER_HXL cpp_hxl_lang)
+set(LIBS_HXL_SERIALIZER cpp_hxl_lang)

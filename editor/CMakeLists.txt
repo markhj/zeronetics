@@ -54,6 +54,7 @@ target_link_libraries(editor PRIVATE
         glfw
         opengl-renderer
         glsl-shader-builder
+        hxl-serializer
         gizmos
         cpp_hxl_lang
         control-systems)

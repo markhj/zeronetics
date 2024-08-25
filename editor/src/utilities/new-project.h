@@ -1,6 +1,7 @@
 #pragma once
 
 #include "editor-utility.h"
+#include "text-field.h"
 
 namespace ZenEdit {
     class NewProject : public EditorUtility {
@@ -11,6 +12,8 @@ namespace ZenEdit {
 
     private:
         bool *m_showBox;
+
+        TextField m_projectName;
 
     };
 }

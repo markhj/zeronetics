@@ -1,8 +1,10 @@
 #include "editor.h"
-#include "editor-ui.h"
+#include "box.h"
 #include "ui-elements/button.h"
 #include "utilities/about.h"
+#include "utilities/editor-ui.h"
 #include "utilities/new-project.h"
+#include "utilities/side-panel.h"
 
 #include <gizmos/3d-grid.h>
 #include <glsl-shader-builder/glsl-shader-builder.h>
@@ -23,7 +25,8 @@ std::optional<ZEN::MousePosition> s_lastPosition;
 
 ZenEdit::Editor::Editor() : m_renderer(std::make_shared<OpenGL::Renderer>(OpenGL::Renderer())),
                             m_renderManager(std::make_shared<RenderManager>(RenderManager())),
-                            m_camera(std::make_shared<Camera3D>(Camera3D())) {
+                            m_camera(std::make_shared<Camera3D>(Camera3D())),
+                            m_project(std::make_shared<Project>(Project())) {
     m_camera->position = Vec3(4.0);
     m_camera->target = Vec3(0.0);
 }
@@ -92,6 +95,7 @@ void ZenEdit::Editor::run() {
     MainMenu mainMenu = createMainMenu();
     About about(&m_showAbout);
     NewProject newProject(&m_showNewProject);
+    SidePanel sidePanel;
 
     while (!glfwWindowShouldClose(m_window)) {
         m_delta = 1.0f / io.Framerate;
@@ -105,6 +109,7 @@ void ZenEdit::Editor::run() {
 
         mainMenu.render();
         editorUi.render();
+        sidePanel.render();
 
         if (m_showAbout) {
             about.render();
@@ -180,18 +185,16 @@ void ZenEdit::Editor::addCube() {
 }
 
 void ZenEdit::Editor::setUpMainLayer() {
-    ZEN::GLSLShaderBuilder shaderBuilder;
     ZEN::ShaderBlueprint blueprint{
             .attributes = m_defaultAttribs,
             .projection = Projection::Perspective,
     };
 
+    ZEN::GLSLShaderBuilder shaderBuilder;
     std::string vertex = shaderBuilder.make(blueprint, ShaderStage::Vertex).value();
     std::string frag = shaderBuilder.make(blueprint, ShaderStage::Fragment).value();
 
-    std::shared_ptr<ZEN::OpenGL::Shader> shader;
-    shader = std::make_shared<ZEN::OpenGL::Shader>(ZEN::OpenGL::Shader());
-
+    std::shared_ptr<ZEN::OpenGL::Shader> shader = std::make_shared<ZEN::OpenGL::Shader>(ZEN::OpenGL::Shader());
     shader->create();
     shader->setSource(ShaderStage::Vertex, vertex);
     shader->setSource(ShaderStage::Fragment, frag);
@@ -204,7 +207,6 @@ void ZenEdit::Editor::setUpMainLayer() {
     m_mainLayer->camera3d = m_camera;
     m_mainLayer->renderGroups3d.emplace_back(renderGroup);
     m_renderManager->attachLayer(m_mainLayer);
-
 }
 
 void ZenEdit::Editor::setUpGrid() {
@@ -269,15 +271,15 @@ void ZenEdit::Editor::saveFile() {
 ZenEdit::MainMenu ZenEdit::Editor::createMainMenu() {
     MainMenuItem fileMenu{};
     fileMenu.title = "File";
-    fileMenu.items.emplace_back(MainMenuItem{MainMenuType::Item, "New Project...", "", {}, [&](){ m_showNewProject = true; }});
+    fileMenu.items.emplace_back(MainMenuItem{MainMenuType::Item, "New Project...", "", {}, [&]() { m_showNewProject = true; }});
     fileMenu.items.emplace_back(MainMenuItem{MainMenuType::Separator});
-    fileMenu.items.emplace_back(MainMenuItem{MainMenuType::Item, "Save", "", {}, [&](){ saveFile(); }});
+    fileMenu.items.emplace_back(MainMenuItem{MainMenuType::Item, "Save", "", {}, [&]() { saveFile(); }});
     fileMenu.items.emplace_back(MainMenuItem{MainMenuType::Separator});
-    fileMenu.items.emplace_back(MainMenuItem{MainMenuType::Item, "Exit", "", {}, [&](){ std::exit(0); }});
+    fileMenu.items.emplace_back(MainMenuItem{MainMenuType::Item, "Exit", "", {}, [&]() { std::exit(0); }});
 
     MainMenuItem helpMenu{};
     helpMenu.title = "Help";
-    helpMenu.items.emplace_back(MainMenuItem{MainMenuType::Item, "About...", "", {}, [&](){ m_showAbout = true; }});
+    helpMenu.items.emplace_back(MainMenuItem{MainMenuType::Item, "About...", "", {}, [&]() { m_showAbout = true; }});
 
     MainMenu mainMenu;
     mainMenu.mainMenuItems.emplace_back(fileMenu);

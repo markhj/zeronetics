@@ -12,7 +12,7 @@ add_executable(editor
 
         # Editor
         src/editor.cpp
-        src/editor-ui.cpp
+        src/utilities/editor-ui.cpp
 
         # UI Elements
         src/ui-elements/ui-element.cpp
@@ -20,12 +20,17 @@ add_executable(editor
         src/ui-elements/label.cpp
         src/ui-elements/separator.cpp
         src/ui-elements/box.cpp
+        src/ui-elements/text-field.cpp
 
         # Utilities
         src/utilities/editor-utility.cpp
         src/utilities/main-menu.cpp
         src/utilities/about.cpp
         src/utilities/new-project.cpp
+        src/utilities/side-panel.cpp
+        src/utilities/project.cpp
+        src/utilities/scene.cpp
+        src/utilities/scene-entity.cpp
 
         # GLAD
         ${ZEN_VENDOR_DIR}/glad/src/glad.c

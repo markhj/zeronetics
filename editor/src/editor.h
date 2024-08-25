@@ -7,9 +7,10 @@
 #include <GLFW/glfw3.h>
 
 #include "control-systems/free-camera.h"
+#include "utilities/main-menu.h"
+#include "utilities/project.h"
 #include "zeronetics/entities/3d/camera-3d.h"
 #include "zeronetics/render/render-manager.h"
-#include "utilities/main-menu.h"
 
 #include <control-systems/control-assist.h>
 #include <opengl-renderer/opengl.h>
@@ -28,6 +29,8 @@ namespace ZenEdit {
 
     private:
         GLFWwindow *m_window = nullptr;
+
+        std::shared_ptr<Project> m_project;
 
         std::shared_ptr<OpenGL::Renderer> m_renderer;
 

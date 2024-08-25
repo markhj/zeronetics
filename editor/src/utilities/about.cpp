@@ -9,6 +9,8 @@ ZenEdit::About::About(bool *showBox) : m_showBox(showBox) {
 
 void ZenEdit::About::render() {
     Box box("About ZenEdit");
+    box.collapsible = false;
+    box.resizable = false;
     box.contains([&]() {
         Label("ZenEdit").render();
         Separator().render();

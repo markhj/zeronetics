@@ -103,7 +103,7 @@ void ZenEdit::Editor::run() {
     NewProject newProject(&m_showNewProject);
     LoadProject loadProject(&m_showLoadProject);
     ProjectSettings projectSettings(&m_showProjectSettings, m_project);
-    SidePanel sidePanel;
+    SidePanel sidePanel(m_project);
 
     newProject.onCreate = [&](const Path &path) {
         m_project->load(path);

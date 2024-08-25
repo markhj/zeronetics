@@ -15,8 +15,8 @@ namespace ZEN {
     };
 
     struct HxlNode {
-        const char *type, *name;
-        std::map<const char *, HxlNodeValue> properties;
+        std::string type, name;
+        std::map<std::string, HxlNodeValue> properties;
     };
 
     struct HxlDocument {

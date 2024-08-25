@@ -73,7 +73,8 @@ void ZenEdit::NewProject::createProject() {
     mkdir(std::string(fullPath + "/src").c_str());
 
     // Create the main project HXL file
-    std::string hxlProjectSource = std::format("<Project> Project\n\tname: \"{}\"\n", *m_projectName.value);
+    std::string hxlProjectSource = std::format("<Project> Project\n\tname: \"{}\"\n\n", *m_projectName.value);
+    hxlProjectSource += std::format("<Scene> Scene1\n");
     Path hxlProjectPath(fullPath + "/project.hxl");
     File hxlProject(hxlProjectPath);
     hxlProject.createIfNotExists();

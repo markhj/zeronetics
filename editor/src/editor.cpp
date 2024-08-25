@@ -70,6 +70,7 @@ void ZenEdit::Editor::initialize() noexcept(false) {
     io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
 
     configureControls();
+    configureStyle();
 
     setUpMainLayer();
     setUpGrid();
@@ -81,6 +82,14 @@ void ZenEdit::Editor::initialize() noexcept(false) {
 
 void ZenEdit::Editor::run() {
     ImGuiIO &io = ImGui::GetIO();
+
+    const char* fontPath = "./assets/fonts/Roboto/Roboto-Regular.ttf";
+    float fontSize = 18.0f;
+    ImFont* robotoRegular = io.Fonts->AddFontFromFileTTF(fontPath, fontSize, nullptr, io.Fonts->GetGlyphRangesDefault());
+    if (robotoRegular == nullptr) {
+        std::cerr << "Failed to load font." << std::endl;
+    }
+    io.Fonts->Build();
 
     Container mainContainer{
             .title = "Objects"};
@@ -288,4 +297,15 @@ ZenEdit::MainMenu ZenEdit::Editor::createMainMenu() {
     mainMenu.mainMenuItems.emplace_back(helpMenu);
 
     return mainMenu;
+}
+
+void ZenEdit::Editor::configureStyle() {
+    ImGuiStyle& style = ImGui::GetStyle();
+    ImVec4* colors = style.Colors;
+
+    colors[ImGuiCol_WindowBg] = ImVec4(0.1f, 0.1f, 0.1f, 0.99f);
+
+    style.WindowPadding = ImVec2(20, 20);
+    style.FramePadding = ImVec2(10, 10);
+    style.ItemSpacing = ImVec2(12, 8);
 }

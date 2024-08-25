@@ -79,5 +79,7 @@ namespace ZenEdit {
         void setUpFreeCamera();
 
         void saveFile();
+
+        void configureStyle();
     };
 }

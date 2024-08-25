@@ -52,4 +52,5 @@ target_include_directories(editor PRIVATE ${ZEN_VENDOR_DIR}/glfw/include)
 target_include_directories(editor PUBLIC ${ZEN_VENDOR_DIR}/imgui)
 
 file(COPY stub DESTINATION ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
+file(COPY assets DESTINATION ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
 

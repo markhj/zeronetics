@@ -5,6 +5,7 @@
 #include "utilities/editor-ui.h"
 #include "utilities/font-manager.h"
 #include "utilities/new-project.h"
+#include "utilities/project-settings.h"
 #include "utilities/side-panel.h"
 
 #include <gizmos/3d-grid.h>
@@ -99,6 +100,7 @@ void ZenEdit::Editor::run() {
     MainMenu mainMenu = createMainMenu();
     About about(&m_showAbout);
     NewProject newProject(&m_showNewProject);
+    ProjectSettings projectSettings(&m_showProjectSettings, m_project);
     SidePanel sidePanel;
 
     FontManager::initialize();
@@ -125,6 +127,10 @@ void ZenEdit::Editor::run() {
 
         if (m_showNewProject) {
             newProject.render();
+        }
+
+        if (m_showProjectSettings) {
+            projectSettings.render();
         }
 
         FontManager::end();
@@ -287,12 +293,17 @@ ZenEdit::MainMenu ZenEdit::Editor::createMainMenu() {
     fileMenu.items.emplace_back(MainMenuItem{MainMenuType::Separator});
     fileMenu.items.emplace_back(MainMenuItem{MainMenuType::Item, "Exit", "", {}, [&]() { std::exit(0); }});
 
+    MainMenuItem projectMenu{};
+    projectMenu.title = "Project";
+    projectMenu.items.emplace_back(MainMenuItem{MainMenuType::Item, "Settings...", "", {}, [&]() { m_showProjectSettings = true; }});
+
     MainMenuItem helpMenu{};
     helpMenu.title = "Help";
     helpMenu.items.emplace_back(MainMenuItem{MainMenuType::Item, "About...", "", {}, [&]() { m_showAbout = true; }});
 
     MainMenu mainMenu;
     mainMenu.mainMenuItems.emplace_back(fileMenu);
+    mainMenu.mainMenuItems.emplace_back(projectMenu);
     mainMenu.mainMenuItems.emplace_back(helpMenu);
 
     return mainMenu;

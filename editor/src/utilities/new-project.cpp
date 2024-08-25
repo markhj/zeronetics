@@ -12,6 +12,8 @@
 ZenEdit::NewProject::NewProject(bool *showBox) : m_showBox(showBox) {
     m_createButton.text = "Create Project";
     m_createButton.onClick = [&]() { createProject(); };
+    m_location.label = "Location";
+    m_projectName.label = "Project Name";
 }
 
 void ZenEdit::NewProject::render() {
@@ -24,13 +26,11 @@ void ZenEdit::NewProject::render() {
     Box box("New Project");
     box.resizable = false;
     box.collapsible = false;
+    box.size = Vec2(500, 300);
     box.contains([&]() {
         Label("Create a new project.").render();
 
-        m_location.label = "Location";
         m_location.render();
-
-        m_projectName.label = "Project Name";
         m_projectName.render();
 
         if (m_createError.has_value() && !m_createError->empty()) {

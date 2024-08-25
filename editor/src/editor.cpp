@@ -2,6 +2,7 @@
 #include "editor-ui.h"
 #include "ui-elements/button.h"
 #include "utilities/about.h"
+#include "utilities/new-project.h"
 
 #include <gizmos/3d-grid.h>
 #include <glsl-shader-builder/glsl-shader-builder.h>
@@ -90,6 +91,7 @@ void ZenEdit::Editor::run() {
 
     MainMenu mainMenu = createMainMenu();
     About about(&m_showAbout);
+    NewProject newProject(&m_showNewProject);
 
     while (!glfwWindowShouldClose(m_window)) {
         m_delta = 1.0f / io.Framerate;
@@ -106,6 +108,10 @@ void ZenEdit::Editor::run() {
 
         if (m_showAbout) {
             about.render();
+        }
+
+        if (m_showNewProject) {
+            newProject.render();
         }
 
         ImGui::Render();
@@ -262,6 +268,8 @@ void ZenEdit::Editor::saveFile() {
 ZenEdit::MainMenu ZenEdit::Editor::createMainMenu() {
     MainMenuItem fileMenu{};
     fileMenu.title = "File";
+    fileMenu.items.emplace_back(MainMenuItem{MainMenuType::Item, "New Project...", "", {}, [&](){ m_showNewProject = true; }});
+    fileMenu.items.emplace_back(MainMenuItem{MainMenuType::Separator});
     fileMenu.items.emplace_back(MainMenuItem{MainMenuType::Item, "Save", "", {}, [&](){ saveFile(); }});
     fileMenu.items.emplace_back(MainMenuItem{MainMenuType::Separator});
     fileMenu.items.emplace_back(MainMenuItem{MainMenuType::Item, "Exit", "", {}, [&](){ std::exit(0); }});

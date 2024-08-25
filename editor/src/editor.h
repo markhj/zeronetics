@@ -48,7 +48,8 @@ namespace ZenEdit {
 
         bool m_freeCameraActive = false;
 
-        bool m_showAbout = false;
+        bool m_showAbout = false,
+             m_showNewProject = false;
 
         MainMenu createMainMenu();
 

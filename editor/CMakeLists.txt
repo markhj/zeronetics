@@ -20,6 +20,7 @@ add_executable(editor
         src/utilities/editor-utility.cpp
         src/utilities/main-menu.cpp
         src/utilities/about.cpp
+        src/utilities/new-project.cpp
 
         # GLAD
         ${ZEN_VENDOR_DIR}/glad/src/glad.c

@@ -3,6 +3,7 @@
 #include "ui-elements/button.h"
 #include "utilities/about.h"
 #include "utilities/editor-ui.h"
+#include "utilities/font-manager.h"
 #include "utilities/new-project.h"
 #include "utilities/side-panel.h"
 
@@ -83,14 +84,6 @@ void ZenEdit::Editor::initialize() noexcept(false) {
 void ZenEdit::Editor::run() {
     ImGuiIO &io = ImGui::GetIO();
 
-    const char* fontPath = "./assets/fonts/Roboto/Roboto-Regular.ttf";
-    float fontSize = 18.0f;
-    ImFont* robotoRegular = io.Fonts->AddFontFromFileTTF(fontPath, fontSize, nullptr, io.Fonts->GetGlyphRangesDefault());
-    if (robotoRegular == nullptr) {
-        std::cerr << "Failed to load font." << std::endl;
-    }
-    io.Fonts->Build();
-
     Container mainContainer{
             .title = "Objects"};
 
@@ -108,6 +101,8 @@ void ZenEdit::Editor::run() {
     NewProject newProject(&m_showNewProject);
     SidePanel sidePanel;
 
+    FontManager::initialize();
+
     while (!glfwWindowShouldClose(m_window)) {
         m_delta = 1.0f / io.Framerate;
 
@@ -117,6 +112,8 @@ void ZenEdit::Editor::run() {
         ImGui_ImplOpenGL3_NewFrame();
         ImGui_ImplGlfw_NewFrame();
         ImGui::NewFrame();
+
+        FontManager::start();
 
         mainMenu.render();
         editorUi.render();
@@ -129,6 +126,8 @@ void ZenEdit::Editor::run() {
         if (m_showNewProject) {
             newProject.render();
         }
+
+        FontManager::end();
 
         ImGui::Render();
         m_renderer->render();

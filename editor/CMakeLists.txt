@@ -31,6 +31,7 @@ add_executable(editor
         src/utilities/project.cpp
         src/utilities/scene.cpp
         src/utilities/scene-entity.cpp
+        src/utilities/font-manager.cpp
 
         # GLAD
         ${ZEN_VENDOR_DIR}/glad/src/glad.c

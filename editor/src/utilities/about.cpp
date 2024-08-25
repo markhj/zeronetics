@@ -1,6 +1,7 @@
 #include "about.h"
 #include "box.h"
 #include "button.h"
+#include "font-manager.h"
 #include "label.h"
 #include "separator.h"
 
@@ -12,7 +13,10 @@ void ZenEdit::About::render() {
     box.collapsible = false;
     box.resizable = false;
     box.contains([&]() {
-        Label("ZenEdit").render();
+        FontManager::black([&]() {
+            Label("ZenEdit").render();
+        });
+
         Separator().render();
         Label("This is the editor for the Zeronetics game engine.").render();
 

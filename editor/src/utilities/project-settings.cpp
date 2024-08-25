@@ -14,7 +14,7 @@ void ZenEdit::ProjectSettings::render() {
     box.contains([&]() {
         TextField projectName;
         projectName.label = "Project Name";
-        projectName.value = m_project->name;
+        projectName.value = &m_project->name;
         projectName.render();
     });
     box.render();

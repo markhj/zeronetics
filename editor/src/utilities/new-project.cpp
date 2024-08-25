@@ -9,18 +9,24 @@
 #include <iostream>
 #include <regex>
 
+namespace {
+    std::string projectName, projectLocation;
+}
+
 ZenEdit::NewProject::NewProject(bool *showBox) : m_showBox(showBox) {
     m_createButton.text = "Create Project";
     m_createButton.onClick = [&]() { createProject(); };
     m_location.label = "Location";
+    m_location.value = &projectLocation;
     m_projectName.label = "Project Name";
+    m_projectName.value = &projectName;
 }
 
 void ZenEdit::NewProject::render() {
-    if (m_location.value.empty()) {
+    if (m_location.value->empty()) {
         m_basePath.reset();
     } else {
-        m_basePath = Path(m_location.value);
+        m_basePath = Path(*m_location.value);
     }
 
     Box box("New Project");
@@ -37,7 +43,7 @@ void ZenEdit::NewProject::render() {
             Label(m_createError.value().c_str()).render();
         }
 
-        m_createButton.disabled = !m_basePath.has_value() || !m_basePath->exists() || !std::regex_match(m_projectName.value, m_regexProjectName);
+        m_createButton.disabled = !m_basePath.has_value() || !m_basePath->exists() || !std::regex_match(*m_projectName.value, m_regexProjectName);
         m_createButton.render();
 
         Button closeButton;
@@ -49,11 +55,12 @@ void ZenEdit::NewProject::render() {
 }
 
 void ZenEdit::NewProject::createProject() {
-    if (m_location.value[m_location.value.length() - 1] != '\\') {
-        m_location.value += '\\';
+    std::string loc = *m_location.value;
+    if (loc[loc.length() - 1] != '\\') {
+        loc += '\\';
     }
 
-    std::string fullPath = m_location.value + m_projectName.value;
+    std::string fullPath = loc + *m_projectName.value;
     Path rootFolder(fullPath);
 
     if (rootFolder.exists()) {
@@ -66,7 +73,7 @@ void ZenEdit::NewProject::createProject() {
     mkdir(std::string(fullPath + "/src").c_str());
 
     // Create the main project HXL file
-    std::string hxlProjectSource = std::format("<Project>\n\tname: {}\n", m_projectName.value);
+    std::string hxlProjectSource = std::format("<Project>\n\tname: {}\n", *m_projectName.value);
     Path hxlProjectPath(fullPath + "/project.hxl");
     File hxlProject(hxlProjectPath);
     hxlProject.createIfNotExists();
@@ -75,8 +82,8 @@ void ZenEdit::NewProject::createProject() {
     copyStub(rootFolder, "CMakeLists.txt");
     copyStub(rootFolder, "src/main.cpp");
 
-    m_projectName.value.clear();
-    m_location.value.clear();
+    m_projectName.value->clear();
+    m_location.value->clear();
     *m_showBox = false;
 }
 

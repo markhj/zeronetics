@@ -9,7 +9,7 @@ namespace ZenEdit {
     public:
         const char *label = "";
 
-        std::string value;
+        std::string *value;
 
         void render() override;
 

@@ -9,8 +9,12 @@ namespace {
 
     HXL::DeserializationProtocol deserializationProtocol;
 
-    std::string projectName;
-    std::vector<ZenEdit::Scene> projectScenes;
+    struct MakeProject {
+        std::string projectName;
+        std::vector<ZenEdit::Scene> projectScenes;
+    };
+
+    MakeProject makeProject;
 }
 
 ZenEdit::Project::Project() {
@@ -21,15 +25,16 @@ ZenEdit::Project::Project() {
 
     schema.types.push_back({"Scene"});
 
+
     HXL::DeserializationHandle dsProject{"Project"};
     dsProject.handle = [&](const HXL::DeserializedNode &node) {
         auto it = node.properties.find("name");
-        projectName = it != node.properties.end() ? std::get<std::string>((*it).second.value) : "";
+        makeProject.projectName = it != node.properties.end() ? std::get<std::string>((*it).second.value) : "";
     };
 
     HXL::DeserializationHandle dsScene{"Scene"};
     dsScene.handle = [&](const HXL::DeserializedNode &node) {
-        projectScenes.emplace_back(Scene{
+        makeProject.projectScenes.emplace_back(Scene{
                 .name = node.name,
         });
     };
@@ -46,6 +51,7 @@ void ZenEdit::Project::load(const Path &path) {
     reset();
 
     m_path = path;
+    makeProject = MakeProject();
 
     Path hxlProject(path.getAbsolute() + "/project.hxl");
 
@@ -63,8 +69,8 @@ void ZenEdit::Project::load(const Path &path) {
         throw std::runtime_error(result.errors[0].message);
     }
 
-    name = projectName;
-    scenes = projectScenes;
+    name = makeProject.projectName;
+    scenes = makeProject.projectScenes;
 }
 
 void ZenEdit::Project::save() {

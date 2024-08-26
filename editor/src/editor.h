@@ -9,7 +9,7 @@
 #include "control-systems/free-camera.h"
 #include "utilities/editor-config.h"
 #include "utilities/main-menu.h"
-#include "utilities/project.h"
+#include "utilities/project/project.h"
 #include "zeronetics/entities/3d/camera-3d.h"
 #include "zeronetics/render/render-manager.h"
 

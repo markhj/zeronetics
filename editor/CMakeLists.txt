@@ -25,16 +25,16 @@ add_executable(editor
         # Utilities
         src/utilities/editor-utility.cpp
         src/utilities/main-menu.cpp
-        src/utilities/about.cpp
-        src/utilities/new-project.cpp
+        src/utilities/modals/about.cpp
+        src/utilities/modals/new-project.cpp
         src/utilities/side-panel.cpp
-        src/utilities/project.cpp
-        src/utilities/scene.cpp
-        src/utilities/scene-entity.cpp
+        src/utilities/project/project.cpp
+        src/utilities/project/scene.cpp
+        src/utilities/project/scene-entity.cpp
         src/utilities/font-manager.cpp
-        src/utilities/project-settings.cpp
-        src/utilities/load-project.cpp
-        src/utilities/project-screen.cpp
+        src/utilities/modals/project-settings.cpp
+        src/utilities/modals/load-project.cpp
+        src/utilities/modals/project-screen.cpp
         src/utilities/editor-config.cpp
 
         # GLAD

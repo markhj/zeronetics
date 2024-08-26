@@ -1,7 +1,7 @@
 #include "about.h"
+#include "../font-manager.h"
 #include "box.h"
 #include "button.h"
-#include "font-manager.h"
 #include "label.h"
 #include "separator.h"
 

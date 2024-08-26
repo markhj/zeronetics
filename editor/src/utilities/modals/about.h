@@ -1,6 +1,6 @@
 #pragma once
 
-#include "editor-utility.h"
+#include "../editor-utility.h"
 
 namespace ZenEdit {
     class About : public EditorUtility {

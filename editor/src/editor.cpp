@@ -1,13 +1,13 @@
 #include "editor.h"
 #include "box.h"
 #include "ui-elements/button.h"
-#include "utilities/about.h"
 #include "utilities/editor-ui.h"
 #include "utilities/font-manager.h"
-#include "utilities/load-project.h"
-#include "utilities/new-project.h"
-#include "utilities/project-screen.h"
-#include "utilities/project-settings.h"
+#include "utilities/modals/about.h"
+#include "utilities/modals/load-project.h"
+#include "utilities/modals/new-project.h"
+#include "utilities/modals/project-screen.h"
+#include "utilities/modals/project-settings.h"
 #include "utilities/side-panel.h"
 
 #include <gizmos/3d-grid.h>
@@ -31,7 +31,6 @@ ZenEdit::Editor::Editor() : m_renderer(std::make_shared<OpenGL::Renderer>(OpenGL
                             m_renderManager(std::make_shared<RenderManager>(RenderManager())),
                             m_camera(std::make_shared<Camera3D>(Camera3D())),
                             m_project(std::make_shared<Project>(Project())),
-                            m_activeScene(std::make_shared<Scene>(Scene())),
                             m_delta(0.0) {
     m_camera->position = Vec3(4.0);
     m_camera->target = Vec3(0.0);

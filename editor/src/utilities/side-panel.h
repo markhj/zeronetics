@@ -2,7 +2,7 @@
 
 #include "box.h"
 #include "editor-utility.h"
-#include "project.h"
+#include "project/project.h"
 #include <memory>
 
 namespace ZenEdit {

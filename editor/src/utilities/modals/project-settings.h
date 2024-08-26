@@ -1,8 +1,8 @@
 #pragma once
 
+#include "../editor-utility.h"
+#include "../project/project.h"
 #include "button.h"
-#include "editor-utility.h"
-#include "project.h"
 #include "text-field.h"
 #include "zeronetics/core/io.h"
 #include <regex>

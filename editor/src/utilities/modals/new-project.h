@@ -1,7 +1,7 @@
 #pragma once
 
+#include "../editor-utility.h"
 #include "button.h"
-#include "editor-utility.h"
 #include "text-field.h"
 #include "zeronetics/core/io.h"
 #include <regex>

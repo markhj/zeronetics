@@ -113,6 +113,7 @@ void ZenEdit::Editor::run() {
     newProject.onCreate = [&](const Path &path) { openProject(path); };
     loadProject.onLoad = [&](const Path &path) { openProject(path); };
     projectScreen.onOpenProject = [&](const std::string &path) {  openProject(Path(path)); };
+    sidePanel.onOpenScene = [&](Scene &scene) { openScene(scene); };
 
     FontManager::initialize();
 
@@ -377,4 +378,9 @@ void ZenEdit::Editor::openProject(const Path &path) {
 
     m_editorConfig.save();
     m_editorConfig.load();
+}
+
+void ZenEdit::Editor::openScene(const ZenEdit::Scene &scene) {
+    m_project->activeScene = std::make_shared<ZenEdit::Scene>(scene);
+    m_project->activeScene->load();
 }

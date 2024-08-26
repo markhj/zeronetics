@@ -15,6 +15,8 @@ namespace {
     };
 
     MakeProject makeProject;
+
+    Path *usePath = nullptr;
 }
 
 ZenEdit::Project::Project() {
@@ -34,8 +36,11 @@ ZenEdit::Project::Project() {
 
     HXL::DeserializationHandle dsScene{"Scene"};
     dsScene.handle = [&](const HXL::DeserializedNode &node) {
+        auto it = node.properties.find("path");
+        std::string path = "hxl-data/" + std::get<std::string>((*it).second.value);
         makeProject.projectScenes.emplace_back(Scene{
                 .name = node.name,
+                .path = Path(usePath->getAbsolute() + "/" + path),
         });
     };
 
@@ -51,6 +56,8 @@ void ZenEdit::Project::load(const Path &path) {
     reset();
 
     m_path = path;
+    usePath = &m_path.value();
+
     makeProject = MakeProject();
 
     Path hxlProject(path.getAbsolute() + "/project.hxl");
@@ -95,7 +102,7 @@ void ZenEdit::Project::save() {
                 .type = "Scene",
                 .name = scene.name,
                 .properties = {
-                        {"path", HxlNodeValue{HxlDataType::String, {scene.path->getAbsolute()}}},
+                        {"path", HxlNodeValue{HxlDataType::String, {scene.name + ".hxl"}}},
                 },
         };
 

@@ -12,6 +12,8 @@ namespace ZenEdit {
 
         void render() override;
 
+        std::function<void(Scene &scene)> onOpenScene = [&](Scene &scene) {};
+
     private:
         Box m_box;
 

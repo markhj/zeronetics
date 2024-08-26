@@ -18,6 +18,8 @@ namespace ZenEdit {
 
         std::vector<Scene> scenes;
 
+        std::shared_ptr<Scene> activeScene;
+
         Path getPath(const char *subPath);
 
         void load(const Path &path);

@@ -30,6 +30,8 @@ namespace ZenEdit {
 
         void openProject(const Path &path);
 
+        void openScene(const Scene &scene);
+
     private:
         GLFWwindow *m_window = nullptr;
 
@@ -38,8 +40,6 @@ namespace ZenEdit {
         EditorConfig m_editorConfig;
 
         std::shared_ptr<Project> m_project;
-
-        std::shared_ptr<Scene> m_activeScene;
 
         std::shared_ptr<OpenGL::Renderer> m_renderer;
 

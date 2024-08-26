@@ -3,6 +3,7 @@
 #include "font-manager.h"
 #include "label.h"
 #include <format>
+#include <iostream>
 
 ZenEdit::SidePanel::SidePanel(const std::shared_ptr<Project> &project) : m_box(Box("Side Panel")),
                                                                          m_project(project) {
@@ -16,10 +17,22 @@ ZenEdit::SidePanel::SidePanel(const std::shared_ptr<Project> &project) : m_box(B
 
 void ZenEdit::SidePanel::render() {
     m_box.contains([&]() {
-        for (const auto &scene: m_project->scenes) {
+        for (auto &scene: m_project->scenes) {
             FontManager::bold([&]() {
-                Label(scene.name.c_str()).render();
+                Button btnOpenScene;
+
+                if (m_project->activeScene && m_project->activeScene->name == scene.name) {
+                    btnOpenScene.text = (scene.name + " *").c_str();
+                } else {
+                    btnOpenScene.text = scene.name.c_str();
+                }
+
+                btnOpenScene.onClick = [&]() {
+                    onOpenScene(scene);
+                };
+                btnOpenScene.render();
             });
+            Label(scene.path->getAbsolute().c_str()).render();
         }
 
         Button btnAddScene;

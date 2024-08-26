@@ -38,6 +38,8 @@ ZenEdit::Editor::Editor() : m_renderer(std::make_shared<OpenGL::Renderer>(OpenGL
 }
 
 void ZenEdit::Editor::initialize() noexcept(false) {
+    m_editorConfig.load();
+
     Globals::viewportSize = ViewportSize(1280, 720);
 
     if (!glfwInit()) {
@@ -100,22 +102,18 @@ void ZenEdit::Editor::run() {
     editorUi.containers.push_back(&mainContainer);
 
     MainMenu mainMenu = createMainMenu();
+    MainMenu projectScreenMainMenu = createProjectScreenMainMenu();
+
     About about(&m_showAbout);
     NewProject newProject(&m_showNewProject);
     LoadProject loadProject(&m_showLoadProject);
     ProjectSettings projectSettings(&m_showProjectSettings, m_project);
     SidePanel sidePanel(m_project);
-    ProjectScreen projectScreen(&m_showNewProject, &m_showLoadProject);
+    ProjectScreen projectScreen(&m_editorConfig, &m_showNewProject, &m_showLoadProject);
 
-    newProject.onCreate = [&](const Path &path) {
-        m_project->load(path);
-        m_showProjectScreen = false;
-    };
-
-    loadProject.onLoad = [&](const Path &path) {
-        m_project->load(path);
-        m_showProjectScreen = false;
-    };
+    newProject.onCreate = [&](const Path &path) { openProject(path); };
+    loadProject.onLoad = [&](const Path &path) { openProject(path); };
+    projectScreen.onOpenProject = [&](const std::string &path) {  openProject(Path(path)); };
 
     FontManager::initialize();
 
@@ -133,6 +131,7 @@ void ZenEdit::Editor::run() {
         FontManager::start();
 
         if (m_showProjectScreen) {
+            projectScreenMainMenu.render();
             projectScreen.render();
         } else {
             mainMenu.render();
@@ -310,6 +309,22 @@ void ZenEdit::Editor::saveFile() {
     m_project->save();
 }
 
+ZenEdit::MainMenu ZenEdit::Editor::createProjectScreenMainMenu() {
+    MainMenuItem fileMenu{};
+    fileMenu.title = "File";
+    fileMenu.items.emplace_back(MainMenuItem{MainMenuType::Item, "Exit", "", {}, [&]() { std::exit(0); }});
+
+    MainMenuItem helpMenu{};
+    helpMenu.title = "Help";
+    helpMenu.items.emplace_back(MainMenuItem{MainMenuType::Item, "About...", "", {}, [&]() { m_showAbout = true; }});
+
+    MainMenu mainMenu;
+    mainMenu.mainMenuItems.emplace_back(fileMenu);
+    mainMenu.mainMenuItems.emplace_back(helpMenu);
+
+    return mainMenu;
+}
+
 ZenEdit::MainMenu ZenEdit::Editor::createMainMenu() {
     MainMenuItem fileMenu{};
     fileMenu.title = "File";
@@ -344,4 +359,23 @@ void ZenEdit::Editor::configureStyle() {
     style.WindowPadding = ImVec2(20, 20);
     style.FramePadding = ImVec2(10, 10);
     style.ItemSpacing = ImVec2(12, 8);
+}
+
+void ZenEdit::Editor::openProject(const Path &path) {
+    m_project->load(path);
+    m_showProjectScreen = false;
+
+    auto absolutePath = path.getAbsolute();
+    auto it = std::find_if(m_editorConfig.projects.begin(),
+                           m_editorConfig.projects.end(),
+                           [&](const auto &item) -> bool {
+                               return item == absolutePath;
+                           });
+
+    if (it == m_editorConfig.projects.end()) {
+        m_editorConfig.projects.emplace_back(absolutePath);
+    }
+
+    m_editorConfig.save();
+    m_editorConfig.load();
 }

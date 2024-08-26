@@ -7,6 +7,7 @@
 #include <GLFW/glfw3.h>
 
 #include "control-systems/free-camera.h"
+#include "utilities/editor-config.h"
 #include "utilities/main-menu.h"
 #include "utilities/project.h"
 #include "zeronetics/entities/3d/camera-3d.h"
@@ -27,10 +28,14 @@ namespace ZenEdit {
 
         void run();
 
+        void openProject(const Path &path);
+
     private:
         GLFWwindow *m_window = nullptr;
 
         bool m_showProjectScreen = true;
+
+        EditorConfig m_editorConfig;
 
         std::shared_ptr<Project> m_project;
 
@@ -61,6 +66,8 @@ namespace ZenEdit {
              m_showLoadProject = false;
 
         MainMenu createMainMenu();
+
+        MainMenu createProjectScreenMainMenu();
 
         uint16_t m_nextObjectId = 1;
 

@@ -107,10 +107,12 @@ void ZenEdit::Editor::run() {
 
     newProject.onCreate = [&](const Path &path) {
         m_project->load(path);
+        m_showProjectScreen = false;
     };
 
-    loadProject.onLoad =  [&](const Path &path) {
+    loadProject.onLoad = [&](const Path &path) {
         m_project->load(path);
+        m_showProjectScreen = false;
     };
 
     FontManager::initialize();
@@ -118,6 +120,7 @@ void ZenEdit::Editor::run() {
     while (!glfwWindowShouldClose(m_window)) {
         m_delta = 1.0f / io.Framerate;
 
+        m_renderer->backgroundColor = m_showProjectScreen ? ColorRGB(0.1, 0.115, 0.14) : ColorRGB(0.0, 0.02, 0.1);
         m_renderer->clear();
         m_controlManager->process(m_delta);
 
@@ -128,8 +131,11 @@ void ZenEdit::Editor::run() {
         FontManager::start();
 
         mainMenu.render();
-        editorUi.render();
-        sidePanel.render();
+
+        if (!m_showProjectScreen) {
+            editorUi.render();
+            sidePanel.render();
+        }
 
         if (m_showAbout) {
             about.render();
@@ -150,7 +156,10 @@ void ZenEdit::Editor::run() {
         FontManager::end();
 
         ImGui::Render();
-        m_renderer->render();
+
+        if (!m_showProjectScreen) {
+            m_renderer->render();
+        }
 
         ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 
@@ -325,8 +334,8 @@ ZenEdit::MainMenu ZenEdit::Editor::createMainMenu() {
 }
 
 void ZenEdit::Editor::configureStyle() {
-    ImGuiStyle& style = ImGui::GetStyle();
-    ImVec4* colors = style.Colors;
+    ImGuiStyle &style = ImGui::GetStyle();
+    ImVec4 *colors = style.Colors;
 
     colors[ImGuiCol_WindowBg] = ImVec4(0.1f, 0.1f, 0.1f, 0.99f);
 

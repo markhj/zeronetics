@@ -30,6 +30,8 @@ namespace ZenEdit {
     private:
         GLFWwindow *m_window = nullptr;
 
+        bool m_showProjectScreen = true;
+
         std::shared_ptr<Project> m_project;
 
         std::shared_ptr<Scene> m_activeScene;

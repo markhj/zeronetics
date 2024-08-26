@@ -24,9 +24,17 @@ void ZenEdit::SidePanel::render() {
 
         Button btnAddScene;
         btnAddScene.text = "Add Scene";
-        btnAddScene.onClick = [&]() { m_project->scenes.emplace_back(Scene{
-                                              .name = std::format("Scene{}", m_project->scenes.size() + 1)}); };
+        btnAddScene.onClick = [&]() {
+            addScene(std::format("Scene{}", m_project->scenes.size() + 1));
+        };
         btnAddScene.render();
     });
     m_box.render();
+}
+
+void ZenEdit::SidePanel::addScene(const std::string &name) {
+    m_project->scenes.emplace_back(Scene{
+            .name = name,
+            .path = m_project->getPath(("hxl-data/" + name + ".hxl").c_str()),
+    });
 }

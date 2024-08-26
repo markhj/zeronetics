@@ -18,6 +18,8 @@ namespace ZenEdit {
 
         std::vector<Scene> scenes;
 
+        Path getPath(const char *subPath);
+
         void load(const Path &path);
 
         void reset();

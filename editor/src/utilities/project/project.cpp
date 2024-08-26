@@ -89,11 +89,13 @@ void ZenEdit::Project::save() {
     nodes.emplace_back(nodeProject);
 
     unsigned int i = 1;
-    for (const Scene &scene: scenes) {
+    for (Scene &scene: scenes) {
+        scene.createFileIfNotExists();
         HxlNode sceneNode{
                 .type = "Scene",
                 .name = scene.name,
                 .properties = {
+                        {"path", HxlNodeValue{HxlDataType::String, {scene.path->getAbsolute()}}},
                 },
         };
 
@@ -105,4 +107,8 @@ void ZenEdit::Project::save() {
     hxlSource.setData(HxlSerializer::serialize({
             .nodes = nodes,
     }));
+}
+
+Path ZenEdit::Project::getPath(const char *subPath) {
+    return Path(m_path->getAbsolute() + "/" + subPath);
 }

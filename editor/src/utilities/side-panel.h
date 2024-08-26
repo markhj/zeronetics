@@ -17,6 +17,8 @@ namespace ZenEdit {
 
         std::shared_ptr<Project> m_project;
 
+        void addScene(const std::string &name);
+
     };
 }
 

@@ -48,6 +48,6 @@ void ZenEdit::SidePanel::render() {
 void ZenEdit::SidePanel::addScene(const std::string &name) {
     m_project->scenes.emplace_back(Scene{
             .name = name,
-            .path = m_project->getPath(("hxl-data/" + name + ".hxl").c_str()),
+            .path = m_project->getPath((m_project->hxlDataDir + "/" + name + ".hxl").c_str()),
     });
 }

@@ -16,6 +16,8 @@ namespace ZenEdit {
 
         std::string name;
 
+        std::string hxlDataDir = "hxl-data";
+
         std::vector<Scene> scenes;
 
         std::shared_ptr<Scene> activeScene;

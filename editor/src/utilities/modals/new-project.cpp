@@ -10,7 +10,7 @@
 #include <regex>
 
 namespace {
-    std::string projectName, projectLocation;
+    std::string projectName, projectLocation, hxlDataDir = "hxl-data";
 }
 
 ZenEdit::NewProject::NewProject(bool *showBox) : m_showBox(showBox) {
@@ -20,6 +20,8 @@ ZenEdit::NewProject::NewProject(bool *showBox) : m_showBox(showBox) {
     m_location.value = &projectLocation;
     m_projectName.label = "Project Name";
     m_projectName.value = &projectName;
+    m_hxlDataDir.label = "HXL Data Directory";
+    m_hxlDataDir.value = &hxlDataDir;
 }
 
 void ZenEdit::NewProject::render() {
@@ -38,6 +40,7 @@ void ZenEdit::NewProject::render() {
 
         m_location.render();
         m_projectName.render();
+        m_hxlDataDir.render();
 
         if (m_createError.has_value() && !m_createError->empty()) {
             Label(m_createError.value().c_str()).render();
@@ -71,10 +74,12 @@ void ZenEdit::NewProject::createProject() {
     // Create the project root and src folders
     mkdir(fullPath.c_str());
     mkdir(std::string(fullPath + "/src").c_str());
-    mkdir(std::string(fullPath + "/hxl-data").c_str());
+    mkdir(std::string(fullPath + "/" + hxlDataDir).c_str());
 
     // Create the main project HXL file
-    std::string hxlProjectSource = std::format("<Project> Project\n\tname: \"{}\"\n\n", *m_projectName.value);
+    std::string hxlProjectSource = std::format("<Project> Project\n\tname: \"{}\"\n\thxldir: \"{}\"\n",
+                                               *m_projectName.value,
+                                               *m_hxlDataDir.value);
     hxlProjectSource += "<Scene> Scene1\n\tpath: \"Scene1.hxl\"\n";
     Path hxlProjectPath(fullPath + "/project.hxl");
     File hxlProject(hxlProjectPath);

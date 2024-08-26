@@ -24,6 +24,8 @@ namespace ZenEdit {
 
         TextField m_location;
 
+        TextField m_hxlDataDir;
+
         Button m_createButton;
 
         std::regex m_regexProjectName = std::regex(R"(^[a-zA-Z\- ]{3,}$)");

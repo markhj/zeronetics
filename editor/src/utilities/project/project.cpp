@@ -11,11 +11,13 @@ namespace {
 
     struct MakeProject {
         std::string projectName;
+        std::string hxlDir;
         std::vector<ZenEdit::Scene> projectScenes;
     };
 
     MakeProject makeProject;
 
+    std::string useHxlDataDir = "hxl-data";
     Path *usePath = nullptr;
 }
 
@@ -24,20 +26,24 @@ ZenEdit::Project::Project() {
     schema.types[0].properties.push_back({.name = "name",
                                           .dataType = HXL::DataType::String,
                                           .required = true});
+    schema.types[0].properties.push_back({.name = "hxldir",
+                                          .dataType = HXL::DataType::String,
+                                          .required = true});
 
     schema.types.push_back({"Scene"});
-
 
     HXL::DeserializationHandle dsProject{"Project"};
     dsProject.handle = [&](const HXL::DeserializedNode &node) {
         auto it = node.properties.find("name");
         makeProject.projectName = it != node.properties.end() ? std::get<std::string>((*it).second.value) : "";
+        auto it2 = node.properties.find("hxldir");
+        makeProject.hxlDir = it != node.properties.end() ? std::get<std::string>((*it2).second.value) : "";
     };
 
     HXL::DeserializationHandle dsScene{"Scene"};
     dsScene.handle = [&](const HXL::DeserializedNode &node) {
         auto it = node.properties.find("path");
-        std::string path = "hxl-data/" + std::get<std::string>((*it).second.value);
+        std::string path = useHxlDataDir + "/" + std::get<std::string>((*it).second.value);
         makeProject.projectScenes.emplace_back(Scene{
                 .name = node.name,
                 .path = Path(usePath->getAbsolute() + "/" + path),
@@ -49,6 +55,7 @@ ZenEdit::Project::Project() {
 }
 
 void ZenEdit::Project::reset() {
+    activeScene.reset();
     name.clear();
 }
 
@@ -57,7 +64,6 @@ void ZenEdit::Project::load(const Path &path) {
 
     m_path = path;
     usePath = &m_path.value();
-
     makeProject = MakeProject();
 
     Path hxlProject(path.getAbsolute() + "/project.hxl");
@@ -76,6 +82,9 @@ void ZenEdit::Project::load(const Path &path) {
         throw std::runtime_error(result.errors[0].message);
     }
 
+    useHxlDataDir = makeProject.hxlDir;
+
+    hxlDataDir = makeProject.hxlDir;
     name = makeProject.projectName;
     scenes = makeProject.projectScenes;
 }

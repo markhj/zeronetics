@@ -45,10 +45,10 @@ ZenEdit::Project::Project() {
     dsScene.handle = [&](const HXL::DeserializedNode &node) {
         auto it = node.properties.find("path");
         std::string path = useHxlDataDir + "/" + std::get<std::string>((*it).second.value);
-        makeProject.projectScenes.emplace_back(Scene{
-                .name = node.name,
-                .path = Path(usePath->getAbsolute() + "/" + path),
-        });
+        Scene scene;
+        scene.name = node.name;
+        scene.path = Path(usePath->getAbsolute() + "/" + path);
+        makeProject.projectScenes.emplace_back(scene);
     };
 
     deserializationProtocol.handles.push_back(dsProject);

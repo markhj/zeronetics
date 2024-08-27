@@ -11,6 +11,8 @@ using namespace ZEN;
 namespace ZenEdit {
     class Scene {
     public:
+        Scene();
+
         std::string name;
 
         std::optional<Path> path;

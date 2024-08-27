@@ -1,7 +1,28 @@
 #include "scene.h"
+#include "hxl-lang/core.h"
+#include "hxl-lang/services/processor.h"
 #include "hxl-serializer/hxl-serializer.h"
 #include <iostream>
 #include <vector>
+
+namespace {
+    HXL::Schema schema;
+
+    HXL::DeserializationProtocol deserializationProtocol;
+
+    std::map<std::string, ZenEdit::SceneEntity> makeEntities;
+}
+
+ZenEdit::Scene::Scene() {
+    schema.types.push_back({"Entity"});
+
+    HXL::DeserializationHandle dsEntity{"Entity"};
+    dsEntity.handle = [&](const HXL::DeserializedNode &node) {
+        makeEntities[node.name];
+    };
+
+    deserializationProtocol.handles.push_back(dsEntity);
+}
 
 void ZenEdit::Scene::save() {
     File hxlSource(path.value());
@@ -25,13 +46,23 @@ void ZenEdit::Scene::save() {
 void ZenEdit::Scene::load() {
     createFileIfNotExists();
 
+
     File file(path.value());
     auto fileData = file.getData();
     if (fileData.isError()) {
         throw std::runtime_error("Failed to load scene file: " + path->getAbsolute());
     }
 
-    std::string fileSource = fileData.result();
+    std::string source = fileData.result();
+    HXL::ProcessResult result = HXL::Processor::process(source, schema, deserializationProtocol);
+
+    if (!result.errors.empty()) {
+        throw std::runtime_error(result.errors[0].message);
+    }
+
+    entities = makeEntities;
+
+    makeEntities.clear();
 }
 
 void ZenEdit::Scene::createFileIfNotExists() {

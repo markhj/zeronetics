@@ -1,8 +1,25 @@
 #include "scene.h"
+#include "hxl-serializer/hxl-serializer.h"
 #include <iostream>
+#include <vector>
 
 void ZenEdit::Scene::save() {
+    File hxlSource(path.value());
+    std::vector<HxlNode> nodes;
 
+    for (const auto &entity: entities) {
+        HxlNode sceneNode{
+                .type = "Entity",
+                .name = entity.first,
+                .properties = {},
+        };
+
+        nodes.emplace_back(sceneNode);
+    }
+
+    hxlSource.setData(HxlSerializer::serialize({
+            .nodes = nodes,
+    }));
 }
 
 void ZenEdit::Scene::load() {

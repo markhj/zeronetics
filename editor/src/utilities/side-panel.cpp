@@ -2,6 +2,7 @@
 #include "button.h"
 #include "font-manager.h"
 #include "label.h"
+#include "separator.h"
 #include <format>
 #include <iostream>
 
@@ -41,6 +42,32 @@ void ZenEdit::SidePanel::render() {
             addScene(std::format("Scene{}", m_project->scenes.size() + 1));
         };
         btnAddScene.render();
+
+        Separator().render();
+
+        if (!m_project->activeScene) {
+            Label("No active scene.").render();
+        } else {
+            Label(("Scene: " + m_project->activeScene->name).c_str()).render();
+
+            for (auto &entity: m_project->activeScene->entities) {
+                Label(entity.first.c_str()).render();
+            }
+
+            Button btnAddEntity;
+            btnAddEntity.text = "+ Entity";
+            btnAddEntity.onClick = [&]() {
+                m_project->activeScene->entities["Entity" + std::to_string(m_project->activeScene->entities.size() + 1)];
+            };
+            btnAddEntity.render();
+
+            Button btnSaveScene;
+            btnSaveScene.text = "Save Scene";
+            btnSaveScene.onClick = [&]() {
+                m_project->activeScene->save();
+            };
+            btnSaveScene.render();
+        }
     });
     m_box.render();
 }

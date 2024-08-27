@@ -4,7 +4,7 @@
 #include "zeronetics/core/io.h"
 
 #include <string>
-#include <unordered_map>
+#include <map>
 
 using namespace ZEN;
 
@@ -15,7 +15,7 @@ namespace ZenEdit {
 
         std::optional<Path> path;
 
-        std::unordered_map<std::string, SceneEntity> entities;
+        std::map<std::string, SceneEntity> entities;
 
         void createFileIfNotExists();
 

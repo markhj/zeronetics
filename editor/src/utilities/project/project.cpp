@@ -38,6 +38,7 @@ ZenEdit::Project::Project() {
         makeProject.projectName = it != node.properties.end() ? std::get<std::string>((*it).second.value) : "";
         auto it2 = node.properties.find("hxldir");
         makeProject.hxlDir = it != node.properties.end() ? std::get<std::string>((*it2).second.value) : "";
+        useHxlDataDir = makeProject.hxlDir;
     };
 
     HXL::DeserializationHandle dsScene{"Scene"};
@@ -82,8 +83,6 @@ void ZenEdit::Project::load(const Path &path) {
         throw std::runtime_error(result.errors[0].message);
     }
 
-    useHxlDataDir = makeProject.hxlDir;
-
     hxlDataDir = makeProject.hxlDir;
     name = makeProject.projectName;
     scenes = makeProject.projectScenes;
@@ -99,6 +98,7 @@ void ZenEdit::Project::save() {
             .name = "Project",
             .properties = {
                     {"name", HxlNodeValue{HxlDataType::String, {name}}},
+                    {"hxldir", HxlNodeValue{HxlDataType::String, {hxlDataDir}}},
             },
     };
 

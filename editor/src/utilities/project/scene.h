@@ -15,7 +15,7 @@ namespace ZenEdit {
 
         std::optional<Path> path;
 
-        std::unordered_map<const char *, SceneEntity> entities;
+        std::unordered_map<std::string, SceneEntity> entities;
 
         void createFileIfNotExists();
 

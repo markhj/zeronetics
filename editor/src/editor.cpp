@@ -37,6 +37,12 @@ ZenEdit::Editor::Editor() : m_renderer(std::make_shared<OpenGL::Renderer>(OpenGL
 }
 
 void ZenEdit::Editor::initialize() noexcept(false) {
+    Log::blacklistCategories = {
+            LogCategory::ShaderCompilation,
+            LogCategory::RendererInternals,
+            LogCategory::RendererInit,
+    };
+
     m_editorConfig.load();
 
     Globals::viewportSize = ViewportSize(1280, 720);

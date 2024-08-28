@@ -114,6 +114,7 @@ var namespaceZEN =
     [ "ColorRGBA", "classZEN_1_1ColorRGBA.html", null ],
     [ "EngineInfo", "structZEN_1_1EngineInfo.html", null ],
     [ "ViewportSize", "structZEN_1_1ViewportSize.html", "structZEN_1_1ViewportSize" ],
+    [ "Viewport", "structZEN_1_1Viewport.html", "structZEN_1_1Viewport" ],
     [ "Globals", "structZEN_1_1Globals.html", null ],
     [ "GPUAllocation", "structZEN_1_1GPUAllocation.html", "structZEN_1_1GPUAllocation" ],
     [ "ImageData", "structZEN_1_1ImageData.html", "structZEN_1_1ImageData" ],

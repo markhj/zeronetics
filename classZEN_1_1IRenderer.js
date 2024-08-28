@@ -5,5 +5,6 @@ var classZEN_1_1IRenderer =
     [ "isInitialized", "classZEN_1_1IRenderer.html#ac2bcdead8d3c2202def1b3215190b051", null ],
     [ "render", "classZEN_1_1IRenderer.html#afd3e2c4d017da54153f30e31b09a3694", null ],
     [ "setRenderManager", "classZEN_1_1IRenderer.html#aec105d41f088106ab0c80269aa8fe3dd", null ],
+    [ "setViewport", "classZEN_1_1IRenderer.html#a86940774a2c15e8b2d681e819b290429", null ],
     [ "backgroundColor", "classZEN_1_1IRenderer.html#a5a6a3936abecbdf31382a8cf484f28a1", null ]
 ];

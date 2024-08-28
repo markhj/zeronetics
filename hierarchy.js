@@ -166,6 +166,7 @@ var hierarchy =
     [ "ZEN::VertexAttrName", "classZEN_1_1VertexAttrName.html", null ],
     [ "ZEN::VertexAttrSize", "classZEN_1_1VertexAttrSize.html", null ],
     [ "ZEN::Vertices", "classZEN_1_1Vertices.html", null ],
+    [ "ZEN::Viewport", "structZEN_1_1Viewport.html", null ],
     [ "ZEN::ViewportSize", "structZEN_1_1ViewportSize.html", [
       [ "ZEN::ScreenResolution", "structZEN_1_1ScreenResolution.html", null ]
     ] ]

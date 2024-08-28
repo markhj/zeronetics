@@ -16,6 +16,11 @@ namespace ZEN {
         ColorRGB backgroundColor = ColorRGB(0.0, 0.02, 0.1);
 
         /**
+         * Optional configuration of the viewport's position and size.
+         */
+        virtual void setViewport(const Viewport &viewport) = 0;
+
+        /**
          * Set the render manager which the renderer will communicate
          * with regarding allocations, de-allocations, updates, and more.
          *

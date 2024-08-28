@@ -36,6 +36,7 @@ add_executable(editor
         src/utilities/modals/load-project.cpp
         src/utilities/modals/project-screen.cpp
         src/utilities/editor-config.cpp
+        src/utilities/editor-layout.cpp
 
         # GLAD
         ${ZEN_VENDOR_DIR}/glad/src/glad.c

@@ -92,5 +92,7 @@ namespace ZenEdit {
         void saveFile();
 
         void configureStyle();
+
+        void refreshViewport();
     };
 }

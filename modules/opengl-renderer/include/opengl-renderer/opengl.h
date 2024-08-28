@@ -28,6 +28,8 @@ namespace ZEN::OpenGL {
 
         void setRenderManager(const std::shared_ptr<IRenderManager> &renderManager) noexcept(false) override;
 
+        void setViewport(const Viewport &viewport) override;
+
     private:
         bool m_initialized = false;
 

@@ -1,8 +1,10 @@
 #include "side-panel.h"
 #include "button.h"
+#include "editor-layout.h"
 #include "font-manager.h"
 #include "label.h"
 #include "separator.h"
+#include "zeronetics/core/globals.h"
 #include <format>
 #include <iostream>
 
@@ -12,8 +14,8 @@ ZenEdit::SidePanel::SidePanel(const std::shared_ptr<Project> &project) : m_box(B
     m_box.collapsible = false;
     m_box.movable = false;
     m_box.titleBar = false;
-    m_box.position = Vec2(5, 45);
-    m_box.size = Vec2(300, 600);
+    m_box.position = Vec2(0, EditorLayout::sidePanelPosY);
+    m_box.size = Vec2(EditorLayout::sidePanelWidth, Globals::viewportSize.h);
 }
 
 void ZenEdit::SidePanel::render() {

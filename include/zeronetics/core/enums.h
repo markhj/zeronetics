@@ -276,4 +276,12 @@ namespace ZEN {
     struct ViewportSize {
         uint16_t w, h;
     };
+
+    /**
+     * Configuration of the viewport's position and size.
+     */
+    struct Viewport {
+        ViewportSize position = ViewportSize{0, 0};
+        ViewportSize size = ViewportSize{1920, 1080};
+    };
 }

@@ -1,6 +1,7 @@
 #include "editor.h"
 #include "box.h"
 #include "ui-elements/button.h"
+#include "utilities/editor-layout.h"
 #include "utilities/editor-ui.h"
 #include "utilities/font-manager.h"
 #include "utilities/modals/about.h"
@@ -89,6 +90,8 @@ void ZenEdit::Editor::initialize() noexcept(false) {
 
     m_renderer->setRenderManager(m_renderManager);
     m_renderer->initialize();
+
+    refreshViewport();
 }
 
 void ZenEdit::Editor::run() {
@@ -394,4 +397,11 @@ void ZenEdit::Editor::openScene(const ZenEdit::Scene &scene) {
 
     m_project->activeScene = std::make_shared<ZenEdit::Scene>(scene);
     m_project->activeScene->load();
+}
+
+void ZenEdit::Editor::refreshViewport() {
+    m_renderer->setViewport(Viewport{
+            .position = {EditorLayout::sidePanelWidth, 0},
+            .size = {static_cast<uint16_t>(Globals::viewportSize.w - EditorLayout::sidePanelWidth), Globals::viewportSize.h},
+    });
 }

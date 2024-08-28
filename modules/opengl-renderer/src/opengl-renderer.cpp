@@ -237,3 +237,7 @@ void ZEN::OpenGL::Renderer::processRequest(const std::shared_ptr<IRendererReques
             break;
     }
 }
+
+void ZEN::OpenGL::Renderer::setViewport(const ZEN::Viewport &viewport) {
+    glViewport(viewport.position.w, viewport.position.h, viewport.size.w, viewport.size.h);
+}

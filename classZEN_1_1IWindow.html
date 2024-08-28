@@ -108,6 +108,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac20b4467e8d3fee02198065c8507d004"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a066b8a8acc49c4b67ad6ce86775b1eed"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1IWindow.html#a066b8a8acc49c4b67ad6ce86775b1eed">onClose</a> (std::function&lt; void()&gt; handle)=0</td></tr>
 <tr class="separator:a066b8a8acc49c4b67ad6ce86775b1eed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefac405501118da936afaa274cf1de58"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1IWindow.html#aefac405501118da936afaa274cf1de58">onResize</a> (std::function&lt; void()&gt; handle)=0</td></tr>
+<tr class="separator:aefac405501118da936afaa274cf1de58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a527811644cc0b04c5f8d661d013fc45b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1IWindow.html#a527811644cc0b04c5f8d661d013fc45b">handleInputs</a> ()=0</td></tr>
 <tr class="separator:a527811644cc0b04c5f8d661d013fc45b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a567b2bae12bca462be7fbe744ee8be7e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1IWindow.html#a567b2bae12bca462be7fbe744ee8be7e">handleBuffer</a> ()=0</td></tr>
@@ -271,6 +273,41 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p>Implemented in <a class="el" href="classZEN_1_1Window.html#a06380aa0c78a3a75770b9e2879e7d11e">ZEN::Window</a>.</p>
+
+</div>
+</div>
+<a id="aefac405501118da936afaa274cf1de58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefac405501118da936afaa274cf1de58">&#9670;&nbsp;</a></span>onResize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ZEN::IWindow::onResize </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void()&gt;&#160;</td>
+          <td class="paramname"><em>handle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Callback when the window is resized.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="classZEN_1_1Window.html#aea59d670557d0d0798509c2d49202c83">ZEN::Window</a>.</p>
 
 </div>
 </div>

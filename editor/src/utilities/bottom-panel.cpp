@@ -1,5 +1,7 @@
 #include "bottom-panel.h"
+#include "console.h"
 #include "editor-layout.h"
+#include "label.h"
 #include "zeronetics/core/globals.h"
 
 ZenEdit::BottomPanel::BottomPanel(const std::shared_ptr<Project> &project) : m_project(project),
@@ -15,5 +17,10 @@ void ZenEdit::BottomPanel::render() {
     m_box.position = Vec2(EditorLayout::sidePanelWidth - 1,
                           Globals::viewportSize.h - EditorLayout::bottomPanelHeight);
 
+    m_box.contains([&]() {
+        for (const ConsoleMessage &message: Console::messages) {
+            Label(message.text.c_str()).render();
+        }
+    });
     m_box.render();
 }

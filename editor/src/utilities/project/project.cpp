@@ -1,4 +1,5 @@
 #include "project.h"
+#include "../console.h"
 #include "hxl-lang/hxl-lang.h"
 #include "hxl-serializer/hxl-serializer.h"
 #include "scene.h"
@@ -114,6 +115,8 @@ void ZenEdit::Project::save() {
     hxlSource.setData(HxlSerializer::serialize({
             .nodes = nodes,
     }));
+
+    Console::add("Project saved.");
 }
 
 Path ZenEdit::Project::getPath(const char *subPath) {

@@ -1,6 +1,6 @@
 #include "glfw-window/glfw-window.h"
-#include "zeronetics/core/inputs.h"
 #include "zeronetics/core/globals.h"
+#include "zeronetics/core/inputs.h"
 #include "zeronetics/logging/logging.h"
 
 #include <optional>
@@ -17,6 +17,8 @@ namespace {
     std::optional<ZEN::MousePosition> s_lastPosition;
 
     std::optional<std::function<void()>> s_onCloseHandle;
+
+    std::optional<std::function<void()>> s_onResizeHandle;
 
     inline int getSamples(const ZEN::AntiAlias &antiAlias) {
         switch (antiAlias) {
@@ -87,6 +89,14 @@ namespace {
         // @todo: Implement mouse wheel callback
     }
 
+    void framebufferSizeCallback(GLFWwindow *glfwWindow, int width, int height) {
+        ZEN::Globals::viewportSize.w = static_cast<uint16_t>(width);
+        ZEN::Globals::viewportSize.h = static_cast<uint16_t>(height);
+        if (s_onResizeHandle.has_value()) {
+            s_onResizeHandle.value()();
+        }
+    }
+
     void mouseMoveCallback(GLFWwindow *window, double x, double y) {
         if (!s_inputManager) {
             return;
@@ -140,8 +150,9 @@ void ZEN::Window::generate(const ZEN::Settings &settings) noexcept(false) {
 
     glfwMakeContextCurrent(glfwWindow);
 
-    // Close button
+    // Window-specific callbacks
     glfwSetWindowCloseCallback(glfwWindow, closeWindowCallback);
+    glfwSetFramebufferSizeCallback(glfwWindow, framebufferSizeCallback);
 
     // Keyboard
     glfwSetKeyCallback(glfwWindow, keyboardCallback);
@@ -183,4 +194,8 @@ void ZEN::Window::process(ZEN::dt_float delta) {
     if (s_inputManager) {
         s_inputManager->process(delta);
     }
+}
+
+void ZEN::Window::onResize(std::function<void()> handle) {
+    s_onResizeHandle = handle;
 }

@@ -42,6 +42,13 @@ namespace ZEN {
         virtual void onClose(std::function<void()> handle) = 0;
 
         /**
+         * Callback when the window is resized.
+         *
+         * @param handle
+         */
+        virtual void onResize(std::function<void()> handle) = 0;
+
+        /**
          * Process user inputs.
          */
         virtual inline void handleInputs() = 0;
@@ -62,6 +69,5 @@ namespace ZEN {
          * Set (or replace) the Input Manager.
          */
         virtual void setInputManager(const std::shared_ptr<IInputManager> &inputManager) = 0;
-
     };
 }

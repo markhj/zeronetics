@@ -52,6 +52,13 @@ namespace ZEN {
         void onClose(std::function<void()> handle) override;
 
         /**
+         * Callback when the window is resized.
+         *
+         * @param handle
+         */
+        void onResize(std::function<void()> handle) override;
+
+        /**
          * Process user inputs.
          */
         inline void handleInputs() override;

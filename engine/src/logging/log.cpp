@@ -103,9 +103,9 @@ void ZEN::Log::info(const std::string &msg, ZEN::LogCategory category) {
     if (isBlacklisted(category)) {
         return;
     }
-    logToFileIfCategory(category, {
-                                          .message = msg,
-                                  });
+    logToFile({
+            .message = msg,
+    });
     message(LogLevel::Info, category, msg);
 }
 
@@ -113,9 +113,9 @@ void ZEN::Log::warn(const std::string &msg, ZEN::LogCategory category) {
     if (isBlacklisted(category)) {
         return;
     }
-    logToFileIfCategory(category, {
-                                          .message = std::format("CRITICAL: {}", msg),
-                                  });
+    logToFile({
+            .message = std::format("CRITICAL: {}", msg),
+    });
     message(LogLevel::Warning, category, msg);
 }
 
@@ -177,12 +177,6 @@ void ZEN::Log::startReporting() {
     report({"System Information", records});
 }
 
-void ZEN::Log::logToFileIfCategory(ZEN::LogCategory category,
-                                   const ZEN::LogFileEntry &logFileEntry) {
-    if (!isBlacklisted(category)) {
-        logToFile(logFileEntry);
-    }
-}
 bool ZEN::Log::isBlacklisted(const ZEN::LogCategory &category) {
     return std::find_if(blacklistCategories.begin(),
                         blacklistCategories.end(),

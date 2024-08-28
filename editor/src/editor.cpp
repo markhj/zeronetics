@@ -28,6 +28,8 @@ std::shared_ptr<ControlManager> m_controlManager = std::make_shared<ControlManag
 
 std::optional<ZEN::MousePosition> s_lastPosition;
 
+bool refreshViewportRequired = false;
+
 ZenEdit::Editor::Editor() : m_renderer(std::make_shared<OpenGL::Renderer>(OpenGL::Renderer())),
                             m_renderManager(std::make_shared<RenderManager>(RenderManager())),
                             m_camera(std::make_shared<Camera3D>(Camera3D())),
@@ -67,6 +69,7 @@ void ZenEdit::Editor::initialize() noexcept(false) {
 
     glfwSetKeyCallback(m_window, keyboardCallback);
     glfwSetCursorPosCallback(m_window, mouseMoveCallback);
+    glfwSetFramebufferSizeCallback(m_window, framebufferSizeCallback);
 
     if (!gladLoadGLLoader((GLADloadproc) glfwGetProcAddress)) {
         throw std::runtime_error("Failed to initialize GLAD.");
@@ -121,12 +124,16 @@ void ZenEdit::Editor::run() {
 
     newProject.onCreate = [&](const Path &path) { openProject(path); };
     loadProject.onLoad = [&](const Path &path) { openProject(path); };
-    projectScreen.onOpenProject = [&](const std::string &path) {  openProject(Path(path)); };
+    projectScreen.onOpenProject = [&](const std::string &path) { openProject(Path(path)); };
     sidePanel.onOpenScene = [&](Scene &scene) { openScene(scene); };
 
     FontManager::initialize();
 
     while (!glfwWindowShouldClose(m_window)) {
+        if (refreshViewportRequired) {
+            refreshViewport();
+        }
+
         m_delta = 1.0f / io.Framerate;
 
         m_renderer->backgroundColor = m_showProjectScreen ? ColorRGB(0.1, 0.115, 0.14) : ColorRGB(0.0, 0.02, 0.1);
@@ -177,6 +184,13 @@ void ZenEdit::Editor::run() {
         glfwSwapBuffers(m_window);
         glfwPollEvents();
     }
+}
+
+void ZenEdit::Editor::framebufferSizeCallback(GLFWwindow *window, int width, int height) {
+    Globals::viewportSize = {static_cast<uint16_t>(width),
+                             static_cast<uint16_t>(height)};
+
+    refreshViewportRequired = true;
 }
 
 void ZenEdit::Editor::keyboardCallback(GLFWwindow *window, int key, int scancode, int action, int mods) {

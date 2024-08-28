@@ -15,10 +15,12 @@ ZenEdit::SidePanel::SidePanel(const std::shared_ptr<Project> &project) : m_box(B
     m_box.movable = false;
     m_box.titleBar = false;
     m_box.position = Vec2(0, EditorLayout::sidePanelPosY);
-    m_box.size = Vec2(EditorLayout::sidePanelWidth, Globals::viewportSize.h);
 }
 
 void ZenEdit::SidePanel::render() {
+    // Size must be set here to account for resizing during runtime
+    m_box.size = Vec2(EditorLayout::sidePanelWidth, Globals::viewportSize.h);
+
     m_box.contains([&]() {
         for (auto &scene: m_project->scenes) {
             FontManager::bold([&]() {

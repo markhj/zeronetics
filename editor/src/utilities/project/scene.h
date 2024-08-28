@@ -19,6 +19,8 @@ namespace ZenEdit {
 
         std::map<std::string, SceneEntity> entities;
 
+        bool hasChanged = false;
+
         void createFileIfNotExists();
 
         void save();

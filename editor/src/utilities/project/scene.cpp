@@ -41,6 +41,8 @@ void ZenEdit::Scene::save() {
     hxlSource.setData(HxlSerializer::serialize({
             .nodes = nodes,
     }));
+
+    hasChanged = false;
 }
 
 void ZenEdit::Scene::load() {
@@ -63,6 +65,7 @@ void ZenEdit::Scene::load() {
     entities = makeEntities;
 
     makeEntities.clear();
+    hasChanged = false;
 }
 
 void ZenEdit::Scene::createFileIfNotExists() {

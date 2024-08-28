@@ -58,6 +58,7 @@ void ZenEdit::SidePanel::render() {
             btnAddEntity.text = "+ Entity";
             btnAddEntity.onClick = [&]() {
                 m_project->activeScene->entities["Entity" + std::to_string(m_project->activeScene->entities.size() + 1)];
+                m_project->activeScene->hasChanged = true;
             };
             btnAddEntity.render();
 
@@ -67,6 +68,13 @@ void ZenEdit::SidePanel::render() {
                 m_project->activeScene->save();
             };
             btnSaveScene.render();
+
+            Button btnDiscard;
+            btnDiscard.text = "Discard Changes";
+            btnDiscard.onClick = [&]() {
+                m_project->activeScene->load();
+            };
+            btnDiscard.render();
         }
     });
     m_box.render();

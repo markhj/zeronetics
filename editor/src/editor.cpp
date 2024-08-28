@@ -387,6 +387,11 @@ void ZenEdit::Editor::openProject(const Path &path) {
 }
 
 void ZenEdit::Editor::openScene(const ZenEdit::Scene &scene) {
+    if (m_project->activeScene && m_project->activeScene->hasChanged) {
+        std::cerr << "Cannot change from an un-saved scene." << std::endl;
+        return;
+    }
+
     m_project->activeScene = std::make_shared<ZenEdit::Scene>(scene);
     m_project->activeScene->load();
 }

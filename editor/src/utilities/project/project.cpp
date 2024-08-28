@@ -9,13 +9,7 @@ namespace {
 
     HXL::DeserializationProtocol deserializationProtocol;
 
-    struct MakeProject {
-        std::string projectName;
-        std::string hxlDir;
-        std::vector<ZenEdit::Scene> projectScenes;
-    };
-
-    MakeProject makeProject;
+    ZenEdit::Project *target;
 
     std::string useHxlDataDir = "hxl-data";
     Path *usePath = nullptr;
@@ -35,10 +29,10 @@ ZenEdit::Project::Project() {
     HXL::DeserializationHandle dsProject{"Project"};
     dsProject.handle = [&](const HXL::DeserializedNode &node) {
         auto it = node.properties.find("name");
-        makeProject.projectName = it != node.properties.end() ? std::get<std::string>((*it).second.value) : "";
         auto it2 = node.properties.find("hxldir");
-        makeProject.hxlDir = it != node.properties.end() ? std::get<std::string>((*it2).second.value) : "";
-        useHxlDataDir = makeProject.hxlDir;
+        target->name = it != node.properties.end() ? std::get<std::string>((*it).second.value) : "";
+        target->hxlDataDir = it != node.properties.end() ? std::get<std::string>((*it2).second.value) : "";
+        useHxlDataDir = target->hxlDataDir;
     };
 
     HXL::DeserializationHandle dsScene{"Scene"};
@@ -48,7 +42,7 @@ ZenEdit::Project::Project() {
         Scene scene;
         scene.name = node.name;
         scene.path = Path(usePath->getAbsolute() + "/" + path);
-        makeProject.projectScenes.emplace_back(scene);
+        target->scenes.emplace_back(scene);
     };
 
     deserializationProtocol.handles.push_back(dsProject);
@@ -63,9 +57,10 @@ void ZenEdit::Project::reset() {
 void ZenEdit::Project::load(const Path &path) {
     reset();
 
+    target = this;
+
     m_path = path;
     usePath = &m_path.value();
-    makeProject = MakeProject();
 
     Path hxlProject(path.getAbsolute() + "/project.hxl");
 
@@ -82,10 +77,6 @@ void ZenEdit::Project::load(const Path &path) {
     if (!result.errors.empty()) {
         throw std::runtime_error(result.errors[0].message);
     }
-
-    hxlDataDir = makeProject.hxlDir;
-    name = makeProject.projectName;
-    scenes = makeProject.projectScenes;
 }
 
 void ZenEdit::Project::save() {

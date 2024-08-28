@@ -2,6 +2,7 @@
 #include "hxl-lang/core.h"
 #include "hxl-lang/services/processor.h"
 #include "hxl-serializer/hxl-serializer.h"
+#include "zeronetics/scene/scene.h"
 #include <iostream>
 #include <vector>
 
@@ -11,6 +12,8 @@ namespace {
     HXL::DeserializationProtocol deserializationProtocol;
 
     std::map<std::string, ZenEdit::SceneEntity> makeEntities;
+
+    ZenEdit::Scene *target = nullptr;
 }
 
 ZenEdit::Scene::Scene() {
@@ -18,7 +21,7 @@ ZenEdit::Scene::Scene() {
 
     HXL::DeserializationHandle dsEntity{"Entity"};
     dsEntity.handle = [&](const HXL::DeserializedNode &node) {
-        makeEntities[node.name];
+        target->entities[node.name];
     };
 
     deserializationProtocol.handles.push_back(dsEntity);
@@ -48,13 +51,13 @@ void ZenEdit::Scene::save() {
 void ZenEdit::Scene::load() {
     createFileIfNotExists();
 
-
     File file(path.value());
     auto fileData = file.getData();
     if (fileData.isError()) {
         throw std::runtime_error("Failed to load scene file: " + path->getAbsolute());
     }
 
+    target = this;
     std::string source = fileData.result();
     HXL::ProcessResult result = HXL::Processor::process(source, schema, deserializationProtocol);
 
@@ -62,9 +65,6 @@ void ZenEdit::Scene::load() {
         throw std::runtime_error(result.errors[0].message);
     }
 
-    entities = makeEntities;
-
-    makeEntities.clear();
     hasChanged = false;
 }
 

@@ -3,6 +3,7 @@
 #include "objects/vao.h"
 #include "objects/vbo.h"
 
+#include "zeronetics/core/globals.h"
 #include "zeronetics/core/tensors.h"
 #include "zeronetics/core/vertices.h"
 #include "zeronetics/helpers/vertices.h"
@@ -239,5 +240,9 @@ void ZEN::OpenGL::Renderer::processRequest(const std::shared_ptr<IRendererReques
 }
 
 void ZEN::OpenGL::Renderer::setViewport(const ZEN::Viewport &viewport) {
-    glViewport(viewport.position.w, viewport.position.h, viewport.size.w, viewport.size.h);
+    // Note: Position is anchored in the bottom-left corner.
+    glViewport(viewport.position.w,
+               viewport.position.h,
+               viewport.size.w,
+               viewport.size.h);
 }

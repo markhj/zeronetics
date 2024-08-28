@@ -9,5 +9,9 @@ namespace ZenEdit {
 
         static uint16_t sidePanelPosY;
 
+        static uint16_t inspectorWidth;
+
+        static uint16_t bottomPanelHeight;
+
     };
 }

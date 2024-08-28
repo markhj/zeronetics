@@ -281,7 +281,15 @@ namespace ZEN {
      * Configuration of the viewport's position and size.
      */
     struct Viewport {
+        /**
+         * The position of the viewport within the window.
+         * Note that the coordinate is anchored in the bottom-left corner.
+         */
         ViewportSize position = ViewportSize{0, 0};
+
+        /**
+         * Size of the viewport in pixels.
+         */
         ViewportSize size = ViewportSize{1920, 1080};
     };
 }

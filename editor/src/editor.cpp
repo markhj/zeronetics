@@ -1,9 +1,11 @@
 #include "editor.h"
 #include "box.h"
 #include "ui-elements/button.h"
+#include "utilities/bottom-panel.h"
 #include "utilities/editor-layout.h"
 #include "utilities/editor-ui.h"
 #include "utilities/font-manager.h"
+#include "utilities/inspector.h"
 #include "utilities/modals/about.h"
 #include "utilities/modals/load-project.h"
 #include "utilities/modals/new-project.h"
@@ -120,6 +122,9 @@ void ZenEdit::Editor::run() {
     LoadProject loadProject(&m_showLoadProject);
     ProjectSettings projectSettings(&m_showProjectSettings, m_project);
     SidePanel sidePanel(m_project);
+    BottomPanel bottomPanel(m_project);
+    Inspector inspector(m_project);
+
     ProjectScreen projectScreen(&m_editorConfig, &m_showNewProject, &m_showLoadProject);
 
     newProject.onCreate = [&](const Path &path) { openProject(path); };
@@ -132,6 +137,7 @@ void ZenEdit::Editor::run() {
     while (!glfwWindowShouldClose(m_window)) {
         if (refreshViewportRequired) {
             refreshViewport();
+            refreshViewportRequired = false;
         }
 
         m_delta = 1.0f / io.Framerate;
@@ -153,6 +159,8 @@ void ZenEdit::Editor::run() {
             mainMenu.render();
             editorUi.render();
             sidePanel.render();
+            bottomPanel.render();
+            inspector.render();
         }
 
         if (m_showAbout) {
@@ -415,7 +423,8 @@ void ZenEdit::Editor::openScene(const ZenEdit::Scene &scene) {
 
 void ZenEdit::Editor::refreshViewport() {
     m_renderer->setViewport(Viewport{
-            .position = {EditorLayout::sidePanelWidth, 0},
-            .size = {static_cast<uint16_t>(Globals::viewportSize.w - EditorLayout::sidePanelWidth), Globals::viewportSize.h},
+            .position = {EditorLayout::sidePanelWidth, EditorLayout::bottomPanelHeight},
+            .size = {static_cast<uint16_t>(Globals::viewportSize.w - EditorLayout::sidePanelWidth - EditorLayout::inspectorWidth),
+                     static_cast<uint16_t>(Globals::viewportSize.h - EditorLayout::bottomPanelHeight)},
     });
 }

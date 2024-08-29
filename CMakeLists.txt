@@ -7,6 +7,7 @@ set(CMAKE_CXX_STANDARD 20)
 set(ZEN_ROOT_DIR ${CMAKE_CURRENT_SOURCE_DIR})
 set(ZEN_MODULES_DIR ${CMAKE_CURRENT_SOURCE_DIR}/modules)
 set(ZEN_VENDOR_DIR ${CMAKE_CURRENT_SOURCE_DIR}/vendor)
+set(ZEN_AUTOLOAD_DIR ${CMAKE_CURRENT_SOURCE_DIR}/autoload)
 
 if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE "Debug" CACHE STRING "Choose the type of build (Debug or Release)" FORCE)
@@ -20,12 +21,13 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/build/${BUILD_TYP
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/build/${BUILD_TYPE_LOWER}/lib)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/build/${BUILD_TYPE_LOWER}/bin)
 
-#set(OUTPUT_DIR ${CMAKE_CURRENT_SOURCE_DIR})
-
 # Create directories (which due to subdirectories might not be possible to generate otherwise)
 file(MAKE_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/build/docs)
 
 include_directories(include)
+
+# Autoload generator
+include(cmake/autoload-generator.cmake)
 
 # Build vendor projects
 add_subdirectory(vendor/glfw)

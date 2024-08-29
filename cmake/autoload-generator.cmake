@@ -1,0 +1,3 @@
+
+file(MAKE_DIRECTORY ${ZEN_AUTOLOAD_DIR})
+

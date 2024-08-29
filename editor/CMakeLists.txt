@@ -4,11 +4,14 @@ project(zeronetics_editor)
 set(CMAKE_CXX_STANDARD 20)
 
 include_directories(${ZEN_VENDOR_DIR}/glad/include)
-
+include_directories(${ZEN_AUTOLOAD_DIR})
 include_directories(src/ui-elements)
 
 add_executable(editor
         src/main.cpp
+
+        # Autoload
+        ${ZEN_AUTOLOAD_DIR}/autoload.cpp
 
         # Editor
         src/editor.cpp

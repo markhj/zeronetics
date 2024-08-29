@@ -1,4 +1,5 @@
 #include "scene.h"
+#include "../console.h"
 #include "hxl-lang/core.h"
 #include "hxl-lang/services/processor.h"
 #include "hxl-serializer/hxl-serializer.h"
@@ -46,6 +47,8 @@ void ZenEdit::Scene::save() {
     }));
 
     hasChanged = false;
+
+    Console::info(std::format("Scene {} saved.", name));
 }
 
 void ZenEdit::Scene::load() {

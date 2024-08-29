@@ -78,6 +78,8 @@ void ZenEdit::Project::load(const Path &path) {
     if (!result.errors.empty()) {
         throw std::runtime_error(result.errors[0].message);
     }
+
+    Console::info(std::format("Loaded project: {}", name));
 }
 
 void ZenEdit::Project::save() {

@@ -13,7 +13,7 @@ void ZenEdit::About::render() {
     box.collapsible = false;
     box.resizable = false;
     box.contains([&]() {
-        FontManager::black([&]() {
+        FontManager::set({.fontSize = 24.0}, [&]() {
             Label("ZenEdit").render();
         });
 

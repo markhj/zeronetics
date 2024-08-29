@@ -3,13 +3,24 @@
 #include <cstddef>
 #include <functional>
 #include <optional>
+#include <map>
 
 namespace ZenEdit {
-    enum class FontSelection {
+    enum class FontWeight {
         Regular,
         Light,
         Bold,
         Black,
+    };
+
+    struct FontRequest {
+        float fontSize = 16.0f;
+        FontWeight fontWeight = FontWeight::Regular;
+    };
+
+    struct LoadedFont {
+        FontRequest fontRequest;
+        std::optional<int> index;
     };
 
     class FontManager {
@@ -20,16 +31,13 @@ namespace ZenEdit {
 
         static void start();
 
-        static void bold(const std::function<void()> &withFont);
-
-        static void light(const std::function<void()> &withFont);
-
-        static void black(const std::function<void()> &withFont);
+        static void set(const FontRequest &fontRequest,
+                        const std::function<void()> &withFont);
 
     private:
-        static inline void setFont(const std::function<void()> &withFont, int index);
+        static std::vector<LoadedFont> s_loadedFonts;
 
-        static std::optional<FontSelection> s_activeFontIndex;
+        static std::optional<FontWeight> s_activeFontIndex;
 
     };
 }

@@ -23,7 +23,7 @@ void ZenEdit::SidePanel::render() {
 
     m_box.contains([&]() {
         for (auto &scene: m_project->scenes) {
-            FontManager::bold([&]() {
+            FontManager::set({}, [&]() {
                 Button btnOpenScene;
 
                 if (m_project->activeScene && m_project->activeScene->name == scene.name) {

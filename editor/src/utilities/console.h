@@ -4,7 +4,15 @@
 #include <vector>
 
 namespace ZenEdit {
+    enum class ConsoleMessageType {
+        Info,
+        Error,
+        Warning,
+        Success,
+    };
+
     struct ConsoleMessage {
+        ConsoleMessageType type = ConsoleMessageType::Info;
         std::string text;
     };
 
@@ -12,6 +20,12 @@ namespace ZenEdit {
     public:
         static std::vector<ConsoleMessage> messages;
 
-        static void add(const std::string &text);
+        static void render();
+
+        static void info(const std::string &text);
+
+        static void error(const std::string &text);
+
+        static void warn(const std::string &text);
     };
 }

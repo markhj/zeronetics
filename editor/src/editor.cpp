@@ -2,6 +2,7 @@
 #include "box.h"
 #include "ui-elements/button.h"
 #include "utilities/bottom-panel.h"
+#include "utilities/console.h"
 #include "utilities/editor-layout.h"
 #include "utilities/editor-ui.h"
 #include "utilities/font-manager.h"
@@ -413,7 +414,7 @@ void ZenEdit::Editor::openProject(const Path &path) {
 
 void ZenEdit::Editor::openScene(const ZenEdit::Scene &scene) {
     if (m_project->activeScene && m_project->activeScene->hasChanged) {
-        std::cerr << "Cannot change from an un-saved scene." << std::endl;
+        Console::error("Cannot change from an un-saved scene.");
         return;
     }
 

@@ -17,7 +17,7 @@ void ZenEdit::FontManager::initialize() {
 
     for (const auto &fontData: fontFiles) {
         // Note: The default size font must go first.
-        for (const float &fontSize: {16.0f, 12.0f, 24.0f}) {
+        for (const float &fontSize: {16.0f, 14.0f, 24.0f}) {
             ImFont *font = io.Fonts->AddFontFromFileTTF(fontData.second,
                                                         fontSize,
                                                         nullptr,
@@ -53,6 +53,13 @@ void ZenEdit::FontManager::set(const ZenEdit::FontRequest &fontRequest,
         }
     }
 
+    if (fontRequest.textColor.has_value()) {
+        ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(fontRequest.textColor->r,
+                                                    fontRequest.textColor->g,
+                                                    fontRequest.textColor->b,
+                                                    1.0f));
+    }
+
     if (foundIndex.has_value()) {
         ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[foundIndex.value()]);
         withFont();
@@ -60,5 +67,9 @@ void ZenEdit::FontManager::set(const ZenEdit::FontRequest &fontRequest,
     } else {
         std::cout << "Could not find font!" << std::endl;
         withFont();
+    }
+
+    if (fontRequest.textColor.has_value()) {
+        ImGui::PopStyleColor();
     }
 }

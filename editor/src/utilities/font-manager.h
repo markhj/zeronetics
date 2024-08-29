@@ -4,6 +4,7 @@
 #include <functional>
 #include <optional>
 #include <map>
+#include "zeronetics/core/attributes.h"
 
 namespace ZenEdit {
     enum class FontWeight {
@@ -16,6 +17,7 @@ namespace ZenEdit {
     struct FontRequest {
         float fontSize = 16.0f;
         FontWeight fontWeight = FontWeight::Regular;
+        std::optional<ZEN::ColorRGB> textColor;
     };
 
     struct LoadedFont {

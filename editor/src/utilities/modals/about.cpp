@@ -13,9 +13,13 @@ void ZenEdit::About::render() {
     box.collapsible = false;
     box.resizable = false;
     box.contains([&]() {
-        FontManager::set({.fontSize = 24.0}, [&]() {
-            Label("ZenEdit").render();
-        });
+        FontManager::set({
+                                 .fontSize = 24.0,
+                                 .fontWeight = FontWeight::Black,
+                         },
+                         [&]() {
+                             Label("ZenEdit").render();
+                         });
 
         Separator().render();
         Label("This is the editor for the Zeronetics game engine.").render();

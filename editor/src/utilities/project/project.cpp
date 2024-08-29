@@ -116,7 +116,7 @@ void ZenEdit::Project::save() {
             .nodes = nodes,
     }));
 
-    Console::add("Project saved.");
+    Console::info("Project saved.");
 }
 
 Path ZenEdit::Project::getPath(const char *subPath) {

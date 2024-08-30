@@ -91,17 +91,39 @@ $(document).ready(function(){initNavTree('entity_8h_source.html',''); initResiza
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;zeronetics/core/tensors.h&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceZEN.html">ZEN</a> {</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classZEN_1_1Entity.html">   11</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classZEN_1_1Entity.html">Entity</a> {</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    };</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classZEN_1_1Entity3D.html">   24</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classZEN_1_1Entity3D.html">Entity3D</a> : <span class="keyword">public</span> <a class="code" href="classZEN_1_1Entity.html">Entity</a> {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    };</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
-<div class="ttc" id="aclassZEN_1_1Entity3D_html"><div class="ttname"><a href="classZEN_1_1Entity3D.html">ZEN::Entity3D</a></div><div class="ttdef"><b>Definition:</b> entity.h:24</div></div>
-<div class="ttc" id="aclassZEN_1_1Entity_html"><div class="ttname"><a href="classZEN_1_1Entity.html">ZEN::Entity</a></div><div class="ttdef"><b>Definition:</b> entity.h:11</div></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceZEN.html">ZEN</a> {</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="structZEN_1_1EntityRegistration.html">    8</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structZEN_1_1EntityRegistration.html">EntityRegistration</a> {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">char</span> *name;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    };</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classZEN_1_1Entity.html">   17</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classZEN_1_1Entity.html">Entity</a> {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordtype">void</span> registerEntity();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="structZEN_1_1EntityRegistration.html">EntityRegistration</a> getRegistration() = 0;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    };</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classZEN_1_1EntityRegistry.html">   27</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classZEN_1_1EntityRegistry.html">EntityRegistry</a> {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> add(<span class="keyword">const</span> std::shared_ptr&lt;EntityRegistration&gt; &amp;registration);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keyword">static</span> std::unordered_map&lt;const char *, std::shared_ptr&lt;ZEN::EntityRegistration&gt;&gt; getEntities();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keyword">static</span> std::unordered_map&lt;const char *, std::shared_ptr&lt;ZEN::EntityRegistration&gt;&gt; entities;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    };</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classZEN_1_1Entity3D.html">   48</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classZEN_1_1Entity3D.html">Entity3D</a> : <span class="keyword">public</span> <a class="code" href="classZEN_1_1Entity.html">Entity</a> {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    };</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
+<div class="ttc" id="aclassZEN_1_1Entity3D_html"><div class="ttname"><a href="classZEN_1_1Entity3D.html">ZEN::Entity3D</a></div><div class="ttdef"><b>Definition:</b> entity.h:48</div></div>
+<div class="ttc" id="aclassZEN_1_1EntityRegistry_html"><div class="ttname"><a href="classZEN_1_1EntityRegistry.html">ZEN::EntityRegistry</a></div><div class="ttdef"><b>Definition:</b> entity.h:27</div></div>
+<div class="ttc" id="aclassZEN_1_1Entity_html"><div class="ttname"><a href="classZEN_1_1Entity.html">ZEN::Entity</a></div><div class="ttdef"><b>Definition:</b> entity.h:17</div></div>
 <div class="ttc" id="anamespaceZEN_html"><div class="ttname"><a href="namespaceZEN.html">ZEN</a></div><div class="ttdef"><b>Definition:</b> asset-types.h:5</div></div>
+<div class="ttc" id="astructZEN_1_1EntityRegistration_html"><div class="ttname"><a href="structZEN_1_1EntityRegistration.html">ZEN::EntityRegistration</a></div><div class="ttdef"><b>Definition:</b> entity.h:8</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

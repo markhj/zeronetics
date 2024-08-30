@@ -4,5 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="ZEN::ImageData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structZEN_1_1ImageData.html",tooltip=" "];
+  Node0 [label="ZEN::ICamera",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classZEN_1_1ICamera.html",tooltip=" "];
 }

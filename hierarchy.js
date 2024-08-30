@@ -15,6 +15,8 @@ var hierarchy =
         [ "ZEN::Mesh3D", "classZEN_1_1Mesh3D.html", null ]
       ] ]
     ] ],
+    [ "ZEN::EntityRegistration", "structZEN_1_1EntityRegistration.html", null ],
+    [ "ZEN::EntityRegistry", "classZEN_1_1EntityRegistry.html", null ],
     [ "ZEN::File", "classZEN_1_1File.html", null ],
     [ "ZEN::Globals", "structZEN_1_1Globals.html", null ],
     [ "ZEN::GPUAllocation", "structZEN_1_1GPUAllocation.html", null ],

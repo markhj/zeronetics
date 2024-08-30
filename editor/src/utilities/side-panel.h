@@ -14,6 +14,8 @@ namespace ZenEdit {
 
         std::function<void(Scene &scene)> onOpenScene = [&](Scene &scene) {};
 
+        std::function<void()> onCloseScene = [&]() {};
+
     private:
         Box m_box;
 

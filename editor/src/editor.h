@@ -32,6 +32,8 @@ namespace ZenEdit {
 
         void openScene(const Scene &scene);
 
+        void closeScene();
+
     private:
         GLFWwindow *m_window = nullptr;
 

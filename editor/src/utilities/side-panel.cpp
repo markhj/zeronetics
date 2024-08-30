@@ -2,6 +2,7 @@
 #include "button.h"
 #include "editor-layout.h"
 #include "font-manager.h"
+#include "imgui.h"
 #include "label.h"
 #include "separator.h"
 #include "zeronetics/core/globals.h"
@@ -22,40 +23,49 @@ void ZenEdit::SidePanel::render() {
     m_box.size = Vec2(EditorLayout::sidePanelWidth, Globals::viewportSize.h);
 
     m_box.contains([&]() {
-        for (auto &scene: m_project->scenes) {
-            FontManager::set({}, [&]() {
-                Button btnOpenScene;
+        if (m_project->activeScene) {
+            FontManager::set({
+                                     .fontSize = 24.0f,
+                                     .fontWeight = FontWeight::Bold,
+                             },
+                             [&]() {
+                                 Label(m_project->activeScene->name.c_str()).render();
+                             });
 
-                if (m_project->activeScene && m_project->activeScene->name == scene.name) {
-                    btnOpenScene.text = (scene.name + " *").c_str();
-                } else {
-                    btnOpenScene.text = scene.name.c_str();
+            Separator().render();
+
+            Button btnBack;
+            btnBack.text = "<";
+            btnBack.disabled = m_project->activeScene->hasChanged;
+            btnBack.onClick = [&]() {
+                onCloseScene();
+            };
+            btnBack.render();
+
+            ImGui::SameLine();
+
+            Button btnSaveScene;
+            btnSaveScene.text = "Save";
+            btnSaveScene.disabled = m_project->activeScene && m_project->activeScene->hasChanged;
+            btnSaveScene.onClick = [&]() {
+                m_project->activeScene->save();
+            };
+            btnSaveScene.render();
+
+            ImGui::SameLine();
+
+            Button btnDiscard;
+            btnDiscard.text = "Discard";
+            btnDiscard.disabled = m_project->activeScene && !m_project->activeScene->hasChanged;
+            btnDiscard.onClick = [&]() {
+                m_project->activeScene->load();
+            };
+            btnDiscard.render();
+
+            if (m_project->activeScene) {
+                for (auto &entity: m_project->activeScene->entities) {
+                    Label(entity.first.c_str()).render();
                 }
-
-                btnOpenScene.onClick = [&]() {
-                    onOpenScene(scene);
-                };
-                btnOpenScene.render();
-            });
-            Label(scene.path->getAbsolute().c_str()).render();
-        }
-
-        Button btnAddScene;
-        btnAddScene.text = "Add Scene";
-        btnAddScene.onClick = [&]() {
-            addScene(std::format("Scene{}", m_project->scenes.size() + 1));
-        };
-        btnAddScene.render();
-
-        Separator().render();
-
-        if (!m_project->activeScene) {
-            Label("No active scene.").render();
-        } else {
-            Label(("Scene: " + m_project->activeScene->name).c_str()).render();
-
-            for (auto &entity: m_project->activeScene->entities) {
-                Label(entity.first.c_str()).render();
             }
 
             Button btnAddEntity;
@@ -65,20 +75,24 @@ void ZenEdit::SidePanel::render() {
                 m_project->activeScene->hasChanged = true;
             };
             btnAddEntity.render();
+        } else {
+            for (auto &scene: m_project->scenes) {
+                FontManager::set({}, [&]() {
+                    Button btnOpenScene;
+                    btnOpenScene.text = scene.name.c_str();
+                    btnOpenScene.onClick = [&]() {
+                        onOpenScene(scene);
+                    };
+                    btnOpenScene.render();
+                });
+            }
 
-            Button btnSaveScene;
-            btnSaveScene.text = "Save Scene";
-            btnSaveScene.onClick = [&]() {
-                m_project->activeScene->save();
+            Button btnAddScene;
+            btnAddScene.text = "Add Scene";
+            btnAddScene.onClick = [&]() {
+                addScene(std::format("Scene{}", m_project->scenes.size() + 1));
             };
-            btnSaveScene.render();
-
-            Button btnDiscard;
-            btnDiscard.text = "Discard Changes";
-            btnDiscard.onClick = [&]() {
-                m_project->activeScene->load();
-            };
-            btnDiscard.render();
+            btnAddScene.render();
         }
     });
     m_box.render();

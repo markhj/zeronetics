@@ -8,6 +8,7 @@
 #include "utilities/font-manager.h"
 #include "utilities/inspector.h"
 #include "utilities/modals/about.h"
+#include "utilities/modals/extension-list.h"
 #include "utilities/modals/load-project.h"
 #include "utilities/modals/new-project.h"
 #include "utilities/modals/project-screen.h"
@@ -125,6 +126,7 @@ void ZenEdit::Editor::run() {
     SidePanel sidePanel(m_project);
     BottomPanel bottomPanel(m_project);
     Inspector inspector(m_project);
+    ExtensionList extensionList(&m_showExtensionList);
 
     ProjectScreen projectScreen(&m_editorConfig, &m_showNewProject, &m_showLoadProject);
 
@@ -162,6 +164,7 @@ void ZenEdit::Editor::run() {
             sidePanel.render();
             bottomPanel.render();
             inspector.render();
+            extensionList.render();
         }
 
         if (m_showAbout) {

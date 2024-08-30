@@ -2,13 +2,37 @@
 
 #include "zeronetics/core/tensors.h"
 
+#include <memory>
+
 namespace ZEN {
+    struct EntityRegistration {
+        const char *name;
+    };
+
     /**
      * Base entity class.
      *
      * @ref entity-system
      */
     class Entity {
+    public:
+        void registerEntity();
+
+        virtual EntityRegistration getRegistration() = 0;
+    };
+
+    /**
+     * Entity Registry
+     */
+    class EntityRegistry {
+    public:
+        static void add(const std::shared_ptr<EntityRegistration> &registration);
+
+        static std::unordered_map<const char *, std::shared_ptr<ZEN::EntityRegistration>> getEntities();
+
+    private:
+        static std::unordered_map<const char *, std::shared_ptr<ZEN::EntityRegistration>> entities;
+
     };
 
     /**
@@ -22,6 +46,5 @@ namespace ZEN {
      * @ref entity-system
      */
     class Entity3D : public Entity {
-
     };
 }

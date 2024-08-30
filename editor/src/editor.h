@@ -63,7 +63,8 @@ namespace ZenEdit {
         bool m_showAbout = false,
              m_showNewProject = false,
              m_showProjectSettings = false,
-             m_showLoadProject = false;
+             m_showLoadProject = false,
+             m_showExtensionList = false;
 
         MainMenu createMainMenu();
 

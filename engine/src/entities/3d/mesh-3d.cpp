@@ -17,3 +17,9 @@ ZEN::Mesh3D::Mesh3D(const std::shared_ptr<IShape3D> &shape) {
 
 ZEN::Mesh3D::Mesh3D(const std::vector<Vertex3D> &vertices) : m_customVertices(vertices) {
 }
+
+ZEN::EntityRegistration ZEN::Mesh3D::getRegistration() {
+    return {
+            .name = "3D Mesh",
+    };
+}

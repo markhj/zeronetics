@@ -18,3 +18,9 @@ void ZEN::Camera3D::setOnShader(const std::string &key,
                                 const std::shared_ptr<IShader> &shader) {
     shader->set(std::format("{}.position", key), position);
 }
+
+ZEN::EntityRegistration ZEN::Camera3D::getRegistration() {
+    return {
+            .name = "3D Camera",
+    };
+}

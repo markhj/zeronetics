@@ -16,6 +16,8 @@ namespace ZEN {
     class Camera3D : public Entity3D,
                      public ICamera3D {
     public:
+        EntityRegistration getRegistration() override;
+
         /**
          * Aspect ratio
          * Default: Approx. 1920 x 1080

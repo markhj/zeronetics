@@ -18,6 +18,10 @@ namespace ZEN {
     class Mesh3D : public Entity3D,
                    public IRenderable3D {
     public:
+        EntityRegistration getRegistration() override;
+
+        Mesh3D() = default;
+
         /**
          * Generate 3D mesh from list of vertices.
          *

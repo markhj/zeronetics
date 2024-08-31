@@ -1,0 +1,14 @@
+# Zeronetics project template
+
+## Getting started
+
+Make sure you have read how to
+[set up and build the engine](https://markhj.github.io/zeronetics/install-engine.html)
+in the documentation.
+
+### CMake
+
+To build your client application &mdash; the game &mdash; using CMake,
+you need to define the environment variable ``ZERONETICS_DIR``,
+such that CMake can find the Zeronetics engine.
+Set the variable to the location where the Zeronetics engine is located.

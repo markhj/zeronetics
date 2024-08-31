@@ -1,6 +1,54 @@
-#include <iostream>
+#include <zeronetics/zeronetics.h>
+
+#include <glfw-window/glfw-window.h>
+#include <opengl-renderer/opengl.h>
+
+using namespace ZEN;
 
 int main() {
-    std::cout << "HELLO WORLD" << std::endl;
+    // Begin reporting and logging
+    ZEN_REPORT_START();
+
+    // Define default settings, such as screen resolution
+    ZEN::Settings settings{{800, 600}};
+
+    // Normal set up of attributes used in shaders on the main layer
+    std::vector<VertexAttribute> defaultAttributes = {VertexAttribute::Position3D,
+                                                      VertexAttribute::ColorRGB,
+                                                      VertexAttribute::Normal3D};
+
+    // Create and configure the window
+    std::shared_ptr<Window> window = std::make_shared<Window>(Window());
+    window->windowTitle = "My Game";
+    window->generate(settings);
+    window->onClose([]() {
+        std::exit(0);
+    });
+
+    // Create instances related to rendering
+    std::shared_ptr<RenderLayer> mainLayer = std::make_shared<RenderLayer>(RenderLayer(defaultAttributes));
+    std::shared_ptr<RenderManager> renderManager = std::make_shared<RenderManager>(RenderManager());
+    std::shared_ptr<OpenGL::Renderer> renderer = std::make_shared<OpenGL::Renderer>(OpenGL::Renderer());
+
+    // Configure the render manager and renderer
+    renderManager->attachLayer(mainLayer);
+    renderer->setRenderManager(renderManager);
+    renderer->initialize();
+
+    // Create 3D camera and attach to the main layer
+    std::shared_ptr<Camera3D> camera3d;
+    camera3d = std::make_shared<Camera3D>(Camera3D());
+    camera3d->position = Vec3(2.5f);
+    mainLayer->camera3d = camera3d;
+
+    // Create instance of the Game class
+    Game game(window, renderer);
+
+    try {
+        game.run();
+    } catch (std::exception &e) {
+        std::cerr << e.what() << std::endl;
+    }
+
     return 0;
 }

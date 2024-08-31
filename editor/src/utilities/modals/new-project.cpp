@@ -87,6 +87,8 @@ void ZenEdit::NewProject::createProject() {
     hxlProject.setData(hxlProjectSource);
 
     copyStub(rootFolder, "CMakeLists.txt");
+    copyStub(rootFolder, "README.md");
+    copyStub(rootFolder, ".gitignore");
     copyStub(rootFolder, "src/main.cpp");
 
     m_projectName.value->clear();

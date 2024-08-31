@@ -39,7 +39,8 @@ void ZenEdit::Console::warn(const std::string &text) {
 void ZenEdit::Console::render() {
     for (const ConsoleMessage &message: Console::messages) {
         FontManager::set({
-                                 .fontSize = 14.0f,
+                                 .fontSize = 16.0f,
+                                 .font = Font::Monospace,
                                  .textColor = typeToColor(message.type),
                          },
                          [&]() {

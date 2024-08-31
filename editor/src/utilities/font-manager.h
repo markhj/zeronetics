@@ -14,8 +14,14 @@ namespace ZenEdit {
         Black,
     };
 
+    enum class Font {
+        Default,
+        Monospace,
+    };
+
     struct FontRequest {
         float fontSize = 16.0f;
+        Font font = Font::Default;
         FontWeight fontWeight = FontWeight::Regular;
         std::optional<ZEN::ColorRGB> textColor;
     };

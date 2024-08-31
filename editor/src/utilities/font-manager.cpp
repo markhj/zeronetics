@@ -8,17 +8,24 @@ std::vector<ZenEdit::LoadedFont> ZenEdit::FontManager::s_loadedFonts;
 void ZenEdit::FontManager::initialize() {
     ImGuiIO &io = ImGui::GetIO();
 
-    std::map<FontWeight, const char *> fontFiles = {
-            {FontWeight::Regular, "./assets/fonts/Roboto/Roboto-Regular.ttf"},
-            {FontWeight::Light, "./assets/fonts/Roboto/Roboto-Light.ttf"},
-            {FontWeight::Bold, "./assets/fonts/Roboto/Roboto-Bold.ttf"},
-            {FontWeight::Black, "./assets/fonts/Roboto/Roboto-Black.ttf"},
+    struct FontFile {
+        Font font;
+        FontWeight fontWeight;
+        const char *fontFile;
+    };
+
+    std::vector<FontFile> fontFiles = {
+            {Font::Default, FontWeight::Regular, "./assets/fonts/Roboto/Roboto-Regular.ttf"},
+            {Font::Default, FontWeight::Light, "./assets/fonts/Roboto/Roboto-Light.ttf"},
+            {Font::Default, FontWeight::Bold, "./assets/fonts/Roboto/Roboto-Bold.ttf"},
+            {Font::Default, FontWeight::Black, "./assets/fonts/Roboto/Roboto-Black.ttf"},
+            {Font::Monospace, FontWeight::Regular, "./assets/fonts/IBM_Plex_Mono/IBMPlexMono-Regular.ttf"},
     };
 
     for (const auto &fontData: fontFiles) {
         // Note: The default size font must go first.
         for (const float &fontSize: {16.0f, 14.0f, 24.0f}) {
-            ImFont *font = io.Fonts->AddFontFromFileTTF(fontData.second,
+            ImFont *font = io.Fonts->AddFontFromFileTTF(fontData.fontFile,
                                                         fontSize,
                                                         nullptr,
                                                         io.Fonts->GetGlyphRangesDefault());
@@ -27,8 +34,10 @@ void ZenEdit::FontManager::initialize() {
             }
 
             s_loadedFonts.emplace_back(LoadedFont{
-                    .fontRequest = {.fontSize = fontSize,
-                                    .fontWeight = fontData.first},
+                    .fontRequest = {
+                            .fontSize = fontSize,
+                            .font = fontData.font,
+                            .fontWeight = fontData.fontWeight},
                     .index = io.Fonts->Fonts.size() - 1,
             });
         }
@@ -47,7 +56,7 @@ void ZenEdit::FontManager::set(const ZenEdit::FontRequest &fontRequest,
                                const std::function<void()> &withFont) {
     std::optional<int> foundIndex;
     for (const LoadedFont &other: s_loadedFonts) {
-        if (other.fontRequest.fontSize == fontRequest.fontSize && other.fontRequest.fontWeight == fontRequest.fontWeight) {
+        if (other.fontRequest.font == fontRequest.font && other.fontRequest.fontSize == fontRequest.fontSize && other.fontRequest.fontWeight == fontRequest.fontWeight) {
             foundIndex = other.index;
             break;
         }

@@ -1,11 +1,5 @@
 var NAVTREEINDEX2 =
 {
-"grid-3d.html":[3,4,0],
-"grid-3d.html#autotoc_md158":[4],
-"grid-3d.html#autotoc_md159":[5],
-"grid-3d.html#autotoc_md160":[5,0],
-"grid-3d.html#autotoc_md161":[5,1],
-"grid-3d.html#autotoc_md162":[5,2],
 "grid-3d.html#autotoc_md163":[6],
 "gw-float.html":[2,2,0],
 "helpers.html":[2,9],
@@ -44,8 +38,8 @@ var NAVTREEINDEX2 =
 "log-reporting.html":[2,1,1],
 "log-reporting.html#autotoc_md95":[2],
 "log-reporting.html#autotoc_md96":[3],
-"log-why-macros.html":[4,6],
 "log-why-macros.html":[2,1,3],
+"log-why-macros.html":[4,6],
 "logging-index.html":[2,1],
 "logging.html":[1,4],
 "logging.html#autotoc_md34":[17],
@@ -249,5 +243,11 @@ var NAVTREEINDEX2 =
 "pages.html":[],
 "process-adv-lifecycle.html":[2,3,2],
 "process-adv-lifecycle.html#autotoc_md101":[21],
-"process-adv-lifecycle.html#autotoc_md102":[22]
+"process-adv-lifecycle.html#autotoc_md102":[22],
+"process-introduction.html":[2,3,0],
+"process-introduction.html#autotoc_md103":[15],
+"process-introduction.html#autotoc_md104":[16],
+"process-introduction.html#autotoc_md105":[17],
+"process-introduction.html#autotoc_md106":[18],
+"process-lifecycle.html":[2,3,1]
 };

@@ -135,6 +135,7 @@ void ZenEdit::Editor::run() {
     projectScreen.onOpenProject = [&](const std::string &path) { openProject(Path(path)); };
     sidePanel.onOpenScene = [&](Scene &scene) { openScene(scene); };
     sidePanel.onCloseScene = [&]() { closeScene(); };
+    extensionList.onCreateEntity = [&](const std::string &entityName) { createEntity(entityName); };
 
     FontManager::initialize();
 
@@ -436,4 +437,21 @@ void ZenEdit::Editor::refreshViewport() {
             .size = {static_cast<uint16_t>(Globals::viewportSize.w - EditorLayout::sidePanelWidth - EditorLayout::inspectorWidth),
                      static_cast<uint16_t>(Globals::viewportSize.h - EditorLayout::bottomPanelHeight)},
     });
+}
+
+void ZenEdit::Editor::createEntity(const std::string &entityName) {
+    if (!m_project->activeScene) {
+        return;
+    }
+
+    unsigned int i = m_project->activeScene->entities.size() + 1;
+    std::string key = "Entity" + std::to_string(i);
+    while (m_project->activeScene->entities.find(key) != m_project->activeScene->entities.end()) {
+        ++i;
+        key = "Entity" + std::to_string(i);
+    }
+
+    m_project->activeScene->entities[key] = SceneEntity{
+            .type = entityName,
+    };
 }

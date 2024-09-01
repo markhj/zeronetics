@@ -65,6 +65,7 @@ void ZenEdit::SidePanel::render() {
             if (m_project->activeScene) {
                 for (auto &entity: m_project->activeScene->entities) {
                     Label(entity.first.c_str()).render();
+                    Label(entity.second.type.c_str()).render();
                 }
             }
 

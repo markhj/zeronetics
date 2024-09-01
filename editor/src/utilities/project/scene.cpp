@@ -22,7 +22,10 @@ ZenEdit::Scene::Scene() {
 
     HXL::DeserializationHandle dsEntity{"Entity"};
     dsEntity.handle = [&](const HXL::DeserializedNode &node) {
-        target->entities[node.name];
+        auto type = std::get<std::string>(node.properties.find("type")->second.value);
+        target->entities[node.name] = {
+                .type = type,
+        };
     };
 
     deserializationProtocol.handles.push_back(dsEntity);
@@ -36,7 +39,9 @@ void ZenEdit::Scene::save() {
         HxlNode sceneNode{
                 .type = "Entity",
                 .name = entity.first,
-                .properties = {},
+                .properties = {
+                        {"type", HxlNodeValue{.dataType = HxlDataType::String, .values = {entity.second.type}}}
+                },
         };
 
         nodes.emplace_back(sceneNode);

@@ -99,5 +99,7 @@ namespace ZenEdit {
         void configureStyle();
 
         void refreshViewport();
+
+        void createEntity(const std::string &entityName);
     };
 }

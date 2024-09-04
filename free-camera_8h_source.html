@@ -103,27 +103,41 @@ $(document).ready(function(){initNavTree('free-camera_8h_source.html',''); initR
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
 <div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classZEN_1_1ControlSystems_1_1FreeCamera.html#af037421995abf713f2b2c3156da840c7">   21</a></span>&#160;        std::shared_ptr&lt;ICamera3D&gt; <a class="code" href="classZEN_1_1ControlSystems_1_1FreeCamera.html#af037421995abf713f2b2c3156da840c7">camera3d</a>;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordtype">void</span> process(<a class="code" href="namespaceZEN.html#a1896aa89c3b0bbcccbd1b16d57410502">dt_float</a> delta,</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                     <span class="keyword">const</span> std::vector&lt;std::string&gt; &amp;<a class="code" href="classZEN_1_1ControlSystems_1_1FreeCamera.html#a392188dbfa4024119f6b34ee681f3509">signals</a>) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordtype">void</span> onMouseMoved(<span class="keyword">const</span> <a class="code" href="structZEN_1_1MouseMovedEvent.html">MouseMovedEvent</a> &amp;mouseMovedEvent) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classZEN_1_1ControlSystems_1_1FreeCamera.html#a070f0bb931fa1b6a4121181dc9e79cbb">   26</a></span>&#160;        <a class="code" href="namespaceZEN.html#a5089f560467278c4efaed05ce45f57a7">gw_float</a> <a class="code" href="classZEN_1_1ControlSystems_1_1FreeCamera.html#a070f0bb931fa1b6a4121181dc9e79cbb">minDistance</a> = 0.5;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordtype">void</span> initialize() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        std::vector&lt;const char *&gt; getSignals() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <a class="code" href="namespaceZEN.html#a5089f560467278c4efaed05ce45f57a7">gw_float</a> xzAngle = 0.0,</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                 yAngle = 0.0;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    };</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classZEN_1_1ControlSystems_1_1FreeCamera.html#ad11f4c56e229d1ffad26232a0493d090">   31</a></span>&#160;        <a class="code" href="namespaceZEN.html#a5089f560467278c4efaed05ce45f57a7">gw_float</a> <a class="code" href="classZEN_1_1ControlSystems_1_1FreeCamera.html#ad11f4c56e229d1ffad26232a0493d090">maxDistance</a> = 3.0;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classZEN_1_1ControlSystems_1_1FreeCamera.html#adefdf87845e81499f2ba8be990417102">   36</a></span>&#160;        <a class="code" href="namespaceZEN.html#a5089f560467278c4efaed05ce45f57a7">gw_float</a> <a class="code" href="classZEN_1_1ControlSystems_1_1FreeCamera.html#adefdf87845e81499f2ba8be990417102">distanceSteps</a> = 0.5;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordtype">void</span> process(<a class="code" href="namespaceZEN.html#a1896aa89c3b0bbcccbd1b16d57410502">dt_float</a> delta,</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                     <span class="keyword">const</span> std::vector&lt;std::string&gt; &amp;<a class="code" href="classZEN_1_1ControlSystems_1_1FreeCamera.html#a392188dbfa4024119f6b34ee681f3509">signals</a>) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordtype">void</span> onMouseMoved(<span class="keyword">const</span> <a class="code" href="structZEN_1_1MouseMovedEvent.html">MouseMovedEvent</a> &amp;mouseMovedEvent) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordtype">void</span> onScroll(<span class="keyword">const</span> <a class="code" href="structZEN_1_1ScrollEvent.html">ScrollEvent</a> &amp;scrollEvent) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordtype">void</span> initialize() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        std::vector&lt;const char *&gt; getSignals() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="namespaceZEN.html#a5089f560467278c4efaed05ce45f57a7">gw_float</a> m_distance = 1.0;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <a class="code" href="namespaceZEN.html#a5089f560467278c4efaed05ce45f57a7">gw_float</a> xzAngle = 0.0,</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                 yAngle = 0.0;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    };</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
 <div class="ttc" id="aclassZEN_1_1ControlSystems_1_1Assist_html"><div class="ttname"><a href="classZEN_1_1ControlSystems_1_1Assist.html">ZEN::ControlSystems::Assist</a></div><div class="ttdef"><b>Definition:</b> control-assist.h:15</div></div>
 <div class="ttc" id="aclassZEN_1_1ControlSystems_1_1FreeCamera_html"><div class="ttname"><a href="classZEN_1_1ControlSystems_1_1FreeCamera.html">ZEN::ControlSystems::FreeCamera</a></div><div class="ttdef"><b>Definition:</b> free-camera.h:11</div></div>
+<div class="ttc" id="aclassZEN_1_1ControlSystems_1_1FreeCamera_html_a070f0bb931fa1b6a4121181dc9e79cbb"><div class="ttname"><a href="classZEN_1_1ControlSystems_1_1FreeCamera.html#a070f0bb931fa1b6a4121181dc9e79cbb">ZEN::ControlSystems::FreeCamera::minDistance</a></div><div class="ttdeci">gw_float minDistance</div><div class="ttdef"><b>Definition:</b> free-camera.h:26</div></div>
 <div class="ttc" id="aclassZEN_1_1ControlSystems_1_1FreeCamera_html_a392188dbfa4024119f6b34ee681f3509"><div class="ttname"><a href="classZEN_1_1ControlSystems_1_1FreeCamera.html#a392188dbfa4024119f6b34ee681f3509">ZEN::ControlSystems::FreeCamera::signals</a></div><div class="ttdeci">std::array&lt; const char *, 4 &gt; signals</div><div class="ttdef"><b>Definition:</b> free-camera.h:16</div></div>
+<div class="ttc" id="aclassZEN_1_1ControlSystems_1_1FreeCamera_html_ad11f4c56e229d1ffad26232a0493d090"><div class="ttname"><a href="classZEN_1_1ControlSystems_1_1FreeCamera.html#ad11f4c56e229d1ffad26232a0493d090">ZEN::ControlSystems::FreeCamera::maxDistance</a></div><div class="ttdeci">gw_float maxDistance</div><div class="ttdef"><b>Definition:</b> free-camera.h:31</div></div>
+<div class="ttc" id="aclassZEN_1_1ControlSystems_1_1FreeCamera_html_adefdf87845e81499f2ba8be990417102"><div class="ttname"><a href="classZEN_1_1ControlSystems_1_1FreeCamera.html#adefdf87845e81499f2ba8be990417102">ZEN::ControlSystems::FreeCamera::distanceSteps</a></div><div class="ttdeci">gw_float distanceSteps</div><div class="ttdef"><b>Definition:</b> free-camera.h:36</div></div>
 <div class="ttc" id="aclassZEN_1_1ControlSystems_1_1FreeCamera_html_af037421995abf713f2b2c3156da840c7"><div class="ttname"><a href="classZEN_1_1ControlSystems_1_1FreeCamera.html#af037421995abf713f2b2c3156da840c7">ZEN::ControlSystems::FreeCamera::camera3d</a></div><div class="ttdeci">std::shared_ptr&lt; ICamera3D &gt; camera3d</div><div class="ttdef"><b>Definition:</b> free-camera.h:21</div></div>
 <div class="ttc" id="anamespaceZEN_html_a1896aa89c3b0bbcccbd1b16d57410502"><div class="ttname"><a href="namespaceZEN.html#a1896aa89c3b0bbcccbd1b16d57410502">ZEN::dt_float</a></div><div class="ttdeci">float dt_float</div><div class="ttdef"><b>Definition:</b> typedefs.h:26</div></div>
 <div class="ttc" id="anamespaceZEN_html_a5089f560467278c4efaed05ce45f57a7"><div class="ttname"><a href="namespaceZEN.html#a5089f560467278c4efaed05ce45f57a7">ZEN::gw_float</a></div><div class="ttdeci">float gw_float</div><div class="ttdef"><b>Definition:</b> typedefs.h:16</div></div>
-<div class="ttc" id="astructZEN_1_1MouseMovedEvent_html"><div class="ttname"><a href="structZEN_1_1MouseMovedEvent.html">ZEN::MouseMovedEvent</a></div><div class="ttdef"><b>Definition:</b> inputs.h:105</div></div>
+<div class="ttc" id="astructZEN_1_1MouseMovedEvent_html"><div class="ttname"><a href="structZEN_1_1MouseMovedEvent.html">ZEN::MouseMovedEvent</a></div><div class="ttdef"><b>Definition:</b> inputs.h:103</div></div>
+<div class="ttc" id="astructZEN_1_1ScrollEvent_html"><div class="ttname"><a href="structZEN_1_1ScrollEvent.html">ZEN::ScrollEvent</a></div><div class="ttdef"><b>Definition:</b> inputs.h:118</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

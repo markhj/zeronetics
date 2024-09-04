@@ -9,7 +9,8 @@ var searchData=
   ['detach_65',['detach',['../classZEN_1_1Processor.html#a5c1a182fd61ab14f55c6eaf40d13241a',1,'ZEN::Processor']]],
   ['direction_66',['direction',['../classZEN_1_1DirectionalLight3D.html#a6497a2f1456a8419bacfa3813a2c20a4',1,'ZEN::DirectionalLight3D']]],
   ['directionallight3d_67',['DirectionalLight3D',['../classZEN_1_1DirectionalLight3D.html',1,'ZEN']]],
-  ['draw_68',['draw',['../structZEN_1_1RenderSettings.html#a2a4084c9b8935bd6ba829e51ff64c417',1,'ZEN::RenderSettings']]],
-  ['drawprimitive_69',['DrawPrimitive',['../namespaceZEN.html#a5e3ff6a32fb59dbae12505b9fe9b2591',1,'ZEN']]],
-  ['dt_5ffloat_70',['dt_float',['../namespaceZEN.html#a1896aa89c3b0bbcccbd1b16d57410502',1,'ZEN']]]
+  ['distancesteps_68',['distanceSteps',['../classZEN_1_1ControlSystems_1_1FreeCamera.html#adefdf87845e81499f2ba8be990417102',1,'ZEN::ControlSystems::FreeCamera']]],
+  ['draw_69',['draw',['../structZEN_1_1RenderSettings.html#a2a4084c9b8935bd6ba829e51ff64c417',1,'ZEN::RenderSettings']]],
+  ['drawprimitive_70',['DrawPrimitive',['../namespaceZEN.html#a5e3ff6a32fb59dbae12505b9fe9b2591',1,'ZEN']]],
+  ['dt_5ffloat_71',['dt_float',['../namespaceZEN.html#a1896aa89c3b0bbcccbd1b16d57410502',1,'ZEN']]]
 ];

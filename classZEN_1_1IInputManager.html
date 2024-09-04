@@ -108,6 +108,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a413dce472d921819d7f6e2ffbe5634e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a941a01aea9fac7f051296753261ed4f4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1IInputManager.html#a941a01aea9fac7f051296753261ed4f4">onMouseButtonStateChanged</a> (const <a class="el" href="structZEN_1_1MouseButtonStateEvent.html">MouseButtonStateEvent</a> &amp;mouseButtonStateEvent)=0</td></tr>
 <tr class="separator:a941a01aea9fac7f051296753261ed4f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8e8c7bb36f92f242220fa1ebc935dbe"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1IInputManager.html#ad8e8c7bb36f92f242220fa1ebc935dbe">onScroll</a> (const <a class="el" href="structZEN_1_1ScrollEvent.html">ScrollEvent</a> &amp;scrollEvent)=0</td></tr>
+<tr class="separator:ad8e8c7bb36f92f242220fa1ebc935dbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Interface for an object which can be connected to a window in order to handle various user inputs such as key presses and mouse movement. </p>
@@ -216,6 +218,41 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p>Implemented in <a class="el" href="classZEN_1_1ControlSystems_1_1ControlManager.html#ab701ca9a871b9b97bb6901c2a2c1e874">ZEN::ControlSystems::ControlManager</a>.</p>
+
+</div>
+</div>
+<a id="ad8e8c7bb36f92f242220fa1ebc935dbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8e8c7bb36f92f242220fa1ebc935dbe">&#9670;&nbsp;</a></span>onScroll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ZEN::IInputManager::onScroll </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structZEN_1_1ScrollEvent.html">ScrollEvent</a> &amp;&#160;</td>
+          <td class="paramname"><em>scrollEvent</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Handle for movement of the mouse scroll wheel.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scrollEvent</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="classZEN_1_1ControlSystems_1_1ControlManager.html#ad61dab1a59d26debea59e1840169e8c4">ZEN::ControlSystems::ControlManager</a>.</p>
 
 </div>
 </div>

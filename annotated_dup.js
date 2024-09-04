@@ -75,6 +75,7 @@ var annotated_dup =
       [ "MouseButtonDownEvent", "structZEN_1_1MouseButtonDownEvent.html", "structZEN_1_1MouseButtonDownEvent" ],
       [ "MousePosition", "structZEN_1_1MousePosition.html", "structZEN_1_1MousePosition" ],
       [ "MouseMovedEvent", "structZEN_1_1MouseMovedEvent.html", "structZEN_1_1MouseMovedEvent" ],
+      [ "ScrollEvent", "structZEN_1_1ScrollEvent.html", "structZEN_1_1ScrollEvent" ],
       [ "Path", "classZEN_1_1Path.html", "classZEN_1_1Path" ],
       [ "File", "classZEN_1_1File.html", "classZEN_1_1File" ],
       [ "ObserverMeta", "structZEN_1_1ObserverMeta.html", null ],

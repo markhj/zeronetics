@@ -142,6 +142,7 @@ var hierarchy =
     ] ],
     [ "ZEN::RenderSettings", "structZEN_1_1RenderSettings.html", null ],
     [ "ZEN::ResultError", "structZEN_1_1ResultError.html", null ],
+    [ "ZEN::ScrollEvent", "structZEN_1_1ScrollEvent.html", null ],
     [ "ZEN::Settings", "structZEN_1_1Settings.html", null ],
     [ "ZEN::ShaderBlueprint", "structZEN_1_1ShaderBlueprint.html", null ],
     [ "ZEN::ControlSystems::SignalHandler", "classZEN_1_1ControlSystems_1_1SignalHandler.html", null ],

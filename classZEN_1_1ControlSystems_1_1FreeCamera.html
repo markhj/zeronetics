@@ -110,6 +110,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>process</b> (<a class
 <tr class="memitem:ad1d3908c114ff26f4ac1a3b7bc39cee5"><td class="memItemLeft" align="right" valign="top"><a id="ad1d3908c114ff26f4ac1a3b7bc39cee5"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>onMouseMoved</b> (const <a class="el" href="structZEN_1_1MouseMovedEvent.html">MouseMovedEvent</a> &amp;mouseMovedEvent) override</td></tr>
 <tr class="separator:ad1d3908c114ff26f4ac1a3b7bc39cee5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a092eec8f3c8f87f221f812953a0dcf6c"><td class="memItemLeft" align="right" valign="top"><a id="a092eec8f3c8f87f221f812953a0dcf6c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>onScroll</b> (const <a class="el" href="structZEN_1_1ScrollEvent.html">ScrollEvent</a> &amp;scrollEvent) override</td></tr>
+<tr class="separator:a092eec8f3c8f87f221f812953a0dcf6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa25f67382f0353fa9b227ea9f20fe2e8"><td class="memItemLeft" align="right" valign="top"><a id="aa25f67382f0353fa9b227ea9f20fe2e8"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>initialize</b> () override</td></tr>
 <tr class="separator:aa25f67382f0353fa9b227ea9f20fe2e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -130,6 +133,12 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a392188dbfa4024119f6b34ee681f3509"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af037421995abf713f2b2c3156da840c7"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classZEN_1_1ICamera3D.html">ICamera3D</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1ControlSystems_1_1FreeCamera.html#af037421995abf713f2b2c3156da840c7">camera3d</a></td></tr>
 <tr class="separator:af037421995abf713f2b2c3156da840c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a070f0bb931fa1b6a4121181dc9e79cbb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceZEN.html#a5089f560467278c4efaed05ce45f57a7">gw_float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1ControlSystems_1_1FreeCamera.html#a070f0bb931fa1b6a4121181dc9e79cbb">minDistance</a> = 0.5</td></tr>
+<tr class="separator:a070f0bb931fa1b6a4121181dc9e79cbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad11f4c56e229d1ffad26232a0493d090"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceZEN.html#a5089f560467278c4efaed05ce45f57a7">gw_float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1ControlSystems_1_1FreeCamera.html#ad11f4c56e229d1ffad26232a0493d090">maxDistance</a> = 3.0</td></tr>
+<tr class="separator:ad11f4c56e229d1ffad26232a0493d090"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adefdf87845e81499f2ba8be990417102"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceZEN.html#a5089f560467278c4efaed05ce45f57a7">gw_float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1ControlSystems_1_1FreeCamera.html#adefdf87845e81499f2ba8be990417102">distanceSteps</a> = 0.5</td></tr>
+<tr class="separator:adefdf87845e81499f2ba8be990417102"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_classZEN_1_1ControlSystems_1_1Assist"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classZEN_1_1ControlSystems_1_1Assist')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classZEN_1_1ControlSystems_1_1Assist.html">ZEN::ControlSystems::Assist</a></td></tr>
 <tr class="memitem:aabd07b38ac33993ae4d36940c829fbaf inherit pub_attribs_classZEN_1_1ControlSystems_1_1Assist"><td class="memItemLeft" align="right" valign="top"><a id="aabd07b38ac33993ae4d36940c829fbaf"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>enabled</b> = true</td></tr>
@@ -148,6 +157,51 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>enabled</b> = true</t
       </table>
 </div><div class="memdoc">
 <p>The camera instance to be manipulated. </p>
+
+</div>
+</div>
+<a id="adefdf87845e81499f2ba8be990417102"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adefdf87845e81499f2ba8be990417102">&#9670;&nbsp;</a></span>distanceSteps</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceZEN.html#a5089f560467278c4efaed05ce45f57a7">gw_float</a> ZEN::ControlSystems::FreeCamera::distanceSteps = 0.5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The distance decreased/increased per request. </p>
+
+</div>
+</div>
+<a id="ad11f4c56e229d1ffad26232a0493d090"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad11f4c56e229d1ffad26232a0493d090">&#9670;&nbsp;</a></span>maxDistance</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceZEN.html#a5089f560467278c4efaed05ce45f57a7">gw_float</a> ZEN::ControlSystems::FreeCamera::maxDistance = 3.0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The maximum distance to the target. </p>
+
+</div>
+</div>
+<a id="a070f0bb931fa1b6a4121181dc9e79cbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a070f0bb931fa1b6a4121181dc9e79cbb">&#9670;&nbsp;</a></span>minDistance</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceZEN.html#a5089f560467278c4efaed05ce45f57a7">gw_float</a> ZEN::ControlSystems::FreeCamera::minDistance = 0.5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The minimum distance of the target. </p>
 
 </div>
 </div>

@@ -79,3 +79,19 @@ std::vector<const char *> ZEN::ControlSystems::FreeCamera::getSignals() {
     });
     return res;
 }
+
+void ZEN::ControlSystems::FreeCamera::onScroll(const ZEN::ScrollEvent &scrollEvent) {
+    assert(minDistance > 0.0 && "Min. distance must be positive.");
+    assert(maxDistance > 0.0 && "Max. distance must be positive.");
+    assert(maxDistance > minDistance && "Max. distance must be greater than min. distance.");
+
+    if (scrollEvent.offsetY != 0.0) {
+        m_distance += scrollEvent.offsetY * distanceSteps;
+    }
+
+    if (m_distance < minDistance) {
+        m_distance = minDistance;
+    } else if (m_distance > maxDistance) {
+        m_distance = maxDistance;
+    }
+}

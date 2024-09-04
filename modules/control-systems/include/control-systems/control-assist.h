@@ -21,6 +21,8 @@ namespace ZEN::ControlSystems {
 
         virtual void onMouseMoved(const MouseMovedEvent &mouseMovedEvent) = 0;
 
+        virtual void onScroll(const ScrollEvent &scrollEvent) = 0;
+
         virtual void initialize() = 0;
 
         virtual std::vector<const char *> getSignals() = 0;
@@ -205,6 +207,8 @@ namespace ZEN::ControlSystems {
         void onMouseMoved(const MouseMovedEvent &mouseMovedEvent) override;
 
         void onMouseButtonStateChanged(const MouseButtonStateEvent &mouseButtonStateEvent) override;
+
+        void onScroll(const ScrollEvent &scrollEvent) override;
 
     private:
         std::vector<Key> m_keysDown;

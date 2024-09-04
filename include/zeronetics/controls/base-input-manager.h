@@ -42,5 +42,12 @@ namespace ZEN {
          * @param mouseButtonStateEvent
          */
         void onMouseButtonStateChanged(const MouseButtonStateEvent &mouseButtonStateEvent) override {};
+
+        /**
+         * Handle for movement of the mouse scroll wheel.
+         *
+         * @param scrollEvent
+         */
+        void onScroll(const ScrollEvent &scrollEvent) override {};
     };
 }

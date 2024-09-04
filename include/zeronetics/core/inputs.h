@@ -97,10 +97,8 @@ namespace ZEN {
     };
 
     /**
-     * When the mouse has moved, the absolute position
-     * as well as relative position are reported.
-     * The relative position is the movement since
-     * last event reporting.
+     * When the mouse has moved, the absolute position as well as relative position are reported.
+     * The relative position is the movement since last event reporting.
      */
     struct MouseMovedEvent {
         /**
@@ -112,5 +110,12 @@ namespace ZEN {
          * Change in position since last event reporting.
          */
         MousePosition relative;
+    };
+
+    /**
+     * Scroll event
+     */
+    struct ScrollEvent {
+        double offsetX, offsetY;
     };
 }

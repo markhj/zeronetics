@@ -46,5 +46,12 @@ namespace ZEN {
          * @param mouseButtonStateEvent
          */
         virtual void onMouseButtonStateChanged(const MouseButtonStateEvent &mouseButtonStateEvent) = 0;
+
+        /**
+         * Handle for movement of the mouse scroll wheel.
+         *
+         * @param scrollEvent
+         */
+        virtual void onScroll(const ScrollEvent &scrollEvent) = 0;
     };
 }

@@ -84,6 +84,10 @@ namespace ZenEdit {
 
         static void framebufferSizeCallback(GLFWwindow* window, int width, int height);
 
+        static void mouseButtonCallback(GLFWwindow *window, int button, int action, int mods);
+
+        static void scrollCallback(GLFWwindow* window, double offsetX, double offsetY);
+
         void addCube();
 
         void setUpMainLayer();

@@ -73,6 +73,8 @@ void ZenEdit::Editor::initialize() noexcept(false) {
 
     glfwSetKeyCallback(m_window, keyboardCallback);
     glfwSetCursorPosCallback(m_window, mouseMoveCallback);
+    glfwSetMouseButtonCallback(m_window, mouseButtonCallback);
+    glfwSetScrollCallback(m_window, scrollCallback);
     glfwSetFramebufferSizeCallback(m_window, framebufferSizeCallback);
 
     if (!gladLoadGLLoader((GLADloadproc) glfwGetProcAddress)) {
@@ -220,6 +222,33 @@ void ZenEdit::Editor::keyboardCallback(GLFWwindow *window, int key, int scancode
     m_controlManager->onKeyStateChanged({
             .keyState = action == 1 ? ZEN::KeyState::JustPressed : ZEN::KeyState::JustReleased,
             .key = inputKey.value(),
+    });
+}
+
+void ZenEdit::Editor::mouseButtonCallback(GLFWwindow *window, int button, int action, int mods) {
+    if (action > 1 || !m_controlManager) {
+        return;
+    }
+
+
+    ZEN::MouseButton mouseButton;
+    switch (button) {
+        case 0:
+            mouseButton = ZEN::MouseButton::PrimaryMouseButton;
+            break;
+        case 1:
+            mouseButton = ZEN::MouseButton::SecondaryMouseButton;
+            break;
+        case 2:
+            mouseButton = ZEN::MouseButton::MiddleMouseButton;
+            break;
+        default:
+            return;
+    }
+
+    m_controlManager->onMouseButtonStateChanged({
+            .mouseButtonState = action == 1 ? ZEN::MouseButtonState::JustClicked : ZEN::MouseButtonState::JustReleased,
+            .mouseButton = mouseButton,
     });
 }
 
@@ -445,13 +474,20 @@ void ZenEdit::Editor::createEntity(const std::string &entityName) {
     }
 
     unsigned int i = m_project->activeScene->entities.size() + 1;
-    std::string key = "Entity" + std::to_string(i);
+    std::string key = entityName + "_" + std::to_string(i);
     while (m_project->activeScene->entities.find(key) != m_project->activeScene->entities.end()) {
         ++i;
-        key = "Entity" + std::to_string(i);
+        key = entityName + "_" + std::to_string(i);
     }
 
     m_project->activeScene->entities[key] = SceneEntity{
             .type = entityName,
     };
+}
+
+void ZenEdit::Editor::scrollCallback(GLFWwindow *window, double offsetX, double offsetY) {
+    m_controlManager->onScroll({
+            .offsetX = offsetX,
+            .offsetY = offsetY,
+    });
 }

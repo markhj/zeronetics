@@ -105,6 +105,14 @@ void ZEN::ControlSystems::ControlManager::setSignalHandler(const std::shared_ptr
     }
 }
 
+void ZEN::ControlSystems::ControlManager::onScroll(const ZEN::ScrollEvent &scrollEvent) {
+    for (std::shared_ptr<Assist> &assist: assists) {
+        if (assist->enabled) {
+            assist->onScroll(scrollEvent);
+        }
+    }
+}
+
 void ZEN::ControlSystems::InputMapping::keyJustPressed(ZEN::Key key, const char *signal) noexcept {
     m_mapping.push_back({
             .form = Form::KeyPressed,

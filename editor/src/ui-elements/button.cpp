@@ -2,6 +2,14 @@
 
 #include "imgui.h"
 
+ZenEdit::Button::Button(const char *setText,
+                        const std::function<void()> &setOnClick) : text(setText),
+                                                                   onClick(setOnClick) {
+}
+
+ZenEdit::Button::Button() : text("") {
+}
+
 void ZenEdit::Button::render() {
     if (disabled) {
         ImGui::BeginDisabled();

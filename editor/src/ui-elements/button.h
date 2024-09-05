@@ -6,6 +6,10 @@
 namespace ZenEdit {
     class Button : public UIElement {
     public:
+        Button();
+
+        Button(const char *setText, const std::function<void()> &setOnClick);
+
         const char *text;
 
         bool disabled = false;

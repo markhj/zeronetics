@@ -34,32 +34,20 @@ void ZenEdit::SidePanel::render() {
 
             Separator().render();
 
-            Button btnBack;
-            btnBack.text = "<";
+            Button btnBack("<", [&]() { onCloseScene(); });
             btnBack.disabled = m_project->activeScene->hasChanged;
-            btnBack.onClick = [&]() {
-                onCloseScene();
-            };
             btnBack.render();
 
             ImGui::SameLine();
 
-            Button btnSaveScene;
-            btnSaveScene.text = "Save";
+            Button btnSaveScene("Save", [&]() { m_project->activeScene->save(); });
             btnSaveScene.disabled = m_project->activeScene && m_project->activeScene->hasChanged;
-            btnSaveScene.onClick = [&]() {
-                m_project->activeScene->save();
-            };
             btnSaveScene.render();
 
             ImGui::SameLine();
 
-            Button btnDiscard;
-            btnDiscard.text = "Discard";
+            Button btnDiscard("Discard", [&]() { m_project->activeScene->load(); });
             btnDiscard.disabled = m_project->activeScene && !m_project->activeScene->hasChanged;
-            btnDiscard.onClick = [&]() {
-                m_project->activeScene->load();
-            };
             btnDiscard.render();
 
             if (m_project->activeScene) {
@@ -69,12 +57,10 @@ void ZenEdit::SidePanel::render() {
                 }
             }
 
-            Button btnAddEntity;
-            btnAddEntity.text = "+ Entity";
-            btnAddEntity.onClick = [&]() {
+            Button btnAddEntity("+ Entity", [&]() {
                 m_project->activeScene->entities["Entity" + std::to_string(m_project->activeScene->entities.size() + 1)];
                 m_project->activeScene->hasChanged = true;
-            };
+            });
             btnAddEntity.render();
         } else {
             for (auto &scene: m_project->scenes) {
@@ -88,11 +74,9 @@ void ZenEdit::SidePanel::render() {
                 });
             }
 
-            Button btnAddScene;
-            btnAddScene.text = "Add Scene";
-            btnAddScene.onClick = [&]() {
+            Button btnAddScene("Add Scene", [&]() {
                 addScene(std::format("Scene{}", m_project->scenes.size() + 1));
-            };
+            });
             btnAddScene.render();
         }
     });

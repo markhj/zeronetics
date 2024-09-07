@@ -10,4 +10,8 @@ digraph "ZEN::PointLight3D"
   Node3 [label="ZEN::ILight",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classZEN_1_1ILight.html",tooltip=" "];
   Node4 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node4 [label="ZEN::IPosition3D",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classZEN_1_1IPosition3D.html",tooltip=" "];
+  Node5 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="ZEN::Entity3D",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classZEN_1_1Entity3D.html",tooltip=" "];
+  Node6 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="ZEN::Entity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classZEN_1_1Entity.html",tooltip=" "];
 }

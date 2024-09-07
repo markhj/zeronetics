@@ -1,5 +1,7 @@
 var NAVTREEINDEX2 =
 {
+"getting-started.html#autotoc_md6":[2],
+"gizmos.html":[3,4],
 "glsl-shader-builder.html":[3,2],
 "grid-3d.html":[3,4,0],
 "grid-3d.html#autotoc_md158":[4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX2 =
 "opengl_8h.html#ace108a125e713702a9dbaac25e05cce3":[5,0,0,23,7],
 "orientation.html":[2,5],
 "orientation.html#autotoc_md75":[0],
-"pages.html":[],
-"process-adv-lifecycle.html":[2,3,2],
-"process-adv-lifecycle.html#autotoc_md101":[21]
+"pages.html":[]
 };

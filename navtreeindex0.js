@@ -98,8 +98,9 @@ var NAVTREEINDEX0 =
 "classZEN_1_1Cube.html#ab3be43da301a294fec63d9f44aebd930":[6,0,0,94,2],
 "classZEN_1_1Cube.html#ac3fa1c1492aee460813f07b0ef7ae292":[6,0,0,94,0],
 "classZEN_1_1DirectionalLight3D.html":[6,0,0,75],
-"classZEN_1_1DirectionalLight3D.html#a6497a2f1456a8419bacfa3813a2c20a4":[6,0,0,75,1],
-"classZEN_1_1DirectionalLight3D.html#afddf070bd713a20a4babf554b18ad45e":[6,0,0,75,0],
+"classZEN_1_1DirectionalLight3D.html#a2e10bc7ffdfa21b0215677b9bd3ba925":[6,0,0,75,0],
+"classZEN_1_1DirectionalLight3D.html#a6497a2f1456a8419bacfa3813a2c20a4":[6,0,0,75,2],
+"classZEN_1_1DirectionalLight3D.html#afddf070bd713a20a4babf554b18ad45e":[6,0,0,75,1],
 "classZEN_1_1Entity.html":[6,0,0,79],
 "classZEN_1_1Entity.html#a3085c5b94b0c08c4b3e2bcc2417ace8c":[6,0,0,79,1],
 "classZEN_1_1Entity.html#ae591d86478cf5a19c9a6322cf8238913":[6,0,0,79,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "classZEN_1_1OpenGL_1_1Object.html":[6,0,0,3,4],
 "classZEN_1_1OpenGL_1_1Renderer.html":[6,0,0,3,2],
 "classZEN_1_1OpenGL_1_1Renderer.html#a2ad08ef6b8c5feb8785666b5f2c0edaf":[6,0,0,3,2,2],
-"classZEN_1_1OpenGL_1_1Renderer.html#a585462defe204ce42e7a2dc5df0c021a":[6,0,0,3,2,3],
-"classZEN_1_1OpenGL_1_1Renderer.html#a6db61023b8417650a893dc77e2ce7a95":[6,0,0,3,2,5]
+"classZEN_1_1OpenGL_1_1Renderer.html#a585462defe204ce42e7a2dc5df0c021a":[6,0,0,3,2,3]
 };

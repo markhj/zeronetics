@@ -9,5 +9,9 @@ digraph "ZEN::Entity"
   Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node3 [label="ZEN::Camera3D",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classZEN_1_1Camera3D.html",tooltip=" "];
   Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4 [label="ZEN::Mesh3D",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classZEN_1_1Mesh3D.html",tooltip=" "];
+  Node4 [label="ZEN::DirectionalLight3D",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classZEN_1_1DirectionalLight3D.html",tooltip=" "];
+  Node2 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="ZEN::Mesh3D",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classZEN_1_1Mesh3D.html",tooltip=" "];
+  Node2 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="ZEN::PointLight3D",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classZEN_1_1PointLight3D.html",tooltip=" "];
 }

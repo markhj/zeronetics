@@ -12,7 +12,9 @@ var hierarchy =
     [ "ZEN::Entity", "classZEN_1_1Entity.html", [
       [ "ZEN::Entity3D", "classZEN_1_1Entity3D.html", [
         [ "ZEN::Camera3D", "classZEN_1_1Camera3D.html", null ],
-        [ "ZEN::Mesh3D", "classZEN_1_1Mesh3D.html", null ]
+        [ "ZEN::DirectionalLight3D", "classZEN_1_1DirectionalLight3D.html", null ],
+        [ "ZEN::Mesh3D", "classZEN_1_1Mesh3D.html", null ],
+        [ "ZEN::PointLight3D", "classZEN_1_1PointLight3D.html", null ]
       ] ]
     ] ],
     [ "ZEN::EntityRegistration", "structZEN_1_1EntityRegistration.html", null ],

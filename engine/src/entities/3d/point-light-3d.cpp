@@ -10,3 +10,9 @@ void ZEN::PointLight3D::setOnShader(const std::string &key,
     shader->set(std::format("{}.linear", key), linear);
     shader->set(std::format("{}.quadratic", key), quadratic);
 }
+
+ZEN::EntityRegistration ZEN::PointLight3D::getRegistration() {
+    return {
+            .name = "Point Light 3D",
+    };
+}

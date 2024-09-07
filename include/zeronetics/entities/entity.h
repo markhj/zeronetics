@@ -32,7 +32,6 @@ namespace ZEN {
 
     private:
         static std::unordered_map<const char *, std::shared_ptr<ZEN::EntityRegistration>> entities;
-
     };
 
     /**
@@ -46,5 +45,7 @@ namespace ZEN {
      * @ref entity-system
      */
     class Entity3D : public Entity {
+//    public:
+//        EntityRegistration getRegistration() override = 0;
     };
 }

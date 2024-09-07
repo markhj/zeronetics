@@ -2,6 +2,7 @@
 
 #include "zeronetics/contracts/lights.h"
 #include "zeronetics/contracts/transforms.h"
+#include "zeronetics/entities/entity.h"
 
 namespace ZEN {
     /**
@@ -14,8 +15,16 @@ namespace ZEN {
      * @ref lights-tutorial
      */
     class PointLight3D : public IPointLight,
-                         public IPosition3D {
+                         public IPosition3D,
+                         public Entity3D {
     public:
+        /**
+         * Retrieve the entity registration.
+         *
+         * @return
+         */
+        EntityRegistration getRegistration() override;
+
         /**
          * Instruct the shader about the properties of this point light.
          *

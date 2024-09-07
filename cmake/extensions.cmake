@@ -1,7 +1,9 @@
 
 set(ZEN_EXTENSIONS
         "Entity|Camera3D|3d/camera-3d"
-        "Entity|Mesh3D|3d/mesh-3d")
+        "Entity|Mesh3D|3d/mesh-3d"
+        "Entity|PointLight3D|3d/point-light-3d"
+        "Entity|DirectionalLight3D|3d/directional-light-3d")
 
 set(ZEN_EXTENSION_FILES)
 set(ZEN_EXTENSION_CLASSNAMES)

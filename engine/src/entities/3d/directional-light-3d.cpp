@@ -6,3 +6,9 @@ void ZEN::DirectionalLight3D::setOnShader(const std::string &key,
     shader->set(std::format("{}.direction", key), direction);
     shader->set(std::format("{}.color", key), color);
 }
+
+ZEN::EntityRegistration ZEN::DirectionalLight3D::getRegistration() {
+    return {
+            .name = "Directional Light 3D",
+    };
+}

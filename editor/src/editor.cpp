@@ -121,13 +121,13 @@ void ZenEdit::Editor::run() {
     MainMenu mainMenu = createMainMenu();
     MainMenu projectScreenMainMenu = createProjectScreenMainMenu();
 
+    Inspector inspector(m_project);
     About about(&m_showAbout);
     NewProject newProject(&m_showNewProject);
     LoadProject loadProject(&m_showLoadProject);
     ProjectSettings projectSettings(&m_showProjectSettings, m_project);
-    SidePanel sidePanel(m_project);
+    SidePanel sidePanel(m_project, &inspector);
     BottomPanel bottomPanel(m_project);
-    Inspector inspector(m_project);
     ExtensionList extensionList(&m_showExtensionList);
 
     ProjectScreen projectScreen(&m_editorConfig, &m_showNewProject, &m_showLoadProject);

@@ -9,8 +9,10 @@
 #include <format>
 #include <iostream>
 
-ZenEdit::SidePanel::SidePanel(const std::shared_ptr<Project> &project) : m_box(Box("Side Panel")),
-                                                                         m_project(project) {
+ZenEdit::SidePanel::SidePanel(const std::shared_ptr<Project> &project,
+                              Inspector *inspector) : m_box(Box("Side Panel")),
+                                                      m_project(project),
+                                                      m_inspector(inspector) {
     m_box.resizable = false;
     m_box.collapsible = false;
     m_box.movable = false;
@@ -52,8 +54,9 @@ void ZenEdit::SidePanel::render() {
 
             if (m_project->activeScene) {
                 for (auto &entity: m_project->activeScene->entities) {
-                    Label(entity.first.c_str()).render();
-                    Label(entity.second.type.c_str()).render();
+                    Button(entity.first.c_str(), [&]() {
+                        m_inspector->open(&entity.second);
+                    }).render();
                 }
             }
 

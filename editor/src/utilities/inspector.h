@@ -10,13 +10,15 @@ namespace ZenEdit {
     public:
         explicit Inspector(const std::shared_ptr<Project> &project);
 
+        void open(SceneEntity *entity);
+
         void render() override;
 
     private:
         Box m_box;
 
-        std::shared_ptr<Project> m_project;
+        SceneEntity *m_entity = nullptr;
 
+        std::shared_ptr<Project> m_project;
     };
 }
-

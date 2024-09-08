@@ -25,6 +25,7 @@ ZenEdit::Scene::Scene() {
         auto type = std::get<std::string>(node.properties.find("type")->second.value);
         target->entities[node.name] = {
                 .type = type,
+                .name = node.name,
         };
     };
 
@@ -40,7 +41,7 @@ void ZenEdit::Scene::save() {
                 .type = "Entity",
                 .name = entity.first,
                 .properties = {
-                        {"type", HxlNodeValue{.dataType = HxlDataType::String, .values = {entity.second.type}}}
+                        {"type", HxlNodeValue{.dataType = HxlDataType::String, .values = {entity.second.type}}},
                 },
         };
 

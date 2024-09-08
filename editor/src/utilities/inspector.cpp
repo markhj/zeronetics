@@ -22,6 +22,7 @@ void ZenEdit::Inspector::render() {
     m_box.contains([&]() {
         if (m_entity) {
             Label(m_entity->type.c_str()).render();
+            Label(m_entity->name.c_str()).render();
         }
     });
 

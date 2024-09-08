@@ -25,5 +25,17 @@ namespace ZEN {
          * @return
          */
         static std::string toUpperCase(const std::string &input) noexcept;
+
+        /**
+         * Find/replace in the string.
+         *
+         * @param target
+         * @param find
+         * @param replace
+         * @return
+         */
+        static std::string replace(const std::string &target,
+                                   const std::string &find,
+                                   const std::string &replace) noexcept;
     };
 }

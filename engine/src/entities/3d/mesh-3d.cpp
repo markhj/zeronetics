@@ -20,6 +20,7 @@ ZEN::Mesh3D::Mesh3D(const std::vector<Vertex3D> &vertices) : m_customVertices(ve
 
 ZEN::EntityRegistration ZEN::Mesh3D::getRegistration() {
     return {
+            .typeName = "Mesh3D",
             .name = "Mesh 3D",
     };
 }

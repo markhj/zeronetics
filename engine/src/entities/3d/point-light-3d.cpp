@@ -13,6 +13,7 @@ void ZEN::PointLight3D::setOnShader(const std::string &key,
 
 ZEN::EntityRegistration ZEN::PointLight3D::getRegistration() {
     return {
+            .typeName = "PointLight3D",
             .name = "Point Light 3D",
     };
 }

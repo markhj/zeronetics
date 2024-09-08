@@ -106,17 +106,7 @@ void ZenEdit::Editor::initialize() noexcept(false) {
 void ZenEdit::Editor::run() {
     ImGuiIO &io = ImGui::GetIO();
 
-    Container mainContainer{
-            .title = "Objects"};
-
-    Button btnAddCube;
-    btnAddCube.text = "Cube";
-    btnAddCube.onClick = [&]() { addCube(); };
-
-    mainContainer.elements.push_back(std::make_shared<Button>(btnAddCube));
-
     EditorUI editorUi;
-    editorUi.containers.push_back(&mainContainer);
 
     MainMenu mainMenu = createMainMenu();
     MainMenu projectScreenMainMenu = createProjectScreenMainMenu();
@@ -137,7 +127,7 @@ void ZenEdit::Editor::run() {
     projectScreen.onOpenProject = [&](const std::string &path) { openProject(Path(path)); };
     sidePanel.onOpenScene = [&](Scene &scene) { openScene(scene); };
     sidePanel.onCloseScene = [&]() { closeScene(); };
-    extensionList.onCreateEntity = [&](const std::string &entityName) { createEntity(entityName); };
+    extensionList.onCreateEntity = [&](const EntityRegistration &entity) { createEntity(entity); };
 
     FontManager::initialize();
 
@@ -168,7 +158,9 @@ void ZenEdit::Editor::run() {
             sidePanel.render();
             bottomPanel.render();
             inspector.render();
-            extensionList.render();
+            if (m_project->activeScene) {
+                extensionList.render();
+            }
         }
 
         if (m_showAbout) {
@@ -468,11 +460,12 @@ void ZenEdit::Editor::refreshViewport() {
     });
 }
 
-void ZenEdit::Editor::createEntity(const std::string &entityName) {
+void ZenEdit::Editor::createEntity(const EntityRegistration &entity) {
     if (!m_project->activeScene) {
         return;
     }
 
+    std::string entityName = Strings::replace(entity.name, " ", "");
     unsigned int i = m_project->activeScene->entities.size() + 1;
     std::string key = entityName + "_" + std::to_string(i);
     while (m_project->activeScene->entities.find(key) != m_project->activeScene->entities.end()) {
@@ -481,8 +474,10 @@ void ZenEdit::Editor::createEntity(const std::string &entityName) {
     }
 
     m_project->activeScene->entities[key] = SceneEntity{
-            .type = entityName,
+            .type = entity.typeName,
     };
+
+    m_project->activeScene->hasChanged = true;
 }
 
 void ZenEdit::Editor::scrollCallback(GLFWwindow *window, double offsetX, double offsetY) {

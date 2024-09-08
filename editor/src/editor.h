@@ -104,6 +104,6 @@ namespace ZenEdit {
 
         void refreshViewport();
 
-        void createEntity(const std::string &entityName);
+        void createEntity(const EntityRegistration &entity);
     };
 }

@@ -6,6 +6,7 @@
 
 namespace ZEN {
     struct EntityRegistration {
+        const char *typeName;
         const char *name;
     };
 

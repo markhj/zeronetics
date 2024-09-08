@@ -9,6 +9,7 @@ void ZEN::DirectionalLight3D::setOnShader(const std::string &key,
 
 ZEN::EntityRegistration ZEN::DirectionalLight3D::getRegistration() {
     return {
+            .typeName = "DirectionalLight3D",
             .name = "Directional Light 3D",
     };
 }

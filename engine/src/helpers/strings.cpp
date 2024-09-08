@@ -26,3 +26,21 @@ std::string ZEN::Strings::toUpperCase(const std::string &input) noexcept {
         return std::toupper(c);
     });
 }
+
+std::string ZEN::Strings::replace(const std::string &target,
+                                  const std::string &find,
+                                  const std::string &replace) noexcept {
+    std::string result = target;
+    size_t startPos = 0;
+
+    if (find.empty()) {
+        return result;
+    }
+
+    while ((startPos = result.find(find, startPos)) != std::string::npos) {
+        result.replace(startPos, find.length(), replace);
+        startPos += replace.length();
+    }
+
+    return result;
+}

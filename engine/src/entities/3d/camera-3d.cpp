@@ -21,6 +21,7 @@ void ZEN::Camera3D::setOnShader(const std::string &key,
 
 ZEN::EntityRegistration ZEN::Camera3D::getRegistration() {
     return {
+            .typeName = "Camera3D",
             .name = "Camera 3D",
     };
 }

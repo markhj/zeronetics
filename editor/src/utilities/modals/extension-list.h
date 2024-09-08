@@ -1,8 +1,11 @@
 #pragma once
 
 #include "../editor-utility.h"
+#include "zeronetics/entities/entity.h"
 #include <functional>
 #include <string>
+
+using namespace ZEN;
 
 namespace ZenEdit {
     class ExtensionList : public EditorUtility {
@@ -11,7 +14,7 @@ namespace ZenEdit {
 
         void render() override;
 
-        std::function<void(const std::string &entityName)> onCreateEntity = [&](const std::string &entityName) {};
+        std::function<void(const EntityRegistration &entityName)> onCreateEntity = [&](const EntityRegistration &entityName) {};
 
     private:
         bool *m_showBox;

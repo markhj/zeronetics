@@ -1,7 +1,7 @@
 var searchData=
 [
   ['aabb3d_2',['AABB3D',['../classZEN_1_1AABB3D.html#afec88c7ae15378441faa63b24d853abe',1,'ZEN::AABB3D::AABB3D()'],['../classZEN_1_1AABB3D.html',1,'ZEN::AABB3D']]],
-  ['add_3',['add',['../classZEN_1_1IScene.html#a228c486c435a31e136c7efbc8bc0b8c5',1,'ZEN::IScene::add()'],['../classZEN_1_1Scene.html#a54b72820c33996dcdea529d11aa0c13c',1,'ZEN::Scene::add()']]],
+  ['add_3',['add',['../classZEN_1_1IScene.html#a228c486c435a31e136c7efbc8bc0b8c5',1,'ZEN::IScene::add()'],['../classZEN_1_1EntityRegistry.html#a1530ce02e6306e03e206559d614502a4',1,'ZEN::EntityRegistry::add()'],['../classZEN_1_1Scene.html#a54b72820c33996dcdea529d11aa0c13c',1,'ZEN::Scene::add()']]],
   ['advanced_20process_20life_2dcycles_4',['Advanced process life-cycles',['../process-adv-lifecycle.html',1,'process']]],
   ['allocate_5',['allocate',['../classZEN_1_1OpenGL_1_1VBO.html#af9d5e863d3c5fe4091175cc99fcc0af3',1,'ZEN::OpenGL::VBO']]],
   ['allocate_6',['Allocate',['../namespaceZEN.html#a6b91990426cccd5daddb56813b87fba6ac9baacf6cca6c54626e594639081177f',1,'ZEN']]],

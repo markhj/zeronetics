@@ -100,17 +100,63 @@ Inheritance diagram for ZEN::Entity:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3085c5b94b0c08c4b3e2bcc2417ace8c"><td class="memItemLeft" align="right" valign="top"><a id="a3085c5b94b0c08c4b3e2bcc2417ace8c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>registerEntity</b> ()</td></tr>
+<tr class="memitem:a3085c5b94b0c08c4b3e2bcc2417ace8c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1Entity.html#a3085c5b94b0c08c4b3e2bcc2417ace8c">registerEntity</a> ()</td></tr>
 <tr class="separator:a3085c5b94b0c08c4b3e2bcc2417ace8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae591d86478cf5a19c9a6322cf8238913"><td class="memItemLeft" align="right" valign="top"><a id="ae591d86478cf5a19c9a6322cf8238913"></a>
-virtual <a class="el" href="structZEN_1_1EntityRegistration.html">EntityRegistration</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getRegistration</b> ()=0</td></tr>
+<tr class="memitem:ae591d86478cf5a19c9a6322cf8238913"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structZEN_1_1EntityRegistration.html">EntityRegistration</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classZEN_1_1Entity.html#ae591d86478cf5a19c9a6322cf8238913">getRegistration</a> ()=0</td></tr>
 <tr class="separator:ae591d86478cf5a19c9a6322cf8238913"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base entity class.</p>
 <p><a class="el" href="entity-system.html">Entity system</a> </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ae591d86478cf5a19c9a6322cf8238913"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae591d86478cf5a19c9a6322cf8238913">&#9670;&nbsp;</a></span>getRegistration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structZEN_1_1EntityRegistration.html">EntityRegistration</a> ZEN::Entity::getRegistration </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Retrieve information for the entity registry. Must be implemented individually for every entity.</p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p>Implemented in <a class="el" href="classZEN_1_1PointLight3D.html#aca0918620029cdef42af6acc88066222">ZEN::PointLight3D</a>, <a class="el" href="classZEN_1_1Mesh3D.html#a8477b993e597eae5eb68081d62c51d26">ZEN::Mesh3D</a>, <a class="el" href="classZEN_1_1DirectionalLight3D.html#a2e10bc7ffdfa21b0215677b9bd3ba925">ZEN::DirectionalLight3D</a>, and <a class="el" href="classZEN_1_1Camera3D.html#a939fad445777670e4c485f497088e16f">ZEN::Camera3D</a>.</p>
+
+</div>
+</div>
+<a id="a3085c5b94b0c08c4b3e2bcc2417ace8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3085c5b94b0c08c4b3e2bcc2417ace8c">&#9670;&nbsp;</a></span>registerEntity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ZEN::Entity::registerEntity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Carry out the registration of the entity. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/zeronetics/entities/<a class="el" href="entity_8h_source.html">entity.h</a></li>
 </ul>
 </div><!-- contents -->

@@ -89,43 +89,46 @@ $(document).ready(function(){initNavTree('entity_8h_source.html',''); initResiza
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;zeronetics/core/tensors.h&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceZEN.html">ZEN</a> {</div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="structZEN_1_1EntityRegistration.html">    8</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structZEN_1_1EntityRegistration.html">EntityRegistration</a> {</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">char</span> *typeName;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">char</span> *name;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    };</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classZEN_1_1Entity.html">   18</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classZEN_1_1Entity.html">Entity</a> {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordtype">void</span> registerEntity();</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="structZEN_1_1EntityRegistration.html">EntityRegistration</a> getRegistration() = 0;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    };</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classZEN_1_1EntityRegistry.html">   28</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classZEN_1_1EntityRegistry.html">EntityRegistry</a> {</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceZEN.html">ZEN</a> {</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="structZEN_1_1EntityRegistration.html">   10</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structZEN_1_1EntityRegistration.html">EntityRegistration</a> {</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="structZEN_1_1EntityRegistration.html#a72f85f7fcb339ffc186eb2b533aa38d5">   14</a></span>&#160;        <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="structZEN_1_1EntityRegistration.html#a72f85f7fcb339ffc186eb2b533aa38d5">typeName</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="structZEN_1_1EntityRegistration.html#af43a505d61a00568fec7a463ad3b48cf">   20</a></span>&#160;        <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="structZEN_1_1EntityRegistration.html#af43a505d61a00568fec7a463ad3b48cf">name</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    };</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classZEN_1_1Entity.html">   28</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classZEN_1_1Entity.html">Entity</a> {</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> add(<span class="keyword">const</span> std::shared_ptr&lt;EntityRegistration&gt; &amp;registration);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keyword">static</span> std::unordered_map&lt;const char *, std::shared_ptr&lt;ZEN::EntityRegistration&gt;&gt; getEntities();</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keyword">static</span> std::unordered_map&lt;const char *, std::shared_ptr&lt;ZEN::EntityRegistration&gt;&gt; entities;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    };</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classZEN_1_1Entity3D.html">   48</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classZEN_1_1Entity3D.html">Entity3D</a> : <span class="keyword">public</span> <a class="code" href="classZEN_1_1Entity.html">Entity</a> {</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">//    public:</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">//        EntityRegistration getRegistration() override = 0;</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    };</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
-<div class="ttc" id="aclassZEN_1_1Entity3D_html"><div class="ttname"><a href="classZEN_1_1Entity3D.html">ZEN::Entity3D</a></div><div class="ttdef"><b>Definition:</b> entity.h:48</div></div>
-<div class="ttc" id="aclassZEN_1_1EntityRegistry_html"><div class="ttname"><a href="classZEN_1_1EntityRegistry.html">ZEN::EntityRegistry</a></div><div class="ttdef"><b>Definition:</b> entity.h:28</div></div>
-<div class="ttc" id="aclassZEN_1_1Entity_html"><div class="ttname"><a href="classZEN_1_1Entity.html">ZEN::Entity</a></div><div class="ttdef"><b>Definition:</b> entity.h:18</div></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classZEN_1_1Entity.html#a3085c5b94b0c08c4b3e2bcc2417ace8c">   33</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classZEN_1_1Entity.html#a3085c5b94b0c08c4b3e2bcc2417ace8c">registerEntity</a>();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classZEN_1_1Entity.html#ae591d86478cf5a19c9a6322cf8238913">   41</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="structZEN_1_1EntityRegistration.html">EntityRegistration</a> <a class="code" href="classZEN_1_1Entity.html#ae591d86478cf5a19c9a6322cf8238913">getRegistration</a>() = 0;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    };</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classZEN_1_1EntityRegistry.html">   47</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classZEN_1_1EntityRegistry.html">EntityRegistry</a> {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classZEN_1_1EntityRegistry.html#a1530ce02e6306e03e206559d614502a4">   54</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classZEN_1_1EntityRegistry.html#a1530ce02e6306e03e206559d614502a4">add</a>(<span class="keyword">const</span> std::shared_ptr&lt;EntityRegistration&gt; &amp;registration);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classZEN_1_1EntityRegistry.html#ab06d992a5cf0b5e771d012ab4b17c223">   61</a></span>&#160;        <span class="keyword">static</span> std::unordered_map&lt;const char *, std::shared_ptr&lt;ZEN::EntityRegistration&gt;&gt; <a class="code" href="classZEN_1_1EntityRegistry.html#ab06d992a5cf0b5e771d012ab4b17c223">getEntities</a>();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keyword">static</span> std::unordered_map&lt;const char *, std::shared_ptr&lt;ZEN::EntityRegistration&gt;&gt; entities;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    };</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="classZEN_1_1Entity3D.html">   77</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classZEN_1_1Entity3D.html">Entity3D</a> : <span class="keyword">public</span> <a class="code" href="classZEN_1_1Entity.html">Entity</a> {};</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
+<div class="ttc" id="aclassZEN_1_1Entity3D_html"><div class="ttname"><a href="classZEN_1_1Entity3D.html">ZEN::Entity3D</a></div><div class="ttdef"><b>Definition:</b> entity.h:77</div></div>
+<div class="ttc" id="aclassZEN_1_1EntityRegistry_html"><div class="ttname"><a href="classZEN_1_1EntityRegistry.html">ZEN::EntityRegistry</a></div><div class="ttdef"><b>Definition:</b> entity.h:47</div></div>
+<div class="ttc" id="aclassZEN_1_1EntityRegistry_html_a1530ce02e6306e03e206559d614502a4"><div class="ttname"><a href="classZEN_1_1EntityRegistry.html#a1530ce02e6306e03e206559d614502a4">ZEN::EntityRegistry::add</a></div><div class="ttdeci">static void add(const std::shared_ptr&lt; EntityRegistration &gt; &amp;registration)</div></div>
+<div class="ttc" id="aclassZEN_1_1EntityRegistry_html_ab06d992a5cf0b5e771d012ab4b17c223"><div class="ttname"><a href="classZEN_1_1EntityRegistry.html#ab06d992a5cf0b5e771d012ab4b17c223">ZEN::EntityRegistry::getEntities</a></div><div class="ttdeci">static std::unordered_map&lt; const char *, std::shared_ptr&lt; ZEN::EntityRegistration &gt; &gt; getEntities()</div></div>
+<div class="ttc" id="aclassZEN_1_1Entity_html"><div class="ttname"><a href="classZEN_1_1Entity.html">ZEN::Entity</a></div><div class="ttdef"><b>Definition:</b> entity.h:28</div></div>
+<div class="ttc" id="aclassZEN_1_1Entity_html_a3085c5b94b0c08c4b3e2bcc2417ace8c"><div class="ttname"><a href="classZEN_1_1Entity.html#a3085c5b94b0c08c4b3e2bcc2417ace8c">ZEN::Entity::registerEntity</a></div><div class="ttdeci">void registerEntity()</div></div>
+<div class="ttc" id="aclassZEN_1_1Entity_html_ae591d86478cf5a19c9a6322cf8238913"><div class="ttname"><a href="classZEN_1_1Entity.html#ae591d86478cf5a19c9a6322cf8238913">ZEN::Entity::getRegistration</a></div><div class="ttdeci">virtual EntityRegistration getRegistration()=0</div></div>
 <div class="ttc" id="anamespaceZEN_html"><div class="ttname"><a href="namespaceZEN.html">ZEN</a></div><div class="ttdef"><b>Definition:</b> asset-types.h:5</div></div>
-<div class="ttc" id="astructZEN_1_1EntityRegistration_html"><div class="ttname"><a href="structZEN_1_1EntityRegistration.html">ZEN::EntityRegistration</a></div><div class="ttdef"><b>Definition:</b> entity.h:8</div></div>
+<div class="ttc" id="astructZEN_1_1EntityRegistration_html"><div class="ttname"><a href="structZEN_1_1EntityRegistration.html">ZEN::EntityRegistration</a></div><div class="ttdef"><b>Definition:</b> entity.h:10</div></div>
+<div class="ttc" id="astructZEN_1_1EntityRegistration_html_a72f85f7fcb339ffc186eb2b533aa38d5"><div class="ttname"><a href="structZEN_1_1EntityRegistration.html#a72f85f7fcb339ffc186eb2b533aa38d5">ZEN::EntityRegistration::typeName</a></div><div class="ttdeci">const char * typeName</div><div class="ttdef"><b>Definition:</b> entity.h:14</div></div>
+<div class="ttc" id="astructZEN_1_1EntityRegistration_html_af43a505d61a00568fec7a463ad3b48cf"><div class="ttname"><a href="structZEN_1_1EntityRegistration.html#af43a505d61a00568fec7a463ad3b48cf">ZEN::EntityRegistration::name</a></div><div class="ttdeci">const char * name</div><div class="ttdef"><b>Definition:</b> entity.h:20</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -475,6 +475,7 @@ void ZenEdit::Editor::createEntity(const EntityRegistration &entity) {
 
     m_project->activeScene->entities[key] = SceneEntity{
             .type = entity.typeName,
+            .name = key,
     };
 
     m_project->activeScene->hasChanged = true;

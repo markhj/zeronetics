@@ -6,7 +6,8 @@ cmake-build-debug
 cmake-build-debug-coverage
 cmake-build-release
 cmake-build-release-coverage
-build
+build/**
+!build/.gitkeep
 
 # Autoload
 autoload

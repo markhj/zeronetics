@@ -15,9 +15,6 @@ jobs:
         with:
           submodules: true
 
-      - name: Create directory
-        run: mkdir build
-
       - name: Install Doxygen
         run: |
           sudo apt update
